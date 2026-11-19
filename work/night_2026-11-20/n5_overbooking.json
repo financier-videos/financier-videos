@@ -1,0 +1,101 @@
+{
+ "format": "short",
+ "sfx": true,
+ "loop": true,
+ "source": "Source: U.S. Dept. of Transportation, \"Bumping & Oversales\"",
+ "scenes": [
+  {
+   "text": "Airlines sell more tickets than the plane has seats. And it's legal.",
+   "head": "MORE TICKETS THAN SEATS",
+   "vs": {
+    "left": "180",
+    "left_label": "Seats",
+    "right": "185",
+    "right_label": "Tickets sold",
+    "win": "right",
+    "at": [
+     0.2,
+     1.3
+    ],
+    "vs_at": 0.8,
+    "right_color": "#FF4D4D"
+   },
+   "sfx": [
+    "scratch@2.6"
+   ]
+  },
+  {
+   "text": "Wait... what?!",
+   "head": "LEGAL?!",
+   "beat": 0.3,
+   "mascot": {
+    "mood": "shocked",
+    "pos": "center",
+    "act": "drop_in"
+   },
+   "zoom": {
+    "at": 0.5,
+    "amt": 1.25,
+    "hold": 0.7,
+    "on": "buck"
+   }
+  },
+  {
+   "text": "The U.S. Department of Transportation says so. Airlines bet somebody won't show up.",
+   "head": "THEY BET ON NO-SHOWS",
+   "show_source": true,
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "center"
+   }
+  },
+  {
+   "text": "Everybody shows up? First, they ask for volunteers.",
+   "head": "FIRST: VOLUNTEERS",
+   "mascot": {
+    "mood": "thumbsup",
+    "pos": "center"
+   }
+  },
+  {
+   "text": "Bumped anyway? You can be owed four times your one-way fare. Up to $2,150.",
+   "say": "Bumped anyway? You can be owed four times your one-way fare. Up to twenty-one hundred fifty dollars.",
+   "head": "UP TO 4x YOUR FARE",
+   "stat": "$2,150",
+   "fx": [
+    "coin_rain"
+   ],
+   "sfx": [
+    "cash"
+   ],
+   "mascot": {
+    "mood": "proud",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "So... take the cash, or keep your seat?",
+   "head": "CASH OR SEAT?",
+   "mascot": {
+    "mood": "smug",
+    "pos": "center",
+    "act": "flip"
+   }
+  },
+  {
+   "text": "Remember that at the gate, because...",
+   "head": "REMEMBER THIS",
+   "mascot": {
+    "mood": "point",
+    "pos": "center",
+    "act": "dodge"
+   }
+  }
+ ],
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
+ }
+}

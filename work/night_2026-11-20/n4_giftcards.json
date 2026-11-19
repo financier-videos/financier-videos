@@ -1,0 +1,118 @@
+{
+ "format": "short",
+ "sfx": true,
+ "loop": true,
+ "source": "Source: Bankrate gift card survey, 2024",
+ "scenes": [
+  {
+   "text": "$27 billion... is sitting in America's junk drawers.",
+   "say": "Twenty-seven billion dollars... is sitting in America's junk drawers.",
+   "head": "IN JUNK DRAWERS",
+   "stat": "$27B",
+   "sfx": [
+    "impact"
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "drop_in",
+    "at": 0.3
+   }
+  },
+  {
+   "text": "In gift cards. Unused ones.",
+   "head": "UNUSED GIFT CARDS",
+   "beat": 0.3,
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "center"
+   },
+   "zoom": {
+    "at": 0.0,
+    "amt": 1.22,
+    "hold": 0.7,
+    "on": "buck"
+   }
+  },
+  {
+   "text": "A 2024 Bankrate survey: 43% of adults have at least one.",
+   "say": "A twenty twenty-four Bankrate survey: forty-three percent of adults have at least one.",
+   "head": "43% OF ADULTS",
+   "stat": "43%",
+   "show_source": true,
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Average stash? $244. Per person!",
+   "say": "Average stash? Two hundred forty-four bucks. Per person!",
+   "head": "AVERAGE STASH",
+   "stat": "$244",
+   "fx": [
+    "coin_rain"
+   ],
+   "sfx": [
+    "coin"
+   ],
+   "mascot": {
+    "mood": "laugh",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "And one in five let a card expire.",
+   "head": "1 IN 5 EXPIRED",
+   "vs": {
+    "left": "$244",
+    "left_label": "In your drawer",
+    "right": "$0",
+    "right_label": "Expired",
+    "win": null,
+    "at": [
+     0.3,
+     1.5
+    ],
+    "vs_at": 0.9,
+    "right_color": "#FF4D4D"
+   }
+  },
+  {
+   "text": "Ow... worth nothing.",
+   "head": "WORTH NOTHING",
+   "mascot": {
+    "mood": "dizzy",
+    "pos": "center",
+    "act": "bonk",
+    "act_at": 0.4
+   },
+   "sfx": [
+    "wahwah@0.8"
+   ]
+  },
+  {
+   "text": "So... how much is in YOUR drawer?",
+   "head": "HOW MUCH IS IN YOURS?",
+   "mascot": {
+    "mood": "smug",
+    "pos": "center"
+   }
+  },
+  {
+   "text": "Go check that drawer, because right now...",
+   "head": "GO CHECK",
+   "mascot": {
+    "mood": "thumbsup",
+    "pos": "center",
+    "act": "roll_in"
+   }
+  }
+ ],
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
+ }
+}
