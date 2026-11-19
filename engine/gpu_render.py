@@ -10,6 +10,8 @@ No API key appears in this script: the environment's proxy adds it to requests f
 import argparse, json, os, secrets, subprocess, sys, time
 
 GQL = "https://api.runpod.io/graphql"; NAME = "buck-render"
+GPUS = ["NVIDIA GeForce RTX 4090", "NVIDIA GeForce RTX 5090", "NVIDIA RTX A5000", "NVIDIA GeForce RTX 3090", "NVIDIA RTX A6000",
+        "NVIDIA A40", "NVIDIA L4", "NVIDIA RTX 4000 Ada Generation", "NVIDIA L40S", "NVIDIA RTX 6000 Ada Generation"]
 SERVER = "https://raw.githubusercontent.com/financier-videos/financier-videos/media/engine/gpu_pod_server.py"
 BOOT = ("bash -c 'apt-get update -qq && apt-get install -y -qq curl libgl1 libxrender1 libxi6 libxkbcommon0 libsm6 "
         "libxxf86vm1 libxfixes3 libice6 libegl1 >/dev/null; pip install -q bpy==5.3.0 numpy pillow; mkdir -p /workspace/buck; "
@@ -51,8 +53,17 @@ def main():
         inp = {"cloudType": "ALL", "gpuCount": 1, "gpuTypeId": a.gpu, "name": NAME, "imageName": "python:3.13-slim",
                "containerDiskInGb": 20, "volumeInGb": 0, "ports": "8000/http", "dockerArgs": BOOT,
                "env": [{"key": "BUCK_TOKEN", "value": tok}, {"key": "BUCK_MAX_MIN", "value": str(a.max_min + 10)}]}
-        r = gql("mutation($i:PodFindAndDeployOnDemandInput){podFindAndDeployOnDemand(input:$i){id costPerHr machineId}}", {"i": inp})
-        pod = r["podFindAndDeployOnDemand"]; pid = pod["id"]; base = f"https://{pid}-8000.proxy.runpod.net"
+        pod = None; tried = []
+        for g in [a.gpu] + [x for x in GPUS if x != a.gpu]:  # first GPU type with free capacity wins
+            inp["gpuTypeId"] = g
+            try:
+                r = gql("mutation($i:PodFindAndDeployOnDemandInput){podFindAndDeployOnDemand(input:$i){id costPerHr machineId}}", {"i": inp})
+                pod = r["podFindAndDeployOnDemand"]
+            except SystemExit as e:
+                tried.append(f"{g}: {str(e)[:120]}"); continue
+            if pod: print("gpu type:", g, flush=True); break
+        if not pod: raise SystemExit("no GPU available right now:\n" + "\n".join(tried))
+        pid = pod["id"]; base = f"https://{pid}-8000.proxy.runpod.net"
         print("pod", pid, "cost/hr", pod.get("costPerHr"), flush=True)
         H = ["-H", f"X-Token: {tok}"]
 
