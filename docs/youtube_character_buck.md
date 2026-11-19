@@ -9,8 +9,8 @@ Yangilangan: 2026-11-20 01:15 (GitHub'ga ko'chirildi — asosiy nusxa shu fayl).
 
 ## 2. Ovozi
 - Faqat ElevenLabs'da O'ZIMIZ yaratgan ovoz: Voice Design, ARXETIP tavsifidan (klon emas, real odam ovozi/nomi yo'q, Voice Library emas).
-- 3 variant (work/voice_lab/buck_voice_lab.py): A "Buck A (Trickster)" — ekssentrik teatral ayyor; B "Buck B (Adventurer)" — tez gapiradigan energik sarguzashtchi; C "Buck C (Con-Artist)" — silliq, kinoyali animatsion qahramon. Shohjahon tanlaydi; tanlaguncha A. Spec: "buck_voice": {"variant": "A|B|C"}.
-- voice_id lar (ovoz laboratoriyasi, 2026-11-20 01:40, eleven_ttv_v3 Voice Design; namunalar work/voice_lab/out/): A "Buck A (Trickster)" = eH342qEgJkje3sPOEo6z; B "Buck B (Adventurer)" = oNvWqVbCi5f9laSmwaf5; C "Buck C (Con-Artist)" = lLwZ4pIcnVhPAHqXFq5O.
+- 3 variant (work/voice_lab/buck_voice_lab.py): A "Buck A (Trickster)" — ekssentrik teatral ayyor; B "Buck B (Adventurer)" — tez gapiradigan energik sarguzashtchi; C "Buck C (Con-Artist)" — silliq, kinoyali animatsion qahramon. D "Buck D (Wisecracker)" — tez, kinoyali hazilkash. Shohjahon tanlaydi; tanlaguncha A. Spec: "buck_voice": {"variant": "A|B|C|D"}.
+- voice_id lar (ovoz laboratoriyasi, 2026-11-20 01:40, eleven_ttv_v3 Voice Design; namunalar work/voice_lab/out/): A "Buck A (Trickster)" = eH342qEgJkje3sPOEo6z; B "Buck B (Adventurer)" = oNvWqVbCi5f9laSmwaf5; C "Buck C (Con-Artist)" = lLwZ4pIcnVhPAHqXFq5O. D "Buck D (Wisecracker)" = 8djOPgZzWUeoxXTsEBro (2026-11-20 01:40, vazifa; tez, kinoyali, tomoshabinga to'g'ridan gapiradigan hazilkash — Shohjahon so'rovi 01:33).
 - TTS: eleven_multilingual_v2; stability 0.28, similarity_boost 0.75, style 0.85, use_speaker_boost true.
 - IJRO YOZUVI (Short'ga 2–4 ta): "...", "Whoa!", "Wait a second...", "Heh.", "Okay, okay...", "Hmm."; KATTA HARF bilan urg'u; savol–javob ritmi.
 - ZAXIRA: Kokoro — faqat sinov. "buck_voice" "kokoro" bo'lsa video CHIQARILMAYDI.

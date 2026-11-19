@@ -13,33 +13,12 @@
       "name": "Buck A (Trickster)",
       "prompt": "An eccentric, theatrical, and wildly expressive comedic male voice. Playful, unpredictable rhythm with sudden pauses, dramatic gasps, and sly chuckles. Sounds like a charming, witty rogue adventure hero\u2014slurred slightly with amusement, full of personality and warmth, never robotic or flat.",
       "seed": 101,
-      "design_model": "eleven_ttv_v3",
-      "previews": [
-        {
-          "i": 1,
-          "f0": 216.2,
-          "spread": 162.4,
-          "score": 135.92000000000002
-        },
-        {
-          "i": 2,
-          "f0": 225.4,
-          "spread": 208.2,
-          "score": 178.04
-        },
-        {
-          "i": 3,
-          "f0": 285.7,
-          "spread": 144.5,
-          "score": 90.22
-        }
-      ],
-      "chosen_preview": 2,
+      "existing": true,
       "voice_id": "eH342qEgJkje3sPOEo6z",
       "sample": "/tmp/vl/out/Buck_A_sample.mp3",
       "sample_stats": {
-        "f0": 258.1,
-        "spread": 176.0
+        "f0": 262.3,
+        "spread": 172.0
       }
     },
     {
@@ -47,33 +26,12 @@
       "name": "Buck B (Adventurer)",
       "prompt": "A fast-talking, hyper-expressive, charismatic young male voice actor with big comedic timing. Shifts rapidly from whispered secrets to excited shouts, full of breathy laughs and crisp American diction.",
       "seed": 202,
-      "design_model": "eleven_ttv_v3",
-      "previews": [
-        {
-          "i": 1,
-          "f0": 266.7,
-          "spread": 228.8,
-          "score": 182.12
-        },
-        {
-          "i": 2,
-          "f0": 307.7,
-          "spread": 171.1,
-          "score": 108.02
-        },
-        {
-          "i": 3,
-          "f0": 258.1,
-          "spread": 177.4,
-          "score": 134.16
-        }
-      ],
-      "chosen_preview": 1,
+      "existing": true,
       "voice_id": "oNvWqVbCi5f9laSmwaf5",
       "sample": "/tmp/vl/out/Buck_B_sample.mp3",
       "sample_stats": {
-        "f0": 313.7,
-        "spread": 182.5
+        "f0": 285.7,
+        "spread": 188.2
       }
     },
     {
@@ -81,33 +39,46 @@
       "name": "Buck C (Con-Artist)",
       "prompt": "A smooth, cheeky, theatrical animated character voice with bouncy intonation, playful sarcasm, and dramatic inflection. Warm, resonant, and bursting with human emotion and comedic pauses.",
       "seed": 303,
+      "existing": true,
+      "voice_id": "lLwZ4pIcnVhPAHqXFq5O",
+      "sample": "/tmp/vl/out/Buck_C_sample.mp3",
+      "sample_stats": {
+        "f0": 290.9,
+        "spread": 225.6
+      }
+    },
+    {
+      "variant": "D",
+      "name": "Buck D (Wisecracker)",
+      "prompt": "A fast, sarcastic, wisecracking adult male comedic voice with a slightly raspy mid-range tone and a smirk in every line. Irreverent, self-aware motormouth who talks straight to the audience, tosses off dry asides, then snaps into mock-dramatic intensity. Sharp American diction, playful swagger, quick comic timing, never flat or robotic.",
+      "seed": 404,
       "design_model": "eleven_ttv_v3",
       "previews": [
         {
           "i": 1,
-          "f0": 238.8,
-          "spread": 204.6,
-          "score": 169.07999999999998
+          "f0": 235.3,
+          "spread": 172.1,
+          "score": 137.98
         },
         {
           "i": 2,
-          "f0": 235.3,
-          "spread": 231.4,
-          "score": 197.28
+          "f0": 254.0,
+          "spread": 170.1,
+          "score": 128.5
         },
         {
           "i": 3,
-          "f0": 225.4,
-          "spread": 221.0,
-          "score": 190.84
+          "f0": 195.1,
+          "spread": 155.6,
+          "score": 137.56
         }
       ],
-      "chosen_preview": 2,
-      "voice_id": "lLwZ4pIcnVhPAHqXFq5O",
-      "sample": "/tmp/vl/out/Buck_C_sample.mp3",
+      "chosen_preview": 1,
+      "voice_id": "8djOPgZzWUeoxXTsEBro",
+      "sample": "/tmp/vl/out/Buck_D_sample.mp3",
       "sample_stats": {
-        "f0": 320.0,
-        "spread": 211.3
+        "f0": 262.3,
+        "spread": 138.8
       }
     }
   ]
