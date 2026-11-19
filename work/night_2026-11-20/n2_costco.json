@@ -1,0 +1,113 @@
+{
+ "format": "short",
+ "sfx": true,
+ "loop": true,
+ "source": "Sources: Costco CFO, 2015 earnings call (Seattle Times); WSJ 2018",
+ "scenes": [
+  {
+   "text": "Costco gives up millions of dollars a year on a chicken. On purpose.",
+   "head": "MILLIONS. ON A CHICKEN.",
+   "stat": "$4.99",
+   "color": "#F5C542",
+   "sfx": [
+    "cash"
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "drop_in",
+    "at": 0.3
+   }
+  },
+  {
+   "text": "Hold on... on PURPOSE?",
+   "head": "ON PURPOSE?!",
+   "beat": 0.3,
+   "mascot": {
+    "mood": "confused",
+    "pos": "center"
+   },
+   "zoom": {
+    "at": 0.0,
+    "amt": 1.25,
+    "hold": 0.8,
+    "on": "buck"
+   }
+  },
+  {
+   "text": "That rotisserie chicken has cost $4.99 since 2009.",
+   "say": "That rotisserie chicken has cost four ninety-nine since two thousand nine.",
+   "head": "SAME PRICE SINCE 2009",
+   "vs": {
+    "left": "$4.99",
+    "left_label": "2009",
+    "right": "$4.99",
+    "right_label": "Today",
+    "win": null,
+    "at": [
+     0.4,
+     1.8
+    ],
+    "vs_at": 1.1
+   }
+  },
+  {
+   "text": "In 2015, their finance chief said they'd eat $30 to $40 million a year to keep it there.",
+   "say": "In twenty fifteen, their finance chief said they'd eat thirty to forty million dollars a year to keep it there.",
+   "head": "\"WE'LL EAT IT\"",
+   "stat": "$40M",
+   "color": "#FF4D4D",
+   "show_source": true,
+   "fx": [
+    "coin_rain"
+   ],
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "And where is it? All the way in the back of the store.",
+   "head": "ALL THE WAY IN THE BACK",
+   "mascot": {
+    "mood": "point",
+    "pos": "center",
+    "act": "roll_in"
+   }
+  },
+  {
+   "text": "So you walk past everything else first. Heh... that's not dinner. That's bait.",
+   "head": "THAT'S BAIT",
+   "sfx": [
+    "ding@3.2"
+   ],
+   "mascot": {
+    "mood": "smug",
+    "pos": "center"
+   }
+  },
+  {
+   "text": "So... do you ever leave with just the chicken?",
+   "head": "JUST THE CHICKEN?",
+   "mascot": {
+    "mood": "laugh",
+    "pos": "center"
+   }
+  },
+  {
+   "text": "Nobody does, and that's exactly why...",
+   "head": "NOBODY DOES",
+   "mascot": {
+    "mood": "thumbsup",
+    "pos": "center",
+    "act": "dodge"
+   }
+  }
+ ],
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
+ }
+}

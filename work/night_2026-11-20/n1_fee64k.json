@@ -1,0 +1,121 @@
+{
+ "format": "short",
+ "sfx": true,
+ "loop": true,
+ "source": "Source: U.S. Dept. of Labor, \"A Look at 401(k) Plan Fees\"",
+ "scenes": [
+  {
+   "text": "One percent sounds tiny. It can cost you $64,000.",
+   "say": "One percent sounds tiny. It can cost you sixty-four thousand dollars.",
+   "head": "1% = $64,000?",
+   "stat": "$64,000",
+   "color": "#FF4D4D",
+   "sfx": [
+    "impact"
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "drop_in",
+    "at": 0.3
+   }
+  },
+  {
+   "text": "One percent?! That's... nothing!",
+   "head": "IT'S JUST 1%",
+   "beat": 0.3,
+   "mascot": {
+    "mood": "confused",
+    "pos": "center"
+   },
+   "zoom": {
+    "at": 0.0,
+    "amt": 1.25,
+    "hold": 0.8,
+    "on": "buck"
+   }
+  },
+  {
+   "text": "Here's the U.S. Department of Labor's own example.",
+   "head": "DEPT. OF LABOR EXAMPLE",
+   "show_source": true,
+   "mascot": {
+    "mood": "point",
+    "pos": "center"
+   }
+  },
+  {
+   "text": "$25,000 in a 401(k). 35 years. 7% a year.",
+   "say": "Twenty-five thousand dollars in a four-oh-one-k. Thirty-five years. Seven percent a year.",
+   "head": "35 YEARS · 7% A YEAR",
+   "stat": "$25,000",
+   "sfx": [
+    "tick"
+   ],
+   "mascot": {
+    "mood": "happy",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Half a percent in fees... or one and a half?",
+   "head": "0.5% VS 1.5%",
+   "vs": {
+    "left": "$227,000",
+    "left_label": "0.5% fees",
+    "right": "$163,000",
+    "right_label": "1.5% fees",
+    "win": "left",
+    "at": [
+     0.3,
+     1.6
+    ],
+    "vs_at": 1.0,
+    "left_color": "#2BD67B",
+    "right_color": "#FF4D4D"
+   }
+  },
+  {
+   "text": "That's 28%... gone. To one little decimal point. Ow.",
+   "say": "That's twenty-eight percent... gone. To one little decimal point. Ow.",
+   "head": "28% GONE",
+   "stat": "-28%",
+   "color": "#FF4D4D",
+   "fx": [
+    "arrow_down"
+   ],
+   "sfx": [
+    "slide_down"
+   ],
+   "mascot": {
+    "mood": "dizzy",
+    "pos": "corner",
+    "act": "bonk",
+    "act_at": 2.6
+   }
+  },
+  {
+   "text": "So... do you know what your fee is?",
+   "head": "DO YOU KNOW YOUR FEE?",
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "center"
+   }
+  },
+  {
+   "text": "Most people don't, even though...",
+   "head": "MOST PEOPLE DON'T",
+   "mascot": {
+    "mood": "smug",
+    "pos": "center",
+    "act": "dodge"
+   }
+  }
+ ],
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
+ }
+}

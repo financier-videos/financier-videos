@@ -29,6 +29,9 @@ SHOHJAHON KO'RSATMALARI: kontentni o'zing reja qil va o'zing chiqar, "ha"sini ku
 - OVOZ LABORATORIYASI (bir marta; Shohjahon 2026-11-19 22:56 da so'ragan): ElevenLabs ochiq va /tmp/v.json da "Buck A (Trickster)" yoki "Buck D (Wisecracker)" ovozi YO'Q bo'lsa (D — Shohjahon 2026-11-20 01:33 da so'ragan: tez, kinoyali, tomoshabinga to'g'ridan gapiradigan hazilkash; skript mavjud ovozlarni qayta yaratmaydi) — `python3 -c "import numpy" || pip install --break-system-packages -q numpy; python3 -I work/voice_lab/buck_voice_lab.py /tmp/vl/out`; so'ng `mkdir -p work/voice_lab/out && cp /tmp/vl/out/Buck_?_sample.mp3 /tmp/vl/out/summary.json work/voice_lab/out/`, commit + push; `docs/youtube_character_buck.md` 2-bo'limiga voice_id larni yoz. Ovozlar bor bo'lsa — qayta yaratma.
 - vidIQ / Metricool vositalari kech yuklansa — ToolSearch ("+vidiq", "+Metricool").
 
+- BUYURTMA: `docs/night_order.md` boshida "HOLAT: OCHIQ" bo'lsa — soatga qaramay AVVAL uni bajar (boshqa sessiya allaqachon boshlagan bo'lsa — fayl pastidagi yozuvdan ko'rinadi — takrorlama).
+- SLOT QOIDASI: har ishlab chiqarishdan oldin Metricool getScheduledPosts. Bitta slotga bitta video. Keyingi 48 soatdagi slotlar (10:00/13:00/16:00/19:00 ET) to'la bo'lsa — yangi Short yasama, rejimning qolgan ishlarini qil. Yangi videoni eng yaqin BO'SH slotga qo'y.
+
 ## 1) SOATGA QARAB REJIM (jadvaldan tashqari soatda — eng yaqin bajarilmagan rejim; bugun bajarilgan bo'lsa takrorlama)
 
 ### A) 09:xx — ISHLAB CHIQARISH

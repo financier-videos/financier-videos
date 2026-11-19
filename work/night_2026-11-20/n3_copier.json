@@ -1,0 +1,108 @@
+{
+ "format": "short",
+ "sfx": true,
+ "loop": true,
+ "source": "Sources: M. Kuhn, Cambridge (2002); uscurrency.gov",
+ "scenes": [
+  {
+   "text": "Many color copiers will flat-out refuse to copy a twenty-dollar bill.",
+   "head": "COPIERS SAY NO",
+   "sfx": [
+    "buzzer"
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "drop_in",
+    "at": 0.3
+   },
+   "stat": "BLOCKED",
+   "color": "#FF4D4D"
+  },
+  {
+   "text": "Wait... the machine KNOWS?",
+   "head": "IT KNOWS?!",
+   "beat": 0.3,
+   "mascot": {
+    "mood": "confused",
+    "pos": "center"
+   },
+   "zoom": {
+    "at": 0.0,
+    "amt": 1.25,
+    "hold": 0.8,
+    "on": "buck"
+   }
+  },
+  {
+   "text": "Look at the back of a newer twenty. See those tiny yellow twenties?",
+   "head": "TINY YELLOW 20s",
+   "stat": "20 20 20",
+   "color": "#F5E04A",
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Their zeros form a hidden pattern of five rings. A researcher named it the EURion constellation, back in 2002.",
+   "say": "Their zeros form a hidden pattern of five rings. A researcher named it the yoo-ryon constellation, back in two thousand two.",
+   "head": "EURION CONSTELLATION",
+   "show_source": true,
+   "mascot": {
+    "mood": "proud",
+    "pos": "corner"
+   },
+   "stat": "5 RINGS"
+  },
+  {
+   "text": "Copiers hunt for it. Photo software uses a different secret system.",
+   "head": "TWO SECRET SYSTEMS",
+   "vs": {
+    "left": "RINGS",
+    "left_label": "Copiers look for",
+    "right": "???",
+    "right_label": "Photo software",
+    "win": null,
+    "at": [
+     0.3,
+     1.7
+    ],
+    "vs_at": 1.0
+   }
+  },
+  {
+   "text": "And the paper? Not paper. 75% cotton, 25% linen. Heh... you're carrying laundry.",
+   "say": "And the paper? Not paper. Seventy-five percent cotton, twenty-five percent linen. Heh... you're carrying laundry.",
+   "head": "IT'S NOT PAPER",
+   "stat": "75% COTTON",
+   "mascot": {
+    "mood": "laugh",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "So... did you ever notice the yellow twenties?",
+   "head": "EVER NOTICED?",
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "center"
+   }
+  },
+  {
+   "text": "Check your wallet, because...",
+   "head": "CHECK YOUR WALLET",
+   "mascot": {
+    "mood": "smug",
+    "pos": "center",
+    "act": "dodge"
+   }
+  }
+ ],
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
+ }
+}
