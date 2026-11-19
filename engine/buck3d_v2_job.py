@@ -42,7 +42,7 @@ def push(repo, msg):
         if r.returncode == 0:
             return True
         time.sleep(5 * (attempt + 1))
-        git(repo, "fetch", "-q", "--depth", "20", "origin", "media", check=False)
+        git(repo, "fetch", "-q", "--depth", "20", "origin", "+refs/heads/media:refs/remotes/origin/media", check=False)
         if git(repo, "rebase", "-q", "origin/media", check=False).returncode:
             # add/add conflict = another session already pushed the same pose: take the remote and move on
             git(repo, "rebase", "--abort", check=False)
@@ -54,7 +54,7 @@ def push(repo, msg):
 
 def sync(repo):
     """Fast-forward to the remote so poses finished by other sessions are not rendered twice."""
-    git(repo, "fetch", "-q", "--depth", "20", "origin", "media", check=False)
+    git(repo, "fetch", "-q", "--depth", "20", "origin", "+refs/heads/media:refs/remotes/origin/media", check=False)
     git(repo, "merge", "-q", "--ff-only", "origin/media", check=False)
 
 
