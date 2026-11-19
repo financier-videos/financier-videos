@@ -43,9 +43,19 @@ def push(repo, msg):
             return True
         time.sleep(5 * (attempt + 1))
         git(repo, "fetch", "-q", "--depth", "20", "origin", "media", check=False)
-        git(repo, "rebase", "-q", "origin/media", check=False)
+        if git(repo, "rebase", "-q", "origin/media", check=False).returncode:
+            # add/add conflict = another session already pushed the same pose: take the remote and move on
+            git(repo, "rebase", "--abort", check=False)
+            git(repo, "reset", "-q", "--hard", "origin/media", check=False)
+            return True
     print(r.stderr[-800:], file=sys.stderr)
     return False
+
+
+def sync(repo):
+    """Fast-forward to the remote so poses finished by other sessions are not rendered twice."""
+    git(repo, "fetch", "-q", "--depth", "20", "origin", "media", check=False)
+    git(repo, "merge", "-q", "--ff-only", "origin/media", check=False)
 
 
 def pack_pose(src, pose, parts):
@@ -98,6 +108,9 @@ def main():
     for pose in ORDER:
         if have(pose):
             continue
+        sync(repo)
+        if have(pose) or os.path.exists(final):
+            continue
         ready = all(os.path.exists(os.path.join(src, f"{pose}_{i:02d}.png")) for i in range(FRAMES[pose]))
         if not ready:
             if a.no_render or rendered >= a.max_poses:
@@ -112,6 +125,9 @@ def main():
         if not push(repo, f"assets: Buck 3D v2 cinema pose {pose}"):
             return 3
         print(f"pushed {pose}", flush=True)
+    sync(repo)
+    if os.path.exists(final):
+        print(json.dumps({"done": ORDER, "missing": [], "complete": True})); return 0
     missing = [p for p in ORDER if not have(p)]
     if not missing:
         assemble(repo, parts)
