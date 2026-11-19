@@ -1,0 +1,123 @@
+{
+ "format": "short",
+ "voice": "am_michael",
+ "speed": 1.15,
+ "sfx": true,
+ "loop": true,
+ "source": "Source: NRF forecast, Oct 15, 2026 (Nov 1–Dec 31: $1.013T). Rates: our math.",
+ "scenes": [
+  {
+   "text": "One trillion dollars. In just 61 days.",
+   "say": "One trillion dollars. In just sixty-one days.",
+   "head": "$1 TRILLION IN 61 DAYS",
+   "stat": "$1.013T",
+   "color": "#F5C542",
+   "broll": "/tmp/fin/broll/cashier_seg.mp4",
+   "broll_start": 0,
+   "fx": [
+    "coin_rain"
+   ],
+   "sfx": [
+    "cash"
+   ]
+  },
+  {
+   "text": "That's the NRF holiday forecast. But how fast is that?",
+   "head": "HOW FAST IS THAT?",
+   "color": "#F5C542",
+   "show_source": true,
+   "mascot": {
+    "mood": "confused",
+    "pos": "center",
+    "act": "roll_in"
+   },
+   "buck": "Is that... a lot?",
+   "buck_after": true
+  },
+  {
+   "text": "Yes, Buck. It's a lot.",
+   "head": "YES, BUCK.",
+   "color": "#F5C542",
+   "beat": 0.6,
+   "sfx": [
+    "crickets@0.0"
+   ],
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "center"
+   },
+   "zoom": {
+    "at": 0.0,
+    "amt": 1.25,
+    "hold": 0.6,
+    "on": "buck"
+   }
+  },
+  {
+   "text": "Every day? About $16.6 billion.",
+   "head": "EVERY DAY",
+   "stat": "$16.6B",
+   "color": "#F5C542",
+   "sfx": [
+    "slide_up"
+   ]
+  },
+  {
+   "text": "Every minute? About $11.5 million.",
+   "head": "EVERY MINUTE",
+   "stat": "$11.5M",
+   "color": "#F5C542",
+   "sfx": [
+    "slide_up"
+   ]
+  },
+  {
+   "text": "Every second? $192,000.",
+   "say": "Every second? A hundred ninety-two thousand dollars.",
+   "head": "EVERY SECOND",
+   "stat": "$192,000",
+   "color": "#2BD67B",
+   "shake": 0.35,
+   "sfx": [
+    "impact"
+   ],
+   "show_source": true,
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "dodge",
+    "act_at": 0.4
+   },
+   "buck": "Not today, price tag!",
+   "buck_after": true
+  },
+  {
+   "text": "Counting to a trillion, one per second? About 31,700 years.",
+   "say": "Counting to a trillion, one per second? About thirty-one thousand, seven hundred years.",
+   "head": "JUST TO COUNT IT",
+   "stat": "31,700 YRS",
+   "color": "#F5C542",
+   "sfx": [
+    "tick"
+   ],
+   "mascot": {
+    "mood": "dizzy",
+    "pos": "corner"
+   },
+   "buck": "I'll start Monday.",
+   "buck_after": true
+  },
+  {
+   "text": "That's $5.8 million every 30 seconds. Because this season, Americans are expected to spend…",
+   "say": "That's 5.8 million dollars every thirty seconds. Because this season, Americans are expected to spend...",
+   "head": "EVERY 30 SECONDS",
+   "stat": "$5.8M",
+   "color": "#F5C542",
+   "broll": "/tmp/fin/broll/tags_seg.mp4",
+   "broll_start": 0,
+   "sfx": [
+    "cash"
+   ]
+  }
+ ]
+}
