@@ -1,5 +1,5 @@
 # YOUTUBE PLAYBOOK — FINANCIER (moliya, AQSh auditoriyasi)
-Yangilangan: 2026-11-20 01:15 (chat: playbook GitHub'ga ko'chirildi — ASOSIY NUSXA shu fayl; yangi vazifa Default muhitda, ElevenLabs kaliti o'sha muhitda). Bu hujjatni har bir YouTube agent ishga tushganda o'qiydi va yangilaydi. 200 qatordan oshmasin. Personaj qoidalari: `docs/youtube_character_buck.md`. Vazifa ko'rsatmasi: `docs/producer_task.md`.
+Yangilangan: 2026-11-20 01:35 (vazifa A: ElevenLabs kaliti ruxsatlari yetarli emas → render yo'q, spec'lar work/2026-11-20/). Bu hujjatni har bir YouTube agent ishga tushganda o'qiydi va yangilaydi. 200 qatordan oshmasin. Personaj qoidalari: `docs/youtube_character_buck.md`. Vazifa ko'rsatmasi: `docs/producer_task.md`.
 
 ## 0. MAQSAD VA VAKOLAT
 - SHOHJAHON KO'RSATMASI (2026-11-18): kontentni Claude o'zi reja qiladi va o'zi chiqaradi, "ha"sini kutmaydi. Kuniga 2 Shorts + har 3 kunda 1 uzun video. Raqobatchilarni o'rganib eng zo'r bo'lish. Tomoshabin fikrini o'zi yig'adi. PROFESSIONAL MONTAJCHI darajasi.
@@ -30,7 +30,7 @@ Yangilangan: 2026-11-20 01:15 (chat: playbook GitHub'ga ko'chirildi — ASOSIY N
 - Funksiyalar: "Расширенные функции" — telefon tasdig'i kerak, Shohjahon o'zi (youtube.com/verify). "Страна проживания" bo'sh — haqiqiy bo'lmagan davlatga O'ZGARTIRMA.
 - Mavzu: pul/moliya QIZIQ FAKTLARI; konsepsiya "Money traps & how money really works".
 - OVOZ: faqat BUCK (ElevenLabs, 0-bo'lim sozlamalari). Variant: A "Buck A (Trickster)" (Shohjahon tanlaguncha) — tanlansa spec'ga "buck_voice": {"variant": "B"} yoki "C" yoz va shu qatorni yangila. MUSIQA YO'Q — sintez effektlar (stereo), mos joyda qushlar. ElevenLabs Creator ($22/oy, 131,000 kredit/oy, 19-sanada yangilanadi).
-- ELEVENLABS ULANISHI (2026-11-20 01:05 xulosa): Shohjahon kalitni Claude Code'ning **Default** bulut muhitiga qo'shgan. Chatdan yaratilgan vazifalar boshqa (bazaviy) muhitda ishlaydi — u yerda ElevenLabs 403. Shuning uchun asosiy vazifa Claude Code bo'limida Default muhit bilan qayta yaratiladi (ko'rsatma: docs/producer_task.md). Har ish boshida tekshir: `curl -s -o /tmp/v.json -w '%{http_code}' https://api.elevenlabs.io/v1/voices` (200 = ochiq; kalitni muhit o'zi qo'shadi yoki ELEVENLABS_API_KEY o'zgaruvchisi bor).
+- ELEVENLABS ULANISHI (2026-11-20 01:05 xulosa): Shohjahon kalitni Claude Code'ning **Default** bulut muhitiga qo'shgan. Chatdan yaratilgan vazifalar boshqa (bazaviy) muhitda ishlaydi — u yerda ElevenLabs 403. Shuning uchun asosiy vazifa Claude Code bo'limida Default muhit bilan qayta yaratiladi (ko'rsatma: docs/producer_task.md). Har ish boshida tekshir: `curl -s -o /tmp/v.json -w '%{http_code}' https://api.elevenlabs.io/v1/voices` (200 = ochiq; kalitni muhit o'zi qo'shadi yoki ELEVENLABS_API_KEY o'zgaruvchisi bor). 2026-11-20 01:26: Default muhitda kalit ULANGAN, lekin CHEKLANGAN — 401 "missing the permission voices_read" (user_read, models_read ham yo'q). Kerak: kalitda Text to Speech + Voices (read & write) + Voice Generation; Shohjahon ElevenLabs → API Keys da ruxsatlarni yoqadi.
 - Shorts = tanilish; uzun video = kelajakdagi daromad (YPP 2027).
 
 ## 2. QIZIL CHIZIQLAR
@@ -120,7 +120,7 @@ Yangilangan: 2026-11-20 01:15 (chat: playbook GitHub'ga ko'chirildi — ASOSIY N
 - 2026-11-18 — "Black Friday TVs Aren't What You Think" (Short, vidIQ compose). https://youtube.com/shorts/cQNwrsRVgQs.
 - 2026-11-19 04:00 Toshkent — "The Penny Cost 4 Cents to Make" (Short, dvigatel v1.1). https://youtube.com/shorts/8iQvkmmtNq8.
 - 2026-11-19 20:00 Toshkent — "Thanksgiving Got Pricier… Except Here" (Short 29.8 s, v4 + 3D Buck, Kokoro hikoyachi). Manba AFBF (2026-11-18). Pexels: Monstera Production. https://www.youtube.com/shorts/V0XNmfOVaZY.
-- 2026-11-20 02:00 Toshkent — "They Raised the Price. Sales Went UP." (Short 33.8 s, v4 + 3D Buck, Kokoro hikoyachi). Manbalar: Anderson & Simester 2003; Thomas & Morwitz 2005; Straight Dope; WWeek 2026-07-26. Pexels: Ron Lach, Pavel Danilyuk. Metricool id 433930931 (PENDING, 16:00 ET). Keyingi ishda YouTube URL'ini yoz.
+- 2026-11-20 02:00 Toshkent — "They Raised the Price. Sales Went UP." (Short 33.8 s, v4 + 3D Buck, Kokoro hikoyachi). Manbalar: Anderson & Simester 2003; Thomas & Morwitz 2005; Straight Dope; WWeek 2026-07-26. Pexels: Ron Lach, Pavel Danilyuk. Metricool id 433930931 (01:30 da hali PENDING, 16:00 ET). Keyingi ishda YouTube URL'ini yoz.
 - Eslatma: shu 4 video eski uslubda (hikoyachi + Kokoro) — natijalarni v6 videolari bilan solishtirganda hisobga ol.
 
 ## 10. O'RGANILGANLAR JURNALI (14 kundan eskisi xulosaga)
@@ -128,4 +128,5 @@ Yangilangan: 2026-11-20 01:15 (chat: playbook GitHub'ga ko'chirildi — ASOSIY N
 - 2026-11-19 (xulosa): Kokoro pul summalarini noto'g'ri o'qiydi → "say"; 13 s b-roll OOM → sahna ≤10 s; Alan's Theory, Zack D. Films tahlili; hazil tadqiqoti; YPP 2027 shartlari; dvigatel v3→v6 CINEMA (UI kesimda dublikat bo'lmasin — effektlar faqat sahna qatlamiga); birinchi ElevenLabs ovozi (eleven_v3, stability 0.5) "robot" → rad; hikoyachi olib tashlandi; tomoshabin: Pew 44%, Gallup 55%.
 - 2026-11-19 23:40–2026-11-20 00:25 (chat): Buck qayta dizayni → GIBRID v4 (Tripo tanasi + jonli yuz + naycha qo'l-oyoq; kadr 1.234x). Eski v2 pozalari o'chirildi. Model maxfiy → kutubxona faqat chatda.
 - 2026-11-20 00:25–01:15 (chat): buck3d.py — `--fast`, Tripo faylisiz xato bermaydi (kod Buck'ga o'tadi). 4.3 s smoke test OK. Dvigatel: burchakdagi Buck kadrdan chiqmaydi. ElevenLabs: ikki tekshiruv (00:56, 01:04) — chat/eski vazifa muhitida 403; kalit Default muhitda → vazifa Claude Code'da Default bilan qayta yaratiladi; hujjatlar docs/ ga ko'chirildi.
+- 2026-11-20 01:26 (vazifa, A): ElevenLabs 401 — kalitda voices_read/user_read/models_read ruxsati yo'q → ovoz laboratoriyasi va render bajarilmadi (Kokoro bilan chiqarilmaydi). Spec'lar: work/2026-11-20/ ($1 Trillion; YANGI "Thanksgiving Flights +17%" vs-format, 62 so'z). Shohjahonga xabar yuborildi.
 - Keyingi A: ElevenLabs tekshiruvi → ovoz laboratoriyasi → "$1 Trillion" Shorti. Keyingi B: 2026-11-20 (juft) — RAQOBAT; 2026-11-21 (toq) — MALAKA: Shorts tavsiya tizimi. Dvigatel navbati: lip-sync (v4 shape key og'iz; render faqat chatda).
