@@ -1075,6 +1075,7 @@ def main():
     ap.add_argument("--samples", type=int, default=32); ap.add_argument("--only", default="")
     ap.add_argument("--frames", type=int, default=0)
     ap.add_argument("--cinema", action="store_true", help="v2 cinema quality (defaults 1080 px, 64 samples)")
+    ap.add_argument("--gpu", action="store_true", help="render on the GPU if Cycles finds one (OptiX, then CUDA); else CPU")
     ap.add_argument("--fast", action="store_true", help="quick preset for tests/interim libraries: 720 px, 16 samples "
                                                         "(same look, ~8x faster; explicit --res/--samples still win)")
     ap.add_argument("--look", default="Medium High Contrast"); ap.add_argument("--threads", type=int, default=0)
@@ -1102,6 +1103,22 @@ def main():
                 if glb: P["tripo_pending"] = True
             ultimate_upgrade(P, bpy.context.scene)
             if glb: tripo_upgrade(P, bpy.context.scene, glb)
+    if a.gpu:
+        dev = "CPU"
+        try:
+            cp = bpy.context.preferences.addons["cycles"].preferences
+            for kind in ("OPTIX", "CUDA"):
+                try:
+                    cp.compute_device_type = kind; cp.get_devices()
+                    gpus = [d for d in cp.devices if d.type == kind]
+                    if gpus:
+                        for d in cp.devices: d.use = d.type == kind
+                        bpy.context.scene.cycles.device = "GPU"; dev = f"{kind}:{gpus[0].name}"; break
+                except Exception:
+                    continue
+        except Exception as e:
+            print("gpu setup failed:", e, flush=True)
+        print("RENDER_DEVICE", dev, flush=True)
     if a.threads:
         bpy.context.scene.render.threads_mode = "FIXED"; bpy.context.scene.render.threads = a.threads
     clips = [(m, m, FPS, None) for m in MOODS] + [("flip_happy", "happy", ACTS["flip"], "flip"),
