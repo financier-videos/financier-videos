@@ -21,8 +21,8 @@
    }
   },
   {
-   "text": "That's AAA's average domestic round-trip this Thanksgiving. Up 17% from last year.",
-   "say": "That's triple-A's average domestic round trip this Thanksgiving. Up seventeen percent from last year.",
+   "text": "AAA's average domestic round-trip this Thanksgiving. Up 17%.",
+   "say": "Triple-A's average domestic round trip this Thanksgiving. Up seventeen percent.",
    "head": "UP 17%",
    "stat": "+17%",
    "color": "#FF4D4D",
@@ -39,8 +39,8 @@
    }
   },
   {
-   "text": "And still... 81.5 million Americans are traveling.",
-   "say": "And still... eighty-one and a half million Americans are traveling.",
+   "text": "And still... 81.5 million Americans travel.",
+   "say": "And still... eighty-one and a half million Americans travel.",
    "head": "81.5 MILLION TRAVELERS",
    "stat": "81.5M",
    "transition": "flash",
@@ -60,14 +60,14 @@
     "win": "left",
     "at": [
      1.4,
-     3.2
+     3.0
     ],
-    "vs_at": 2.3
+    "vs_at": 2.2
    }
   },
   {
-   "text": "Heh. So that's the trick. Twelve drivers for every flyer.",
-   "say": "Heh. So that's the trick. Twelve drivers for every flyer.",
+   "text": "Heh. That's the trick. Twelve drivers per flyer.",
+   "say": "Heh. That's the trick. Twelve drivers per flyer.",
    "head": "12 TO 1",
    "beat": 0.6,
    "mascot": {
@@ -83,8 +83,8 @@
    ]
   },
   {
-   "text": "Okay, okay... I'm driving. Because flying home this year costs about...",
-   "say": "Okay, okay... I'm driving. Because flying home this year costs about...",
+   "text": "Okay, okay... I'm driving. Because flying home costs about...",
+   "say": "Okay, okay... I'm driving. Because flying home costs about...",
    "head": "I'M DRIVING",
    "mascot": {
     "mood": "thumbsup",
@@ -94,6 +94,9 @@
   }
  ],
  "buck_voice": {
-  "variant": "D"
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
  }
 }

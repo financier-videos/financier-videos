@@ -5,8 +5,8 @@
  "source": "Source: NRF forecast, Oct 15, 2026 (Nov 1–Dec 31: $1.013T). Rates: our math.",
  "scenes": [
   {
-   "text": "Whoa! One trillion dollars... in just 61 days.",
-   "say": "Whoa! One trillion dollars... in just sixty-one days.",
+   "text": "Whoa! One trillion dollars... in 61 days.",
+   "say": "Whoa! One trillion dollars... in sixty-one days.",
    "head": "$1 TRILLION IN 61 DAYS",
    "stat": "$1.013T",
    "broll": "/tmp/fin/broll/cashier_seg.mp4",
@@ -25,7 +25,7 @@
    }
   },
   {
-   "text": "That's the NRF holiday forecast. But wait a second... how fast is that?",
+   "text": "That's the NRF holiday forecast. Wait a second... how fast is that?",
    "head": "HOW FAST IS THAT?",
    "show_source": true,
    "mascot": {
@@ -41,7 +41,7 @@
    }
   },
   {
-   "text": "Every day? About $16.6 billion.",
+   "text": "Every day? $16.6 billion.",
    "head": "EVERY DAY",
    "stat": "$16.6B",
    "sfx": [
@@ -77,8 +77,8 @@
    "buck_after": true
   },
   {
-   "text": "Counting to a trillion, one per second? Heh... 31,700 years.",
-   "say": "Counting to a trillion, one per second? Heh... thirty-one thousand, seven hundred years.",
+   "text": "Counting to a trillion? Heh... 31,700 years.",
+   "say": "Counting to a trillion? Heh... thirty-one thousand, seven hundred years.",
    "head": "JUST TO COUNT IT",
    "stat": "31,700 YRS",
    "sfx": [
@@ -87,13 +87,11 @@
    "mascot": {
     "mood": "dizzy",
     "pos": "corner"
-   },
-   "buck": "I'll start Monday.",
-   "buck_after": true
+   }
   },
   {
-   "text": "So yeah... that's $5.8 million every 30 seconds. Because this season, Americans are expected to spend…",
-   "say": "So yeah... that's 5.8 million dollars every thirty seconds. Because this season, Americans are expected to spend...",
+   "text": "That's $5.8 million every 30 seconds… because this season, Americans are expected to spend…",
+   "say": "That's 5.8 million dollars every thirty seconds... because this season, Americans are expected to spend...",
    "head": "EVERY 30 SECONDS",
    "stat": "$5.8M",
    "broll": "/tmp/fin/broll/tags_seg.mp4",
@@ -104,6 +102,9 @@
   }
  ],
  "buck_voice": {
-  "variant": "D"
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
  }
 }
