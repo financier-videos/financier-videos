@@ -1,0 +1,131 @@
+# YOUTUBE PLAYBOOK — FINANCIER (moliya, AQSh auditoriyasi)
+Yangilangan: 2026-11-20 01:15 (chat: playbook GitHub'ga ko'chirildi — ASOSIY NUSXA shu fayl; yangi vazifa Default muhitda, ElevenLabs kaliti o'sha muhitda). Bu hujjatni har bir YouTube agent ishga tushganda o'qiydi va yangilaydi. 200 qatordan oshmasin. Personaj qoidalari: `docs/youtube_character_buck.md`. Vazifa ko'rsatmasi: `docs/producer_task.md`.
+
+## 0. MAQSAD VA VAKOLAT
+- SHOHJAHON KO'RSATMASI (2026-11-18): kontentni Claude o'zi reja qiladi va o'zi chiqaradi, "ha"sini kutmaydi. Kuniga 2 Shorts + har 3 kunda 1 uzun video. Raqobatchilarni o'rganib eng zo'r bo'lish. Tomoshabin fikrini o'zi yig'adi. PROFESSIONAL MONTAJCHI darajasi.
+- SHOHJAHON KO'RSATMASI (2026-11-18 16:55): monetizatsiyani tayyor bo'lishi bilan yoqish (2-bo'lim "MONETIZATSIYA KUZATUVI").
+- SHOHJAHON KO'RSATMASI (2026-11-19): videolar YUMORISTIK, SODDA, TUSHUNARLI, JUDA QIZIQARLI; qayta-qayta ko'rgisi kelsin. Kanalning o'z personaji — BUCK (3D, kino sifati, o'z ovozi, mualliflik muammosiz). Sifat uchun pul sarflashga rozi.
+- SHOHJAHON KO'RSATMASI (2026-11-19 22:25): 1 YIL ICHIDA O'Z SOHASIDA TOP-10. Buck va videolar katta byudjetli kino darajasida. Shohjahon ARALASHMAYDI — faqat biror narsa SOTIB OLISH kerak bo'lsa so'raladi.
+- SHOHJAHON KO'RSATMASI (2026-11-19 22:56): ALOHIDA HIKOYACHI YO'Q — har Short va uzun videoni boshidan oxirigacha faqat BUCK gapiradi. Oldingi Buck ovozi "robotga o'xshagan" — rad etildi. Yangi jonli komedik ovoz: 3 variant (A Trickster, B Adventurer, C Con-Artist), Shohjahon tanlaydi; tanlaguncha A. TTS: eleven_multilingual_v2, stability 0.28, similarity 0.75, style 0.85, speaker boost. Matnda tabiiy pauza va undovlar ("...", "Whoa!", "Wait a second...", "Heh.").
+- SHOHJAHON KO'RSATMASI (2026-11-19 23:38 – 2026-11-20 00:15): Buck'ning YANGI KO'RINISHI — "Ultimate Cinema Buck" (silindr shlyapa + dollar, zanjirli monokl, o'ymakor hoshiya, "$", qizil-oltin krossovka). Shohjahon Tripo'da (pullik tarif) model yasadi; tanlov — GIBRID: Tripo tanasi + jonli yuz. Model fayli MAXFIY: ochiq joyga qo'yilmaydi, 3D kutubxona faqat Shohjahonning chatida render qilinadi.
+- MAQSAD: 6 oyda (2027-05-18 gacha) jami 1 mlrd ko'rish; 12 oyda (2027-11) nishada TOP-10. Har hafta natijaga qarab keskin moslashuv.
+- Limitga urilsa: avval B rejimni, keyin uzun videoni qisqartir va Shohjahonga ayt.
+
+## 0.5 TOP-10 VA CINEMA QUALITY STANDARTI
+- NISHA: ingliz tilidagi "money facts / how money works / personal finance explainers" (Shorts + uzun). TOP-10 o'lchovi: oylik ko'rish va obunachi o'sishi bo'yicha nishadagi kanallar orasida o'rin (vidIQ similar_channels / channel_stats, Social Blade). Bosqichlar: 3-oy — TOP-100; 6-oy — TOP-30; 12-oy — TOP-10. Har oyning 1-yakshanbasi C ishida: 10–15 raqobatchi kanal + bizning o'rin → 6-bo'lim.
+- HAR VIDEO SHU CHEKLISTDAN O'TADI (o'tmasa — tuzat va qayta render; chiqarma):
+  1) Ovoz: 100% Buck, ElevenLabs (natija JSON "buck_voice" faqat "elevenlabs:…"). "kokoro" bo'lsa — CHIQARMA, sababini jurnalga yoz, Shohjahonga 1 qator.
+  2) Ijro: har Short'da 2–4 tabiiy undov/pauza, lekin har gapda emas; gaplar qisqa, og'zaki.
+  3) Kino ko'rinish: dvigatel v6 "cinema" (kamera harakati, parallaks, grading, motion blur, stereo SFX) — o'chirma.
+  4) 3D Buck: assets/buck3d_v2.tar (v4 gibrid ko'rinish) tayyor bo'lsa dvigatel o'zi oladi, aks holda v1; natija JSON "buck3d". Kutubxonani rejalashtirilgan vazifada RENDER QILMA (model maxfiy, assets/BUCK3D_HOLD).
+  5) Hook birinchi kadrda (sarlavha + raqam), Short 25–35 s, loop, har 1.5–3 s vizual o'zgarish.
+  6) Faktlar manbali; prognoz — "expected to"; maslahat yo'q.
+  7) Subtitrlar Buck'ning haqiqiy so'z vaqtlariga mos (v6 avtomatik), xavfsiz zonada; Buck kadrdan chiqmagan.
+- Sotib olish kerak bo'lsa (ElevenLabs Pro, bulutli GPU, premium stok) — faqat aniq narx va sabab bilan Shohjahondan so'ra; o'zing to'lama.
+
+## 1. KANAL
+- **Financier Money Facts**, @FINANCIER4241, channelId UC3URYtuy-f6c1fTNhesFkGA (Shohjahonning Google akkaunti). vidIQ ulangan. Metricool brendi 8198538.
+- Chrome'da bir nechta akkaunt. Studio'da "У вас нет доступа" chiqsa: avatar → "Сменить аккаунт" → Financier Money Facts.
+- Brending: avatar (oltin "F" + yashil o'q), banner ("FINANCIER — Money facts they don't teach you"), inglizcha tavsif ("Not financial advice"). Kalit so'zlar: money facts, finance facts, personal finance, how money works, money history, consumer tips, economics explained, saving money, Financier.
+- Funksiyalar: "Расширенные функции" — telefon tasdig'i kerak, Shohjahon o'zi (youtube.com/verify). "Страна проживания" bo'sh — haqiqiy bo'lmagan davlatga O'ZGARTIRMA.
+- Mavzu: pul/moliya QIZIQ FAKTLARI; konsepsiya "Money traps & how money really works".
+- OVOZ: faqat BUCK (ElevenLabs, 0-bo'lim sozlamalari). Variant: A "Buck A (Trickster)" (Shohjahon tanlaguncha) — tanlansa spec'ga "buck_voice": {"variant": "B"} yoki "C" yoz va shu qatorni yangila. MUSIQA YO'Q — sintez effektlar (stereo), mos joyda qushlar. ElevenLabs Creator ($22/oy, 131,000 kredit/oy, 19-sanada yangilanadi).
+- ELEVENLABS ULANISHI (2026-11-20 01:05 xulosa): Shohjahon kalitni Claude Code'ning **Default** bulut muhitiga qo'shgan. Chatdan yaratilgan vazifalar boshqa (bazaviy) muhitda ishlaydi — u yerda ElevenLabs 403. Shuning uchun asosiy vazifa Claude Code bo'limida Default muhit bilan qayta yaratiladi (ko'rsatma: docs/producer_task.md). Har ish boshida tekshir: `curl -s -o /tmp/v.json -w '%{http_code}' https://api.elevenlabs.io/v1/voices` (200 = ochiq; kalitni muhit o'zi qo'shadi yoki ELEVENLABS_API_KEY o'zgaruvchisi bor).
+- Shorts = tanilish; uzun video = kelajakdagi daromad (YPP 2027).
+
+## 2. QIZIL CHIZIQLAR
+- KONTENT XAVFSIZLIGI (Shohjahon, 2026-11-18): yalang'ochlik, behayo, shahvoniy, noqonuniy narsa yo'q (kadr, matn, mavzu). Qimor/kazino targ'iboti, firibgarlik, soliqdan qochish, giyohvand, qaroqchilik — taqiq (faqat ogohlantiruvchi fakt sifatida). So'kinish yo'q. B-roll preview'ini tekshir.
+- MUALLIFLIK HUQUQI: real odamlarning yuzi/ismi/ovozi/o'xshashligi yo'q (ovoz ham — Voice Design faqat arxetip tavsifi bilan); mavjud personajlar, ularning kiyimi/iboralari/logotiplari, meme rasmlari, film kadrlari, qo'shiqlar yo'q. Faqat Buck, sintez effektlar, OFL shriftlar, Pexels b-roll (muallif tavsifda).
+- Buck'ning Tripo modeli (Shohjahon, pullik tarif): faylni ochiq GitHub'ga yoki boshqa ochiq joyga QO'YMA, hech kimga yuborma.
+- "Inauthentic content" (2025-07 / 2026-07): ommaviy shablon, chalg'ituvchi kontent, sezgir mavzularda inson-ekspert qiyofasidagi AI personaj monetizatsiya qilinmaydi. Buck — multfilm personaj, maslahat bermaydi; har video o'z tadqiqoti va formati bilan farq qiladi.
+- Har fakt manbali, sanali; afsona — afsona; prognoz — prognoz. Tavsifda: "Not financial advice. For education and entertainment.", Pexels mualliflari, "Buck is our original character."
+- ElevenLabs: faqat Buck nutqi uchun TTS (kesh bor). Yangi ovoz yaratish/o'chirish (bir martalik laboratoriyadan tashqari), tarif, to'lov — faqat Shohjahon so'rasa. Kalitni hech qayerga chiqarma. KREDIT: Short ≈ 500–700 belgi, uzun ≈ 7–9 ming → oyiga ~110k (131k ichida). Qoldiq <15% bo'lsa: uzun videoni qisqartir va Shohjahondan Pro tarif ($99/oy, 500k) haqida so'ra.
+- MONETIZATSIYA KUZATUVI:
+  - Holat (2026-11-18, Studio rasmiy): "Монетизация недоступна в вашем регионе (Узбекистан)." Oxirgi xabar: 2026-09-23, Google bilan muzokara (Kursiv, Spot.uz).
+  - Har yakshanba C ishida: "YouTube Partner Program Uzbekistan" yangiliklari (WebSearch) → 6-bo'lim. Studio sahifasini faqat Shohjahonning chatidagi Claude tekshiradi.
+  - Sahifa/holat o'zgarsa: DARHOL Shohjahonga xabar. Shartnoma — faqat uning "ha"si bilan; AdSense/soliq/bank/2FA — Shohjahon o'zi. Mamlakatni yolg'on ko'rsatish TAQIQ.
+  - YPP'siz qonuniy daromad: homiylik, ochiq affiliate, o'z raqamli mahsulotlari.
+- YPP 2027 (YouTube blog 2026-08-10 va boshq.): 2027-02-01 dan YANGI arizachilar: 1,000 obunachi + 8,000 soat (365 kun) YOKI 20 mln Shorts ko'rish (90 kun). Shorts daromadini SAQLASH sharti: sirpanuvchi 90 kunda 10 mln Shorts ko'rish. → Shorts + uzun video aralashmasi shart.
+- POST: Metricool (blogId 8198538). vidIQ publish — faqat zaxira (har post uchun Shohjahon "ha"si). Har videoda "Not made for kids".
+
+## 3. ISHLAB CHIQARISH, HOSTING VA KREDIT
+- vidIQ: oyiga 150 kredit, 18-sanada yangilanadi (keyingi 2026-12-18). 2026-11-19 23:20 da 63. Narxlar: find_broll 1; tadqiqot/outliers/transcript/comments/user_videos 5; watch_shortform 10; video_watch 25. Jadval: dushanba 1 tadqiqot (5); yakshanba comment_insights (5) + o'z izohlar (5); har video ≤1 find_broll; haftasiga ≤1 watch_shortform. Balans <40 → faqat bepul ish.
+- DVIGATEL v6 CINEMA: `engine/make_video.py` (fayl boshidagi izohda BARCHA spec maydonlari). `pip install --break-system-packages kokoro-onnx soundfile` (Kokoro — faqat favqulodda zaxira), model GitHub releases (thewh1teagle/kokoro-onnx model-files-v1.0); `python3 -I engine/make_video.py spec.json out.mp4 --model .. --voices ..`. Short 1080x1920 / uzun 1920x1080, 30 fps, stereo, -14 LUFS.
+  - v2–v4.2: stat count-up, karaoke subtitr, chart, coin_rain, strelkalar, fon animatsiyasi, Ken Burns, o'tishlar, xavfsiz zonalar, "say", hazil to'plami ("beat", "mascot", "sticker", "look":"sepia", "shake", "ding@5.0", "loop"), 3D Buck, "vs" split-screen, "zoom" crash-zoom.
+  - v6: BUCK — YAGONA OVOZ: har sahna "text"/"say" ni Buck aytadi (ElevenLabs, oldingi/keyingi gap konteksti), "buck" — qo'shimcha luqma (pufakcha + ovoz). /with-timestamps → subtitr so'zma-so'z. Buck gapirganda "squash & stretch". CINEMA (standart yoqiq): har 1.5–2 s kamera push/pull/drift, 3D parallaks, light leak, 5 namunali motion blur, grading (teal-orange, bloom, vinyetka, dona); STEREO ovoz (panorama, riser + sub-boom, shimmer, xona shovqini, reverb, ducking). Natija JSON: "buck_voice", "buck3d", "cinema".
+  - 2026-11-20: burchakdagi Buck endi kadrdan chiqmaydi (sprite chegarasi bo'yicha suriladi); v2 kutubxona uchun oyoq chizig'i 0.86.
+  - Temp: Buck ~2.3–2.6 so'z/s. Short 25–35 s ≈ 55–70 so'z. Pul summalarini "say" da so'z bilan yoz ("a hundred ninety-two thousand dollars").
+  - Xotira: b-roll sahnasi ≤10 s. Render (2 yadro): 30–35 s Short ≈ 4–6 daq.
+- 3D BUCK v4 GIBRID (`engine/buck3d.py --cinema`, standart `--style tripo`; `--fast` = 720 px/16 namuna): Shohjahonning Tripo modeli (tanga + o'ymakor hoshiya + shlyapa + qo'lqoplar + krossovkalar) + kod bilan qurilgan JONLI yuz (ko'zlar, qovoqlar, qoshlar, shape key og'iz, monokl + zanjir, "$") + oltin naycha qo'l-oyoqlar. Model fayli MAXFIY → kutubxona FAQAT Shohjahonning chatida render qilinadi (pozalar → assets/buck3d_v2_parts/ → hammasi bo'lgach assets/buck3d_v2.tar). assets/BUCK3D_HOLD — vazifalar 3D render QILMAYDI. HOLAT 2026-11-20 01:10: tez (720 px) kutubxona chatda render qilinmoqda (141/226 kadr); tayyor bo'lguncha dvigatel v1 (eski bow-tie ko'rinish) ni oladi. 1080 px versiya — keyin.
+- GPU: Runpod — muhitdan 403 (tarmoq bloki); hozircha pul tashlanmaydi.
+- AVTONOM OQIM: dvigatel → MP4 → shu repo "media" branch (7 kundan eski mp4 o'chiriladi; assets/, engine/, docs/, work/ ga tegma) → raw URL → Metricool createScheduledPost.
+- OVOZ LABORATORIYASI: A/B/C ovozlari hali YARATILMAGAN (oldingi urinishlar ElevenLabs yopiq muhitda bo'lgan). Yangi vazifaning birinchi ishi yaratadi (docs/producer_task.md 0-bo'lim); namunalar work/voice_lab/out/ ga, Shohjahon tanlaydi.
+- VAZIFALAR: eski "avtonom prodyuser v2" (chat muhiti, ElevenLabs'siz) — yangi vazifa ishlagach Shohjahon o'chiradi. "Buck 3D v2 render (vaqtinchalik)" — hech narsa qilmaydi, o'chirish Shohjahonda.
+- Eng yaxshi vaqt (Metricool, ET): 16:00, keyin 10:00, 15:00, 14:00. Shorts 10:00 va 16:00 ET, uzun 15:00 ET.
+
+## 4. REJISSOR QOIDALARI, HAZIL FORMULASI VA PRO MONTAJ (35 qatordan oshmasin)
+- BUCK — HIKOYACHI VA AKTYOR: butun matnni Buck aytadi, birinchi shaxsda, jonli: o'zi savol beradi, o'zi javob beradi, o'zi hayron qoladi ("Is that a lot? ...Yes. Yes it is."). Tomoshabinga "you". Ekranda Buck sahnalarning ≥50% ida (stat/b-roll bilan "corner", punchline'da "center").
+- IJRO YOZUVI: "..." = tabiiy pauza; undovlar ("Whoa!", "Wait a second...", "Heh.", "Okay, okay...", "Hmm.") — Short'ga 2–4 ta; "?!" hayrat uchun; KATTA HARF bitta so'zda urg'u. "text" va "say" bir xil (subtitr = ovoz).
+- HOOK (0–2 s): salom/kirish yo'q. Paradoks, raqam yoki savol. Birinchi kadrda sarlavha + raqam to'liq ko'rinadi.
+- BITTA SAVOL: Short bitta savol atrofida; javob topilgan zahoti tugaydi (Zack D. Films: 31 s). Short 25–35 s.
+- LOOP: oxirgi gap birinchi gapga ulanadi + "loop": true.
+- O'RTADA OCHIQ SAVOL: "Guess which…" / "the craziest part is…" va oxirida javob (Alan's Theory usuli).
+- HAZIL faqat faktni tushuntiradigan ("related humor", Kaplan & Pascoe 1977). Usullar: uchlik qoidasi ("per day… per minute… per SECOND?!"), o'ziga-o'zi dialog, kulgili pauza ("beat" 0.3–0.9 s), afsona vs haqiqat ("look":"sepia" + sticker "LEGEND"), absurd taqqoslash, running gag (narx yorlig'i), luqma ("buck": "I'll start Monday."). Gag: "shocked" — monokl otilib chiqib zanjirda osiladi.
+- KOMIK PAUZA KONTRASTI: "beat" faqat eng katta syurpriz oldidan, videoga 1–2 marta (0.5–0.9 s). Manba: Ma va boshq., CogSci 2026. Ehtiyot: Attardo & Pickering 2011.
+- TAQQOSLASH = "vs": taxmin vs haqiqat, afsona vs fakt, oldin vs hozir; 2-panel aynan javob so'zida ochilsin.
+- TIL: 5-sinf darajasi, qisqa gaplar, kundalik o'xshatish.
+- TEMP: har 1.2–4 s da vizual o'zgarish. Bitta sahna ≤8 s. BO'SH O'RTA YO'Q: har sahnada stat, chart, vs, b-roll, coin_rain yoki Buck (center).
+- Sarlavha ≤50 belgi, qiziqtiradi, aldamaydi.
+- Sana stat'lari AQSh formatida; sanaladigan stat bitta raqamli. "source" ≤90 belgi.
+- Joylashuv: Buck "center" — stat/chart/vs yo'q sahnada; "corner" (yuqori chap) — stat/b-roll bilan, chart/vs bilan EMAS.
+- Xavfsiz zona (Shorts): pastki 20% va o'ng tugmalar — dvigatel avtomatik.
+- O'tishlar: zarbada "punch", mavzu almashganda "flash"/"slide". Rang: oltin asosiy, qizil #FF4D4D yo'qotish, yashil #2BD67B foyda.
+- Ovoz: Buck birinchi o'rinda; qo'shimcha effektlar 3–6 urg'u, punchline so'zi bilan sinxron ("ding@5.0"); wahwah — videoga ≤1.
+- SIFAT NAZORATI: 0.5-bo'lim cheklisti + 6–8 kadr, ovoz o'rtacha −20..−12 dB, stereo, Short ≤40 s.
+
+## 5. RAQOBATCHILAR VA ETALONLAR (har biri 3–4 qator; ≤10)
+- Alan's Theory (723K, US; "A $25 Million bill with expiration date", 1.5M, 170x breakout, 2026-09): hook — paradoks + jismoniy isbot; o'rtada ochiq savol; kesim har 1.2–2 s; 1–3 so'zli subtitr. KUCHSIZ: loop yo'q, 1:24 uzun. OLAMIZ: o'rtadagi ochiq savol, vizual isbot, kalit so'z rangi.
+- Zack D. Films (27.8M): 31 s, bitta savol, javobdan keyin darhol tugaydi, sarlavha = hook. OLAMIZ: qisqalik va bitta savol.
+- OverSimplified / Sam O'Nella / Casually Explained: quruq hikoya + absurd vizual gaplar, running gaglar. OLAMIZ: running gag (narx yorlig'i), fon "pasxa tuxumlari".
+- (Keyingi B RAQOBAT ishlarida to'ldiriladi; oyiga 1 marta TOP-10 jadvali uchun 10–15 kanal.)
+
+## 6. NATIJALAR, TOMOSHABIN FIKRI VA MOSLASHUV
+- Jadval (sana soat | obunachi | jami ko'rish | video soni; vidiq_user_channels):
+  - 2026-11-18 23:17 | 0 | 0 | 1
+  - 2026-11-19 23:17 | 1 | 0 | 3 (ko'rish ma'lumoti kechikmoqda)
+- TOP-10 jadvali (oyiga 1 marta): sana | bizning o'rin | nisha kanallari soni | eng yaqin raqobatchi.
+- Monetizatsiya jadvali: 2026-11-18 | O'zbekistonda YPP yo'q | 0 | 0 | 0
+- TOMOSHABIN NIMA DEYAPTI:
+  - 2026-11-18 (Reddit via 24/7 Wall St "Reddit Pulse"): obunalarni bekor qilish; qarz charchog'i va 0% balance transfer; ijara; ishlatilgan vs yangi mashina. Xulosa: asosiy og'riq — "affordability".
+  - 2026-11-19: Pew (2026-10-14, n=5,166): 44% o'tgan yili kamida 1 asosiy ehtiyojni to'lashda qiynalgan; 60% "xohlagan hayot uchun daromad yetmaydi"; 53% 3 oylik zaxira yo'q. Gallup (2026-04-28): 55% "moliyam yomonlashyapti" — rekord. Reddit: ijara-mashina depoziti posti <24 soatda 14k+ upvote (Cheapism/AOL) → "kartadagi ushlab qolishlar" qiziqish uyg'otadi.
+- IKKI BARAVAR OSHIR: ma'lumot hali yo'q (birinchi baho 2026-11-20 C).
+- TO'XTAT: Buck'ning eski "robot" ovozi (Shohjahon, 2026-11-19).
+- 1 mlrd prognozi: birinchi real prognoz 2026-11-21.
+
+## 7. MAVZULAR BANKI (yangilari tepada)
+- [SHOSHILINCH — 26-noyabrgacha] Thanksgiving sayohati: AAA prognozi (Fox Weather, 2026-11-17): 24–30-noyabr 81.5 mln amerikalik uydan ≥50 mil uzoqqa (2025 rekordi 81.6 mln dan −0.1%); 72.9 mln mashinada, 5.96 mln samolyotda; ichki aviabilet (borib-kelish) o'rtacha $800, +17% (AAA bron ma'lumoti). G'oya: "$800 to Eat Turkey?" — "vs" 2025 vs 2026. Sarlavha qoralama: "Thanksgiving Flights Just Got 17% Pricier".
+- [SHOSHILINCH — 1-dekabrgacha] Adobe prognozi (2026-09): AQSh onlayn bayram savdosi 1-noy–31-dek rekord $275.1 mlrd (+6.7%). NRF $1.013 trln bilan juftlash (~27 sent/dollar — hisobni qayta tekshir; ikki xil metodologiya). Cyber Monday raqamini Adobe relizidan tekshir.
+- [TAYYOR — birinchi; SHOSHILINCH — Black Friday 28-noyabrgacha] "$1 Trillion in 61 Days" — NRF prognozi (2026-10-15): 1-noy–31-dek $1.013 trln (+4.2%; 2025 $972 mlrd). Hisob: ≈$16.6 mlrd/kun, $11.5 mln/daqiqa, ≈$192,000/soniya, $5.8 mln/30 s; 1 trln soniya ≈ 31,700 yil ("birinchi marta" dema). Spec: work/t1_61/t1_61_v6.json (b-roll: work/t1_61/cashier_seg.mp4, tags_seg.mp4 → /tmp/fin/broll/; Pexels: Pavel Danilyuk, Ron Lach). Zaxira-ovozli sinov 30.7 s. Sarlavha: "$1 Trillion in 61 Days. How Fast Is That?".
+- [g'oya, tomoshabin] "Why the Counter Froze $200 of YOUR Money" — debit karta authorization hold. Manba: CFPB / Federal Reserve.
+- [g'oya, tomoshabin] "The $400 Question" — Fed SHED (so'nggi yil raqamini tekshir) + Pew 44% + Gallup 55%.
+- [QAYTA YASASH; uzun video] "The Subscription Trap" — 8-bo'lim. Short g'oyalari: Amazon "Iliad" + $2.5B; gym $17/tashrif vs $10; "$86 vs $219" taxmin testi ("vs").
+- [chiqdi] Penny; Black Friday TV tricks; $X.99 narx psixologiyasi; Thanksgiving narxlari — 9-bo'lim.
+- [g'oya] 0% balance transfer: fine print (CFPB). Mashina qadrsizlanishi (Edmunds/KBB/iSeeCars). Who invented money / "$" belgisi tarixi ("sepia" + birds). How Costco makes money. Retiree math va 4% rule. Why casinos have no clocks (faqat ogohlantirish).
+
+## 8. QAYTA YASASH NAVBATI
+- "$1 Trillion in 61 Days" — Buck yagona ovoz bilan qayta yozildi (7-bo'lim), ElevenLabs ochilishi bilan chiqariladi.
+- "The Subscription Trap" (uzun 7:55, 1134 so'z, 54 sahna) — Buck-hikoyachi uslubida qayta yasaladi. Manbalar: C+R Research/CNBC (2022-06-02; $86 vs $219, 42% unutgan, 86% autopay); Self Financial (2026-03, 1,272 kishi: 59.9% ishlatilmagan, $26.79/oy, 70% trialni unutgan); CNET/WFSB (2026-07-16: $111/oy, +23%); DellaVigna & Malmendier AER 2006 (7,752 a'zo, $70+/oy, 4.3 tashrif, $17+ vs $10); FTC dark patterns (2022-09); AP (2025-09-25: Amazon $2.5B, "Iliad"); click-to-cancel 2024-10 → 8-okrug 2025-07 bekor → FTC 2026-03-11 yangi rulemaking. Boblar: Guess · 2022 study · Why it's hard · Gym study · Why companies love it · Unused today · Free trials · Dark patterns & "Iliad" · Click-to-cancel · Your number.
+
+## 9. CHIQGAN VIDEOLAR
+- 2026-11-18 — "Black Friday TVs Aren't What You Think" (Short, vidIQ compose). https://youtube.com/shorts/cQNwrsRVgQs.
+- 2026-11-19 04:00 Toshkent — "The Penny Cost 4 Cents to Make" (Short, dvigatel v1.1). https://youtube.com/shorts/8iQvkmmtNq8.
+- 2026-11-19 20:00 Toshkent — "Thanksgiving Got Pricier… Except Here" (Short 29.8 s, v4 + 3D Buck, Kokoro hikoyachi). Manba AFBF (2026-11-18). Pexels: Monstera Production. https://www.youtube.com/shorts/V0XNmfOVaZY.
+- 2026-11-20 02:00 Toshkent — "They Raised the Price. Sales Went UP." (Short 33.8 s, v4 + 3D Buck, Kokoro hikoyachi). Manbalar: Anderson & Simester 2003; Thomas & Morwitz 2005; Straight Dope; WWeek 2026-07-26. Pexels: Ron Lach, Pavel Danilyuk. Metricool id 433930931 (PENDING, 16:00 ET). Keyingi ishda YouTube URL'ini yoz.
+- Eslatma: shu 4 video eski uslubda (hikoyachi + Kokoro) — natijalarni v6 videolari bilan solishtirganda hisobga ol.
+
+## 10. O'RGANILGANLAR JURNALI (14 kundan eskisi xulosaga)
+- 2026-11-18 (xulosa): vidIQ tadqiqoti — "tuzoq", ro'yxat Shorts, pul tarixi breakout beradi; brending, Metricool, GitHub hosting sozlandi; monetizatsiya O'zbekistonda yo'q; Reddit og'rig'i — affordability.
+- 2026-11-19 (xulosa): Kokoro pul summalarini noto'g'ri o'qiydi → "say"; 13 s b-roll OOM → sahna ≤10 s; Alan's Theory, Zack D. Films tahlili; hazil tadqiqoti; YPP 2027 shartlari; dvigatel v3→v6 CINEMA (UI kesimda dublikat bo'lmasin — effektlar faqat sahna qatlamiga); birinchi ElevenLabs ovozi (eleven_v3, stability 0.5) "robot" → rad; hikoyachi olib tashlandi; tomoshabin: Pew 44%, Gallup 55%.
+- 2026-11-19 23:40–2026-11-20 00:25 (chat): Buck qayta dizayni → GIBRID v4 (Tripo tanasi + jonli yuz + naycha qo'l-oyoq; kadr 1.234x). Eski v2 pozalari o'chirildi. Model maxfiy → kutubxona faqat chatda.
+- 2026-11-20 00:25–01:15 (chat): buck3d.py — `--fast`, Tripo faylisiz xato bermaydi (kod Buck'ga o'tadi). 4.3 s smoke test OK. Dvigatel: burchakdagi Buck kadrdan chiqmaydi. ElevenLabs: ikki tekshiruv (00:56, 01:04) — chat/eski vazifa muhitida 403; kalit Default muhitda → vazifa Claude Code'da Default bilan qayta yaratiladi; hujjatlar docs/ ga ko'chirildi.
+- Keyingi A: ElevenLabs tekshiruvi → ovoz laboratoriyasi → "$1 Trillion" Shorti. Keyingi B: 2026-11-20 (juft) — RAQOBAT; 2026-11-21 (toq) — MALAKA: Shorts tavsiya tizimi. Dvigatel navbati: lip-sync (v4 shape key og'iz; render faqat chatda).

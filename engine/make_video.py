@@ -71,9 +71,10 @@ v3 HUMOR PACK (scene fields):
   "shake": 0.35          camera shake (seconds) at scene start, for punchlines/impacts.
   sfx timing: "ding@5.0" plays 5.0 s after the scene starts (sync the hit with the punchline word).
   new "sfx": scratch (record scratch), boing, slide_up, slide_down, bonk, ding, buzzer, crickets, drumroll, wahwah.
-  "buck": "I'm okay!"    BUCK SPEAKS this line in his own voice (v5: ElevenLabs "Buck (Financier)"; fallback Kokoro) — before the narrator line,
+  "buck": "I'm okay!"    BUCK SPEAKS this extra line in his own voice (ElevenLabs Buck; fallback Kokoro) — before the scene line,
                          or after it with "buck_after": true. "text" may be "" (Buck-only scene). The bubble shows his line.
-BUCK 3D (v4): if the sprite library exists (env FIN_BUCK3D, else auto-download from GitHub media/assets/buck3d_v1.tar),
+BUCK 3D (v4; library v2 = the 2026-11-20 hybrid Buck with top hat + monocle, else v1): if the sprite library exists
+  (env FIN_BUCK3D, else auto-download from GitHub media/assets/buck3d_v2.tar, then buck3d_v1.tar),
   Buck is the 3D Blender-rendered character (buck3d.py); otherwise the 2D drawing. "buck3d": false forces 2D.
 Global: "loop": true -> last 0.2 s blends into the first frame (pair with a script whose last line flows into the first).
 v4.1 SPLIT-SCREEN "VS" (scene field; replaces stat/chart in that scene; don't combine with "mascot"):
@@ -1120,7 +1121,29 @@ BUCK3D_LIBS = [("v2", _GH + "buck3d_v2.tar"), ("v1", _GH + "buck3d_v1.tar")]  # 
 BUCK3D_FPS = 15
 ACT_CLIP = {"flip": ("flip_happy", 0.7), "bonk": ("bonk_dizzy", 1.5), "dodge": ("dodge_shocked", 0.75)}
 BUCK3D_CLIPS = list(MOODS) + ["flip_happy", "bonk_dizzy", "dodge_shocked"]
-_B3 = {"ok": None, "cache": {}, "dir": None, "ver": None, "n": {}}
+_B3 = {"ok": None, "cache": {}, "dir": None, "ver": None, "n": {}, "ext": {}}
+
+
+def b3_feet():
+    """Feet line of the sprite (fraction of its height): v1 framing 0.79; the v2 slot holds the hybrid Buck (taller hat, longer
+    legs, framing scaled 1.234x) whose shoes sit at 0.86."""
+    return 0.86 if _B3.get("ver") == "v2" else 0.79
+
+
+def buck3d_extent(clip, size):
+    """Union alpha bbox (x0, y0, x1, y1) of every frame of a clip at this sprite size (cached) -> keeps a corner Buck,
+    including raised gloves and the hat, fully inside the frame."""
+    key = (clip, size)
+    if key not in _B3["ext"]:
+        box = None; n = 0
+        while n < 40:
+            im = buck3d_frame(clip, n, size) if n < max(1, _B3["n"].get(clip, (1, ""))[0]) else None
+            if im is None: break
+            b = im.getchannel("A").point(lambda v: 255 if v > 24 else 0).getbbox()
+            if b: box = b if box is None else (min(box[0], b[0]), min(box[1], b[1]), max(box[2], b[2]), max(box[3], b[3]))
+            n += 1
+        _B3["ext"][key] = box
+    return _B3["ext"][key]
 
 
 def _lib_complete(d):
@@ -1184,7 +1207,7 @@ def mascot3d_patch(R, mood, t, lt, act=None, act_lt=-1.0):
     if abs(sx - 1) > 1e-3 or abs(sy - 1) > 1e-3:  # squash & stretch, feet stay planted
         w2, h2 = max(1, int(size * sx)), max(1, int(size * sy))
         im2 = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-        paste_rgba(im2, im.resize((w2, h2), Image.BILINEAR), (size - w2) / 2, size * 0.79 - h2 * 0.79)
+        paste_rgba(im2, im.resize((w2, h2), Image.BILINEAR), (size - w2) / 2, size * b3_feet() - h2 * b3_feet())
         im = im2
     if dy:
         im2 = Image.new("RGBA", (size, size), (0, 0, 0, 0)); paste_rgba(im2, im, 0, dy); im = im2
@@ -1527,6 +1550,9 @@ def render(spec, wav, total, out, workdir):
             else:
                 # corner = upper-left, between the headline and the big stat (keeps the stat and captions clear)
                 mR = H * 0.08 if long else W * 0.085; mx, my = (W * 0.11, H * 0.60) if long else (W * 0.15, H * 0.285)
+                if use3d:  # keep the whole sprite (raised gloves, hat) inside the frame
+                    sz_ = int(mR * 4.6); ex_ = buck3d_extent(mood, sz_)
+                    if ex_: mx = max(mx, W * 0.015 + sz_ / 2 - ex_[0])
             if sc.get("buck") and not masc.get("say"): masc["say"] = sc["buck"]
             bub_at = (sc.get("buck_t", sc["start"]) - sc["start"]) if sc.get("buck") else (m_at + 0.25)
             if masc.get("say"):
@@ -1690,7 +1716,7 @@ def render(spec, wav, total, out, workdir):
                         sy_ = 1 + 0.045 * a_; sx_ = 1 - 0.022 * a_
                         w2, h2 = max(1, int(mp.width * sx_)), max(1, int(mp.height * sy_))
                         im2 = Image.new("RGBA", mp.size, (0, 0, 0, 0))
-                        paste_rgba(im2, mp.resize((w2, h2), Image.BILINEAR), (mp.width - w2) / 2, mp.height * 0.79 - h2 * 0.79)
+                        paste_rgba(im2, mp.resize((w2, h2), Image.BILINEAR), (mp.width - w2) / 2, mp.height * b3_feet() - h2 * b3_feet())
                         mp = im2
                 if mp is not None:
                     if act == "roll_in" and act_lt < 0.7: mp = mp.rotate(math.degrees(-ox_ / mR), resample=Image.BILINEAR, center=(pax, pay))
