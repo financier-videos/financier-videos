@@ -11,6 +11,9 @@ soft contact shadow) that make_video.py composites into videos.
                                                                    # chain, shape-key mouth, gold limbs, 4-finger gloves, red-gold
                                                                    # sneakers. Library slot "v2" (assets/buck3d_v2.tar).
   python3 buck3d.py --cinema --style classic --out x                # the earlier v2 bow-tie look: 1080 px, 64 samples, PBR gold
+  python3 buck3d.py --cinema --fast --out x                         # FAST preset (720 px, 16 samples) for smoke tests / interim
+  NOTE: --style tripo (default) needs the private Tripo GLB (--tripo PATH or env FIN_BUCK_GLB); without it the script
+        prints a warning and renders --style ultimate instead of failing.
                                                                    # (micro-scratches, lathe rings, roughness map, clear coat),
                                                                    # iris + cornea eyes, fabric shaders, 3-point + double rim
                                                                    # light, reflection cards, soft deep contact shadows
@@ -1072,6 +1075,8 @@ def main():
     ap.add_argument("--samples", type=int, default=32); ap.add_argument("--only", default="")
     ap.add_argument("--frames", type=int, default=0)
     ap.add_argument("--cinema", action="store_true", help="v2 cinema quality (defaults 1080 px, 64 samples)")
+    ap.add_argument("--fast", action="store_true", help="quick preset for tests/interim libraries: 720 px, 16 samples "
+                                                        "(same look, ~8x faster; explicit --res/--samples still win)")
     ap.add_argument("--look", default="Medium High Contrast"); ap.add_argument("--threads", type=int, default=0)
     ap.add_argument("--style", default="tripo", choices=["tripo", "ultimate", "classic"],
                     help="with --cinema: tripo = v4 HYBRID (Tripo sculpt body + procedural animated face; MAIN model), "
@@ -1081,14 +1086,22 @@ def main():
     a = ap.parse_args(sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else sys.argv[1:])
     if a.cinema and "--res" not in sys.argv: a.res = 1080
     if a.cinema and "--samples" not in sys.argv: a.samples = 64
+    if a.fast:
+        if "--res" not in sys.argv: a.res = 720
+        if "--samples" not in sys.argv: a.samples = 16
     os.makedirs(a.out, exist_ok=True)
     P = build(a.res, a.samples)
     if a.cinema:
         cinema_upgrade(P, bpy.context.scene, a.look)
         if a.style in ("ultimate", "tripo"):
-            if a.style == "tripo": P["tripo_pending"] = True
+            glb = None
+            if a.style == "tripo":
+                try: glb = _tripo_glb(a.tripo)
+                except (SystemExit, Exception) as e:  # no private model here: never fail, render the procedural top-hat Buck
+                    print(f"WARNING: Tripo model unavailable ({e}); falling back to --style ultimate", flush=True)
+                if glb: P["tripo_pending"] = True
             ultimate_upgrade(P, bpy.context.scene)
-            if a.style == "tripo": tripo_upgrade(P, bpy.context.scene, _tripo_glb(a.tripo))
+            if glb: tripo_upgrade(P, bpy.context.scene, glb)
     if a.threads:
         bpy.context.scene.render.threads_mode = "FIXED"; bpy.context.scene.render.threads = a.threads
     clips = [(m, m, FPS, None) for m in MOODS] + [("flip_happy", "happy", ACTS["flip"], "flip"),
