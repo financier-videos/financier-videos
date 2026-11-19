@@ -101,6 +101,9 @@ def main():
     final = os.path.join(repo, "assets", "buck3d_v2.tar")
     if os.path.exists(final):
         print(json.dumps({"done": ORDER, "missing": [], "complete": True})); return 0
+    hold = os.path.join(repo, "assets", "BUCK3D_HOLD")
+    if os.path.exists(hold):  # design change in progress: render nothing until the new model is published
+        print(json.dumps({"hold": True, "why": open(hold).read().strip()[:200], "complete": False})); return 0
     have = lambda p: os.path.exists(os.path.join(parts, f"{p}.tar"))
     src = a.frames_dir or a.work
     os.makedirs(src, exist_ok=True)
