@@ -11,7 +11,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 TOKEN = os.environ.get("BUCK_TOKEN", ""); W = "/workspace/buck"; OUT = W + "/frames"; LOG = W + "/render.log"
 RAW = "https://raw.githubusercontent.com/financier-videos/financier-videos/media/engine/buck3d.py"
-TOTAL = 226; ST = {"proc": None, "packed": False, "t0": time.time()}
+ST = {"proc": None, "packed": False, "t0": time.time(), "total": 226}
 os.makedirs(OUT, exist_ok=True)
 
 
@@ -36,13 +36,13 @@ def pack():
     os.replace(tar + ".part", tar); ST["packed"] = True
 
 
-def run(fast):
+def run(fast, talk=False):
     subprocess.run(["curl", "-sSfL", "-o", W + "/buck3d.py", RAW], check=True)
-    cmd = [sys.executable, W + "/buck3d.py", "--cinema", "--gpu", "--tripo", W + "/buck.glb", "--out", OUT] + (["--fast"] if fast else [])
+    cmd = [sys.executable, W + "/buck3d.py", "--cinema", "--gpu", "--tripo", W + "/buck.glb", "--out", OUT] + (["--fast"] if fast else []) + (["--talk-only"] if talk else [])
     with open(LOG, "w") as lf:
         ST["proc"] = subprocess.Popen(cmd, stdout=lf, stderr=subprocess.STDOUT)
         ST["proc"].wait()
-    if len(glob.glob(OUT + "/*.png")) >= TOTAL: pack()
+    if len(glob.glob(OUT + "/*.png")) >= ST["total"]: pack()
 
 
 class H(BaseHTTPRequestHandler):
@@ -60,7 +60,7 @@ class H(BaseHTTPRequestHandler):
         if not self.auth(): return
         if self.path.startswith("/status"):
             p = ST["proc"]
-            self.ok({"frames": len(glob.glob(OUT + "/*.png")), "total": TOTAL, "running": bool(p and p.poll() is None),
+            self.ok({"frames": len(glob.glob(OUT + "/*.png")), "total": ST["total"], "running": bool(p and p.poll() is None),
                      "rc": (p.poll() if p else None), "packed": ST["packed"], "device": device(),
                      "model": os.path.exists(W + "/buck.glb"), "log": tail()})
         elif self.path.startswith("/result") and ST["packed"]:
@@ -87,7 +87,8 @@ class H(BaseHTTPRequestHandler):
         if not self.auth(): return
         q = urllib.parse.parse_qs(urllib.parse.urlparse(self.path).query)
         if ST["proc"] is None and os.path.exists(W + "/buck.glb"):
-            threading.Thread(target=run, args=(q.get("fast", ["0"])[0] == "1",), daemon=True).start(); self.ok({"started": True})
+            talk = q.get("talk", ["0"])[0] == "1"; ST["total"] = 540 if talk else 226
+            threading.Thread(target=run, args=(q.get("fast", ["0"])[0] == "1", talk), daemon=True).start(); self.ok({"started": True})
         else: self.ok({"started": False}, code=409)
 
 

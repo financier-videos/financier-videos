@@ -474,6 +474,7 @@ def tts(spec, args, workdir):
     hop = int(sr / FPS); nfr = len(audio) // hop + 1
     envf = np.array([np.sqrt(np.mean(audio[j * hop:(j + 1) * hop] ** 2)) if j * hop < len(audio) else 0.0 for j in range(nfr)], np.float32)
     spec["_speech_env"] = (envf / (np.percentile(envf, 95) + 1e-6)).clip(0, 1.2).tolist()
+    spec["_speech_words"] = [w for sc in spec["scenes"] for w in (sc.get("words") or [])]
     audio = mix_sfx(audio, sr, spec)
     wav = os.path.join(workdir, "voice.wav"); sf.write(wav, audio, sr)
     return wav, t
@@ -1204,7 +1205,17 @@ def buck3d_ready():
                     subprocess.run(["tar", "-xf", tar, "-C", d], check=True); os.remove(tar)
                 except Exception:
                     pass
-            if _lib_complete(d): _B3.update(dir=d, ver=ver); break
+            if _lib_complete(d):
+                _B3.update(dir=d, ver=ver)
+                if ver == "v2" and not os.path.exists(os.path.join(d, "happy_t1_00.webp")):  # optional lip-sync mouth variants
+                    try:
+                        tar = os.path.join(d, "talk.tar")
+                        subprocess.run(["curl", "-sSfL", "-o", tar, _GH + "buck3d_v2_talk.tar"], timeout=900, check=True)
+                        subprocess.run(["tar", "-xf", tar, "-C", d], check=True); os.remove(tar)
+                    except Exception:
+                        pass
+                _B3["talk"] = any(os.path.exists(os.path.join(d, f"happy_t1_00.{e}")) for e in ("webp", "png"))
+                break
         _B3["ok"] = _B3["dir"] is not None
     return _B3["ok"]
 
@@ -1217,7 +1228,7 @@ def buck3d_frame(clip, i, size):
         _B3["n"][clip] = (n, ext)
     n, ext = _B3["n"][clip]
     if n == 0: return None
-    key = (clip, min(i, n - 1) if not clip in MOODS else i % n, size)
+    key = (clip, min(i, n - 1) if not (clip in MOODS or "_t" in clip[-3:]) else i % n, size)
     if key not in _B3["cache"]:
         if len(_B3["cache"]) > 400: _B3["cache"].clear()
         im = Image.open(os.path.join(d, f"{key[0]}_{key[1]:02d}.{ext}")).convert("RGBA")
@@ -1225,7 +1236,21 @@ def buck3d_frame(clip, i, size):
     return _B3["cache"][key]
 
 
-def mascot3d_patch(R, mood, t, lt, act=None, act_lt=-1.0):
+OPEN_MOODS = ("happy", "laugh", "thumbsup")  # idle mouth already open -> use the small-open variant between syllables
+
+
+def talk_level(env, words, fi, t):
+    """Lip-sync: mouth variant for this video frame (0 = idle pose, 1 half open, 2 wide, 3 rounded 'o') from the speech
+    envelope (sampled at the sprite rate so it never flickers) and the vowel of the word being spoken."""
+    if not env: return None
+    j = (fi // 2) * 2; a = max(env[min(j, len(env) - 1)], env[min(j + 1, len(env) - 1)])
+    if a < 0.12: return 0
+    w = next((x[0].lower() for x in (words or []) if x[1] - 0.03 <= t <= x[2] + 0.03), "")
+    if a < 0.5 and any(k in w for k in ("oo", "ou", "ow", "oh", "wh", "you", "who", "two")): return 3
+    return 2 if a >= 0.5 else 1
+
+
+def mascot3d_patch(R, mood, t, lt, act=None, act_lt=-1.0, talk=None):
     """3D Buck: picks the loop/act frame and adds the 2D extras (pop-in, squash, shocked jump)."""
     size = int(R * 4.6)
     a = ease_back(lt / 0.32) if lt < 0.32 else 1.0
@@ -1236,6 +1261,13 @@ def mascot3d_patch(R, mood, t, lt, act=None, act_lt=-1.0):
         clip = ACT_CLIP[act][0]; fi = int(act_lt * BUCK3D_FPS)
     else:
         fi = int(lt * BUCK3D_FPS)
+        if talk is not None and _B3.get("talk") and clip in MOODS:
+            lv = talk if talk else (1 if clip in OPEN_MOODS else 0)
+            if lv:
+                n0 = _B3["n"].get(clip) or (buck3d_frame(clip, 0, size) is not None and _B3["n"].get(clip))
+                tclip = f"{clip}_t{lv}"
+                tim = buck3d_frame(tclip, fi % max(1, (n0 or (15, ""))[0]), size)
+                if tim is not None: clip = tclip
     im = buck3d_frame(clip, fi, size)
     if im is None: return "missing", (0, 0)
     wob = math.exp(-lt * 5) * math.sin(lt * 26)
@@ -1747,7 +1779,9 @@ def render(spec, wav, total, out, workdir):
                 elif act == "drop_in" and act_lt < 0.45:  # falls in from above and squashes
                     oy_ = -(1 - ease_out(max(0.0, act_lt) / 0.45) ** 2) * (my + mR * 3)
                 mp = "missing"
-                if use3d: mp, (pax, pay) = mascot3d_patch(mR, mood, t, m_lt, act=act, act_lt=act_lt)
+                if use3d:
+                    tk_ = talk_level(spec.get("_speech_env"), spec.get("_speech_words"), fi, t)
+                    mp, (pax, pay) = mascot3d_patch(mR, mood, t, m_lt, act=act, act_lt=act_lt, talk=tk_)
                 if isinstance(mp, str): mp, (pax, pay) = mascot_patch(mR, mood, t, m_lt, act=act, act_lt=act_lt)  # 2D fallback
                 env_ = spec.get("_speech_env")
                 if mp is not None and env_ and not (act in ACT_CLIP and 0 <= act_lt < ACT_CLIP[act][1]):

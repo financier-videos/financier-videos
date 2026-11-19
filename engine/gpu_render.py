@@ -43,8 +43,11 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", required=True); ap.add_argument("--fast", action="store_true")
     ap.add_argument("--gpu", default="NVIDIA GeForce RTX 4090"); ap.add_argument("--max-min", type=int, default=45)
-    ap.add_argument("--out", default="assets/buck3d_v2.tar")
+    ap.add_argument("--out", default="")
+    ap.add_argument("--talk", action="store_true", help="render the lip-sync mouth variants (540 frames) -> assets/buck3d_v2_talk.tar")
     a = ap.parse_args()
+    a.out = a.out or ("assets/buck3d_v2_talk.tar" if a.talk else "assets/buck3d_v2.tar"); want = 540 if a.talk else 226
+    if a.talk and a.max_min == 45: a.max_min = 80
     if not os.path.exists(a.model): raise SystemExit("model file not found")
     for p in pods():
         if p["name"] == NAME: terminate(p["id"])
@@ -75,7 +78,7 @@ def main():
             time.sleep(20)
         print("pod ready after", int(time.time() - t0), "s; uploading model", flush=True)
         print(curl(H + ["-X", "PUT", "-T", a.model, base + "/model"], 600)[:200], flush=True)
-        print(curl(H + ["-X", "POST", base + f"/start?fast={1 if a.fast else 0}"], 60)[:200], flush=True)
+        print(curl(H + ["-X", "POST", base + f"/start?fast={1 if a.fast else 0}&talk={1 if a.talk else 0}"], 60)[:200], flush=True)
         last = -1
         while True:
             s = status()
@@ -88,7 +91,7 @@ def main():
         os.makedirs(os.path.dirname(a.out) or ".", exist_ok=True)
         subprocess.run(["curl", "-sSf", "--max-time", "900", "-H", f"X-Token: {tok}", "-o", a.out + ".part", base + "/result"], check=True)
         n = len(subprocess.run(["tar", "tf", a.out + ".part"], capture_output=True, text=True).stdout.split())
-        if n != 226: raise SystemExit(f"result has {n} frames, expected 226")
+        if n != want: raise SystemExit(f"result has {n} frames, expected {want}")
         os.replace(a.out + ".part", a.out)
         print(json.dumps({"ok": True, "frames": n, "device": s["device"], "minutes": round((time.time() - t0) / 60, 1), "out": a.out}))
     finally:

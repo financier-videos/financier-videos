@@ -698,6 +698,10 @@ def pose_ultimate(P, mood, t, w, act, act_t, edge_on, blink):
     wts = dict(U_MOUTH.get(mood, {}))
     if mood == "laugh": wts["open"] = 0.82 + 0.18 * abs(math.sin(w * 2))
     if mood == "happy": wts["open"] = 0.72 + 0.06 * math.sin(w * 4)
+    tk = P.get("talk", 0)  # lip-sync variants: 1 = half open, 2 = wide open, 3 = rounded "o" (same pose, only the mouth differs)
+    if tk and act is None:
+        wts = {k: v for k, v in wts.items() if k in ("smirk",) and tk != 3}
+        wts.update({1: {"open": 0.38}, 2: {"open": 0.85}, 3: {"o": 0.75}}[tk])
     if act == "bonk" and 0.22 <= act_t < 0.6: wts = {"o": 0.8}
     if act == "dodge": wts = {"o": 0.6, "open": 0.2}
     kb = P["mouth_sk"].data.shape_keys.key_blocks
@@ -1058,8 +1062,8 @@ def pose(P, mood, t, act=None, act_t=0.0):
         pose_tripo(P, mood, t, w, act, edge_on)
 
 
-def render_clip(P, out, name, mood, n, act=None):
-    sc = bpy.context.scene
+def render_clip(P, out, name, mood, n, act=None, talk=0):
+    sc = bpy.context.scene; P["talk"] = talk
     for i in range(n):
         f = os.path.join(out, f"{name}_{i:02d}.png")
         if os.path.exists(f): continue
@@ -1075,6 +1079,8 @@ def main():
     ap.add_argument("--samples", type=int, default=32); ap.add_argument("--only", default="")
     ap.add_argument("--frames", type=int, default=0)
     ap.add_argument("--cinema", action="store_true", help="v2 cinema quality (defaults 1080 px, 64 samples)")
+    ap.add_argument("--talk-only", action="store_true", help="render only the lip-sync variants of the 12 mood loops: "
+                    "<mood>_t1_NN (half open), _t2_ (wide), _t3_ (o) = 540 frames (v4 hybrid / ultimate styles)")
     ap.add_argument("--gpu", action="store_true", help="render on the GPU if Cycles finds one (OptiX, then CUDA); else CPU")
     ap.add_argument("--fast", action="store_true", help="quick preset for tests/interim libraries: 720 px, 16 samples "
                                                         "(same look, ~8x faster; explicit --res/--samples still win)")
@@ -1125,6 +1131,12 @@ def main():
              ("bonk_dizzy", "dizzy", ACTS["bonk"], "bonk"), ("dodge_shocked", "shocked", ACTS["dodge"], "dodge")]
     if a.only:
         order = a.only.split(","); clips = sorted([c for c in clips if c[0] in order], key=lambda c: order.index(c[0]))
+    if a.talk_only:
+        for name, mood, n, act in [c for c in clips if c[3] is None]:
+            for tk in (1, 2, 3):
+                render_clip(P, a.out, f"{name}_t{tk}", mood, a.frames or n, None, talk=tk)
+            print("done talk", name, flush=True)
+        return
     for name, mood, n, act in clips:
         render_clip(P, a.out, name, mood, a.frames or n, act)
         print("done", name, flush=True)
