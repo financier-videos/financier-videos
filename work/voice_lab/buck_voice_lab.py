@@ -24,6 +24,10 @@ VARIANTS = [
     ("C", "Buck C (Con-Artist)", 303,
      "A smooth, cheeky, theatrical animated character voice with bouncy intonation, playful sarcasm, and dramatic inflection. "
      "Warm, resonant, and bursting with human emotion and comedic pauses."),
+    ("D", "Buck D (Wisecracker)", 404,
+     "A fast, sarcastic, wisecracking adult male comedic voice with a slightly raspy mid-range tone and a smirk in every "
+     "line. Irreverent, self-aware motormouth who talks straight to the audience, tosses off dry asides, then snaps into "
+     "mock-dramatic intensity. Sharp American diction, playful swagger, quick comic timing, never flat or robotic."),
 ]
 PREVIEW_TEXT = ("Whoa! Wait a second... Americans are gonna spend one TRILLION dollars... in sixty-one days? Heh. "
                 "That's sixteen billion. Per day! Okay, okay... relax. I have a plan. Step one: don't panic. "

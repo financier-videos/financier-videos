@@ -128,7 +128,7 @@ def say_text(x):
 # ---------------- BUCK's voice ----------------
 # v5 PRIMARY: our own ElevenLabs voice (Voice Design from a text prompt; owned by the channel's ElevenLabs account).
 EL_API = "https://api.elevenlabs.io/v1"
-BUCK_VARIANTS = {"A": "Buck A (Trickster)", "B": "Buck B (Adventurer)", "C": "Buck C (Con-Artist)"}  # voice lab 2026-11-19
+BUCK_VARIANTS = {"A": "Buck A (Trickster)", "B": "Buck B (Adventurer)", "C": "Buck C (Con-Artist)", "D": "Buck D (Wisecracker)"}  # voice lab 2026-11-19
 BUCK_VARIANT = os.environ.get("FIN_BUCK_VARIANT", "A")  # A until Shohjahon picks (then set here)
 BUCK_EL = {"name": BUCK_VARIANTS.get(BUCK_VARIANT, BUCK_VARIANTS["A"]), "voice_id": "",  # or env FIN_BUCK_VOICE_ID
            "fallback_names": ["Buck A (Trickster)", "Buck (Financier)"],
