@@ -242,9 +242,49 @@ def el_speak(text, workdir, tag, cfg=None, prev=None, nxt=None, sr=24000):
         a0 = max(0, int(idx[0]) - int(0.03 * sr)) if len(idx) else 0; a1 = min(len(y), int(idx[-1]) + int(0.08 * sr)) if len(idx) else len(y)
         y = y[a0:a1]; sh = a0 / sr
         words = [(w, max(0.0, t0 - sh), max(0.0, t1 - sh)) for w, t0, t1 in words]
+        y, words = _tighten(y, words, sr, float(cfg.get("max_pause", 0)), float(cfg.get("tempo", 1.0)), workdir, tag)
         _EL["used"].append(f"elevenlabs:{_EL.get('name') or BUCK_EL['name']}/{m}")
         return (y / pk * 0.85).astype(np.float32), words
     return None
+
+
+def _tighten(y, words, sr, max_pause, tempo, workdir, tag):
+    """2026-11-20: Buck's designed voices speak slowly (~1.4 words/s) with long gaps. Shorten every inner pause longer
+    than max_pause to max_pause, then speed up with ffmpeg atempo (pitch kept; no new TTS credits — the cache is the raw
+    take). Word timestamps are remapped so captions stay in sync. Spec "buck_voice": {"tempo": 1.3, "max_pause": 0.38} (both off by default)."""
+    import soundfile as sf
+    hop = int(0.01 * sr); n = len(y) // hop
+    if n > 10 and max_pause > 0:
+        e = np.sqrt(np.mean(y[:n * hop].reshape(n, hop) ** 2, axis=1)); quiet = e < e.max() * 0.03
+        cuts = []; i = 0  # (start_s, removed_s)
+        while i < n:
+            if quiet[i]:
+                j = i
+                while j < n and quiet[j]: j += 1
+                ln = (j - i) * hop / sr
+                if ln > max_pause and i > 0 and j < n:
+                    keep = max_pause / 2; cuts.append((i * hop / sr + keep, ln - max_pause))
+                i = j
+            else:
+                i += 1
+        if cuts:
+            parts = []; pos = 0
+            for c0, cl in cuts:
+                parts.append(y[pos:int(c0 * sr)]); pos = int((c0 + cl) * sr)
+            parts.append(y[pos:]); y = np.concatenate(parts).astype(np.float32)
+
+            def mp(t):
+                d = 0.0
+                for c0, cl in cuts:
+                    if t > c0: d += min(cl, t - c0)
+                return t - d
+            words = [(w, mp(a), mp(b)) for w, a, b in words]
+    if tempo and abs(tempo - 1.0) > 0.01:
+        src = os.path.join(workdir, f"tight_{tag}_in.wav"); dst = os.path.join(workdir, f"tight_{tag}_out.wav")
+        sf.write(src, y, sr)
+        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", src, "-af", f"atempo={tempo:.4f}", "-ar", str(sr), "-ac", "1", dst], check=True)
+        y, _ = sf.read(dst, dtype="float32"); words = [(w, a / tempo, b / tempo) for w, a, b in words]
+    return y, words
 
 
 def buck_line_el(text, workdir, idx, cfg=None, sr=24000):
