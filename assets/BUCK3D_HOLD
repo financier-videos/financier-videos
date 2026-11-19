@@ -1,1 +1,1 @@
-Buck v4 hybrid (Tripo body + live face) is the new main model; library render waits for the model-file storage decision (2026-11-20 00:15).
+Buck v4 hybrid library is rendered ONLY in Shohjahon's chat session (the Tripo model file stays private, by his choice 2026-11-20 00:15). Scheduled sessions: do not render the 3D library.

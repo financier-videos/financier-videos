@@ -95,6 +95,7 @@ def main():
     ap.add_argument("--work", default=os.path.join(tempfile.gettempdir(), "buck3d_v2_frames"))
     ap.add_argument("--frames-dir", default="", help="optional dir that already holds finished PNG frames")
     ap.add_argument("--no-render", action="store_true", help="only pack poses whose PNG frames are already complete")
+    ap.add_argument("--ignore-hold", action="store_true", help="pack/push even while assets/BUCK3D_HOLD exists (chat-side render)")
     a = ap.parse_args()
     repo = os.path.abspath(a.repo)
     parts = os.path.join(repo, "assets", "buck3d_v2_parts")
@@ -102,7 +103,7 @@ def main():
     if os.path.exists(final):
         print(json.dumps({"done": ORDER, "missing": [], "complete": True})); return 0
     hold = os.path.join(repo, "assets", "BUCK3D_HOLD")
-    if os.path.exists(hold):  # design change in progress: render nothing until the new model is published
+    if os.path.exists(hold) and not a.ignore_hold:  # model file is private: scheduled sessions render nothing
         print(json.dumps({"hold": True, "why": open(hold).read().strip()[:200], "complete": False})); return 0
     have = lambda p: os.path.exists(os.path.join(parts, f"{p}.tar"))
     src = a.frames_dir or a.work
