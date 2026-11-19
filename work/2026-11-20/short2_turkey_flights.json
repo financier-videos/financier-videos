@@ -92,5 +92,8 @@
     "act": "roll_in"
    }
   }
- ]
+ ],
+ "buck_voice": {
+  "variant": "D"
+ }
 }

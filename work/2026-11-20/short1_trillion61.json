@@ -102,5 +102,8 @@
     "cash"
    ]
   }
- ]
+ ],
+ "buck_voice": {
+  "variant": "D"
+ }
 }
