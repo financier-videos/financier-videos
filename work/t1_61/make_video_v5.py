@@ -1,0 +1,1428 @@
+#!/usr/bin/env python3
+"""FINANCIER video engine v5 (ElevenLabs Buck voice + crash-zoom + split-screen VS + humor pack + 3D Buck) — Kokoro narrator + PIL frames + ffmpeg.
+
+Usage:
+  python3 -I make_video.py spec.json out.mp4 --model kokoro.onnx --voices voices.bin
+  python3 -I make_video.py design-buck OUTDIR [--seed 4241] [--no-save] [--force]   # one-time: create Buck's ElevenLabs voice
+  python3 -I make_video.py buck-say "Line" out.wav [--model .. --voices ..]          # quick test of Buck's voice
+
+v5 BUCK VOICE (ElevenLabs, primary): Buck's lines ("buck" field) are spoken by OUR OWN ElevenLabs voice "Buck (Financier)",
+  made with Voice Design from a text prompt (no cloning, no real person, not from the Voice Library). Needs env
+  ELEVENLABS_API_KEY and network access to api.elevenlabs.io (a network secret on that host also works). Voice id:
+  BUCK_EL["voice_id"] -> env FIN_BUCK_VOICE_ID -> lookup by name. Model: BUCK_EL["models"] in order (first that works).
+  Every line is cached in FIN_TTS_CACHE (credits are spent once per line). If anything fails, Buck falls back to
+  Kokoro am_puck (pitched) and the result JSON says so in "buck_voice" — check it in QC and note it in the journal.
+  Spec "buck_voice": {"engine": "kokoro"} forces the old voice; {"model": "...", "settings": {...}} overrides.
+  The narrator stays Kokoro (am_michael).
+
+spec.json:
+{
+  "format": "short" | "long",          # short = 1080x1920, long = 1920x1080
+  "voice": "am_michael", "speed": 1.05,
+  "scenes": [
+    {"text": "spoken line", "head": "ON-SCREEN HEADLINE", "color": "#F5C542",
+     "broll": "/path/clip.mp4" (optional), "stat": "83%" (optional big number)}
+  ],
+  "source": "Source: ... (optional, shown small at the bottom)",
+  "sfx": true,              # auto whoosh on scene change + pop when a stat appears
+  "ambient": "birds",       # optional soft bird/breeze bed under the whole video; "ambient_vol": 0.08
+}
+Scene "sfx": list of extra effects: coin, cash, impact, tick, birds, whoosh, pop (all synthesized).
+Animation (v2): stats count up with an overshoot "punch"; karaoke captions (active word gold, numbers green);
+animated background (light sweep, self-drawing chart line, floating $); Ken Burns on b-roll; scene transitions.
+Scene extras: "chart": {"labels": ["2014","2024"], "values": [1.42, 3.69], "texts": ["1.42¢","3.69¢"], "at": [0.3, 1.2]} (animated bars;
+optional "at" = seconds after scene start when each bar grows, to sync bars with the narration — rule of three!),
+"fx": ["coin_rain", "arrow_up" | "arrow_down"], "transition": "punch" | "flash" | "slide".
+v2.2: "say": what the voice reads (captions keep "text"); money/percent are auto-normalized for TTS
+($58.63 -> "58 dollars and 63 cents", $1.2 trillion -> "1.2 trillion dollars", 9% -> "9 percent").
+v3 HUMOR PACK (scene fields):
+  "beat": 0.5            comedic pause (silence) BEFORE the line; the mascot/sticker reacts during it.
+  "mascot": {"mood": "shocked|happy|laugh|smug|confused|sideeye|sad|angry|point|dizzy|thumbsup|proud",
+             "say": "short bubble text (<= 6 words)", "pos": "center|corner", "at": 0.0,
+             "act": "roll_in|drop_in|flip|bonk|dodge", "act_at": 0.0}
+            BUCK = the channel's own cartoon coin (green bow tie, green sneakers, white gloves). Physical comedy:
+            roll_in/drop_in = entrances; flip = coin-flip jump; bonk = a price tag falls on his head (stars; pair
+            with mood "dizzy", then "thumbsup" in the next scene); dodge = leans back as a price tag flies past. "center" = big (scene must have no stat/chart);
+            "corner" = small, upper-left between headline and stat (works with stat/b-roll; avoid with chart). Default pos picks itself.
+  "sticker": "MYTH?"     meme-style label that slaps onto the screen (Bangers font, tilted). "sticker_color": "#FF4D4D",
+                         "sticker_at": 1.6 (seconds after scene start). Big & centred when the scene has no stat/chart/mascot.
+  "look": "sepia"        old-film look for "legend says..." / history beats (flicker + grain).
+  "shake": 0.35          camera shake (seconds) at scene start, for punchlines/impacts.
+  sfx timing: "ding@5.0" plays 5.0 s after the scene starts (sync the hit with the punchline word).
+  new "sfx": scratch (record scratch), boing, slide_up, slide_down, bonk, ding, buzzer, crickets, drumroll, wahwah.
+  "buck": "I'm okay!"    BUCK SPEAKS this line in his own voice (v5: ElevenLabs "Buck (Financier)"; fallback Kokoro) — before the narrator line,
+                         or after it with "buck_after": true. "text" may be "" (Buck-only scene). The bubble shows his line.
+BUCK 3D (v4): if the sprite library exists (env FIN_BUCK3D, else auto-download from GitHub media/assets/buck3d_v1.tar),
+  Buck is the 3D Blender-rendered character (buck3d.py); otherwise the 2D drawing. "buck3d": false forces 2D.
+Global: "loop": true -> last 0.2 s blends into the first frame (pair with a script whose last line flows into the first).
+v4.1 SPLIT-SCREEN "VS" (scene field; replaces stat/chart in that scene; don't combine with "mascot"):
+  "vs": {"left": "$86", "left_label": "People guessed", "left_sub": "per month",
+         "right": "$219", "right_label": "They actually paid", "right_sub": "per month",
+         "win": "right" | "left" | null, "at": [0.3, 2.4], "vs_at": 1.4,
+         "left_color": "#9AA4B8", "right_color": "#F5C542"}
+  Two panels slide in from the sides at "at" (seconds after scene start; sync the 2nd with the word that reveals it),
+  a red VS badge slams in between (vs_at, default midway), values count up; ~0.9 s after the 2nd panel the winner
+  glows and the other side dims. Auto sfx: pop per panel + light impact on the VS badge. Myth vs fact, guess vs reality,
+  then vs now, plan A vs plan B. Shorts: layout shifted left of the like/comment buttons.
+v4.2 REACTION CRASH-ZOOM (scene field):
+  "zoom": {"at": 0.0, "amt": 1.25, "hold": 0.8, "on": "buck|stat|sticker|center|[x, y]"}
+                         camera snaps in (0.14 s, slight overshoot) on the reaction, holds, eases back out (0.2 s).
+                         "at" = seconds after scene start (0.0 + "beat" = zoom on Buck's face during the comic pause);
+                         "hold": -1 = stay zoomed to the scene end; [x, y] = fractions of the frame. Default "on" = buck if
+                         the scene has Buck, else center. Captions, brand and progress bar stay put (not zoomed).
+                         Auto "whip" sfx at the zoom (needs global "sfx": true). Use 1-2 per Short, amt 1.15-1.35
+                         (on a big stat <= 1.15 or the number touches the edges; a corner Buck is auto-kept in frame).
+  new "sfx": whip (short rising swish for crash zooms / fast moves).
+"""
+import json, os, re, subprocess, sys, argparse, math, tempfile
+import numpy as np
+from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageEnhance, ImageOps
+
+ANTON = "/usr/share/fonts/truetype/google-fonts/ofl/anton/Anton-Regular.ttf"
+INTER_XB = "/usr/share/fonts/opentype/inter/Inter-ExtraBold.otf"
+INTER_SB = "/usr/share/fonts/opentype/inter/Inter-SemiBold.otf"
+FPS = 30
+GOLD = (245, 197, 66); GREEN = (43, 214, 123); WHITE = (245, 247, 250); GREY = (150, 160, 180)
+
+
+def hex2rgb(h):
+    h = h.lstrip('#'); return tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
+
+
+_SCALE = r'(thousand|million|billion|trillion)'
+
+
+def say_text(x):
+    """Make money/percent read naturally in Kokoro (it reads "$58.63" as "dollar fifty-eight point six three")."""
+    x = re.sub(r'\$(\d[\d,]*(?:\.\d+)?)\s*' + _SCALE, r'\1 \2 dollars', x)
+    x = re.sub(r'\$(\d[\d,]*(?:\.\d+)?)([KMBT])\b', lambda m: m.group(1) + " " + {"K": "thousand", "M": "million", "B": "billion", "T": "trillion"}[m.group(2)] + " dollars", x)
+    x = re.sub(r'\$(\d[\d,]*)\.(\d\d)\b', lambda m: f"{m.group(1)} dollar{'s' if m.group(1) != '1' else ''} and {int(m.group(2))} cents", x)
+    x = re.sub(r'\$(\d[\d,]*)\b', lambda m: f"{m.group(1)} dollar{'s' if m.group(1) != '1' else ''}", x)
+    x = re.sub(r'(\d+(?:\.\d+)?)\s*%', r'\1 percent', x)
+    x = re.sub(r'(\d+(?:\.\d+)?)\s*¢', r'\1 cents', x)
+    return x.replace("…", "...").replace("—", ", ")
+
+
+# ---------------- BUCK's voice ----------------
+# v5 PRIMARY: our own ElevenLabs voice (Voice Design from a text prompt; owned by the channel's ElevenLabs account).
+EL_API = "https://api.elevenlabs.io/v1"
+BUCK_EL = {"name": "Buck (Financier)", "voice_id": "",  # filled in after design-buck (also env FIN_BUCK_VOICE_ID)
+           "models": ["eleven_v3", "eleven_multilingual_v2"],
+           "settings": {"stability": 0.5, "similarity_boost": 0.8, "style": 0.3, "use_speaker_boost": True, "speed": 1.0}}
+BUCK_PROMPT = ("A warm, energetic, and charismatic young adult male voice with a crisp American accent. Cheerful, slightly "
+               "cheeky, and expressive like a brave cartoon adventurer. Bright, resonant mid-high pitch, clear articulation, "
+               "and comedic timing. Sounds optimistic, friendly, and quick-witted, never arrogant or harsh.")
+BUCK_SAMPLE = ("Hey there, I'm Buck! Yes, the coin with the bow tie. Relax, I have a plan. Prices going up again? "
+               "Not today, price tag! Ow... worth it. Money doesn't grow on trees. I checked! Stick with me, "
+               "and every dollar makes a little more sense.")
+TTS_CACHE = os.environ.get("FIN_TTS_CACHE", os.path.join(tempfile.gettempdir(), "fin_tts_cache"))
+_EL = {"vid": None, "why": "", "used": []}
+
+
+def el_call(method, path, body=None, out=None, timeout=90, query=""):
+    """ElevenLabs request through curl (uses the session proxy). The API key goes in on stdin (-H @-), never on the
+    command line. Returns (http_code, bytes); bytes also written to `out` if given."""
+    import hashlib
+    key = os.environ.get("ELEVENLABS_API_KEY", "").strip()
+    hdr = (f"xi-api-key: {key}\n" if key else "") + "Accept: */*\n"
+    cmd = ["curl", "-sS", "-X", method, "--max-time", str(timeout), "-H", "@-", "-w", "%{http_code}"]
+    tmpo = out or os.path.join(tempfile.gettempdir(), "el_" + hashlib.sha1((path + str(os.getpid())).encode()).hexdigest()[:10])
+    cmd += ["-o", tmpo]
+    if body is not None:
+        bf = tmpo + ".json"; json.dump(body, open(bf, "w")); cmd += ["-H", "Content-Type: application/json", "--data-binary", "@" + bf]
+    cmd.append(EL_API + path + query)
+    try:
+        p = subprocess.run(cmd, input=hdr.encode(), capture_output=True, timeout=timeout + 15)
+        code = int((p.stdout.decode().strip() or "0")[-3:])
+    except Exception:
+        code = 0
+    data = open(tmpo, "rb").read() if os.path.exists(tmpo) else b""
+    if body is not None and os.path.exists(tmpo + ".json"): os.remove(tmpo + ".json")
+    if out is None and os.path.exists(tmpo): os.remove(tmpo)
+    return code, data
+
+
+def el_voice_id():
+    """Buck's ElevenLabs voice id: BUCK_EL -> env FIN_BUCK_VOICE_ID -> look up our voice by name."""
+    if _EL["vid"] is None:
+        vid = BUCK_EL.get("voice_id") or os.environ.get("FIN_BUCK_VOICE_ID", "")
+        if not vid:
+            code, data = el_call("GET", "/voices", timeout=40)
+            if code == 200:
+                for v in json.loads(data).get("voices", []):
+                    if v.get("name") == BUCK_EL["name"]: vid = v["voice_id"]; break
+                if not vid: _EL["why"] = f"voice '{BUCK_EL['name']}' not found (run design-buck)"
+            else:
+                _EL["why"] = f"ElevenLabs not reachable (http {code}; key set: {bool(os.environ.get('ELEVENLABS_API_KEY'))})"
+        _EL["vid"] = vid
+    return _EL["vid"]
+
+
+def buck_line_el(text, workdir, idx, cfg=None, sr=24000):
+    """Buck's line with the ElevenLabs voice -> float32 mono at `sr`, or None (caller falls back to Kokoro)."""
+    import hashlib, soundfile as sf
+    cfg = cfg or {}
+    vid = cfg.get("voice_id") or el_voice_id()
+    if not vid: return None
+    models = [cfg["model"]] if cfg.get("model") else BUCK_EL["models"]
+    settings = dict(BUCK_EL["settings"], **cfg.get("settings", {}))
+    txt = text.replace("…", "...").strip()
+    os.makedirs(TTS_CACHE, exist_ok=True)
+    for m in models:
+        h = hashlib.sha1(json.dumps([vid, m, txt, settings], sort_keys=True).encode()).hexdigest()[:16]
+        mp3 = os.path.join(TTS_CACHE, f"buck_{h}.mp3")
+        if not (os.path.exists(mp3) and os.path.getsize(mp3) > 1000):
+            ok = False
+            for st in (settings, None):  # retry without voice_settings if the model rejects one of them
+                body = {"text": txt, "model_id": m}
+                if st: body["voice_settings"] = st
+                code, data = el_call("POST", f"/text-to-speech/{vid}", body, out=mp3 + ".part", timeout=120,
+                                     query="?output_format=mp3_44100_128")
+                if code == 200 and len(data) > 1000:
+                    os.replace(mp3 + ".part", mp3); ok = True; break
+                if os.path.exists(mp3 + ".part"): os.remove(mp3 + ".part")
+                _EL["why"] = f"tts {m}: http {code} {data[:160]!r}"
+                if code not in (400, 422): break
+            if not ok: continue
+        outp = os.path.join(workdir, f"buck_{idx}.wav")
+        # clean, bright, broadcast-ready: trim edge silence, small presence lift, mono at the engine rate
+        af = ("silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.02,areverse,"
+              "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.05,areverse,"
+              "highpass=f=75,equalizer=f=3000:t=q:w=1.2:g=2")
+        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", mp3, "-af", af, "-ar", str(sr), "-ac", "1", outp], check=True)
+        y, _ = sf.read(outp, dtype="float32")
+        if len(y) < sr * 0.15: _EL["why"] = "tts audio too short"; continue
+        pk = np.abs(y).max() or 1.0
+        _EL["used"].append(f"elevenlabs:{vid}/{m}")
+        return (y / pk * 0.85).astype(np.float32)
+    return None
+
+
+def _f0_stats(path):
+    """Rough pitch check of a voice sample (median F0 Hz, spread) via autocorrelation; used to pick Buck's preview."""
+    import soundfile as sf
+    wav = path + ".16k.wav"
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", path, "-ar", "16000", "-ac", "1", wav], check=True)
+    y, sr = sf.read(wav, dtype="float32"); os.remove(wav)
+    n = int(0.04 * sr); hop = int(0.01 * sr); f0s = []
+    thr = 0.1 * np.sqrt(np.mean(y ** 2) + 1e-12) * 3
+    for i in range(0, len(y) - n, hop):
+        fr = y[i:i + n] - y[i:i + n].mean()
+        if np.sqrt(np.mean(fr ** 2)) < thr: continue
+        ac = np.correlate(fr, fr, "full")[n - 1:]
+        lo, hi = int(sr / 400), int(sr / 70)
+        j = lo + int(np.argmax(ac[lo:hi]))
+        if ac[j] > 0.45 * ac[0]: f0s.append(sr / j)
+    if len(f0s) < 10: return {"f0": 0.0, "spread": 0.0, "voiced": len(f0s)}
+    f = np.array(f0s)
+    return {"f0": round(float(np.median(f)), 1), "spread": round(float(np.percentile(f, 90) - np.percentile(f, 10)), 1), "voiced": len(f0s)}
+
+
+def design_buck(outdir, seed=4241, save=True, force=False):
+    """ONE-TIME: create Buck's own voice with ElevenLabs Voice Design (prompt BUCK_PROMPT), keep 3 previews as mp3,
+    pick the one closest to a bright mid-high young-male register with the most expressive range, save it to the
+    account as BUCK_EL["name"]. Idempotent: if a voice with that name exists it is reused (unless force)."""
+    import base64, datetime
+    os.makedirs(outdir, exist_ok=True)
+    res = {"name": BUCK_EL["name"], "prompt": BUCK_PROMPT, "seed": seed}
+    if save and not force:
+        code, data = el_call("GET", "/voices", timeout=40)
+        if code == 200:
+            ex = [v for v in json.loads(data).get("voices", []) if v.get("name") == BUCK_EL["name"]]
+            if ex:
+                res.update(voice_id=ex[0]["voice_id"], existing=True); print(json.dumps(res)); return res
+        elif code in (0, 401, 403):
+            sys.exit(f"ElevenLabs not reachable/authorised (http {code}). Need ELEVENLABS_API_KEY + access to api.elevenlabs.io")
+    data = None
+    for model in ("eleven_ttv_v3", "eleven_multilingual_ttv_v2"):
+        body = {"voice_description": BUCK_PROMPT, "model_id": model, "text": BUCK_SAMPLE, "seed": int(seed)}
+        code, raw = el_call("POST", "/text-to-voice/design", body, timeout=180, query="?output_format=mp3_44100_128")
+        if code == 200:
+            data = json.loads(raw); res["design_model"] = model; break
+        res.setdefault("design_errors", []).append(f"{model}: http {code} {raw[:200]!r}")
+    if not data: print(json.dumps(res)); sys.exit("voice design failed")
+    prev = []
+    for i, p in enumerate(data.get("previews", [])):
+        f = os.path.join(outdir, f"buck_preview_{i + 1}.mp3")
+        open(f, "wb").write(base64.b64decode(p["audio_base_64"]))
+        st = _f0_stats(f)
+        # bright mid-high young male ~ 150-175 Hz median; reward expressive range; penalise unusable samples
+        score = -abs(st["f0"] - 160) / 25 + min(st["spread"], 120) / 60 - (5 if st["voiced"] < 30 else 0)
+        prev.append({"i": i + 1, "file": f, "generated_voice_id": p["generated_voice_id"],
+                     "seconds": p.get("duration_secs"), **st, "score": round(score, 2)})
+    res["previews"] = prev
+    best = max(prev, key=lambda q: q["score"])
+    res["chosen"] = best["i"]
+    if save:
+        body = {"voice_name": BUCK_EL["name"], "voice_description": BUCK_PROMPT, "generated_voice_id": best["generated_voice_id"],
+                "labels": {"accent": "american", "gender": "male", "age": "young", "use_case": "characters"},
+                "played_not_selected_voice_ids": [q["generated_voice_id"] for q in prev if q is not best]}
+        code, raw = el_call("POST", "/text-to-voice", body, timeout=120)
+        if code in (400, 422):  # labels format rejected -> save without labels
+            body.pop("labels"); code, raw = el_call("POST", "/text-to-voice", body, timeout=120)
+        if code != 200: res["save_error"] = f"http {code} {raw[:300]!r}"; print(json.dumps(res)); sys.exit("saving the voice failed")
+        res["voice_id"] = json.loads(raw)["voice_id"]
+    res["created_at"] = datetime.datetime.utcnow().isoformat() + "Z"
+    json.dump(res, open(os.path.join(outdir, "buck_voice.json"), "w"), indent=2)
+    print(json.dumps(res)); return res
+
+
+# FALLBACK: Kokoro am_puck (Apache-2.0 model), pitched up ~2.5 semitones, brighter EQ + tiny slap-back.
+BUCK_VOICE = {"voice": "am_puck", "speed": 1.12, "pitch": 1.16}
+
+
+def buck_line(k, text, workdir, idx, cfg=None):
+    import soundfile as sf
+    if (cfg or {}).get("engine", "auto") != "kokoro":
+        y = buck_line_el(text, workdir, idx, cfg)
+        if y is not None: return y, 24000
+    _EL["used"].append("kokoro:am_puck" + (f" ({_EL['why']})" if _EL["why"] else ""))
+    cfg = dict(BUCK_VOICE, **{k_: v_ for k_, v_ in (cfg or {}).items() if k_ in BUCK_VOICE})
+    s, sr = k.create(say_text(text), voice=cfg["voice"], speed=cfg["speed"], lang="en-us")
+    raw = os.path.join(workdir, f"buck_{idx}_raw.wav"); outp = os.path.join(workdir, f"buck_{idx}.wav")
+    sf.write(raw, s, sr)
+    p = cfg["pitch"]
+    af = (f"asetrate={sr}*{p},aresample={sr},atempo={1 / p:.4f},equalizer=f=3200:t=q:w=1.4:g=4,"
+          f"equalizer=f=180:t=q:w=1:g=-2,aecho=0.8:0.5:28:0.10")
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", raw, "-af", af, "-ar", str(sr), "-ac", "1", outp], check=True)
+    y, _ = sf.read(outp, dtype="float32")
+    pk = np.abs(y).max() or 1.0
+    return (y / pk * 0.85).astype(np.float32), sr
+
+
+def tts(spec, args, workdir):
+    from kokoro_onnx import Kokoro
+    import soundfile as sf
+    k = Kokoro(args.model, args.voices)
+    voice = spec.get("voice", "am_michael"); speed = spec.get("speed", 1.05)
+    gap = 0.1; t = 0.0; chunks = []; sr = 24000
+    for i, sc in enumerate(spec["scenes"]):
+        txt = sc.get("say", sc.get("text", ""))
+        if txt.strip():
+            s, sr = k.create(say_text(txt), voice=voice, speed=speed, lang="en-us")
+        else:
+            s = np.zeros(0, dtype=np.float32)
+        dur = len(s) / sr
+        beat = float(sc.get("beat", 0))  # comedic pause before the line
+        bk = np.zeros(0, dtype=np.float32)
+        if sc.get("buck"):  # Buck speaks his own line (before the narrator unless "buck_after")
+            bk, _ = buck_line(k, sc["buck"], workdir, i, spec.get("buck_voice"))
+        bgap = np.zeros(int(0.15 * sr), dtype=np.float32) if (len(bk) and len(s)) else np.zeros(0, dtype=np.float32)
+        sc["start"] = t
+        seq = [np.zeros(int(beat * sr), dtype=np.float32)]
+        if sc.get("buck_after"):
+            sc["speech"] = t + beat; sc["buck_t"] = t + beat + dur + len(bgap) / sr
+            seq += [s.astype(np.float32), bgap, bk]
+        else:
+            sc["buck_t"] = t + beat; sc["speech"] = t + beat + (len(bk) + len(bgap)) / sr
+            seq += [bk, bgap, s.astype(np.float32)]
+        seq.append(np.zeros(int(gap * sr), dtype=np.float32))
+        seg = np.concatenate(seq); chunks.append(seg)
+        sc["sdur"] = dur; sc["dur"] = len(seg) / sr
+        t += sc["dur"]
+    audio = np.concatenate(chunks).astype(np.float32)
+    audio = mix_sfx(audio, sr, spec)
+    wav = os.path.join(workdir, "voice.wav"); sf.write(wav, audio, sr)
+    return wav, t
+
+
+# ---------------- Sound effects (all synthesized here: no licensing issues) ----------------
+def _env(n, attack, release, sr):
+    e = np.ones(n, dtype=np.float32)
+    a = max(1, int(attack * sr)); r = max(1, int(release * sr))
+    e[:a] = np.linspace(0, 1, a); e[-r:] *= np.linspace(1, 0, r)
+    return e
+
+
+def _bandnoise(n, sr, lo, hi, rng):
+    x = rng.standard_normal(n).astype(np.float32)
+    X = np.fft.rfft(x); f = np.fft.rfftfreq(n, 1 / sr)
+    X[(f < lo) | (f > hi)] = 0
+    y = np.fft.irfft(X, n).astype(np.float32)
+    return y / (np.abs(y).max() + 1e-9)
+
+
+def sfx_whoosh(sr, rng, dur=0.45):
+    n = int(dur * sr); parts = []
+    seg = n // 6
+    for i in range(6):  # rising band sweep
+        lo = 300 + i * 500; parts.append(_bandnoise(seg, sr, lo, lo + 1500, rng))
+    y = np.concatenate(parts)[:n]
+    y = np.pad(y, (0, n - len(y)))
+    env = np.sin(np.linspace(0, np.pi, n)) ** 2
+    return (y * env).astype(np.float32)
+
+
+def sfx_pop(sr, rng, dur=0.16):
+    t = np.arange(int(dur * sr)) / sr
+    f = 520 * np.exp(-t * 14) + 140
+    y = np.sin(2 * np.pi * np.cumsum(f) / sr) * np.exp(-t * 22)
+    return y.astype(np.float32)
+
+
+def sfx_impact(sr, rng, dur=0.7):
+    n = int(dur * sr); t = np.arange(n) / sr
+    low = np.sin(2 * np.pi * 55 * t) * np.exp(-t * 6)
+    hit = _bandnoise(n, sr, 80, 2500, rng) * np.exp(-t * 30)
+    return (0.8 * low + 0.5 * hit).astype(np.float32)
+
+
+def sfx_coin(sr, rng, dur=0.9):
+    n = int(dur * sr); t = np.arange(n) / sr; y = np.zeros(n, np.float32)
+    for delay in (0.0, 0.11):  # two hits = "ka-ching"
+        d = int(delay * sr); tt = t[: n - d]
+        tone = sum(a * np.sin(2 * np.pi * fr * tt) * np.exp(-tt * k)
+                   for fr, a, k in ((2093, 1.0, 7), (3136, .6, 9), (4186, .45, 11), (5274, .3, 14)))
+        y[d:] += tone.astype(np.float32)
+    return y / (np.abs(y).max() + 1e-9)
+
+
+def sfx_cash(sr, rng, dur=1.0):
+    n = int(dur * sr); t = np.arange(n) / sr
+    mech = _bandnoise(n, sr, 1500, 6000, rng) * np.exp(-t * 25)
+    bell = sfx_coin(sr, rng, dur)
+    return (0.4 * mech + 0.8 * bell).astype(np.float32)
+
+
+def sfx_tick(sr, rng, dur):
+    n = int(dur * sr); y = np.zeros(n, np.float32)
+    click = _bandnoise(int(0.012 * sr), sr, 2000, 7000, rng) * np.linspace(1, 0, int(0.012 * sr))
+    k = 0
+    for s in np.arange(0, dur, 0.5):
+        i = int(s * sr); amp = 1.0 if k % 2 == 0 else 0.7
+        y[i:i + len(click)] += (click * amp)[: max(0, min(len(click), n - i))]; k += 1
+    return y
+
+
+def sfx_birds(sr, rng, dur):
+    """Soft synthesized bird chirps over a light breeze."""
+    n = int(dur * sr); y = np.zeros(n, np.float32)
+    wind = _bandnoise(n, sr, 150, 900, rng) * 0.08
+    y += wind.astype(np.float32)
+    t0 = rng.uniform(0.1, 0.6)
+    while t0 < dur - 0.3:
+        kind = rng.integers(0, 3); base = rng.uniform(2600, 4200)
+        notes = rng.integers(2, 5)
+        for j in range(notes):
+            cd = rng.uniform(0.05, 0.11); m = int(cd * sr); tt = np.arange(m) / sr
+            if kind == 0: f = base + 1400 * tt / cd                  # rising chirp
+            elif kind == 1: f = base + 900 * np.sin(np.pi * tt / cd)  # arched chirp
+            else: f = base - 1200 * tt / cd                          # falling chirp
+            ch = np.sin(2 * np.pi * np.cumsum(f) / sr) * np.sin(np.pi * tt / cd) ** 2
+            i = int((t0 + j * (cd + 0.03)) * sr)
+            if i + m < n: y[i:i + m] += (0.35 * ch).astype(np.float32)
+        t0 += rng.uniform(0.6, 2.2)
+    return y
+
+
+def sfx_scratch(sr, rng, dur=0.55):
+    """Record scratch: two fast back-and-forth strokes (buzzy saw + noise, pitch swinging)."""
+    n = int(dur * sr); t = np.arange(n) / sr
+    f = 260 + 1100 * np.abs(np.sin(2 * np.pi * t / 0.26))
+    ph = np.cumsum(f) / sr
+    saw = 2 * (ph % 1.0) - 1
+    nz = _bandnoise(n, sr, 600, 5000, rng)
+    env = np.abs(np.sin(np.pi * t / 0.26)) ** 0.5 * np.exp(-t * 1.5)
+    return ((0.55 * saw + 0.6 * nz) * env).astype(np.float32)
+
+
+def sfx_boing(sr, rng, dur=0.75):
+    t = np.arange(int(dur * sr)) / sr
+    f = 170 + 140 * t / dur + 90 * np.sin(2 * np.pi * 9 * t) * np.exp(-t * 2.5)
+    return (np.sin(2 * np.pi * np.cumsum(f) / sr) * np.exp(-t * 3.2) * np.clip(t / 0.01, 0, 1)).astype(np.float32)
+
+
+def _slide(sr, f0, f1, dur):
+    t = np.arange(int(dur * sr)) / sr
+    f = f0 * (f1 / f0) ** (t / dur) * (1 + 0.012 * np.sin(2 * np.pi * 6 * t))
+    y = np.sin(2 * np.pi * np.cumsum(f) / sr) + 0.25 * np.sin(4 * np.pi * np.cumsum(f) / sr)
+    return (y * np.sin(np.pi * t / dur) ** 0.6 * 0.8).astype(np.float32)
+
+
+def sfx_slide_up(sr, rng): return _slide(sr, 380, 1500, 0.45)
+def sfx_slide_down(sr, rng): return _slide(sr, 1400, 260, 0.6)
+
+
+def sfx_bonk(sr, rng, dur=0.35):
+    n = int(dur * sr); t = np.arange(n) / sr
+    wood = (np.sin(2 * np.pi * 720 * t) + 0.6 * np.sin(2 * np.pi * 1130 * t)) * np.exp(-t * 28)
+    thud = np.sin(2 * np.pi * 140 * t) * np.exp(-t * 18)
+    click = _bandnoise(n, sr, 1500, 6000, rng) * np.exp(-t * 90)
+    return (0.6 * wood + 0.7 * thud + 0.3 * click).astype(np.float32)
+
+
+def sfx_ding(sr, rng, dur=1.3):
+    t = np.arange(int(dur * sr)) / sr
+    y = sum(a * np.sin(2 * np.pi * f * t) * np.exp(-t * k) for f, a, k in ((1568, 1.0, 3.2), (3136, .35, 5), (4704, .18, 7)))
+    return (y / 1.5).astype(np.float32)
+
+
+def sfx_buzzer(sr, rng, dur=0.6):
+    t = np.arange(int(dur * sr)) / sr
+    y = np.sign(np.sin(2 * np.pi * 110 * t)) * 0.5 + np.sign(np.sin(2 * np.pi * 165 * t)) * 0.3
+    return (y * _env(len(t), 0.01, 0.08, sr) * 0.7).astype(np.float32)
+
+
+def sfx_crickets(sr, rng, dur=1.6):
+    """Awkward-silence crickets (pulsed 4.6 kHz chirps)."""
+    n = int(dur * sr); t = np.arange(n) / sr; y = np.zeros(n, np.float32)
+    car = np.sin(2 * np.pi * 4600 * t)
+    for s in np.arange(0.05, dur - 0.2, 0.55):
+        for j in range(3):
+            i = int((s + j * 0.045) * sr); m = int(0.03 * sr)
+            if i + m < n: y[i:i + m] += (car[i:i + m] * np.sin(np.pi * np.arange(m) / m)).astype(np.float32)
+    return y * 0.6
+
+
+def sfx_drumroll(sr, rng, dur=1.4):
+    n = int(dur * sr); y = np.zeros(n, np.float32)
+    hit = _bandnoise(int(0.05 * sr), sr, 200, 6000, rng) * np.exp(-np.arange(int(0.05 * sr)) / sr * 60)
+    for s in np.arange(0, dur - 0.25, 0.045):
+        i = int(s * sr); amp = 0.25 + 0.6 * s / dur
+        y[i:i + len(hit)] += (hit * amp)[: max(0, min(len(hit), n - i))]
+    end = sfx_impact(sr, rng, 0.25); i = n - len(end); y[i:] += end * 0.8
+    return y
+
+
+def sfx_wahwah(sr, rng):
+    """'Sad trombone' style 4-note fail stinger (synthesized brass). Use at most once per video."""
+    notes = [(293.7, 0.32), (277.2, 0.32), (261.6, 0.32), (246.9, 0.95)]; out = []
+    for i, (f, d) in enumerate(notes):
+        t = np.arange(int(d * sr)) / sr
+        vib = 1 + (0.025 * np.sin(2 * np.pi * 5.5 * t) * np.clip((t - 0.15) / 0.2, 0, 1) if i == 3 else 0)
+        ph = 2 * np.pi * np.cumsum(f * vib) / sr
+        wah = 0.5 + 0.5 * np.clip(t / 0.08, 0, 1) * (0.6 + 0.4 * np.sin(np.pi * t / d))
+        y = sum((wah ** (h * 0.5)) * np.sin(h * ph) / h for h in range(1, 9))
+        out.append((y * _env(len(t), 0.02, 0.06, sr) * 0.55).astype(np.float32))
+    return np.concatenate(out)
+
+
+def sfx_whip(sr, rng, dur=0.22):
+    """v4.1 crash-zoom 'whip': very short rising swish (band-noise sweep, peaks at 2/3, cuts fast)."""
+    n = int(dur * sr); t = np.arange(n) / sr; seg = n // 5 + 1
+    y = np.concatenate([_bandnoise(seg, sr, 900 + 800 * i, 2800 + 1300 * i, rng) for i in range(5)])[:n]
+    env = (t / dur) ** 2 * (1 - t / dur) * 6.75
+    return (y * env).astype(np.float32)
+
+
+SFX = {"whoosh": sfx_whoosh, "pop": sfx_pop, "impact": sfx_impact, "coin": sfx_coin, "cash": sfx_cash,
+       "scratch": sfx_scratch, "boing": sfx_boing, "slide_up": sfx_slide_up, "slide_down": sfx_slide_down,
+       "bonk": sfx_bonk, "ding": sfx_ding, "buzzer": sfx_buzzer, "crickets": sfx_crickets, "drumroll": sfx_drumroll,
+       "wahwah": sfx_wahwah, "whip": sfx_whip}
+# (offset seconds after scene start, gain) — effects sit under the voice
+SFX_MIX = {"coin": (0.2, 0.22), "cash": (0.2, 0.24), "impact": (0.2, 0.35), "scratch": (0.0, 0.30), "boing": (0.1, 0.30),
+           "slide_up": (0.05, 0.20), "slide_down": (0.05, 0.22), "bonk": (0.1, 0.40), "ding": (0.15, 0.22),
+           "buzzer": (0.1, 0.16), "crickets": (0.05, 0.16), "drumroll": (0.0, 0.26), "wahwah": (0.1, 0.24),
+           "whip": (0.0, 0.20)}
+
+
+def _add(track, clip, at, sr, gain):
+    i = int(at * sr)
+    if i >= len(track): return
+    m = min(len(clip), len(track) - i)
+    track[i:i + m] += clip[:m] * gain
+
+
+def mix_sfx(voice, sr, spec):
+    """Effects sit well under the voice. Spec: "sfx": true/false (auto whoosh + pop),
+    scene "sfx": ["coin","cash","impact","tick","birds","whoosh","pop"], "ambient": "birds"."""
+    rng = np.random.default_rng(11)
+    fx = np.zeros_like(voice)
+    auto = spec.get("sfx", True)
+    for i, sc in enumerate(spec["scenes"]):
+        st = sc["start"]
+        if auto and i > 0: _add(fx, sfx_whoosh(sr, rng), max(0, st - 0.2), sr, 0.16)
+        if auto and sc.get("stat"): _add(fx, sfx_pop(sr, rng), st + 0.2, sr, 0.28)
+        for name in sc.get("sfx", []):
+            at_ = None
+            if "@" in name: name, at_ = name.split("@", 1); at_ = float(at_)  # "ding@5.0" = 5 s after scene start
+            if at_ is not None and name in SFX:
+                _add(fx, SFX[name](sr, rng), st + at_, sr, SFX_MIX.get(name, (0.0, 0.2))[1]); continue
+            if name == "tick": _add(fx, sfx_tick(sr, rng, sc["dur"]), st, sr, 0.22)
+            elif name == "birds": _add(fx, sfx_birds(sr, rng, sc["dur"]), st, sr, 0.14)
+            elif name in SFX:
+                off, g = SFX_MIX.get(name, (0.0, 0.2))
+                _add(fx, SFX[name](sr, rng), st + off, sr, g)
+        if auto and sc.get("mascot"): _add(fx, sfx_pop(sr, rng), st + float(sc["mascot"].get("at", 0)) + 0.05, sr, 0.18)
+        if auto and sc.get("vs"):  # v4.1: pop as each panel lands, light impact when the VS badge slams in
+            vat = _vs_at(sc["vs"])
+            for a_ in vat: _add(fx, sfx_pop(sr, rng), st + a_ + 0.3, sr, 0.26)
+            _add(fx, sfx_impact(sr, rng, 0.45), st + float(sc["vs"].get("vs_at", (vat[0] + vat[1]) / 2 + 0.1)), sr, 0.2)
+        if auto and sc.get("zoom"): _add(fx, sfx_whip(sr, rng), st + float(sc["zoom"].get("at", 0)), sr, SFX_MIX["whip"][1])
+    if spec.get("ambient") == "birds":
+        _add(fx, sfx_birds(sr, rng, len(voice) / sr), 0, sr, float(spec.get("ambient_vol", 0.08)))
+    out = voice + fx
+    peak = np.abs(out).max()
+    return (out / peak * 0.95).astype(np.float32) if peak > 0.98 else out
+
+
+def wrap(draw, text, font, maxw):
+    words = text.split(); lines = []; cur = ""
+    for w in words:
+        test = (cur + " " + w).strip()
+        if draw.textlength(test, font=font) <= maxw: cur = test
+        else:
+            if cur: lines.append(cur)
+            cur = w
+    if cur: lines.append(cur)
+    return lines
+
+
+def caption_chunks(text, start, dur):
+    words = text.split(); chunks = []; cur = []
+    for w in words:
+        cur.append(w)
+        if len(cur) >= 4 or (re.search(r'[.,:?!;]$', w) and len(cur) >= 2):
+            chunks.append(cur); cur = []
+    if cur:
+        if chunks and len(cur) < 2: chunks[-1] += cur
+        else: chunks.append(cur)
+    total = sum(len(' '.join(c)) for c in chunks) or 1
+    out = []; t = start
+    for c in chunks:
+        s = ' '.join(c); d = dur * len(s) / total
+        out.append((t, t + d, s.upper())); t += d
+    return out
+
+
+def make_bg(W, H, seed):
+    """Static branded background layer (dark gradient + faint grid). Motion is added per frame."""
+    im = Image.new("RGB", (W, H)); d = ImageDraw.Draw(im)
+    palettes = [((9, 14, 28), (19, 30, 54)), ((12, 10, 30), (32, 20, 58)), ((6, 20, 24), (14, 42, 48))]
+    c1, c2 = palettes[seed % len(palettes)]
+    for y in range(H):
+        f = y / (H - 1); d.line([(0, y), (W, y)], fill=tuple(int(c1[i] + (c2[i] - c1[i]) * f) for i in range(3)))
+    ov = Image.new("RGBA", (W, H), (0, 0, 0, 0)); o = ImageDraw.Draw(ov)
+    step = 90
+    for x in range(0, W, step): o.line([(x, 0), (x, H)], fill=(255, 255, 255, 11))
+    for y in range(0, H, step): o.line([(0, y), (W, y)], fill=(255, 255, 255, 11))
+    return Image.alpha_composite(im.convert("RGBA"), ov)
+
+
+def broll_frames(path, W, H, n, start=0.0):
+    # decode slightly larger than the frame so a slow Ken Burns zoom never shows edges
+    BW, BH = int(W * 1.1) // 2 * 2, int(H * 1.1) // 2 * 2
+    cmd = ["ffmpeg", "-loglevel", "error", "-ss", f"{start}", "-i", path, "-vf",
+           f"scale={BW}:{BH}:force_original_aspect_ratio=increase,crop={BW}:{BH},fps={FPS}",
+           "-frames:v", str(n), "-f", "rawvideo", "-pix_fmt", "rgb24", "-"]
+    p = subprocess.run(cmd, capture_output=True)
+    raw = p.stdout; fs = BW * BH * 3
+    return [raw[i:i + fs] for i in range(0, len(raw) - fs + 1, fs)], (BW, BH)
+
+
+def ease_out(x):
+    x = max(0.0, min(1.0, x)); return 1 - (1 - x) ** 3
+
+
+def ease_back(x, s=1.9):
+    """Overshoot ease: goes a bit past 1, then settles (the 'punch' feel)."""
+    x = max(0.0, min(1.0, x)); x -= 1
+    return x * x * ((s + 1) * x + s) + 1
+
+
+def zoom_amt(zt, amt, hold):
+    """v4.1 crash-zoom envelope: snap in 0.14 s (overshoot), hold, ease out 0.2 s. hold < 0 = stay zoomed."""
+    if zt < 0: return 1.0
+    if zt < 0.14: return 1 + (amt - 1) * ease_back(zt / 0.14, 1.4)
+    if hold < 0 or zt < 0.14 + hold: return amt
+    r = (zt - 0.14 - hold) / 0.2
+    return 1 + (amt - 1) * (1 - ease_out(r)) if r < 1 else 1.0
+
+
+NUM_RE = re.compile(r'^(\D*?)(\d[\d,]*(?:\.\d+)?)(\D*)$')
+
+
+def count_text(stat, p):
+    """Count-up animation for stats like $85M, 3.69¢, 250B, 232 YRS. Non-numeric stats are returned as is."""
+    m = NUM_RE.match(stat)
+    if not m: return stat
+    pre, num, suf = m.groups()
+    dec = len(num.split('.')[1]) if '.' in num else 0
+    val = float(num.replace(',', '')) * p
+    s = f"{val:,.{dec}f}" if ',' in num else f"{val:.{dec}f}"
+    return pre + s + suf
+
+
+def draw_coin(d, cx, cy, r, squash, alpha):
+    """Simple gold coin with a $; squash < 1 fakes a 3D spin."""
+    rx = max(2, r * abs(squash))
+    d.ellipse([cx - rx, cy - r, cx + rx, cy + r], fill=(214, 160, 30, alpha), outline=(255, 214, 90, alpha), width=max(2, int(r * 0.12)))
+    if abs(squash) > 0.45:
+        f = ImageFont.truetype(ANTON, max(8, int(r * 1.1)))
+        tw = d.textlength("$", font=f)
+        d.text((cx - tw / 2, cy - r * 0.72), "$", font=f, fill=(120, 80, 0, alpha))
+
+
+def karaoke_lines(d, words, font, maxw):
+    lines = []; cur = []; w = 0; sp = d.textlength(" ", font=font)
+    for i, wd in enumerate(words):
+        ww = d.textlength(wd, font=font)
+        if cur and w + sp + ww > maxw:
+            lines.append(cur); cur = []; w = 0
+        cur.append(i); w += (sp if len(cur) > 1 else 0) + ww
+    if cur: lines.append(cur)
+    return lines
+
+
+# ---------------- v3 HUMOR PACK: Buck the coin, speech bubbles, stickers ----------------
+FONT_DIR = os.environ.get("FIN_FONTS", os.path.join(tempfile.gettempdir(), "fin_fonts"))
+COMIC_FALLBACK = "/usr/share/fonts/truetype/google-fonts/ofl/comicrelief/ComicRelief-Bold.ttf"
+
+
+def fun_font(name="Bangers-Regular.ttf"):
+    """Open-licence (OFL) display fonts from github.com/google/fonts; falls back to Comic Relief."""
+    p = os.path.join(FONT_DIR, name)
+    if not os.path.exists(p):
+        sub = {"Bangers-Regular.ttf": "bangers", "LilitaOne-Regular.ttf": "lilitaone"}.get(name)
+        try:
+            os.makedirs(FONT_DIR, exist_ok=True)
+            subprocess.run(["curl", "-sSfL", "-o", p + ".part", f"https://raw.githubusercontent.com/google/fonts/main/ofl/{sub}/{name}"], timeout=60, check=True)
+            os.replace(p + ".part", p)
+        except Exception:
+            return COMIC_FALLBACK
+    return p
+
+
+INK = (24, 20, 30, 255)
+COIN_RIM = (178, 118, 14, 255); COIN_FACE = (240, 182, 40, 255); COIN_RING = (214, 154, 24, 255); COIN_HI = (255, 222, 110, 255)
+MOODS = ("happy", "shocked", "laugh", "smug", "confused", "sideeye", "sad", "angry", "point", "dizzy", "thumbsup", "proud")
+ACTS = ("roll_in", "drop_in", "flip", "bonk", "dodge")
+_BROWS = {"shocked": (-0.13, -0.13), "angry": (0.11, -0.07), "sad": (-0.09, 0.06), "sideeye": (0.04, 0.04),
+          "laugh": (-0.07, -0.04), "happy": (-0.05, -0.02), "point": (-0.04, -0.02), "dizzy": (-0.1, 0.02),
+          "thumbsup": (-0.06, -0.03), "proud": (-0.08, -0.06)}
+_ARMS = {"shocked": [(-1.55, -0.8), (1.55, -0.8)], "happy": [(-1.45, 0.3), (1.5, -0.55)], "laugh": [(-0.7, 0.72), (0.7, 0.72)],
+         "smug": [(-0.98, 0.55), (1.0, 0.55)], "confused": [(-1.4, 0.45), (0.62, -1.08)], "sideeye": [(-1.2, 0.8), (1.2, 0.8)],
+         "sad": [(-1.1, 1.0), (1.1, 1.0)], "angry": [(-1.3, -0.3), (1.3, -0.3)], "point": [(-1.25, 0.65), (1.8, -0.2)],
+         "dizzy": [(-1.5, 0.1), (1.5, 0.5)], "thumbsup": [(-1.2, 0.7), (1.45, -0.75)], "proud": [(-0.98, 0.5), (0.98, 0.5)]}
+TIE = (43, 214, 123, 255); TIE_D = (20, 140, 80, 255); SHOE = (43, 190, 110, 255)
+
+
+def _price_tag(d, x, y, s, ang=0.0, label="$9.99"):
+    """Small paper price tag (white card + hole + string) centred at x, y; s = height in px."""
+    w, h = s * 1.5, s
+    ca, sa = math.cos(math.radians(ang)), math.sin(math.radians(ang))
+    def rot(px, py): return (x + px * ca - py * sa, y + px * sa + py * ca)
+    pts = [rot(-w / 2 + h * 0.3, -h / 2), rot(w / 2, -h / 2), rot(w / 2, h / 2), rot(-w / 2 + h * 0.3, h / 2), rot(-w / 2, 0)]
+    d.polygon(pts, fill=(255, 250, 235, 255), outline=INK, width=max(2, int(s * 0.07)))
+    hx, hy = rot(-w / 2 + h * 0.28, 0); hr = s * 0.08
+    d.ellipse([hx - hr, hy - hr, hx + hr, hy + hr], fill=INK)
+    if abs(ang) < 25:
+        f = ImageFont.truetype(ANTON, max(8, int(s * 0.5)))
+        tw = d.textlength(label, font=f); cx_, cy_ = rot(h * 0.12, 0)
+        d.text((cx_ - tw / 2, cy_ - s * 0.36), label, font=f, fill=(220, 40, 50, 255))
+
+
+def _star(d, x, y, r, fill=(255, 214, 60, 255)):
+    pts = []
+    for i in range(10):
+        a = -math.pi / 2 + i * math.pi / 5; rr = r if i % 2 == 0 else r * 0.45
+        pts.append((x + rr * math.cos(a), y + rr * math.sin(a)))
+    d.polygon(pts, fill=fill, outline=INK)
+
+
+def mascot_patch(R, mood, t, lt, SS=2, act=None, act_lt=-1.0):
+    """BUCK — the channel's own cartoon coin (original design, drawn here in code; no outside assets).
+    Look: gold coin, green bow tie, green sneakers, white gloves, big kind eyes; the eyebrows do the acting.
+    Character: kind, brave, a little clumsy; does his own stunts and always bounces back.
+    Returns an antialiased RGBA patch + its anchor (body centre). act: roll_in | drop_in | flip | bonk | dodge."""
+    r = R * SS; P = int(r * 4.6)
+    im = Image.new("RGBA", (P, P), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    ax, ay = P / 2, P * 0.46
+    a = ease_back(lt / 0.32) if lt < 0.32 else 1.0
+    if act in ("roll_in", "drop_in"): a = 1.0  # these acts are their own entrance
+    if a < 0.04: return None, (0, 0)
+    wob = math.exp(-lt * 5) * math.sin(lt * 26)
+    sx, sy = 1 + 0.12 * wob, 1 - 0.12 * wob
+    dx, dy, tilt = 0.0, math.sin(t * 4.2) * 0.035 * r, 0.0
+    if mood == "shocked":
+        if lt < 0.45: dy -= math.sin(lt / 0.45 * math.pi) * 0.45 * r
+        else: dx = math.sin(t * 60) * 0.022 * r
+    elif mood == "laugh": dy -= abs(math.sin(t * 13)) * 0.09 * r; tilt = math.sin(t * 9) * 6
+    elif mood == "confused": tilt = 10 * math.sin(min(1.0, lt / 0.5) * math.pi / 2)
+    elif mood == "sad": sy *= 0.96; dy += 0.05 * r
+    elif mood == "angry": dx = math.sin(t * 45) * 0.02 * r
+    elif mood == "happy": dy -= abs(math.sin(t * 5)) * 0.05 * r
+    elif mood == "dizzy": tilt = math.sin(t * 3.5) * 8; dx = math.sin(t * 3.5) * 0.05 * r
+    elif mood == "proud": sy *= 1.03; dy -= 0.03 * r
+    # ---- stunts ----
+    tag_fall = None; tag_fly = None; stars = 0.0
+    if act == "flip" and 0 <= act_lt < 0.7:
+        p = act_lt / 0.7
+        dy -= math.sin(p * math.pi) * 0.9 * r
+        sx *= max(0.08, abs(math.cos(p * 2 * math.pi)))  # two edge-on spins = coin flip
+    elif act == "bonk":
+        if act_lt < 0.22: tag_fall = act_lt / 0.22                      # tag falling onto his head
+        elif act_lt < 0.4: q = (act_lt - 0.22) / 0.18; sy *= 1 - 0.18 * math.sin(q * math.pi); sx *= 1 + 0.12 * math.sin(q * math.pi)
+        if 0.22 <= act_lt < 1.5: stars = act_lt - 0.22
+    elif act == "dodge" and 0 <= act_lt < 0.75:
+        p = act_lt / 0.75
+        tilt = -24 * math.sin(p * math.pi); dx += 0.12 * r * math.sin(p * math.pi)
+        tag_fly = p
+    cx, cy = ax + dx, ay + dy
+    k = a; rx, ry = r * sx * a, r * sy * a
+    lw = max(2, int(0.065 * r))
+    # legs + green sneakers (white soles)
+    for side in (-1, 1):
+        lx = cx + side * 0.3 * min(rx, r); fy = cy + ry + 0.42 * r * k
+        d.line([(lx, cy + ry * 0.85), (lx + side * 0.05 * r, fy)], fill=INK, width=lw)
+        sxc = lx + side * 0.12 * r
+        d.rounded_rectangle([sxc - 0.22 * r * k, fy - 0.09 * r * k, sxc + 0.22 * r * k, fy + 0.09 * r * k], radius=int(0.08 * r), fill=SHOE, outline=INK, width=max(2, int(0.03 * r)))
+        d.rectangle([sxc - 0.2 * r * k, fy + 0.03 * r * k, sxc + 0.2 * r * k, fy + 0.07 * r * k], fill=(255, 255, 255, 255))
+    # arms (curved) + white gloves (hidden while edge-on mid-flip)
+    arms = _ARMS.get(mood, [(-1.4, 0.4), (1.4, 0.4)]) if sx >= 0.35 else []
+    for i, (hx, hy) in enumerate(arms):
+        side = -1 if i == 0 else 1
+        x0, y0 = cx + side * min(rx, r) * 0.95, cy + 0.12 * r
+        ex, ey = cx + hx * r * k, cy + hy * r * k
+        if mood == "happy" and i == 1: ey += math.sin(t * 11) * 0.14 * r  # waving
+        mx_, my_ = (x0 + ex) / 2 + side * 0.12 * r, (y0 + ey) / 2 + 0.12 * r
+        d.line([(x0, y0), (mx_, my_), (ex, ey)], fill=INK, width=lw, joint="curve")
+        hr = 0.16 * r * k
+        d.ellipse([ex - hr, ey - hr, ex + hr, ey + hr], fill=(252, 252, 252, 255), outline=INK, width=max(2, int(0.035 * r)))
+        if mood == "thumbsup" and i == 1:  # thumb up
+            d.rounded_rectangle([ex - hr * 0.35, ey - hr * 2.0, ex + hr * 0.35, ey - hr * 0.6], radius=int(hr * 0.3), fill=(252, 252, 252, 255), outline=INK, width=max(2, int(0.03 * r)))
+    # body: rim, face, inner ring, shine, outline
+    face = (238, 130, 70, 255) if mood == "angry" else COIN_FACE
+    d.ellipse([cx - rx, cy - ry, cx + rx, cy + ry], fill=COIN_RIM)
+    d.ellipse([cx - rx * .92, cy - ry * .92, cx + rx * .92, cy + ry * .92], fill=face)
+    d.ellipse([cx - rx * .8, cy - ry * .8, cx + rx * .8, cy + ry * .8], outline=COIN_RING, width=max(2, int(0.04 * r)))
+    d.ellipse([cx - rx * .64, cy - ry * .8, cx - rx * .2, cy - ry * .5], fill=COIN_HI)
+    d.ellipse([cx - rx, cy - ry, cx + rx, cy + ry], outline=INK, width=lw)
+    edge_on = sx < 0.35  # mid-flip: no face
+    # eyes
+    blink = (t % 2.7) < 0.12 and mood not in ("shocked", "dizzy")
+    ew, eh = (0.27 * r * k, 0.36 * r * k) if mood == "shocked" else (0.21 * r * k, 0.27 * r * k)
+    ew *= min(1.0, sx); ey0 = cy - 0.17 * r * k
+    pdx = {"sideeye": 0.1, "smug": 0.05, "point": 0.08}.get(mood, 0) * r
+    pdy = {"sad": 0.06, "confused": -0.08}.get(mood, 0) * r
+    for side in (() if edge_on else (-1, 1)):
+        ex0 = cx + side * 0.3 * r * k * min(1.0, sx)
+        if mood == "dizzy":  # spiral eyes
+            d.ellipse([ex0 - ew, ey0 - eh, ex0 + ew, ey0 + eh], fill=(255, 255, 255, 255), outline=INK, width=max(2, int(0.035 * r)))
+            for j in range(3):
+                rr_ = (0.75 - 0.22 * j) * ew; st_ = (t * 400 + j * 90) % 360
+                d.arc([ex0 - rr_, ey0 - rr_, ex0 + rr_, ey0 + rr_], st_, st_ + 250, fill=INK, width=max(2, int(0.03 * r)))
+            continue
+        if blink or mood in ("laugh", "proud"):
+            if mood in ("laugh", "proud"):  # happy closed eyes ^ ^
+                d.arc([ex0 - ew, ey0 - eh * 0.6, ex0 + ew, ey0 + eh * 0.9], 200, 340, fill=INK, width=lw)
+            else:
+                d.line([(ex0 - ew, ey0), (ex0 + ew, ey0)], fill=INK, width=lw)
+            continue
+        d.ellipse([ex0 - ew, ey0 - eh, ex0 + ew, ey0 + eh], fill=(255, 255, 255, 255), outline=INK, width=max(2, int(0.035 * r)))
+        pr = (0.07 if mood == "shocked" else 0.09) * r * k
+        px, py = ex0 + pdx, ey0 + pdy + 0.04 * r
+        d.ellipse([px - pr, py - pr, px + pr, py + pr], fill=INK)
+        d.ellipse([px - pr * .6, py - pr * .7, px - pr * .15, py - pr * .25], fill=(255, 255, 255, 255))
+        if mood in ("smug", "sideeye"):  # heavy lids
+            d.chord([ex0 - ew - 1, ey0 - eh - 1, ex0 + ew + 1, ey0 + eh + 1], 180, 360, fill=face)
+            d.line([(ex0 - ew, ey0), (ex0 + ew, ey0)], fill=INK, width=lw)
+    # eyebrows
+    for side in (() if edge_on else (-1, 1)):
+        inn, out = _BROWS.get(mood, (0.0, 0.0))
+        if mood == "smug" and side == 1: inn, out = -0.1, -0.15
+        if mood == "confused": inn, out = ((-0.13, -0.1) if side == 1 else (0.02, 0.02))
+        by = ey0 - eh - 0.09 * r * k
+        d.line([(cx + side * 0.12 * r * k * min(1, sx), by + inn * r), (cx + side * 0.46 * r * k * min(1, sx), by + out * r)], fill=INK, width=max(3, int(0.075 * r)))
+    # mouth
+    my = cy + 0.34 * r * k
+    if edge_on: pass
+    elif mood in ("happy", "laugh", "thumbsup", "proud"):
+        w = 0.36 if mood == "laugh" else 0.28
+        d.chord([cx - w * r, my - 0.2 * r, cx + w * r, my + (0.32 if mood == "laugh" else 0.2) * r], 0, 180, fill=(120, 24, 34, 255), outline=INK, width=lw)
+        d.ellipse([cx - 0.13 * r, my + 0.05 * r, cx + 0.13 * r, my + (0.26 if mood == "laugh" else 0.17) * r], fill=(240, 110, 120, 255))
+    elif mood == "shocked":
+        d.ellipse([cx - 0.14 * r, my - 0.1 * r, cx + 0.14 * r, my + 0.24 * r], fill=(100, 18, 28, 255), outline=INK, width=lw)
+    elif mood == "smug":
+        d.line([(cx - 0.2 * r, my + 0.04 * r), (cx + 0.05 * r, my + 0.06 * r), (cx + 0.26 * r, my - 0.1 * r)], fill=INK, width=lw, joint="curve")
+    elif mood == "sideeye":
+        d.line([(cx - 0.16 * r, my + 0.03 * r), (cx + 0.2 * r, my)], fill=INK, width=lw)
+    elif mood == "sad":
+        d.arc([cx - 0.22 * r, my, cx + 0.22 * r, my + 0.3 * r], 200, 340, fill=INK, width=lw)
+    elif mood == "angry":
+        d.rounded_rectangle([cx - 0.24 * r, my - 0.05 * r, cx + 0.24 * r, my + 0.13 * r], radius=int(0.05 * r), fill=(255, 255, 255, 255), outline=INK, width=lw)
+        for q in (-0.12, 0, 0.12): d.line([(cx + q * r, my - 0.05 * r), (cx + q * r, my + 0.13 * r)], fill=INK, width=max(2, lw // 2))
+    elif mood in ("confused", "dizzy"):
+        pts = [(cx - 0.2 * r + i * 0.04 * r, my + 0.05 * r + math.sin(i * 1.3 + (t * 6 if mood == "dizzy" else 0)) * 0.04 * r) for i in range(11)]
+        d.line(pts, fill=INK, width=lw, joint="curve")
+    else:  # point / neutral smile
+        d.arc([cx - 0.2 * r, my - 0.14 * r, cx + 0.2 * r, my + 0.12 * r], 20, 160, fill=INK, width=lw)
+    # signature green bow tie (wiggles when he's happy)
+    if not edge_on:
+        tw_ = 0.3 * r * k; th_ = 0.15 * r * k; bx, by_ = cx, cy + ry * 0.8
+        wig = math.sin(t * 9) * 0.04 * r if mood in ("happy", "laugh", "proud", "thumbsup") else 0
+        d.polygon([(bx, by_), (bx - tw_, by_ - th_ + wig), (bx - tw_, by_ + th_ - wig)], fill=TIE, outline=INK)
+        d.polygon([(bx, by_), (bx + tw_, by_ - th_ - wig), (bx + tw_, by_ + th_ + wig)], fill=TIE, outline=INK)
+        kr = 0.07 * r * k
+        d.rounded_rectangle([bx - kr, by_ - kr, bx + kr, by_ + kr], radius=int(kr * 0.4), fill=TIE_D, outline=INK, width=max(2, int(0.025 * r)))
+    # extras
+    if mood == "confused" and lt > 0.2:
+        fq = ImageFont.truetype(ANTON, int(0.55 * r))
+        d.text((cx + 0.92 * r, cy - 1.3 * r + math.sin(t * 5) * 0.05 * r), "?", font=fq, fill=(255, 255, 255, 255), stroke_width=max(3, int(0.05 * r)), stroke_fill=INK)
+    if mood == "shocked" and lt > 0.15:
+        fq = ImageFont.truetype(ANTON, int(0.5 * r))
+        d.text((cx - 0.12 * r, cy - 1.75 * r), "!", font=fq, fill=(255, 77, 77, 255), stroke_width=max(3, int(0.05 * r)), stroke_fill=INK)
+        sw = 0.5 + 0.5 * math.sin(t * 3)
+        d.ellipse([cx + 0.72 * r, cy - 0.65 * r + sw * 0.1 * r, cx + 0.86 * r, cy - 0.42 * r + sw * 0.1 * r], fill=(120, 200, 255, 255), outline=INK, width=2)
+    if mood in ("sad", "laugh"):
+        fall = (lt * 0.6) % 1.0 if mood == "sad" else 0.0
+        for side in ((-1,) if mood == "sad" else (-1, 1)):
+            tx = cx + side * (0.3 * r + (0.2 * r if mood == "laugh" else 0)); ty = ey0 + 0.25 * r + fall * 0.6 * r
+            d.ellipse([tx - 0.06 * r, ty - 0.06 * r, tx + 0.06 * r, ty + 0.1 * r], fill=(120, 200, 255, 255), outline=INK, width=2)
+    if mood == "angry":
+        for j, sx0 in enumerate((-0.45, 0.45)):
+            pz = (t * 1.5 + j * 0.5) % 1.0
+            rr = (0.08 + 0.1 * pz) * r
+            d.ellipse([cx + sx0 * r - rr, cy - 1.15 * r - pz * 0.4 * r - rr, cx + sx0 * r + rr, cy - 1.15 * r - pz * 0.4 * r + rr], fill=(235, 235, 240, int(230 * (1 - pz))))
+    if mood == "laugh":  # hands in front, holding the belly
+        for hx in (-0.55, 0.55):
+            ex, ey = cx + hx * r * k, cy + 0.72 * r * k; hr = 0.16 * r * k
+            d.ellipse([ex - hr, ey - hr, ex + hr, ey + hr], fill=(252, 252, 252, 255), outline=INK, width=max(2, int(0.035 * r)))
+    # stunt props
+    if tag_fall is not None:
+        _price_tag(d, cx + 0.1 * r, (ay - 2.0 * r) + tag_fall * (1.0 * r), 0.42 * r, ang=15 * tag_fall)
+    if stars > 0 or mood == "dizzy":
+        st = stars if stars > 0 else t
+        for j in range(3):
+            ang_ = st * 6 + j * 2.09
+            _star(d, cx + math.cos(ang_) * 0.6 * r, cy - 1.12 * r + math.sin(ang_) * 0.16 * r, 0.12 * r)
+    if tag_fly is not None:
+        _price_tag(d, ax + (1.0 - 2.0 * tag_fly) * 2.1 * r, ay - 0.45 * r, 0.38 * r, ang=-10)
+        for j in range(3):  # speed lines
+            lx = ax + (1.0 - 2.0 * tag_fly) * 2.1 * r + 0.75 * r + j * 0.18 * r
+            d.line([(lx, ay - 0.55 * r + j * 0.1 * r), (lx + 0.3 * r, ay - 0.55 * r + j * 0.1 * r)], fill=(255, 255, 255, 200), width=max(2, int(0.03 * r)))
+    if tilt: im = im.rotate(tilt, resample=Image.BICUBIC, center=(ax, ay))
+    out = im.resize((P // SS, P // SS), Image.LANCZOS)
+    # white sticker outline so Buck (and his dark limbs) pop on any background
+    m = out.split()[3].filter(ImageFilter.GaussianBlur(max(2, R * 0.045))).point(lambda v: 255 if v > 10 else 0)
+    border = Image.new("RGBA", out.size, (250, 250, 252, 255)); border.putalpha(m)
+    return Image.alpha_composite(border, out), (ax / SS, ay / SS)
+
+
+# ---- BUCK 3D: pre-rendered Blender (Cycles) sprite library, see buck3d.py ----
+BUCK3D_DIR = os.environ.get("FIN_BUCK3D", os.path.join(tempfile.gettempdir(), "fin_buck3d"))
+BUCK3D_URL = "https://raw.githubusercontent.com/financier-videos/financier-videos/media/assets/buck3d_v1.tar"
+BUCK3D_FPS = 15
+ACT_CLIP = {"flip": ("flip_happy", 0.7), "bonk": ("bonk_dizzy", 1.5), "dodge": ("dodge_shocked", 0.75)}
+_B3 = {"ok": None, "cache": {}}
+
+
+def buck3d_ready():
+    if _B3["ok"] is None:
+        def _has():
+            return os.path.isdir(BUCK3D_DIR) and any(f.endswith("_00.png") for f in os.listdir(BUCK3D_DIR))
+        if not _has():
+            try:
+                os.makedirs(BUCK3D_DIR, exist_ok=True); tar = os.path.join(BUCK3D_DIR, "lib.tar")
+                subprocess.run(["curl", "-sSfL", "-o", tar, BUCK3D_URL], timeout=300, check=True)
+                subprocess.run(["tar", "-xf", tar, "-C", BUCK3D_DIR], check=True); os.remove(tar)
+            except Exception:
+                pass
+        _B3["ok"] = _has()
+    return _B3["ok"]
+
+
+def buck3d_frame(clip, i, size):
+    n = 0
+    while os.path.exists(os.path.join(BUCK3D_DIR, f"{clip}_{n:02d}.png")): n += 1
+    if n == 0: return None
+    key = (clip, min(i, n - 1) if not clip in MOODS else i % n, size)
+    if key not in _B3["cache"]:
+        if len(_B3["cache"]) > 400: _B3["cache"].clear()
+        im = Image.open(os.path.join(BUCK3D_DIR, f"{key[0]}_{key[1]:02d}.png")).convert("RGBA")
+        _B3["cache"][key] = im.resize((size, size), Image.LANCZOS)
+    return _B3["cache"][key]
+
+
+def mascot3d_patch(R, mood, t, lt, act=None, act_lt=-1.0):
+    """3D Buck: picks the loop/act frame and adds the 2D extras (pop-in, squash, shocked jump)."""
+    size = int(R * 4.6)
+    a = ease_back(lt / 0.32) if lt < 0.32 else 1.0
+    if act in ("roll_in", "drop_in"): a = 1.0
+    if a < 0.04: return None, (0, 0)
+    clip = mood if mood in MOODS else "happy"
+    if act in ACT_CLIP and 0 <= act_lt < ACT_CLIP[act][1]:
+        clip = ACT_CLIP[act][0]; fi = int(act_lt * BUCK3D_FPS)
+    else:
+        fi = int(lt * BUCK3D_FPS)
+    im = buck3d_frame(clip, fi, size)
+    if im is None: return "missing", (0, 0)
+    wob = math.exp(-lt * 5) * math.sin(lt * 26)
+    sx, sy = a * (1 + 0.10 * wob), a * (1 - 0.10 * wob)
+    if act == "drop_in" and 0.4 < act_lt < 0.7:  # landing squash
+        q = (act_lt - 0.4) / 0.3; sy *= 1 - 0.15 * math.sin(q * math.pi); sx *= 1 + 0.1 * math.sin(q * math.pi)
+    dy = 0.0
+    if mood == "shocked" and lt < 0.45 and act not in ACT_CLIP: dy = -math.sin(lt / 0.45 * math.pi) * 0.45 * R
+    if abs(sx - 1) > 1e-3 or abs(sy - 1) > 1e-3:  # squash & stretch, feet stay planted
+        w2, h2 = max(1, int(size * sx)), max(1, int(size * sy))
+        im2 = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+        paste_rgba(im2, im.resize((w2, h2), Image.BILINEAR), (size - w2) / 2, size * 0.79 - h2 * 0.79)
+        im = im2
+    if dy:
+        im2 = Image.new("RGBA", (size, size), (0, 0, 0, 0)); paste_rgba(im2, im, 0, dy); im = im2
+    return im, (size / 2, size * 0.46)
+
+
+def bubble_patch(text, size, maxw, tail="down", SS=2):
+    """White comic speech bubble with tail; Bangers font."""
+    f = ImageFont.truetype(fun_font("Bangers-Regular.ttf"), int(size * SS))
+    tmp = ImageDraw.Draw(Image.new("RGBA", (8, 8)))
+    lines = wrap(tmp, text.upper(), f, maxw * SS * 0.86)
+    lh = f.size * 1.05
+    tw = max(tmp.textlength(l, font=f) for l in lines)
+    pad = f.size * 0.45; bw = tw + pad * 2; bh = lh * len(lines) + pad * 1.4; tl = f.size * 0.7
+    im = Image.new("RGBA", (int(bw + 12), int(bh + tl + 12)), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    o = 6; lwid = max(3, int(size * SS * 0.07))
+    if tail == "down":
+        tri = [(o + bw * 0.42, o + bh - lwid), (o + bw * 0.58, o + bh - lwid), (o + bw * 0.47, o + bh + tl)]
+    else:  # tail to the left (mascot sits left of the bubble)
+        tri = [(o + lwid, o + bh * 0.45), (o + lwid, o + bh * 0.72), (o - tl * 0.2, o + bh * 0.9)]
+    d.polygon(tri, fill=INK)
+    d.rounded_rectangle([o, o, o + bw, o + bh], radius=int(f.size * 0.45), fill=(255, 255, 255, 255), outline=INK, width=lwid)
+    shrink = [(x + (0 if tail == "down" else lwid * 1.2), y - (lwid * 1.3 if tail == "down" else 0)) for x, y in tri]
+    d.polygon(shrink, fill=(255, 255, 255, 255))
+    for i, l in enumerate(lines):
+        w = d.textlength(l, font=f)
+        d.text((o + (bw - w) / 2, o + pad * 0.75 + i * lh), l, font=f, fill=INK)
+    return im.resize((max(1, im.width // SS), max(1, im.height // SS)), Image.LANCZOS)
+
+
+def sticker_patch(text, size, color=(255, 77, 77), SS=2):
+    f = ImageFont.truetype(fun_font("Bangers-Regular.ttf"), int(size * SS))
+    tmp = ImageDraw.Draw(Image.new("RGBA", (8, 8)))
+    tw = tmp.textlength(text.upper(), font=f); pad = f.size * 0.3
+    im = Image.new("RGBA", (int(tw + pad * 2 + 20), int(f.size * 1.35 + 20)), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    d.rounded_rectangle([10, 10, 10 + tw + pad * 2, 10 + f.size * 1.3], radius=int(f.size * 0.18), fill=tuple(color) + (255,), outline=INK, width=max(4, int(size * SS * 0.06)))
+    d.text((10 + pad, 10 + f.size * 0.12), text.upper(), font=f, fill=(255, 255, 255, 255), stroke_width=max(3, int(size * SS * 0.05)), stroke_fill=INK)
+    im = im.rotate(-7, resample=Image.BICUBIC, expand=True)
+    return im.resize((max(1, im.width // SS), max(1, im.height // SS)), Image.LANCZOS)
+
+
+def paste_rgba(dst, patch, x, y):
+    """Alpha-composite patch onto dst at (x, y), clipping at the edges."""
+    x, y = int(round(x)), int(round(y))
+    sx0, sy0 = max(0, -x), max(0, -y)
+    ex, ey = min(patch.width, dst.width - x), min(patch.height, dst.height - y)
+    if ex <= sx0 or ey <= sy0: return
+    dst.alpha_composite(patch.crop((sx0, sy0, ex, ey)) if (sx0 or sy0 or ex < patch.width or ey < patch.height) else patch, (x + sx0, y + sy0))
+
+
+# ---------------- v4.1: split-screen "VS" comparison ----------------
+def _vs_at(vs):
+    at = [float(a) for a in vs.get("at", [0.2, 1.2])][:2]
+    while len(at) < 2: at.append((at[-1] if at else 0.2) + 1.0)
+    return at
+
+
+def prep_vs(vs, W, H, S, long):
+    """Precompute the VS layout: two panels (label / big value / sub-line) and the badge."""
+    at = _vs_at(vs)
+    cx = W * (0.5 if long else 0.47)  # Shorts: keep clear of the right-side buttons
+    pw = W * (0.40 if long else 0.39); gap = W * (0.07 if long else 0.04)
+    y0, y1 = (H * 0.24, H * 0.74) if long else (H * 0.285, H * 0.60)
+    tmp = ImageDraw.Draw(Image.new("RGB", (8, 8)))
+    f_lab = ImageFont.truetype(INTER_XB, int(S * (0.04 if long else 0.042)))
+    f_sub = ImageFont.truetype(INTER_SB, int(S * (0.032 if long else 0.036)))
+    sides = []
+    for i, side in enumerate(("left", "right")):
+        val = str(vs.get(side, ""))
+        vsz = int(S * (0.16 if long else 0.17))
+        while vsz > 30 and tmp.textlength(val, font=ImageFont.truetype(ANTON, vsz)) > pw * 0.70: vsz = int(vsz * 0.92)
+        sides.append({"val": val, "vsz": vsz,
+                      "lab": wrap(tmp, str(vs.get(side + "_label", "")).upper(), f_lab, pw * 0.86),
+                      "sub": wrap(tmp, str(vs.get(side + "_sub", "")), f_sub, pw * 0.86),
+                      "col": hex2rgb(vs.get(side + "_color", "#9AA4B8" if side == "left" else "#F5C542")),
+                      "x": cx - gap / 2 - pw if i == 0 else cx + gap / 2, "sgn": -1 if i == 0 else 1, "at": at[i],
+                      "win": vs.get("win", "right") == side})
+    return {"at": at, "cx": cx, "pw": pw, "y0": y0, "y1": y1, "sides": sides, "f_lab": f_lab, "f_sub": f_sub,
+            "has_win": vs.get("win", "right") in ("left", "right"), "W": W, "S": S, "fonts": {},
+            "vs_at": float(vs.get("vs_at", (at[0] + at[1]) / 2 + 0.1)), "badge_r": S * (0.055 if long else 0.06)}  # values stay inside 70% of the panel, so the badge never covers them
+
+
+def _vs_font(v, path, size):
+    key = (path, int(size))
+    if key not in v["fonts"]: v["fonts"][key] = ImageFont.truetype(path, max(8, int(size)))
+    return v["fonts"][key]
+
+
+def draw_vs(fd, v, lt):
+    """Panels slide in (overshoot), values count up with a punch, winner glows, loser dims, VS badge slams."""
+    W, S, pw, y0, y1 = v["W"], v["S"], v["pw"], v["y0"], v["y1"]
+    settle = max(v["at"]) + 0.9; rad = int(S * 0.03)
+    for sd in v["sides"]:
+        p = (lt - sd["at"]) / 0.35
+        if p <= 0: continue
+        e = ease_back(p) if p < 1 else 1.0
+        x = sd["x"] + (1 - e) * W * 0.6 * sd["sgn"]
+        dim = 1.0
+        if v["has_win"] and not sd["win"] and lt > settle: dim = max(0.45, 1 - (lt - settle) / 0.4 * 0.55)
+        A = lambda a: int(a * dim); col = sd["col"]
+        if sd["win"] and lt > settle:  # pulsing glow around the winner
+            q = lt - settle; pulse = 0.65 + 0.35 * math.cos(q * 6)
+            g = max(2, int(S * 0.007))
+            for j in (3, 2, 1):
+                fd.rounded_rectangle([x - j * g, y0 - j * g, x + pw + j * g, y1 + j * g], radius=rad + j * g, outline=col + (int(pulse * 90 / j),), width=g)
+        fd.rounded_rectangle([x, y0, x + pw, y1], radius=rad, fill=(10, 14, 28, A(225)), outline=col + (A(255),), width=max(3, int(S * 0.007)))
+        mx = x + pw / 2; ly = y0 + S * 0.035
+        for ln in sd["lab"]:
+            fd.text((mx, ly), ln, font=v["f_lab"], fill=(232, 236, 245, A(255)), anchor="ma")
+            ly += v["f_lab"].size * 1.15
+        q = (lt - sd["at"] - 0.15) / 0.6
+        if q > 0:
+            cnt = ease_out(q); k_ = 0.6 + 0.4 * ease_back(min(1.0, q / 0.6))
+            txt = count_text(sd["val"], cnt) if cnt < 0.999 else sd["val"]
+            fv = _vs_font(v, ANTON, sd["vsz"] * k_)
+            vy = (max(ly, y0 + (y1 - y0) * 0.30) + y1 - S * 0.03 - (len(sd["sub"]) * v["f_sub"].size * 1.2)) / 2
+            fd.text((mx, vy), txt, font=fv, fill=col + (A(70),), stroke_width=int(S * 0.016), stroke_fill=col + (A(40),), anchor="mm")
+            fd.text((mx, vy), txt, font=fv, fill=col + (A(255),), stroke_width=max(3, int(S * 0.006)), stroke_fill=(0, 0, 0, A(255)), anchor="mm")
+            sy_ = y1 - S * 0.03 - len(sd["sub"]) * v["f_sub"].size * 1.2
+            for ln in sd["sub"]:
+                fd.text((mx, sy_), ln, font=v["f_sub"], fill=(190, 198, 212, A(255)), anchor="ma")
+                sy_ += v["f_sub"].size * 1.2
+    q = lt - v["vs_at"]
+    if q > 0:  # VS badge slams in (big -> normal) between the panels
+        s_ = 1.8 - 0.8 * ease_out(q / 0.18); r = v["badge_r"] * s_
+        bx, by = v["cx"], (y0 + y1) / 2
+        fd.ellipse([bx - r, by - r, bx + r, by + r], fill=(255, 77, 77, 255), outline=INK, width=max(3, int(S * 0.008)))
+        fb = _vs_font(v, fun_font("Bangers-Regular.ttf"), r * 0.95)
+        fd.text((bx, by), "VS", font=fb, fill=(255, 255, 255, 255), stroke_width=max(2, int(r * 0.07)), stroke_fill=INK, anchor="mm")
+
+
+def render(spec, wav, total, out, workdir):
+    long = spec.get("format") == "long"
+    W, H = (1920, 1080) if long else (1080, 1920)
+    S = min(W, H)
+    f_head = ImageFont.truetype(ANTON, int(S * (0.075 if long else 0.105)))
+    cap_sz = int(S * (0.05 if long else 0.07))
+    f_cap = ImageFont.truetype(INTER_XB, cap_sz)
+    f_cap_big = ImageFont.truetype(INTER_XB, int(cap_sz * 1.12))
+    f_stat = ImageFont.truetype(ANTON, int(S * (0.22 if long else 0.30)))
+    f_src = ImageFont.truetype(INTER_SB, int(S * 0.024))
+    f_brand = ImageFont.truetype(ANTON, int(S * 0.04))
+    f_lbl = ImageFont.truetype(INTER_XB, int(S * 0.04))
+    f_val = ImageFont.truetype(ANTON, int(S * 0.06))
+    nframes = int(math.ceil(total * FPS))
+    caps = []
+    for sc in spec["scenes"]:
+        sp0 = sc.get("speech", sc["start"])
+        if sc.get("text", "").strip(): caps += caption_chunks(sc["text"], sp0, sc.get("sdur", sc["dur"] - (sp0 - sc["start"])) + 0.1)
+    bgs = {}
+    rng = np.random.default_rng(5)
+    # floating "$" particles for the animated background (shared, drift upward forever)
+    parts = [(rng.uniform(0, W), rng.uniform(0, H), rng.uniform(25, 70), rng.uniform(0.03, 0.08) * S, rng.uniform(0, 6.28)) for _ in range(14)]
+    f_part = {}
+    enc = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
+                            "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-i", wav,
+                            "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p",
+                            "-af", "highpass=f=70,acompressor=threshold=-20dB:ratio=3:attack=5:release=80:makeup=2,loudnorm=I=-14:TP=-1.5:LRA=11", "-ar", "48000", "-c:a", "aac", "-b:a", "160k",
+                            "-shortest", "-movflags", "+faststart", out + ".tmp.mp4"], stdin=subprocess.PIPE)
+    # cinematic vignette (pro look), precomputed once
+    yy, xx = np.mgrid[0:H, 0:W]
+    rr = np.sqrt(((xx - W / 2) / (W / 2)) ** 2 + ((yy - H / 2) / (H / 2)) ** 2)
+    vig = Image.fromarray(np.clip((rr - 0.75) * 200, 0, 140).astype(np.uint8), "L")
+    vignette = Image.new("RGBA", (W, H), (0, 0, 0, 255)); vignette.putalpha(vig)
+    del yy, xx, rr
+    trans_cycle = ["punch", "flash", "slide"]
+    first_frame = None
+    use3d = spec.get("buck3d", True) and any(s.get("mascot") for s in spec["scenes"]) and buck3d_ready()
+    for si, sc in enumerate(spec["scenes"]):
+        f0 = int(round(sc["start"] * FPS)); f1 = min(nframes, int(round((sc["start"] + sc["dur"]) * FPS)))
+        n = max(1, f1 - f0)
+        clip, csz = (broll_frames(sc["broll"], W, H, n, sc.get("broll_start", 0)) if sc.get("broll") and os.path.exists(sc["broll"]) else (None, None))
+        if not clip:
+            if si % 3 not in bgs: bgs[si % 3] = make_bg(W, H, si % 3)
+            base_static = bgs[si % 3]
+        col = hex2rgb(sc.get("color", "#F5C542"))
+        trans = sc.get("transition") or ("punch" if sc.get("stat") else trans_cycle[si % 3])
+        stat_sz = f_stat.size
+        if sc.get("stat"):
+            _m = ImageDraw.Draw(Image.new("RGB", (8, 8)))
+            while stat_sz > 40 and _m.textlength(sc["stat"], font=ImageFont.truetype(ANTON, stat_sz)) > W * 0.84:
+                stat_sz = int(stat_sz * 0.92)
+        chart = sc.get("chart")  # {"labels": [...], "values": [...], "texts": [...]}
+        vsd = prep_vs(sc["vs"], W, H, S, long) if sc.get("vs") else None  # v4.1 split-screen comparison
+        coins = []
+        if "coin_rain" in sc.get("fx", []):
+            crng = np.random.default_rng(100 + si)
+            coins = [(crng.uniform(0.05, 0.95) * W, crng.uniform(-0.6, 0) * H, crng.uniform(0.5, 1.0) * H, crng.uniform(0.025, 0.05) * S, crng.uniform(3, 8)) for _ in range(18)]
+        arrow = next((a for a in sc.get("fx", []) if a in ("arrow_up", "arrow_down")), None)
+        # ---- v3 humor pack: mascot, bubble, sticker ----
+        masc = sc.get("mascot"); bub = None
+        if masc:
+            mood = masc.get("mood", "happy") if masc.get("mood", "happy") in MOODS else "happy"
+            mpos = masc.get("pos") or ("corner" if (sc.get("stat") or sc.get("chart") or sc.get("vs") or clip) else "center")
+            m_at = float(masc.get("at", 0))
+            if mpos == "center":
+                mR = H * 0.13 if long else W * 0.17; mx, my = W * 0.5, H * 0.47
+            else:
+                # corner = upper-left, between the headline and the big stat (keeps the stat and captions clear)
+                mR = H * 0.08 if long else W * 0.085; mx, my = (W * 0.11, H * 0.60) if long else (W * 0.15, H * 0.285)
+            if sc.get("buck") and not masc.get("say"): masc["say"] = sc["buck"]
+            bub_at = (sc.get("buck_t", sc["start"]) - sc["start"]) if sc.get("buck") else (m_at + 0.25)
+            if masc.get("say"):
+                if mpos == "center":
+                    bub = bubble_patch(masc["say"], S * 0.05, W * (0.6 if long else 0.8), "down")
+                    bub_xy = (W / 2 - bub.width / 2, my - mR * 1.38 - bub.height)
+                else:
+                    bx0 = mx + mR * 1.3
+                    bub = bubble_patch(masc["say"], S * 0.04, (W * 0.84 - bx0), "left")
+                    bub_xy = (bx0, my - mR * 0.35 - bub.height / 2)
+        stk = None
+        if sc.get("sticker"):
+            big = not (sc.get("stat") or chart or masc or vsd)
+            stk = sticker_patch(sc["sticker"], S * (0.13 if big else 0.085), hex2rgb(sc.get("sticker_color", "#FF4D4D")))
+            stk_c = (W / 2, H * (0.42 if big else (0.27 if not long else 0.24))); stk_at = float(sc.get("sticker_at", 0))
+        look = sc.get("look"); shake = float(sc.get("shake", 0))
+        # ---- v4.1 reaction crash-zoom: focus point + timing ----
+        zm = sc.get("zoom")
+        if zm:
+            z_amt = float(zm.get("amt", 1.25)); z_at = float(zm.get("at", 0)); z_hold = float(zm.get("hold", 0.8))
+            z_on = zm.get("on", "buck" if masc else "center")
+            if isinstance(z_on, (list, tuple)): z_fc = (float(z_on[0]) * W, float(z_on[1]) * H)
+            elif z_on == "buck" and masc: z_fc = (mx, my - mR * 0.25)
+            elif z_on == "stat" and sc.get("stat"): z_fc = (W / 2, H * (0.36 if not long else 0.30) + stat_sz * 0.6)
+            elif z_on == "sticker" and stk is not None: z_fc = stk_c
+            else: z_fc = (W / 2, H / 2)
+        # chart line of the background draws itself across each scene
+        lrng = np.random.default_rng(7 + si); v = 0; line_pts = []
+        for i in range(31):
+            v += lrng.uniform(-0.5, 1.0) if arrow != "arrow_down" else lrng.uniform(-1.0, 0.5)
+            line_pts.append((i * W / 30, H * 0.74 - v * H * 0.012))
+        for k in range(n):
+            fi = f0 + k; t = fi / FPS; lt = k / FPS; prog = k / max(1, n - 1)
+            # ---------- background ----------
+            if clip:
+                BW, BH = csz
+                fr = Image.frombytes("RGB", (BW, BH), clip[min(k, len(clip) - 1)])
+                z = 1.0 + 0.06 * prog  # Ken Burns push-in
+                cw, ch = int(BW / z / 1.1 * 1.0), int(BH / z / 1.1)
+                cx0 = (BW - cw) // 2 + int((BW - cw) * 0.15 * (prog - 0.5)); cy0 = (BH - ch) // 2
+                base = fr.crop((cx0, cy0, cx0 + cw, cy0 + ch)).resize((W, H), Image.BILINEAR).convert("RGBA")
+                base = ImageEnhance.Color(ImageEnhance.Contrast(base.convert("RGB")).enhance(1.12)).enhance(1.15).convert("RGBA")
+                base = Image.alpha_composite(base, Image.new("RGBA", (W, H), (0, 0, 0, 105)))
+            else:
+                base = base_static.copy()
+                ov = Image.new("RGBA", (W, H), (0, 0, 0, 0)); o = ImageDraw.Draw(ov)
+                # moving light sweep
+                sx = (-0.4 + 1.8 * ((t * 0.18) % 1.0)) * W
+                o.polygon([(sx, 0), (sx + W * 0.18, 0), (sx - W * 0.22, H), (sx - W * 0.4, H)], fill=(255, 255, 255, 9))
+                # self-drawing chart line with glow
+                upto = max(2, int(len(line_pts) * ease_out(prog * 1.4)))
+                lc = (43, 214, 123) if arrow != "arrow_down" else (255, 77, 77)
+                o.line(line_pts[:upto], fill=lc + (40,), width=max(10, W // 90), joint="curve")
+                o.line(line_pts[:upto], fill=lc + (110,), width=max(4, W // 270), joint="curve")
+                # floating $ particles
+                for (px, py, spd, sz, ph) in parts:
+                    yy = (py - spd * t * 2.2) % (H + 200) - 100
+                    xx = px + math.sin(t * 0.8 + ph) * 25
+                    key = int(sz)
+                    if key not in f_part: f_part[key] = ImageFont.truetype(ANTON, key)
+                    o.text((xx, yy), "$", font=f_part[key], fill=(245, 197, 66, 26))
+                base = Image.alpha_composite(base, ov)
+            if look == "sepia":  # old-film look for "legend says..." beats
+                g = ImageOps.grayscale(base.convert("RGB"))
+                base = ImageOps.colorize(g, black=(26, 17, 8), white=(240, 220, 180)).convert("RGBA")
+                base = ImageEnhance.Brightness(base).enhance(1 + 0.05 * math.sin(fi * 2.3))
+                if (fi * 7) % 23 < 3:  # occasional film scratch
+                    sd = ImageDraw.Draw(base); xs = (fi * 137) % W
+                    sd.line([(xs, 0), (xs + 6, H)], fill=(250, 240, 210, 255), width=2)
+            im = base; d = ImageDraw.Draw(im)
+            fx = Image.new("RGBA", (W, H), (0, 0, 0, 0)); fd = ImageDraw.Draw(fx)
+            # v4.1: in zoom scenes captions/brand/progress go on their own layer so the camera move doesn't crop them
+            ui = Image.new("RGBA", (W, H), (0, 0, 0, 0)) if zm else None
+            ud = ImageDraw.Draw(ui) if zm else fd
+            # ---------- coin rain ----------
+            for (cx, cy0, spd, r, spin) in coins:
+                yy = cy0 + spd * lt * 1.2
+                if -r < yy < H + r:
+                    draw_coin(fd, cx + math.sin(lt * 2 + cx) * 12, yy, r, math.cos(lt * spin + cx), 230)
+            # ---------- animated bar chart ----------
+            if chart:
+                vals = chart["values"]; labels = chart.get("labels", [""] * len(vals)); texts = chart.get("texts")
+                nb = len(vals); vmax = max(vals) or 1
+                area_w = W * (0.72 if long else 0.66); bw = area_w / nb * 0.55; gap = area_w / nb
+                x0 = (W - area_w) / 2 - (0 if long else W * 0.03); ybase = H * (0.60 if not long else 0.68); hmax = H * (0.24 if not long else 0.36)
+                for i, v in enumerate(vals):
+                    b_at = chart.get("at"); p = ease_out((lt - (b_at[i] if b_at else 0.25 + 0.25 * i)) / (0.5 if b_at else 0.8))
+                    h = hmax * (v / vmax) * p
+                    bx = x0 + i * gap + (gap - bw) / 2
+                    cc = col if i == nb - 1 else (120, 130, 150)
+                    fd.rounded_rectangle([bx, ybase - h, bx + bw, ybase], radius=int(bw * 0.12), fill=cc + (255,))
+                    if p > 0.05:
+                        txt = (texts[i] if texts and p >= 0.999 else count_text(texts[i], p)) if texts else f"{v * p:.2f}"
+                        tw = fd.textlength(txt, font=f_val)
+                        fd.text((bx + bw / 2 - tw / 2, ybase - h - f_val.size * 1.25), txt, font=f_val, fill=(255, 255, 255, 255), stroke_width=4, stroke_fill=(0, 0, 0, 255))
+                    lw = fd.textlength(labels[i], font=f_lbl)
+                    fd.text((bx + bw / 2 - lw / 2, ybase + S * 0.015), labels[i], font=f_lbl, fill=(220, 225, 235, 255), stroke_width=3, stroke_fill=(0, 0, 0, 255))
+            # ---------- v4.1 split-screen VS ----------
+            if vsd: draw_vs(fd, vsd, lt)
+            # ---------- stat: count-up + overshoot punch ----------
+            if sc.get("stat") and not chart and not vsd:
+                p_in = (lt - 0.15) / 0.45
+                if p_in > 0:
+                    sc_k = 0.6 + 0.4 * ease_back(p_in)
+                    cnt = ease_out((lt - 0.15) / 0.7)
+                    txt = count_text(sc["stat"], cnt) if cnt < 0.999 else sc["stat"]
+                    fs = ImageFont.truetype(ANTON, max(10, int(stat_sz * sc_k)))
+                    tw = fd.textlength(txt, font=fs)
+                    sy = H * (0.36 if not long else 0.30) + (stat_sz - fs.size) * 0.5
+                    # soft glow
+                    fd.text(((W - tw) / 2, sy), txt, font=fs, fill=col + (60,), stroke_width=22, stroke_fill=col + (40,))
+                    fd.text(((W - tw) / 2, sy), txt, font=fs, fill=col + (255,), stroke_width=7, stroke_fill=(0, 0, 0, 255))
+                    if arrow:
+                        a = ease_out((lt - 0.5) / 0.4)
+                        if a > 0:
+                            ac = (43, 214, 123) if arrow == "arrow_up" else (255, 77, 77)
+                            ax = W * 0.5; ay = sy - S * 0.08 - (S * 0.05 * (1 - a)) * (1 if arrow == "arrow_up" else -1)
+                            s2 = S * 0.06
+                            pts = [(ax, ay - s2), (ax - s2, ay + s2 * 0.2), (ax + s2, ay + s2 * 0.2)] if arrow == "arrow_up" else [(ax, ay + s2), (ax - s2, ay - s2 * 0.2), (ax + s2, ay - s2 * 0.2)]
+                            fd.polygon(pts, fill=ac + (int(255 * a),))
+            # ---------- headline: drop-in with overshoot + underline sweep ----------
+            if sc.get("head"):
+                lh_t = lt + (0.4 if si == 0 else 0.0)  # hook: headline fully visible on frame 1 (works with sound off)
+                a = ease_back(lh_t / 0.4) if lh_t < 0.4 else 1.0
+                al = int(255 * min(1.0, lh_t / 0.2))
+                lines = wrap(fd, sc["head"], f_head, W * 0.86)
+                lh = f_head.size * 1.08
+                y0 = H * (0.095 if not long else 0.075) - (1 - a) * 70
+                boxh = lh * len(lines) + S * 0.04
+                fd.rounded_rectangle([W * 0.05, y0 - S * 0.02, W * 0.95, y0 + boxh - S * 0.02], radius=int(S * 0.025), fill=(0, 0, 0, int(175 * al / 255)))
+                for li, ln in enumerate(lines):
+                    tw = fd.textlength(ln, font=f_head)
+                    fd.text(((W - tw) / 2, y0 + li * lh), ln, font=f_head, fill=col + (al,))
+                u = ease_out((lh_t - 0.2) / 0.5)
+                if u > 0:
+                    uw = W * 0.5 * u
+                    by = y0 + boxh - S * 0.02  # underline sits just below the headline box
+                    fd.rectangle([W / 2 - uw / 2, by + S * 0.008, W / 2 + uw / 2, by + S * 0.016], fill=col + (255,))
+            # ---------- v3: Buck the coin + speech bubble + sticker ----------
+            if masc and lt >= m_at:
+                m_lt = lt - m_at; act = masc.get("act"); act_lt = m_lt - float(masc.get("act_at", 0))
+                ox_, oy_ = 0.0, 0.0
+                if act == "roll_in" and act_lt < 0.7:  # rolls in on his edge from the left, then wobbles
+                    pr_ = ease_out(max(0.0, act_lt) / 0.7); ox_ = -(1 - pr_) * (mx + mR * 2.5)
+                elif act == "drop_in" and act_lt < 0.45:  # falls in from above and squashes
+                    oy_ = -(1 - ease_out(max(0.0, act_lt) / 0.45) ** 2) * (my + mR * 3)
+                mp = "missing"
+                if use3d: mp, (pax, pay) = mascot3d_patch(mR, mood, t, m_lt, act=act, act_lt=act_lt)
+                if isinstance(mp, str): mp, (pax, pay) = mascot_patch(mR, mood, t, m_lt, act=act, act_lt=act_lt)  # 2D fallback
+                if mp is not None:
+                    if act == "roll_in" and act_lt < 0.7: mp = mp.rotate(math.degrees(-ox_ / mR), resample=Image.BILINEAR, center=(pax, pay))
+                    paste_rgba(fx, mp, mx - pax + ox_, my - pay + oy_)
+                if bub is not None:
+                    bt = lt - bub_at
+                    if bt > 0:
+                        s_ = ease_back(bt / 0.25) if bt < 0.25 else 1.0
+                        if s_ > 0.05:
+                            bp = bub if abs(s_ - 1) < 1e-3 else bub.resize((max(1, int(bub.width * s_)), max(1, int(bub.height * s_))), Image.BILINEAR)
+                            if mpos == "center": paste_rgba(fx, bp, W / 2 - bp.width / 2, bub_xy[1] + bub.height - bp.height)
+                            else: paste_rgba(fx, bp, bub_xy[0], bub_xy[1] + (bub.height - bp.height) / 2)
+            if stk is not None and lt >= stk_at:
+                lts = lt - stk_at
+                s_ = 1.8 - 0.8 * ease_out(lts / 0.18)
+                sp_ = stk if abs(s_ - 1) < 1e-3 else stk.resize((max(1, int(stk.width * s_)), max(1, int(stk.height * s_))), Image.BILINEAR)
+                jit = (math.sin(fi * 2.1) * S * 0.006 * max(0.0, 1 - lts / 0.4))
+                paste_rgba(fx, sp_, stk_c[0] - sp_.width / 2 + jit, stk_c[1] - sp_.height / 2)
+            # ---------- karaoke captions ----------
+            for (c0, c1, txt) in caps:
+                if c0 <= t < c1:
+                    words = txt.split()
+                    wts = [len(w) + 1 for w in words]; tot = sum(wts); acc = 0; act = len(words) - 1
+                    for i, w in enumerate(wts):
+                        acc += w
+                        if (t - c0) < (c1 - c0) * acc / tot: act = i; break
+                    pop = ease_out((t - c0) / 0.1)
+                    lines = karaoke_lines(ud, words, f_cap, W * (0.86 if long else 0.78))
+                    yb = H * (0.645 if not long else 0.80) + (1 - pop) * 20
+                    sp = ud.textlength(" ", font=f_cap)
+                    for li, idxs in enumerate(lines):
+                        widths = [ud.textlength(words[i], font=(f_cap_big if i == act else f_cap)) for i in idxs]
+                        lw = sum(widths) + sp * (len(idxs) - 1); x = (W * (1.0 if long else 0.94) - lw) / 2
+                        for j, i in enumerate(idxs):
+                            wd = words[i]; fnt = f_cap_big if i == act else f_cap
+                            isnum = bool(re.search(r'[\d$¢%]', wd))
+                            fill = GOLD if i == act else (GREEN if isnum else WHITE)
+                            yy = yb + li * cap_sz * 1.2 - (cap_sz * 0.06 if i == act else 0)
+                            ud.text((x, yy), wd, font=fnt, fill=fill + (int(255 * pop),), stroke_width=max(5, cap_sz // 9), stroke_fill=(0, 0, 0, int(255 * pop)))
+                            x += widths[j] + sp
+                    break
+            # ---------- source, progress, brand ----------
+            if spec.get("source") and sc.get("show_source"):
+                tw = ud.textlength(spec["source"], font=f_src)
+                ud.text(((W - tw) / 2, H * (0.93 if long else 0.775)), spec["source"], font=f_src, fill=GREY + (255,))
+            ud.rectangle([0, 0, int(W * t / total), int(S * 0.009)], fill=GOLD + (255,))
+            ud.text((W * 0.04, (H - S * 0.07) if long else S * 0.03), "FINANCIER", font=f_brand, fill=GOLD + (150,))
+            im = Image.alpha_composite(im, vignette)
+            im = Image.alpha_composite(im, fx)
+            # ---------- v4.1 reaction crash-zoom (scene layer only; captions stay put) ----------
+            if zm:
+                zz = zoom_amt(lt - z_at, z_amt, z_hold)
+                if zz > 1.001:
+                    zw, zh = W / zz, H / zz
+                    zx0 = min(max(z_fc[0] - zw / 2, 0.0), W - zw); zy0 = min(max(z_fc[1] - zh / 2, 0.0), H - zh)
+                    if masc and mpos == "corner" and z_on != "buck":  # two-shot framing: never crop a corner Buck
+                        zx0 = min(zx0, max(0.0, mx - mR * 1.45)); zy0 = min(zy0, max(0.0, my - mR * 1.9))
+                    im = im.transform((W, H), Image.EXTENT, (zx0, zy0, zx0 + zw, zy0 + zh), Image.BILINEAR)
+                im = Image.alpha_composite(im, ui)
+            # ---------- scene transition ----------
+            if si > 0 and lt < 0.22:
+                q = lt / 0.22
+                if trans == "punch":
+                    zz = 1.0 + 0.09 * (1 - ease_out(q))
+                    bw2, bh2 = int(W * zz), int(H * zz)
+                    im = im.resize((bw2, bh2), Image.BILINEAR).crop(((bw2 - W) // 2, (bh2 - H) // 2, (bw2 - W) // 2 + W, (bh2 - H) // 2 + H))
+                elif trans == "flash":
+                    im = Image.alpha_composite(im, Image.new("RGBA", (W, H), (255, 255, 255, int(150 * (1 - q)))))
+                elif trans == "slide":
+                    off = int(W * 0.25 * (1 - ease_out(q)))
+                    shifted = Image.new("RGBA", (W, H), (0, 0, 0, 255)); shifted.paste(im, (off, 0)); im = shifted
+            if shake and lt < shake:
+                amp = S * 0.016 * (1 - lt / shake); z = 1.035
+                big_ = im.resize((int(W * z), int(H * z)), Image.BILINEAR)
+                ox = (big_.width - W) / 2 + amp * math.sin(fi * 2.7); oy = (big_.height - H) / 2 + amp * math.cos(fi * 3.9)
+                im = big_.crop((int(ox), int(oy), int(ox) + W, int(oy) + H))
+            frame = im.convert("RGB")
+            if spec.get("loop"):
+                if fi == 0: first_frame = frame.copy()
+                elif fi >= nframes - 6 and first_frame is not None:
+                    frame = Image.blend(frame, first_frame, (fi - (nframes - 6) + 1) / 7)
+            enc.stdin.write(frame.tobytes())
+    enc.stdin.close(); enc.wait()
+    if enc.returncode == 0: os.replace(out + ".tmp.mp4", out)
+    return enc.returncode
+
+
+def main():
+    if len(sys.argv) > 1 and sys.argv[1] == "design-buck":
+        ap = argparse.ArgumentParser(prog="make_video.py design-buck")
+        ap.add_argument("cmd"); ap.add_argument("outdir"); ap.add_argument("--seed", type=int, default=4241)
+        ap.add_argument("--no-save", action="store_true"); ap.add_argument("--force", action="store_true")
+        a = ap.parse_args()
+        design_buck(a.outdir, a.seed, save=not a.no_save, force=a.force); return
+    if len(sys.argv) > 1 and sys.argv[1] == "buck-say":
+        ap = argparse.ArgumentParser(prog="make_video.py buck-say")
+        ap.add_argument("cmd"); ap.add_argument("text"); ap.add_argument("out")
+        ap.add_argument("--model"); ap.add_argument("--voices")
+        a = ap.parse_args()
+        import soundfile as sf
+        y = buck_line_el(a.text, tempfile.mkdtemp(prefix="fin_"), 0)
+        if y is None:
+            if not (a.model and a.voices): sys.exit(f"ElevenLabs failed ({_EL['why']}); pass --model/--voices for the Kokoro fallback")
+            from kokoro_onnx import Kokoro
+            y, _ = buck_line(Kokoro(a.model, a.voices), a.text, tempfile.mkdtemp(prefix="fin_"), 0)
+        sf.write(a.out, y, 24000); print(json.dumps({"out": a.out, "buck_voice": _EL["used"]})); return
+    ap = argparse.ArgumentParser()
+    ap.add_argument("spec"); ap.add_argument("out")
+    ap.add_argument("--model", required=True); ap.add_argument("--voices", required=True)
+    args = ap.parse_args()
+    spec = json.load(open(args.spec))
+    workdir = tempfile.mkdtemp(prefix="fin_")
+    wav, total = tts(spec, args, workdir)
+    rc = render(spec, wav, total, args.out, workdir)
+    print(json.dumps({"rc": rc, "seconds": round(total, 2), "out": args.out,
+                      "buck_voice": sorted(set(_EL["used"])),
+                      "timings": [[round(s["start"], 2), round(s["dur"], 2)] for s in spec["scenes"]]}))
+
+
+if __name__ == "__main__":
+    main()
