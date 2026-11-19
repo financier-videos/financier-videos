@@ -11,6 +11,8 @@ Yangilangan: 2026-11-20 02:25 (vazifa A, 3-parallel sessiya: Buck D yaratildi; d
 - MAQSAD: 6 oyda (2027-05-18 gacha) jami 1 mlrd ko'rish; 12 oyda (2027-11) nishada TOP-10. Har hafta natijaga qarab keskin moslashuv.
 - Limitga urilsa: avval B rejimni, keyin uzun videoni qisqartir va Shohjahonga ayt.
 
+- SHOHJAHON KO'RSATMASI (2026-11-20 03:00): hajmni oshirish — kuniga 4 Shorts + har 2 kunda 1 uzun video; sifat va xilma-xillik birinchi o'rinda ("pul muammo emas, eng zo'r montaj va grafika"). 1 haftada monetizatsiya REAL EMAS (O'zbekistonda YPP yo'q; shartlar 2-bo'limda) — Shohjahonga aytilgan. ElevenLabs krediti <15% qolsa uzunni qisqartir va Pro haqida so'ra.
+
 ## 0.5 TOP-10 VA CINEMA QUALITY STANDARTI
 - NISHA: ingliz tilidagi "money facts / how money works / personal finance explainers" (Shorts + uzun). TOP-10 o'lchovi: oylik ko'rish va obunachi o'sishi bo'yicha nishadagi kanallar orasida o'rin (vidIQ similar_channels / channel_stats, Social Blade). Bosqichlar: 3-oy — TOP-100; 6-oy — TOP-30; 12-oy — TOP-10. Har oyning 1-yakshanbasi C ishida: 10–15 raqobatchi kanal + bizning o'rin → 6-bo'lim.
 - HAR VIDEO SHU CHEKLISTDAN O'TADI (o'tmasa — tuzat va qayta render; chiqarma):
