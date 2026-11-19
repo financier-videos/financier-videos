@@ -5,7 +5,12 @@ soft contact shadow) that make_video.py composites into videos.
 
   python3 buck3d.py --out buck3d --res 720 --samples 32            # whole library (all moods + acts)
   python3 buck3d.py --out test --only proud --frames 1             # quick test
-  python3 buck3d.py --cinema --out buck3d_v2                        # v2 CINEMA QUALITY: 1080 px, 64 samples, PBR gold
+  python3 buck3d.py --cinema --out buck3d_v2                        # MAIN: v3 "ULTIMATE CINEMA BUCK" (default --style ultimate):
+                                                                   # 24k gold coin, engraved scroll border, embossed "$", tilted
+                                                                   # velvet top hat + gold band + dollar bill, gold monocle on a
+                                                                   # chain, shape-key mouth, gold limbs, 4-finger gloves, red-gold
+                                                                   # sneakers. Library slot "v2" (assets/buck3d_v2.tar).
+  python3 buck3d.py --cinema --style classic --out x                # the earlier v2 bow-tie look: 1080 px, 64 samples, PBR gold
                                                                    # (micro-scratches, lathe rings, roughness map, clear coat),
                                                                    # iris + cornea eyes, fabric shaders, 3-point + double rim
                                                                    # light, reflection cards, soft deep contact shadows
@@ -433,6 +438,478 @@ def _glove(P, s, hand, elbow, show_all=True):
     c = P[f"cuff{s}"]; c.location = (hand[0] - dx * 0.13, hand[1], hand[2] - dz * 0.13); c.rotation_euler = (0, beta, 0); show(c, show_all)
 
 
+# ---------------------------------------------------------------- v3 "ULTIMATE CINEMA BUCK" (Shohjahon-approved redesign 2026-11-19)
+# 24k PBR gold coin with an engraved scroll border and an embossed "$", a slightly tilted black velvet top hat with a
+# gold band and a tucked-in dollar bill, a gold monocle on a chain, big glossy eyes, thick brown brows, a living mouth
+# driven by SHAPE KEYS, gold limbs, four-finger white cartoon gloves and red-and-gold sneakers. Original design: built
+# from primitives in code — no outside model, texture or character.
+SERIF = "/usr/share/fonts/truetype/google-fonts/ofl/gelasio/Gelasio[wght].ttf"
+MOUTH_KEYS = ["open", "o", "frown", "smirk", "flat", "wavy", "grit"]
+U_MOUTH = {"happy": {"open": 0.72}, "laugh": {"open": 1.0}, "thumbsup": {"open": 0.62}, "proud": {"smirk": 0.35},
+           "shocked": {"o": 1.0}, "point": {"open": 0.38}, "sad": {"frown": 1.0}, "smug": {"smirk": 1.0},
+           "sideeye": {"flat": 0.6, "smirk": 0.4}, "confused": {"wavy": 1.0}, "angry": {"grit": 1.0},
+           "dizzy": {"wavy": 0.8, "open": 0.18}}
+MONO_C = (0.3, -0.29, 0.165)   # monocle centre (over the viewer's-right eye)
+MONO_R = 0.255
+CHAIN_N = 18
+HAT_S = 1.35                   # top hat scale
+HAT_LOC = (0.38, 0.0, 0.9)     # brim centre, sitting on the coin's upper-right edge
+
+
+def _dome_y(r, lift=0.004):
+    """Front surface (y) of the domed face field at radius r from the coin centre (dome: r 0.84, depth 0.0504)."""
+    q = 1.0 - (r / 0.84) ** 2
+    return (-0.15 - 0.0504 * math.sqrt(q) if q > 0 else -0.15) - lift
+
+
+def _to_mesh(o):
+    """Bake a curve object into a mesh object (so it can carry an Array modifier cheaply)."""
+    dg = bpy.context.evaluated_depsgraph_get()
+    me = bpy.data.meshes.new_from_object(o.evaluated_get(dg))
+    mo = bpy.data.objects.new(o.name + "_m", me); bpy.context.scene.collection.objects.link(mo); mo.parent = o.parent
+    bpy.data.objects.remove(o); smooth(mo, 1.2); return mo
+
+
+def _mouth_fn(kind):
+    """kind -> f(u) for u in [-1, 1] returning (x, z_upper, z_lower) of the mouth opening."""
+    def thin(zc, curv, w, t=0.013, shift=0.0, tilt=0.0):
+        def f(u):
+            z = zc + curv * u * u + tilt * u; th = t * max(0.0, 1 - u * u) ** 0.35 + 0.0035
+            return (shift + w * u, z + th, z - th)
+        return f
+    if kind == "smile":  # basis: closed sly smile, centre low, corners up
+        return thin(-0.335, 0.095, 0.25)
+    if kind == "open":  # D-shaped open grin
+        return lambda u: (0.27 * u, -0.215 - 0.035 * max(0.0, 1 - u * u), -0.215 - 0.21 * max(0.0, 1 - u * u) ** 0.75)
+    if kind == "o":  # surprised round mouth
+        return lambda u: (0.12 * u, -0.30 + 0.13 * math.sqrt(max(0.0, 1 - u * u)), -0.30 - 0.13 * math.sqrt(max(0.0, 1 - u * u)))
+    if kind == "frown":
+        return thin(-0.275, -0.075, 0.2)
+    if kind == "smirk":
+        return thin(-0.315, 0.03, 0.22, shift=0.03, tilt=0.065)
+    if kind == "flat":
+        return thin(-0.30, 0.0, 0.16, t=0.011)
+    if kind == "wavy":
+        def f(u):
+            z = -0.30 + 0.026 * math.sin(u * math.pi * 2); th = 0.011 * max(0.0, 1 - u * u) ** 0.35 + 0.0035
+            return (0.2 * u, z + th, z - th)
+        return f
+    if kind == "grit":  # clenched teeth: rounded rectangle
+        def f(u):
+            k = max(0.0, 1 - u ** 6) ** 0.5
+            return (0.22 * u, -0.31 + 0.05 * k, -0.31 - 0.05 * k)
+        return f
+    raise ValueError(kind)
+
+
+def _mouth_eval(weights, u):
+    b = _mouth_fn("smile")(u); x, zu, zl = b
+    for k, wgt in weights.items():
+        kx, ku, kl = _mouth_fn(k)(u); x += wgt * (kx - b[0]); zu += wgt * (ku - b[1]); zl += wgt * (kl - b[2])
+    return x, zu, zl
+
+
+def _mouth_mesh(P, mat_, body, nx=40, nz=3):
+    """One deformable mouth mesh on the domed face; every expression is a shape key (blendable, lip-sync ready)."""
+    def coords(kind):
+        f = _mouth_fn(kind); out = []
+        for j in range(nz + 1):
+            for i in range(nx + 1):
+                u = -1 + 2 * i / nx; x, zu, zl = f(u); z = zl + (zu - zl) * j / nz
+                out.append((x, _dome_y(math.hypot(x, z), 0.006), z))
+        return out
+    me = bpy.data.meshes.new("mouth_sk"); bm = bmesh.new()
+    vs = [bm.verts.new(c) for c in coords("smile")]
+    for j in range(nz):
+        for i in range(nx):
+            a = j * (nx + 1) + i; bm.faces.new((vs[a], vs[a + 1], vs[a + nx + 2], vs[a + nx + 1]))
+    bm.to_mesh(me); bm.free()
+    o = bpy.data.objects.new("mouth_sk", me); link(o, body, mat_); smooth(o, 1.2)
+    o.shape_key_add(name="Basis", from_mix=False)
+    for k in MOUTH_KEYS:
+        sk = o.shape_key_add(name=k, from_mix=False)
+        for v, c in zip(sk.data, coords(k)): v.co = c
+    P["mouth_sk"] = o
+
+
+def _chain(P, p0, p1, sag=0.07):
+    """Hang the monocle chain (alternating links) on a sagging curve from p0 (monocle) to p1 (anchor on the border)."""
+    c = ((p0[0] + p1[0]) / 2 + 0.05, (p0[1] + p1[1]) / 2, (p0[2] + p1[2]) / 2 - sag)
+    for i, ln in enumerate(P["chain"]):
+        t = (i + 0.5) / len(P["chain"]); a, b_, cc = (1 - t) ** 2, 2 * (1 - t) * t, t * t
+        x = a * p0[0] + b_ * c[0] + cc * p1[0]; z = a * p0[2] + b_ * c[2] + cc * p1[2]
+        y = min(a * p0[1] + b_ * c[1] + cc * p1[1], _dome_y(math.hypot(x, z), 0.012))
+        dx = 2 * (1 - t) * (c[0] - p0[0]) + 2 * t * (p1[0] - c[0]); dz = 2 * (1 - t) * (c[2] - p0[2]) + 2 * t * (p1[2] - c[2])
+        th = math.atan2(-dz, dx)
+        ln.location = (x, y, z); ln.rotation_euler = (math.radians(90) if i % 2 == 0 else 0.0, th, 0.0)
+
+
+def ultimate_upgrade(P, sc):
+    M, body, root = P["M"], P["body"], P["root"]
+    P["ultimate"] = True; P["gold_base"] = (1.0, 0.70, 0.27, 1)
+    # --- 24k gold: polished field with micro-scratches living in the ROUGHNESS (tiny bump only -> no "foil" look)
+    g = M["gold"]; _, b = _bsdf(g)
+    b.inputs["Base Color"].default_value = P["gold_base"]; _set(b, metal=1.0, coat=0.25, coat_rough=0.03)
+    _bump_tree(g, [("noise", 3, 0.55, 6), ("noise", 420, 0.25, 8), ("scratch", 11, 0.2, 0.7), ("scratch", 17, 0.15, 2.1)],
+               strength=0.01, distance=0.001, rough_mod=(0.1, 0.32))
+    limb = mat("limb_gold", (1.0, 0.72, 0.30), metallic=1.0, rough=0.2, coat=0.2); _set(_bsdf(limb)[1], aniso=0.35)
+    M["limb"] = limb
+    for s in (-1, 1):
+        for k in (f"arm{s}", f"leg{s}"):
+            P[k].data.materials[0] = limb; P[k].data.bevel_depth = 0.042
+    skip = P.get("tripo_pending")  # hybrid: the Tripo sculpt brings its own border, hat, gloves and sneakers
+    # --- engraved scroll border (running vine with curls) between two fine rings, + embossed "$" on the face
+    for o in list(sc.objects):
+        if o.name in ("beads",): o.hide_render = True
+    N = 0 if skip else 36; r0 = 0.79; half = math.pi / max(N, 1)
+    vine = []
+    for k in range(13):
+        t = -half + 2 * half * k / 12; r = r0 + 0.024 * math.sin(math.pi * t / half)
+        vine.append((r * math.cos(t), _dome_y(r, 0.001), r * math.sin(t)))
+    parts = [] if skip else [curve("scroll_vine", vine, 0.0105, M["gold_rim"], body)]
+    for sgn, tt in (() if skip else ((1, half / 2), (-1, -half / 2))):  # a small curl at each crest / trough
+        rc = r0 + sgn * 0.024; pts = []
+        for k in range(7):
+            a_ = k / 6 * 1.6 * math.pi; rr = 0.014 * (1 - k / 9)
+            rad = rc + sgn * rr * (1 - math.cos(a_)); ang = tt + rr * math.sin(a_) / r0
+            pts.append((rad * math.cos(ang), _dome_y(rad, 0.001), rad * math.sin(ang)))
+        parts.append(curve(f"scroll_curl{sgn}", pts, 0.0078, M["gold_rim"], body))
+    rot = bpy.data.objects.new("scroll_rot", None); sc.collection.objects.link(rot); rot.parent = body
+    rot.rotation_euler = (0, 2 * half, 0)
+    for o in parts:
+        mo = _to_mesh(o); mo.data.materials.append(M["gold_rim"])
+        arr = mo.modifiers.new("arr", "ARRAY"); arr.count = N; arr.use_relative_offset = False
+        arr.use_object_offset = True; arr.offset_object = rot
+    # satin (darker, rougher) ground under the engraving so the polished scrollwork reads clearly
+    satin = mat("gold_satin", (0.78, 0.5, 0.17), metallic=1.0, rough=0.42); M["gold_satin"] = satin
+    _bump_tree(satin, [("noise", 520, 0.7, 6)], strength=0.04, distance=0.001)
+    me = bpy.data.meshes.new("band"); bm = bmesh.new(); segs = 0 if skip else 180
+    for i in range(segs):
+        a0, a1 = 2 * math.pi * i / segs, 2 * math.pi * (i + 1) / segs; q = []
+        for a, rr in ((a0, 0.738), (a1, 0.738), (a1, 0.842), (a0, 0.842)):
+            q.append(bm.verts.new((rr * math.cos(a), _dome_y(rr, 0.0006), rr * math.sin(a))))
+        bm.faces.new(q)
+    bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-6); bm.to_mesh(me); bm.free()
+    bo = bpy.data.objects.new("band", me); link(bo, body, satin); smooth(bo, 1.2)
+    for nm, rr in (() if skip else (("ring_in", 0.735), ("ring_mid", 0.845))):
+        bpy.ops.mesh.primitive_torus_add(major_radius=rr, minor_radius=0.009, major_segments=160, minor_segments=10,
+                                         location=(0, _dome_y(rr, -0.002), 0), rotation=(math.radians(90), 0, 0))
+        t_ = bpy.context.active_object; t_.name = nm; t_.parent = body; smooth(t_, 1.2); t_.data.materials.append(M["gold_rim"])
+    fd = text("front_dollar", "$", 0.46, (0, _dome_y(0.58, 0.004), -0.585), (math.radians(90), 0, 0), M["gold_rim"], body, extrude=0.011)
+    if os.path.exists(SERIF):
+        try: fd.data.font = bpy.data.fonts.load(SERIF, check_existing=True)
+        except Exception: pass
+    fd.data.bevel_depth = 0.006
+    # --- eyes: bigger amber "animation-feature" irises, thick brown brows
+    iris = sc.objects.get("iris1").data.materials[0] if sc.objects.get("iris1") else None
+    if iris:
+        cr = [n for n in iris.node_tree.nodes if n.type == "VALTORGB"][0].color_ramp.elements
+        cr[0].color = (0.16, 0.07, 0.015, 1); cr[1].color = (0.78, 0.46, 0.12, 1)
+    skip = P.get("tripo_pending")
+    brow = mat("brow", (0.11, 0.05, 0.022) if not skip else (0.035, 0.014, 0.006), rough=0.55 if not skip else 0.62,
+               sheen=0.4 if not skip else 0.12); M["brow"] = brow
+    _bump_tree(brow, [("noise", 240, 0.7, 4)], strength=0.08, distance=0.002)
+    for s in (-1, 1):
+        cu = P[f"brow{s}"].data; cu.materials[0] = brow; cu.bevel_depth = 0.043 if not skip else 0.056
+        for bp_, r_ in zip(cu.splines[0].bezier_points, (0.75, 1.25, 0.8)): bp_.radius = r_
+        P[f"eyeline{s}"].data.materials[0] = brow
+    # --- living mouth (shape keys) + teeth/tongue in front of it
+    _mouth_mesh(P, M["mouth"], body)
+    _bsdf(M["mouth"])[1].inputs["Base Color"].default_value = (0.13, 0.012, 0.02, 1)
+    # --- monocle: gold ring + thin glass + chain to the border
+    # clear lens: Fresnel mix of a transparent pass-through and a sharp gloss (crisp, noise-free, keeps the eye visible)
+    glass = bpy.data.materials.new("monocle_glass"); glass.use_nodes = True; gn = glass.node_tree.nodes; gl_ = glass.node_tree.links
+    for n in list(gn): gn.remove(n)
+    tr = gn.new("ShaderNodeBsdfTransparent"); tr.inputs["Color"].default_value = (0.97, 0.985, 1.0, 1)
+    gs = gn.new("ShaderNodeBsdfGlossy"); gs.inputs["Roughness"].default_value = 0.03
+    fr = gn.new("ShaderNodeFresnel"); fr.inputs["IOR"].default_value = 1.6 if not P.get("tripo_pending") else 1.3
+    mx = gn.new("ShaderNodeMixShader"); outn = gn.new("ShaderNodeOutputMaterial")
+    gl_.new(fr.outputs[0], mx.inputs[0]); gl_.new(tr.outputs[0], mx.inputs[1]); gl_.new(gs.outputs[0], mx.inputs[2]); gl_.new(mx.outputs[0], outn.inputs[0])
+    mono = bpy.data.objects.new("monocle", None); sc.collection.objects.link(mono); mono.parent = body; mono.location = MONO_C
+    bpy.ops.mesh.primitive_torus_add(major_radius=MONO_R, minor_radius=0.021, major_segments=96, minor_segments=16,
+                                     location=(0, 0, 0), rotation=(math.radians(90), 0, 0))
+    ring = bpy.context.active_object; ring.name = "monocle_ring"; ring.parent = mono; smooth(ring, 1.2); ring.data.materials.append(M["gold_rim"])
+    bpy.ops.mesh.primitive_cylinder_add(vertices=96, radius=MONO_R - 0.004, depth=0.006, location=(0, 0, 0), rotation=(math.radians(90), 0, 0))
+    gl = bpy.context.active_object; gl.name = "monocle_glass"; gl.parent = mono; smooth(gl, 0.6); gl.data.materials.append(glass)
+    links = []
+    for i in range(CHAIN_N):
+        bpy.ops.mesh.primitive_torus_add(major_radius=0.0155, minor_radius=0.0058, major_segments=20, minor_segments=8)
+        ln = bpy.context.active_object; ln.name = f"chain{i}"; ln.parent = body; ln.scale = (1.55, 1.0, 1.0)
+        smooth(ln, 1.2); ln.data.materials.append(M["gold_rim"]); links.append(ln)
+    P["monocle"], P["chain"] = mono, links
+    P["chain_anchor"] = (0.69, _dome_y(0.81, 0.012), -0.43)
+    if skip: return
+    # --- top hat: black velvet crown + brim, gold band, a small dollar bill tucked into the band
+    velvet = mat("velvet", (0.006, 0.006, 0.007), rough=0.75, sheen=0.45); _set(_bsdf(velvet)[1], sheen_rough=0.5)
+    _bump_tree(velvet, [("noise", 380, 0.7, 6), ("noise", 30, 0.3, 3)], strength=0.05, distance=0.002)
+    bill_m = bpy.data.materials.new("bill"); bill_m.use_nodes = True; nt = bill_m.node_tree; bb = nt.nodes["Principled BSDF"]
+    tc = nt.nodes.new("ShaderNodeTexCoord"); wv = nt.nodes.new("ShaderNodeTexWave"); wv.inputs["Scale"].default_value = 60
+    wv.inputs["Distortion"].default_value = 2; cr2 = nt.nodes.new("ShaderNodeValToRGB")
+    cr2.color_ramp.elements[0].color = (0.20, 0.36, 0.20, 1); cr2.color_ramp.elements[1].color = (0.55, 0.70, 0.50, 1)
+    nt.links.new(tc.outputs["Object"], wv.inputs["Vector"]); nt.links.new(wv.outputs["Fac"], cr2.inputs["Fac"])
+    nt.links.new(cr2.outputs["Color"], bb.inputs["Base Color"]); _set(bb, rough=0.7, sheen=0.3)
+    hat = bpy.data.objects.new("hat", None); sc.collection.objects.link(hat); hat.parent = body
+    hat.location = HAT_LOC; hat.rotation_euler = (0, math.radians(16), 0); hat.scale = (HAT_S,) * 3
+    bpy.ops.mesh.primitive_cone_add(vertices=96, radius1=0.265, radius2=0.29, depth=0.42, location=(0, 0, 0.24))
+    crown = bpy.context.active_object; crown.name = "hat_crown"; crown.parent = hat
+    bv = crown.modifiers.new("bev", "BEVEL"); bv.width = 0.03; bv.segments = 5; bv.limit_method = "ANGLE"; smooth(crown, 0.6)
+    crown.data.materials.append(velvet)
+    bpy.ops.mesh.primitive_cylinder_add(vertices=96, radius=0.44, depth=0.032, location=(0, 0, 0.03))
+    brim = bpy.context.active_object; brim.name = "hat_brim"; brim.parent = hat
+    bv = brim.modifiers.new("bev", "BEVEL"); bv.width = 0.014; bv.segments = 4; smooth(brim, 0.6); brim.data.materials.append(velvet)
+    bpy.ops.mesh.primitive_torus_add(major_radius=0.43, minor_radius=0.022, major_segments=96, minor_segments=12, location=(0, 0, 0.045))
+    lip = bpy.context.active_object; lip.name = "hat_brim_lip"; lip.parent = hat; smooth(lip, 1.2); lip.data.materials.append(velvet)
+    bpy.ops.mesh.primitive_cylinder_add(vertices=96, radius=0.273, depth=0.075, location=(0, 0, 0.085))
+    band = bpy.context.active_object; band.name = "hat_band"; band.parent = hat
+    bv = band.modifiers.new("bev", "BEVEL"); bv.width = 0.006; bv.segments = 3; smooth(band, 0.6); band.data.materials.append(M["gold_rim"])
+    phi = math.radians(38)
+    bpy.ops.mesh.primitive_cube_add(size=1, location=(0.277 * math.sin(phi), -0.277 * math.cos(phi), 0.13))
+    bill = bpy.context.active_object; bill.name = "hat_bill"; bill.parent = hat; bill.scale = (0.17, 0.006, 0.085)
+    bill.rotation_euler = (math.radians(-6), math.radians(-28), phi)
+    bv = bill.modifiers.new("bev", "BEVEL"); bv.width = 0.004; bv.segments = 2; bill.data.materials.append(bill_m)
+    P["hat"] = hat
+    # --- gloves: a side thumb on every hand (4 fingers like classic cartoon gloves)
+    for s in (-1, 1):
+        P[f"sthumb{s}"] = sphere(f"sthumb{s}", 0.055, (0, 0, 0), (0.8, 0.8, 1.45), M["glove"], root, seg=24)
+    # --- red & gold sneakers: red leather upper, gold toe cap + heel panel, white laces, red ankle collar
+    red = mat("shoe_red", (0.52, 0.05, 0.03), rough=0.36, coat=0.35); _set(_bsdf(red)[1], coat_rough=0.1)
+    _bump_tree(red, [("noise", 260, 0.6, 6), ("noise", 40, 0.4, 3)], strength=0.05, distance=0.002)
+    lace = mat("lace", (0.95, 0.94, 0.9), rough=0.6, sheen=0.5)
+    for s in (-1, 1):
+        P[f"shoe{s}"].data.materials[0] = red
+        toe = P[f"toe{s}"]; toe.data.materials[0] = M["gold_rim"]; toe.location = (0.42 * s, -0.43, -1.455); toe.scale = (0.155, 0.11, 0.072)
+        heel = sphere(f"heel{s}", 1.0, (0.42 * s, -0.05, -1.452), (0.205, 0.17, 0.085), M["gold_rim"], root)
+        for k, yy in enumerate((-0.37, -0.30, -0.23)):
+            q = 1 - ((yy + 0.2) / 0.32) ** 2
+            def zs(x): return -1.43 + 0.12 * math.sqrt(max(0.0, q - (x / 0.2) ** 2)) + 0.006
+            curve(f"lace{s}_{k}", [(0.42 * s - 0.075, yy, zs(0.075)), (0.42 * s, yy - 0.004, zs(0.0) + 0.008), (0.42 * s + 0.075, yy, zs(0.075))], 0.011, lace, root)
+        bpy.ops.mesh.primitive_torus_add(major_radius=0.07, minor_radius=0.03, major_segments=32, minor_segments=10, location=(0.37 * s, -0.08, -1.36))
+        col = bpy.context.active_object; col.name = f"collar{s}"; col.parent = root; smooth(col, 1.2); col.data.materials.append(red)
+
+
+def pose_ultimate(P, mood, t, w, act, act_t, edge_on, blink):
+    """Per-frame state of the v3 parts (called at the end of pose())."""
+    for k in ("mouth_line", "mouth_open", "mouth_o", "tie-1", "tie1", "knot", "cheek-1", "cheek1"):
+        show(P[k], False)
+    # mouth shape keys (+ a little life: laugh chatter, talkative wobble)
+    wts = dict(U_MOUTH.get(mood, {}))
+    if mood == "laugh": wts["open"] = 0.82 + 0.18 * abs(math.sin(w * 2))
+    if mood == "happy": wts["open"] = 0.72 + 0.06 * math.sin(w * 4)
+    if act == "bonk" and 0.22 <= act_t < 0.6: wts = {"o": 0.8}
+    if act == "dodge": wts = {"o": 0.6, "open": 0.2}
+    kb = P["mouth_sk"].data.shape_keys.key_blocks
+    for k in MOUTH_KEYS: kb[k].value = wts.get(k, 0.0)
+    show(P["mouth_sk"], not edge_on)
+    _, zu, zl = _mouth_eval(wts, 0.0); yf = _dome_y(0.3, 0.014)
+    op = wts.get("open", 0.0); grit = wts.get("grit", 0.0); oo = wts.get("o", 0.0)
+    teeth, tongue = P["teeth"], P["tongue"]
+    show(teeth, (op >= 0.9 or grit >= 0.9) and not edge_on)
+    if grit >= 0.9:
+        teeth.location = (0, yf, (zu + zl) / 2); teeth.scale = (0.33, 0.02, (zu - zl) - 0.02)
+    else:
+        teeth.location = (0, yf, zu - 0.026); teeth.scale = (0.27, 0.02, 0.036)
+    show(tongue, (op >= 0.5 or oo >= 0.5) and not edge_on)
+    if oo >= 0.5: tongue.location = (0, yf + 0.002, zl + 0.035); tongue.scale = (0.055, 0.03, 0.03)
+    else:
+        hh = zu - zl; tongue.location = (0, yf + 0.002, zl + 0.3 * hh); tongue.scale = (0.12 * max(op, 0.6), 0.03, 0.18 * hh)
+    # monocle: follows the eye; pops out and dangles on its chain when shocked
+    mono = P["monocle"]; big = 1.25 if mood == "shocked" else 1.0
+    if mood == "shocked":
+        mono.location = (0.43, -0.37, -0.13 + 0.01 * math.sin(w * 9)); mono.rotation_euler = (math.radians(28), math.radians(22 + 6 * math.sin(w * 3)), 0)
+    elif mood == "dizzy":
+        mono.location = MONO_C; mono.rotation_euler = (0, math.radians(9 * math.sin(w)), 0)
+    else:
+        mono.location = MONO_C; mono.rotation_euler = (0, math.radians(-4 if mood == "sideeye" else 0), 0)
+    mono.scale = (1.0, 1.0, 1.0)
+    for c in mono.children: show(c, not edge_on)
+    loc_ = Vector((MONO_R * 0.64, 0.0, -MONO_R * 0.77))
+    p0 = Vector(mono.location) + mono.rotation_euler.to_matrix() @ loc_
+    _chain(P, tuple(p0), P["chain_anchor"], sag=0.03 if mood == "shocked" else 0.07)
+    for ln in P["chain"]: show(ln, not edge_on)
+    # top hat attitude
+    hat = P.get("hat"); dz = 0.0; rot = 16.0; sq = 1.0
+    if mood == "shocked": dz = 0.16; rot = 8 + 4 * math.sin(w * 9)
+    elif mood == "laugh": dz = 0.05 * abs(math.sin(w * 2)); rot = 16 + 4 * math.sin(w * 2)
+    elif mood == "dizzy": rot = 16 + 10 * math.sin(w * 1.5)
+    elif mood == "angry": dz = 0.025 * abs(math.sin(w * 11))
+    elif mood == "proud": rot = 9
+    elif mood == "sad": rot = 24; dz = -0.02
+    elif mood == "happy": rot = 16 + 3 * math.sin(w * 2)
+    if act == "bonk" and act_t >= 0.22:
+        rot = 34; dz = -0.05; sq = 0.86 if act_t < 0.4 else 1.0
+    if act == "dodge":
+        p = min(1.0, act_t / 0.75); rot += 14 * math.sin(p * math.pi)
+    if hat:
+        hat.location = (HAT_LOC[0], HAT_LOC[1], HAT_LOC[2] + dz); hat.rotation_euler = (0, math.radians(rot), 0)
+        hat.scale = (HAT_S, HAT_S, HAT_S * sq)
+    # four-finger gloves: side thumb (the right hand's thumb goes up for "thumbsup")
+    for s in ((-1, 1) if "sthumb1" in P else ()):
+        h = P[f"hand{s}"].location; th = P[f"sthumb{s}"]
+        show(th, not edge_on and not (mood == "thumbsup" and s == 1))
+        th.location = (h[0] - 0.085 * s, h[1] - 0.075, h[2] + 0.05); th.rotation_euler = (math.radians(-20), math.radians(-35 * s), 0)
+    # pop-ups on the side away from the hat
+    P["qmark"].location = (-0.95, -0.2, 1.05 + 0.04 * math.sin(w))
+    P["bang"].location = (-0.62, -0.2, 1.3)
+    for so in P["stars"]: so.location.z += 0.22
+
+
+# ---------------------------------------------------------------- v4 HYBRID "TRIPO + LIVE FACE" (MAIN model, 2026-11-20)
+# Shohjahon's Tripo sculpt (paid plan = commercial rights) supplies the body: 24k engraved coin, top hat with the
+# dollar bill, white cartoon gloves and red-gold sneakers. Its frozen face field is cut out and replaced by the
+# procedural ANIMATED face (eyes, lids, brows, shape-key mouth, monocle + chain, embossed "$"); the arms and legs are
+# procedural gold tubes so the rigid Tripo gloves can follow every pose.
+TRIPO_URL = "https://raw.githubusercontent.com/financier-videos/financier-videos/media/assets/buck_tripo.glb.enc"
+T_CX, T_CZ, T_R, T_CUT, T_YBAND = 0.0, 0.565, 0.307, 0.209, -0.044   # coin centre, radius, face cut, band depth (GLB units)
+T_S = 0.84 / T_CUT            # GLB -> rig units: the cut face field becomes exactly the procedural dome (r 0.84)
+T_K = T_R * T_S               # coin radius in rig units (~1.234): framing, arms and pop-ups scale by this
+T_WRIST = (0.3492, 0.0107, 0.3352)   # right glove wrist (GLB units; left glove = mirrored x)
+T_ARMS = {"confused": [(-0.78, 1.0), (1.4, -0.45)]}   # big sculpted gloves: keep raised hands clear of the hat
+
+
+def _t_xf(p):
+    import numpy as np
+    out = np.empty_like(p)
+    out[:, 0] = (p[:, 0] - T_CX) * T_S; out[:, 1] = (p[:, 1] - T_YBAND) * T_S - 0.15; out[:, 2] = (p[:, 2] - T_CZ) * T_S
+    return out
+
+
+def _t_classify(C):
+    """Triangle centroids (GLB units, Blender axes) -> 0 coin(+hat), 1 face field, 2 left glove, 3 right glove,
+    4 shoes, 5 arm tube, 6 leg tube."""
+    import numpy as np
+    x, y, z = C[:, 0], C[:, 1], C[:, 2]; r = np.hypot(x - T_CX, z - T_CZ)
+    lab = np.zeros(len(C), np.int8); outside = r > T_R + 0.004
+    lab[(r < T_CUT) & (y < 0.0)] = 1
+    shoes = z < 0.125; lab[shoes] = 4
+    glove = (z >= 0.125) & (z < 0.352) & (np.abs(x) > 0.232)
+    lab[glove & (x < 0)] = 2; lab[glove & (x > 0)] = 3
+    lab[outside & ~glove & (z >= 0.3) & (z < 0.62) & (np.abs(x) > 0.18)] = 5
+    lab[outside & ~glove & ~shoes & (z < 0.33) & (np.abs(x) <= 0.232)] = 6
+    return lab
+
+
+def _tripo_glb(path):
+    """Local copy of the Tripo GLB: explicit path / env FIN_BUCK_GLB, else the encrypted asset from GitHub
+    (decrypted with env FIN_BUCK_GLB_KEY; openssl aes-256-cbc -pbkdf2)."""
+    import subprocess, tempfile
+    for cand in (path, os.environ.get("FIN_BUCK_GLB", "")):
+        if cand and os.path.exists(cand): return cand
+    key = os.environ.get("FIN_BUCK_GLB_KEY", "")
+    if not key: raise SystemExit("Tripo model: give --tripo PATH or set FIN_BUCK_GLB / FIN_BUCK_GLB_KEY")
+    d = tempfile.mkdtemp(prefix="buck_glb_"); enc = os.path.join(d, "buck.glb.enc"); out = os.path.join(d, "buck.glb")
+    subprocess.run(["curl", "-sSfL", "-o", enc, TRIPO_URL], check=True, timeout=900)
+    subprocess.run(["openssl", "enc", "-d", "-aes-256-cbc", "-pbkdf2", "-iter", "200000", "-in", enc, "-out", out,
+                    "-pass", "env:FIN_BUCK_GLB_KEY"], check=True)
+    os.remove(enc); return out
+
+
+def _t_mesh(name, co, tri_v, tri_loops, uv, mask, mat_, pivot=(0.0, 0.0, 0.0)):
+    import numpy as np
+    tv = tri_v[mask]; used, inv = np.unique(tv.ravel(), return_inverse=True); inv = inv.reshape(-1)
+    verts = _t_xf(co[used]) - np.array(pivot); nf = tv.shape[0]
+    m = bpy.data.meshes.new(name)
+    m.vertices.add(len(used)); m.vertices.foreach_set("co", verts.astype(np.float32).ravel())
+    m.loops.add(nf * 3); m.loops.foreach_set("vertex_index", inv.astype(np.int32))
+    m.polygons.add(nf); m.polygons.foreach_set("loop_start", (np.arange(nf) * 3).astype(np.int32))
+    try: m.polygons.foreach_set("loop_total", np.full(nf, 3, np.int32))
+    except Exception: pass
+    m.uv_layers.new(name="UVMap").data.foreach_set("uv", uv[tri_loops[mask].ravel()].astype(np.float32).ravel())
+    m.update(calc_edges=True); m.validate(clean_customdata=False)
+    try: m.shade_smooth()
+    except Exception:
+        m.polygons.foreach_set("use_smooth", np.ones(nf, bool))
+    m.materials.append(mat_)
+    o = bpy.data.objects.new(name, m); bpy.context.scene.collection.objects.link(o); return o
+
+
+def tripo_upgrade(P, sc, glb):
+    import numpy as np
+    M, body, root = P["M"], P["body"], P["root"]
+    before = set(sc.objects)
+    bpy.ops.import_scene.gltf(filepath=glb)
+    imported = [o for o in sc.objects if o not in before]
+    src = [o for o in imported if o.type == "MESH"][0]
+    me = src.data; mw = np.array(src.matrix_world)
+    nv = len(me.vertices); co = np.empty(nv * 3, np.float32); me.vertices.foreach_get("co", co)
+    co = co.reshape(-1, 3).astype(np.float64) @ mw[:3, :3].T + mw[:3, 3]
+    nl = len(me.loops); lv = np.empty(nl, np.int32); me.loops.foreach_get("vertex_index", lv)
+    npo = len(me.polygons); ls = np.empty(npo, np.int32); me.polygons.foreach_get("loop_start", ls)
+    uv = np.empty(nl * 2, np.float32); me.uv_layers.active.data.foreach_get("uv", uv); uv = uv.reshape(-1, 2)
+    tri_loops = ls[:, None] + np.arange(3)[None, :]; tri_v = lv[tri_loops]
+    # the sculpted "$" stem pokes just past the face cut: press it flat into the border
+    r_ = np.hypot(co[:, 0] - T_CX, co[:, 2] - T_CZ)
+    flat = (r_ > 0.2) & (r_ < 0.236) & (np.abs(co[:, 0]) < 0.04) & (co[:, 2] < T_CZ) & (co[:, 1] < -0.0465)
+    co[flat, 1] = -0.0455
+    lab = _t_classify(co[tri_v].mean(1)); mat_ = me.materials[0]
+    for n_ in getattr(mat_.node_tree, "nodes", []):  # the GLB volume extension must not turn the gold into glass
+        if n_.type == "BSDF_PRINCIPLED":
+            for k in ("Transmission Weight", "Transmission"):
+                if k in n_.inputs: n_.inputs[k].default_value = 0.0
+    coin = _t_mesh("t_coin", co, tri_v, tri_loops, uv, lab == 0, mat_); coin.parent = body
+    wr = _t_xf(np.array([T_WRIST]))[0]
+    for s, code in ((-1, 2), (1, 3)):
+        piv = (wr[0] * s, wr[1], wr[2])
+        g = _t_mesh(f"t_glove{s}", co, tri_v, tri_loops, uv, lab == code, mat_, pivot=piv); g.parent = root; g.location = piv
+        P[f"tglove{s}"] = g
+    shoes = _t_mesh("t_shoes", co, tri_v, tri_loops, uv, lab == 4, mat_); shoes.parent = root
+    for o in imported:
+        bpy.data.objects.remove(o, do_unlink=True)
+    bpy.data.meshes.remove(me)
+    P["tripo"] = True; P["t_coin"] = coin
+    # procedural pieces the sculpt replaces
+    for nm in ("coin", "ridge", "ring_f", "ring_b", "back_dollar", "beads"):
+        o = sc.objects.get(nm)
+        if o: o.hide_render = True
+    for s in (-1, 1):
+        for k in (f"shoe{s}", f"sole{s}", f"toe{s}"): show(P[k], False)
+    # seam cover between the procedural dome and the sculpted border
+    bpy.ops.mesh.primitive_torus_add(major_radius=0.842, minor_radius=0.017, major_segments=180, minor_segments=12,
+                                     location=(0, -0.152, 0), rotation=(math.radians(90), 0, 0))
+    sr = bpy.context.active_object; sr.name = "t_seam"; sr.parent = body; smooth(sr, 1.2); sr.data.materials.append(M["gold_rim"])
+    # limbs: procedural gold tubes from the sculpt's attachment points
+    for s in (-1, 1):
+        P[f"arm{s}"].data.bevel_depth = 0.05; P[f"leg{s}"].data.bevel_depth = 0.052
+        for bp_ in list(P[f"arm{s}"].data.splines[0].bezier_points) + list(P[f"leg{s}"].data.splines[0].bezier_points): bp_.radius = 1.0
+        set_curve(P[f"leg{s}"], [(0.42 * s, 0.06, -1.0), (0.41 * s, 0.07, -1.45), (0.405 * s, 0.09, -1.86)])
+    # framing: same composition as before, scaled to the bigger sculpted coin (coin = 1/4.6 of the sprite width)
+    cam = sc.camera; cam.location = (cam.location.x * T_K, cam.location.y * T_K, cam.location.z * T_K)
+    fl = sc.objects.get("floor")
+    if fl: fl.location = (0.0, fl.location.y * T_K, (0.0 - T_CZ) * T_S); fl.scale = (T_K * 1.6, T_K * 1.6, 1.0)
+    for o in sc.objects:  # lights + reflection cards keep their angles to the bigger coin
+        if o.type == "LIGHT" or o.name.startswith("card_"):
+            o.location = (o.location.x * T_K, o.location.y * T_K, o.location.z * T_K)
+            if o.type == "LIGHT": o.data.energy *= T_K ** 2
+            else: o.scale = (o.scale.x * T_K, o.scale.y * T_K, 1)
+    fd = sc.objects.get("front_dollar")
+    if fd: fd.location.z = -0.6; fd.data.size = 0.62; fd.data.bevel_depth = 0.01; fd.data.extrude = 0.014
+
+
+def pose_tripo(P, mood, t, w, act, edge_on):
+    """Arms + rigid sculpted gloves for the hybrid model (runs after pose() / pose_ultimate())."""
+    for s in (-1, 1):
+        for k in (f"hand{s}", f"thumb{s}", f"cuff{s}"): show(P[k], False)
+        for f in P.get(f"fingers{s}", []): show(f, False)
+    for i, s in enumerate((-1, 1)):
+        hx, hz = T_ARMS.get(mood, ARMS.get(mood, [(-1.4, -0.4), (1.4, -0.4)]))[i]
+        hx *= T_K; hz *= T_K
+        if mood == "happy" and s == 1: hz += 0.17 * math.sin(w * 4)
+        hz += 0.025 * math.sin(w + s)
+        hy = -0.45 if mood == "laugh" else -0.12
+        sh = (1.13 * s, 0.06, -0.37)
+        hand = (hx, hy, hz)
+        elbow = ((sh[0] + hx) / 2 + 0.14 * s, (sh[1] + hy) / 2, (sh[2] + hz) / 2 - 0.14)
+        if edge_on: hand = (0.35 * s, 0.0, -0.4); elbow = (0.3 * s, 0.0, -0.4); sh = (0.2 * s, 0.0, -0.4)
+        set_curve(P[f"arm{s}"], [sh, elbow, hand])
+        g = P[f"tglove{s}"]; g.location = hand
+        phi_d = math.atan2(hand[2] - elbow[2], hand[0] - elbow[0])
+        g.rotation_euler = (0.0, math.radians(-90) - phi_d, 0.0)
+    P["qmark"].location = (1.3, -0.3, 1.85 + 0.04 * math.sin(w))
+    P["bang"].location = (-0.95, -0.3, 1.75)
+    for so in P["stars"]: so.location.z += 0.5
+    if P["tag"].hide_render is False:
+        P["tag"].location.z += 0.3
+
+
 # ---------------------------------------------------------------- posing
 ARMS = {"shocked": [(-1.55, 0.8), (1.55, 0.8)], "happy": [(-1.45, -0.3), (1.5, 0.55)], "laugh": [(-0.55, -0.72), (0.55, -0.72)],
         "smug": [(-0.98, -0.55), (1.0, -0.55)], "confused": [(-1.4, -0.45), (0.62, 1.08)], "sideeye": [(-1.2, -0.8), (1.2, -0.8)],
@@ -531,7 +1008,7 @@ def pose(P, mood, t, act=None, act_t=0.0):
         P["tongue"].location = (0, -0.2, -0.43); P["tongue"].scale = (0.07, 0.04, 0.04)
     if mood in LINE:
         set_curve(P["mouth_line"], [(x, -0.17, z) for x, z in LINE[mood]])
-    M["gold"].node_tree.nodes["Principled BSDF"].inputs["Base Color"].default_value = ((1.0, 0.48, 0.22, 1) if mood == "angry" else (1.0, 0.70, 0.22, 1))
+    M["gold"].node_tree.nodes["Principled BSDF"].inputs["Base Color"].default_value = ((1.0, 0.48, 0.22, 1) if mood == "angry" else P.get("gold_base", (1.0, 0.70, 0.22, 1)))
     # tie wiggle
     wig = 6 * math.sin(w * 3) if mood in ("happy", "laugh", "proud", "thumbsup") else 0
     for s in (-1, 1): P[f"tie{s}"].rotation_euler = (math.radians(wig * s), math.radians(-90 * s), 0)
@@ -572,6 +1049,10 @@ def pose(P, mood, t, act=None, act_t=0.0):
         if mood in LINE:
             for bp_ in P["mouth_line"].data.splines[0].bezier_points: bp_.co.y += fd["mouth_line"]
         if mood in OPEN or mood == "shocked": P["tongue"].location.y += fd["tongue"]
+    if P.get("ultimate"):  # v3 Ultimate Cinema Buck: shape-key mouth, monocle + chain, top hat, side thumbs
+        pose_ultimate(P, mood, t, w, act, act_t, edge_on, blink)
+    if P.get("tripo"):  # v4 hybrid: procedural arms + rigid sculpted gloves
+        pose_tripo(P, mood, t, w, act, edge_on)
 
 
 def render_clip(P, out, name, mood, n, act=None):
@@ -592,12 +1073,22 @@ def main():
     ap.add_argument("--frames", type=int, default=0)
     ap.add_argument("--cinema", action="store_true", help="v2 cinema quality (defaults 1080 px, 64 samples)")
     ap.add_argument("--look", default="Medium High Contrast"); ap.add_argument("--threads", type=int, default=0)
+    ap.add_argument("--style", default="tripo", choices=["tripo", "ultimate", "classic"],
+                    help="with --cinema: tripo = v4 HYBRID (Tripo sculpt body + procedural animated face; MAIN model), "
+                         "ultimate = fully procedural top-hat Buck, classic = the earlier v2 bow-tie look")
+    ap.add_argument("--tripo", default="", help="path to the Tripo GLB (else env FIN_BUCK_GLB, else encrypted GitHub asset "
+                                                  "+ env FIN_BUCK_GLB_KEY)")
     a = ap.parse_args(sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else sys.argv[1:])
     if a.cinema and "--res" not in sys.argv: a.res = 1080
     if a.cinema and "--samples" not in sys.argv: a.samples = 64
     os.makedirs(a.out, exist_ok=True)
     P = build(a.res, a.samples)
-    if a.cinema: cinema_upgrade(P, bpy.context.scene, a.look)
+    if a.cinema:
+        cinema_upgrade(P, bpy.context.scene, a.look)
+        if a.style in ("ultimate", "tripo"):
+            if a.style == "tripo": P["tripo_pending"] = True
+            ultimate_upgrade(P, bpy.context.scene)
+            if a.style == "tripo": tripo_upgrade(P, bpy.context.scene, _tripo_glb(a.tripo))
     if a.threads:
         bpy.context.scene.render.threads_mode = "FIXED"; bpy.context.scene.render.threads = a.threads
     clips = [(m, m, FPS, None) for m in MOODS] + [("flip_happy", "happy", ACTS["flip"], "flip"),
