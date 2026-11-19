@@ -1413,15 +1413,17 @@ def draw_vs(fd, v, lt):
 
 # ---------------- v6 CINEMA: camera, parallax, bokeh, light leaks, grading, motion blur ----------------
 def camera_keys(si, dur, corner=False):
-    """Camera keyframes every 1.5-2.0 s: alternating gentle push-in / pull-out with a little drift (seeded, eased)."""
+    """Camera keyframes every 1.2-1.5 s (no static framing longer than 1.5 s): alternating push-in / pull-out with drift,
+    and roughly every third move is a stronger punch-in (seeded, eased)."""
     rng = np.random.default_rng(900 + si)
-    zmax = 1.04 if corner else 1.075
+    zmax = 1.05 if corner else 1.10
     keys = []; t = 0.0; z = 1.0 + rng.uniform(0.02, 0.05); push = rng.random() < 0.5
     while t < dur + 2.0:
         px, py = (rng.uniform(-0.012, 0.0), rng.uniform(-0.008, 0.008)) if corner else (rng.uniform(-0.016, 0.016), rng.uniform(-0.012, 0.012))
         keys.append((t, z, px, py))
-        t += rng.uniform(1.5, 2.0)
-        z = min(zmax, max(1.012, z + (rng.uniform(0.015, 0.035) if push else -rng.uniform(0.015, 0.035))))
+        t += rng.uniform(1.2, 1.5)
+        step = rng.uniform(0.045, 0.065) if (push and rng.random() < 0.35) else rng.uniform(0.018, 0.038)
+        z = min(zmax, max(1.012, z + (step if push else -step)))
         if rng.random() < 0.7: push = not push
     return keys
 

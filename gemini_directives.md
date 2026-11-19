@@ -26,6 +26,14 @@ Canonical working playbook (Uzbek, updated by the production agents several time
 - No music. Synthesized stereo SFX (riser + sub-boom under stats, shimmer on flashes, room tone, reverb, ducking); birds where it fits.
 - Hook in the first 2 s (number or paradox on screen), one question per Short, 25–35 s, loop the last line into the first, a visual change every 1.5–3 s.
 
+## 4b. The 1M+ rules for every Short (added 2026-11-20)
+1. **Lip-sync.** Buck's mouth follows the ElevenLabs speech: the engine picks one of four rendered mouth shapes (closed/idle, half open, wide, rounded "o") per frame from the speech envelope and the word timings (`assets/buck3d_v2_talk.tar`, rendered with `buck3d.py --talk-only`).
+2. **Visual change every 1.2–1.5 s.** Camera key every 1.2–1.5 s with periodic punch-ins (engine), plus at least one event per scene: Buck mood change, stunt (bonk, flip, dodge, monocle drop), crash zoom, shake, sticker, stat/chart/vs reveal. No scene longer than 4 s.
+3. **Stop-scroll hook (0–1.5 s) and hidden loop.** First frame = a big number or a visual paradox plus Buck's sharp reaction; no intro words. The last sentence flows grammatically into the first one; no goodbye, no "subscribe".
+4. **Comment trigger.** One short either/or question (8 words or fewer) right before the loop line, tied to the fact; never politics, religion or financial advice.
+5. **Keywords and nightly analysis.** Titles, first description line and tags use currently rising US finance keywords (vidIQ research every 2 days within the credit budget, web search otherwise). The 23:17 run drops hook styles whose 3-second retention is under 75% and doubles down on the best format; when the metric is not available it says so instead of guessing.
+- Not done yet: full 3D environments and props (coin piles, cash register, safe, depth of field). Planned next; today the background is 2D motion graphics and stock b-roll.
+
 ## 5. Content rules (non-negotiable)
 - No nudity, sexual, indecent or illegal content in any frame, text or topic; no gambling promotion, scams, tax evasion, drugs, piracy; no swearing; family-friendly humor only.
 - Every fact has a named, dated source; forecasts are called forecasts; myths are labeled. No financial advice ("Not financial advice. For education and entertainment." in every description).
