@@ -1,5 +1,5 @@
 # YOUTUBE PLAYBOOK — FINANCIER (moliya, AQSh auditoriyasi)
-Yangilangan: 2026-11-20 01:35 (vazifa A: ElevenLabs kaliti ruxsatlari yetarli emas → render yo'q, spec'lar work/2026-11-20/). Bu hujjatni har bir YouTube agent ishga tushganda o'qiydi va yangilaydi. 200 qatordan oshmasin. Personaj qoidalari: `docs/youtube_character_buck.md`. Vazifa ko'rsatmasi: `docs/producer_task.md`.
+Yangilangan: 2026-11-20 02:05 (vazifa A: 2 ta Buck D Short chiqarildi — ElevenLabs ochiq). Bu hujjatni har bir YouTube agent ishga tushganda o'qiydi va yangilaydi. 200 qatordan oshmasin. Personaj qoidalari: `docs/youtube_character_buck.md`. Vazifa ko'rsatmasi: `docs/producer_task.md`.
 
 ## 0. MAQSAD VA VAKOLAT
 - SHOHJAHON KO'RSATMASI (2026-11-18): kontentni Claude o'zi reja qiladi va o'zi chiqaradi, "ha"sini kutmaydi. Kuniga 2 Shorts + har 3 kunda 1 uzun video. Raqobatchilarni o'rganib eng zo'r bo'lish. Tomoshabin fikrini o'zi yig'adi. PROFESSIONAL MONTAJCHI darajasi.
@@ -103,9 +103,9 @@ Yangilangan: 2026-11-20 01:35 (vazifa A: ElevenLabs kaliti ruxsatlari yetarli em
 - 1 mlrd prognozi: birinchi real prognoz 2026-11-21.
 
 ## 7. MAVZULAR BANKI (yangilari tepada)
-- [SHOSHILINCH — 26-noyabrgacha] Thanksgiving sayohati: AAA prognozi (Fox Weather, 2026-11-17): 24–30-noyabr 81.5 mln amerikalik uydan ≥50 mil uzoqqa (2025 rekordi 81.6 mln dan −0.1%); 72.9 mln mashinada, 5.96 mln samolyotda; ichki aviabilet (borib-kelish) o'rtacha $800, +17% (AAA bron ma'lumoti). G'oya: "$800 to Eat Turkey?" — "vs" 2025 vs 2026. Sarlavha qoralama: "Thanksgiving Flights Just Got 17% Pricier".
+- [chiqdi 2026-11-20] Thanksgiving sayohati: AAA prognozi (Fox Weather, 2026-11-17): 24–30-noyabr 81.5 mln amerikalik uydan ≥50 mil uzoqqa (2025 rekordi 81.6 mln dan −0.1%); 72.9 mln mashinada, 5.96 mln samolyotda; ichki aviabilet (borib-kelish) o'rtacha $800, +17% (AAA bron ma'lumoti). G'oya: "$800 to Eat Turkey?" — "vs" 2025 vs 2026. Sarlavha qoralama: "Thanksgiving Flights Just Got 17% Pricier".
 - [SHOSHILINCH — 1-dekabrgacha] Adobe prognozi (2026-09): AQSh onlayn bayram savdosi 1-noy–31-dek rekord $275.1 mlrd (+6.7%). NRF $1.013 trln bilan juftlash (~27 sent/dollar — hisobni qayta tekshir; ikki xil metodologiya). Cyber Monday raqamini Adobe relizidan tekshir.
-- [TAYYOR — birinchi; SHOSHILINCH — Black Friday 28-noyabrgacha] "$1 Trillion in 61 Days" — NRF prognozi (2026-10-15): 1-noy–31-dek $1.013 trln (+4.2%; 2025 $972 mlrd). Hisob: ≈$16.6 mlrd/kun, $11.5 mln/daqiqa, ≈$192,000/soniya, $5.8 mln/30 s; 1 trln soniya ≈ 31,700 yil ("birinchi marta" dema). Spec: work/t1_61/t1_61_v6.json (b-roll: work/t1_61/cashier_seg.mp4, tags_seg.mp4 → /tmp/fin/broll/; Pexels: Pavel Danilyuk, Ron Lach). Zaxira-ovozli sinov 30.7 s. Sarlavha: "$1 Trillion in 61 Days. How Fast Is That?".
+- [chiqdi 2026-11-20] "$1 Trillion in 61 Days" — NRF prognozi (2026-10-15): 1-noy–31-dek $1.013 trln (+4.2%; 2025 $972 mlrd). Hisob: ≈$16.6 mlrd/kun, $11.5 mln/daqiqa, ≈$192,000/soniya, $5.8 mln/30 s; 1 trln soniya ≈ 31,700 yil ("birinchi marta" dema). Spec: work/t1_61/t1_61_v6.json (b-roll: work/t1_61/cashier_seg.mp4, tags_seg.mp4 → /tmp/fin/broll/; Pexels: Pavel Danilyuk, Ron Lach). Zaxira-ovozli sinov 30.7 s. Sarlavha: "$1 Trillion in 61 Days. How Fast Is That?".
 - [g'oya, tomoshabin] "Why the Counter Froze $200 of YOUR Money" — debit karta authorization hold. Manba: CFPB / Federal Reserve.
 - [g'oya, tomoshabin] "The $400 Question" — Fed SHED (so'nggi yil raqamini tekshir) + Pew 44% + Gallup 55%.
 - [QAYTA YASASH; uzun video] "The Subscription Trap" — 8-bo'lim. Short g'oyalari: Amazon "Iliad" + $2.5B; gym $17/tashrif vs $10; "$86 vs $219" taxmin testi ("vs").
@@ -113,7 +113,6 @@ Yangilangan: 2026-11-20 01:35 (vazifa A: ElevenLabs kaliti ruxsatlari yetarli em
 - [g'oya] 0% balance transfer: fine print (CFPB). Mashina qadrsizlanishi (Edmunds/KBB/iSeeCars). Who invented money / "$" belgisi tarixi ("sepia" + birds). How Costco makes money. Retiree math va 4% rule. Why casinos have no clocks (faqat ogohlantirish).
 
 ## 8. QAYTA YASASH NAVBATI
-- "$1 Trillion in 61 Days" — Buck yagona ovoz bilan qayta yozildi (7-bo'lim), ElevenLabs ochilishi bilan chiqariladi.
 - "The Subscription Trap" (uzun 7:55, 1134 so'z, 54 sahna) — Buck-hikoyachi uslubida qayta yasaladi. Manbalar: C+R Research/CNBC (2022-06-02; $86 vs $219, 42% unutgan, 86% autopay); Self Financial (2026-03, 1,272 kishi: 59.9% ishlatilmagan, $26.79/oy, 70% trialni unutgan); CNET/WFSB (2026-07-16: $111/oy, +23%); DellaVigna & Malmendier AER 2006 (7,752 a'zo, $70+/oy, 4.3 tashrif, $17+ vs $10); FTC dark patterns (2022-09); AP (2025-09-25: Amazon $2.5B, "Iliad"); click-to-cancel 2024-10 → 8-okrug 2025-07 bekor → FTC 2026-03-11 yangi rulemaking. Boblar: Guess · 2022 study · Why it's hard · Gym study · Why companies love it · Unused today · Free trials · Dark patterns & "Iliad" · Click-to-cancel · Your number.
 
 ## 9. CHIQGAN VIDEOLAR
@@ -121,7 +120,9 @@ Yangilangan: 2026-11-20 01:35 (vazifa A: ElevenLabs kaliti ruxsatlari yetarli em
 - 2026-11-19 04:00 Toshkent — "The Penny Cost 4 Cents to Make" (Short, dvigatel v1.1). https://youtube.com/shorts/8iQvkmmtNq8.
 - 2026-11-19 20:00 Toshkent — "Thanksgiving Got Pricier… Except Here" (Short 29.8 s, v4 + 3D Buck, Kokoro hikoyachi). Manba AFBF (2026-11-18). Pexels: Monstera Production. https://www.youtube.com/shorts/V0XNmfOVaZY.
 - 2026-11-20 02:00 Toshkent — "They Raised the Price. Sales Went UP." (Short 33.8 s, v4 + 3D Buck, Kokoro hikoyachi). Manbalar: Anderson & Simester 2003; Thomas & Morwitz 2005; Straight Dope; WWeek 2026-07-26. Pexels: Ron Lach, Pavel Danilyuk. Metricool id 433930931 (01:30 da hali PENDING, 16:00 ET). Keyingi ishda YouTube URL'ini yoz.
-- Eslatma: shu 4 video eski uslubda (hikoyachi + Kokoro) — natijalarni v6 videolari bilan solishtirganda hisobga ol.
+- 2026-11-20 20:00 Toshkent (10:00 ET) — "$1 Trillion in 61 Days. How Fast Is That?" (Short 40.0 s, v6 cinema, BIRINCHI Buck D ElevenLabs videosi, 3D v1). Manba NRF 2026-10-15. Pexels: Pavel Danilyuk, Ron Lach. Metricool id 434764903. Fayl: 2026-11-20_trillion61.mp4.
+- 2026-11-21 02:00 Toshkent (16:00 ET) — "Thanksgiving Flights Just Got 17% Pricier" (Short 34.9 s, v6, Buck D, vs-format). Manba AAA 2026-11. Metricool id 434764979. Fayl: 2026-11-20_turkeyflights.mp4.
+- Eslatma: oldingi 4 video eski uslubda (hikoyachi + Kokoro) — natijalarni v6 videolari bilan solishtirganda hisobga ol.
 
 ## 10. O'RGANILGANLAR JURNALI (14 kundan eskisi xulosaga)
 - 2026-11-18 (xulosa): vidIQ tadqiqoti — "tuzoq", ro'yxat Shorts, pul tarixi breakout beradi; brending, Metricool, GitHub hosting sozlandi; monetizatsiya O'zbekistonda yo'q; Reddit og'rig'i — affordability.
@@ -129,4 +130,5 @@ Yangilangan: 2026-11-20 01:35 (vazifa A: ElevenLabs kaliti ruxsatlari yetarli em
 - 2026-11-19 23:40–2026-11-20 00:25 (chat): Buck qayta dizayni → GIBRID v4 (Tripo tanasi + jonli yuz + naycha qo'l-oyoq; kadr 1.234x). Eski v2 pozalari o'chirildi. Model maxfiy → kutubxona faqat chatda.
 - 2026-11-20 00:25–01:15 (chat): buck3d.py — `--fast`, Tripo faylisiz xato bermaydi (kod Buck'ga o'tadi). 4.3 s smoke test OK. Dvigatel: burchakdagi Buck kadrdan chiqmaydi. ElevenLabs: ikki tekshiruv (00:56, 01:04) — chat/eski vazifa muhitida 403; kalit Default muhitda → vazifa Claude Code'da Default bilan qayta yaratiladi; hujjatlar docs/ ga ko'chirildi.
 - 2026-11-20 01:26 (vazifa, A): ElevenLabs 401 — kalitda voices_read/user_read/models_read ruxsati yo'q → ovoz laboratoriyasi va render bajarilmadi (Kokoro bilan chiqarilmaydi). Spec'lar: work/2026-11-20/ ($1 Trillion; YANGI "Thanksgiving Flights +17%" vs-format, 62 so'z). Shohjahonga xabar yuborildi.
-- Keyingi A: ElevenLabs tekshiruvi → ovoz laboratoriyasi → "$1 Trillion" Shorti. Keyingi B: 2026-11-20 (juft) — RAQOBAT; 2026-11-21 (toq) — MALAKA: Shorts tavsiya tizimi. Dvigatel navbati: lip-sync (v4 shape key og'iz; render faqat chatda).
+- 2026-11-20 01:39–02:05 (vazifa, A): ElevenLabs 200, A/B/C/D ovozlari bor → lab o'tkazib yuborildi. 2 Short render (Buck D, multilingual_v2): ffprobe/volumedetect OK (−18.5 dB, stereo); VS sahnasi boshidagi 1.4 s bo'sh kadr → "at" 0.5 ga surildi, qayta render. Muhitda Anton/ComicRelief shriftlari va /usr/lib PIL buzuq edi → pip pillow + google/fonts dan yuklash (har yangi muhitda tekshir). buck3d_v2.tar hali yo'q → v1. PARALLEL SESSIYA bir vaqtda shu Short'larni yasayotgan edi (eedb0d5, speed 1.15) — dublikat xavfi; work/2026-11-20/README.md ga "QAYTA POST QILMA" belgisi qo'yildi. Center Buck subtitr ostiga biroz kiradi (subtitr ustida, o'qiladi) → dvigatel navbati.
+- Keyingi A (2026-11-21 09:xx): uzun video "The Subscription Trap" (Buck D, 8-bo'lim; hali hech qachon uzun video chiqmagan) + 2 Short. Avval Metricool'da dublikat yo'qligini tekshir. Keyingi B: 2026-11-20 (juft) — RAQOBAT; 2026-11-21 (toq) — MALAKA: Shorts tavsiya tizimi. Dvigatel navbati: lip-sync (v4 shape key og'iz; render faqat chatda).
