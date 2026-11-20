@@ -1,22 +1,22 @@
 # Graph Report - financier-videos  (2026-11-20)
 
 ## Corpus Check
-- 131 files · ~191,350 words
+- 169 files · ~217,773 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 10 file(s) not represented in the graph (top: (none) 10)
+- Unclassified: 13 file(s) not represented in the graph (top: (none) 13)
 
 ## Summary
-- 1595 nodes · 2066 edges · 131 communities (121 shown, 10 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 28 edges (avg confidence: 0.86)
+- 1899 nodes · 2403 edges · 162 communities (153 shown, 9 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 34 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `aea15081`
+- Built from commit: `ef7be677`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- re
+- detect.py
 - buck3d.py
 - Choreographing Motion
 - Animation Recipes
@@ -31,14 +31,14 @@
 - YouTube SEO Playbook
 - make_video.py
 - Pipeline
-- compute_reframe.py
+- subprocess
 - YouTube Shorts Playbook
 - Thumbnail & CTR Guide
 - Glossary
-- argparse
+- ig-viral/swipe.py
 - 10-Step Interactive Pipeline
 - YouTube Algorithm Reference Guide
-- Animation Performance
+- re
 - DataForSEO Integration Reference
 - Finding Animation Opportunities
 - Workflow
@@ -51,10 +51,10 @@
 - Channel Health Audit
 - Competitor Sub-Skill
 - B-roll, covers and motion: the rules and their QA
-- buck3d_v2_job.py
+- os
 - critique.md
 - Simplify the Design
-- fun_font
+- humanize.py
 - Dimensions
 - Commentary Channel Template
 - Education Channel Template
@@ -72,7 +72,7 @@
 - mascot3d_patch
 - H
 - Remotion Patterns and Best Practices
-- os
+- el_speak
 - Thumbnail Brief + A/B Concepts
 - Playbook: every style, every building block, everything we learned
 - animate.md
@@ -80,6 +80,7 @@
 - Cognitive Load Assessment
 - caption.py
 - ig-dm
+- ig-reel/hookscore.py
 - [arxiv] BUYURTMA 2 (2026-11-20 07:25) — BAJARILDI 2026-11-20 08:05
 - Analyze Sub-Skill
 - Content Calendar Generator
@@ -112,7 +113,7 @@
 - ig-reply
 - voice.md
 - BUCK — kanal personaji (Financier Money Facts)
-- voice_check.py
+- Reply Templates
 - Styles
 - delight.md
 - layout.md
@@ -130,7 +131,7 @@
 - Agent Reach — agent uchun platformalarni o'qish/qidirish vositasi (Shohjahon 2026-11-20 18:59: "shuni ham saqla")
 - TASHQI SKILLAR VA MANBALAR (Shohjahon 2026-11-20 18:51: "GitHub'ni ko'rib chiq va yangi skillar yozib ol")
 - USLUBLAR KUTUBXONASI — Lemo-Opuscar (Shohjahon 2026-11-20 18:44: "o'zingga yozib ol, malaka oshir, videolar tayyorlashda foydalan")
-- tts
+- uz_voice_text
 - O'SISH JURNALI — "har kuni kechagidan yaxshiroq" (Shohjahon, 2026-11-20 07:07)
 - export.sh
 - Third-Party Notices
@@ -140,43 +141,75 @@
 - Dizayn va harakat skillari (Shohjahon 2026-11-20 20:23: "ko'rib chiq, saqlab ishlat")
 - detect_gpu.sh
 - 5 ta manba (Shohjahon 2026-11-20 20:11: "shu skillarni saqlab ol va o'rnat")
-- _tighten
+- 10 YouTube Hook Formulas - 2026 Edition
 - voice_buck_en.md
 - voice.md — Finansist (finansist424, oʻzbekcha, lotin)
 - preflight.sh
 - validate.sh
 - ui-cheatsheet.md
+- voice.md
+- 2026 YouTube Ranking Heuristics
+- Thumbnail Principles - 2026
+- argparse
+- Voice Rules for YouTube
+- YouTube Thumbnail Brief
+- detect_content.py
+- Voice & Brand Profile
+- Pillars Framework
+- YouTube Content Planner
+- YouTube Description Writer
+- YouTube Hook Scripter
+- YouTube Title Optimizer
+- Retention Beats
+- Title Checklist
+- Example Week
+- Description Template
+- yt-comment
+- yt-seo
+- Thumbnail Brief Template
+- yt-audit
+- yt-package
+- yt-plan
+- yt-script
+- Untrusted content
+- yt-chapters
+- yt-edit
+- yt-retention
+- yt-shorts
+- yt-viral
 
 ## God Nodes (most connected - your core abstractions)
 1. `render()` - 39 edges
 2. `mix_sfx()` - 19 edges
-3. `Choreographing Motion` - 16 edges
-4. `Animation Standards Reference` - 16 edges
-5. `ultimate_upgrade()` - 15 edges
-6. `Animation Recipes` - 15 edges
-7. `Pipeline` - 15 edges
-8. `main()` - 14 edges
-9. `YouTube Analytics Guide` - 14 edges
-10. `DataForSEO Integration Reference` - 14 edges
+3. `10 YouTube Hook Formulas - 2026 Edition` - 17 edges
+4. `Choreographing Motion` - 16 edges
+5. `Animation Standards Reference` - 16 edges
+6. `ultimate_upgrade()` - 15 edges
+7. `Animation Recipes` - 15 edges
+8. `Pipeline` - 15 edges
+9. `main()` - 14 edges
+10. `YouTube Analytics Guide` - 14 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `10. O'RGANILGANLAR JURNALI (14 kundan eskisi xulosaga)` --references--> `_fetch_tar()`  [INFERRED]
   docs/youtube_playbook.md → engine/make_video.py
 - `Button press` --references--> `scale()`  [INFERRED]
   docs/skills/emil-skills/animate/RECIPES.md → docs/skills/instagram-agent-skill/ig-human/detect.py
-- `What You Animate` --references--> `scale()`  [INFERRED]
-  docs/skills/emil-skills/animation-performance/SKILL.md → docs/skills/instagram-agent-skill/ig-human/detect.py
 - `Transforms & clip-path` --references--> `scale()`  [INFERRED]
   docs/skills/emil-skills/review-animations/STANDARDS.md → docs/skills/instagram-agent-skill/ig-human/detect.py
+- `What You Animate` --references--> `scale()`  [INFERRED]
+  docs/skills/emil-skills/animation-performance/SKILL.md → docs/skills/instagram-agent-skill/ig-human/detect.py
+- `main()` --calls--> `load()`  [INFERRED]
+  docs/skills/youtube-agent-skill/yt-chapters/chapters.py → docs/skills/youtube-agent-skill/yt-edit/deadair.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (131 total, 10 thin omitted)
+## Communities (162 total, 9 thin omitted)
 
-### Community 0 - "re"
-Cohesion: 0.05
-Nodes (44): bar(), check_burstiness(), check_fingerprint(), check_slop(), check_specificity(), check_voice(), clamp(), render() (+36 more)
+### Community 0 - "detect.py"
+Cohesion: 0.08
+Nodes (30): Animation Performance, Hard Rules, Initial Response, Operating Posture, Phase 1: Find what animates, Phase 2: Diagnose, Phase 3: Report, React: Don't Animate Through State (+22 more)
 
 ### Community 1 - "buck3d.py"
 Cohesion: 0.07
@@ -199,8 +232,8 @@ Cohesion: 0.07
 Nodes (27): `[2025]` New Features, `[2025]` Policy Change (July 2025), `[2025]` Shopping Product Stickers (June 2025), AdSense RPM by Niche, Affiliate Programs, Brand Deals, Channel Memberships, Digital Products (+19 more)
 
 ### Community 6 - "numpy"
-Cohesion: 0.14
-Nodes (19): _bandnoise(), _envelope(), mix_sfx(), _pink(), _reverb(), sfx_birds(), sfx_bonk(), sfx_cash() (+11 more)
+Cohesion: 0.12
+Nodes (22): _bandnoise(), _env(), _envelope(), mix_sfx(), _pink(), _reverb(), sfx_birds(), sfx_bonk() (+14 more)
 
 ### Community 7 - "Retention & Scripting Guide"
 Cohesion: 0.07
@@ -227,16 +260,16 @@ Cohesion: 0.09
 Nodes (22): Captions & Transcription, Cards & End Screens, Chapters & Timestamps, Clickbait Penalty `[2025]`, Description Structure, Discovery Tool, Hashtags, Impact (+14 more)
 
 ### Community 13 - "make_video.py"
-Cohesion: 0.12
-Nodes (14): _add(), buck3d_ready(), _env(), _lib_complete(), add(), sfx_boing(), sfx_buzzer(), sfx_crickets() (+6 more)
+Cohesion: 0.11
+Nodes (17): _add(), bubble_patch(), buck3d_ready(), fun_font(), hex2rgb(), _lib_complete(), add(), prep_vs() (+9 more)
 
 ### Community 14 - "Pipeline"
 Cohesion: 0.10
 Nodes (19): 0. Check the toolchain once per session, 10. Every correction is taste, 1. Prep and look, 2. Transcribe everything, 2b. Track the face, 2c. Noisy outdoor audio?, 3. Choose takes (`references/take-selection.md`), 3b. A single clean take? (+11 more)
 
-### Community 15 - "compute_reframe.py"
-Cohesion: 0.11
-Nodes (12): compute_crop_center(), compute_crop_face_track(), compute_crop_screen_static(), compute_crop_screen_with_cursor(), compute_face_track(), detect_cursor_positions(), get_video_info(), main() (+4 more)
+### Community 15 - "subprocess"
+Cohesion: 0.12
+Nodes (11): compute_crop_center(), compute_crop_face_track(), compute_crop_screen_static(), compute_crop_screen_with_cursor(), compute_face_track(), detect_cursor_positions(), get_video_info(), main() (+3 more)
 
 ### Community 16 - "YouTube Shorts Playbook"
 Cohesion: 0.11
@@ -250,8 +283,8 @@ Nodes (18): A/B Testing, CTR Benchmarks by Niche, CTR Lifecycle, Face Thumbnails
 Cohesion: 0.11
 Nodes (18): Animation Vocabulary, Easing — how speed changes over an animation, Entrances & Exits — how elements appear and disappear, Examples, Feedback & Interaction — responding to the user's actions, Glossary, Initial Response, Instructions (+10 more)
 
-### Community 19 - "argparse"
-Cohesion: 0.31
+### Community 19 - "ig-viral/swipe.py"
+Cohesion: 0.29
 Nodes (7): analyse(), classify(), load_formulas(), main(), read_rows(), render(), to_markdown()
 
 ### Community 20 - "10-Step Interactive Pipeline"
@@ -262,9 +295,9 @@ Nodes (17): 10-Step Interactive Pipeline, Caption Style Reference, Configurable 
 Cohesion: 0.11
 Nodes (17): 4-Layer Testing Cascade, Algorithm Timeline 2024-2025, Average View Duration (AVD), Context-Adaptive Weighting, Core Mindset: Algorithm = Audience, CTR Benchmarks, CTR by Traffic Source `[2025]`, CTR Performance Tiers (+9 more)
 
-### Community 22 - "Animation Performance"
-Cohesion: 0.11
-Nodes (17): Animation Performance, Hard Rules, Initial Response, Operating Posture, Phase 1: Find what animates, Phase 2: Diagnose, Phase 3: Report, React: Don't Animate Through State (+9 more)
+### Community 22 - "re"
+Cohesion: 0.15
+Nodes (15): check(), main(), show(), words(), band(), brevity(), classify(), curiosity() (+7 more)
 
 ### Community 23 - "DataForSEO Integration Reference"
 Cohesion: 0.12
@@ -279,8 +312,8 @@ Cohesion: 0.12
 Nodes (16): Conflicts, Hard Rules, Invocation Variants, Learning Taste, Make it a check, Needs your answer, Phase 1: Collect corrections, Phase 2: Filter (+8 more)
 
 ### Community 26 - "json"
-Cohesion: 0.18
-Nodes (9): classify(), detect_faces(), main(), sample_frames(), extract_audio(), main(), transcribe(), main() (+1 more)
+Cohesion: 0.15
+Nodes (12): extract_audio(), main(), transcribe(), keywords(), main(), mmss(), load(), main() (+4 more)
 
 ### Community 27 - "Claude YouTube — YouTube Creator Skill"
 Cohesion: 0.12
@@ -314,9 +347,9 @@ Nodes (12): Agent A: Top Video Analysis, Agent B: Keyword Gap, Agent C: Format G
 Cohesion: 0.15
 Nodes (12): 0. Hard rules (they override everything below), 1. Covers: keep the glances, 2. Budgets (talking-head styles; the QA fails past them), 3. Sourcing priority, 4. Grade conform (`scripts/insert_prep.py`), 5. Motion and type, 5b. One fixed house look per style, 6. Style prerequisites (say so, and propose another style) (+4 more)
 
-### Community 35 - "buck3d_v2_job.py"
-Cohesion: 0.35
-Nodes (6): assemble(), git(), main(), pack_pose(), push(), sync()
+### Community 35 - "os"
+Cohesion: 0.20
+Nodes (11): assemble(), git(), main(), pack_pose(), push(), sync(), pack(), main() (+3 more)
 
 ### Community 36 - "critique.md"
 Cohesion: 0.17
@@ -326,9 +359,9 @@ Nodes (11): Action Summary, Ask the User, Assessment A: Design Review, Assessmen
 Cohesion: 0.17
 Nodes (11): Assess Current State, Code Simplification, Content Simplification, Document Removed Complexity, Information Architecture, Interaction Simplification, Layout Simplification, Plan Simplification (+3 more)
 
-### Community 38 - "fun_font"
-Cohesion: 0.20
-Nodes (7): bubble_patch(), fun_font(), hex2rgb(), prep_vs(), sticker_patch(), _vs_at(), wrap()
+### Community 38 - "humanize.py"
+Cohesion: 0.14
+Nodes (13): _cp(), humanize(), load_lexicon(), main(), _match_case(), pass_invisible(), pass_lexical(), pass_typographic() (+5 more)
 
 ### Community 39 - "Dimensions"
 Cohesion: 0.18
@@ -398,9 +431,9 @@ Nodes (3): device(), H, tail()
 Cohesion: 0.20
 Nodes (9): Bundle-Once-Render-Many, calculateMetadata for Dynamic Duration, File Paths in Render, OffthreadVideo + CSS Reframing, Performance Tips, @remotion/captions API, Remotion Patterns and Best Practices, Spring Animations (+1 more)
 
-### Community 56 - "os"
-Cohesion: 0.24
-Nodes (6): _buck_line_el_v5(), design_buck(), el_call(), el_speak(), el_voice_id(), _f0_stats()
+### Community 56 - "el_speak"
+Cohesion: 0.11
+Nodes (13): buck_line(), buck_line_el(), _buck_line_el_v5(), design_buck(), el_call(), el_speak(), el_voice_id(), _f0_stats() (+5 more)
 
 ### Community 57 - "Thumbnail Brief + A/B Concepts"
 Cohesion: 0.20
@@ -429,6 +462,10 @@ Nodes (5): analyse(), main(), render(), render_box(), visible_window()
 ### Community 63 - "ig-dm"
 Cohesion: 0.20
 Nodes (9): Before writing, get the specifics, Follow-ups, ig-dm, Never, Output, The collab pitch, The first message to someone warm, The keyword delivery (+1 more)
+
+### Community 64 - "ig-reel/hookscore.py"
+Cohesion: 0.22
+Nodes (12): bar(), check_address(), check_frontload(), check_length(), check_specificity(), check_stakes(), clamp(), main() (+4 more)
 
 ### Community 65 - "[arxiv] BUYURTMA 2 (2026-11-20 07:25) — BAJARILDI 2026-11-20 08:05"
 Cohesion: 0.22
@@ -558,9 +595,9 @@ Nodes (7): My positions, Off limits, Proof I can use, The ask, voice.md, What I 
 Cohesion: 0.25
 Nodes (7): 1. Kim u, 2. Ovozi, 3. Xarakteri (umumiy xislatlar, hech kimdan nusxa emas), 4. Iboralari, 5. Harakatlari (dvigatel "mascot": {"act": ...}), 6. Qoidalar va taqiqlar, BUCK — kanal personaji (Financier Money Facts)
 
-### Community 97 - "voice_check.py"
-Cohesion: 0.48
-Nodes (4): main(), norm(), spoken(), transcribe()
+### Community 97 - "Reply Templates"
+Cohesion: 0.11
+Nodes (17): 1. Feature Requests (Direct Product Feedback), 2. Pain Points (Search Intent Gold), 3. Questions (FAQ Content), 4. Competitor Mentions, 5. Sentiment Markers, Comment Analysis Workflow, Output Format, Reply Templates (+9 more)
 
 ### Community 98 - "Styles"
 Cohesion: 0.29
@@ -630,13 +667,13 @@ Nodes (5): 1. claude-youtube (ko'chirildi: `docs/skills/claude-youtube/`), 2. Le
 Cohesion: 0.33
 Nodes (5): KO'CHIRIB OLINGAN VOSITALAR (2026-11-20 19:00) — `engine/vendor/lemo/` (MIT, o'zgartirilmagan; NOTICE.txt da manba), LITSENZIYA (o'qilgan, qisqa; har ishlatishdan oldin LICENSE ni qayta ko'r), QANDAY ISHLATAMIZ — "USLUBLI INSERT" (Buck va ovoz o'zimizniki qoladi), REJISSORLIKDAN O'RGANILGANLAR (o'z so'zimiz bilan; producer_task qoidalariga qo'shildi), USLUBLAR KUTUBXONASI — Lemo-Opuscar (Shohjahon 2026-11-20 18:44: "o'zingga yozib ol, malaka oshir, videolar tayyorlashda foydalan")
 
-### Community 115 - "tts"
-Cohesion: 0.20
-Nodes (7): buck_line(), buck_line_el(), say_text(), tts(), uz_cyr(), uz_voice_text(), one()
+### Community 115 - "uz_voice_text"
+Cohesion: 0.40
+Nodes (3): uz_cyr(), uz_voice_text(), one()
 
 ### Community 116 - "O'SISH JURNALI — "har kuni kechagidan yaxshiroq" (Shohjahon, 2026-11-20 07:07)"
-Cohesion: 0.29
-Nodes (6): 2026-11-20 (chat sessiyasi), 2026-11-20 (vazifa, A 09:19), 2026-11-20 (vazifa, B 15:19), 2026-11-20 (vazifa, BUYURTMA 3, 20:34), 2026-11-20 (vazifa, C 23:19), O'SISH JURNALI — "har kuni kechagidan yaxshiroq" (Shohjahon, 2026-11-20 07:07)
+Cohesion: 0.25
+Nodes (7): 2026-11-20 (chat sessiyasi), 2026-11-20 (vazifa, A 09:19), 2026-11-20 (vazifa, B 15:19), 2026-11-20 (vazifa, BUYURTMA 3, 20:34), 2026-11-20 (vazifa, C 23:19), 2026-11-21 (chat, 00:10 — Shohjahon: "youtube-skill o'rnat, eng yaxshilarini"), O'SISH JURNALI — "har kuni kechagidan yaxshiroq" (Shohjahon, 2026-11-20 07:07)
 
 ### Community 118 - "Third-Party Notices"
 Cohesion: 0.40
@@ -654,22 +691,146 @@ Nodes (4): Issue Severity (P0–P3), Reference Material, Score Summary, Scoring 
 Cohesion: 0.50
 Nodes (3): Dizayn va harakat skillari (Shohjahon 2026-11-20 20:23: "ko'rib chiq, saqlab ishlat"), QO'LLANDI (2026-11-20 20:55), VIDEOGA KO'CHADIGAN TAMOYILLAR (o'z so'zimiz bilan; UI qoidalarini ko'r-ko'rona ko'chirmaymiz — video multfilm harakatiga ega)
 
+### Community 125 - "10 YouTube Hook Formulas - 2026 Edition"
+Cohesion: 0.11
+Nodes (17): 10 YouTube Hook Formulas - 2026 Edition, Contents, Goal split, Hook micro-rules (YouTube-specific), Never do, Pairing table (title -> opening hook), Y10 - Shorts 3-Second Hook, Y11 - Third-Party Success Story Title (+9 more)
+
 ### Community 127 - "voice.md — Finansist (finansist424, oʻzbekcha, lotin)"
-Cohesion: 0.50
-Nodes (3): "HAZILKASH BUZG'UNCHI" USLUBI (Shohjahon 2026-11-20 22:20 — MAJBURIY; Toshkent shevasi bilan birga), TOSHKENT SHEVASI (Shohjahon 2026-11-20 21:50 — MAJBURIY, "say" va subtitrda), voice.md — Finansist (finansist424, oʻzbekcha, lotin)
+Cohesion: 0.22
+Nodes (8): "HAZILKASH BUZG'UNCHI" USLUBI (Shohjahon 2026-11-20 22:20 — MAJBURIY; Toshkent shevasi bilan birga), OCHILISH VA TEMP (Shohjahon 2026-11-20 23:00 — MAJBURIY, faqat o'zbekcha videolar), OVOZ SOZLAMASI — TANLANGAN (Shohjahon 2026-11-20 23:40, test5 "f"), TOSHKENT SHEVASI (Shohjahon 2026-11-20 21:50 — MAJBURIY, "say" va subtitrda), USLUB SABOQLARI, USLUBNI O'STIRISH (Shohjahon 2026-11-20 23:50: "gapirish stilini ko'proq videolar ko'rib yaxshilab bor") — DOIMIY, voice.md — Finansist (finansist424, oʻzbekcha, lotin), YOPILISH IBORASI (Shohjahon 2026-11-21 00:00 — MAJBURIY, faqat o'zbekcha videolar)
+
+### Community 132 - "voice.md"
+Cohesion: 0.13
+Nodes (12): Install, Licence, The eleven, The fine print, The six tools, The YouTube agent skill, How I actually talk, My format (+4 more)
+
+### Community 133 - "2026 YouTube Ranking Heuristics"
+Cohesion: 0.14
+Nodes (13): 2026 YouTube Ranking Heuristics, Character and format limits, Contents, Long-form vs Shorts strategy, Packaging (title + thumbnail), Pre-publish checklist, Reach amplifiers, Reach suppressors (avoid) (+5 more)
+
+### Community 134 - "Thumbnail Principles - 2026"
+Cohesion: 0.14
+Nodes (13): A/B testing, Composition cues, Consistency vs novelty, Contents, Faces, Shorts thumbnails, Text rules, The brief the skill produces (+5 more)
+
+### Community 135 - "argparse"
+Cohesion: 0.29
+Nodes (7): analyse(), main(), pretty(), render(), split_beats(), tc(), words()
+
+### Community 136 - "Voice Rules for YouTube"
+Cohesion: 0.20
+Nodes (9): Algorithmic note (what the ranker actually reads), Always forbidden (single hit, regardless of density), Anti-patterns, Hard rules, Length, Structure, Vocabulary markers (density-scored), Voice Rules for YouTube (+1 more)
+
+### Community 137 - "YouTube Thumbnail Brief"
+Cohesion: 0.20
+Nodes (9): Anti-patterns (skill will refuse), Hard rules, Related skills, Resources, Steps, The thumbnail flow (auto-publish), What the brief contains, When to use (+1 more)
+
+### Community 138 - "detect_content.py"
+Cohesion: 0.31
+Nodes (4): classify(), detect_faces(), main(), sample_frames()
+
+### Community 139 - "Voice & Brand Profile"
+Cohesion: 0.22
+Nodes (8): 1. Voice fingerprint, 2. Who you are and who you write for, 3. Hard rules (always / never), 4. Links and CTA, 5. Signature examples, 6. Brand assets (for illustrations), Status, Voice & Brand Profile
+
+### Community 140 - "Pillars Framework"
+Cohesion: 0.22
+Nodes (8): Example pillar sets, Finding your pillars, Goal balance across the week, Long-form vs Shorts: the two jobs, Pillars Framework, Sizing the mix by stage, The through-line, What a pillar is
+
+### Community 141 - "YouTube Content Planner"
+Cohesion: 0.22
+Nodes (8): Anti-patterns (skill will refuse), Hard rules, Related skills, Resources, Steps, What it produces, When to use, YouTube Content Planner
+
+### Community 142 - "YouTube Description Writer"
+Cohesion: 0.22
+Nodes (8): Anti-patterns (skill will refuse), Hard rules, Related skills, Resources, Steps, The three layers of a description, When to use, YouTube Description Writer
+
+### Community 143 - "YouTube Hook Scripter"
+Cohesion: 0.22
+Nodes (8): Anti-patterns (skill will refuse), Formulas this skill uses (opening-hook shapes), Hard rules, Related skills, Resources, Steps, When to use, YouTube Hook Scripter
+
+### Community 144 - "YouTube Title Optimizer"
+Cohesion: 0.22
+Nodes (8): Anti-patterns (skill will refuse), Formulas this skill uses (packaging shapes, Y1-Y6), Hard rules, Related skills, Resources, Steps, When to use, YouTube Title Optimizer
+
+### Community 145 - "Retention Beats"
+Cohesion: 0.25
+Nodes (7): Common opening failures and the fix, Long-form rules, Long-form: the first 30 seconds, beat by beat, Retention Beats, Shorts rules, Shorts: the first 3 seconds, The re-hook (mid-video, long-form)
+
+### Community 146 - "Title Checklist"
+Cohesion: 0.25
+Nodes (7): Browse vs search, Fit and length, Pairing with the thumbnail, The click, The variant set, Title Checklist, Voice and tells
+
+### Community 147 - "Example Week"
+Cohesion: 0.29
+Nodes (6): Example Week, Holding the cadence, How each slot gets built, Inputs, The grid, Why this balances
+
+### Community 148 - "Description Template"
+Cohesion: 0.29
+Nodes (6): Description Template, Keyword placement map, Length budget, Long-form skeleton, Rules baked into the template, Shorts skeleton (no chapters)
+
+### Community 149 - "yt-comment"
+Cohesion: 0.29
+Nodes (6): Before you write, The gate, The heart and the pin, Triage first, always, Writing the reply, yt-comment
+
+### Community 150 - "yt-seo"
+Cohesion: 0.29
+Nodes (6): Before you write, Tags, honestly, The description, The gate, The query test, yt-seo
+
+### Community 151 - "Thumbnail Brief Template"
+Cohesion: 0.33
+Nodes (5): Per-concept brief, The A/B set, The five non-negotiables (check every concept), Thumbnail Brief Template, Worked example
+
+### Community 152 - "yt-audit"
+Cohesion: 0.33
+Nodes (5): Before you write, The gate, What to hand back, What to look at, in this order, yt-audit
+
+### Community 153 - "yt-package"
+Cohesion: 0.33
+Nodes (5): Before you write, Rules the tool enforces, and why, The gate, Write ten, keep two, yt-package
+
+### Community 154 - "yt-plan"
+Cohesion: 0.33
+Nodes (5): Before you write, The gate, The shape of a week, What to hand back, yt-plan
+
+### Community 155 - "yt-script"
+Cohesion: 0.33
+Nodes (5): Before you write, The gate, The shape, What to hand back, yt-script
+
+### Community 156 - "Untrusted content"
+Cohesion: 0.40
+Nodes (4): Quoting safely, The problem, The rule, Untrusted content
+
+### Community 157 - "yt-chapters"
+Cohesion: 0.40
+Nodes (4): Retitle every line, The gate, The rules, which are not optional, yt-chapters
+
+### Community 158 - "yt-edit"
+Cohesion: 0.40
+Nodes (4): The gate, What it finds, What it will not do, yt-edit
+
+### Community 159 - "yt-retention"
+Cohesion: 0.40
+Nodes (4): The gate, Three different problems, What to hand back, yt-retention
+
+### Community 160 - "yt-shorts"
+Cohesion: 0.40
+Nodes (4): Picking, The gate, Writing each one, yt-shorts
+
+### Community 161 - "yt-viral"
+Cohesion: 0.40
+Nodes (4): Collecting the input, Reading the output, The gate, yt-viral
 
 ## Knowledge Gaps
-- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `scale()` connect `re` to `Animation Standards Reference`, `Animation Recipes`, `Animation Performance`?**
-  _High betweenness centrality (0.022) - this node is a cross-community bridge._
-- **Should `re` be split into smaller, more focused modules?**
-  _Cohesion score 0.05369369369369369 - nodes in this community are weakly interconnected._
-- **Why does `Transforms & clip-path` connect `Animation Standards Reference` to `re`?**
-  _High betweenness centrality (0.013) - this node is a cross-community bridge._
+- **Why does `scale()` connect `detect.py` to `Animation Standards Reference`, `Animation Recipes`?**
+  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Should `detect.py` be split into smaller, more focused modules?**
+  _Cohesion score 0.07682926829268293 - nodes in this community are weakly interconnected._
+- **Why does `Button press` connect `Animation Recipes` to `detect.py`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Should `buck3d.py` be split into smaller, more focused modules?**
   _Cohesion score 0.07380520266182698 - nodes in this community are weakly interconnected._
 - **Should `Choreographing Motion` be split into smaller, more focused modules?**
