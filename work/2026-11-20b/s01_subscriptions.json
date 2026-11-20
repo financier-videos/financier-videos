@@ -1,0 +1,148 @@
+{
+ "format": "short",
+ "sfx": true,
+ "loop": true,
+ "source": "Source: CNET annual subscription survey, July 2026",
+ "scenes": [
+  {
+   "text": "You're paying $1,332 a year... for subscriptions?!",
+   "say": "You're paying one thousand three hundred thirty-two dollars a year... for subscriptions?!",
+   "head": "$1,332 A YEAR?!",
+   "stat": "$1,332",
+   "color": "#FF4D4D",
+   "sfx": [
+    "impact"
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "drop_in",
+    "at": 0.8
+   },
+   "zoom": {
+    "at": 1.6,
+    "amt": 1.12,
+    "hold": 0.6,
+    "on": "stat"
+   }
+  },
+  {
+   "text": "That's CNET's 2026 survey. $111. Every. Month.",
+   "say": "That's CNET's twenty twenty-six survey. A hundred eleven bucks. Every. Month.",
+   "head": "EVERY. MONTH.",
+   "stat": "$111/mo",
+   "show_source": true,
+   "sfx": [
+    "tick"
+   ],
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Up 23% in one year.",
+   "say": "Up twenty-three percent in one year.",
+   "head": "+23% IN ONE YEAR",
+   "chart": {
+    "labels": [
+     "2025",
+     "2026"
+    ],
+    "values": [
+     90,
+     111
+    ],
+    "texts": [
+     "$90",
+     "$111"
+    ],
+    "at": [
+     0.2,
+     1.0
+    ]
+   },
+   "fx": [
+    "arrow_up"
+   ],
+   "sfx": [
+    "slide_up"
+   ]
+  },
+  {
+   "text": "Heh... inflation wishes.",
+   "head": "INFLATION WISHES",
+   "beat": 0.4,
+   "mascot": {
+    "mood": "smug",
+    "pos": "center"
+   },
+   "zoom": {
+    "at": 0.0,
+    "amt": 1.25,
+    "hold": 0.8,
+    "on": "buck"
+   }
+  },
+  {
+   "text": "And $252 of it? Stuff you don't even use.",
+   "say": "And two hundred fifty-two dollars of it? Stuff you don't even use.",
+   "head": "PAID FOR... NEVER USED",
+   "vs": {
+    "left": "$1,332",
+    "left_label": "You pay",
+    "left_sub": "per year",
+    "right": "$252",
+    "right_label": "Never used",
+    "right_sub": "per year",
+    "win": "right",
+    "at": [
+     0.3,
+     1.5
+    ],
+    "vs_at": 0.9,
+    "left_color": "#F5C542",
+    "right_color": "#FF4D4D"
+   }
+  },
+  {
+   "text": "Ow.",
+   "head": "OW.",
+   "mascot": {
+    "mood": "dizzy",
+    "pos": "center",
+    "act": "bonk",
+    "act_at": 0.1
+   },
+   "shake": 0.3,
+   "sfx": [
+    "wahwah@0.5"
+   ]
+  },
+  {
+   "text": "So... keep them all, or cancel one tonight?",
+   "head": "YOUR MOVE",
+   "sticker": "KEEP OR CANCEL?",
+   "sticker_at": 0.6,
+   "mascot": {
+    "mood": "confused",
+    "pos": "center"
+   }
+  },
+  {
+   "text": "Go open your bank app, because right now...",
+   "head": "OPEN YOUR BANK APP",
+   "mascot": {
+    "mood": "point",
+    "pos": "center",
+    "act": "roll_in"
+   }
+  }
+ ],
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
+ }
+}

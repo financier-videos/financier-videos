@@ -1228,6 +1228,25 @@ def _lib_complete(d):
         any(os.path.exists(os.path.join(d, f"{c}_00.{e}")) for e in ("webp", "png")) for c in BUCK3D_CLIPS)
 
 
+def _fetch_tar(url, d, timeout=600):
+    """Unpack a sprite tar into d. Prefers the repo's own assets/<name> (no download); otherwise downloads to a
+    per-process temp name so parallel renders never delete each other's half-downloaded tar (2026-11-20 race)."""
+    name = url.rsplit("/", 1)[-1]
+    local = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", name)
+    try:
+        os.makedirs(d, exist_ok=True)
+        if os.path.isfile(local) and os.path.getsize(local) > 1_000_000:
+            subprocess.run(["tar", "-xf", local, "-C", d], check=True); return
+        tar = os.path.join(d, f".{name}.{os.getpid()}.part")
+        try:
+            subprocess.run(["curl", "-sSfL", "-o", tar, url], timeout=timeout, check=True)
+            subprocess.run(["tar", "-xf", tar, "-C", d], check=True)
+        finally:
+            if os.path.exists(tar): os.remove(tar)
+    except Exception:
+        pass
+
+
 def buck3d_ready():
     """Pick the best COMPLETE sprite library: env FIN_BUCK3D -> v2 (cinema) -> v1 (downloaded from GitHub once)."""
     if _B3["ok"] is None:
@@ -1235,21 +1254,11 @@ def buck3d_ready():
                 [(v, os.path.join(tempfile.gettempdir(), f"fin_buck3d_{v}"), u) for v, u in BUCK3D_LIBS]
         for ver, d, url in cands:
             if not _lib_complete(d) and url:
-                try:
-                    os.makedirs(d, exist_ok=True); tar = os.path.join(d, "lib.tar")
-                    subprocess.run(["curl", "-sSfL", "-o", tar, url], timeout=600, check=True)
-                    subprocess.run(["tar", "-xf", tar, "-C", d], check=True); os.remove(tar)
-                except Exception:
-                    pass
+                _fetch_tar(url, d)
             if _lib_complete(d):
                 _B3.update(dir=d, ver=ver)
                 if ver == "v2" and not os.path.exists(os.path.join(d, "happy_t1_00.webp")):  # optional lip-sync mouth variants
-                    try:
-                        tar = os.path.join(d, "talk.tar")
-                        subprocess.run(["curl", "-sSfL", "-o", tar, _GH + "buck3d_v2_talk.tar"], timeout=900, check=True)
-                        subprocess.run(["tar", "-xf", tar, "-C", d], check=True); os.remove(tar)
-                    except Exception:
-                        pass
+                    _fetch_tar(_GH + "buck3d_v2_talk.tar", d, timeout=900)
                 _B3["talk"] = any(os.path.exists(os.path.join(d, f"happy_t1_00.{e}")) for e in ("webp", "png"))
                 break
         _B3["ok"] = _B3["dir"] is not None

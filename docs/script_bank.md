@@ -1,7 +1,7 @@
 # SSENARIYLAR BANKI (Shohjahon yuborgan, Claude tekshirib moslagan)
 Vazifa: A/B ishlarida avval shu yerdagi [TAYYOR] ssenariylarni ishlat (har biri bir marta; chiqqach [CHIQDI sana] deb belgilab qo'y). Render oldidan raqamlarni manbadan yana bir bor tekshir. Buck — variant D.
 
-## [TAYYOR] S-01 "You Pay $1,332 a Year for Subscriptions" (2026-11-20)
+## [CHIQDI 2026-11-21 19:00 ET] S-01 "You Pay $1,332 a Year for Subscriptions" (2026-11-20)
 Manba: CNET yillik obuna so'rovi, 2026-07 (WFSB 2026-07-16; Scripps News): $111/oy = $1,332/yil, o'tgan yildan +23% ($90/oy edi); ishlatilmaydigan obunalarga $21/oy = $252/yil (o'tgan yili $204).
 Olib tashlandi (manbasiz): "$1,200", "7 clicks to cancel a $9.99 yoga app", "free trials = $200".
 Sahnalar (text = say; ~62 so'z):
