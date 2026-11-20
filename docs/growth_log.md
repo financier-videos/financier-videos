@@ -20,3 +20,8 @@ Har kuni KAMIDA bitta yozuv. Format: sana — O'RGANILDI (manba, sana) → O'ZGA
 8. O'RGANILDI: kanalning birinchi Buck uzun videosi — 16:9 da dvigatel avval sinalmagan edi; sinov render (3 sahna) layout to'g'ri, lekin to'liq renderda sticker sarlavha va Buck shlyapasini yopardi; dvigatel bitta yadroda ishlaydi.
    O'ZGARTIRILDI: engine v6.2 — 16:9 da sticker Buck yonida; sahnaga o'z "show_source" matni; uzun video 3 bo'lakda parallel render (3 xil theme — bitta video ichida ham xilma-xillik); sticker sarlavhani takrorlamaydi (9 ta sarlavha almashtirildi).
    O'LCHOV: 23:17 C da uzun videoning o'rtacha ko'rish % (vosita bersa) va qaysi bobda tushish — keyingi uzun video tuzilmasiga.
+
+## 2026-11-20 (vazifa, B 15:19)
+9. O'RGANILDI: QC jurnalida (BUYURTMA 2) "vs-sahna boshida ~0.5 s bo'sh o'rta" — 1M+ qoidasi 2 ("hech bir kadr 1.5 s o'zgarishsiz / bo'sh o'rta yo'q") buzilardi; raqobatchi etaloni (Humphrey Yang, OutlierKit 2026-09) katta raqamni jismoniy masshtab bilan ko'rsatadi.
+   O'ZGARTIRILDI: engine v6.3 — VS panel tushguncha joyida pulslanuvchi punktir "?" maket (kutish → ochilish; "no_ghost": true o'chiradi). Sinov render: 0.15/0.6/1.6/2.5 s kadrlarda o'rta bo'sh emas, maket panel tushishi bilan yo'qoladi. Playbook 5-bo'lim: "masshtab namoyishi" g'oyasi.
+   O'LCHOV: keyingi vs-li Short (A 21-noy) kadrlarida 0–1 s oraliq bo'sh emasligi; 23:17 C da vs-ochilishli Shortlarning 3 s ushlab qolishi (vosita bersa) boshqa ochilishlar bilan.

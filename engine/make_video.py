@@ -87,6 +87,8 @@ v4.1 SPLIT-SCREEN "VS" (scene field; replaces stat/chart in that scene; don't co
   a red VS badge slams in between (vs_at, default midway), values count up; ~0.9 s after the 2nd panel the winner
   glows and the other side dims. Auto sfx: pop per panel + light impact on the VS badge. Myth vs fact, guess vs reality,
   then vs now, plan A vs plan B. Shorts: layout shifted left of the like/comment buttons.
+  v6.3: a panel whose "at" > 0.25 s shows a pulsing dashed "?" placeholder in its slot until it lands (no empty middle);
+  "no_ghost": true switches that off.
 v4.2 REACTION CRASH-ZOOM (scene field):
   "zoom": {"at": 0.0, "amt": 1.25, "hold": 0.8, "on": "buck|stat|sticker|center|[x, y]"}
                          camera snaps in (0.14 s, slight overshoot) on the reaction, holds, eases back out (0.2 s).
@@ -1404,7 +1406,7 @@ def prep_vs(vs, W, H, S, long):
                       "win": vs.get("win", "right") == side})
     return {"at": at, "cx": cx, "pw": pw, "y0": y0, "y1": y1, "sides": sides, "f_lab": f_lab, "f_sub": f_sub,
             "has_win": vs.get("win", "right") in ("left", "right"), "W": W, "S": S, "fonts": {},
-            "vs_at": float(vs.get("vs_at", (at[0] + at[1]) / 2 + 0.1)), "badge_r": S * (0.055 if long else 0.06)}  # values stay inside 70% of the panel, so the badge never covers them
+            "vs_at": float(vs.get("vs_at", (at[0] + at[1]) / 2 + 0.1)), "no_ghost": bool(vs.get("no_ghost")), "badge_r": S * (0.055 if long else 0.06)}  # values stay inside 70% of the panel, so the badge never covers them
 
 
 def _vs_font(v, path, size):
@@ -1419,7 +1421,20 @@ def draw_vs(fd, v, lt):
     settle = max(v["at"]) + 0.9; rad = int(S * 0.03)
     for sd in v["sides"]:
         p = (lt - sd["at"]) / 0.35
-        if p <= 0: continue
+        if p <= 0:
+            # v6.3: no empty middle before a panel lands — a dashed "?" placeholder pulses in its slot (teases the reveal)
+            if sd["at"] > 0.25 and not v.get("no_ghost"):
+                fin = min(1.0, lt / 0.2) * (1 - max(0.0, min(1.0, (lt - sd["at"] + 0.08) / 0.08)))
+                pul = 0.75 + 0.25 * math.cos(lt * 7 + sd["sgn"]); a = int(150 * fin * pul)
+                x = sd["x"]; dash = S * 0.035; wd = max(3, int(S * 0.005)); col = sd["col"] + (a,)
+                for (xa, ya, xb, yb) in ((x, y0, x + pw, y0), (x, y1, x + pw, y1), (x, y0, x, y1), (x + pw, y0, x + pw, y1)):
+                    L = math.hypot(xb - xa, yb - ya); n = max(1, int(L / (dash * 2)))
+                    for k in range(n):
+                        t0 = k * 2 * dash / L; t1 = min(1.0, (k * 2 + 1) * dash / L)
+                        fd.line([(xa + (xb - xa) * t0, ya + (yb - ya) * t0), (xa + (xb - xa) * t1, ya + (yb - ya) * t1)], fill=col, width=wd)
+                fq = _vs_font(v, ANTON, sd["vsz"] * (0.9 + 0.06 * pul))
+                fd.text((x + pw / 2, (y0 + y1) / 2), "?", font=fq, fill=col, stroke_width=max(2, int(S * 0.004)), stroke_fill=(0, 0, 0, a), anchor="mm")
+            continue
         e = ease_back(p) if p < 1 else 1.0
         x = sd["x"] + (1 - e) * W * 0.6 * sd["sgn"]
         dim = 1.0
