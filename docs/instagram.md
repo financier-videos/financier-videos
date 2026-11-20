@@ -21,6 +21,9 @@ TALAB: YouTube'ga qaysi Short qo'yilsa, Instagram'ga ham qo'yiladi (Reel). Faqat
 - Caption (o'zbekcha): 1-qator savol; fakt; "Manba:" ; "Moliyaviy maslahat emas."; 5–8 hashtag (#pul #moliya #qiziqfaktlar + mavzu).
 - Musiqa qo'shilmaydi. Boshqalarning kontenti qayta yuklanmaydi. Izohlarga javob, obuna bo'lish, layk — avtomatik QILINMAYDI.
 
+## TALAFFUZ SINOVI (2026-11-20 20:55)
+Shohjahon: namunada g' inglizcha g/j kabi, x esa "iks" deb o'qilyapti. eleven_v3 da language_code "uz" yo'q (400). work/uz_test/talaffuz/ da bir gapning 6 varianti: 1 hozirgi lotin; 2 g'→gh, x→h; 3 g'→gh, x→kh; 4 kirill (ғ, х); 5 kirill + language_code ru; 6 ozarbayjoncha harflar (ğ, x, ş) + language_code az. Shohjahon tanlaydi → dvigatelga "say" uchun avtomatik almashtirish qo'shiladi (subtitr lotincha qoladi). Tanlov kelmaguncha o'zbekcha render qilinmaydi.
+
 ## O'ZBEKCHA VERSIYA
 - Ssenariy: inglizcha spec'dan TARJIMA emas, MOSLASHTIRISH — o'zbek tilida tabiiy, qisqa, hazil saqlangan; AQSh tushunchalari (401(k), Costco, TSA) bir jumlada tushuntiriladi yoki o'zbek tomoshabiniga tushunarli taqqoslash bilan. Faktlar va raqamlar O'ZGARMAYDI (manba o'sha), dollar dollarligicha ("so'mga" aylantirma — kurs o'zgaradi). Lotin yozuvi, oʻ/gʻ to'g'ri.
 - Spec: o'sha sahnalar/vizual; "text" — o'zbekcha subtitr; "say" — o'zbekcha, BARCHA raqamlar so'z bilan ("yigirma yetti milliard dollar"); "head"/"stat"/"sticker"/"vs" yozuvlari o'zbekcha; "source" — "Manba: ..."; fayl nomi `<nom>_uz.mp4`; spec `work/<sana>/<nom>_uz.json`.
