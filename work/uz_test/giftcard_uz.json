@@ -7,8 +7,7 @@
  "source": "Manba: Bankrate so'rovi, 2024",
  "scenes": [
   {
-   "text": "Sheppim, eshittizmi?!",
-   "say": "[excited] Sheppim, eshittizmi?!",
+   "text": "Shepim, eshittizmii?!",
    "head": "ESHITTIZMI?!",
    "mascot": {
     "mood": "shocked",
@@ -44,7 +43,7 @@
    }
   },
   {
-   "text": "Shoshmela, oka! Tekin pulni kim ishlatmidi?!",
+   "text": "Shoshmen, oka! Tekin pulni kim ishlatmidi?!",
    "head": "KIM ISHLATMIDI?!",
    "mascot": {
     "mood": "sideeye",
@@ -137,12 +136,10 @@
  "buck_voice": {
   "variant": "UZ",
   "model": "eleven_v3",
+  "script": "lat",
   "settings": {
-   "stability": 0.5,
+   "stability": 0.0,
    "speed": 0.88
   }
- },
- "uz_lex": {
-  "sheppim": "Шеппим"
  }
 }

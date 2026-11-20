@@ -35,9 +35,13 @@ Spec'ga o'tkazish:
   1. "Shepim, eshittizmii?!" — yangilik/kutilmagan fakt (Finansist "shocked" + drop_in + zoom);
   2. "Brat, qaravorin shundo!" — ekranda ko'rsatiladigan narsa: raqam, vs, chart (Finansist "point", ko'rsatish bilan);
   3. "Oka, to'xtab turin!" — afsona/xato tushunchani to'xtatish (Finansist "angry" yoki "sideeye" + dodge/bonk).
-  Ibora mavzuga mos tanlanadi; 1-sahna "say": "[excited] <ibora>", "text" xuddi shu (subtitr). Yangi ibora faqat Shohjahon bersa qo'shiladi. Ishlatilgani playbook 9-bo'limdagi video qatoriga yoziladi. Bu o'zbek profili uchun 1M+ qoidasi 1 ("birinchi so'z — fakt") dan ustun; fakt darhol 2-sahnada.
-- Temp: "biroz tez, shoshib gapiryapti" → "settings": {"stability": 0.5, "speed": 0.88}; butun ssenariy bitta take (one_take).
+  Ibora mavzuga mos tanlanadi; 1-sahna "text": "<ibora>" (teg yo'q — hayajon ijrodan). Yangi ibora faqat Shohjahon bersa qo'shiladi. Ishlatilgani playbook 9-bo'limdagi video qatoriga yoziladi. Bu o'zbek profili uchun 1M+ qoidasi 1 ("birinchi so'z — fakt") dan ustun; fakt darhol 2-sahnada.
+- Temp: "biroz tez, shoshib gapiryapti" → speed 0.88 (pastdagi TANLANGAN sozlama); butun ssenariy bitta take (one_take).
 - Aktyorlik va mimika: "HAZILKASH BUZG'UNCHI" bo'limi to'liq — har sahnada kayfiyat o'zgaradi (shocked → sideeye+dodge → confused → laugh → shocked → proud+zoom qotish → dizzy+bonk → point).
 - Talaffuz lug'ati: "sheppim" → "Шеппим" (spec "uz_lex"; Shohjahon a/b/c sinovidan keyin aniqlanadi).
 
 - 2026-11-20 23:20 Shohjahon tuzatishi: "Shepim, eshittizmii?" (bitta p, oxirgi i cho'ziladi) va "Shoshmen, oka!". Talaffuz sinovi: work/voice_lab/uz/tts_test4/ (kirill / lotin / aralash / tegsiz).
+
+## OVOZ SOZLAMASI — TANLANGAN (Shohjahon 2026-11-20 23:40, test5 "f")
+Spec: "lang": "uz", "buck_voice": {"variant": "UZ", "model": "eleven_v3", "script": "lat", "settings": {"stability": 0.0, "speed": 0.88}}.
+Ya'ni: Finansist 8 ovozi, LOTIN matn o'zgarishsiz (kirillga o'girilmaydi), audio teglar ([excited] va h.k.) YO'Q, erkin ijro (stability 0), butun ssenariy bitta take. Kirill + uz_lex yo'li — zaxira.
