@@ -31,3 +31,8 @@ Har kuni KAMIDA bitta yozuv. Format: sana — O'RGANILDI (manba, sana) → O'ZGA
 10. QO'LLANDI (2026-11-20 20:10): Instagram skill to'plami o'rnatildi; hookscore bizning 5 hookni baholadi: fee_guess 75 (kuchli), giftcard 51, twenty_secrets 48, gate_story 47, costco_case 39 (kuchsiz: 'stakes' past). beats: gate_story hook 4.7 s (3 s dan uzun), 7-jumla 4.7 s. SABOQ: hooklarimiz uzun — birinchi jumla ≤8 so'z. O'LCHOV: ertangi 4 Short hook bali ≥50 va hook ≤3 s; keyin real ko'rishlar bilan solishtiriladi (costco_case past ball oldi — real natijasi bu o'lchov ishonchliligini ko'rsatadi).
 11. QO'LLANDI (2026-11-20 20:25): ffmpeg-skill check.py — rejadagi 8 Short (shorts + reels spetsifikatsiyasi) va uzun video (youtube) tekshirildi: 0 xato; ovoz −14 LUFS atrofida, true peak ≤ −1 dBTP. 5 manba ko'rildi: 4 tasi ko'chirildi (MIT/Apache), OpenMontage (AGPL) — faqat eslatma.
 12. QO'LLANDI (2026-11-20 20:55): dizayn skillari bo'yicha tipografika ko'rigi → "Source:" qatori o'qilmas edi (26 px, kulrang) → dvigatel v6.4 da 32 px, ochroq, konturli, avtomatik sig'adi. Ertangi videolardan boshlab. Eslatma: bu 3 manba veb-dizayn uchun — videoga faqat tamoyillari ko'chadi.
+
+## 2026-11-20 (vazifa, BUYURTMA 3, 20:34)
+13. O'RGANILDI: eleven_v3 /with-timestamps so'z vaqtlarini beradi va voice_settings (speed) ni qabul qiladi, lekin previous_text/next_text ni rad etadi (400 unsupported_model).
+   O'ZGARTIRILDI: engine el_speak — v3 da prev/next yuborilmaydi. O'zbekcha namuna 1-urinishda chiqdi (38.4 s, −14 LUFS).
+   O'LCHOV: Shohjahonning talaffuz bahosi; "ha" bo'lsa finansist424 uchun o'zbekcha Reellar shu yo'l bilan. v3 da kontekst yo'qligi sababli jumlalar orasidagi intonatsiya uzilishi bo'lishi mumkin — baho kelganda tekshiriladi.
