@@ -1,0 +1,8 @@
+Vendored code from Lemo-Opuscar by Lemomo (LemoLab)
+https://github.com/lemomo-ai/lemo-opuscar  (commit f9e2042, copied 2026-11-20, unmodified)
+Licence: MIT (see LICENSE-MIT.txt). Copyright (c) 2026 Lemomo (LemoLab).
+Copied: core/render (headless page renderer, reading-time check, contact sheet, srt, mux/master),
+core/audio/sfx.py (procedural foley + mix helpers), core/tts/asr_check.py (speech-to-text check of voice lines),
+core/three/post.js, core/post/crt.js, core/lib.js.
+NOT copied (different licences or not needed): the Markdown docs and style prompts (CC BY-NC 4.0), demo films and
+their assets, fonts, sample libraries, HDRIs/models, music tools, the image-generation helper.

@@ -28,3 +28,15 @@ To'liq filmni u bilan yasamaymiz (30–60 daqiqa, Buck/ElevenLabs/lab-qimirlash 
 10. Eng ko'p uchraydigan xatolar: qahramon juda kichik yoki chetda; qorong'i/rang rangning ustida; subtitr qahramonni yopadi; hazil juda tez; o'tishda bo'sh kadr.
 11. Topshirishdan oldin: har 1–2 s dan kontakt-varaq, muhim harakatlarni 0.2 s qadam bilan ko'r; ovoz balandligi ~ −14 LUFS (`ffmpeg -af ebur128`); `blackdetect` bilan bo'sh kadr yo'qligi; ovozni matnga qayta o'girib (speech-to-text) har jumla to'g'ri aytilganini tekshir.
 12. Faktli film — FACTS fayli: har da'vo manba URL va iqtibosi bilan (bizda: script_bank).
+
+## KO'CHIRIB OLINGAN VOSITALAR (2026-11-20 19:00) — `engine/vendor/lemo/` (MIT, o'zgartirilmagan; NOTICE.txt da manba)
+| Vosita | Nima uchun | Holat |
+|---|---|---|
+| `tts/asr_check.py` | Buck ovozining har jumlasini matnga qayta o'girib, so'zma-so'z solishtiradi — buzuq ElevenLabs take'larini ushlaydi (bugun 3 ta video shundan qayta render bo'ldi). `pip install faster-whisper`; lines.json = [{id, text, asr?}] + <id>.wav papkasi. Raqamli jumlalarda "asr" maydoniga kutilgan yozuvni ber | SINALMAGAN: birinchi ishga tushishda Whisper modeli Hugging Face'dan yuklanadi (~145 MB) — muhitda host yopiq bo'lsa ishlamaydi; unda eski usul (sahna uzunligi/so'z soni) qoladi |
+| `render/still.mjs`, `video.mjs`, `page.mjs`, `browser.mjs`, `serve.mjs` | brauzerda `window.render(t)` bilan chizilgan sahnani kadrma-kadr mp4 ga aylantiradi — "uslubli insert" shu bilan render qilinadi. `npm i playwright-core three@0.170` + headless Chrome; bulutda WebGL uchun `LEMO_ANGLE=swiftshader` (sekin) | SINALMAGAN |
+| `render/readcheck.mjs` | ekrandagi matn o'qishga yetarli turadimi | faqat insert sahifalari uchun |
+| `render/sheet.py` | kontakt-varaq (kadrlar jadvali) | tayyor |
+| `render/mux.sh` | ikki o'tishli −14 LUFS, true peak ≤ −1 dBTP, yengil plyonka donasi (ffmpeg 7+) | sinab ko'rish kerak; hozirgi videolar allaqachon −14.0 LUFS |
+| `audio/sfx.py` | protsedurali tovushlar (click, whoosh, thump, ding, filtrlar, kompressor) — bizning sfx to'plamini boyitish uchun | B ishida 1–2 yangi tovush qo'shib ko'r |
+| `lib.js`, `three/post.js`, `post/crt.js` | easing/shovqin funksiyalari; three.js post-ishlov (chuqurlik, GTAO, bloom); CRT effekti | insertlar uchun |
+Ko'chirilMAGAN: qo'llanma va uslub promptlari (*.md — CC BY-NC, ochiq repoga qo'yib bo'lmaydi; kerakda ish vaqtida `git clone --depth 1 https://github.com/lemomo-ai/lemo-opuscar /tmp/lemo` va o'sha yerdan o'qi), demo filmlar va aktivlari, shriftlar, musiqa vositalari, tasvir generatori yordamchisi.
