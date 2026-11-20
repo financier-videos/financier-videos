@@ -128,6 +128,34 @@ def say_text(x):
     return x.replace("…", "...").replace("—", ", ")
 
 
+_UZ_APOS = "'\u2019\u2018\u02bb\u02bc`"
+_UZ_MAP = {"a": "а", "b": "б", "d": "д", "e": "е", "f": "ф", "g": "г", "h": "ҳ", "i": "и", "j": "ж", "k": "к", "l": "л",
+           "m": "м", "n": "н", "o": "о", "p": "п", "q": "қ", "r": "р", "s": "с", "t": "т", "u": "у", "v": "в", "x": "х",
+           "y": "й", "z": "з", "c": "с", "w": "в"}
+
+
+def uz_cyr(x):
+    """2026-11-20 (Shohjahon): eleven_v3 reads Uzbek Latin g' like English g and x like "eks"; the Cyrillic spelling
+    (ғ, х) was judged correct. Uzbek Latin -> Cyrillic for the VOICE only (captions stay Latin). Spec "lang": "uz"."""
+    out = []; i = 0; n = len(x)
+    while i < n:
+        c = x[i]; lo = c.lower(); nx = x[i + 1] if i + 1 < n else ""; prev = x[i - 1] if i > 0 else ""
+        if lo in "og" and nx and nx in _UZ_APOS:
+            d = "ў" if lo == "o" else "ғ"; out.append(d.upper() if c.isupper() else d); i += 2; continue
+        if lo in "sc" and nx.lower() == "h":
+            d = "ш" if lo == "s" else "ч"; out.append(d.upper() if c.isupper() else d); i += 2; continue
+        if lo == "y" and nx.lower() in ("o", "u", "a", "e") and not (nx.lower() == "o" and i + 2 < n and x[i + 2] in _UZ_APOS):
+            d = {"o": "ё", "u": "ю", "a": "я", "e": "е"}[nx.lower()]; out.append(d.upper() if c.isupper() else d); i += 2; continue
+        if lo == "e" and not prev.isalpha():
+            out.append("Э" if c.isupper() else "э"); i += 1; continue
+        if c in _UZ_APOS and prev.isalpha() and nx.isalpha():
+            out.append("ъ"); i += 1; continue
+        if lo in _UZ_MAP:
+            d = _UZ_MAP[lo]; out.append(d.upper() if c.isupper() else d); i += 1; continue
+        out.append(c); i += 1
+    return "".join(out)
+
+
 # ---------------- BUCK's voice ----------------
 # v5 PRIMARY: our own ElevenLabs voice (Voice Design from a text prompt; owned by the channel's ElevenLabs account).
 EL_API = "https://api.elevenlabs.io/v1"
@@ -442,8 +470,13 @@ def tts(spec, args, workdir):
         if txt:
             r = None
             if narr == "buck" and bcfg.get("engine", "auto") != "kokoro":
-                r = el_speak(txt, workdir, f"n{i}", bcfg, prev=(lines[i - 1] or None) if i > 0 else None,
-                             nxt=(lines[i + 1] or None) if i + 1 < len(lines) else None)
+                if spec.get("lang") == "uz":  # voice reads Cyrillic (correct g'/x), word times mapped back to Latin
+                    r = el_speak(uz_cyr(txt), workdir, f"n{i}", bcfg)
+                    if r is not None and len(r[1]) == len(txt.split()):
+                        r = (r[0], [(lw, a, b) for lw, (_, a, b) in zip(txt.split(), r[1])])
+                else:
+                    r = el_speak(txt, workdir, f"n{i}", bcfg, prev=(lines[i - 1] or None) if i > 0 else None,
+                                 nxt=(lines[i + 1] or None) if i + 1 < len(lines) else None)
             if r is not None:
                 s, words = r; sr = 24000
             elif narr == "buck":  # emergency fallback: Buck's old Kokoro voice (do not publish such a render)
