@@ -7,6 +7,25 @@
  "source": "Manba: Bankrate so'rovi, 2024",
  "scenes": [
   {
+   "text": "Sheppim, eshittizmi?!",
+   "say": "[excited] Sheppim, eshittizmi?!",
+   "head": "ESHITTIZMI?!",
+   "mascot": {
+    "mood": "shocked",
+    "pos": "center",
+    "act": "drop_in"
+   },
+   "zoom": {
+    "at": 0.6,
+    "amt": 1.25,
+    "hold": 0.6,
+    "on": "buck"
+   },
+   "sfx": [
+    "whoosh"
+   ]
+  },
+  {
    "text": "Sovg'a kartasi tekin pulga o'xshaydi. Lekin ko'pchilikda u umuman ishlatilmidi.",
    "say": "Sovg'a kartasi tekin pulga o'xshaydi. Lekin ko'pchilikda u umuman ishlatilmidi.",
    "head": "TUYG'U VA HAQIQAT",
@@ -30,7 +49,8 @@
    "mascot": {
     "mood": "sideeye",
     "pos": "center",
-    "act": "drop_in"
+    "act": "dodge",
+    "act_at": 1.2
    }
   },
   {
@@ -40,7 +60,7 @@
    "stat": "43%",
    "beat": 0.5,
    "mascot": {
-    "mood": "sideeye",
+    "mood": "confused",
     "pos": "corner"
    }
   },
@@ -56,7 +76,7 @@
     "coin"
    ],
    "mascot": {
-    "mood": "smug",
+    "mood": "laugh",
     "pos": "corner"
    },
    "show_source": true
@@ -81,11 +101,11 @@
    "say": "Man pulman, lekin o'zimni sarflay olmiman. Ula esa sarflay oladi... sarflamidi!",
    "head": "MAN-CHI?",
    "mascot": {
-    "mood": "smug",
+    "mood": "proud",
     "pos": "center"
    },
    "zoom": {
-    "at": 3.2,
+    "at": 2.8,
     "amt": 1.3,
     "hold": -1,
     "on": "buck"
@@ -94,7 +114,7 @@
   {
    "text": "Har besh kishidan biri kartasini muddatini o'tkazib yuborgan. Uf.",
    "head": "5 TADAN 1 TASI KUYGAN",
-   "beat": 0.5,
+   "beat": 0.6,
    "mascot": {
     "mood": "dizzy",
     "pos": "center",
@@ -119,7 +139,10 @@
   "model": "eleven_v3",
   "settings": {
    "stability": 0.5,
-   "speed": 1.0
+   "speed": 0.88
   }
+ },
+ "uz_lex": {
+  "sheppim": "Шеппим"
  }
 }

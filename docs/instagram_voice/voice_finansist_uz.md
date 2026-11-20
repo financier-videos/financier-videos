@@ -29,3 +29,9 @@ Spec'ga o'tkazish:
 | Qosh va bosh | "mood": "sideeye"; zarbada "shocked" (monokl) |
 | Kameraga qarab qotish | hazil oxirida "zoom": {"on":"buck","amt":1.3,"hold":-1}; keyingi sahnada "beat": 0.5 |
 | Ovoz | o'zbekcha: "Finansist 8 (Tashkent)" (spec "buck_voice": {"variant":"UZ","model":"eleven_v3"}), "lang": "uz"; eleven_v3 audio teglari "say" da: [sarcastic], [whispers], [laughs] (bitta so'zli teg; subtitrga chiqmaydi). Inglizcha: Buck D. |
+
+## OCHILISH VA TEMP (Shohjahon 2026-11-20 23:00 — MAJBURIY, faqat o'zbekcha videolar)
+- HAR o'zbekcha video "Sheppim, eshittizmi?!" bilan, HAYAJON bilan boshlanadi (1-sahna: "say" "[excited] Sheppim, eshittizmi?!", Finansist center "shocked" + drop_in + zoom). Bu o'zbek profili uchun 1M+ qoidasi 1 ("birinchi so'z — fakt") dan ustun; fakt darhol 2-sahnada.
+- Temp: "biroz tez, shoshib gapiryapti" → "settings": {"stability": 0.5, "speed": 0.88}; butun ssenariy bitta take (one_take).
+- Aktyorlik va mimika: "HAZILKASH BUZG'UNCHI" bo'limi to'liq — har sahnada kayfiyat o'zgaradi (shocked → sideeye+dodge → confused → laugh → shocked → proud+zoom qotish → dizzy+bonk → point).
+- Talaffuz lug'ati: "sheppim" → "Шеппим" (spec "uz_lex"; Shohjahon a/b/c sinovidan keyin aniqlanadi).
