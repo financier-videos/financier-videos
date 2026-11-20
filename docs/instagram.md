@@ -40,3 +40,4 @@ Shohjahon: namunada g' inglizcha g/j kabi, x esa "iks" deb o'qilyapti. eleven_v3
 - 1-tur (adabiy, 1–6): 1, 2, 4 yaxshiroq. 2-tur (Toshkent shevasi + kinoyali anti-qahramon arxetipi, 7–12): 7, 8, 9 yaxshiroq.
 - Shohjahon: Toshkentda "oka" (aka emas), "brat", "shefim"; man/san/ula/biza/sila → voice_finansist_uz.md TOSHKENT SHEVASI.
 - 7, 8, 9 akkauntga "Finansist N (Tashkent)" nomi bilan saqlandi (voice_id lar work/voice_lab/uz/previews.json da). Shevadagi matn eleven_v3 TTS bilan lotin va kirillda: work/voice_lab/uz/tts_test/. Shohjahon bittasini tanlaydi → qolgan 2 tasini o'chirish uning ruxsati bilan.
+- 2026-11-20 22:10 Shohjahon bahosi: 7 cyr — "oka" zo'r; 7 lat — qolgan so'zlar yaxshiroq; 8 cyr — ko'p so'zlar yaxshiroq, "shoshmela" biroz noto'g'ri; 9 lat — yaxshiroq; 9 cyr — "sila" yomon. Asos sifatida 8 + kirill tanlandi, xato so'zlar uchun talaffuz lug'ati (so'z bo'yicha: lotin / chiziqcha / urg'u belgisi) sinovi: work/voice_lab/uz/tts_test2/.
