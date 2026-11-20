@@ -22,6 +22,15 @@ SHOHJAHON KO'RSATMALARI: kontentni o'zing reja qil va o'zing chiqar, "ha"sini ku
 6. KALIT SO'ZLAR: sarlavha, tavsifning 1-qatori va teglar uchun AQSh moliya nishasida hozir o'sayotgan so'zlar. vidIQ krediti cheklangan (oyiga 150): keyword_research har 2 kunda 1 marta (5 kredit) — natijani playbook 6-bo'limiga "KALIT SO'ZLAR (sana)" qilib yoz va 2 kun ishlat; boshqa kunlari WebSearch (bepul). Sarlavha aldamasin.
 7. 23:17 TAHLIL: har video uchun mavjud ko'rsatkichlarni yoz (ko'rish, o'rtacha ko'rish %, "stayed to watch" / 3 soniyalik ushlab qolish — vosita bersa). 3 s ushlab qolish 75% dan past bo'lgan hook uslubini playbook "TO'XTAT" ga, eng yuqorisini "IKKI BARAVAR OSHIR" ga yoz; ertangi 4 Shortning kamida 2 tasi eng yaxshi uslubda. Ko'rsatkich hali yo'q bo'lsa — "ma'lumot yo'q" deb yoz, taxmin qilma.
 
+## XILMA-XILLIK QOIDASI (Shohjahon 2026-11-20 07:11: "videolar bir-biriga o'xshash va zerikarli bo'lmasin; har video alohida emotsiya, har safar yangi narsa") — MAJBURIY
+Har Short uchun spec yozishdan oldin playbook 9-bo'limdagi oxirgi 4 videoni ko'r va quyidagi 5 o'qdan KAMIDA 4 tasida ulardan farq qil; tanlovni 9-bo'limga yoz (format / emotsiya / theme / ochilish / hazil):
+1. FORMAT (ketma-ket ikki video bir xil bo'lmasin): (a) yashirin mexanizm — "nega shunday ishlaydi"; (b) afsona vs haqiqat — "MYTH?" sticker, keyin ag'darish; (c) sanoq — 3 ta fakt, uchinchisi eng kutilmagan; (d) vaqt mashinasi — "then vs now", sepia "look"; (e) Buck tajribasi — Buck o'zi sinab ko'radi va boshiga tushadi (bonk/dizzy); (f) taxmin o'yini — tomoshabin taxmin qiladi, "beat", javob; (g) bitta raqam hikoyasi — bitta stat atrofida 3 burilish; (h) detektiv — "kim foyda ko'radi?".
+2. ASOSIY EMOTSIYA (har videoda bitta, Buck kayfiyatlari shunga mos): hayrat / kulgi / "adolatsizlik" g'azabi (yengil) / qiziquvchanlik-sir / g'urur-yutuq / achinish-voy. Kunning 4 videosi kamida 3 xil emotsiyada.
+3. KO'RINISH: spec "theme" — vault, mint, ember, royal, ocean, noir (dvigatel v6.1). Ketma-ket ikki videoda bir xil theme YO'Q; mavzuga mosla (pul yo'qotish — ember, tejash — mint, sir — noir, sayohat — ocean, boylik — royal).
+4. OCHILISH (1-sahna): katta raqam / vs-panel / Buck center yaqin plan + savol / sticker-zarba / b-roll + raqam. Oxirgi 2 videodagi ochilishni takrorlama.
+5. TUZILMA VA HAZIL: sahna soni 6–10 oralig'ida o'zgarsin; Buck tryuki, luqmasi va "Wait...", "Heh..." kabi iboralar oldingi 2 videodagidan boshqa; savol sahnasi har doim oxiridan oldingi bo'lishi SHART EMAS (ba'zan o'rtada); "vs" va "chart" navbatlashsin; har videoda kamida bitta OLDIN ISHLATILMAGAN narsa (yangi effekt kombinatsiyasi, yangi Buck harakati, yangi sfx, sepia sahna, chart "at" bilan uchlik va h.k.).
+Bir xil skelet (raqam → "Wait?!" → manba → vs → savol → loop) ketma-ket ikki martadan ko'p ishlatilmaydi.
+
 ## 0) BOSHLASH
 - `TZ=Asia/Tashkent date '+%F %H:%M %u'`. Repozitoriy ildizida ishla (branch `media`; `git pull --rebase origin media`).
 - O'qi: `docs/youtube_playbook.md` (to'liq; 0.5-bo'lim cheklisti) va `docs/youtube_character_buck.md`.

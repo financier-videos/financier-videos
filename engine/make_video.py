@@ -39,6 +39,7 @@ v6 CINEMA QUALITY (default ON; spec "cinema": false = old look, e.g. for quick t
 spec.json:
 {
   "format": "short" | "long",          # short = 1080x1920, long = 1920x1080
+  "theme": "vault|mint|ember|royal|ocean|noir",   # v6.1 background look (palette + pattern); omit = picked from the first line. Never the same theme for two videos in a row.
   "voice": "am_michael", "speed": 1.05,
   "scenes": [
     {"text": "spoken line", "head": "ON-SCREEN HEADLINE", "color": "#F5C542",
@@ -841,17 +842,52 @@ def caption_chunks_timed(text, words):
     return out
 
 
-def make_bg(W, H, seed):
-    """Static branded background layer (dark gradient + faint grid). Motion is added per frame."""
+THEMES = {  # v6.1: per-video look so videos don't all share one background. Spec "theme": name | "auto" (default: from the first line).
+    "vault": ([((9, 14, 28), (19, 30, 54)), ((12, 10, 30), (32, 20, 58)), ((6, 20, 24), (14, 42, 48))], "grid"),
+    "mint":  ([((5, 24, 18), (10, 52, 38)), ((8, 30, 30), (16, 58, 44)), ((4, 18, 22), (12, 44, 30))], "stripes"),
+    "ember": ([((30, 10, 12), (62, 22, 18)), ((26, 12, 22), (58, 26, 14)), ((20, 8, 16), (50, 18, 26))], "glow"),
+    "royal": ([((16, 8, 36), (44, 18, 78)), ((10, 10, 40), (30, 26, 86)), ((22, 8, 30), (56, 16, 66))], "dots"),
+    "ocean": ([((4, 18, 34), (8, 46, 72)), ((6, 24, 40), (10, 58, 70)), ((4, 14, 30), (14, 40, 82))], "waves"),
+    "noir":  ([((10, 10, 12), (30, 30, 34)), ((14, 12, 10), (38, 34, 28)), ((8, 10, 14), (26, 30, 38))], "rings"),
+}
+
+
+def pick_theme(spec):
+    t = spec.get("theme")
+    if t in THEMES: return t
+    key = (spec.get("scenes") or [{}])[0].get("text", "") + spec.get("source", "")
+    return sorted(THEMES)[sum(ord(c) for c in key) % len(THEMES)]
+
+
+def make_bg(W, H, seed, theme="vault"):
+    """Static branded background layer (dark gradient + faint pattern, per theme). Motion is added per frame."""
     im = Image.new("RGB", (W, H)); d = ImageDraw.Draw(im)
-    palettes = [((9, 14, 28), (19, 30, 54)), ((12, 10, 30), (32, 20, 58)), ((6, 20, 24), (14, 42, 48))]
+    palettes, pat = THEMES.get(theme, THEMES["vault"])
     c1, c2 = palettes[seed % len(palettes)]
     for y in range(H):
         f = y / (H - 1); d.line([(0, y), (W, y)], fill=tuple(int(c1[i] + (c2[i] - c1[i]) * f) for i in range(3)))
     ov = Image.new("RGBA", (W, H), (0, 0, 0, 0)); o = ImageDraw.Draw(ov)
-    step = 90
-    for x in range(0, W, step): o.line([(x, 0), (x, H)], fill=(255, 255, 255, 11))
-    for y in range(0, H, step): o.line([(0, y), (W, y)], fill=(255, 255, 255, 11))
+    step = 90; A = (255, 255, 255, 11)
+    if pat == "grid":
+        for x in range(0, W, step): o.line([(x, 0), (x, H)], fill=A)
+        for y in range(0, H, step): o.line([(0, y), (W, y)], fill=A)
+    elif pat == "stripes":
+        for x in range(-H, W, 70): o.line([(x, H), (x + H, 0)], fill=(255, 255, 255, 9), width=3)
+    elif pat == "dots":
+        for yi, y in enumerate(range(30, H, 64)):
+            for x in range(30 + (32 if yi % 2 else 0), W, 64): o.ellipse([x - 3, y - 3, x + 3, y + 3], fill=(255, 255, 255, 16))
+    elif pat == "waves":
+        for y0 in range(60, H, 110):
+            o.line([(x, y0 + 22 * math.sin(x / 95.0 + y0 * 0.013)) for x in range(0, W + 20, 20)], fill=(255, 255, 255, 13), width=3)
+    elif pat == "rings":
+        cx, cy = W * (0.2 + 0.3 * (seed % 3)), H * 0.38
+        for r in range(120, int(max(W, H) * 1.2), 120): o.ellipse([cx - r, cy - r, cx + r, cy + r], outline=(255, 255, 255, 12), width=2)
+    elif pat == "glow":
+        g = Image.new("L", (W // 8, H // 8), 0); gd = ImageDraw.Draw(g)
+        cx, cy = (W // 8) * (0.3 + 0.2 * (seed % 3)), (H // 8) * 0.35; r = max(W, H) // 8 * 0.36
+        gd.ellipse([cx - r, cy - r, cx + r, cy + r], fill=44)
+        g = g.filter(ImageFilter.GaussianBlur(r * 0.5)).resize((W, H), Image.BILINEAR)
+        ov = Image.merge("RGBA", (Image.new("L", (W, H), 255), Image.new("L", (W, H), 170), Image.new("L", (W, H), 110), g))
     return Image.alpha_composite(im.convert("RGBA"), ov)
 
 
@@ -1597,7 +1633,7 @@ def render(spec, wav, total, out, workdir):
         n = max(1, f1 - f0)
         clip, csz = (broll_frames(sc["broll"], W, H, n, sc.get("broll_start", 0)) if sc.get("broll") and os.path.exists(sc["broll"]) else (None, None))
         if not clip:
-            if si % 3 not in bgs: bgs[si % 3] = make_bg(W, H, si % 3)
+            if si % 3 not in bgs: bgs[si % 3] = make_bg(W, H, si % 3, pick_theme(spec))
             base_static = bgs[si % 3]
         col = hex2rgb(sc.get("color", "#F5C542"))
         trans = sc.get("transition") or ("punch" if sc.get("stat") else trans_cycle[si % 3])
