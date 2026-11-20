@@ -156,10 +156,27 @@ def uz_cyr(x):
     return "".join(out)
 
 
+# Uzbek pronunciation lexicon for the VOICE (lower-case Latin word -> what TTS reads, inserted as-is, not transliterated).
+# Built from Shohjahon's listening tests (2026-11-20, voice "Finansist 8"): a Latin word inside Cyrillic text fixed
+# "shoshmela". Spec "uz_lex": {...} adds/overrides entries. Keep each value ONE word (caption timing maps word by word).
+UZ_LEX = {"shoshmela": "Shoshmela", "shoshmang": "Shoshmang"}
+
+
+def uz_voice_text(x, lex=None):
+    """Latin Uzbek line -> voice text: lexicon words as given, everything else uz_cyr()."""
+    lx = dict(UZ_LEX, **{k.lower(): v for k, v in (lex or {}).items()})
+    def one(m):
+        w = m.group(0); key = w.lower()
+        return (lx[key][0].upper() + lx[key][1:] if w[0].isupper() else lx[key]) if key in lx else uz_cyr(w)
+    # v3 audio tags ("[sarcastic]", "[whispers]", one word each) pass through untouched
+    return "".join(part if part.startswith("[") else re.sub(r"[A-Za-z" + _UZ_APOS + r"]+", one, part)
+                   for part in re.split(r"(\[[^\]]*\])", x))
+
+
 # ---------------- BUCK's voice ----------------
 # v5 PRIMARY: our own ElevenLabs voice (Voice Design from a text prompt; owned by the channel's ElevenLabs account).
 EL_API = "https://api.elevenlabs.io/v1"
-BUCK_VARIANTS = {"A": "Buck A (Trickster)", "B": "Buck B (Adventurer)", "C": "Buck C (Con-Artist)", "D": "Buck D (Wisecracker)"}  # voice lab 2026-11-19
+BUCK_VARIANTS = {"A": "Buck A (Trickster)", "B": "Buck B (Adventurer)", "C": "Buck C (Con-Artist)", "D": "Buck D (Wisecracker)", "UZ": "Finansist 8 (Tashkent)"}  # UZ: Uzbek profile voice (Shohjahon 2026-11-20)  # voice lab 2026-11-19
 BUCK_VARIANT = os.environ.get("FIN_BUCK_VARIANT", "A")  # A until Shohjahon picks (then set here)
 BUCK_EL = {"name": BUCK_VARIANTS.get(BUCK_VARIANT, BUCK_VARIANTS["A"]), "voice_id": "",  # or env FIN_BUCK_VOICE_ID
            "fallback_names": ["Buck A (Trickster)", "Buck (Financier)"],
@@ -471,9 +488,11 @@ def tts(spec, args, workdir):
             r = None
             if narr == "buck" and bcfg.get("engine", "auto") != "kokoro":
                 if spec.get("lang") == "uz":  # voice reads Cyrillic (correct g'/x), word times mapped back to Latin
-                    r = el_speak(uz_cyr(txt), workdir, f"n{i}", bcfg)
-                    if r is not None and len(r[1]) == len(txt.split()):
-                        r = (r[0], [(lw, a, b) for lw, (_, a, b) in zip(txt.split(), r[1])])
+                    r = el_speak(uz_voice_text(txt, spec.get("uz_lex")), workdir, f"n{i}", bcfg)
+                    if r is not None:  # drop v3 audio tags from the word list, then map back to the Latin words
+                        sw = [w for w in r[1] if "[" not in w[0] and "]" not in w[0]]
+                        lw_ = [w for w in txt.split() if "[" not in w and "]" not in w]
+                        r = (r[0], [(l, a, b) for l, (_, a, b) in zip(lw_, sw)] if len(sw) == len(lw_) else sw)
                 else:
                     r = el_speak(txt, workdir, f"n{i}", bcfg, prev=(lines[i - 1] or None) if i > 0 else None,
                                  nxt=(lines[i + 1] or None) if i + 1 < len(lines) else None)
