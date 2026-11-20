@@ -90,5 +90,13 @@ vidiq_user_channels → 6-bo'lim jadvali. WebSearch: AQSh tomoshabinlari pul haq
 ## 1.6) INSTAGRAM (Shohjahon 2026-11-20 19:42) — `docs/instagram.md` ni o'qi va aynan bajar
 Har A va B ishida, YouTube postlaridan keyin: (1) vidiq_social_account_list (platform INSTAGRAM). Ulangan va canPublish true akkaunt yo'q bo'lsa — hech narsa qilma, 1 qator yoz. (2) financier424 ulangan bo'lsa — shu ishda yasalgan, mezondan o'tgan inglizcha Shortlarni Reel qilib chiqar. (3) finansist424: avval o'zbekcha namuna va Shohjahonning "ha" si (instagram.md "BIRINCHI QADAM"); "ha" `docs/instagram.md` HOLAT bo'limida yozilgan bo'lsagina o'zbekcha versiyalarni yasab chiqar. Yozuv: playbook 9-bo'limdagi video qatoriga "IG: <permalink>".
 
+## 1.7) UCH KANALNI O'ZING YURIT VA RIVOJLANTIR (Shohjahon 2026-11-20 20:23: "o'zing yurgiz va rivojlantir; senda YouTube kanal va 2 ta Instagram bor")
+Sen uch kanalning egasidek ishlaysan: YouTube @FINANCIER4241, Instagram financier424 (EN), Instagram finansist424 (UZ). Shohjahondan faqat: pul to'lash, yangi akkaunt/ulanish (login, OAuth), o'zbekcha talaffuzni bir marta tasdiqlash.
+- HAR KUNI: YouTube 4 Short (+ uzun video jadvali); o'sha Shortlar Instagram'ga (ulangan profilga); C ishida uch kanal raqamlari bitta jadvalga (playbook 6-bo'lim): ko'rish, obunachi/follower, eng yaxshi va eng yomon video, sabab taxmini.
+- HAR DUSHANBA (B): haftalik o'sish rejasi `docs/weekly_plan.md` — o'tgan hafta natijasi (raqam), 3 ta "davom ettiramiz", 3 ta "to'xtatamiz", shu hafta sinaladigan 2 gipoteza (o'lchovi bilan), kontent taqvimi (ig-plan, calendar.md). Yakshanba: kanal auditi (audit.md, ig-audit, ig-profile).
+- INSTAGRAM STATISTIKASI: vidiq_instagram_owner_insights (ulangan akkaunt) — C ishida; ishlamasa yoz.
+- QILINMAYDI (akkauntni bloklash xavfi va qoidalar): avtomatik follow/unfollow, layk, begona postlarga izoh, DM, obunachi/ko'rish sotib olish, boshqalar kontentini qayta yuklash, izohlarga avtomatik javob (faqat qoralama — Shohjahonga), aldamchi sarlavha.
+- Shohjahonga xabar: har kuni C ishida ≤5 qator (3 kanal raqami + ertangi reja + undan kerak narsa bo'lsa); muammo bo'lsa darhol.
+
 ## 2) HAR REJIM OXIRIDA
 `docs/youtube_playbook.md` ni yangila ("Yangilangan" sanasi, jurnalga 1–3 qator, 14 kundan eskisini xulosaga; ≤200 qator), `git pull --rebase origin media`, commit, `git push origin HEAD:media`. Oxirgi javobda "Ochiq qolganlar" (faqat bo'lsa).
