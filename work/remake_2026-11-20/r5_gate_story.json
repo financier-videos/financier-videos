@@ -1,0 +1,106 @@
+{
+ "format": "short",
+ "sfx": true,
+ "loop": true,
+ "theme": "ocean",
+ "source": "Source: U.S. Dept. of Transportation, \"Bumping & Oversales\"",
+ "scenes": [
+  {
+   "text": "You're at the gate. Ticket in hand. And they say: sorry, no seat.",
+   "head": "SORRY, NO SEAT",
+   "mascot": {
+    "mood": "shocked",
+    "pos": "center",
+    "act": "dodge"
+   },
+   "sfx": [
+    "scratch@3.0"
+   ]
+  },
+  {
+   "text": "What?! You PAID for that seat!",
+   "head": "I PAID FOR THAT!",
+   "mascot": {
+    "mood": "confused",
+    "pos": "center"
+   },
+   "zoom": {
+    "at": 0.0,
+    "amt": 1.25,
+    "hold": 0.7,
+    "on": "buck"
+   }
+  },
+  {
+   "text": "Here's the thing. Airlines may sell more tickets than seats. The Department of Transportation says it's legal.",
+   "head": "MORE TICKETS THAN SEATS",
+   "vs": {
+    "left": "180",
+    "left_label": "Seats",
+    "right": "185",
+    "right_label": "Tickets sold",
+    "win": "right",
+    "at": [
+     1.4,
+     2.4
+    ],
+    "vs_at": 1.9,
+    "right_color": "#FF4D4D"
+   },
+   "show_source": true
+  },
+  {
+   "text": "They're betting somebody won't show up.",
+   "head": "IT'S A BET",
+   "sticker": "NO-SHOW BET"
+  },
+  {
+   "text": "When everybody does... first, they ask for volunteers.",
+   "head": "STEP ONE: VOLUNTEERS",
+   "mascot": {
+    "mood": "thumbsup",
+    "pos": "center"
+   }
+  },
+  {
+   "text": "Bumped anyway? You can be owed up to four times your one-way fare.",
+   "head": "BUMPED ANYWAY?",
+   "stat": "4x FARE",
+   "mascot": {
+    "mood": "proud",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "The cap: $2,150.",
+   "say": "The cap: twenty-one hundred fifty dollars.",
+   "head": "THE CAP",
+   "stat": "$2,150",
+   "fx": [
+    "coin_rain"
+   ],
+   "sfx": [
+    "cash"
+   ],
+   "mascot": {
+    "mood": "happy",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "So... cash, or seat? Decide now, because one day...",
+   "head": "CASH OR SEAT?",
+   "mascot": {
+    "mood": "smug",
+    "pos": "center",
+    "act": "flip"
+   }
+  }
+ ],
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
+ }
+}

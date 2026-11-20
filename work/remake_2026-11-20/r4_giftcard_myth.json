@@ -1,0 +1,104 @@
+{
+ "format": "short",
+ "sfx": true,
+ "loop": true,
+ "theme": "mint",
+ "source": "Source: Bankrate gift card survey, 2024",
+ "scenes": [
+  {
+   "text": "A gift card feels like free money. For a lot of people, it's money they never spend.",
+   "head": "FEELS VS REALITY",
+   "vs": {
+    "left": "FREE $",
+    "left_label": "How it feels",
+    "right": "$0",
+    "right_label": "Never spent",
+    "win": "right",
+    "at": [
+     0.2,
+     2.6
+    ],
+    "vs_at": 1.4,
+    "right_color": "#FF4D4D"
+   }
+  },
+  {
+   "text": "Hold on. Who doesn't spend FREE money?",
+   "head": "WHO DOES THAT?!",
+   "beat": 0.3,
+   "mascot": {
+    "mood": "confused",
+    "pos": "center",
+    "act": "drop_in"
+   }
+  },
+  {
+   "text": "A 2024 Bankrate survey: 43% of American adults are sitting on at least one.",
+   "say": "A twenty twenty-four Bankrate survey: forty-three percent of American adults are sitting on at least one.",
+   "head": "ALMOST HALF OF US",
+   "stat": "43%",
+   "show_source": true,
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Average pile? $244.",
+   "say": "Average pile? Two hundred forty-four dollars.",
+   "head": "PER PERSON",
+   "stat": "$244",
+   "fx": [
+    "coin_rain"
+   ],
+   "sfx": [
+    "coin"
+   ],
+   "mascot": {
+    "mood": "happy",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Add it all up... about $27 billion. In drawers!",
+   "say": "Add it all up... about twenty-seven billion dollars. In drawers!",
+   "head": "IN JUNK DRAWERS",
+   "stat": "$27B",
+   "shake": 0.3,
+   "sfx": [
+    "impact"
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "And one in five has let a card expire. Ouch.",
+   "head": "1 IN 5 EXPIRED",
+   "mascot": {
+    "mood": "dizzy",
+    "pos": "center",
+    "act": "bonk",
+    "act_at": 1.6
+   },
+   "sfx": [
+    "wahwah@2.2"
+   ]
+  },
+  {
+   "text": "How much is hiding in yours? Go look, because...",
+   "head": "HOW MUCH IS IN YOURS?",
+   "mascot": {
+    "mood": "point",
+    "pos": "center"
+   }
+  }
+ ],
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
+ }
+}

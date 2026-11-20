@@ -1,32 +1,33 @@
-# BUYURTMA 2026-11-20 tun — HOLAT: BAJARILDI 2026-11-20 07:45 (Toshkent)
-Shohjahon (2026-11-20 03:42 Toshkent): "eng zo'r ssenariylardan videolar 2–3 soat ichida tayyor bo'lsin, grafika va sifat eng zo'r bo'lsin". Bu buyurtma soatga qaramay BIRINCHI bajariladi. Vaqt byudjeti: boshlanganidan 2 soat 15 daqiqa; undan keyin yangi render boshlama, tugatib yoz.
-Chegaralar: `docs/producer_task.md` dagi QAT'IY CHEGARALAR to'liq amal qiladi.
+# BUYURTMA 2 (2026-11-20 07:25) — HOLAT: OCHIQ
+Shohjahon (07:15 va 07:22 Toshkent): "videolarni boshqattan yasa"; "bugun qo'yiladigan videolarni ham ko'rib chiq, eng zo'ri qilib tayyorlab joylashtir; grafika, video va ovoz eng yaxshi holatda bo'lsin". Sabab: tungi 5 video bir xil fonda va bir xil skeletda chiqqan. Bu buyurtma soatga qaramay BIRINCHI bajariladi. `docs/producer_task.md` QAT'IY CHEGARALARI va XILMA-XILLIK QOIDASI amal qiladi.
 
-## 1. Tayyorgarlik
-- ElevenLabs tekshiruvi (producer_task 0-bo'lim). 200 bo'lmasa — hech narsa chiqarma, pastga sababini yoz va to'xta.
-- 04:25 YANGILANDI: lab qimirlashi kutubxonasi repoda BOR va tozalangan (GPU renderida 300 kadr qora, teksturasiz tana bilan chiqqan edi — olib tashlandi; 240 yaxshi kadr: confused, happy, laugh, shocked, smug, sideeye). Kutish shart emas. Qolgan kayfiyatlarda (point, proud, thumbsup, dizzy, sad, angry) og'iz qimirlamaydi — bu normal. SIFAT NAZORATIDA qo'shimcha: hech bir kadrda Buck QORA SILUET bo'lmasin (bo'lsa `rm -rf /tmp/fin_buck3d_v2` qilib qayta render).
-- Lab qimirlashi: `assets/buck3d_v2_talk.tar` repoda bormi? Yo'q bo'lsa har 5 daqiqada `git pull --rebase origin media` bilan ko'pi bilan 20 daqiqa kut (shu vaqtda 2-banddagi tekshiruvni qil). Baribir yo'q bo'lsa — usiz davom et va pastga yoz. Kutubxonani O'ZING render QILMA.
-- Costco: WebSearch bilan rotisserie tovuq narxi hozir ham $4.99 ekanini tekshir. O'zgargan bo'lsa n2 ni tashlab, o'rniga script_bank S-01 ni yasab chiqar.
+## 1. Render (spec'lar tayyor, chat sessiyasida zaxira ovoz bilan sinovdan o'tgan: `work/remake_2026-11-20/`)
+Tartib — chiqish vaqti bo'yicha (eng yaqin slot birinchi):
+| # | Spec | Yangi fayl | Sarlavha (≤50) | Format / theme | Almashtiriladigan Metricool posti (slot ET) |
+|---|---|---|---|---|---|
+| 1 | r6_trillion61.json | 2026-11-20_trillion61_v2.mp4 | (o'zgarmaydi) | raqam hikoyasi / royal | 434764903 (11-20 10:00) |
+| 2 | r1_fee_guess.json | 2026-11-20_fee_guess.mp4 | Guess What a 1% Fee Costs You | taxmin o'yini / ember | 435015671 (11-20 13:00) |
+| 3 | r7_turkeyflights.json | 2026-11-20_turkeyflights_v2.mp4 | (o'zgarmaydi) | vs / ocean | 434764979 (11-20 16:00) |
+| 4 | r2_costco_case.json | 2026-11-20_costco_case.mp4 | The $4.99 Chicken Mystery | detektiv / noir | 435015740 (11-20 19:00) |
+| 5 | r3_twenty_secrets.json | 2026-11-21_twenty_secrets.mp4 | 3 Secrets Hiding on a $20 Bill | sanoq / royal | 435023630 (11-21 10:00) |
+| 6 | r4_giftcard_myth.json | 2026-11-21_giftcard_myth.mp4 | Gift Cards Feel Like Free Money | afsona vs haqiqat / mint | 435023666 (11-21 13:00) |
+| 7 | r5_gate_story.json | 2026-11-21_gate_story.mp4 | Sorry, No Seat. Is That Legal? | "sen shu yerdasan" hikoyasi / ocean | 435023719 (11-21 16:00) |
+- r6 b-roll: `mkdir -p /tmp/fin/broll && cp work/t1_61/*_seg.mp4 /tmp/fin/broll/`.
+- 5-qator (royal) 1-qator bilan bir xil theme — ular ketma-ket emas, lekin xohlasang r3 ni "noir"/"vault" ga almashtirma: r2 noir. Qoldir.
+- Fakt va raqamlarni o'zgartirma (manbalar `docs/script_bank.md`). Texnik tuzatish mumkin (vaqtlar, sfx, speed).
+- SIFAT NAZORATI har videoga (producer_task A-h) + QO'SHIMCHA: (a) har 2 s dan kadr ol — qora siluet Buck yo'q, sticker/Buck/stat bir-birini yopmaydi, subtitr manba qatoriga tegmaydi (tegsa o'sha sahnada "show_source" ni qo'shni sahnaga ko'chir); (b) OVOZ: har jumlani tekshir — "timings" dagi sahna uzunligi so'z soniga mos kelmasa (≈0.33 s/so'z dan 40% ko'p) bu buzuq TTS take: keshdan o'chirib qayta render; mean −20..−12 dB, max ≤ −1 dB, 2 kanal; (c) ≤40 s (oshsa speed 1.15); (d) "buck_voice" faqat elevenlabs, "cinema": true, "buck3d": "v2". O'tmagan video CHIQARILMAYDI — eski post o'z holicha qoladi.
 
-## 2. Render navbati (spec'lar tayyor va sinovdan o'tgan: `work/night_2026-11-20/`)
-1. n1_fee64k.json — "A 1% Fee Can Cost You $64,000" (bank S-10)
-2. n2_costco.json — "Costco's $4.99 Chicken Is Bait" (S-09)
-3. n3_copier.json — "Why Copiers Refuse to Copy Money" (S-08)
-4. n4_giftcards.json — "$27 Billion Is Hiding in Junk Drawers" (S-05)
-5. n5_overbooking.json — "Airlines Sell Your Seat Twice. Legally." (S-06)
-6. (vaqt qolsa) `work/2026-11-20/short1_trillion61_rendered.json` va `short2_turkey_flights_rendered.json` ni YANGI Buck (v2, bo'lsa lab qimirlashi) bilan qayta render qilib, AYNAN O'SHA fayl nomlari bilan (2026-11-20_trillion61.mp4, 2026-11-20_turkeyflights.mp4) almashtir. Ularni QAYTA POST QILMA — Metricool postlari allaqachon bor.
-Spec matnidagi fakt va raqamlarni o'zgartirma (manbalari `docs/script_bank.md` da). Faqat texnik tuzatish mumkin: sahna vaqtlari ("at", "act_at", "sticker_at"), b-roll (har videoga ≤1 find_broll, odobli, ≤4 s sahna; shart emas), sfx.
-Har biri: `python3 -I engine/make_video.py <spec> 2026-11-20_<nom>.mp4 --model .. --voices ..` → SIFAT NAZORATI (producer_task A-h): "buck_voice" faqat elevenlabs, "cinema": true, "buck3d": "v2"; 8 kadrni ko'r (matn sig'adi, Buck stat/subtitrni yopmaydi, sticker Buck ustiga tushmagan); ≤40 s (oshsa "speed" 1.15, yana oshsa eng kuchsiz bitta jumlani qisqartir — faktni emas); 2 kanal; mean −20..−12 dB. Muammo bo'lsa 1 marta tuzatib qayta render. Sifatdan o'tmagan videoni CHIQARMA.
+## 2. Joylash — YANGI POST EMAS, mavjud postni yangilash
+Har video uchun: push (raw URL 200) → Metricool updateScheduledPost bilan o'sha post id sida media ni yangi raw URL ga, sarlavha/tavsifni yangisiga almashtir (vaqt o'zgarmaydi) → getScheduledPosts bilan media haqiqatan yangilanganini tekshir. updateScheduledPost ishlamasa yoki media yangilanmasa: YANGI post yaratma (bitta slotda ikki video bo'lib qoladi) — eski post qoladi, NATIJA ga "almashtirilmadi" deb yoz va Shohjahonga xabarda ayt (u Metricool'da o'zi almashtiradi yoki eski postni o'chiradi).
+Tavsif: 1-qator izoh savoli (r1 "Did you guess it?", r2 "What did YOU leave with last time?", r3 "Which one did you already know?", r4 "How much is hiding in yours?", r5 "Cash or seat?"), keyin "Sources:" to'liq nom+sana, "Not financial advice. For education and entertainment.", "Buck is our original character.", 3 hashtag.
 
-## 3. Hosting va post
-Push (producer_task A-i), raw URL 200. Avval Metricool getScheduledPosts bilan band slotlarni ko'r (trillion61 → 2026-11-20 10:00 ET, turkeyflights → 16:00 ET). Yangi videolarni BO'SH slotlarga tartib bilan qo'y: 2026-11-20 13:00 ET, 19:00 ET; 2026-11-21 10:00, 13:00, 16:00 ET (bitta slotga bitta video). Post parametrlari — producer_task A-j. Sarlavha ≤50 belgi (yuqoridagi nomlar), tavsif 1-qatori — izoh savoli (script_bank), "Sources:" to'liq nom va sana bilan, n1 uchun "Illustration from the U.S. Department of Labor ($25,000, 35 years, 7% a year)."
-
-## 4. Yakun
-- Playbook 9-bo'lim va `docs/script_bank.md` (ishlatilganlar [CHIQDI]) ni yangila.
-- Shu fayl boshidagi HOLAT ni "BAJARILDI <vaqt>" qil va pastga natijani yoz: har video — fayl, uzunlik, slot, Metricool id, lab qimirlashi bor/yo'q; chiqmaganlari — sababi.
-- Shohjahonga xabar (≤6 qator, o'zbekcha): nechta video tayyor, qaysi vaqtda chiqadi, muammo bo'lsa nima.
+## 3. Yakun
+Eski 2026-11-20_{fee64k,costco,copier,giftcards,overbooking,trillion61,turkeyflights}.mp4 fayllarini Metricool yangilangani tasdiqlangandan KEYIN o'chir. Playbook 9-bo'lim (format/emotsiya/theme/ochilish bilan), script_bank, growth_log (1 yozuv: yangi videolar eskisidan nimasi bilan farq qiladi) ni yangila. Shu fayl HOLAT ni "BAJARILDI <vaqt>" qil, NATIJA ni to'ldir. Shohjahonga ≤6 qator xabar.
 
 ## NATIJA
+(sessiya to'ldiradi)
+
+## 1-BUYURTMA NATIJASI (arxiv, 2026-11-20 tun)
 Sessiya 2026-11-20 06:40–07:45 Toshkent. ElevenLabs 200 (Buck D). Lip-sync kutubxonasi repoda bor edi (assets/buck3d_v2_talk.tar) — barcha videolarda ishlatildi; "buck3d": "v2", "cinema": true; qora siluet yo'q; mean −18.1..−18.7 dB, stereo. Costco narxi WebSearch: 2026 manbalarida $4.99 — n2 qoldi.
 - n1 2026-11-20_fee64k.mp4 — 29.0 s — 2026-11-20 13:00 ET — Metricool 435015671 — lip-sync bor.
 - n2 2026-11-20_costco.mp4 — 34.6 s — 2026-11-20 19:00 ET — Metricool 435015740 — lip-sync bor.

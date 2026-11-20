@@ -1,0 +1,130 @@
+{
+ "format": "short",
+ "sfx": true,
+ "loop": true,
+ "theme": "ember",
+ "source": "Source: U.S. Dept. of Labor, \"A Look at 401(k) Plan Fees\"",
+ "scenes": [
+  {
+   "text": "Quick! Guess what one extra percent in fees can cost you over 35 years.",
+   "say": "Quick! Guess what one extra percent in fees can cost you over thirty-five years.",
+   "head": "GUESS THE NUMBER",
+   "mascot": {
+    "mood": "smug",
+    "pos": "center",
+    "act": "roll_in"
+   },
+   "zoom": {
+    "at": 1.2,
+    "amt": 1.2,
+    "hold": 0.8,
+    "on": "buck"
+   }
+  },
+  {
+   "text": "$5,000? $20,000?",
+   "say": "Five thousand dollars? Twenty thousand?",
+   "head": "$5,000? $20,000?",
+   "vs": {
+    "left": "$5,000",
+    "left_label": "Guess A",
+    "right": "$20,000",
+    "right_label": "Guess B",
+    "win": null,
+    "at": [
+     0.1,
+     1.1
+    ],
+    "vs_at": 0.7
+   }
+  },
+  {
+   "text": "Heh... not even close.",
+   "head": "NOT EVEN CLOSE",
+   "beat": 0.5,
+   "mascot": {
+    "mood": "laugh",
+    "pos": "center"
+   },
+   "sfx": [
+    "buzzer@0.1"
+   ]
+  },
+  {
+   "text": "The U.S. Department of Labor ran it: $25,000 in a 401(k), 35 years, 7% a year.",
+   "say": "The U.S. Department of Labor ran it: twenty-five thousand dollars in a four-oh-one-k, thirty-five years, seven percent a year.",
+   "head": "THE OFFICIAL EXAMPLE",
+   "stat": "$25,000",
+   "show_source": true,
+   "sfx": [
+    "tick"
+   ],
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Half a percent in fees leaves $227,000. One and a half leaves $163,000.",
+   "say": "Half a percent in fees leaves two hundred twenty-seven thousand. One and a half leaves one hundred sixty-three thousand.",
+   "head": "SAME MONEY. DIFFERENT FEE.",
+   "chart": {
+    "labels": [
+     "0.5% fee",
+     "1.5% fee"
+    ],
+    "values": [
+     227,
+     163
+    ],
+    "texts": [
+     "$227K",
+     "$163K"
+    ],
+    "at": [
+     0.6,
+     3.4
+    ]
+   }
+  },
+  {
+   "text": "That's $64,000. Gone.",
+   "say": "That's sixty-four thousand dollars. Gone.",
+   "head": "THE ANSWER",
+   "stat": "$64,000",
+   "color": "#FF4D4D",
+   "shake": 0.35,
+   "sfx": [
+    "impact"
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "For one little percent. Ow.",
+   "head": "ONE. LITTLE. PERCENT.",
+   "mascot": {
+    "mood": "dizzy",
+    "pos": "center",
+    "act": "bonk",
+    "act_at": 0.9
+   }
+  },
+  {
+   "text": "Did you guess it? Because if not, then...",
+   "head": "DID YOU GUESS IT?",
+   "mascot": {
+    "mood": "happy",
+    "pos": "center"
+   }
+  }
+ ],
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
+ }
+}

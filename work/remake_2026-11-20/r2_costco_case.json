@@ -1,0 +1,110 @@
+{
+ "format": "short",
+ "sfx": true,
+ "loop": true,
+ "theme": "noir",
+ "source": "Sources: Costco CFO, 2015 earnings call (Seattle Times); WSJ 2018",
+ "scenes": [
+  {
+   "text": "Case file: a chicken that hasn't changed its price since 2009.",
+   "say": "Case file: a chicken that hasn't changed its price since two thousand nine.",
+   "head": "CASE FILE: $4.99",
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "center",
+    "act": "drop_in"
+   },
+   "sfx": [
+    "drumroll"
+   ]
+  },
+  {
+   "text": "Suspect: Costco. Price then: $4.99. Price now: $4.99.",
+   "say": "Suspect: Costco. Price then: four ninety-nine. Price now: four ninety-nine.",
+   "head": "THE SUSPECT",
+   "vs": {
+    "left": "$4.99",
+    "left_label": "2009",
+    "right": "$4.99",
+    "right_label": "Today",
+    "win": null,
+    "at": [
+     1.2,
+     2.8
+    ],
+    "vs_at": 2.0
+   }
+  },
+  {
+   "text": "Clue one. In 2015, their finance chief said they'd eat $30 to $40 million a year to hold it.",
+   "say": "Clue one. In twenty fifteen, their finance chief said they'd eat thirty to forty million dollars a year to hold it.",
+   "head": "CLUE #1",
+   "stat": "$40M",
+   "color": "#FF4D4D",
+   "show_source": true,
+   "mascot": {
+    "mood": "confused",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Clue two. The chickens sit all the way at the back of the store.",
+   "head": "CLUE #2",
+   "sticker": "WAY IN THE BACK",
+   "sfx": [
+    "ding@0.2"
+   ]
+  },
+  {
+   "text": "So you walk past everything else first. Wait a second...",
+   "head": "WAIT A SECOND...",
+   "mascot": {
+    "mood": "confused",
+    "pos": "center"
+   },
+   "zoom": {
+    "at": 2.6,
+    "amt": 1.28,
+    "hold": -1,
+    "on": "buck"
+   }
+  },
+  {
+   "text": "The chicken isn't the product. It's the bait!",
+   "head": "CASE CLOSED",
+   "stat": "BAIT",
+   "color": "#FF4D4D",
+   "shake": 0.35,
+   "sfx": [
+    "impact"
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "So... what did YOU leave with last time?",
+   "head": "WHAT DID YOU LEAVE WITH?",
+   "mascot": {
+    "mood": "smug",
+    "pos": "center"
+   }
+  },
+  {
+   "text": "Stay sharp, because here's another...",
+   "head": "NEXT CASE",
+   "mascot": {
+    "mood": "proud",
+    "pos": "center",
+    "act": "flip"
+   }
+  }
+ ],
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
+ }
+}
