@@ -10,7 +10,7 @@ Caption: oʻsha ohang — avval savol, bitta fakt, "Manba:", "Moliyaviy maslahat
 
 ## TOSHKENT SHEVASI (Shohjahon 2026-11-20 21:50 — MAJBURIY, "say" va subtitrda)
 Finansist sof Toshkent shevasida gapiradi, kinoyali, tomoshabinga toʻgʻridan gapiradigan anti-qahramon hazilkash uslubida (mavjud personaj nomi/aktyor ovozi ishlatilmaydi).
-- Murojaat: "aka" EMAS → "oka"; "brat", "shefim" — Toshkent jargoni, ishlatiladi (meʼyorida, videoga 1–3 ta).
+- Murojaat: "aka" EMAS → "oka"; "brat", "SHEPIIIM" (shefim EMAS: "p" bilan, "i" cho'zib aytiladi; TTS matnida "shepiiim") — Toshkent jargoni, ishlatiladi (meʼyorida, videoga 1–3 ta).
 - Olmoshlar: men → MAN, sen → SAN, ular → ULA, bizlar → BIZA, sizlar → SILA. Fe'l qoʻshimchalari ham shunga mos: "ishlatasila", "bilasila".
 - Ogʻzaki shakllar: "shoshmela" (shoshmanglar), "qarela" (qaranglar), "ishlatmidi" (ishlatmaydi), "qoʻshsa", "bor ekan-da".
 - So'kinish, haqorat — baribir YOʻQ. Ovoz: Finansist (Voice Design, 2-tur 7/8/9 nomzodlaridan biri).
