@@ -23,7 +23,7 @@ Mimika (Buck/Finansist): yuz o'rniga ko'z va tana — "sideeye" (bir qosh), bosh
 Spec'ga o'tkazish:
 | Element | Spec |
 |---|---|
-| Tomoshabinga murojaat | "Shoshmela, sila ham shunaqa qilasila-ku" |
+| Tomoshabinga murojaat | "Shoshmen, sila ham shunaqa qilasila-ku" |
 | O'zini masxara | tanga ekanidan: "Man pulman, lekin o'zimni sarflay olmiman" |
 | Pauza va zarba | "beat": 0.5–0.6 raqam oldidan, keyin "stat" ekranga uriladi; "say" da "...". |
 | Qosh va bosh | "mood": "sideeye"; zarbada "shocked" (monokl) |
