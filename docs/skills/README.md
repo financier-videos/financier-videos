@@ -23,3 +23,11 @@ SINALADIGAN GIPOTEZALAR (bir-biriga zid manbalar bor — o'zimiz o'lchaymiz):
 | manojbajaj95/claude-gtm-plugin (youtube-video-hook), mohitagw15856/pm-claude-skills (youtube-script-writer) | hook va ssenariy skillari (MIT deb ko'rsatilgan) | claude-youtube bilan takrorlanadi; kerak bo'lsa solishtir |
 Har yangi manba uchun tartib: (1) LICENSE o'qi — tijoratga ruxsat va ochiq repoga qo'yish mumkinligi; (2) skript/kodni ishga tushirmasdan o'qi; (3) faqat kerakli qismini manba+commit+litsenziya bilan ko'chir; (4) shu jadvalga yoz.
 - Ko'chirilmadi: `execution/` (YouTube API/OAuth skriptlari — kalit bilan ishlaydi; bizda post Metricool orqali) va boshqa kod fayllari. Faqat matnli qo'llanmalar olindi.
+
+## KUNLIK JURNAL (har kuni 3–4 ta; tartib — producer_task "HAR KUNI 3–4 YANGI SKILL")
+| Sana | Skill | Manba / litsenziya | Qayerda | Holat |
+|---|---|---|---|---|
+| 2026-11-20 | Uslubli insert + 12 rejissorlik saboqi | Lemo-Opuscar (docs CC BY-NC — faqat o'z so'zimiz) | docs/style_library.md | SINALMAGAN (birinchi sinov 11-21 A) |
+| 2026-11-20 | Ovozni matnga qayta tekshirish (ASR), −14 LUFS master, kontakt-varaq, protsedurali sfx | Lemo-Opuscar kodi, MIT | engine/vendor/lemo/ | SINALMAGAN |
+| 2026-11-20 | YouTube ko'nikmalari to'plami (hook, shorts, script, metadata, thumbnail, analyze...) | claude-youtube, MIT | docs/skills/claude-youtube/ | o'qiladi; raqamlari — gipoteza |
+| 2026-11-20 | Fon ko'rinishlari (6 theme) + xilma-xillik matritsasi | o'zimiz | engine v6.1, producer_task | ISHLADI (7 Short) |
