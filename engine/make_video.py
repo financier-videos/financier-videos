@@ -39,6 +39,7 @@ v6 CINEMA QUALITY (default ON; spec "cinema": false = old look, e.g. for quick t
 spec.json:
 {
   "format": "short" | "long",          # short = 1080x1920, long = 1920x1080
+  "bg": "clip.mp4" | ["a.mp4", "b.jpg", ...],   # v6.6: real blurred BACKDROP behind non-b-roll scenes (list = rotates per scene; scene "bg" overrides, false = plain); "bg_mix": 0.62, "bg_blur": 6. Fetch: engine/pixabay_bg.py
   "theme": "vault|mint|ember|royal|ocean|noir",   # v6.1 background look (palette + pattern); omit = picked from the first line. Never the same theme for two videos in a row.
   "voice": "am_michael", "speed": 1.05,
   "scenes": [
@@ -979,6 +980,21 @@ def broll_frames(path, W, H, n, start=0.0):
     return [raw[i:i + fs] for i in range(0, len(raw) - fs + 1, fs)], (BW, BH)
 
 
+def backdrop_frames(path, W, H, n, start=0.0, blur=6):
+    """v6.6 cinematic BACKDROP (Shohjahon 2026-11-21: "oddiy fon emas, har xil yaxshi fonlar"): a real clip or photo
+    behind the graphics of non-b-roll scenes — decoded small, blurred (shallow depth of field), slow drift.
+    Returns small RGB frames; the caller upscales, tints toward the theme and darkens so text/Buck stay readable."""
+    bw, bh = int(W * 0.30) // 2 * 2, int(H * 0.30) // 2 * 2
+    img = path.lower().endswith((".jpg", ".jpeg", ".png", ".webp"))
+    pre = ["-loop", "1"] if img else ["-stream_loop", "-1", "-ss", f"{start}"]
+    vf = (f"scale={int(bw * 1.12) // 2 * 2}:{int(bh * 1.12) // 2 * 2}:force_original_aspect_ratio=increase,"
+          f"crop={int(bw * 1.12) // 2 * 2}:{int(bh * 1.12) // 2 * 2},gblur=sigma={blur},fps={FPS}")
+    cmd = ["ffmpeg", "-loglevel", "error"] + pre + ["-i", path, "-vf", vf, "-frames:v", str(n), "-f", "rawvideo", "-pix_fmt", "rgb24", "-"]
+    raw = subprocess.run(cmd, capture_output=True).stdout
+    BW, BH = int(bw * 1.12) // 2 * 2, int(bh * 1.12) // 2 * 2; fs = BW * BH * 3
+    return [raw[i:i + fs] for i in range(0, len(raw) - fs + 1, fs)], (BW, BH)
+
+
 def ease_out(x):
     x = max(0.0, min(1.0, x)); return 1 - (1 - x) ** 3
 
@@ -1733,9 +1749,15 @@ def render(spec, wav, total, out, workdir):
         f0 = int(round(sc["start"] * FPS)); f1 = min(nframes, int(round((sc["start"] + sc["dur"]) * FPS)))
         n = max(1, f1 - f0)
         clip, csz = (broll_frames(sc["broll"], W, H, n, sc.get("broll_start", 0)) if sc.get("broll") and os.path.exists(sc["broll"]) else (None, None))
+        bdclip = None
         if not clip:
             if si % 3 not in bgs: bgs[si % 3] = make_bg(W, H, si % 3, pick_theme(spec))
             base_static = bgs[si % 3]
+            _bd = sc.get("bg", spec.get("bg"))  # v6.6: str or list of clips/photos; scene "bg": false = plain theme
+            if isinstance(_bd, list) and _bd: _bd = _bd[si % len(_bd)]
+            if isinstance(_bd, str) and os.path.exists(_bd):
+                bdclip, bdsz = backdrop_frames(_bd, W, H, n, sc.get("bg_start", (si * 3.7) % 9), spec.get("bg_blur", 6))
+                bd_mix = float(spec.get("bg_mix", 0.62))  # share of the real picture vs theme colour
         col = hex2rgb(sc.get("color", "#F5C542"))
         trans = sc.get("transition") or ("punch" if sc.get("stat") else trans_cycle[si % 3])
         stat_sz = f_stat.size
@@ -1813,6 +1835,15 @@ def render(spec, wav, total, out, workdir):
                 base = fr.crop((cx0, cy0, cx0 + cw, cy0 + ch)).resize((W, H), Image.BILINEAR).convert("RGBA")
                 base = ImageEnhance.Color(ImageEnhance.Contrast(base.convert("RGB")).enhance(1.12)).enhance(1.15).convert("RGBA")
                 base = Image.alpha_composite(base, Image.new("RGBA", (W, H), (0, 0, 0, 105)))
+            elif bdclip:
+                BW2, BH2 = bdsz
+                fr = Image.frombytes("RGB", (BW2, BH2), bdclip[min(k, len(bdclip) - 1)])
+                cw, ch = int(BW2 / 1.12), int(BH2 / 1.12)
+                dx = int((BW2 - cw) * (0.5 + 0.45 * math.sin(si * 1.7 + prog * 1.2) * 0.9)); dy = int((BH2 - ch) * (0.5 + 0.4 * (prog - 0.5)))
+                bd = fr.crop((dx, dy, dx + cw, dy + ch)).resize((W, H), Image.BILINEAR)
+                bd = ImageEnhance.Color(bd).enhance(0.85)
+                base = Image.blend(base_static.convert("RGB"), bd, bd_mix).convert("RGBA")
+                base = Image.alpha_composite(base, Image.new("RGBA", (W, H), (0, 0, 0, 70)))
             else:
                 base = base_static.copy()
                 ov = Image.new("RGBA", (W, H), (0, 0, 0, 0)); o = ImageDraw.Draw(ov)
