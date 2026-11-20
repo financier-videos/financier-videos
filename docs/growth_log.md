@@ -51,3 +51,10 @@ Har kuni KAMIDA bitta yozuv. Format: sana — O'RGANILDI (manba, sana) → O'ZGA
    O'LCHOV: keyingi sayohat/joy mavzusidagi Shortda 1 xarita sahnasi; o'sha sahnada ushlab qolish tushishi bor-yo'qligi (Analytics kelganda retention.py).
 17. ULANDI (2026-11-21 01:10): Pixabay API ISHLADI (PIXABAY_API_KEY; "airport" → 187 video, 11–53 s) — b-roll endi vidIQ kreditisiz. RunPod: api.runpod.ai ochiq, RUNPOD_API_KEY bor, lekin barcha public endpointlar 403 "no permission" (kalit huquqi yetarli emas — Shohjahon "All" huquqli kalit yaratadi). O'LCHOV: ertangi A ishida 1 Short b-roll Pixabay'dan; Wan sinovi kalit tuzatilgach (1 klip, ≤$0.30).
 13. QO'LLANDI (2026-11-21 02:00): vizual sifat skillining texnik standart bandi → dvigatel v6.5: x264 medium + CRF 16 (oldin veryfast + CRF 20), rang bt709 deb belgilanadi, audio 192k. Sinov: bitreyt ~2.2 baravar, rang siljimadi. Render vaqti biroz oshadi. 4K — yo'q (haqiqiy 4K alohida qaror: render ~4x sekin + Buck kutubxonasi GPU da qayta).
+
+## 2026-11-21 (vazifa, A 01:46)
+18. O'RGANILDI: cdn.pixabay.com bu muhitda proksi 403 (Pixabay API ishlaydi, video CDN yo'q) — 17-yozuvdagi "ertangi A da Pixabay b-roll" sinovi BAJARILMADI. O'rniga map_insert (NY→NJ, label'siz) — imzo kadr sifatida ishladi; yorliq subtitr/manba bilan to'qnashardi → map_insert.py: bo'sh --label endi yorliqni chizmaydi.
+   O'ZGARTIRILDI: dvigatel v6.5.1 — eksportga bitreyt chegarasi (Short 12M, long 2M): parallel sessiyaning CRF16 i 30 s Shortni 111 MB qilgan, GitHub rad etgan. Chart "hi" (ajratiladigan ustun).
+   O'LCHOV: keyingi Short fayllari ≤55 MB va sifat kadrlarda pasaymaganmi; Shohjahon Muhit sozlamasida cdn.pixabay.com ni ochsa — Pixabay b-roll sinovi.
+19. QO'LLANDI: hookscore — 100 ball olgan BF varianti ("your money's catching up") ma'nosiz edi → olinmadi (fakt > ball). voice_check "can't"→"can" ni ushladi (ma'no teskari) va buzuq oxirgi take'ni (6.7 c/s, qichqiriq) — ikkalasi tuzatildi. SABOQ: inkor so'zlari ("can't") hookda — "can NOT".
+   O'LCHOV (23:17 C): airport (hookscore 80.8, katta raqam) vs bfcm (64.8, vs-panel) — 24 soatlik ko'rish; birinchi o'zbekcha Reellar (finansist424) ko'rish/follower.

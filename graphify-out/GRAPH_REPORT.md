@@ -1,17 +1,17 @@
 # Graph Report - financier-videos  (2026-11-20)
 
 ## Corpus Check
-- 169 files · ~217,773 words
+- 273 files · ~316,672 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 13 file(s) not represented in the graph (top: (none) 13)
+- Unclassified: 14 file(s) not represented in the graph (top: (none) 14)
 
 ## Summary
-- 1899 nodes · 2403 edges · 162 communities (153 shown, 9 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 34 edges (avg confidence: 0.86)
+- 2847 nodes · 3258 edges · 269 communities (228 shown, 41 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 37 edges (avg confidence: 0.87)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ef7be677`
+- Built from commit: `7fc6e384`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -22,27 +22,27 @@
 - Animation Recipes
 - render
 - YouTube Monetization Guide
-- numpy
+- make_video.py
 - Retention & Scripting Guide
 - Animation Standards Reference
 - YouTube Content Repurposing & Strategy Guide
 - Animation Audit Playbook
 - YouTube Analytics Guide
 - YouTube SEO Playbook
-- make_video.py
+- buck3d_ready
 - Pipeline
-- subprocess
+- compute_reframe.py
 - YouTube Shorts Playbook
 - Thumbnail & CTR Guide
 - Glossary
 - ig-viral/swipe.py
 - 10-Step Interactive Pipeline
 - YouTube Algorithm Reference Guide
-- re
+- yt-script/hookscore.py
 - DataForSEO Integration Reference
 - Finding Animation Opportunities
 - Workflow
-- json
+- re
 - Claude YouTube — YouTube Creator Skill
 - YOUTUBE PLAYBOOK — FINANCIER (moliya, AQSh auditoriyasi)
 - AVTONOM PRODYUSER — vazifa ko'rsatmasi (v3, 2026-11-20; Default muhit, ElevenLabs ochiq)
@@ -69,10 +69,10 @@
 - impeccable/SKILL.md
 - Nielsen's 10 Heuristics
 - polish.md
-- mascot3d_patch
-- H
+- sync-check.mjs
+- Drawing techniques
 - Remotion Patterns and Best Practices
-- el_speak
+- json
 - Thumbnail Brief + A/B Concepts
 - Playbook: every style, every building block, everything we learned
 - animate.md
@@ -92,7 +92,7 @@
 - typeset.md
 - ig-viral
 - gpu_render.py
-- draw_vs
+- AE Project Organization — Detailed Reference
 - Financier Money Facts — production directives (TOP-10 / Cinema standard)
 - Caption Styles — Visual Specifications
 - Platform Export Specifications
@@ -131,12 +131,12 @@
 - Agent Reach — agent uchun platformalarni o'qish/qidirish vositasi (Shohjahon 2026-11-20 18:59: "shuni ham saqla")
 - TASHQI SKILLAR VA MANBALAR (Shohjahon 2026-11-20 18:51: "GitHub'ni ko'rib chiq va yangi skillar yozib ol")
 - USLUBLAR KUTUBXONASI — Lemo-Opuscar (Shohjahon 2026-11-20 18:44: "o'zingga yozib ol, malaka oshir, videolar tayyorlashda foydalan")
-- uz_voice_text
+- Codec & Export Matrix — Detailed Reference
 - O'SISH JURNALI — "har kuni kechagidan yaxshiroq" (Shohjahon, 2026-11-20 07:07)
 - export.sh
 - Third-Party Notices
 - /impeccable foundations
-- CineGrade
+- Beat-Sync Editing (Cuts & Rhythm)
 - Scoring the report
 - Dizayn va harakat skillari (Shohjahon 2026-11-20 20:23: "ko'rib chiq, saqlab ishlat")
 - detect_gpu.sh
@@ -150,10 +150,10 @@
 - voice.md
 - 2026 YouTube Ranking Heuristics
 - Thumbnail Principles - 2026
-- argparse
+- beats.py
 - Voice Rules for YouTube
 - YouTube Thumbnail Brief
-- detect_content.py
+- Shot Composition
 - Voice & Brand Profile
 - Pillars Framework
 - YouTube Content Planner
@@ -177,6 +177,88 @@
 - yt-retention
 - yt-shorts
 - yt-viral
+- Animation Performance
+- AE Performance — Detailed Diagnostics Reference
+- Easing in the After Effects Graph Editor
+- Gradient cookbook
+- Three.js / R3F Resource Disposal — Detailed Recipes
+- Motion Direction Playbook
+- Presentation Video
+- Easing curves, springs, and durations
+- Named camera-move recipes
+- GLSL Cookbook
+- Explainer Video
+- Isometric (2.5D) Animation
+- After Effects Expression Library, Rigging & Export
+- The 12 principles of animation, applied to motion graphics
+- Motion Principles
+- Video / render color management (After Effects)
+- Motion Background
+- Data Video
+- Core workflow
+- Expressions, Rigging & MOGRT
+- Animated Infographic
+- Diagram & Chart Recipes — Cookbook
+- Whiteboard Animation
+- Wrapped Video
+- Core techniques
+- Motion Direction
+- Remotion (Programmatic Video)
+- Three.js Motion (3D / WebGL)
+- Diagram & Data Animation
+- Isometric Recipes — Cookbook
+- layout-check.mjs
+- Text reveal recipes (copy-paste)
+- Vector Maps — GeoJSON / SVG Cookbook
+- Map Animation
+- Logo Animation
+- Particle System
+- asset-audit.mjs
+- render.mjs
+- Google Earth Studio → After Effects — Camera Import Cookbook
+- Logo Animation Patterns — Cookbook
+- Remotion API & Patterns
+- Particle Recipes
+- Shader / GLSL
+- R3F, Animation, and Performance Reference
+- Slide Components (runnable Remotion)
+- Script-to-Screen Workflow — Cookbook
+- Draw-On Recipes — Cookbook
+- Batch pipeline: one template → many personalized videos
+- Editing Techniques — Detailed Cookbook
+- Sequenced Infographic — runnable reference
+- Whiteboard Pipeline — Cookbook
+- Remotion recipes for Wrapped scenes
+- Self-check before delivering
+- Sequencing: deck schema → narration-timed video
+- Scene grammar: the Wrapped storyboard
+- Storyboard, blocking and the beat grid
+- JavaScript Animation (every frame drawn in code)
+- After Effects
+- Bar Chart Race — complete implementations
+- Forms
+- Soundtrack
+- Background Recipes — Drop-in Implementations
+- sys
+- Characters (only when one appears in more than one scene)
+- make_video.py
+- AI-generated music (optional)
+- buildGroove
+- Kino darajasidagi vizual: grafika, joylar, effektlar — tadqiqot (2026-11-21, Shohjahon so'radi)
+- SKILL NAME: ELITE YOUTUBE VIDEO PRODUCTION & VISUAL QUALITY DIRECTOR
+- `scripts/` — verify-loop toolkit
+- buildScore
+- probe-mp4.sh
+- contact-sheet.sh
+- seek-shot.sh
+- Reviewing Animations
+- scale
+- voice_check.py
+- CineGrade
+- uz_voice_text
+- Workflow
+- light_leak
+- 2026-11-21_visual_quality_director.md
 
 ## God Nodes (most connected - your core abstractions)
 1. `render()` - 39 edges
@@ -185,35 +267,35 @@
 4. `Choreographing Motion` - 16 edges
 5. `Animation Standards Reference` - 16 edges
 6. `ultimate_upgrade()` - 15 edges
-7. `Animation Recipes` - 15 edges
-8. `Pipeline` - 15 edges
-9. `main()` - 14 edges
-10. `YouTube Analytics Guide` - 14 edges
+7. `Pipeline` - 15 edges
+8. `Animation Recipes` - 15 edges
+9. `SKILL NAME: ELITE YOUTUBE VIDEO PRODUCTION & VISUAL QUALITY DIRECTOR` - 14 edges
+10. `main()` - 14 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `10. O'RGANILGANLAR JURNALI (14 kundan eskisi xulosaga)` --references--> `_fetch_tar()`  [INFERRED]
   docs/youtube_playbook.md → engine/make_video.py
+- `Drawing techniques` --references--> `H`  [INFERRED]
+  docs/skills/iart-motion/javascript-animation-skills/javascript-animation/references/techniques.md → engine/gpu_pod_server.py
+- `Animated line / area reveal` --references--> `area()`  [INFERRED]
+  docs/skills/iart-motion/data-animation-skills/chart-animation/references/data-pipeline.md → engine/buck3d.py
 - `Button press` --references--> `scale()`  [INFERRED]
   docs/skills/emil-skills/animate/RECIPES.md → docs/skills/instagram-agent-skill/ig-human/detect.py
-- `Transforms & clip-path` --references--> `scale()`  [INFERRED]
-  docs/skills/emil-skills/review-animations/STANDARDS.md → docs/skills/instagram-agent-skill/ig-human/detect.py
 - `What You Animate` --references--> `scale()`  [INFERRED]
   docs/skills/emil-skills/animation-performance/SKILL.md → docs/skills/instagram-agent-skill/ig-human/detect.py
-- `main()` --calls--> `load()`  [INFERRED]
-  docs/skills/youtube-agent-skill/yt-chapters/chapters.py → docs/skills/youtube-agent-skill/yt-edit/deadair.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (162 total, 9 thin omitted)
+## Communities (269 total, 41 thin omitted)
 
 ### Community 0 - "detect.py"
-Cohesion: 0.08
-Nodes (30): Animation Performance, Hard Rules, Initial Response, Operating Posture, Phase 1: Find what animates, Phase 2: Diagnose, Phase 3: Report, React: Don't Animate Through State (+22 more)
+Cohesion: 0.21
+Nodes (10): bar(), check_burstiness(), check_fingerprint(), check_slop(), check_specificity(), main(), render(), run() (+2 more)
 
 ### Community 1 - "buck3d.py"
-Cohesion: 0.07
-Nodes (35): _bsdf(), build(), _bump_tree(), _card(), _chain(), cinema_upgrade(), curve(), _dome_y() (+27 more)
+Cohesion: 0.06
+Nodes (46): Animated counter / number ticker, Animated line / area reveal, Annotate the moment that matters, Batch render — template × data → N videos, Built by the team behind iart.ai, Cleaning rules worth enforcing, CSV → typed props, Data Pipeline — CSV → props, counters, line reveal, batch render (+38 more)
 
 ### Community 2 - "Choreographing Motion"
 Cohesion: 0.06
@@ -221,27 +303,27 @@ Nodes (32): Carry: steer a shared layout animation through its parent, Choreogra
 
 ### Community 3 - "Animation Recipes"
 Cohesion: 0.06
-Nodes (31): Accordion / collapse, Animation Recipes, Button press, Drag to dismiss, Drawer / sheet, Dropdown, popover, menu, select, Hold to confirm, Masking a crossfade that won't settle (+23 more)
+Nodes (30): Accordion / collapse, Animation Recipes, Drag to dismiss, Drawer / sheet, Dropdown, popover, menu, select, Hold to confirm, Masking a crossfade that won't settle, Modal (+22 more)
 
 ### Community 4 - "render"
 Cohesion: 0.07
-Nodes (19): _act_off(), _avg(), bokeh_sprites(), broll_frames(), cam_at(), cam_xform(), camera_keys(), caption_chunks() (+11 more)
+Nodes (26): _act_off(), _alpha_scaled(), _avg(), b3_feet(), buck3d_extent(), buck3d_frame(), cam_at(), camera_keys() (+18 more)
 
 ### Community 5 - "YouTube Monetization Guide"
 Cohesion: 0.07
 Nodes (27): `[2025]` New Features, `[2025]` Policy Change (July 2025), `[2025]` Shopping Product Stickers (June 2025), AdSense RPM by Niche, Affiliate Programs, Brand Deals, Channel Memberships, Digital Products (+19 more)
 
-### Community 6 - "numpy"
-Cohesion: 0.12
-Nodes (22): _bandnoise(), _env(), _envelope(), mix_sfx(), _pink(), _reverb(), sfx_birds(), sfx_bonk() (+14 more)
+### Community 6 - "make_video.py"
+Cohesion: 0.10
+Nodes (25): _add(), _bandnoise(), _env(), _envelope(), mix_sfx(), add(), _pink(), _reverb() (+17 more)
 
 ### Community 7 - "Retention & Scripting Guide"
 Cohesion: 0.07
 Nodes (26): Algorithmic Promotion Thresholds, Auto-Play Era (2025+), Best Practices, CTA Placement & Conversion, Deliver on the Promise Immediately, Dual CTA Strategy, Energy Patterns, Hook Benchmarks (+18 more)
 
 ### Community 8 - "Animation Standards Reference"
-Cohesion: 0.07
-Nodes (25): Aggressive Escalation Triggers, Initial Response, Operating Posture, Part 1 — Findings table (REQUIRED), Part 2 — Verdict (REQUIRED), Remedial Preference Hierarchy, Required Output Format, Reviewing Animations (+17 more)
+Cohesion: 0.13
+Nodes (15): Accessibility, Animation Standards Reference, Asymmetric timing, Cohesion, Debugging (recommend in reviews when feel is uncertain), Duration, Easing, Gestures & drag (+7 more)
 
 ### Community 9 - "YouTube Content Repurposing & Strategy Guide"
 Cohesion: 0.08
@@ -259,17 +341,17 @@ Nodes (23): Available Dimensions, Channel Health Indicators, CPM Ranges by Niche
 Cohesion: 0.09
 Nodes (22): Captions & Transcription, Cards & End Screens, Chapters & Timestamps, Clickbait Penalty `[2025]`, Description Structure, Discovery Tool, Hashtags, Impact (+14 more)
 
-### Community 13 - "make_video.py"
-Cohesion: 0.11
-Nodes (17): _add(), bubble_patch(), buck3d_ready(), fun_font(), hex2rgb(), _lib_complete(), add(), prep_vs() (+9 more)
+### Community 13 - "buck3d_ready"
+Cohesion: 0.33
+Nodes (4): 10. O'RGANILGANLAR JURNALI (14 kundan eskisi xulosaga), buck3d_ready(), _fetch_tar(), _lib_complete()
 
 ### Community 14 - "Pipeline"
 Cohesion: 0.10
 Nodes (19): 0. Check the toolchain once per session, 10. Every correction is taste, 1. Prep and look, 2. Transcribe everything, 2b. Track the face, 2c. Noisy outdoor audio?, 3. Choose takes (`references/take-selection.md`), 3b. A single clean take? (+11 more)
 
-### Community 15 - "subprocess"
-Cohesion: 0.12
-Nodes (11): compute_crop_center(), compute_crop_face_track(), compute_crop_screen_static(), compute_crop_screen_with_cursor(), compute_face_track(), detect_cursor_positions(), get_video_info(), main() (+3 more)
+### Community 15 - "compute_reframe.py"
+Cohesion: 0.16
+Nodes (9): compute_crop_center(), compute_crop_face_track(), compute_crop_screen_static(), compute_crop_screen_with_cursor(), compute_face_track(), detect_cursor_positions(), get_video_info(), main() (+1 more)
 
 ### Community 16 - "YouTube Shorts Playbook"
 Cohesion: 0.11
@@ -295,9 +377,9 @@ Nodes (17): 10-Step Interactive Pipeline, Caption Style Reference, Configurable 
 Cohesion: 0.11
 Nodes (17): 4-Layer Testing Cascade, Algorithm Timeline 2024-2025, Average View Duration (AVD), Context-Adaptive Weighting, Core Mindset: Algorithm = Audience, CTR Benchmarks, CTR by Traffic Source `[2025]`, CTR Performance Tiers (+9 more)
 
-### Community 22 - "re"
-Cohesion: 0.15
-Nodes (15): check(), main(), show(), words(), band(), brevity(), classify(), curiosity() (+7 more)
+### Community 22 - "yt-script/hookscore.py"
+Cohesion: 0.24
+Nodes (9): band(), brevity(), classify(), curiosity(), main(), report(), score(), specificity() (+1 more)
 
 ### Community 23 - "DataForSEO Integration Reference"
 Cohesion: 0.12
@@ -311,17 +393,17 @@ Nodes (16): 1. Frequency — how often will a user see this?, 2. Purpose — why
 Cohesion: 0.12
 Nodes (16): Conflicts, Hard Rules, Invocation Variants, Learning Taste, Make it a check, Needs your answer, Phase 1: Collect corrections, Phase 2: Filter (+8 more)
 
-### Community 26 - "json"
-Cohesion: 0.15
-Nodes (12): extract_audio(), main(), transcribe(), keywords(), main(), mmss(), load(), main() (+4 more)
+### Community 26 - "re"
+Cohesion: 0.17
+Nodes (13): keywords(), main(), mmss(), load(), main(), norm(), parse_ts(), check() (+5 more)
 
 ### Community 27 - "Claude YouTube — YouTube Creator Skill"
 Cohesion: 0.12
 Nodes (15): API Credit Awareness, Channel Type Detection, Claude YouTube — YouTube Creator Skill, Command Router, Context-Gathering Protocol, DataForSEO MCP Integration (Optional), Execution Scripts, Key YouTube DataForSEO Tools (+7 more)
 
 ### Community 28 - "YOUTUBE PLAYBOOK — FINANCIER (moliya, AQSh auditoriyasi)"
-Cohesion: 0.12
-Nodes (14): 0.5 TOP-10 VA CINEMA QUALITY STANDARTI, 0. MAQSAD VA VAKOLAT, 10. O'RGANILGANLAR JURNALI (14 kundan eskisi xulosaga), 1. KANAL, 2. QIZIL CHIZIQLAR, 3. ISHLAB CHIQARISH, HOSTING VA KREDIT, 4. REJISSOR QOIDALARI, HAZIL FORMULASI VA PRO MONTAJ (35 qatordan oshmasin), 5. RAQOBATCHILAR VA ETALONLAR (har biri 3–4 qator; ≤10) (+6 more)
+Cohesion: 0.15
+Nodes (12): 0.5 TOP-10 VA CINEMA QUALITY STANDARTI, 0. MAQSAD VA VAKOLAT, 1. KANAL, 2. QIZIL CHIZIQLAR, 3. ISHLAB CHIQARISH, HOSTING VA KREDIT, 4. REJISSOR QOIDALARI, HAZIL FORMULASI VA PRO MONTAJ (35 qatordan oshmasin), 5. RAQOBATCHILAR VA ETALONLAR (har biri 3–4 qator; ≤10), 6. NATIJALAR, TOMOSHABIN FIKRI VA MOSLASHUV (+4 more)
 
 ### Community 29 - "AVTONOM PRODYUSER — vazifa ko'rsatmasi (v3, 2026-11-20; Default muhit, ElevenLabs ochiq)"
 Cohesion: 0.13
@@ -329,7 +411,7 @@ Nodes (14): 0) BOSHLASH, 1.5) KUNLIK O'SISH (Shohjahon 2026-11-20 07:07: "har ku
 
 ### Community 30 - "SSENARIYLAR BANKI (Shohjahon yuborgan, Claude tekshirib moslagan)"
 Cohesion: 0.13
-Nodes (14): 3-partiya (2026-11-20) — "yashirin mexanizm" formati, ~35 s SINOV, [CHIQDI 2026-11-20 13:00 ET; QAYTA YASALDI 11-20 → "Guess What a 1% Fee Costs You", taxmin o'yini / ember, r1] S-10 "A 1% Fee Can Cost You $64,000", [CHIQDI 2026-11-20 19:00 ET; QAYTA YASALDI 11-20 → "The $4.99 Chicken Mystery", detektiv / noir, r2] S-09 "Costco's $4.99 Chicken Is Bait", [CHIQDI 2026-11-21 10:00 ET; QAYTA YASALDI 11-20 → "3 Secrets Hiding on a $20 Bill", sanoq / royal, r3] S-08 "Why Copiers Refuse to Copy Money", [CHIQDI 2026-11-21 13:00 ET; QAYTA YASALDI 11-20 → "Gift Cards Feel Like Free Money", afsona vs haqiqat / mint, work/remake_2026-11-20/r4] S-05 "$27 Billion Is Sitting in Junk Drawers" (2026-11-20), [CHIQDI 2026-11-21 16:00 ET; QAYTA YASALDI 11-20 → "Sorry, No Seat. Is That Legal?", hikoya / ocean, r5; 180/185 — illyustratsiya, tavsifda aytilgan] S-06 "Airlines Sell Your Seat Twice — Legally" (2026-11-20), [CHIQDI 2026-11-21 19:00 ET] S-01 "You Pay $1,332 a Year for Subscriptions" (2026-11-20), [KONSEPT, uzun video — keyingisi uchun] "Everyday Traps Quietly Draining Your Wallet" (obunalar qismi 2026-11-20 "The Subscription Trap" da ishlatildi — takrorlama) (+6 more)
+Nodes (14): 3-partiya (2026-11-20) — "yashirin mexanizm" formati, ~35 s SINOV, [CHIQDI 2026-11-20 13:00 ET; QAYTA YASALDI 11-20 → "Guess What a 1% Fee Costs You", taxmin o'yini / ember, r1] S-10 "A 1% Fee Can Cost You $64,000", [CHIQDI 2026-11-20 19:00 ET; QAYTA YASALDI 11-20 → "The $4.99 Chicken Mystery", detektiv / noir, r2] S-09 "Costco's $4.99 Chicken Is Bait", [CHIQDI 2026-11-21 10:00 ET; QAYTA YASALDI 11-20 → "3 Secrets Hiding on a $20 Bill", sanoq / royal, r3] S-08 "Why Copiers Refuse to Copy Money", [CHIQDI 2026-11-21 13:00 ET; QAYTA YASALDI 11-20 → "Gift Cards Feel Like Free Money", afsona vs haqiqat / mint, work/remake_2026-11-20/r4] S-05 "$27 Billion Is Sitting in Junk Drawers" (2026-11-20), [CHIQDI 2026-11-21 16:00 ET; QAYTA YASALDI 11-20 → "Sorry, No Seat. Is That Legal?", hikoya / ocean, r5; 180/185 — illyustratsiya, tavsifda aytilgan] S-06 "Airlines Sell Your Seat Twice — Legally" (2026-11-20), [CHIQDI 2026-11-21 19:00 ET] S-01 "You Pay $1,332 a Year for Subscriptions" (2026-11-20), [CHIQDI 2026-11-22 10:00 ET — "NY Airports Can't Overcharge You Past 15%"; $2 suv va LA/Chikago raqamlari TASDIQLANMADI → olib tashlandi] S-11 "Airport Prices Actually Have a Limit" (+6 more)
 
 ### Community 31 - "snap_boundaries.py"
 Cohesion: 0.19
@@ -348,8 +430,8 @@ Cohesion: 0.15
 Nodes (12): 0. Hard rules (they override everything below), 1. Covers: keep the glances, 2. Budgets (talking-head styles; the QA fails past them), 3. Sourcing priority, 4. Grade conform (`scripts/insert_prep.py`), 5. Motion and type, 5b. One fixed house look per style, 6. Style prerequisites (say so, and propose another style) (+4 more)
 
 ### Community 35 - "os"
-Cohesion: 0.20
-Nodes (11): assemble(), git(), main(), pack_pose(), push(), sync(), pack(), main() (+3 more)
+Cohesion: 0.15
+Nodes (11): extract_audio(), main(), transcribe(), assemble(), git(), main(), pack_pose(), push() (+3 more)
 
 ### Community 36 - "critique.md"
 Cohesion: 0.17
@@ -419,21 +501,21 @@ Nodes (11): 10. Help and Documentation, 1. Visibility of System Status, 2. Match
 Cohesion: 0.18
 Nodes (10): 1. Establish the system, 2. Gather the evidence, 3. Triage, 4. Polish the whole path, 5. Verify and finish, Color, imagery, and icons, Content and code, Flow and hierarchy (+2 more)
 
-### Community 53 - "mascot3d_patch"
-Cohesion: 0.18
-Nodes (7): _alpha_scaled(), b3_feet(), buck3d_extent(), buck3d_frame(), mascot3d_patch(), near_layer(), paste_rgba()
+### Community 53 - "sync-check.mjs"
+Cohesion: 0.10
+Nodes (17): args, blank, detail, env, events, flux, [fn, fd], hasAudio (+9 more)
 
-### Community 54 - "H"
-Cohesion: 0.38
-Nodes (3): device(), H, tail()
+### Community 54 - "Drawing techniques"
+Cohesion: 0.11
+Nodes (17): 1. Ink line (in the starter), 2. Illustration shapes (in the starter), 3. Spot-color print (risograph), 4. Single-line engraving, 5. Words as the shape, 6. Marker / gouache fill, 7. Cinematic flat + blueprint (in the starter), Canvas gotchas (+9 more)
 
 ### Community 55 - "Remotion Patterns and Best Practices"
 Cohesion: 0.20
 Nodes (9): Bundle-Once-Render-Many, calculateMetadata for Dynamic Duration, File Paths in Render, OffthreadVideo + CSS Reframing, Performance Tips, @remotion/captions API, Remotion Patterns and Best Practices, Spring Animations (+1 more)
 
-### Community 56 - "el_speak"
-Cohesion: 0.11
-Nodes (13): buck_line(), buck_line_el(), _buck_line_el_v5(), design_buck(), el_call(), el_speak(), el_voice_id(), _f0_stats() (+5 more)
+### Community 56 - "json"
+Cohesion: 0.12
+Nodes (14): broll_frames(), buck_line(), buck_line_el(), _buck_line_el_v5(), design_buck(), el_call(), el_speak(), el_voice_id() (+6 more)
 
 ### Community 57 - "Thumbnail Brief + A/B Concepts"
 Cohesion: 0.20
@@ -511,9 +593,9 @@ Nodes (8): ig-viral, Output, Step 1: pick the accounts, Step 2: go and look, Ste
 Cohesion: 0.47
 Nodes (6): curl(), gql(), main(), status(), pods(), terminate()
 
-### Community 76 - "draw_vs"
-Cohesion: 0.15
-Nodes (8): count_text(), draw_vs(), ease_back(), make_bg(), mascot_patch(), _price_tag(), _star(), _vs_font()
+### Community 76 - "AE Project Organization — Detailed Reference"
+Cohesion: 0.10
+Nodes (20): AE Project Organization — Detailed Reference, Batch automation with ExtendScript (.jsx), Collect Files (portable handoff), Fix options, in order, Folder (bin) structure, Full folder (bin) template, Gotchas, Label color system (example) (+12 more)
 
 ### Community 77 - "Financier Money Facts — production directives (TOP-10 / Cinema standard)"
 Cohesion: 0.22
@@ -667,13 +749,13 @@ Nodes (5): 1. claude-youtube (ko'chirildi: `docs/skills/claude-youtube/`), 2. Le
 Cohesion: 0.33
 Nodes (5): KO'CHIRIB OLINGAN VOSITALAR (2026-11-20 19:00) — `engine/vendor/lemo/` (MIT, o'zgartirilmagan; NOTICE.txt da manba), LITSENZIYA (o'qilgan, qisqa; har ishlatishdan oldin LICENSE ni qayta ko'r), QANDAY ISHLATAMIZ — "USLUBLI INSERT" (Buck va ovoz o'zimizniki qoladi), REJISSORLIKDAN O'RGANILGANLAR (o'z so'zimiz bilan; producer_task qoidalariga qo'shildi), USLUBLAR KUTUBXONASI — Lemo-Opuscar (Shohjahon 2026-11-20 18:44: "o'zingga yozib ol, malaka oshir, videolar tayyorlashda foydalan")
 
-### Community 115 - "uz_voice_text"
-Cohesion: 0.40
-Nodes (3): uz_cyr(), uz_voice_text(), one()
+### Community 115 - "Codec & Export Matrix — Detailed Reference"
+Cohesion: 0.10
+Nodes (19): Alpha matte types explained, AME preset cautions, Bitrate cheat sheet (H.264 VBR 2-pass), Bitrate guidance (H.264 via AME), Codec & Export Matrix — Detailed Reference, Decision tree, Export Recipes — Codec, Container, Alpha, Bitrate, Full target → settings matrix (+11 more)
 
 ### Community 116 - "O'SISH JURNALI — "har kuni kechagidan yaxshiroq" (Shohjahon, 2026-11-20 07:07)"
-Cohesion: 0.25
-Nodes (7): 2026-11-20 (chat sessiyasi), 2026-11-20 (vazifa, A 09:19), 2026-11-20 (vazifa, B 15:19), 2026-11-20 (vazifa, BUYURTMA 3, 20:34), 2026-11-20 (vazifa, C 23:19), 2026-11-21 (chat, 00:10 — Shohjahon: "youtube-skill o'rnat, eng yaxshilarini"), O'SISH JURNALI — "har kuni kechagidan yaxshiroq" (Shohjahon, 2026-11-20 07:07)
+Cohesion: 0.22
+Nodes (8): 2026-11-20 (chat sessiyasi), 2026-11-20 (vazifa, A 09:19), 2026-11-20 (vazifa, B 15:19), 2026-11-20 (vazifa, BUYURTMA 3, 20:34), 2026-11-20 (vazifa, C 23:19), 2026-11-21 (chat, 00:10 — Shohjahon: "youtube-skill o'rnat, eng yaxshilarini"), 2026-11-21 (vazifa, A 01:46), O'SISH JURNALI — "har kuni kechagidan yaxshiroq" (Shohjahon, 2026-11-20 07:07)
 
 ### Community 118 - "Third-Party Notices"
 Cohesion: 0.40
@@ -682,6 +764,10 @@ Nodes (4): Consent rules in the browser extension, Fonts in the browser extensio
 ### Community 119 - "/impeccable foundations"
 Cohesion: 0.40
 Nodes (4): /impeccable foundations, What "done" means, With an id: fix that one item, Without an argument: the roadmap
+
+### Community 120 - "Beat-Sync Editing (Cuts & Rhythm)"
+Cohesion: 0.10
+Nodes (19): 1. Find the grid: BPM → frames, 2. Hide the seam: cut on action / motion, 3. Choose transitions with intent, 4. Retime: speed ramps, 5. Shape the arc: sequence pacing, ANTI-PATTERN — "cut on every beat with a dissolve each time", Beat-Sync Editing (Cuts & Rhythm), Before you finish — checklist (+11 more)
 
 ### Community 121 - "Scoring the report"
 Cohesion: 0.50
@@ -711,7 +797,7 @@ Nodes (13): 2026 YouTube Ranking Heuristics, Character and format limits, Conten
 Cohesion: 0.14
 Nodes (13): A/B testing, Composition cues, Consistency vs novelty, Contents, Faces, Shorts thumbnails, Text rules, The brief the skill produces (+5 more)
 
-### Community 135 - "argparse"
+### Community 135 - "beats.py"
 Cohesion: 0.29
 Nodes (7): analyse(), main(), pretty(), render(), split_beats(), tc(), words()
 
@@ -723,9 +809,9 @@ Nodes (9): Algorithmic note (what the ranker actually reads), Always forbidden (
 Cohesion: 0.20
 Nodes (9): Anti-patterns (skill will refuse), Hard rules, Related skills, Resources, Steps, The thumbnail flow (auto-publish), What the brief contains, When to use (+1 more)
 
-### Community 138 - "detect_content.py"
-Cohesion: 0.31
-Nodes (4): classify(), detect_faces(), main(), sample_frames()
+### Community 138 - "Shot Composition"
+Cohesion: 0.10
+Nodes (19): 1. Establish a grid, 2. Place the focal point, 3. Use negative space as rhythm, 4. Layer the scene (bg / mid / fg) for depth and parallax, 5. Camera language (works in 2D and 3D), 6. Enter/exit direction carries meaning, 7. Safe areas and multi-aspect adaptation, ANTI-PATTERN — the "everything centered, everything moving" frame (+11 more)
 
 ### Community 139 - "Voice & Brand Profile"
 Cohesion: 0.22
@@ -819,23 +905,319 @@ Nodes (4): Picking, The gate, Writing each one, yt-shorts
 Cohesion: 0.40
 Nodes (4): Collecting the input, Reading the output, The gate, yt-viral
 
+### Community 162 - "Animation Performance"
+Cohesion: 0.15
+Nodes (12): Animation Performance, Hard Rules, Initial Response, Operating Posture, React: Don't Animate Through State, Should You Avoid JS Animation?, The Frame Budget, The Symptom Table (+4 more)
+
+### Community 163 - "AE Performance — Detailed Diagnostics Reference"
+Cohesion: 0.11
+Nodes (17): AE Performance — Detailed Diagnostics Reference, Disk cache sizing and placement, First: identify the symptom, Flow A — Slow previews (do in order), Flow B — Slow renders (do in order), Flow C — Crashes / freezes / hangs (do in order), Gotchas, GPU and drivers (+9 more)
+
+### Community 164 - "Easing in the After Effects Graph Editor"
+Cohesion: 0.11
+Nodes (17): Anticipation, Bounce (expression), Bounce (hand-keyed), Display tips, Easing in the After Effects Graph Editor, Gotchas, Graph Editor basics, Handle techniques (+9 more)
+
+### Community 165 - "Gradient cookbook"
+Cohesion: 0.11
+Nodes (17): Animated drift, Animating a color with @property (CSS, browser interpolates), Conic, CSS-filter grade (quick, for web video/canvas), culori (JS) — interpolate and sample, d3-interpolate / d3-scale-chromatic, Fragment-shader split-tone (GLSL sketch), Generating a tonal ramp (hold hue, vary lightness) (+9 more)
+
+### Community 166 - "Three.js / R3F Resource Disposal — Detailed Recipes"
+Cohesion: 0.11
+Nodes (17): A reusable `<DisposeOnUnmount>` helper, Complete disposal utility, Detecting leaks with renderer.info, Disposing render targets and EffectComposer, Full renderer teardown (SPA route leaving the 3D view), GLTF full cleanup, Gotchas, Leak-test harness (+9 more)
+
+### Community 167 - "Motion Direction Playbook"
+Cohesion: 0.12
+Nodes (16): Brand → motion translation, Built by the team behind iart.ai, Calm + Sharp — premium tech / fintech, Calm + Soft — luxury / wellness / editorial, Creative brief template, Direction-notes template (per shot), Easing vocabulary cheat sheet, Filled motion-language specs (five tone cells) (+8 more)
+
+### Community 168 - "Presentation Video"
+Cohesion: 0.12
+Nodes (15): Build reveals: animate to reveal, never to decorate, Deliver & verify (rendered stills → MP4), Keep text legible & on-brand, Narrative flow: the deck is one argument, not N slides, Output checklist, Pacing: keep the build in sync with the voice, Presentation Video, Rebuild, don't record (+7 more)
+
+### Community 169 - "Easing curves, springs, and durations"
+Cohesion: 0.12
+Nodes (15): Distance-to-duration scaling, Duration guidance per element type, Ease-in family (use for EXIT / disappear / accelerate away), Ease-in-out family (use for MOVE / reposition while on screen), Ease-out family (use for ENTER / appear / settle), Easing curves, springs, and durations, Framer Motion (`type: "spring"`), iOS / Apple feel (+7 more)
+
+### Community 170 - "Named camera-move recipes"
+Cohesion: 0.12
+Nodes (15): Camera moves, grids, safe areas, and parallax, CSS scroll-driven (pure CSS, modern browsers), Dolly-zoom (vertigo) — unsettling, dramatic, General rules, Grid math, Named camera-move recipes, Orbit (3D), Pan / move (reveal space) (+7 more)
+
+### Community 171 - "GLSL Cookbook"
+Cohesion: 0.12
+Nodes (15): Cosine palettes (Inigo Quilez), Displacement transition, Dissolve / noise wipe, Domain warping (fluid / marble), fbm (fractal Brownian motion), Glitch + chromatic aberration, GLSL Cookbook, GLSL ES 3.00 migration (WebGL2) (+7 more)
+
+### Community 172 - "Explainer Video"
+Cohesion: 0.13
+Nodes (14): Caption sync, Deliver & verify (rendered stills → MP4), Explainer Video, Output checklist, Pacing per beat, Pick one analogy and ride it, Reference files, Scene-build techniques (inlined) (+6 more)
+
+### Community 173 - "Isometric (2.5D) Animation"
+Cohesion: 0.13
+Nodes (14): Build-tool choice, Building scenes, Deliver & verify (standalone HTML), Exploded-view diagram, Extruded block (faces + per-face shading = depth), Isometric (2.5D) Animation, Isometric grid, Motion (+6 more)
+
+### Community 174 - "After Effects Expression Library, Rigging & Export"
+Cohesion: 0.13
+Nodes (14): After Effects Expression Library, Rigging & Export, Control types and how to read them, Coordinate-space conversions, Essential Graphics / MOGRT export steps, Inertial bounce (parameterized), Linking many layers to a master null, Loop variants, Lottie / Bodymovin export (+6 more)
+
+### Community 175 - "The 12 principles of animation, applied to motion graphics"
+Cohesion: 0.13
+Nodes (14): 10. Straight-ahead vs. pose-to-pose, 11. Solid drawing (depth and weight), 12. Appeal, 1. Slow in and slow out (easing), 2. Timing, 3. Follow-through and overlapping action, 4. Anticipation, 5. Staging (focal direction) (+6 more)
+
+### Community 176 - "Motion Principles"
+Cohesion: 0.13
+Nodes (14): Anticipation and follow-through sell physical motion, Beat-sync and rhythm, Core principles, Diagnosing common failures, Easing is the single biggest lever, Motion Principles, Quick reference, Reference files (+6 more)
+
+### Community 177 - "Video / render color management (After Effects)"
+Cohesion: 0.13
+Nodes (14): Decision tree: which problem is this?, Export settings per platform, Gotchas, Limited vs full range pitfall, Mental model: where shifts come from, Numeric test-patch method (perception-free), Per-player / per-OS gamma reference, Pre-export checklist (+6 more)
+
+### Community 178 - "Motion Background"
+Cohesion: 0.13
+Nodes (14): 1. Animated CSS mesh gradient (no JS), 2. Full-screen GLSL gradient + noise shader (Three.js), 3. Canvas constellation particles, 4. Seamless loop technique, 5. Reduced motion + offscreen/hidden pause, Core techniques (inlined, runnable), Deliver & verify (standalone HTML), Design rules (+6 more)
+
+### Community 179 - "Data Video"
+Cohesion: 0.14
+Nodes (13): Bar chart race — rank transitions, Counters / number tickers, Data Video, Deliver & verify (rendered stills → MP4), Easing value changes, Labeling & annotation, Map data → pixels, Output checklist (+5 more)
+
+### Community 180 - "Core workflow"
+Cohesion: 0.14
+Nodes (13): 1. Get static typography right first, 2. Choose split granularity, 3. Apply a reveal technique, 4. Apply principle-correct timing, 5. Mask-reveal, copy-paste (vanilla CSS + JS line split), 6. Variable-font weight animation, Core workflow, Deliver & verify (standalone HTML) (+5 more)
+
+### Community 181 - "Expressions, Rigging & MOGRT"
+Cohesion: 0.14
+Nodes (13): Core expressions, Essential Graphics / MOGRT, Export from expressions/template work, Expressions, Rigging & MOGRT, Gotchas, Inertial bounce (overshoot after the last keyframe), Looping, Quick reference (+5 more)
+
+### Community 182 - "Animated Infographic"
+Cohesion: 0.15
+Nodes (12): Animated Infographic, Animating icons: the pop, Connectors & flow, Deliver & verify (rendered stills → MP4), Key numbers: counters that settle, Output checklist, Reference files, Section pacing (+4 more)
+
+### Community 183 - "Diagram & Chart Recipes — Cookbook"
+Cohesion: 0.15
+Nodes (12): 1. Staged node → edge → label reveal (GSAP timeline), 2. Sequence diagram (lifelines + activation messages), 3. Flowing connector — marching dash + traveling packet, 4. Bar chart — grow + stagger, 5. Line chart — draw-on via dashoffset, 6. Count-up number, 7. D3 transitions, 8. Framer Motion (React) (+4 more)
+
+### Community 184 - "Whiteboard Animation"
+Cohesion: 0.15
+Nodes (12): Converting art to drawable paths, Core mechanic: SVG stroke draw-on, Deliver & verify (standalone HTML), Erase / wipe transitions, Marker hand asset, Output checklist, Pacing to narration, Reference files (+4 more)
+
+### Community 185 - "Wrapped Video"
+Cohesion: 0.15
+Nodes (12): Batch: one template → many videos, Build checklist, Data → video shape, Deliver & verify (rendered stills → MP4), Reference files, The recap story arc, The signature move: the big-number counter, The two non-negotiables (+4 more)
+
+### Community 186 - "Core techniques"
+Cohesion: 0.15
+Nodes (12): 1. Build a restrained palette, 2. Interpolate in OKLCH or Lab — never raw sRGB, 3. Gradients that read as premium, 4. Color transition animation, 5. Grade for mood — correct order, 6. Video / render color management, Color in Motion, Core techniques (+4 more)
+
+### Community 187 - "Motion Direction"
+Cohesion: 0.15
+Nodes (12): Consistency check, Direction workflow, Motion Direction, Motion hierarchy, Motion personality (named presets), Pacing & rhythm, Reference files, Restraint — what NOT to animate (+4 more)
+
+### Community 188 - "Remotion (Programmatic Video)"
+Cohesion: 0.15
+Nodes (12): Audio and beat sync, Composition registration + parametric props, Core techniques, Deliver & verify (rendered stills → MP4), Frame-driven animation, Gotchas, Quick reference, Reference files (+4 more)
+
+### Community 189 - "Three.js Motion (3D / WebGL)"
+Cohesion: 0.15
+Nodes (12): Camera lerp and scroll-linked motion, Cleanup & GPU memory (disposal), Deliver & verify (standalone HTML), GLTF animation clips, Instancing for many objects, Minimal scene + render loop, Performance and cleanup (critical), Quick reference (+4 more)
+
+### Community 190 - "Diagram & Data Animation"
+Cohesion: 0.17
+Nodes (11): Build-tool choice, Charts, Core principle: progressive disclosure, Deliver & verify (standalone HTML), Diagram & Data Animation, Flowing connector (marching dash + traveling dot), Output checklist, Progressive node/edge reveal (SVG + GSAP) (+3 more)
+
+### Community 191 - "Isometric Recipes — Cookbook"
+Cohesion: 0.17
+Nodes (11): 0. Projection math — pick a convention and lock it, 1. Flat DOM/SVG → iso plane (CSS 3D), 2. Extruded block — faces + per-face shading, 3. Stacked Z layers + bottom-up build (GSAP), 4. Exploded-view diagram (assemble / explode), 5. Isometric grid, 6. Camera drift, parallax, hover lift, 7. Three.js — true 3D iso (OrthographicCamera) (+3 more)
+
+### Community 192 - "layout-check.mjs"
+Cohesion: 0.17
+Nodes (5): args, EVERY, frames, hits, MIN
+
+### Community 193 - "Text reveal recipes (copy-paste)"
+Cohesion: 0.17
+Nodes (11): 10. After Effects expression (per-char delay via index), 1. CSS-only mask reveal (no JS split, pre-wrapped lines), 2. CSS blur-in (premium focus-pull), 3. CSS clip-path directional wipe, 4. Character stagger with vanilla JS split (screen-reader safe), 5. GSAP SplitText (requires GSAP 3.13+, SplitText now free), 6. Framer Motion staggered words/chars, 7. Remotion per-character reveal (+3 more)
+
+### Community 194 - "Vector Maps — GeoJSON / SVG Cookbook"
+Cohesion: 0.17
+Nodes (11): 1. Projection: lat/long → screen pixels (the foundation), 2. The 12fps stutter (quantize the frame), 3. Camera: zoom + pan to a lat/long, 4. Pins: drop, settle, pulse, 5. Routes: draw-on between coordinates, 6. Region highlight: focus + context, 7. Labels & callouts, 8. Data-driven sequencing (single source of truth) (+3 more)
+
+### Community 195 - "Map Animation"
+Cohesion: 0.17
+Nodes (11): Data-driven sequencing, Deliver & verify (rendered stills → MP4), Map Animation, Output checklist, Overlays: pins, routes, highlights, labels, Path A — Google Earth Studio → After Effects, Path B — Vector maps (GeoJSON / SVG), Pick the path (+3 more)
+
+### Community 196 - "Logo Animation"
+Cohesion: 0.17
+Nodes (11): Core principle, Deliver & verify (standalone HTML), Delivery targets, Logo Animation, Output checklist, Quick start: build-on with stagger (GSAP), Quick start: SVG stroke draw-on, Reference files (+3 more)
+
+### Community 197 - "Particle System"
+Cohesion: 0.17
+Nodes (11): Connected-dot network without O(n²), Core loop: integrate per particle, Deliver & verify (standalone HTML), Emission: burst vs continuous, Flow fields / curl noise (organic swirl), Forces, GPU particles: Three.js Points + shader, Particle System (+3 more)
+
+### Community 198 - "asset-audit.mjs"
+Cohesion: 0.18
+Nodes (5): hits, kb, requests, RULES, src
+
+### Community 199 - "render.mjs"
+Cohesion: 0.20
+Nodes (4): args, errors, grab(), jpg()
+
+### Community 200 - "Google Earth Studio → After Effects — Camera Import Cookbook"
+Cohesion: 0.18
+Nodes (10): 1. What Earth Studio exports, 2. Keyframe the camera (in Earth Studio), 3. Export / render settings, 4. Import into After Effects, 5. Lock overlays to map locations (lat/long ↔ screen space), 6. Build the overlay precomp, 7. Apply the 12fps stutter — overlay only, 8. Finish (+2 more)
+
+### Community 201 - "Logo Animation Patterns — Cookbook"
+Cohesion: 0.18
+Nodes (10): 1. Stroke draw-on (SVG + CSS), 2. Mask wipe / build-on (clipPath), 3. Build-on with stagger (GSAP timeline), 4. Morph (GSAP MorphSVG), 5. Seamless idle loop (loader), 6. Lottie delivery (designer-made), 7. Reduced-motion fallback (always ship), Brand clearspace & geometry rules (+2 more)
+
+### Community 202 - "Remotion API & Patterns"
+Cohesion: 0.18
+Nodes (10): Audio + beat sync, CLI rendering, Determinism checklist, Embedding shaders / Three.js, interpolate: full options, Parametric defaultProps + zod + calculateMetadata, Programmatic render with @remotion/renderer, Remotion API & Patterns (+2 more)
+
+### Community 203 - "Particle Recipes"
+Cohesion: 0.18
+Nodes (10): Canvas boilerplate, Confetti burst, Connected-dot constellation (full), Curl noise variant (divergence-free, fluid), Flow field with simplex noise, GPU Points with per-particle life and respawn, Mouse attraction / repulsion, Particle Recipes (+2 more)
+
+### Community 204 - "Shader / GLSL"
+Cohesion: 0.18
+Nodes (10): Core building blocks, Deliver & verify (standalone HTML), Fragment shader skeleton, Image transitions, Mobile / performance, Quick reference, Reference files, Shader / GLSL (+2 more)
+
+### Community 205 - "R3F, Animation, and Performance Reference"
+Cohesion: 0.18
+Nodes (10): AnimationMixer: full lifecycle, Dispose on unmount (vanilla), InstancedMesh: per-frame animation with color, Pixel ratio and adaptive resolution, Post-processing: bloom and depth of field, R3F, Animation, and Performance Reference, R3F (@react-three/postprocessing), Scroll-linked camera with drei ScrollControls (+2 more)
+
+### Community 206 - "Slide Components (runnable Remotion)"
+Cohesion: 0.20
+Nodes (9): Built by the team behind iart.ai, Content slide (mounts its own narration), Legibility checklist for these components, Reusable enter helper, Section divider, Shared theme, Slide Components (runnable Remotion), Staggered bullet list (+1 more)
+
+### Community 207 - "Script-to-Screen Workflow — Cookbook"
+Cohesion: 0.20
+Nodes (9): 1. Script formula: problem → solution → how → payoff, 2. VO timing math, 3. Storyboard template (fill in per scene), 4. Per-scene build checklist, 5. Caption authoring guidance, 6. Style-system spec sheet (lock before scene 2), Inlined scene techniques, Script-to-Screen Workflow — Cookbook (+1 more)
+
+### Community 208 - "Draw-On Recipes — Cookbook"
+Cohesion: 0.20
+Nodes (9): 1. The dashoffset draw-on (vanilla), 2. Hand follows the tip (the core illusion), 3. Multi-stroke drawing in order, 4. GSAP variants, 5. Handwriting, 6. Fill after outline, 7. Erase / wipe transitions, 8. Remotion port (frame-driven export) (+1 more)
+
+### Community 209 - "Batch pipeline: one template → many personalized videos"
+Cohesion: 0.20
+Nodes (9): Batch pipeline: one template → many personalized videos, Built by the team behind iart.ai, Concurrency, CSV → rows, File naming & delivery, Pipeline checklist, Scaling to thousands, The render loop (+1 more)
+
+### Community 210 - "Editing Techniques — Detailed Cookbook"
+Cohesion: 0.20
+Nodes (9): BPM → frame math, Cut on action / cut on motion, Editing Techniques — Detailed Cookbook, Example edit plan (portable), J-cut and L-cut, Match cut, step by step, NLE timeline vs code timeline, Sequence arc templates (+1 more)
+
+### Community 211 - "Sequenced Infographic — runnable reference"
+Cohesion: 0.22
+Nodes (8): Built by the team behind iart.ai, Dependency-free variant (inline SVG + Web Animations API), Master timing map (3 steps, 30fps), Mental model, Register it (`Root.tsx`), Remotion: `SequencedInfographic.tsx`, Sequenced Infographic — runnable reference, Template × data — one design, many infographics
+
+### Community 212 - "Whiteboard Pipeline — Cookbook"
+Cohesion: 0.22
+Nodes (8): 1. Convert art to drawable single-stroke SVG, 2. Author the draw order, 3. Handwriting / stroke fonts, 4. The marker hand asset, 5. Pace draw time to the VO line, 6. Storyboard → board build sequence, 7. Finish checklist, Whiteboard Pipeline — Cookbook
+
+### Community 213 - "Remotion recipes for Wrapped scenes"
+Cohesion: 0.22
+Nodes (8): Animation cheatsheet, Fonts, Percentile bar (the climax scene), Remotion recipes for Wrapped scenes, Sequencing scenes into the film, Staggered top-X list, The one rule that prevents broken renders, Transitions between scenes
+
+### Community 214 - "Self-check before delivering"
+Cohesion: 0.22
+Nodes (8): Director pass (contact sheet at 2 fps), Facts and assets, Frames, Motion, Self-check before delivering, Shapes and figures, Staging, Storyboard conformance
+
+### Community 215 - "Sequencing: deck schema → narration-timed video"
+Cohesion: 0.25
+Nodes (7): 1. Deck schema (the source of truth), 2. Measure narration → durations (the rule, in code), 3. Transition frame-budget accounting, 4. Assembly with `<TransitionSeries>`, 5. Render, Pitfalls, Sequencing: deck schema → narration-timed video
+
+### Community 216 - "Scene grammar: the Wrapped storyboard"
+Cohesion: 0.25
+Nodes (7): 9:16 safe-area map, A full 7-scene storyboard (22s @ 30fps = 660 frames), Copywriting patterns (data → words), Motion language, Scene grammar: the Wrapped storyboard, Scene-type recipes, The crescendo
+
+### Community 217 - "Storyboard, blocking and the beat grid"
+Cohesion: 0.25
+Nodes (7): 1. Beat grid, 2. Shot list, 3. Blocking: one world, many cameras, 4. Story logic, 5. Events, 6. Check the picture against the storyboard, Storyboard, blocking and the beat grid
+
+### Community 218 - "JavaScript Animation (every frame drawn in code)"
+Cohesion: 0.25
+Nodes (7): Default flow: don't stop to ask, Files, JavaScript Animation (every frame drawn in code), Model, Only if triggered, Rules that prevent the common failures, Self-check (the agent does this; the user never sees it)
+
+### Community 219 - "After Effects"
+Cohesion: 0.25
+Nodes (7): After Effects, Export recipes, Expressions & rigging, Performance triage, Project hygiene, Reference files, Routing
+
+### Community 220 - "Bar Chart Race — complete implementations"
+Cohesion: 0.29
+Nodes (6): Bar Chart Race — complete implementations, Common pitfalls, Data shape, Remotion component (the recommended path), Vanilla canvas variant (no React), Why each choice matters
+
+### Community 221 - "Forms"
+Cohesion: 0.29
+Nodes (6): Explainer (make a mechanism clear), Forms, Interactive page (not a video), Loop, Poem / ambient, Story (a character, something happens)
+
+### Community 222 - "Soundtrack"
+Cohesion: 0.29
+Nodes (6): Always: check it, How the music follows the picture, Limits, Other sources (only when asked), Soundtrack, Write the sound for this film
+
+### Community 223 - "Background Recipes — Drop-in Implementations"
+Cohesion: 0.29
+Nodes (6): 1. Rich CSS mesh gradient (blurred blobs), 2. Three.js aurora shader — full, with parallax and seamless loop, 3. Constellation field — grid-optimized + mouse repulsion, 4. Perfectly looping noise flow (canvas), 5. Reduced-motion + lifecycle manager, Background Recipes — Drop-in Implementations
+
+### Community 224 - "sys"
+Cohesion: 0.19
+Nodes (6): classify(), detect_faces(), main(), sample_frames(), load_csv(), main()
+
+### Community 225 - "Characters (only when one appears in more than one scene)"
+Cohesion: 0.33
+Nodes (5): Anchor points, Characters (only when one appears in more than one scene), Design it once, alone, before the scenes, From photos to a character (only if the user gave photos), Poses that read
+
+### Community 226 - "make_video.py"
+Cohesion: 0.09
+Nodes (17): bokeh_sprites(), bubble_patch(), cam_xform(), caption_chunks_timed(), draw_coin(), fun_font(), hex2rgb(), prep_vs() (+9 more)
+
+### Community 227 - "AI-generated music (optional)"
+Cohesion: 0.40
+Nodes (4): AI-generated music (optional), Lyria 3 via OpenRouter, Mix it under the picture, Then align the picture to it
+
+### Community 229 - "Kino darajasidagi vizual: grafika, joylar, effektlar — tadqiqot (2026-11-21, Shohjahon so'radi)"
+Cohesion: 0.40
+Nodes (4): 1. O'RNATILDI — iart-ai motion skills (MIT, 7 to'plam, faqat matn) → `docs/skills/iart-motion/`, 2. PILOT (ishladi): `work/pilot_map/map_insert.py`, 3. QO'SHIMCHA KERAK BO'LADIGANLAR (skill emas), Kino darajasidagi vizual: grafika, joylar, effektlar — tadqiqot (2026-11-21, Shohjahon so'radi)
+
+### Community 230 - "SKILL NAME: ELITE YOUTUBE VIDEO PRODUCTION & VISUAL QUALITY DIRECTOR"
+Cohesion: 0.13
+Nodes (14): 10. QUALITY CONTROL, 11. CREATIVE STANDARD, 1. CINEMATOGRAPHY & VIDEO FOOTAGE, 2. PROFESSIONAL VIDEO EDITING, 3. PREMIUM MOTION GRAPHICS, 4. VISUAL EFFECTS (VFX), 5. COLOR GRADING & COLOR SCIENCE, 6. SOUND DESIGN & AUDIO QUALITY (+6 more)
+
+### Community 231 - "`scripts/` — verify-loop toolkit"
+Cohesion: 0.50
+Nodes (3): Requirements, `scripts/` — verify-loop toolkit, Usage by tier
+
+### Community 261 - "Reviewing Animations"
+Cohesion: 0.18
+Nodes (9): Aggressive Escalation Triggers, Initial Response, Operating Posture, Part 1 — Findings table (REQUIRED), Part 2 — Verdict (REQUIRED), Remedial Preference Hierarchy, Required Output Format, Reviewing Animations (+1 more)
+
+### Community 262 - "scale"
+Cohesion: 0.29
+Nodes (6): Button press, What You Animate, Transforms & clip-path, check_voice(), clamp(), scale()
+
+### Community 263 - "voice_check.py"
+Cohesion: 0.48
+Nodes (4): main(), norm(), spoken(), transcribe()
+
+### Community 265 - "uz_voice_text"
+Cohesion: 0.40
+Nodes (3): uz_cyr(), uz_voice_text(), one()
+
+### Community 266 - "Workflow"
+Cohesion: 0.50
+Nodes (4): Phase 1: Find what animates, Phase 2: Diagnose, Phase 3: Report, Workflow
+
 ## Knowledge Gaps
-- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **41 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `scale()` connect `detect.py` to `Animation Standards Reference`, `Animation Recipes`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
-- **Should `detect.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.07682926829268293 - nodes in this community are weakly interconnected._
-- **Why does `Button press` connect `Animation Recipes` to `detect.py`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+- **Why does `scale()` connect `scale` to `detect.py`?**
+  _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **Should `buck3d.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.07380520266182698 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.056692242114237 - nodes in this community are weakly interconnected._
+- **Why does `Animation Standards Reference` connect `Animation Standards Reference` to `Reviewing Animations`, `scale`?**
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **Should `Choreographing Motion` be split into smaller, more focused modules?**
   _Cohesion score 0.058823529411764705 - nodes in this community are weakly interconnected._
+- **Why does `Transforms & clip-path` connect `scale` to `Animation Standards Reference`?**
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **Should `Animation Recipes` be split into smaller, more focused modules?**
-  _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.0625 - nodes in this community are weakly interconnected._
 - **Should `render` be split into smaller, more focused modules?**
-  _Cohesion score 0.0735632183908046 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06968641114982578 - nodes in this community are weakly interconnected._

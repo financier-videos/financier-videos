@@ -125,7 +125,7 @@ Sahnalar (~80 so'z):
 9. "Most people don't, even though..." — Buck dodge; loop → 1-sahna.
 Sarlavha: "A 1% Fee Can Cost You $64,000". Izoh savoli: "Do you know your fee?"
 
-## [TAYYOR, qayta qurildi] S-11 "Airport Prices Actually Have a Limit"
+## [CHIQDI 2026-11-22 10:00 ET — "NY Airports Can't Overcharge You Past 15%"; $2 suv va LA/Chikago raqamlari TASDIQLANMADI → olib tashlandi] S-11 "Airport Prices Actually Have a Limit"
 Manba: Port Authority of New York and New Jersey — "Street Pricing" siyosati: 2020-06-25 dan ko'cha narxi + ko'pi bilan 10%, 2024-12-12 yangilanishidan beri + 15% (va xodimlar uchun ixtiyoriy 3% ustama); arzon variantlar, jumladan $2 lik suv, majburiy ("We Value You" dasturi); yuqori narx sabablari sifatida Port Authority ijara, xavfsizlik, kommunal va xodimlar xarajatini ko'rsatgan (USA Today "Cruising Altitude" ruknida). Guardian (2022): Atlanta +15%, Los-Anjeles +18%, Chikago +10%.
 Tuzatildi: Gemini'dagi "$7 water", "50-cent", "$1,000 per square foot rent", "unionized security background checks" — manbasiz, olib tashlandi. Burilish o'zgardi: "nega qimmat" emas, "narxga chegara bor" (kam odam biladi — kuchliroq hook).
 Sahnalar (~76 so'z):
