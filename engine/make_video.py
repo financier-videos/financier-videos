@@ -53,7 +53,7 @@ Scene "sfx": list of extra effects: coin, cash, impact, tick, birds, whoosh, pop
 Animation (v2): stats count up with an overshoot "punch"; karaoke captions (active word gold, numbers green);
 animated background (light sweep, self-drawing chart line, floating $); Ken Burns on b-roll; scene transitions.
 Scene extras: "chart": {"labels": ["2014","2024"], "values": [1.42, 3.69], "texts": ["1.42¢","3.69¢"], "at": [0.3, 1.2]} (animated bars;
-optional "at" = seconds after scene start when each bar grows, to sync bars with the narration — rule of three!),
+optional "at" = seconds after scene start when each bar grows, to sync bars with the narration — rule of three!; v6.5 "hi": 0 = which bar is highlighted, default the last one),
 "fx": ["coin_rain", "arrow_up" | "arrow_down"], "transition": "punch" | "flash" | "slide".
 v2.2: "say": what the voice reads (captions keep "text"); money/percent are auto-normalized for TTS
 ($58.63 -> "58 dollars and 63 cents", $1.2 trillion -> "1.2 trillion dollars", 9% -> "9 percent").
@@ -1862,7 +1862,7 @@ def render(spec, wav, total, out, workdir):
                     b_at = chart.get("at"); p = ease_out((lt - (b_at[i] if b_at else 0.25 + 0.25 * i)) / (0.5 if b_at else 0.8))
                     h = hmax * (v / vmax) * p
                     bx = x0 + i * gap + (gap - bw) / 2
-                    cc = col if i == nb - 1 else (120, 130, 150)
+                    cc = col if i == chart.get("hi", nb - 1) else (120, 130, 150)  # v6.5: "hi" = highlighted bar index (default last)
                     fd.rounded_rectangle([bx, ybase - h, bx + bw, ybase], radius=int(bw * 0.12), fill=cc + (255,))
                     if p > 0.05:
                         txt = (texts[i] if texts and p >= 0.999 else count_text(texts[i], p)) if texts else f"{v * p:.2f}"

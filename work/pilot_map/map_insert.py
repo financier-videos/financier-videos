@@ -134,7 +134,7 @@ def main():
         dr = ImageDraw.Draw(im)
         # label slams in at 2.3 s
         u = ease((ts - 2.3) / 0.25)
-        if u > 0:
+        if u > 0 and label.strip():
             s = 1.25 - 0.25 * u
             f2 = ImageFont.truetype(ANTON, int(96 * s))
             tw = dr.textlength(label, font=f2)
