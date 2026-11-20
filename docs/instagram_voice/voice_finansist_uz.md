@@ -31,7 +31,11 @@ Spec'ga o'tkazish:
 | Ovoz | o'zbekcha: "Finansist 8 (Tashkent)" (spec "buck_voice": {"variant":"UZ","model":"eleven_v3"}), "lang": "uz"; eleven_v3 audio teglari "say" da: [sarcastic], [whispers], [laughs] (bitta so'zli teg; subtitrga chiqmaydi). Inglizcha: Buck D. |
 
 ## OCHILISH VA TEMP (Shohjahon 2026-11-20 23:00 — MAJBURIY, faqat o'zbekcha videolar)
-- HAR o'zbekcha video "Sheppim, eshittizmi?!" bilan, HAYAJON bilan boshlanadi (1-sahna: "say" "[excited] Sheppim, eshittizmi?!", Finansist center "shocked" + drop_in + zoom). Bu o'zbek profili uchun 1M+ qoidasi 1 ("birinchi so'z — fakt") dan ustun; fakt darhol 2-sahnada.
+- HAR o'zbekcha video HOOK IBORA bilan, HAYAJON bilan boshlanadi (Shohjahon 2026-11-20 23:10). Ro'yxat — navbat bilan, ketma-ket ikki videoda bir xil ibora YO'Q:
+  1. "Sheppim, eshittizmi?!" — yangilik/kutilmagan fakt (Finansist "shocked" + drop_in + zoom);
+  2. "Brat, qaravorin shundo!" — ekranda ko'rsatiladigan narsa: raqam, vs, chart (Finansist "point", ko'rsatish bilan);
+  3. "Oka, to'xtab turin!" — afsona/xato tushunchani to'xtatish (Finansist "angry" yoki "sideeye" + dodge/bonk).
+  Ibora mavzuga mos tanlanadi; 1-sahna "say": "[excited] <ibora>", "text" xuddi shu (subtitr). Yangi ibora faqat Shohjahon bersa qo'shiladi. Ishlatilgani playbook 9-bo'limdagi video qatoriga yoziladi. Bu o'zbek profili uchun 1M+ qoidasi 1 ("birinchi so'z — fakt") dan ustun; fakt darhol 2-sahnada.
 - Temp: "biroz tez, shoshib gapiryapti" → "settings": {"stability": 0.5, "speed": 0.88}; butun ssenariy bitta take (one_take).
 - Aktyorlik va mimika: "HAZILKASH BUZG'UNCHI" bo'limi to'liq — har sahnada kayfiyat o'zgaradi (shocked → sideeye+dodge → confused → laugh → shocked → proud+zoom qotish → dizzy+bonk → point).
 - Talaffuz lug'ati: "sheppim" → "Шеппим" (spec "uz_lex"; Shohjahon a/b/c sinovidan keyin aniqlanadi).
