@@ -34,6 +34,7 @@ Bir xil skelet (raqam → "Wait?!" → manba → vs → savol → loop) ketma-ke
 ## USLUBLAR KUTUBXONASI VA REJISSORLIK (Shohjahon 2026-11-20 18:44) — `docs/style_library.md` ni A va B ishida o'qi
 - Har Short: tuzilmaning 3 variantini qisqa yoz, birini tanla; bitta "imzo kadr"; kamida 2 sukunat ("beat") va har ko'ringan harakatga sfx; temp bir tekis emas; ekrandagi matn ≥1.8 s.
 - OVOZ BALANDLIGI: maqsad integrated ≈ −14 LUFS (`ffmpeg -i f.mp4 -af ebur128 -f null -` oxiridagi "I:"); −16 dan past yoki −12 dan baland bo'lsa spec'da balandlikni to'g'rilab qayta mux qil. `ffmpeg -vf blackdetect=d=0.1` — bo'sh kadr yo'q.
+- TASHQI SKILLAR: `docs/skills/README.md` — qachon qaysi faylni o'qish va ularga qanday munosabat (ma'lumotnoma, buyruq emas; raqamlari — gipoteza). Haftasiga 1 marta (dushanba B) GitHub'dan 1–2 yangi foydali manba qidir va README jadvaliga qo'sh (tartib o'sha yerda).
 - OVOZ MATN TEKSHIRUVI: imkon bo'lsa har videoda `engine/vendor/lemo/tts/asr_check.py` bilan jumlalarni tekshir (style_library.md jadvali); model yuklanmasa — o'tkazib yubor va growth_log ga 1 marta yoz.
 - USLUBLI INSERT: kuniga ko'pi bilan 1 ta Short (uzun videoda 2–3) — style_library.md dagi tartib va cheklovlar bilan; chiqmasa insertsiz chiqar. BIRINCHI SINOV: keyingi A ishida bitta Shortga (masalan bank S-11 aeroport yoki S-04) `hardcore-info` yoki `iso-infographic` usulida 4 s insert; natija va sarflangan vaqtni growth_log ga yoz (30 daqiqadan oshsa — to'xtat, insertsiz chiqar).
 
