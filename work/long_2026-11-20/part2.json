@@ -1,0 +1,405 @@
+{
+ "format": "long",
+ "sfx": true,
+ "theme": "noir",
+ "scenes": [
+  {
+   "text": "But first... let's go to the gym. Heh. Don't worry, it's a short trip.",
+   "head": "FIRST: THE GYM",
+   "transition": "flash",
+   "mascot": {
+    "mood": "laugh",
+    "pos": "center",
+    "act": "flip",
+    "act_at": 1.0
+   }
+  },
+  {
+   "text": "In 2006, two economists studied 7,752 gym members.",
+   "head": "7,752 GYM MEMBERS",
+   "say": "In two thousand six, two economists studied seven thousand, seven hundred fifty-two gym members.",
+   "stat": "7,752",
+   "show_source": "Source: DellaVigna & Malmendier, \"Paying Not to Go to the Gym\", American Economic Review (2006)",
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   },
+   "sfx": [
+    "tick"
+   ]
+  },
+  {
+   "text": "The ones on monthly plans paid over $70 a month.",
+   "head": "MONTHLY PLAN: $70+",
+   "say": "The ones on monthly plans paid over seventy dollars a month.",
+   "stat": "$70+",
+   "mascot": {
+    "mood": "proud",
+    "pos": "corner"
+   },
+   "show_source": "Source: DellaVigna & Malmendier, \"Paying Not to Go to the Gym\", American Economic Review (2006)"
+  },
+  {
+   "text": "Then they counted the visits. Guess how many per month?",
+   "head": "HOW MANY VISITS?",
+   "sticker": "GUESS!",
+   "sticker_at": 1.8,
+   "mascot": {
+    "mood": "confused",
+    "pos": "center"
+   },
+   "zoom": {
+    "at": 2.0,
+    "amt": 1.2,
+    "hold": 0.8,
+    "on": "buck"
+   }
+  },
+  {
+   "text": "...Four point three.",
+   "head": "4.3 VISITS A MONTH",
+   "beat": 0.8,
+   "stat": "4.3",
+   "color": "#FF4D4D",
+   "mascot": {
+    "mood": "dizzy",
+    "pos": "corner"
+   },
+   "sfx": [
+    "wahwah@0.3"
+   ]
+  },
+  {
+   "text": "So every visit cost more than $17. A ten-visit pass? $10 a visit.",
+   "head": "PER VISIT",
+   "say": "So every visit cost more than seventeen dollars. A ten-visit pass? Ten dollars a visit.",
+   "vs": {
+    "left": "$17+",
+    "left_label": "Monthly plan",
+    "left_sub": "per visit",
+    "right": "$10",
+    "right_label": "10-visit pass",
+    "right_sub": "per visit",
+    "win": "right",
+    "at": [
+     0.3,
+     3.0
+    ],
+    "vs_at": 1.7
+   },
+   "show_source": "Source: DellaVigna & Malmendier, \"Paying Not to Go to the Gym\", American Economic Review (2006)"
+  },
+  {
+   "text": "They paid more... to go less. Ow.",
+   "head": "PAY MORE. GO LESS.",
+   "mascot": {
+    "mood": "dizzy",
+    "pos": "center",
+    "act": "bonk",
+    "act_at": 1.2
+   },
+   "shake": 0.3
+  },
+  {
+   "text": "The economists' explanation? People were overconfident about how often they'd go.",
+   "head": "THE REAL REASON",
+   "sticker": "OVERCONFIDENT",
+   "sticker_at": 2.6,
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "center"
+   }
+  },
+  {
+   "text": "",
+   "head": "I'LL START MONDAY",
+   "buck": "I'll start Monday.",
+   "mascot": {
+    "mood": "smug",
+    "pos": "center"
+   },
+   "sfx": [
+    "ding@0.9"
+   ]
+  },
+  {
+   "text": "Now flip it around. Why do companies love subscriptions so much?",
+   "head": "WHY THEY LOVE IT",
+   "transition": "slide",
+   "mascot": {
+    "mood": "point",
+    "pos": "center",
+    "act": "flip",
+    "act_at": 0.3
+   }
+  },
+  {
+   "text": "A subscription is money that shows up on its own. Every month. No new decision.",
+   "head": "MONEY ON AUTOPILOT",
+   "fx": [
+    "coin_rain"
+   ],
+   "mascot": {
+    "mood": "happy",
+    "pos": "corner"
+   },
+   "sfx": [
+    "cash@1.0"
+   ]
+  },
+  {
+   "text": "My guess? Every new decision is a chance to say no. Autopay skips the decision.",
+   "head": "NO DECISION. NO \"NO\".",
+   "sticker": "SKIP THE \"NO\"",
+   "sticker_at": 3.4,
+   "mascot": {
+    "mood": "smug",
+    "pos": "center"
+   }
+  },
+  {
+   "text": "And free trials? They're the welcome mat.",
+   "head": "FREE TRIALS",
+   "transition": "flash",
+   "sticker": "FREE!*",
+   "sticker_at": 1.4,
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "center"
+   }
+  },
+  {
+   "text": "In a 2026 Self Financial survey, about seven in ten people said they'd forgotten to cancel a free trial.",
+   "head": "7 IN 10 FORGOT",
+   "say": "In a twenty twenty-six Self Financial survey, about seven in ten people said they'd forgotten to cancel a free trial.",
+   "stat": "70%",
+   "show_source": "Source: Self Financial subscription survey (March 2026)",
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Free for seven days. Then... not free. For a long, long time. Heh.",
+   "head": "FREE... UNTIL IT ISN'T",
+   "vs": {
+    "left": "FREE",
+    "left_label": "Day 1 to 7",
+    "right": "PAID",
+    "right_label": "Day 8 onward",
+    "win": "right",
+    "at": [
+     0.3,
+     2.0
+    ],
+    "vs_at": 1.2,
+    "left_color": "#2BD67B",
+    "right_color": "#FF4D4D"
+   }
+  },
+  {
+   "text": "Now, the exit door. The FTC has a name for tricks like this: dark patterns.",
+   "head": "DARK PATTERNS",
+   "transition": "slide",
+   "show_source": "Source: FTC staff report \"Bringing Dark Patterns to Light\" (September 2022)",
+   "mascot": {
+    "mood": "shocked",
+    "pos": "center"
+   },
+   "zoom": {
+    "at": 3.0,
+    "amt": 1.2,
+    "hold": 0.8,
+    "on": "buck"
+   }
+  },
+  {
+   "text": "Designs that steer you into things you didn't plan. Like signing up in one click... and canceling through a maze.",
+   "head": "1 CLICK IN. A MAZE OUT.",
+   "vs": {
+    "left": "1 CLICK",
+    "left_label": "Sign up",
+    "right": "MAZE",
+    "right_label": "Cancel",
+    "win": "right",
+    "at": [
+     1.8,
+     3.8
+    ],
+    "vs_at": 3.0,
+    "right_color": "#FF4D4D"
+   },
+   "show_source": "Source: FTC staff report \"Bringing Dark Patterns to Light\" (September 2022)"
+  },
+  {
+   "text": "The FTC's 2022 report lists the classics: ads disguised as content, key terms buried in fine print...",
+   "head": "THE CLASSICS",
+   "say": "The FTC's twenty twenty-two report lists the classics: ads disguised as content, key terms buried in fine print...",
+   "sticker": "FINE PRINT",
+   "sticker_at": 3.4,
+   "mascot": {
+    "mood": "confused",
+    "pos": "center"
+   },
+   "show_source": "Source: FTC staff report \"Bringing Dark Patterns to Light\" (September 2022)"
+  },
+  {
+   "text": "...and subscriptions that are hard to cancel. Hmm. Sounds familiar.",
+   "head": "SOUND FAMILIAR?",
+   "sticker": "HARD TO CANCEL",
+   "sticker_at": 0.6,
+   "sticker_color": "#FF4D4D",
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "center",
+    "act": "dodge",
+    "act_at": 1.8
+   }
+  },
+  {
+   "text": "Which cancel button was the worst one YOU ever fought?",
+   "head": "WORST ONE YOU FOUGHT?",
+   "sticker": "WORST CANCEL?",
+   "sticker_at": 1.0,
+   "mascot": {
+    "mood": "point",
+    "pos": "center"
+   }
+  },
+  {
+   "text": "Here's a real one. In 2023, the FTC sued Amazon over Prime sign-ups and cancellations.",
+   "head": "THE PRIME CASE",
+   "say": "Here's a real one. In twenty twenty-three, the FTC sued Amazon over Prime sign-ups and cancellations.",
+   "show_source": "Source: FTC v. Amazon (filed 2023); settlement announced Sept 25, 2025 (AP, NBC News)",
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "center"
+   },
+   "sfx": [
+    "tick"
+   ]
+  },
+  {
+   "text": "The FTC said Amazon's own nickname for that cancel process was... the Iliad.",
+   "head": "ITS NICKNAME?",
+   "sticker": "\"THE ILIAD\"",
+   "sticker_at": 3.4,
+   "look": "sepia",
+   "mascot": {
+    "mood": "confused",
+    "pos": "center"
+   }
+  },
+  {
+   "text": "The Iliad! An ancient Greek poem about a ten-year war. Heh... for a cancel button.",
+   "head": "AN EPIC... FOR A BUTTON",
+   "look": "sepia",
+   "mascot": {
+    "mood": "laugh",
+    "pos": "center",
+    "act": "dodge",
+    "act_at": 1.0
+   },
+   "sfx": [
+    "scratch@0.1"
+   ]
+  },
+  {
+   "text": "The complaint said that process took four pages, six clicks and fifteen options to get out.",
+   "head": "4 PAGES. 6 CLICKS. 15 OPTIONS.",
+   "chart": {
+    "labels": [
+     "Pages",
+     "Clicks",
+     "Options"
+    ],
+    "values": [
+     4,
+     6,
+     15
+    ],
+    "texts": [
+     "4",
+     "6",
+     "15"
+    ],
+    "at": [
+     2.0,
+     2.7,
+     3.5
+    ]
+   },
+   "show_source": "Source: FTC v. Amazon (filed 2023); settlement announced Sept 25, 2025 (AP, NBC News)"
+  },
+  {
+   "text": "In September 2025, Amazon agreed to pay $2.5 billion.",
+   "head": "$2.5 BILLION",
+   "say": "In September twenty twenty-five, Amazon agreed to pay two and a half billion dollars.",
+   "stat": "$2.5B",
+   "show_source": "Source: FTC v. Amazon (filed 2023); settlement announced Sept 25, 2025 (AP, NBC News)",
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner"
+   },
+   "shake": 0.3,
+   "sfx": [
+    "impact@2.8"
+   ]
+  },
+  {
+   "text": "One billion in penalties, one and a half billion back to customers. Amazon admitted no wrongdoing.",
+   "head": "WHERE IT GOES",
+   "say": "One billion in penalties, one and a half billion back to customers. Amazon admitted no wrongdoing.",
+   "chart": {
+    "labels": [
+     "Penalty",
+     "Refunds"
+    ],
+    "values": [
+     1.0,
+     1.5
+    ],
+    "texts": [
+     "$1B",
+     "$1.5B"
+    ],
+    "at": [
+     0.4,
+     1.9
+    ]
+   },
+   "show_source": "Source: FTC v. Amazon (filed 2023); settlement announced Sept 25, 2025 (AP, NBC News)"
+  },
+  {
+   "text": "Reports said about 35 million customers could get refunds. Up to $51 each.",
+   "head": "UP TO $51 EACH",
+   "say": "Reports said about thirty-five million customers could get refunds. Up to fifty-one dollars each.",
+   "stat": "$51",
+   "show_source": "Source: FTC v. Amazon (filed 2023); settlement announced Sept 25, 2025 (AP, NBC News)",
+   "mascot": {
+    "mood": "happy",
+    "pos": "corner"
+   },
+   "fx": [
+    "coin_rain"
+   ]
+  },
+  {
+   "text": "Fifty-one bucks. For a war poem. Heh... I'd read it for less.",
+   "head": "FOR A WAR POEM",
+   "mascot": {
+    "mood": "laugh",
+    "pos": "center"
+   },
+   "look": "sepia"
+  }
+ ],
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  },
+  "tempo": 1.0,
+  "max_pause": 0.5
+ }
+}

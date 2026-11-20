@@ -45,7 +45,7 @@ spec.json:
     {"text": "spoken line", "head": "ON-SCREEN HEADLINE", "color": "#F5C542",
      "broll": "/path/clip.mp4" (optional), "stat": "83%" (optional big number)}
   ],
-  "source": "Source: ... (optional, shown small at the bottom)",
+  "source": "Source: ... (optional, shown small at the bottom)",   # scene "show_source": true shows it; "show_source": "Source: X" shows that text instead (v6.2)
   "sfx": true,              # auto whoosh on scene change + pop when a stat appears
   "ambient": "birds",       # optional soft bird/breeze bed under the whole video; "ambient_vol": 0.08
 }
@@ -1687,6 +1687,8 @@ def render(spec, wav, total, out, workdir):
             big = not (sc.get("stat") or chart or masc or vsd)
             stk = sticker_patch(sc["sticker"], S * (0.13 if big else 0.085), hex2rgb(sc.get("sticker_color", "#FF4D4D")))
             stk_c = (W / 2, H * (0.42 if big else (0.27 if not long else 0.24))); stk_at = float(sc.get("sticker_at", 0))
+            if long and not big and not vsd:  # v6.2: 16:9 has room at the side — keep stickers off the headline and Buck's hat
+                stk_c = (W * 0.75, H * 0.42)
         look = sc.get("look"); shake = float(sc.get("shake", 0))
         # ---- v4.1 reaction crash-zoom: focus point + timing ----
         zm = sc.get("zoom")
@@ -1889,9 +1891,10 @@ def render(spec, wav, total, out, workdir):
                             x += widths[j] + sp
                     break
             # ---------- source, progress, brand ----------
-            if spec.get("source") and sc.get("show_source"):
-                tw = ud.textlength(spec["source"], font=f_src)
-                ud.text(((W - tw) / 2, H * (0.93 if long else 0.775)), spec["source"], font=f_src, fill=GREY + (255,))
+            src_txt = sc["show_source"] if isinstance(sc.get("show_source"), str) else spec.get("source")  # 2026-11-20: per-scene source line (long videos cite many sources)
+            if src_txt and sc.get("show_source"):
+                tw = ud.textlength(src_txt, font=f_src)
+                ud.text(((W - tw) / 2, H * (0.93 if long else 0.775)), src_txt, font=f_src, fill=GREY + (255,))
             ud.rectangle([0, 0, int(W * t / total), int(S * 0.009)], fill=GOLD + (255,))
             ud.text((W * 0.04, (H - S * 0.07) if long else S * 0.03), "FINANCIER", font=f_brand, fill=GOLD + (150,))
             if cinema:  # v6: parallax — background 0.55x, content 1x, near bokeh 1.6x of the camera move

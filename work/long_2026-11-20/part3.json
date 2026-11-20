@@ -1,0 +1,283 @@
+{
+ "format": "long",
+ "sfx": true,
+ "theme": "mint",
+ "scenes": [
+  {
+   "text": "So... is there a rule that says canceling has to be easy?",
+   "head": "IS THERE A RULE?",
+   "transition": "slide",
+   "mascot": {
+    "mood": "confused",
+    "pos": "center",
+    "act": "roll_in"
+   },
+   "zoom": {
+    "at": 2.4,
+    "amt": 1.18,
+    "hold": 0.7,
+    "on": "buck"
+   }
+  },
+  {
+   "text": "In October 2024, the FTC finalized a click-to-cancel rule. Cancel as easily as you signed up.",
+   "head": "OCTOBER 2024",
+   "say": "In October twenty twenty-four, the FTC finalized a click-to-cancel rule. Cancel as easily as you signed up.",
+   "sticker": "CLICK TO CANCEL",
+   "sticker_at": 2.8,
+   "sticker_color": "#2BD67B",
+   "show_source": "Source: FTC rule (Oct 2024); 8th Circuit decision (July 2025); FTC advance notice (Mar 11, 2026)",
+   "mascot": {
+    "mood": "happy",
+    "pos": "center",
+    "act": "flip",
+    "act_at": 3.0
+   }
+  },
+  {
+   "text": "Then, in July 2025, a federal appeals court struck it down. Over procedure.",
+   "head": "JULY 2025",
+   "say": "Then, in July twenty twenty-five, a federal appeals court struck it down. Over procedure.",
+   "sticker": "STRUCK DOWN",
+   "sticker_at": 2.6,
+   "sticker_color": "#FF4D4D",
+   "mascot": {
+    "mood": "sad",
+    "pos": "center"
+   },
+   "sfx": [
+    "scratch@2.5"
+   ],
+   "show_source": "Source: FTC rule (Oct 2024); 8th Circuit decision (July 2025); FTC advance notice (Mar 11, 2026)"
+  },
+  {
+   "text": "And in March 2026, the FTC started over, asking the public for comments.",
+   "head": "MARCH 2026",
+   "say": "And in March twenty twenty-six, the FTC started over, asking the public for comments.",
+   "sticker": "ROUND 2",
+   "sticker_at": 1.6,
+   "mascot": {
+    "mood": "point",
+    "pos": "center"
+   },
+   "sfx": [
+    "ding@1.6"
+   ],
+   "show_source": "Source: FTC rule (Oct 2024); 8th Circuit decision (July 2025); FTC advance notice (Mar 11, 2026)"
+  },
+  {
+   "text": "Meanwhile, many states have their own auto-renewal laws. So the answer is... it depends where you live.",
+   "head": "SO... IS IT LEGAL?",
+   "sticker": "IT DEPENDS",
+   "sticker_at": 4.0,
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "center"
+   }
+  },
+  {
+   "text": "Which brings us back to your number. Remember it?",
+   "head": "YOUR NUMBER",
+   "transition": "flash",
+   "mascot": {
+    "mood": "smug",
+    "pos": "center"
+   },
+   "zoom": {
+    "at": 2.0,
+    "amt": 1.22,
+    "hold": 0.8,
+    "on": "buck"
+   }
+  },
+  {
+   "text": "So I tried it myself. I opened my wallet app and counted everything I pay for.",
+   "head": "BUCK'S EXPERIMENT",
+   "sticker": "BUCK TRIES IT",
+   "sticker_at": 0.4,
+   "mascot": {
+    "mood": "proud",
+    "pos": "center",
+    "act": "drop_in"
+   }
+  },
+  {
+   "text": "Streaming. Cloud storage. A monocle-polishing club...",
+   "head": "WAIT. WHAT?",
+   "sticker": "MONOCLE CLUB?!",
+   "sticker_at": 2.0,
+   "mascot": {
+    "mood": "shocked",
+    "pos": "center"
+   },
+   "sfx": [
+    "boing@2.0"
+   ],
+   "shake": 0.25
+  },
+  {
+   "text": "I don't remember joining a monocle-polishing club. I don't even... okay, I have a monocle.",
+   "head": "I HAVE A MONOCLE",
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "center",
+    "act": "dodge",
+    "act_at": 2.4
+   }
+  },
+  {
+   "text": "Relax. I have a plan. I'll cancel it right now.",
+   "head": "I HAVE A PLAN",
+   "mascot": {
+    "mood": "proud",
+    "pos": "center"
+   },
+   "sfx": [
+    "ding@0.8"
+   ]
+  },
+  {
+   "text": "It asked for my password. Then my reason. Then offered me three months half off.",
+   "head": "THE MAZE, LIVE",
+   "sticker": "ARE YOU LEAVING US?",
+   "sticker_at": 3.0,
+   "mascot": {
+    "mood": "confused",
+    "pos": "center",
+    "act": "bonk",
+    "act_at": 4.0
+   },
+   "sfx": [
+    "buzzer@4.0"
+   ]
+  },
+  {
+   "text": "",
+   "head": "PLANNED THAT",
+   "buck": "...Planned that.",
+   "beat": 0.4,
+   "mascot": {
+    "mood": "dizzy",
+    "pos": "center"
+   }
+  },
+  {
+   "text": "My guess was way lower than my real total. Just like the people in that 2022 survey.",
+   "head": "GUESS: TOO LOW",
+   "say": "My guess was way lower than my real total. Just like the people in that twenty twenty-two survey.",
+   "vs": {
+    "left": "$86",
+    "left_label": "2022: guessed",
+    "right": "$219",
+    "right_label": "2022: paid",
+    "win": "right",
+    "at": [
+     0.3,
+     1.4
+    ],
+    "vs_at": 0.9
+   },
+   "show_source": "Source: C+R Research subscription survey, reported by CNBC (June 2, 2022)"
+  },
+  {
+   "text": "So here's my question: what's the weirdest subscription you found you were still paying for?",
+   "head": "YOUR TURN",
+   "sticker": "WEIRDEST ONE?",
+   "sticker_at": 2.0,
+   "mascot": {
+    "mood": "point",
+    "pos": "center"
+   }
+  },
+  {
+   "text": "Write it in the comments. I'll read them... while my monocle club bills me.",
+   "head": "TELL ME BELOW",
+   "mascot": {
+    "mood": "laugh",
+    "pos": "center"
+   },
+   "sfx": [
+    "cash@3.4"
+   ]
+  },
+  {
+   "text": "Buck's bloopers!",
+   "head": "BUCK'S BLOOPERS",
+   "transition": "flash",
+   "sticker": "BLOOPERS",
+   "sticker_at": 0.2,
+   "mascot": {
+    "mood": "laugh",
+    "pos": "center",
+    "act": "roll_in"
+   },
+   "sfx": [
+    "scratch@0.0"
+   ]
+  },
+  {
+   "text": "The Ill... the Illy... the Iliad. Who names a button after a POEM?",
+   "head": "TAKE 1",
+   "look": "sepia",
+   "mascot": {
+    "mood": "confused",
+    "pos": "center"
+   }
+  },
+  {
+   "text": "Four point three visits. Four point... hold on. I need to sit down. From the gym.",
+   "head": "TAKE 2",
+   "look": "sepia",
+   "mascot": {
+    "mood": "dizzy",
+    "pos": "center",
+    "act": "bonk",
+    "act_at": 1.4
+   }
+  },
+  {
+   "text": "Monocle club: cancel! Cancel! ...It's asking if I'm SURE.",
+   "head": "TAKE 3",
+   "look": "sepia",
+   "sticker": "ARE YOU SURE?",
+   "sticker_at": 2.4,
+   "mascot": {
+    "mood": "angry",
+    "pos": "center"
+   },
+   "sfx": [
+    "buzzer@2.4"
+   ]
+  },
+  {
+   "text": "Wait, was it eighty-six or... two hundred... I'm a coin, not a calculator!",
+   "head": "TAKE 4",
+   "look": "sepia",
+   "mascot": {
+    "mood": "shocked",
+    "pos": "center"
+   },
+   "shake": 0.3
+  },
+  {
+   "text": "I'm okay! Did my own stunts.",
+   "head": "I'M OKAY!",
+   "mascot": {
+    "mood": "thumbsup",
+    "pos": "center",
+    "act": "drop_in"
+   },
+   "sfx": [
+    "ding@1.2"
+   ]
+  }
+ ],
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  },
+  "tempo": 1.0,
+  "max_pause": 0.5
+ }
+}

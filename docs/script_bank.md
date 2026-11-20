@@ -30,7 +30,7 @@ Sarlavha: "The Cart Trick That Costs You 40%". Izoh savoli: "Team cart or team b
 Sabab: (1) takror — "The Penny Cost 4 Cents to Make" 2026-11-19 da chiqqan; (2) eskirgan — AQSh Mint oxirgi muomala pennisini 2025-11-12 da zarb qilgan (St. Louis Fed, 2026-05), "every single year" endi noto'g'ri.
 [G'OYA, tekshirish kerak] "The Nickel Costs 13.8 Cents": FY2024 da nikel 13.78 sent, penni 3.69 sent, penni zarari $85.3 mln (U.S. Mint yillik hisoboti; St. Louis Fed 2026-05). Ishlatishdan oldin: nikel 2026 da hali zarb qilinyaptimi va so'nggi (FY2025) narxini tekshir.
 
-## [KONSEPT, uzun video] "Everyday Traps Quietly Draining Your Wallet"
+## [KONSEPT, uzun video — keyingisi uchun] "Everyday Traps Quietly Draining Your Wallet" (obunalar qismi 2026-11-20 "The Subscription Trap" da ishlatildi — takrorlama)
 "$4,500 a year" raqami manbasiz — sarlavhaga QO'YMA; har bobning o'z manbali raqami bo'lsin (obunalar $252/yil ishlatilmaydi — CNET 2026; savat +40% — Lindstrom; $X.99 narxlar — Anderson & Simester 2003; gym — DellaVigna & Malmendier 2006 va h.k., playbook 8-bo'lim). Jami raqam faqat manbali raqamlar yig'indisi bo'lsa aytiladi.
 
 ## [TAYYOR] S-04 "Pink Costs More 42% of the Time" (2026-11-20, 2-partiya)

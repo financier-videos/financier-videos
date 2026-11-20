@@ -15,3 +15,8 @@ Har kuni KAMIDA bitta yozuv. Format: sana — O'RGANILDI (manba, sana) → O'ZGA
    HALI YO'Q: 3D muhit/proplar (kupyura, do'kon, samolyot), har videoga maxsus 3D kadr — eng katta xilma-xillik shundan keladi; GPU ishi, alohida bosqich.
 7. O'ZGARTIRILDI (BUYURTMA 2, 07:25–08:05): tungi 7 Short qayta yasaldi. ESKIDAN FARQI: 7 videoda 5 xil theme (royal, ember, ocean, noir, mint) — avval hammasi bir xil fon; 7 xil format (raqam hikoyasi, taxmin o'yini, vs, detektiv, sanoq, afsona-haqiqat, "sen shu yerdasan"); ochilishlar har xil (b-roll+raqam, Buck center savol, katta raqam, "case file", vs-panel); emotsiyalar 6 xil. Ovoz: buzuq TTS take endi keshdagi belgi/soniya bilan avtomatik topiladi (<9 → qayta); raqamlar "say" da so'z bilan.
    O'LCHOV: 23:17 tahlilda 20-noy Shortlarining 3 s ushlab qolishi (vosita bersa) — kechagi (19-noy, eski uslub) bilan solishtir; ertangi B ishida 7 videoning 1-kadrlarini yonma-yon qo'yib "bir xil tuyuladimi" bahosi.
+
+## 2026-11-20 (vazifa, A 09:19)
+8. O'RGANILDI: kanalning birinchi Buck uzun videosi — 16:9 da dvigatel avval sinalmagan edi; sinov render (3 sahna) layout to'g'ri, lekin to'liq renderda sticker sarlavha va Buck shlyapasini yopardi; dvigatel bitta yadroda ishlaydi.
+   O'ZGARTIRILDI: engine v6.2 — 16:9 da sticker Buck yonida; sahnaga o'z "show_source" matni; uzun video 3 bo'lakda parallel render (3 xil theme — bitta video ichida ham xilma-xillik); sticker sarlavhani takrorlamaydi (9 ta sarlavha almashtirildi).
+   O'LCHOV: 23:17 C da uzun videoning o'rtacha ko'rish % (vosita bersa) va qaysi bobda tushish — keyingi uzun video tuzilmasiga.

@@ -1,0 +1,363 @@
+{
+ "format": "long",
+ "sfx": true,
+ "theme": "vault",
+ "scenes": [
+  {
+   "text": "Quick! How much do you spend on subscriptions every month? Guess. Out loud.",
+   "head": "YOUR GUESS?",
+   "mascot": {
+    "mood": "smug",
+    "pos": "center",
+    "act": "roll_in"
+   },
+   "zoom": {
+    "at": 2.2,
+    "amt": 1.2,
+    "hold": 0.8,
+    "on": "buck"
+   }
+  },
+  {
+   "text": "Got a number? Good. Hold on to it.",
+   "head": "HOLD THAT NUMBER",
+   "sticker": "YOUR NUMBER: ___",
+   "sticker_at": 0.8,
+   "mascot": {
+    "mood": "point",
+    "pos": "corner",
+    "act": "flip"
+   }
+  },
+  {
+   "text": "Because in 2022, researchers asked Americans that exact question.",
+   "head": "THE BIG GUESS",
+   "say": "Because in twenty twenty-two, researchers asked Americans that exact question.",
+   "show_source": "Source: C+R Research subscription survey, reported by CNBC (June 2, 2022)",
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "center"
+   },
+   "sfx": [
+    "tick"
+   ]
+  },
+  {
+   "text": "On average, people guessed $86 a month. The real number? $219.",
+   "head": "GUESS vs REALITY",
+   "say": "On average, people guessed eighty-six dollars a month. The real number? ... Two hundred nineteen.",
+   "vs": {
+    "left": "$86",
+    "left_label": "They guessed",
+    "left_sub": "per month",
+    "right": "$219",
+    "right_label": "They actually paid",
+    "right_sub": "per month",
+    "win": "right",
+    "at": [
+     0.3,
+     3.4
+    ],
+    "vs_at": 1.8
+   },
+   "show_source": "Source: C+R Research subscription survey, reported by CNBC (June 2, 2022)"
+  },
+  {
+   "text": "Whoa! That's more than double!",
+   "head": "MORE THAN DOUBLE",
+   "beat": 0.5,
+   "mascot": {
+    "mood": "shocked",
+    "pos": "center",
+    "act": "drop_in"
+   },
+   "shake": 0.35,
+   "sfx": [
+    "impact@0.5"
+   ]
+  },
+  {
+   "text": "And 42% forgot about at least one subscription they were still paying for.",
+   "head": "FORGOTTEN, BUT PAID",
+   "say": "And forty-two percent forgot about at least one subscription they were still paying for.",
+   "stat": "42%",
+   "color": "#FF4D4D",
+   "mascot": {
+    "mood": "confused",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Forty-two percent! That's not a subscription. That's a ghost.",
+   "head": "42% FORGOT",
+   "sticker": "GHOST BILL",
+   "sticker_at": 1.6,
+   "mascot": {
+    "mood": "laugh",
+    "pos": "center"
+   },
+   "sfx": [
+    "boing@1.6"
+   ]
+  },
+  {
+   "text": "Here's the sneaky part. Ten dollars a month doesn't feel like money.",
+   "head": "$10 A MONTH...",
+   "say": "Here's the sneaky part. Ten dollars a month doesn't feel like money.",
+   "stat": "$10",
+   "mascot": {
+    "mood": "smug",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "But ten dollars, twelve times? That's $120 a year. Same money. Different costume.",
+   "head": "...= $120 A YEAR",
+   "say": "But ten dollars, twelve times? That's a hundred twenty dollars a year. Same money. Different costume.",
+   "chart": {
+    "labels": [
+     "1 month",
+     "12 months"
+    ],
+    "values": [
+     10,
+     120
+    ],
+    "texts": [
+     "$10",
+     "$120"
+    ],
+    "at": [
+     0.3,
+     2.2
+    ]
+   },
+   "fx": [
+    "arrow_up"
+   ]
+  },
+  {
+   "text": "Okay, okay... that was 2022. What about now?",
+   "head": "WHAT ABOUT NOW?",
+   "say": "Okay, okay... that was twenty twenty-two. What about now?",
+   "transition": "flash",
+   "mascot": {
+    "mood": "confused",
+    "pos": "center"
+   },
+   "zoom": {
+    "at": 1.6,
+    "amt": 1.18,
+    "hold": 0.7,
+    "on": "buck"
+   }
+  },
+  {
+   "text": "CNET's 2026 survey counted $111 a month.",
+   "head": "2026: $111 A MONTH",
+   "say": "CNET's twenty twenty-six survey counted a hundred eleven dollars a month.",
+   "stat": "$111",
+   "show_source": "Source: CNET subscription survey, July 2026 (reported by WFSB, Jul 16, 2026)",
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Up from $90 a year before. That's 23% in one year.",
+   "head": "+23% IN ONE YEAR",
+   "say": "Up from ninety dollars a year before. That's twenty-three percent in one year.",
+   "chart": {
+    "labels": [
+     "2025",
+     "2026"
+    ],
+    "values": [
+     90,
+     111
+    ],
+    "texts": [
+     "$90",
+     "$111"
+    ],
+    "at": [
+     0.4,
+     1.8
+    ]
+   },
+   "fx": [
+    "arrow_up"
+   ]
+  },
+  {
+   "text": "And about $21 of it, every month? Stuff people don't even use.",
+   "head": "$21 A MONTH. UNUSED.",
+   "say": "And about twenty-one dollars of it, every month? Stuff people don't even use.",
+   "stat": "$21",
+   "color": "#FF4D4D",
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "That's $252 a year. For nothing. Ow.",
+   "head": "$252 A YEAR. FOR NOTHING.",
+   "say": "That's two hundred fifty-two dollars a year. For nothing. Ow.",
+   "stat": "$252",
+   "color": "#FF4D4D",
+   "mascot": {
+    "mood": "sad",
+    "pos": "corner"
+   },
+   "shake": 0.25,
+   "sfx": [
+    "impact@0.6"
+   ],
+   "show_source": "Source: CNET subscription survey, July 2026 (reported by WFSB, Jul 16, 2026)"
+  },
+  {
+   "text": "Wait a second... why is that smaller than $219?",
+   "head": "WAIT A SECOND...",
+   "say": "Wait a second... why is that smaller than two hundred nineteen?",
+   "mascot": {
+    "mood": "confused",
+    "pos": "center",
+    "act": "dodge",
+    "act_at": 0.8
+   }
+  },
+  {
+   "text": "Different surveys count different things. Heh... but both say the same: it's more than we think.",
+   "head": "TWO SURVEYS",
+   "sticker": "MORE THAN WE THINK",
+   "sticker_at": 2.4,
+   "mascot": {
+    "mood": "smug",
+    "pos": "center"
+   }
+  },
+  {
+   "text": "So how does one tiny monthly charge turn into this? The trap has three doors.",
+   "head": "THE TRAP HAS 3 DOORS",
+   "transition": "slide",
+   "sticker": "3 DOORS",
+   "sticker_at": 3.0,
+   "mascot": {
+    "mood": "point",
+    "pos": "center"
+   },
+   "sfx": [
+    "drumroll"
+   ]
+  },
+  {
+   "text": "Door one: getting in is ridiculously easy. One click. Free trial. Done.",
+   "head": "DOOR 1: EASY IN",
+   "sticker": "DOOR 1",
+   "sticker_at": 0.1,
+   "sticker_color": "#2BD67B",
+   "mascot": {
+    "mood": "happy",
+    "pos": "center"
+   },
+   "sfx": [
+    "pop@2.6",
+    "pop@3.2"
+   ]
+  },
+  {
+   "text": "Door two: you never decide to pay again. The card on file just... pays.",
+   "head": "DOOR 2: AUTOPAY",
+   "sticker": "DOOR 2",
+   "sticker_at": 0.1,
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "center"
+   },
+   "sfx": [
+    "cash@3.2"
+   ]
+  },
+  {
+   "text": "And doors that stay open are powerful. Want proof from a totally different place?",
+   "head": "DEFAULTS ARE POWERFUL",
+   "mascot": {
+    "mood": "point",
+    "pos": "center",
+    "act": "flip",
+    "act_at": 2.0
+   },
+   "sticker": "PROOF?",
+   "sticker_at": 3.0
+  },
+  {
+   "text": "In a 2001 study, one company started signing new workers up for its 401(k) automatically.",
+   "head": "THE DEFAULT TEST",
+   "say": "In a two thousand one study, one company started signing new workers up for its four-oh-one-k automatically.",
+   "show_source": "Source: Madrian & Shea, Quarterly Journal of Economics (2001)",
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "center"
+   },
+   "sfx": [
+    "tick"
+   ]
+  },
+  {
+   "text": "Participation jumped from 37% to 86%. Same people. Same choice. Different default.",
+   "head": "37% TO 86%",
+   "say": "Participation jumped from thirty-seven percent to eighty-six percent. Same people. Same choice. Different default.",
+   "vs": {
+    "left": "37%",
+    "left_label": "Opt in",
+    "left_sub": "you sign up",
+    "right": "86%",
+    "right_label": "Automatic",
+    "right_sub": "you opt out",
+    "win": "right",
+    "at": [
+     1.2,
+     2.6
+    ],
+    "vs_at": 2.0
+   },
+   "show_source": "Source: Madrian & Shea, Quarterly Journal of Economics (2001)"
+  },
+  {
+   "text": "Defaults can help you save. Subscriptions use the exact same trick... to keep charging.",
+   "head": "SAME TRICK",
+   "mascot": {
+    "mood": "smug",
+    "pos": "center"
+   },
+   "sticker": "SAME TRICK",
+   "sticker_at": 3.6
+  },
+  {
+   "text": "Door three: getting out. And that's where it gets weird.",
+   "head": "DOOR 3: THE EXIT",
+   "sticker": "DOOR 3",
+   "sticker_at": 0.1,
+   "sticker_color": "#FF4D4D",
+   "mascot": {
+    "mood": "shocked",
+    "pos": "center"
+   },
+   "zoom": {
+    "at": 2.0,
+    "amt": 1.22,
+    "hold": 0.9,
+    "on": "buck"
+   }
+  }
+ ],
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  },
+  "tempo": 1.0,
+  "max_pause": 0.5
+ }
+}
