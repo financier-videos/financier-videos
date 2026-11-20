@@ -4,6 +4,7 @@ Chegaralar: `docs/producer_task.md` dagi QAT'IY CHEGARALAR to'liq amal qiladi.
 
 ## 1. Tayyorgarlik
 - ElevenLabs tekshiruvi (producer_task 0-bo'lim). 200 bo'lmasa — hech narsa chiqarma, pastga sababini yoz va to'xta.
+- 04:25 YANGILANDI: lab qimirlashi kutubxonasi repoda BOR va tozalangan (GPU renderida 300 kadr qora, teksturasiz tana bilan chiqqan edi — olib tashlandi; 240 yaxshi kadr: confused, happy, laugh, shocked, smug, sideeye). Kutish shart emas. Qolgan kayfiyatlarda (point, proud, thumbsup, dizzy, sad, angry) og'iz qimirlamaydi — bu normal. SIFAT NAZORATIDA qo'shimcha: hech bir kadrda Buck QORA SILUET bo'lmasin (bo'lsa `rm -rf /tmp/fin_buck3d_v2` qilib qayta render).
 - Lab qimirlashi: `assets/buck3d_v2_talk.tar` repoda bormi? Yo'q bo'lsa har 5 daqiqada `git pull --rebase origin media` bilan ko'pi bilan 20 daqiqa kut (shu vaqtda 2-banddagi tekshiruvni qil). Baribir yo'q bo'lsa — usiz davom et va pastga yoz. Kutubxonani O'ZING render QILMA.
 - Costco: WebSearch bilan rotisserie tovuq narxi hozir ham $4.99 ekanini tekshir. O'zgargan bo'lsa n2 ni tashlab, o'rniga script_bank S-01 ni yasab chiqar.
 
