@@ -41,3 +41,8 @@ Har kuni KAMIDA bitta yozuv. Format: sana — O'RGANILDI (manba, sana) → O'ZGA
 14. O'RGANILDI (o'z kanalimiz, vidIQ ochiq hisob 23:20): yangi uslubdagi birinchi Short (trillion61 v2: Buck D ElevenLabs, 3D v2 + lip-sync, b-roll+raqam ochilishi, royal) ~3 soatda 241 ko'rish, 80 VPH, 3 izoh; eski uslub (Kokoro hikoyachi, 40–48 s) 1–2 kunda 22–78. Bitta video — xulosa emas, lekin farq 3–10x.
    O'ZGARTIRILDI: playbook 6-bo'lim — "IKKI BARAVAR OSHIR" (dastlabki): b-roll+katta raqam ochilishi; ertangi 4 Shortning 2 tasi shu ochilishda (XILMA-XILLIK: theme/format/emotsiya boshqa bo'lsin).
    O'LCHOV: 21-noy C da trillion61 vs fee_guess (hookscore 75, Buck center+savol ochilishi) 24 soatlik ko'rish va YouTube Analytics kelgan bo'lsa averageViewPercentage. HOOKSCORE MOSLIGI: hozircha ma'lumot yetarli emas (fee_guess chiqqaniga 10 daqiqa; trillion61 hookscore hisoblanmagan) — ertaga ikkalasini bir xil yoshda solishtir.
+
+## 2026-11-21 (chat, 00:10 — Shohjahon: "youtube-skill o'rnat, eng yaxshilarini")
+15. QO'SHILDI: yt-agent/youtube-skill GitHub'da yo'q → eng yaqin 3 ta (MIT): Jakeschincariol/youtube-agent-skill (to'liq, 11 skill), sergebulaev/youtube-skills (faqat bilim qismi), adityaarsharma comment-intel. Batafsil: docs/skills/README.md.
+   QO'LLANDI: yt-package/title.py navbatdagi 7 sarlavhada — 4 tasi 100, eng pasti uzun video "The Subscription Trap: Why Canceling Is So Hard" 76 (47 belgi: mobil lentada kesiladi, raqam yo'q).
+   O'LCHOV: A ishida har sarlavha title.py dan o'tadi (≥90 maqsad, lekin Shorts sarlavhasi ≤50 belgi qoidasi va aldamaslik ustun); keyingi uzun video sarlavhasi ≤40 belgi va raqam bilan — CTR ni subscription_trap bilan solishtir. retention.py — Analytics CSV kelgan birinchi C ishida.
