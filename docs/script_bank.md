@@ -47,7 +47,7 @@ Sahnalar (~62 so'z):
 7. "Check the shelf next time, because..." — Buck dodge; loop → 1-sahna.
 Sarlavha: "Same Razor. Pink Costs $2 More." Izoh savoli: "Would you just buy the blue one?"
 
-## [CHIQDI 2026-11-21 13:00 ET] S-05 "$27 Billion Is Sitting in Junk Drawers" (2026-11-20)
+## [CHIQDI 2026-11-21 13:00 ET; QAYTA YASALDI 11-20 → "Gift Cards Feel Like Free Money", afsona vs haqiqat / mint, work/remake_2026-11-20/r4] S-05 "$27 Billion Is Sitting in Junk Drawers" (2026-11-20)
 Manba: Bankrate so'rovi (YouGov, 2024-08; e'lon 2024-09-23; 2,373 kattalar): AQSh kattalarining 43% ida kamida bitta ishlatilmagan sovg'a kartasi/vaucher bor, o'rtacha $244, jami ≈$27 mlrd; 20% kartasi muddati o'tib ketgan; Walmart va Starbucks har birining hisobida $1 mlrd dan ortiq ishlatilmagan kartalar (Bankrate bahosi). "A 2024 Bankrate survey" deb ayt ("latest" dema — yangisi chiqqan bo'lsa tekshirib yangila).
 Olib tashlandi: sarlavhadagi "$14 Billion" (matnga zid), "nearly half" (43%), "free cash for products they never handed over" (umumlashtirish).
 Sahnalar (~60 so'z):
@@ -60,7 +60,7 @@ Sahnalar (~60 so'z):
 7. "Go check that drawer, because right now..." — Buck point; loop → 1-sahna.
 Sarlavha: "$27 Billion Is Hiding in Junk Drawers". Izoh savoli: "How much is in YOUR drawer?"
 
-## [CHIQDI 2026-11-21 16:00 ET] S-06 "Airlines Sell Your Seat Twice — Legally" (2026-11-20)
+## [CHIQDI 2026-11-21 16:00 ET; QAYTA YASALDI 11-20 → "Sorry, No Seat. Is That Legal?", hikoya / ocean, r5; 180/185 — illyustratsiya, tavsifda aytilgan] S-06 "Airlines Sell Your Seat Twice — Legally" (2026-11-20)
 Manba: U.S. Department of Transportation, "Bumping & Oversales" (transportation.gov): ortiqcha sotish (overbooking) qonuniy; majburan tushirilgan yo'lovchiga kechikishga qarab bir tomonlama chipta narxining 200% (aviakompaniya $1,075 bilan cheklashi mumkin) yoki 400% ($2,150 bilan cheklashi mumkin) to'lanadi; limitlar 2025-01-22 dan. Avval ko'ngillilar so'raladi.
 Tuzatildi: Gemini'dagi "$1,350" — eski limit; hozir $2,150. "vouchers to bribe you" → majburiy tushirishda naqd/chek kompensatsiya; vaucher — ko'ngillilarga taklif. "algorithms" DOT matnida yo'q — "they bet some people won't show up" de.
 Sahnalar (~62 so'z):
@@ -80,7 +80,7 @@ Sabab: ikkala asosiy raqam manbasiz — "banks spend $50 per card" va "people sp
 Eslatma: Gemini bergan "32–42 s 1.8x ko'p ko'rish", "48x klik" kabi benchmark raqamlari manbasiz — qoida sifatida QABUL QILINMADI. Bu 4 ta Short ~75–85 so'z (~33–38 s) qilib yozildi: o'zimizning retention bilan 25–30 s liklarga solishtiramiz, keyin qaror.
 3D kesma/prop kadrlari hali yo'q — hozircha stat/vs/sticker + Buck bilan; 3D muhit tayyor bo'lgach qayta render qilinadi.
 
-## [CHIQDI 2026-11-21 10:00 ET] S-08 "Why Copiers Refuse to Copy Money"
+## [CHIQDI 2026-11-21 10:00 ET; QAYTA YASALDI 11-20 → "3 Secrets Hiding on a $20 Bill", sanoq / royal, r3] S-08 "Why Copiers Refuse to Copy Money"
 Manba: Markus Kuhn (Cambridge, 2002) — rangli nusxa ko'chirgichlar banknotadagi besh kichik doiradan iborat naqshni ("EURion constellation") izlaydi; Steven Murdoch (2004) — yangi $20 da fondagi sariq "20" larning nollari shu naqshni hosil qiladi; Photoshop kabi dasturlar esa BOSHQA tizimdan (Counterfeit Deterrence System, markaziy banklar guruhi) foydalanadi, EURion'dan emas. Qog'oz 75% paxta / 25% zig'ir, $10 va undan yuqori kupyuralarda rang o'zgartiruvchi siyoh (mis → yashil) — U.S. Currency Education Program (uscurrency.gov).
 Tuzatildi: "$100 ... printer will freeze and lock itself" → "many color copiers refuse"; "five dots ... every printer and Photoshop hard-coded to detect them" noto'g'ri (Photoshop boshqa tizim); "printing your own cousins" hazili olib tashlandi (qalbakilashtirishga ishora — noqonuniy mavzu). Hech qanday "qanday aylanib o'tish" tafsiloti YO'Q.
 Sahnalar (~80 so'z):
@@ -94,7 +94,7 @@ Sahnalar (~80 so'z):
 8. "Check your wallet, because..." — Buck dodge; loop → 1-sahna.
 Sarlavha: "Why Copiers Refuse to Copy Money". Izoh savoli: "Did you ever notice them?"
 
-## [CHIQDI 2026-11-20 19:00 ET] S-09 "Costco's $4.99 Chicken Is Bait"
+## [CHIQDI 2026-11-20 19:00 ET; QAYTA YASALDI 11-20 → "The $4.99 Chicken Mystery", detektiv / noir, r2] S-09 "Costco's $4.99 Chicken Is Bait"
 Narx tekshiruvi 2026-11-20 (WebSearch): 2026 manbalarida hali $4.99 (ThePricer 2026-07; inkl 2026).
 Manba: Costco moliya direktori Richard Galanti, 2015 yilgi hisobot qo'ng'irog'i (Seattle Times; Fortune 2015-05-29; Snopes 2020-12-11): narxni $4.99 da ushlab, yiliga $30–40 mln yalpi marjadan voz kechishga tayyor ekanini aytgan; narx 2009 dan beri $4.99; tovuqlar do'kon oxirida turadi (Wall Street Journal 2018, Fox Business orqali); 2017 moliya yilida 87 mln dona sotilgan.
 CHIQARISHDAN OLDIN: narx hali ham $4.99 ekanini tekshir (manbalar 2024 gacha). "Since 2009" va "in 2015 the CFO said" deb sanasi bilan ayt.
@@ -110,7 +110,7 @@ Sahnalar (~78 so'z):
 8. "Nobody does, and that's exactly why..." — Buck dodge; loop → 1-sahna.
 Sarlavha: "Costco's $4.99 Chicken Is Bait". Izoh savoli: "Ever left with just the chicken?"
 
-## [CHIQDI 2026-11-20 13:00 ET] S-10 "A 1% Fee Can Cost You $64,000"
+## [CHIQDI 2026-11-20 13:00 ET; QAYTA YASALDI 11-20 → "Guess What a 1% Fee Costs You", taxmin o'yini / ember, r1] S-10 "A 1% Fee Can Cost You $64,000"
 Manba: U.S. Department of Labor (EBSA), "A Look at 401(k) Plan Fees": 35 yil, boshlang'ich balans $25,000, yillik o'rtacha 7% daromad, qo'shimcha badal yo'q — to'lovlar 0.5% bo'lsa $227,000, 1.5% bo'lsa $163,000; 1 foiz punkt farq yakuniy balansni 28% ga kamaytiradi.
 Tuzatildi: Gemini'dagi "$140,000" va "$100,000 balance" DOL misolida YO'Q — to'g'risi $64,000 farq ($25,000 balansdan). "steals" → "costs". "Always check the expense ratio before investing" (maslahat) → olib tashlandi; tavsifda: "Illustration from the U.S. Department of Labor. Not financial advice."
 Sahnalar (~80 so'z):
