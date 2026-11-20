@@ -130,7 +130,7 @@ Yangilangan: 2026-11-20 08:20 (tungi buyurtma: 5 Short; B: +1 Short, dvigatel _f
 - 2026-11-21 20:00 Toshkent (10:00 ET) — "Why Copiers Refuse to Copy Money" (Short 37.1 s, v2 + lip-sync). Manbalar: Kuhn 2002, Murdoch 2004, uscurrency.gov. Metricool id 435023630. Fayl: 2026-11-20_copier.mp4.
 - 2026-11-21 23:00 Toshkent (13:00 ET) — "$27 Billion Is Hiding in Junk Drawers" (Short 27.3 s, v2 + lip-sync). Manba Bankrate 2024. Metricool id 435023666. Fayl: 2026-11-20_giftcards.mp4.
 - 2026-11-22 02:00 Toshkent (16:00 ET) — "Airlines Sell Your Seat Twice. Legally." (Short 26.1 s, v2 + lip-sync). Manba DOT "Bumping & Oversales". Metricool id 435023719. Fayl: 2026-11-20_overbooking.mp4.
-- 2026-11-22 05:00 Toshkent (21-noy 19:00 ET) — "You Pay $1,332 a Year for THIS" (Short 26.8 s, B rejim, v2 + lip-sync, chart+vs format). Manba CNET 2026-07 (WFSB 2026-07-16). Metricool id: pastdagi jurnalda. Fayl: 2026-11-20_subscriptions.mp4. Spec: work/2026-11-20b/s01_subscriptions.json.
+- 2026-11-22 05:00 Toshkent (21-noy 19:00 ET) — "You Pay $1,332 a Year for THIS" (Short 26.8 s, B rejim, v2 + lip-sync, chart+vs format). Manba CNET 2026-07 (WFSB 2026-07-16). Metricool id 435035715. Fayl: 2026-11-20_subscriptions.mp4. Spec: work/2026-11-20b/s01_subscriptions.json.
 - Eslatma: oldingi 4 video eski uslubda (hikoyachi + Kokoro) — natijalarni v6 videolari bilan solishtirganda hisobga ol.
 
 ## 10. O'RGANILGANLAR JURNALI (14 kundan eskisi xulosaga)
