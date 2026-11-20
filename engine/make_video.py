@@ -1843,7 +1843,9 @@ def render(spec, wav, total, out, workdir):
                 bd = fr.crop((dx, dy, dx + cw, dy + ch)).resize((W, H), Image.BILINEAR)
                 bd = ImageEnhance.Color(bd).enhance(0.85)
                 base = Image.blend(base_static.convert("RGB"), bd, bd_mix).convert("RGBA")
-                base = Image.alpha_composite(base, Image.new("RGBA", (W, H), (0, 0, 0, 70)))
+                _lum = float(np.asarray(fr.convert("L"), dtype=np.float32).mean())  # bright backdrops (sky, white walls) get darker
+                _dk = int(max(70, min(185, 70 + (_lum - 70) * 1.3 + (35 if (chart or vsd) else 0))))
+                base = Image.alpha_composite(base, Image.new("RGBA", (W, H), (0, 0, 0, _dk)))
             else:
                 base = base_static.copy()
                 ov = Image.new("RGBA", (W, H), (0, 0, 0, 0)); o = ImageDraw.Draw(ov)
