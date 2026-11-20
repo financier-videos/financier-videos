@@ -10,9 +10,9 @@ Caption: oʻsha ohang — avval savol, bitta fakt, "Manba:", "Moliyaviy maslahat
 
 ## TOSHKENT SHEVASI (Shohjahon 2026-11-20 21:50 — MAJBURIY, "say" va subtitrda)
 Finansist sof Toshkent shevasida gapiradi, kinoyali, tomoshabinga toʻgʻridan gapiradigan anti-qahramon hazilkash uslubida (mavjud personaj nomi/aktyor ovozi ishlatilmaydi).
-- Murojaat: "aka" EMAS → "oka"; "brat", "SHEPIIIM" (shefim EMAS: "p" bilan, "i" cho'zib aytiladi; TTS matnida "shepiiim") — Toshkent jargoni, ishlatiladi (meʼyorida, videoga 1–3 ta).
+- Murojaat: "aka" EMAS → "oka"; "brat", "SHEPIM" (shefim EMAS; to'g'ri yozuvi Shohjahon 2026-11-20 23:20: "Shepim") — Toshkent jargoni, ishlatiladi (meʼyorida, videoga 1–3 ta).
 - Olmoshlar: men → MAN, sen → SAN, ular → ULA, bizlar → BIZA, sizlar → SILA. Fe'l qoʻshimchalari ham shunga mos: "ishlatasila", "bilasila".
-- Ogʻzaki shakllar: "etvomman" (aytyapman; "aytvomman" emas), "shoshmela" (shoshmanglar), "qarela" (qaranglar), "ishlatmidi" (ishlatmaydi), "qoʻshsa", "bor ekan-da".
+- Ogʻzaki shakllar: "shoshmen" (shoshmela/shoshmang EMAS — Shohjahon 2026-11-20 23:20), "etvomman" (aytyapman; "aytvomman" emas), "shoshmela" (shoshmanglar), "qarela" (qaranglar), "ishlatmidi" (ishlatmaydi), "qoʻshsa", "bor ekan-da".
 - So'kinish, haqorat — baribir YOʻQ. Ovoz: Finansist (Voice Design, 2-tur 7/8/9 nomzodlaridan biri).
 
 ## "HAZILKASH BUZG'UNCHI" USLUBI (Shohjahon 2026-11-20 22:20 — MAJBURIY; Toshkent shevasi bilan birga)
@@ -32,10 +32,12 @@ Spec'ga o'tkazish:
 
 ## OCHILISH VA TEMP (Shohjahon 2026-11-20 23:00 — MAJBURIY, faqat o'zbekcha videolar)
 - HAR o'zbekcha video HOOK IBORA bilan, HAYAJON bilan boshlanadi (Shohjahon 2026-11-20 23:10). Ro'yxat — navbat bilan, ketma-ket ikki videoda bir xil ibora YO'Q:
-  1. "Sheppim, eshittizmi?!" — yangilik/kutilmagan fakt (Finansist "shocked" + drop_in + zoom);
+  1. "Shepim, eshittizmii?!" — yangilik/kutilmagan fakt (Finansist "shocked" + drop_in + zoom);
   2. "Brat, qaravorin shundo!" — ekranda ko'rsatiladigan narsa: raqam, vs, chart (Finansist "point", ko'rsatish bilan);
   3. "Oka, to'xtab turin!" — afsona/xato tushunchani to'xtatish (Finansist "angry" yoki "sideeye" + dodge/bonk).
   Ibora mavzuga mos tanlanadi; 1-sahna "say": "[excited] <ibora>", "text" xuddi shu (subtitr). Yangi ibora faqat Shohjahon bersa qo'shiladi. Ishlatilgani playbook 9-bo'limdagi video qatoriga yoziladi. Bu o'zbek profili uchun 1M+ qoidasi 1 ("birinchi so'z — fakt") dan ustun; fakt darhol 2-sahnada.
 - Temp: "biroz tez, shoshib gapiryapti" → "settings": {"stability": 0.5, "speed": 0.88}; butun ssenariy bitta take (one_take).
 - Aktyorlik va mimika: "HAZILKASH BUZG'UNCHI" bo'limi to'liq — har sahnada kayfiyat o'zgaradi (shocked → sideeye+dodge → confused → laugh → shocked → proud+zoom qotish → dizzy+bonk → point).
 - Talaffuz lug'ati: "sheppim" → "Шеппим" (spec "uz_lex"; Shohjahon a/b/c sinovidan keyin aniqlanadi).
+
+- 2026-11-20 23:20 Shohjahon tuzatishi: "Shepim, eshittizmii?" (bitta p, oxirgi i cho'ziladi) va "Shoshmen, oka!". Talaffuz sinovi: work/voice_lab/uz/tts_test4/ (kirill / lotin / aralash / tegsiz).
