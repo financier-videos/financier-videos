@@ -1,0 +1,13 @@
+# O'SISH JURNALI — "har kuni kechagidan yaxshiroq" (Shohjahon, 2026-11-20 07:07)
+Har kuni KAMIDA bitta yozuv. Format: sana — O'RGANILDI (manba, sana) → O'ZGARTIRILDI (qaysi fayl/qoida) → O'LCHOV (ertaga nimaga qarab bilamiz). Taxmin va manbasiz "benchmark" yozilmaydi. A rejim har ish boshida oxirgi 5 yozuvni o'qib amal qiladi. 60 qatordan oshsa eng eskilarini 1 qatorlik xulosaga aylantir.
+
+## 2026-11-20 (chat sessiyasi)
+1. O'RGANILDI: YouTube 2026-10-01 da Shorts tavsiya tizimi original kontentga ustunlik berishini, boshqalarning videosini deyarli o'zgartirmay qayta yuklaydigan kanallar kam tarqatilishini e'lon qildi (ppc.land; MediaPost). "Shablon asosidagi kichik o'zgarishlar" originallik hisoblanmaydi.
+   O'ZGARTIRILDI: bizga to'g'ridan tegmaydi (hammasi o'zimizniki), lekin b-roll ulushi past bo'lsin: Short'da ≤1 b-roll sahna, ≤4 s.
+2. O'RGANILDI: YouTube 2026-07 da "inauthentic content" monetizatsiya qoidasini 3 toifaga ajratib tushuntirdi (Tubefilter 2026-07-13; TechCrunch 2026-07-20): (a) umumiy/takroriy/shablon kontent — ketma-ket ko'rganda bir xil tuyuladigan, kam izohli videolar; (b) yoqimsiz/aldamchi kontent; (c) AI personaj inson EKSPERT sifatida sog'liq, huquq, MOLIYA, siyosat bo'yicha MASLAHAT bersa.
+   O'ZGARTIRILDI (bizning eng katta xavf — a va c): Buck HECH QACHON ekspert/maslahatchi emas — u hazilkash tanga, faqat manbali fakt aytadi; "you should", "always", "never invest" kabi maslahat jumlalari taqiq (S-10 dan olib tashlangan). Kuniga 4 Short bir xil qolipda bo'lmasin: har kuni kamida 2 xil tuzilma (vs-ochilish / stat-ochilish / savol-ochilish / afsona-haqiqat), har xil sahna soni va hazil usuli.
+   O'LCHOV: 5 ta tungi video ketma-ket ko'rilganda bir xil tuyuladimi — keyingi B ishida 5 tasining 1-3-sahnalarini yonma-yon ko'rib baho yoz.
+3. O'RGANILDI (tasdiqlanmagan, YouTube rasman aytmagan): tahlilchilar 30 kundan eski Shorts kam ko'rsatilayotganini xabar qilmoqda (Search Engine Journal; Tubefilter 2025-12-05).
+   O'ZGARTIRILDI: hech narsa — faqat kuzatamiz; o'z videolarimizda 30 kundan keyin tekshiramiz.
+4. XATO VA SABOQ: GPU lab-qimirlash renderida 540 kadrdan 300 tasi teksturasiz (qora tana) chiqdi va tekshiruvsiz repoga tushdi. SABOQ: har kutubxona pushidan oldin avtomatik "qora kadr" tekshiruvi (shaffof bo'lmagan piksellarning >30% i yorqinligi <12 bo'lsa — rad). Keyingi GPU ishida engine/gpu_render.py ga qo'shilsin; yetishmayotgan kayfiyatlar (point, proud, thumbsup, dizzy, sad, angry, sideeye t2/t3) qayta render.
+5. XATO VA SABOQ: Gemini ssenariylarining 11 tasidan 9 tasida kamida bitta manbasiz yoki noto'g'ri raqam bor edi ($140,000, $42,000, $1,350, $150...). SABOQ: tashqi ssenariy hech qachon tekshiruvsiz ishlatilmaydi; har raqam birlamchi manbadan.

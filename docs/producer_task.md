@@ -55,5 +55,12 @@ RAQOBAT: nishadagi eng tez o'sayotgan kanal/video tahlili (hook, tuzilma, temp, 
 ### C) 23:xx — NATIJALAR VA MOSLASHUV
 vidiq_user_channels → 6-bo'lim jadvali. WebSearch: AQSh tomoshabinlari pul haqida nimani muhokama qilyapti (2–3 topilma → bank). Yakshanba: comment_insights + o'z izohlar; haftalik hisobot (6 qator). "IKKI BARAVAR OSHIR" / "TO'XTAT" ni yangila. Kun yangiliklaridan 1–3 "SHOSHILINCH" fakt. Boshqa kunlari jim.
 
+## 1.5) KUNLIK O'SISH (Shohjahon 2026-11-20 07:07: "har kuni kechagidan yaxshiroq bo'l va yangiliklarni o'rganib yur") — MAJBURIY
+- A (09:xx) boshida `docs/growth_log.md` ning oxirgi 5 yozuvini o'qi va bugungi videolarda qo'lla.
+- B (15:xx) da HAR KUNI (RAQOBAT/MALAKA dan tashqari): YANGILIKLAR — 2 WebSearch: YouTube/Shorts algoritmi, monetizatsiya va AI siyosati yangiliklari; nishadagi yangi format. Faqat sanasi va manbasi bor xabar; "rasman tasdiqlanmagan" bo'lsa shunday yoz.
+- C (23:xx) da: KECHA vs BUGUN — bugungi videolar kechagidan nimasi bilan yaxshiroq (aniq: hook, temp, grafika, ovoz, xato soni) va ko'rsatkichlar bo'lsa raqam bilan. Yomonlashgan narsa bo'lsa — sababi va ertangi tuzatish.
+- Har kuni `docs/growth_log.md` ga kamida 1 yozuv (O'RGANILDI → O'ZGARTIRILDI → O'LCHOV). Hech narsa o'zgarmagan kun — "o'zgarish yo'q" deb yozilmaydi: kamida bitta kichik yaxshilanish (qoida, dvigatel, ssenariy uslubi) qilinadi va ertasi kuni natijasi tekshiriladi. Ishlamagan o'zgarish ortga qaytariladi va shunday yoziladi.
+- YouTube "inauthentic content" (2026-07): Buck ekspert/maslahatchi EMAS; maslahat jumlasi yo'q; kunning Shortlari kamida 2 xil tuzilmada.
+
 ## 2) HAR REJIM OXIRIDA
 `docs/youtube_playbook.md` ni yangila ("Yangilangan" sanasi, jurnalga 1–3 qator, 14 kundan eskisini xulosaga; ≤200 qator), `git pull --rebase origin media`, commit, `git push origin HEAD:media`. Oxirgi javobda "Ochiq qolganlar" (faqat bo'lsa).
