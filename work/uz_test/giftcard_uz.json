@@ -8,7 +8,7 @@
  "scenes": [
   {
    "text": "Sovg'a kartasi tekin pulga o'xshaydi. Lekin ko'pchilikda u umuman ishlatilmidi.",
-   "say": "[sarcastic] Sovg'a kartasi tekin pulga o'xshaydi. Lekin ko'pchilikda u umuman ishlatilmidi.",
+   "say": "Sovg'a kartasi tekin pulga o'xshaydi. Lekin ko'pchilikda u umuman ishlatilmidi.",
    "head": "TUYG'U VA HAQIQAT",
    "vs": {
     "left": "TEKIN $",
@@ -46,7 +46,7 @@
   },
   {
    "text": "O'rtacha 244 dollar. Heh.",
-   "say": "O'rtacha ikki yuz qirq to'rt dollar. [laughs] Heh.",
+   "say": "O'rtacha ikki yuz qirq to'rt dollar. Heh.",
    "head": "HAR KISHIGA",
    "stat": "$244",
    "fx": [
@@ -63,7 +63,7 @@
   },
   {
    "text": "Hammasini qo'shsa... 27 milliard dollar. Tortmada yotibdi!",
-   "say": "Hammasini qo'shsa... yigirma yettiii milliard dollar. [whispers] Tortmada yotibdi!",
+   "say": "Hammasini qo'shsa... yigirma yettiii milliard dollar. Tortmada yotibdi!",
    "head": "TORTMALARDA",
    "stat": "$27 MLRD",
    "beat": 0.6,
@@ -78,7 +78,7 @@
   },
   {
    "text": "Man pulman, lekin o'zimni sarflay olmiman. Ula esa sarflay oladi... sarflamidi!",
-   "say": "[sarcastic] Man pulman, lekin o'zimni sarflay olmiman. Ula esa sarflay oladi... sarflamidi!",
+   "say": "Man pulman, lekin o'zimni sarflay olmiman. Ula esa sarflay oladi... sarflamidi!",
    "head": "MAN-CHI?",
    "mascot": {
     "mood": "smug",

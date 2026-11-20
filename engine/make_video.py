@@ -482,12 +482,35 @@ def tts(spec, args, workdir):
     narr = spec.get("narrator", "buck")  # v6: Buck narrates everything
     bcfg = spec.get("buck_voice") or {}
     lines = [say_text(x.get("say", x.get("text", ""))).strip() for x in spec["scenes"]]
+    pre = {}
+    if spec.get("lang") == "uz" and bcfg.get("one_take", True) and bcfg.get("engine", "auto") != "kokoro":
+        # 2026-11-20 (Shohjahon): Uzbek lines read one by one (v3 has no previous/next context) sounded worse than
+        # the whole text in one take. Read the full script ONCE, then cut it into scenes at word boundaries.
+        lw_all = [[w for w in l.split() if "[" not in w and "]" not in w] for l in lines]
+        full = " ".join((l if bcfg.get("script") == "lat" else uz_voice_text(l, spec.get("uz_lex"))) for l in lines if l)  # "script": "lat" = read Latin as is
+        R = el_speak(full, workdir, "full", bcfg)
+        if R is not None:
+            y_all, ws = R; ws = [w for w in ws if "[" not in w[0] and "]" not in w[0]]
+            if len(ws) == sum(len(x) for x in lw_all):
+                k = 0; spans = []
+                for x in lw_all: spans.append((k, k + len(x))); k += len(x)
+                sr_ = 24000; bounds = []
+                for i, (a, b) in enumerate(spans):
+                    if a == b: bounds.append(None); continue
+                    t0 = 0.0 if a == 0 else (ws[a - 1][2] + ws[a][1]) / 2
+                    t1 = len(y_all) / sr_ if b == len(ws) else (ws[b - 1][2] + ws[b][1]) / 2
+                    seg = y_all[int(t0 * sr_):int(t1 * sr_)]
+                    pre[i] = (seg, [(l, ws[a + j][1] - t0, ws[a + j][2] - t0) for j, l in enumerate(lw_all[i])])
+            else:
+                print(f"one_take: word count mismatch ({len(ws)} vs {sum(len(x) for x in lw_all)}) -> per-line TTS", file=sys.stderr)
     for i, sc in enumerate(spec["scenes"]):
         txt = lines[i]; words = None
         if txt:
             r = None
             if narr == "buck" and bcfg.get("engine", "auto") != "kokoro":
-                if spec.get("lang") == "uz":  # voice reads Cyrillic (correct g'/x), word times mapped back to Latin
+                if i in pre:
+                    r = pre[i]
+                elif spec.get("lang") == "uz":  # voice reads Cyrillic (correct g'/x), word times mapped back to Latin
                     r = el_speak(uz_voice_text(txt, spec.get("uz_lex")), workdir, f"n{i}", bcfg)
                     if r is not None:  # drop v3 audio tags from the word list, then map back to the Latin words
                         sw = [w for w in r[1] if "[" not in w[0] and "]" not in w[0]]

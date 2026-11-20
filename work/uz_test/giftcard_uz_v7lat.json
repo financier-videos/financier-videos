@@ -1,0 +1,126 @@
+{
+ "lang": "uz",
+ "format": "short",
+ "sfx": true,
+ "loop": true,
+ "theme": "mint",
+ "source": "Manba: Bankrate so'rovi, 2024",
+ "scenes": [
+  {
+   "text": "Sovg'a kartasi tekin pulga o'xshaydi. Lekin ko'pchilikda u umuman ishlatilmidi.",
+   "say": "Sovg'a kartasi tekin pulga o'xshaydi. Lekin ko'pchilikda u umuman ishlatilmidi.",
+   "head": "TUYG'U VA HAQIQAT",
+   "vs": {
+    "left": "TEKIN $",
+    "left_label": "Qanday tuyuladi",
+    "right": "$0",
+    "right_label": "Ishlatilmadi",
+    "win": "right",
+    "at": [
+     0.2,
+     2.3
+    ],
+    "vs_at": 1.3,
+    "right_color": "#FF4D4D"
+   }
+  },
+  {
+   "text": "Shoshmela, oka! Tekin pulni kim ishlatmidi?!",
+   "head": "KIM ISHLATMIDI?!",
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "center",
+    "act": "drop_in"
+   }
+  },
+  {
+   "text": "Bankrate'ni 2024-yilgi so'rovi: Amerikada kattalarni 43 foizida ishlatilmagan sovg'a kartasi bor ekan.",
+   "say": "Bankreytni ikki ming yigirma to'rtinchi yilgi so'rovi: Amerikada kattalarni... qirq uch foizida ishlatilmagan sovg'a kartasi bor ekan.",
+   "head": "DEYARLI YARMI",
+   "stat": "43%",
+   "beat": 0.5,
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "O'rtacha 244 dollar. Heh.",
+   "say": "O'rtacha ikki yuz qirq to'rt dollar. Heh.",
+   "head": "HAR KISHIGA",
+   "stat": "$244",
+   "fx": [
+    "coin_rain"
+   ],
+   "sfx": [
+    "coin"
+   ],
+   "mascot": {
+    "mood": "smug",
+    "pos": "corner"
+   },
+   "show_source": true
+  },
+  {
+   "text": "Hammasini qo'shsa... 27 milliard dollar. Tortmada yotibdi!",
+   "say": "Hammasini qo'shsa... yigirma yettiii milliard dollar. Tortmada yotibdi!",
+   "head": "TORTMALARDA",
+   "stat": "$27 MLRD",
+   "beat": 0.6,
+   "shake": 0.3,
+   "sfx": [
+    "impact"
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Man pulman, lekin o'zimni sarflay olmiman. Ula esa sarflay oladi... sarflamidi!",
+   "say": "Man pulman, lekin o'zimni sarflay olmiman. Ula esa sarflay oladi... sarflamidi!",
+   "head": "MAN-CHI?",
+   "mascot": {
+    "mood": "smug",
+    "pos": "center"
+   },
+   "zoom": {
+    "at": 3.2,
+    "amt": 1.3,
+    "hold": -1,
+    "on": "buck"
+   }
+  },
+  {
+   "text": "Har besh kishidan biri kartasini muddatini o'tkazib yuborgan. Uf.",
+   "head": "5 TADAN 1 TASI KUYGAN",
+   "beat": 0.5,
+   "mascot": {
+    "mood": "dizzy",
+    "pos": "center",
+    "act": "bonk",
+    "act_at": 2.2
+   },
+   "sfx": [
+    "wahwah@2.8"
+   ]
+  },
+  {
+   "text": "Ha, sila, silaga etvomman. Tortmada nima yotibdi? Borib qarela, chunki...",
+   "head": "SILA-CHI?",
+   "mascot": {
+    "mood": "point",
+    "pos": "center"
+   }
+  }
+ ],
+ "buck_voice": {
+  "voice_id": "krVPGd2Rx46Rbl9kcjLY",
+  "model": "eleven_v3",
+  "script": "lat",
+  "settings": {
+   "stability": 0.5,
+   "speed": 1.0
+  }
+ }
+}
