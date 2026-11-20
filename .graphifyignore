@@ -1,0 +1,7 @@
+*.mp4
+*.tar
+assets/
+work/
+docs/skills/ffmpeg-skill/
+docs/skills/hyperframes/
+engine/vendor/
