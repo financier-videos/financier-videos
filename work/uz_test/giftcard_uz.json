@@ -1,0 +1,105 @@
+{
+ "format": "short",
+ "sfx": true,
+ "loop": true,
+ "theme": "mint",
+ "source": "Manba: Bankrate so'rovi, 2024",
+ "scenes": [
+  {
+   "text": "Sovg'a kartasi tekin pulga o'xshaydi. Ko'pchilik uchun esa u hech qachon sarflanmaydigan pul.",
+   "head": "TUYG'U VA HAQIQAT",
+   "vs": {
+    "left": "TEKIN $",
+    "left_label": "Qanday tuyuladi",
+    "right": "$0",
+    "right_label": "Sarflanmadi",
+    "win": "right",
+    "at": [
+     0.2,
+     3.0
+    ],
+    "vs_at": 1.6,
+    "right_color": "#FF4D4D"
+   }
+  },
+  {
+   "text": "Shoshmang. Tekin pulni kim sarflamaydi?!",
+   "head": "KIM SHUNAQA QILADI?!",
+   "beat": 0.3,
+   "mascot": {
+    "mood": "confused",
+    "pos": "center",
+    "act": "drop_in"
+   }
+  },
+  {
+   "text": "Bankrate'ning 2024-yilgi so'rovi: AQShda kattalarning 43 foizida kamida bitta ishlatilmagan sovg'a kartasi bor.",
+   "say": "Bankreytning ikki ming yigirma to'rtinchi yilgi so'rovi: Amerikada kattalarning qirq uch foizida kamida bitta ishlatilmagan sovg'a kartasi bor.",
+   "head": "DEYARLI YARMI",
+   "stat": "43%",
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "O'rtacha summa? 244 dollar.",
+   "say": "O'rtacha summa? Ikki yuz qirq to'rt dollar.",
+   "head": "HAR KISHIGA",
+   "stat": "$244",
+   "fx": [
+    "coin_rain"
+   ],
+   "sfx": [
+    "coin"
+   ],
+   "mascot": {
+    "mood": "happy",
+    "pos": "corner"
+   },
+   "show_source": true
+  },
+  {
+   "text": "Hammasini qo'shsak... taxminan 27 milliard dollar. Tortmalarda yotibdi!",
+   "say": "Hammasini qo'shsak... taxminan yigirma yetti milliard dollar. Tortmalarda yotibdi!",
+   "head": "TORTMALARDA",
+   "stat": "$27 MLRD",
+   "shake": 0.3,
+   "sfx": [
+    "impact"
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Har besh kishidan biri kartasining muddatini o'tkazib yuborgan. Uf.",
+   "head": "5 TADAN 1 TASI KUYGAN",
+   "mascot": {
+    "mood": "dizzy",
+    "pos": "center",
+    "act": "bonk",
+    "act_at": 2.4
+   },
+   "sfx": [
+    "wahwah@3.0"
+   ]
+  },
+  {
+   "text": "Sizda-chi, tortmada nima yotibdi? Borib qarang, chunki...",
+   "head": "SIZDA-CHI?",
+   "mascot": {
+    "mood": "happy",
+    "pos": "center"
+   }
+  }
+ ],
+ "buck_voice": {
+  "variant": "D",
+  "model": "eleven_v3",
+  "settings": {
+   "speed": 1.0
+  }
+ }
+}

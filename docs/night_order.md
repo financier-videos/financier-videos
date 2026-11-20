@@ -1,4 +1,16 @@
-# BUYURTMA 2 (2026-11-20 07:25) — HOLAT: BAJARILDI 2026-11-20 08:05
+# BUYURTMA 3 (2026-11-20 21:15) — HOLAT: OCHIQ
+Shohjahon (20:30): "hozir tashla namunani" — O'ZBEKCHA NAMUNA. Soatga qaramay BIRINCHI bajariladi; qisqa ish (bitta render), keyin odatdagi rejim davom etadi.
+1. ElevenLabs 200 ekanini tekshir.
+2. `work/uz_test/giftcard_uz.json` ni render qil → `work/uz_test/giftcard_uz.mp4` (spec tayyor: o'zbekcha matn, "buck_voice": {"variant":"D","model":"eleven_v3"}; vizual chat sessiyasida sinalgan). Matn va raqamlarni o'zgartirma.
+3. Xato bo'lsa tartib bilan sinab ko'r va har birini NATIJA ga yoz: (a) eleven_v3 /with-timestamps bermasa — dvigatelda vaqt belgisiz yo'l bormi (bo'lmasa subtitrni jumla uzunligiga teng taqsimlash bilan chiqadigan kichik tuzatish kirit); (b) v3 da "speed"/"style" sozlamasi rad etilsa — settings ni olib tashla; (c) v3 umuman ishlamasa — TO'XTA: Kokoro yoki boshqa ovoz bilan chiqarma, sababini yoz.
+4. Tekshir: kadrlar (har 3 s), uzunlik ≤45 s, −14 LUFS atrofida, check.py --platform reels. voice_check o'zbekcha uchun ISHLAMAYDI — o'tkazib yubor.
+5. mp4 ni push qil (work/uz_test/ ichida qoladi — repo ildiziga emas, YouTube'ga QO'YILMAYDI, Instagram'ga ham QO'YILMAYDI). Shohjahonga xabar (SendUserMessage bo'lsa, fayl bilan — SendUserFile): "O'zbekcha namuna tayyor — talaffuzni eshitib baholang" + raw URL: https://raw.githubusercontent.com/financier-videos/financier-videos/media/work/uz_test/giftcard_uz.mp4
+6. Shu fayl HOLAT ni "BAJARILDI <vaqt>" qil va NATIJA ni yoz (model, uzunlik, so'z vaqt belgilari ishladimi, lab-qimirlash bor-yo'qligi, eshitishda sezilgan narsa bo'lsa — yo'q, sen eshita olmaysan: faqat texnik natija).
+
+## NATIJA (3)
+(sessiya to'ldiradi)
+
+# [arxiv] BUYURTMA 2 (2026-11-20 07:25) — BAJARILDI 2026-11-20 08:05
 Shohjahon (07:15 va 07:22 Toshkent): "videolarni boshqattan yasa"; "bugun qo'yiladigan videolarni ham ko'rib chiq, eng zo'ri qilib tayyorlab joylashtir; grafika, video va ovoz eng yaxshi holatda bo'lsin". Sabab: tungi 5 video bir xil fonda va bir xil skeletda chiqqan. Bu buyurtma soatga qaramay BIRINCHI bajariladi. `docs/producer_task.md` QAT'IY CHEGARALARI va XILMA-XILLIK QOIDASI amal qiladi.
 
 ## 1. Render (spec'lar tayyor, chat sessiyasida zaxira ovoz bilan sinovdan o'tgan: `work/remake_2026-11-20/`)
