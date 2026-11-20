@@ -1,17 +1,17 @@
 # Graph Report - financier-videos  (2026-11-20)
 
 ## Corpus Check
-- 131 files · ~188,718 words
+- 131 files · ~191,350 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 9 file(s) not represented in the graph (top: (none) 9)
+- Unclassified: 10 file(s) not represented in the graph (top: (none) 10)
 
 ## Summary
-- 1584 nodes · 2052 edges · 132 communities (121 shown, 11 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.86)
+- 1595 nodes · 2066 edges · 131 communities (121 shown, 10 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 28 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d666a6e2`
+- Built from commit: `aea15081`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -35,14 +35,14 @@
 - YouTube Shorts Playbook
 - Thumbnail & CTR Guide
 - Glossary
-- json
+- argparse
 - 10-Step Interactive Pipeline
 - YouTube Algorithm Reference Guide
 - Animation Performance
 - DataForSEO Integration Reference
 - Finding Animation Opportunities
 - Workflow
-- sys
+- json
 - Claude YouTube — YouTube Creator Skill
 - YOUTUBE PLAYBOOK — FINANCIER (moliya, AQSh auditoriyasi)
 - AVTONOM PRODYUSER — vazifa ko'rsatmasi (v3, 2026-11-20; Default muhit, ElevenLabs ochiq)
@@ -51,10 +51,10 @@
 - Channel Health Audit
 - Competitor Sub-Skill
 - B-roll, covers and motion: the rules and their QA
-- os
+- buck3d_v2_job.py
 - critique.md
 - Simplify the Design
-- draw_vs
+- fun_font
 - Dimensions
 - Commentary Channel Template
 - Education Channel Template
@@ -72,7 +72,7 @@
 - mascot3d_patch
 - H
 - Remotion Patterns and Best Practices
-- subprocess
+- os
 - Thumbnail Brief + A/B Concepts
 - Playbook: every style, every building block, everything we learned
 - animate.md
@@ -80,7 +80,6 @@
 - Cognitive Load Assessment
 - caption.py
 - ig-dm
-- gpu_pod_server.py
 - [arxiv] BUYURTMA 2 (2026-11-20 07:25) — BAJARILDI 2026-11-20 08:05
 - Analyze Sub-Skill
 - Content Calendar Generator
@@ -92,7 +91,7 @@
 - typeset.md
 - ig-viral
 - gpu_render.py
-- math
+- draw_vs
 - Financier Money Facts — production directives (TOP-10 / Cinema standard)
 - Caption Styles — Visual Specifications
 - Platform Export Specifications
@@ -131,7 +130,7 @@
 - Agent Reach — agent uchun platformalarni o'qish/qidirish vositasi (Shohjahon 2026-11-20 18:59: "shuni ham saqla")
 - TASHQI SKILLAR VA MANBALAR (Shohjahon 2026-11-20 18:51: "GitHub'ni ko'rib chiq va yangi skillar yozib ol")
 - USLUBLAR KUTUBXONASI — Lemo-Opuscar (Shohjahon 2026-11-20 18:44: "o'zingga yozib ol, malaka oshir, videolar tayyorlashda foydalan")
-- buck_line
+- tts
 - O'SISH JURNALI — "har kuni kechagidan yaxshiroq" (Shohjahon, 2026-11-20 07:07)
 - export.sh
 - Third-Party Notices
@@ -143,7 +142,7 @@
 - 5 ta manba (Shohjahon 2026-11-20 20:11: "shu skillarni saqlab ol va o'rnat")
 - _tighten
 - voice_buck_en.md
-- voice_finansist_uz.md
+- voice.md — Finansist (finansist424, oʻzbekcha, lotin)
 - preflight.sh
 - validate.sh
 - ui-cheatsheet.md
@@ -173,11 +172,11 @@
 ## Import Cycles
 - None detected.
 
-## Communities (132 total, 11 thin omitted)
+## Communities (131 total, 10 thin omitted)
 
 ### Community 0 - "re"
 Cohesion: 0.05
-Nodes (43): bar(), check_burstiness(), check_fingerprint(), check_slop(), check_specificity(), check_voice(), clamp(), render() (+35 more)
+Nodes (44): bar(), check_burstiness(), check_fingerprint(), check_slop(), check_specificity(), check_voice(), clamp(), render() (+36 more)
 
 ### Community 1 - "buck3d.py"
 Cohesion: 0.07
@@ -193,7 +192,7 @@ Nodes (31): Accordion / collapse, Animation Recipes, Button press, Drag to dismi
 
 ### Community 4 - "render"
 Cohesion: 0.07
-Nodes (22): _act_off(), _avg(), bokeh_sprites(), broll_frames(), bubble_patch(), cam_at(), camera_keys(), caption_chunks() (+14 more)
+Nodes (19): _act_off(), _avg(), bokeh_sprites(), broll_frames(), cam_at(), cam_xform(), camera_keys(), caption_chunks() (+11 more)
 
 ### Community 5 - "YouTube Monetization Guide"
 Cohesion: 0.07
@@ -228,16 +227,16 @@ Cohesion: 0.09
 Nodes (22): Captions & Transcription, Cards & End Screens, Chapters & Timestamps, Clickbait Penalty `[2025]`, Description Structure, Discovery Tool, Hashtags, Impact (+14 more)
 
 ### Community 13 - "make_video.py"
-Cohesion: 0.11
-Nodes (15): _add(), buck3d_ready(), cam_xform(), _env(), _lib_complete(), add(), sfx_boing(), sfx_buzzer() (+7 more)
+Cohesion: 0.12
+Nodes (14): _add(), buck3d_ready(), _env(), _lib_complete(), add(), sfx_boing(), sfx_buzzer(), sfx_crickets() (+6 more)
 
 ### Community 14 - "Pipeline"
 Cohesion: 0.10
 Nodes (19): 0. Check the toolchain once per session, 10. Every correction is taste, 1. Prep and look, 2. Transcribe everything, 2b. Track the face, 2c. Noisy outdoor audio?, 3. Choose takes (`references/take-selection.md`), 3b. A single clean take? (+11 more)
 
 ### Community 15 - "compute_reframe.py"
-Cohesion: 0.16
-Nodes (9): compute_crop_center(), compute_crop_face_track(), compute_crop_screen_static(), compute_crop_screen_with_cursor(), compute_face_track(), detect_cursor_positions(), get_video_info(), main() (+1 more)
+Cohesion: 0.11
+Nodes (12): compute_crop_center(), compute_crop_face_track(), compute_crop_screen_static(), compute_crop_screen_with_cursor(), compute_face_track(), detect_cursor_positions(), get_video_info(), main() (+4 more)
 
 ### Community 16 - "YouTube Shorts Playbook"
 Cohesion: 0.11
@@ -251,9 +250,9 @@ Nodes (18): A/B Testing, CTR Benchmarks by Niche, CTR Lifecycle, Face Thumbnails
 Cohesion: 0.11
 Nodes (18): Animation Vocabulary, Easing — how speed changes over an animation, Entrances & Exits — how elements appear and disappear, Examples, Feedback & Interaction — responding to the user's actions, Glossary, Initial Response, Instructions (+10 more)
 
-### Community 19 - "json"
-Cohesion: 0.18
-Nodes (11): analyse(), classify(), load_formulas(), main(), read_rows(), render(), to_markdown(), _buck_line_el_v5() (+3 more)
+### Community 19 - "argparse"
+Cohesion: 0.31
+Nodes (7): analyse(), classify(), load_formulas(), main(), read_rows(), render(), to_markdown()
 
 ### Community 20 - "10-Step Interactive Pipeline"
 Cohesion: 0.11
@@ -279,9 +278,9 @@ Nodes (16): 1. Frequency — how often will a user see this?, 2. Purpose — why
 Cohesion: 0.12
 Nodes (16): Conflicts, Hard Rules, Invocation Variants, Learning Taste, Make it a check, Needs your answer, Phase 1: Collect corrections, Phase 2: Filter (+8 more)
 
-### Community 26 - "sys"
-Cohesion: 0.21
-Nodes (8): classify(), detect_faces(), main(), sample_frames(), main(), main(), design_buck(), main()
+### Community 26 - "json"
+Cohesion: 0.18
+Nodes (9): classify(), detect_faces(), main(), sample_frames(), extract_audio(), main(), transcribe(), main() (+1 more)
 
 ### Community 27 - "Claude YouTube — YouTube Creator Skill"
 Cohesion: 0.12
@@ -315,7 +314,7 @@ Nodes (12): Agent A: Top Video Analysis, Agent B: Keyword Gap, Agent C: Format G
 Cohesion: 0.15
 Nodes (12): 0. Hard rules (they override everything below), 1. Covers: keep the glances, 2. Budgets (talking-head styles; the QA fails past them), 3. Sourcing priority, 4. Grade conform (`scripts/insert_prep.py`), 5. Motion and type, 5b. One fixed house look per style, 6. Style prerequisites (say so, and propose another style) (+4 more)
 
-### Community 35 - "os"
+### Community 35 - "buck3d_v2_job.py"
 Cohesion: 0.35
 Nodes (6): assemble(), git(), main(), pack_pose(), push(), sync()
 
@@ -327,9 +326,9 @@ Nodes (11): Action Summary, Ask the User, Assessment A: Design Review, Assessmen
 Cohesion: 0.17
 Nodes (11): Assess Current State, Code Simplification, Content Simplification, Document Removed Complexity, Information Architecture, Interaction Simplification, Layout Simplification, Plan Simplification (+3 more)
 
-### Community 38 - "draw_vs"
-Cohesion: 0.17
-Nodes (7): count_text(), draw_vs(), ease_back(), fun_font(), sticker_patch(), _vs_font(), zoom_amt()
+### Community 38 - "fun_font"
+Cohesion: 0.20
+Nodes (7): bubble_patch(), fun_font(), hex2rgb(), prep_vs(), sticker_patch(), _vs_at(), wrap()
 
 ### Community 39 - "Dimensions"
 Cohesion: 0.18
@@ -399,9 +398,9 @@ Nodes (3): device(), H, tail()
 Cohesion: 0.20
 Nodes (9): Bundle-Once-Render-Many, calculateMetadata for Dynamic Duration, File Paths in Render, OffthreadVideo + CSS Reframing, Performance Tips, @remotion/captions API, Remotion Patterns and Best Practices, Spring Animations (+1 more)
 
-### Community 56 - "subprocess"
-Cohesion: 0.29
-Nodes (4): extract_audio(), main(), transcribe(), _f0_stats()
+### Community 56 - "os"
+Cohesion: 0.24
+Nodes (6): _buck_line_el_v5(), design_buck(), el_call(), el_speak(), el_voice_id(), _f0_stats()
 
 ### Community 57 - "Thumbnail Brief + A/B Concepts"
 Cohesion: 0.20
@@ -431,13 +430,9 @@ Nodes (5): analyse(), main(), render(), render_box(), visible_window()
 Cohesion: 0.20
 Nodes (9): Before writing, get the specifics, Follow-ups, ig-dm, Never, Output, The collab pitch, The first message to someone warm, The keyword delivery (+1 more)
 
-### Community 64 - "gpu_pod_server.py"
-Cohesion: 0.29
-Nodes (3): pack(), run(), watchdog()
-
 ### Community 65 - "[arxiv] BUYURTMA 2 (2026-11-20 07:25) — BAJARILDI 2026-11-20 08:05"
 Cohesion: 0.22
-Nodes (8): 1-BUYURTMA NATIJASI (arxiv, 2026-11-20 tun), 1. Render (spec'lar tayyor, chat sessiyasida zaxira ovoz bilan sinovdan o'tgan: `work/remake_2026-11-20/`), 2. Joylash — YANGI POST EMAS, mavjud postni yangilash, 3. Yakun, [arxiv] BUYURTMA 2 (2026-11-20 07:25) — BAJARILDI 2026-11-20 08:05, BUYURTMA 3 (2026-11-20 21:15) — HOLAT: OCHIQ, NATIJA, NATIJA (3)
+Nodes (8): 1-BUYURTMA NATIJASI (arxiv, 2026-11-20 tun), 1. Render (spec'lar tayyor, chat sessiyasida zaxira ovoz bilan sinovdan o'tgan: `work/remake_2026-11-20/`), 2. Joylash — YANGI POST EMAS, mavjud postni yangilash, 3. Yakun, [arxiv] BUYURTMA 2 (2026-11-20 07:25) — BAJARILDI 2026-11-20 08:05, BUYURTMA 3 (2026-11-20 21:15) — HOLAT: BAJARILDI 2026-11-20 20:50 Toshkent, NATIJA, NATIJA (3)
 
 ### Community 66 - "Analyze Sub-Skill"
 Cohesion: 0.22
@@ -479,9 +474,9 @@ Nodes (8): ig-viral, Output, Step 1: pick the accounts, Step 2: go and look, Ste
 Cohesion: 0.47
 Nodes (6): curl(), gql(), main(), status(), pods(), terminate()
 
-### Community 76 - "math"
-Cohesion: 0.28
-Nodes (4): make_bg(), mascot_patch(), _price_tag(), _star()
+### Community 76 - "draw_vs"
+Cohesion: 0.15
+Nodes (8): count_text(), draw_vs(), ease_back(), make_bg(), mascot_patch(), _price_tag(), _star(), _vs_font()
 
 ### Community 77 - "Financier Money Facts — production directives (TOP-10 / Cinema standard)"
 Cohesion: 0.22
@@ -600,8 +595,8 @@ Cohesion: 0.29
 Nodes (6): ig-story, Output, Rules, The daily shape, The DM funnel, done honestly, The stickers, and what each is actually for
 
 ### Community 106 - "INSTAGRAM (Shohjahon 2026-11-20 19:42)"
-Cohesion: 0.33
-Nodes (5): HOLAT (2026-11-20 20:00), INSTAGRAM (Shohjahon 2026-11-20 19:42), JOYLASH TARTIBI (ulangandan keyin; producer_task ga kiritilgan), O'ZBEKCHA VERSIYA, OVOZ PROFILLARI (2026-11-20 20:15; ig-reel/ig-caption `voice.md` o'rniga)
+Cohesion: 0.25
+Nodes (7): FINANSIST OVOZI (2026-11-20 21:20–22:00, Shohjahon "ha"), HOLAT (2026-11-20 20:00), INSTAGRAM (Shohjahon 2026-11-20 19:42), JOYLASH TARTIBI (ulangandan keyin; producer_task ga kiritilgan), O'ZBEKCHA VERSIYA, OVOZ PROFILLARI (2026-11-20 20:15; ig-reel/ig-caption `voice.md` o'rniga), TALAFFUZ SINOVI (2026-11-20 20:55)
 
 ### Community 107 - "Sound and memes"
 Cohesion: 0.33
@@ -635,13 +630,13 @@ Nodes (5): 1. claude-youtube (ko'chirildi: `docs/skills/claude-youtube/`), 2. Le
 Cohesion: 0.33
 Nodes (5): KO'CHIRIB OLINGAN VOSITALAR (2026-11-20 19:00) — `engine/vendor/lemo/` (MIT, o'zgartirilmagan; NOTICE.txt da manba), LITSENZIYA (o'qilgan, qisqa; har ishlatishdan oldin LICENSE ni qayta ko'r), QANDAY ISHLATAMIZ — "USLUBLI INSERT" (Buck va ovoz o'zimizniki qoladi), REJISSORLIKDAN O'RGANILGANLAR (o'z so'zimiz bilan; producer_task qoidalariga qo'shildi), USLUBLAR KUTUBXONASI — Lemo-Opuscar (Shohjahon 2026-11-20 18:44: "o'zingga yozib ol, malaka oshir, videolar tayyorlashda foydalan")
 
-### Community 115 - "buck_line"
-Cohesion: 0.40
-Nodes (4): buck_line(), buck_line_el(), say_text(), tts()
+### Community 115 - "tts"
+Cohesion: 0.20
+Nodes (7): buck_line(), buck_line_el(), say_text(), tts(), uz_cyr(), uz_voice_text(), one()
 
 ### Community 116 - "O'SISH JURNALI — "har kuni kechagidan yaxshiroq" (Shohjahon, 2026-11-20 07:07)"
-Cohesion: 0.40
-Nodes (4): 2026-11-20 (chat sessiyasi), 2026-11-20 (vazifa, A 09:19), 2026-11-20 (vazifa, B 15:19), O'SISH JURNALI — "har kuni kechagidan yaxshiroq" (Shohjahon, 2026-11-20 07:07)
+Cohesion: 0.29
+Nodes (6): 2026-11-20 (chat sessiyasi), 2026-11-20 (vazifa, A 09:19), 2026-11-20 (vazifa, B 15:19), 2026-11-20 (vazifa, BUYURTMA 3, 20:34), 2026-11-20 (vazifa, C 23:19), O'SISH JURNALI — "har kuni kechagidan yaxshiroq" (Shohjahon, 2026-11-20 07:07)
 
 ### Community 118 - "Third-Party Notices"
 Cohesion: 0.40
@@ -659,18 +654,22 @@ Nodes (4): Issue Severity (P0–P3), Reference Material, Score Summary, Scoring 
 Cohesion: 0.50
 Nodes (3): Dizayn va harakat skillari (Shohjahon 2026-11-20 20:23: "ko'rib chiq, saqlab ishlat"), QO'LLANDI (2026-11-20 20:55), VIDEOGA KO'CHADIGAN TAMOYILLAR (o'z so'zimiz bilan; UI qoidalarini ko'r-ko'rona ko'chirmaymiz — video multfilm harakatiga ega)
 
+### Community 127 - "voice.md — Finansist (finansist424, oʻzbekcha, lotin)"
+Cohesion: 0.50
+Nodes (3): "HAZILKASH BUZG'UNCHI" USLUBI (Shohjahon 2026-11-20 22:20 — MAJBURIY; Toshkent shevasi bilan birga), TOSHKENT SHEVASI (Shohjahon 2026-11-20 21:50 — MAJBURIY, "say" va subtitrda), voice.md — Finansist (finansist424, oʻzbekcha, lotin)
+
 ## Knowledge Gaps
-- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `scale()` connect `re` to `Animation Standards Reference`, `Animation Recipes`, `Animation Performance`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+  _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **Should `re` be split into smaller, more focused modules?**
-  _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05369369369369369 - nodes in this community are weakly interconnected._
 - **Why does `Transforms & clip-path` connect `Animation Standards Reference` to `re`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+  _High betweenness centrality (0.013) - this node is a cross-community bridge._
 - **Should `buck3d.py` be split into smaller, more focused modules?**
   _Cohesion score 0.07380520266182698 - nodes in this community are weakly interconnected._
 - **Should `Choreographing Motion` be split into smaller, more focused modules?**
@@ -678,4 +677,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `Animation Recipes` be split into smaller, more focused modules?**
   _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._
 - **Should `render` be split into smaller, more focused modules?**
-  _Cohesion score 0.07007575757575757 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.0735632183908046 - nodes in this community are weakly interconnected._

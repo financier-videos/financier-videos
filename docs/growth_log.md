@@ -36,3 +36,8 @@ Har kuni KAMIDA bitta yozuv. Format: sana — O'RGANILDI (manba, sana) → O'ZGA
 13. O'RGANILDI: eleven_v3 /with-timestamps so'z vaqtlarini beradi va voice_settings (speed) ni qabul qiladi, lekin previous_text/next_text ni rad etadi (400 unsupported_model).
    O'ZGARTIRILDI: engine el_speak — v3 da prev/next yuborilmaydi. O'zbekcha namuna 1-urinishda chiqdi (38.4 s, −14 LUFS).
    O'LCHOV: Shohjahonning talaffuz bahosi; "ha" bo'lsa finansist424 uchun o'zbekcha Reellar shu yo'l bilan. v3 da kontekst yo'qligi sababli jumlalar orasidagi intonatsiya uzilishi bo'lishi mumkin — baho kelganda tekshiriladi.
+
+## 2026-11-20 (vazifa, C 23:19)
+14. O'RGANILDI (o'z kanalimiz, vidIQ ochiq hisob 23:20): yangi uslubdagi birinchi Short (trillion61 v2: Buck D ElevenLabs, 3D v2 + lip-sync, b-roll+raqam ochilishi, royal) ~3 soatda 241 ko'rish, 80 VPH, 3 izoh; eski uslub (Kokoro hikoyachi, 40–48 s) 1–2 kunda 22–78. Bitta video — xulosa emas, lekin farq 3–10x.
+   O'ZGARTIRILDI: playbook 6-bo'lim — "IKKI BARAVAR OSHIR" (dastlabki): b-roll+katta raqam ochilishi; ertangi 4 Shortning 2 tasi shu ochilishda (XILMA-XILLIK: theme/format/emotsiya boshqa bo'lsin).
+   O'LCHOV: 21-noy C da trillion61 vs fee_guess (hookscore 75, Buck center+savol ochilishi) 24 soatlik ko'rish va YouTube Analytics kelgan bo'lsa averageViewPercentage. HOOKSCORE MOSLIGI: hozircha ma'lumot yetarli emas (fee_guess chiqqaniga 10 daqiqa; trillion61 hookscore hisoblanmagan) — ertaga ikkalasini bir xil yoshda solishtir.
