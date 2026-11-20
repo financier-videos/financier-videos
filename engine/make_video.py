@@ -1618,7 +1618,7 @@ def render(spec, wav, total, out, workdir):
     f_cap = ImageFont.truetype(INTER_XB, cap_sz)
     f_cap_big = ImageFont.truetype(INTER_XB, int(cap_sz * 1.12))
     f_stat = ImageFont.truetype(ANTON, int(S * (0.22 if long else 0.30)))
-    f_src = ImageFont.truetype(INTER_SB, int(S * 0.024))
+    f_src = ImageFont.truetype(INTER_SB, int(S * 0.030))   # v6.4: was 0.024 — unreadable on a phone
     f_brand = ImageFont.truetype(ANTON, int(S * 0.04))
     f_lbl = ImageFont.truetype(INTER_XB, int(S * 0.04))
     f_val = ImageFont.truetype(ANTON, int(S * 0.06))
@@ -1908,8 +1908,11 @@ def render(spec, wav, total, out, workdir):
             # ---------- source, progress, brand ----------
             src_txt = sc["show_source"] if isinstance(sc.get("show_source"), str) else spec.get("source")  # 2026-11-20: per-scene source line (long videos cite many sources)
             if src_txt and sc.get("show_source"):
-                tw = ud.textlength(src_txt, font=f_src)
-                ud.text(((W - tw) / 2, H * (0.93 if long else 0.775)), src_txt, font=f_src, fill=GREY + (255,))
+                fs_ = f_src; tw = ud.textlength(src_txt, font=fs_)
+                if tw > W * 0.92:   # v6.4: shrink a long source line to fit instead of running off the frame
+                    fs_ = ImageFont.truetype(INTER_SB, max(int(S * 0.020), int(S * 0.030 * W * 0.92 / tw))); tw = ud.textlength(src_txt, font=fs_)
+                ud.text(((W - tw) / 2, H * (0.93 if long else 0.775)), src_txt, font=fs_, fill=(196, 204, 220, 255),
+                        stroke_width=max(1, int(S * 0.002)), stroke_fill=(0, 0, 0, 200))
             ud.rectangle([0, 0, int(W * t / total), int(S * 0.009)], fill=GOLD + (255,))
             ud.text((W * 0.04, (H - S * 0.07) if long else S * 0.03), "FINANCIER", font=f_brand, fill=GOLD + (150,))
             if cinema:  # v6: parallax — background 0.55x, content 1x, near bokeh 1.6x of the camera move
