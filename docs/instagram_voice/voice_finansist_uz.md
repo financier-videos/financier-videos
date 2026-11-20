@@ -12,11 +12,11 @@ Caption: oʻsha ohang — avval savol, bitta fakt, "Manba:", "Moliyaviy maslahat
 Finansist sof Toshkent shevasida gapiradi, kinoyali, tomoshabinga toʻgʻridan gapiradigan anti-qahramon hazilkash uslubida (mavjud personaj nomi/aktyor ovozi ishlatilmaydi).
 - Murojaat: "aka" EMAS → "oka"; "brat", "SHEPIIIM" (shefim EMAS: "p" bilan, "i" cho'zib aytiladi; TTS matnida "shepiiim") — Toshkent jargoni, ishlatiladi (meʼyorida, videoga 1–3 ta).
 - Olmoshlar: men → MAN, sen → SAN, ular → ULA, bizlar → BIZA, sizlar → SILA. Fe'l qoʻshimchalari ham shunga mos: "ishlatasila", "bilasila".
-- Ogʻzaki shakllar: "shoshmela" (shoshmanglar), "qarela" (qaranglar), "ishlatmidi" (ishlatmaydi), "qoʻshsa", "bor ekan-da".
+- Ogʻzaki shakllar: "etvomman" (aytyapman; "aytvomman" emas), "shoshmela" (shoshmanglar), "qarela" (qaranglar), "ishlatmidi" (ishlatmaydi), "qoʻshsa", "bor ekan-da".
 - So'kinish, haqorat — baribir YOʻQ. Ovoz: Finansist (Voice Design, 2-tur 7/8/9 nomzodlaridan biri).
 
 ## "HAZILKASH BUZG'UNCHI" USLUBI (Shohjahon 2026-11-20 22:20 — MAJBURIY; Toshkent shevasi bilan birga)
-Gapirish: tomoshabinga yonida o'tirgandek to'g'ridan ("Ha, sila, silaga aytvomman"). O'zini va vaziyatni masxara qiladi; jiddiy gapni aytib, darhol o'zi buzadi. Gap o'rtasida boshqa fikrga sakrab, qaytadi. Qisqa gaplar; uzun tushuntirish o'rniga bitta kutilmagan taqqoslash.
+Gapirish: tomoshabinga yonida o'tirgandek to'g'ridan ("Ha, sila, silaga etvomman" — "aytvomman" EMAS). O'zini va vaziyatni masxara qiladi; jiddiy gapni aytib, darhol o'zi buzadi. Gap o'rtasida boshqa fikrga sakrab, qaytadi. Qisqa gaplar; uzun tushuntirish o'rniga bitta kutilmagan taqqoslash.
 Ohang: asosiy holat beparvo-kinoyali. Keskin o'tishlar: xotirjam → to'satdan baland hayrat → past, shivir. Muhim so'z cho'ziladi ("yigirma yettiii milliard"). Gap oxirida ovoz tushadi ("men haqman, bahslashmang").
 Temp: umuman tez, lekin hazil oldidan ~0.5 s pauza ("beat"). So'zlar aniq. Undovlar ko'p: "Heh", "Uf", "Voy", "Shoshmela".
 Mimika (Buck/Finansist): yuz o'rniga ko'z va tana — "sideeye" (bir qosh), bosh qiyshaygan, yelka qisish; hazildan keyin kameraga qarab qotadi (zoom on buck, hold, ~0.5 s jim). Harakat keskin va ortiqcha; monokl otilib chiqishi.
