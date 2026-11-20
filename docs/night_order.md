@@ -1,4 +1,4 @@
-# BUYURTMA 2026-11-20 tun — HOLAT: OCHIQ
+# BUYURTMA 2026-11-20 tun — HOLAT: BAJARILDI 2026-11-20 07:45 (Toshkent)
 Shohjahon (2026-11-20 03:42 Toshkent): "eng zo'r ssenariylardan videolar 2–3 soat ichida tayyor bo'lsin, grafika va sifat eng zo'r bo'lsin". Bu buyurtma soatga qaramay BIRINCHI bajariladi. Vaqt byudjeti: boshlanganidan 2 soat 15 daqiqa; undan keyin yangi render boshlama, tugatib yoz.
 Chegaralar: `docs/producer_task.md` dagi QAT'IY CHEGARALAR to'liq amal qiladi.
 
@@ -27,4 +27,10 @@ Push (producer_task A-i), raw URL 200. Avval Metricool getScheduledPosts bilan b
 - Shohjahonga xabar (≤6 qator, o'zbekcha): nechta video tayyor, qaysi vaqtda chiqadi, muammo bo'lsa nima.
 
 ## NATIJA
-(sessiya to'ldiradi)
+Sessiya 2026-11-20 06:40–07:45 Toshkent. ElevenLabs 200 (Buck D). Lip-sync kutubxonasi repoda bor edi (assets/buck3d_v2_talk.tar) — barcha videolarda ishlatildi; "buck3d": "v2", "cinema": true; qora siluet yo'q; mean −18.1..−18.7 dB, stereo. Costco narxi WebSearch: 2026 manbalarida $4.99 — n2 qoldi.
+- n1 2026-11-20_fee64k.mp4 — 29.0 s — 2026-11-20 13:00 ET — Metricool 435015671 — lip-sync bor.
+- n2 2026-11-20_costco.mp4 — 34.6 s — 2026-11-20 19:00 ET — Metricool 435015740 — lip-sync bor.
+- n3 2026-11-20_copier.mp4 — 37.1 s (1-render 40.2 s: buzuq TTS take keshdan o'chirildi, qayta render) — 2026-11-21 10:00 ET — Metricool 435023630 — lip-sync bor.
+- n4 2026-11-20_giftcards.mp4 — 27.3 s (1-render 31.8 s: oxirgi jumla buzuq take, qayta render) — 2026-11-21 13:00 ET — Metricool 435023666 — lip-sync bor.
+- n5 2026-11-20_overbooking.mp4 — 26.1 s — 2026-11-21 16:00 ET — Metricool 435023719 — lip-sync bor. Kichik kamchilik: 3-sahnada 3 qatorli subtitr manba qatoriga tegadi (o'qiladi).
+- 6-band: trillion61 (39.7 s) va turkeyflights (35.0 s) v2 + lip-sync bilan qayta render qilinib, xuddi shu fayl nomlari bilan repoda almashtirildi. QAYTA POST QILINMADI. DIQQAT: Metricool videoni o'z serveriga ko'chirgan, shuning uchun 434764903 / 434764979 postlari eski versiyani chiqaradi (yangilash uchun Metricool'da media almashtirish kerak).
