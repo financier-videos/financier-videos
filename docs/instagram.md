@@ -35,3 +35,8 @@ Shohjahon: namunada g' inglizcha g/j kabi, x esa "iks" deb o'qilyapti. eleven_v3
 
 ## OVOZ PROFILLARI (2026-11-20 20:15; ig-reel/ig-caption `voice.md` o'rniga)
 `docs/instagram_voice/voice_buck_en.md` — inglizcha; `docs/instagram_voice/voice_finansist_uz.md` — o'zbekcha. Har ssenariy va caption oldidan mos faylni o'qi. Haftalik tartib (dushanba): ig-viral (nishada nima ishlayapti — loginsiz manbalar bilan) → ig-plan → har video ig-reel → ig-caption; ig-reply — faqat qoralama, Shohjahonga.
+
+## FINANSIST OVOZI (2026-11-20 21:20–22:00, Shohjahon "ha")
+- 1-tur (adabiy, 1–6): 1, 2, 4 yaxshiroq. 2-tur (Toshkent shevasi + kinoyali anti-qahramon arxetipi, 7–12): 7, 8, 9 yaxshiroq.
+- Shohjahon: Toshkentda "oka" (aka emas), "brat", "shefim"; man/san/ula/biza/sila → voice_finansist_uz.md TOSHKENT SHEVASI.
+- 7, 8, 9 akkauntga "Finansist N (Tashkent)" nomi bilan saqlandi (voice_id lar work/voice_lab/uz/previews.json da). Shevadagi matn eleven_v3 TTS bilan lotin va kirillda: work/voice_lab/uz/tts_test/. Shohjahon bittasini tanlaydi → qolgan 2 tasini o'chirish uning ruxsati bilan.
