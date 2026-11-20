@@ -58,3 +58,4 @@ Har kuni KAMIDA bitta yozuv. Format: sana — O'RGANILDI (manba, sana) → O'ZGA
    O'LCHOV: keyingi Short fayllari ≤55 MB va sifat kadrlarda pasaymaganmi; Shohjahon Muhit sozlamasida cdn.pixabay.com ni ochsa — Pixabay b-roll sinovi.
 19. QO'LLANDI: hookscore — 100 ball olgan BF varianti ("your money's catching up") ma'nosiz edi → olinmadi (fakt > ball). voice_check "can't"→"can" ni ushladi (ma'no teskari) va buzuq oxirgi take'ni (6.7 c/s, qichqiriq) — ikkalasi tuzatildi. SABOQ: inkor so'zlari ("can't") hookda — "can NOT".
    O'LCHOV (23:17 C): airport (hookscore 80.8, katta raqam) vs bfcm (64.8, vs-panel) — 24 soatlik ko'rish; birinchi o'zbekcha Reellar (finansist424) ko'rish/follower.
+20. ULANDI (2026-11-21, Shohjahon): cdn.pixabay.com muhit tarmog'ida ochildi (tekshiruv: 200). Pixabay b-roll endi to'liq ishlaydi (API + video CDN). O'LCHOV: keyingi A/B ishida 1 Short b-roll Pixabay'dan (kadrlarni Read bilan ko'r; tavsifda "Pixabay" + muallif).
