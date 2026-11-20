@@ -85,5 +85,8 @@ vidiq_user_channels → 6-bo'lim jadvali. WebSearch: AQSh tomoshabinlari pul haq
 - Har kuni `docs/growth_log.md` ga kamida 1 yozuv (O'RGANILDI → O'ZGARTIRILDI → O'LCHOV). Hech narsa o'zgarmagan kun — "o'zgarish yo'q" deb yozilmaydi: kamida bitta kichik yaxshilanish (qoida, dvigatel, ssenariy uslubi) qilinadi va ertasi kuni natijasi tekshiriladi. Ishlamagan o'zgarish ortga qaytariladi va shunday yoziladi.
 - YouTube "inauthentic content" (2026-07): Buck ekspert/maslahatchi EMAS; maslahat jumlasi yo'q; kunning Shortlari kamida 2 xil tuzilmada.
 
+## 1.6) INSTAGRAM (Shohjahon 2026-11-20 19:42) — `docs/instagram.md` ni o'qi va aynan bajar
+Har A va B ishida, YouTube postlaridan keyin: (1) vidiq_social_account_list (platform INSTAGRAM). Ulangan va canPublish true akkaunt yo'q bo'lsa — hech narsa qilma, 1 qator yoz. (2) financier424 ulangan bo'lsa — shu ishda yasalgan, mezondan o'tgan inglizcha Shortlarni Reel qilib chiqar. (3) finansist424: avval o'zbekcha namuna va Shohjahonning "ha" si (instagram.md "BIRINCHI QADAM"); "ha" `docs/instagram.md` HOLAT bo'limida yozilgan bo'lsagina o'zbekcha versiyalarni yasab chiqar. Yozuv: playbook 9-bo'limdagi video qatoriga "IG: <permalink>".
+
 ## 2) HAR REJIM OXIRIDA
 `docs/youtube_playbook.md` ni yangila ("Yangilangan" sanasi, jurnalga 1–3 qator, 14 kundan eskisini xulosaga; ≤200 qator), `git pull --rebase origin media`, commit, `git push origin HEAD:media`. Oxirgi javobda "Ochiq qolganlar" (faqat bo'lsa).
