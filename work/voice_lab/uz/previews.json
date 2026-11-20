@@ -1,0 +1,43 @@
+{
+ "prompt_model": "eleven_ttv_v3",
+ "seed": 4242,
+ "note": "generated_voice_id lar Shohjahon tanlagach /text-to-voice bilan saqlanadi (Finansist)",
+ "previews": [
+  {
+   "file": "lat_1.mp3",
+   "generated_voice_id": "Twt3La2aNuVGFTXgDnw1",
+   "sec": 18.2884375,
+   "n": 1
+  },
+  {
+   "file": "lat_2.mp3",
+   "generated_voice_id": "x429ly0LnFc7rpDdOc4v",
+   "sec": 17.478625,
+   "n": 2
+  },
+  {
+   "file": "lat_3.mp3",
+   "generated_voice_id": "iR2l6RWmzMRqT5UoWZTE",
+   "sec": 15.8068125,
+   "n": 3
+  },
+  {
+   "file": "cyr_1.mp3",
+   "generated_voice_id": "aCBDCHhDEgAOtDREpBj8",
+   "sec": 18.68025,
+   "n": 4
+  },
+  {
+   "file": "cyr_2.mp3",
+   "generated_voice_id": "r23FdOMQPdnR0ZhFk8Cb",
+   "sec": 17.71375,
+   "n": 5
+  },
+  {
+   "file": "cyr_3.mp3",
+   "generated_voice_id": "YhEdaoUBCmdPuxlDPOek",
+   "sec": 16.5905,
+   "n": 6
+  }
+ ]
+}
