@@ -22,3 +22,4 @@ SINALADIGAN GIPOTEZALAR (bir-biriga zid manbalar bor — o'zimiz o'lchaymiz):
 | wilwaldon/Claude-Code-Video-Toolkit | video uchun skill/MCP ro'yxati (Remotion, Manim, FFmpeg) | katalog — yangi vosita qidirganda qaraladi |
 | manojbajaj95/claude-gtm-plugin (youtube-video-hook), mohitagw15856/pm-claude-skills (youtube-script-writer) | hook va ssenariy skillari (MIT deb ko'rsatilgan) | claude-youtube bilan takrorlanadi; kerak bo'lsa solishtir |
 Har yangi manba uchun tartib: (1) LICENSE o'qi — tijoratga ruxsat va ochiq repoga qo'yish mumkinligi; (2) skript/kodni ishga tushirmasdan o'qi; (3) faqat kerakli qismini manba+commit+litsenziya bilan ko'chir; (4) shu jadvalga yoz.
+- Ko'chirilmadi: `execution/` (YouTube API/OAuth skriptlari — kalit bilan ishlaydi; bizda post Metricool orqali) va boshqa kod fayllari. Faqat matnli qo'llanmalar olindi.
