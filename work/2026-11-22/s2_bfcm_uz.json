@@ -1,0 +1,21 @@
+{
+ "lang": "uz",
+ "format": "short",
+ "sfx": true,
+ "loop": false,
+ "theme": "ember",
+ "source": "Manba: Adobe Digital Insights bayram savdosi prognozi, 2026-09-28",
+ "buck_voice": {"variant": "UZ", "model": "eleven_v3", "script": "lat", "settings": {"stability": 0.0, "speed": 0.88}},
+ "scenes": [
+  {"text": "Brat, qaravorin shundo!", "head": "QARAVORIN!", "mascot": {"mood": "point", "pos": "center", "act": "drop_in"}, "zoom": {"at": 0.6, "amt": 1.2, "hold": 0.5, "on": "buck"}, "sfx": ["whoosh"]},
+  {"text": "Amerikada ikkita katta onlayn savdo kuni bor. Black Friday va Cyber Monday.", "head": "JUMA vs DUSHANBA", "vs": {"left": "$12.9B", "left_label": "Black Friday", "right": "$15.1B", "right_label": "Cyber Monday", "win": "right", "at": [1.6, 3.2], "vs_at": 2.4, "left_color": "#FF8A3D", "right_color": "#F5C542"}, "sfx": ["impact@3.2"]},
+  {"text": "Adobe prognozi: Cyber Mondayda o'n besh butun o'ndan bir milliard dollar.", "head": "CYBER MONDAY", "stat": "$15.1B", "show_source": true, "mascot": {"mood": "proud", "pos": "corner"}, "sfx": ["cash"]},
+  {"text": "Black Fridayda esa o'n ikki butun o'ndan to'qqiz milliard.", "head": "BLACK FRIDAY", "stat": "$12.9B", "color": "#FF8A3D", "mascot": {"mood": "sad", "pos": "corner"}, "sfx": ["slide_down"]},
+  {"text": "Shoshmen... lekin Black Friday tezroq o'syapti.", "head": "KIM TEZ O'SYAPTI?", "mascot": {"mood": "shocked", "pos": "center"}, "zoom": {"at": 0.4, "amt": 1.22, "hold": 0.6, "on": "buck"}, "sfx": ["drumroll"]},
+  {"text": "To'qqiz butun o'ndan ikki foiz, olti butun o'ndan ikkiga qarshi.", "head": "+9.2% vs +6.2%", "color": "#FF8A3D", "chart": {"labels": ["Black Friday", "Cyber Monday"], "values": [9.2, 6.2], "texts": ["+9.2%", "+6.2%"], "at": [0.2, 1.6], "hi": 0}, "sfx": ["ding@1.6"]},
+  {"text": "Black Fridayning o'zida sakkiz yuz yetti million dollar hozir ol, keyin to'la bilan ketadi.", "head": "HOZIR OL, KEYIN TO'LA", "stat": "$807M", "color": "#FF4D4D", "mascot": {"mood": "sideeye", "pos": "corner"}, "fx": ["coin_rain"]},
+  {"text": "Uf... o'sha keyin baribir keladi-da.", "head": "KEYIN BARIBIR KELADI", "beat": 0.5, "sticker": "KEYIN = TO'LOV", "sticker_at": 0.8, "shake": 0.3, "sfx": ["wahwah@0.9"]},
+  {"text": "Sila qaysi jamoa: juma yoki dushanba?", "head": "JUMA YOKI DUSHANBA?", "mascot": {"mood": "laugh", "pos": "center", "act": "dodge"}, "sfx": ["pop"]},
+  {"text": "Sila bilan chala amerikali finansist bo'ldi.", "head": "CHALA AMERIKALI FINANSIST", "beat": 0.4, "mascot": {"mood": "proud", "pos": "center", "act": "flip"}, "sfx": ["ding@0.6"]}
+ ]
+}

@@ -1,0 +1,166 @@
+{
+ "lang": "uz",
+ "format": "short",
+ "sfx": true,
+ "loop": false,
+ "theme": "ocean",
+ "source": "Manba: Nyu-York va Nyu-Jersi Port Authority, aeroport narx qoidalari",
+ "buck_voice": {
+  "variant": "UZ",
+  "model": "eleven_v3",
+  "script": "lat",
+  "settings": {
+   "stability": 0.0,
+   "speed": 0.88
+  }
+ },
+ "scenes": [
+  {
+   "text": "Oka, to'xtab turin!",
+   "head": "TO'XTAB TURIN!",
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "center",
+    "act": "dodge"
+   },
+   "zoom": {
+    "at": 0.5,
+    "amt": 1.22,
+    "hold": 0.5,
+    "on": "buck"
+   },
+   "sfx": [
+    "scratch"
+   ]
+  },
+  {
+   "text": "Nyu-York aeroportlarida narxni xohlagancha qo'yib bo'lmidi. Chegarasi bor: o'n besh foiz.",
+   "head": "MAKSIMUM +15%",
+   "stat": "+15%",
+   "color": "#2BD67B",
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "drop_in"
+   },
+   "sfx": [
+    "impact"
+   ]
+  },
+  {
+   "text": "Shoshmen... nimadan o'n besh foiz?",
+   "head": "NIMADAN?",
+   "mascot": {
+    "mood": "confused",
+    "pos": "center"
+   },
+   "zoom": {
+    "at": 0.2,
+    "amt": 1.25,
+    "hold": 0.6,
+    "on": "buck"
+   }
+  },
+  {
+   "text": "Shahardagi do'kon narxidan. Buni ko'cha narxi deyishadi.",
+   "head": "KO'CHA NARXI",
+   "sticker": "SHAHAR NARXI + OZGINA",
+   "sticker_at": 1.2,
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   },
+   "sfx": [
+    "pop@1.2"
+   ],
+   "show_source": true
+  },
+  {
+   "text": "Bu qoida JFK, LaGuardia va Newark aeroportlari uchun.",
+   "head": "QOIDA",
+   "broll": "/tmp/fin/broll/nyc_map.mp4",
+   "transition": "slide"
+  },
+  {
+   "text": "Oldin o'n foiz edi.",
+   "head": "OLDIN +10% EDI",
+   "chart": {
+    "labels": [
+     "Oldin",
+     "Hozir"
+    ],
+    "values": [
+     10,
+     15
+    ],
+    "texts": [
+     "+10%",
+     "+15%"
+    ],
+    "at": [
+     0.2,
+     1.0
+    ]
+   },
+   "fx": [
+    "arrow_up"
+   ],
+   "sfx": [
+    "slide_up@1.0"
+   ]
+  },
+  {
+   "text": "Heh... chegaraning o'zi ham qimmatlashdi-ku.",
+   "head": "CHEGARA HAM QIMMATLASHDI",
+   "beat": 0.5,
+   "mascot": {
+    "mood": "dizzy",
+    "pos": "center",
+    "act": "bonk",
+    "act_at": 0.8
+   },
+   "shake": 0.3,
+   "sfx": [
+    "boing@0.9"
+   ]
+  },
+  {
+   "text": "Nega ustama? Ijara, xavfsizlik, xodimlar. Detektordan o'tgan somsa arzon bo'lmidi-da.",
+   "head": "NEGA USTAMA?",
+   "sticker": "IJARA · XAVFSIZLIK · XODIM",
+   "sticker_at": 0.5,
+   "mascot": {
+    "mood": "laugh",
+    "pos": "corner"
+   },
+   "sfx": [
+    "tick@0.8",
+    "tick@1.4"
+   ]
+  },
+  {
+   "text": "Sila aeroportda eng qimmat nimaga pul to'lagansila?",
+   "head": "ENG QIMMAT NARX?",
+   "mascot": {
+    "mood": "thumbsup",
+    "pos": "center"
+   },
+   "sfx": [
+    "ding@0.3"
+   ]
+  },
+  {
+   "text": "Sila bilan chala amerikali finansist bo'ldi.",
+   "head": "CHALA AMERIKALI FINANSIST",
+   "beat": 0.4,
+   "mascot": {
+    "mood": "proud",
+    "pos": "center",
+    "act": "flip"
+   },
+   "sfx": [
+    "ding@0.6"
+   ]
+  }
+ ]
+}
