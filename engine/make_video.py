@@ -220,8 +220,8 @@ def el_speak(text, workdir, tag, cfg=None, prev=None, nxt=None, sr=24000):
             for st in (settings, None):  # retry without voice_settings if the model rejects one of them
                 body = {"text": txt, "model_id": m}
                 if st: body["voice_settings"] = st
-                if prev: body["previous_text"] = prev
-                if nxt: body["next_text"] = nxt
+                if prev and m != "eleven_v3": body["previous_text"] = prev  # v3 rejects previous/next_text (400, 2026-11-20)
+                if nxt and m != "eleven_v3": body["next_text"] = nxt
                 code, data = el_call("POST", f"/text-to-speech/{vid}/with-timestamps", body, timeout=150,
                                      query="?output_format=mp3_44100_128")
                 if code == 200:

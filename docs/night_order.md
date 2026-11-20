@@ -1,4 +1,4 @@
-# BUYURTMA 3 (2026-11-20 21:15) — HOLAT: OCHIQ
+# BUYURTMA 3 (2026-11-20 21:15) — HOLAT: BAJARILDI 2026-11-20 20:50 Toshkent
 Shohjahon (20:30): "hozir tashla namunani" — O'ZBEKCHA NAMUNA. Soatga qaramay BIRINCHI bajariladi; qisqa ish (bitta render), keyin odatdagi rejim davom etadi.
 1. ElevenLabs 200 ekanini tekshir.
 2. `work/uz_test/giftcard_uz.json` ni render qil → `work/uz_test/giftcard_uz.mp4` (spec tayyor: o'zbekcha matn, "buck_voice": {"variant":"D","model":"eleven_v3"}; vizual chat sessiyasida sinalgan). Matn va raqamlarni o'zgartirma.
@@ -8,7 +8,16 @@ Shohjahon (20:30): "hozir tashla namunani" — O'ZBEKCHA NAMUNA. Soatga qaramay 
 6. Shu fayl HOLAT ni "BAJARILDI <vaqt>" qil va NATIJA ni yoz (model, uzunlik, so'z vaqt belgilari ishladimi, lab-qimirlash bor-yo'qligi, eshitishda sezilgan narsa bo'lsa — yo'q, sen eshita olmaysan: faqat texnik natija).
 
 ## NATIJA (3)
-(sessiya to'ldiradi)
+Sessiya 2026-11-20 20:34–20:50 Toshkent (rejalashtirilgan vazifa). ElevenLabs 200.
+- Model: eleven_v3, Buck D (Wisecracker), "settings": {"speed": 1.0} QABUL QILINDI (rad etilmadi). Natija JSON: buck_voice "elevenlabs:Buck D (Wisecracker)/eleven_v3", buck3d v2, cinema true.
+- /with-timestamps v3 da ISHLAYDI (alignment qaytadi) — subtitrlar so'zma-so'z (kadrlarda tasdiqlandi).
+- XATO TOPILDI VA TUZATILDI: v3 "previous_text"/"next_text" ni rad etadi (400 unsupported_model) — dvigatelning qayta urinishi faqat settings'ni olib tashlardi, shuning uchun har jumla yiqilardi. engine/make_video.py el_speak: model eleven_v3 bo'lsa prev/next yuborilmaydi (inglizcha multilingual_v2 ga ta'sir yo'q).
+- Uzunlik 38.4 s (≤45). Sahnalar: 6.5/3.7/9.0/3.5/6.8/5.2/3.8 s; buzuq take belgisi yo'q (11–15 belgi/s).
+- Ovoz: −14.0 LUFS, true peak −2.2 dBTP, stereo. blackdetect: 0. check.py --platform reels: 13 tekshiruv, 0 FAIL (faqat "subtitles none" WARN).
+- Kadrlar (har 3 s): vs → "?" maket → $0 ochiladi; Buck drop_in, 43% / $244 / $27 MLRD stat, bonk; o'zbekcha matn sig'adi, Buck raqam/subtitrni yopmaydi.
+- Lab-qimirlash: talk kutubxonasi yuklandi (90 ta *_t1_* kadr) → og'iz nutq energiyasiga moslashadi (texnik jihatdan yoqiq; eshitib/ko'rib baholash Shohjahonda).
+- voice_check o'tkazilmadi (o'zbekcha uchun ishlamaydi). Talaffuzni men eshita olmayman.
+- Fayl: work/uz_test/giftcard_uz.mp4 (31 MB). YouTube/Instagram'ga QO'YILMADI.
 
 # [arxiv] BUYURTMA 2 (2026-11-20 07:25) — BAJARILDI 2026-11-20 08:05
 Shohjahon (07:15 va 07:22 Toshkent): "videolarni boshqattan yasa"; "bugun qo'yiladigan videolarni ham ko'rib chiq, eng zo'ri qilib tayyorlab joylashtir; grafika, video va ovoz eng yaxshi holatda bo'lsin". Sabab: tungi 5 video bir xil fonda va bir xil skeletda chiqqan. Bu buyurtma soatga qaramay BIRINCHI bajariladi. `docs/producer_task.md` QAT'IY CHEGARALARI va XILMA-XILLIK QOIDASI amal qiladi.
