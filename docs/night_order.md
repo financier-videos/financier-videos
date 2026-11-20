@@ -1,3 +1,25 @@
+# BUYURTMA 4 (2026-11-21 03:30) — HOLAT: OCHIQ (yangi Buck kutilmoqda)
+Shohjahon (03:28): "hali joylanmagan hamma videolarni boshqattan YANGI BUCK bilan qilib chiqasan; boshqa chatda yangi Buck yasalyapti."
+SHART (boshlash): yangi Buck kutubxonasi repoda paydo bo'lsa — `media` da assets/buck3d_*.tar ga yangi commit (yangi fayl, masalan buck3d_v3.tar, yoki buck3d_v2.tar almashtirilgan; `git log -1 --format=%ci -- assets/` 2026-11-21 03:30 dan keyin) YOKI shu faylda Shohjahon/chat "BUCK TAYYOR" deb yozgan bo'lsa. Shart bajarilmagan bo'lsa — bu buyruqni o'tkazib yubor (odatdagi rejim), keyingi ishga tushishda yana tekshir.
+1. Dvigatel yangi kutubxonani olishini ta'minla: yangi nom bo'lsa engine/make_video.py BUCK3D_LIBS ro'yxatining boshiga qo'sh (talk kutubxonasi bo'lsa — u ham). Qisqa sinov render: natija JSON "buck3d" yangi versiyani ko'rsatsin; 4–6 kadrni Read bilan ko'r (Buck kadrdan chiqmaydi, raqam/subtitrni yopmaydi, lab-qimirlash).
+2. HALI CHIQMAGAN postlarni (getScheduledPosts bilan tekshir — chiqib bo'lganlariga TEGMA) chiqish vaqti bo'yicha tartibda qayta render qil. Holat 03:30 dagi ro'yxat (Metricool id: YT / IG):
+   - 21-noy 10:00 ET twenty_secrets — 435060150 / 435716081 — spec work/remake_2026-11-20/r3_twenty_secrets.json
+   - 21-noy 13:00 ET giftcard_myth — 435060242 / 435716104 — r4_giftcard_myth.json
+   - 21-noy 16:00 ET gate_story — 435060376 / 435716122 — r5_gate_story.json
+   - 21-noy 19:00 ET subscriptions — 435035715 / 435716142 — work/2026-11-20b/s01_subscriptions.json
+   - 22-noy 10:00 ET airport_cap — 436158013 / 436158099 — work/2026-11-22/s1_airport.json (xarita: work/pilot_map/map_insert.py --from 36 --to 34 --label "" --title "JFK · LGA · NEWARK" --secs 5 --theme ocean → /tmp/fin/broll/nyc_map.mp4)
+   - 22-noy 13:00 ET bf_vs_cm — 436158072 / 436158149 — work/2026-11-22/s2_bfcm.json
+   - (20-noy 19:00 ET costco_case 435052219 / 435716038 — bu buyruq vaqtida allaqachon chiqqan bo'lishi mumkin; chiqmagan bo'lsa — r2.)
+   Har spec'ga yangi qoida bo'yicha "bg" (producer_task 3a, engine/pixabay_bg.py) qo'sh; spec'dagi /tmp b-roll yo'llari yo'q bo'lsa — qayta yasab/yuklab ol yoki o'sha sahnadan "broll" ni olib tashla. Matn, raqam va ovoz O'ZGARMAYDI (TTS kesh bo'lmasa — qayta generatsiya, voice_check ≥0.86).
+3. QC: −14 LUFS, check.py --platform shorts 0 FAIL, blackdetect 0, fayl ≤90 MB, 6–8 kadr.
+4. Yangi nom bilan push (masalan <eski_nom>_b2.mp4; eskisini o'chir), raw URL 200 bo'lgach Metricool updateScheduledPost — YT va IG postlari, VAQT, sarlavha va matn o'zgarmaydi (faqat media; matnga "Footage: Pixabay (...)" qo'shish mumkin). Javobdagi yangi id larni shu yerga yoz.
+5. Slotgacha 60 daqiqadan kam qolgan post — tegma (eski versiya chiqadi), NATIJA ga yoz.
+6. O'zbekcha Reellar (finansist424) allaqachon chiqqan — qayta qo'yilmaydi. Bundan keyingi barcha videolar faqat yangi Buck bilan.
+7. HOLAT ni "BAJARILDI <vaqt>" qil, NATIJA yoz, Shohjahonga xabar (PushNotification): nechta video yangilandi, qaysilari ulgurmadi.
+
+## NATIJA (4)
+(bo'sh)
+
 # BUYURTMA 3 (2026-11-20 21:15) — HOLAT: BAJARILDI 2026-11-20 20:50 Toshkent
 Shohjahon (20:30): "hozir tashla namunani" — O'ZBEKCHA NAMUNA. Soatga qaramay BIRINCHI bajariladi; qisqa ish (bitta render), keyin odatdagi rejim davom etadi.
 1. ElevenLabs 200 ekanini tekshir.
