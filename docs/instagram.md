@@ -1,5 +1,5 @@
 # INSTAGRAM (Shohjahon 2026-11-20 19:42)
-Ikki profil: **financier424** — inglizcha, ingliz tilida so'zlashuvchi davlatlar uchun; **finansist424** — o'zbekcha, o'zbek tilida so'zlashuvchilar uchun. Instagramda Buck'ning ismi — o'zbek profilida "Finansist" (Shohjahon "finansit" deb yozgan — imlosi so'ralgan; javob kelguncha "Finansist").
+Ikki profil: **financier424** — inglizcha, ingliz tilida so'zlashuvchi davlatlar uchun; **finansist424** — o'zbekcha, o'zbek tilida so'zlashuvchilar uchun. Instagramda Buck'ning ismi — o'zbek profilida "Finansist" (Shohjahon 2026-11-20 19:53 da tasdiqladi). O'zbekcha videolarda Buck o'zini "Finansist" deb ataydi; inglizchada — Buck.
 TALAB: YouTube'ga qaysi Short qo'yilsa, Instagram'ga ham qo'yiladi (Reel). Faqat BUNDAN KEYINGI videolar (eskilari emas), eng yaxshilari. financier424 ga — o'sha inglizcha fayl; finansist424 ga — Buck O'ZBEK TILIDA gapiradigan versiya. Profil professional ko'rinsin.
 
 ## HOLAT (2026-11-20 20:00)
@@ -10,9 +10,10 @@ TALAB: YouTube'ga qaysi Short qo'yilsa, Instagram'ga ham qo'yiladi (Reel). Faqat
 
 ## JOYLASH TARTIBI (ulangandan keyin; producer_task ga kiritilgan)
 - Vosita: vidiq_instagram_publish_reel (darhol chiqaradi, rejalashtirmaydi). videoUrl — vidiq_video_upload(raw GitHub URL) natijasi; platformAccountId — vidiq_social_account_list dan aynan; caption — pastdagi qolip. Xato bo'lsa TO'XTA, qayta urinma, yangi konteyner yaratma; NATIJA ga yoz.
+- Vaqt: Shohjahon 2026-11-20 19:53 — "qachon qo'ysang ham qo'y": vazifa ishlagan paytda darhol chiqarish ma'qul.
 - Qachon: har A va B ishida, shu ishda yasalgan Shortlardan sifat nazorati + voice_check dan o'tganlari. Kuniga har profilga ko'pi bilan 4 Reel.
 - "Eng yaxshilari": voice_check ≥ 0.92, QC da kamchilik yozilmagan, XILMA-XILLIK 5 o'qdan ≥4. O'tmagani Instagram'ga qo'yilmaydi.
-- AI yorlig'i (isAiGenerated): Shohjahon qarori kutilmoqda — javobgacha BERILMAYDI (parametr qo'yilmaydi).
+- AI yorlig'i: HAR Reel'da isAiGenerated: true (Shohjahon 2026-11-20 19:53: "qo'yilsin").
 - Caption (inglizcha): 1-qator izoh savoli; 2-qator bitta jumla fakt; "Sources:" qisqa; "Not financial advice."; 5–8 hashtag (#moneyfacts #personalfinance + mavzu). Havola qo'yilmaydi (Instagram caption'da bosilmaydi).
 - Caption (o'zbekcha): 1-qator savol; fakt; "Manba:" ; "Moliyaviy maslahat emas."; 5–8 hashtag (#pul #moliya #qiziqfaktlar + mavzu).
 - Musiqa qo'shilmaydi. Boshqalarning kontenti qayta yuklanmaydi. Izohlarga javob, obuna bo'lish, layk — avtomatik QILINMAYDI.
