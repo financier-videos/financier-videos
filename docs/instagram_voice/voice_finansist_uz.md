@@ -53,3 +53,6 @@ Ya'ni: Finansist 8 ovozi, LOTIN matn o'zgarishsiz (kirillga o'girilmaydi), audio
 
 ## USLUB SABOQLARI
 - 2026-11-20 (Shohjahon bilan sinovlar): yaxlit take > alohida gaplar; audio teglar talaffuzni buzadi; lotin matn + stability 0 — eng tabiiy; tez gapirsa "shoshib" eshitiladi (0.88); Toshkent shakllari: oka, brat, shepim, man/san/ula/biza/sila, shoshmen, etvomman, qarela, ishlatmidi.
+
+## YOPILISH IBORASI (Shohjahon 2026-11-21 00:00 — MAJBURIY, faqat o'zbekcha videolar)
+HAR o'zbekcha video oxirgi sahnasi: "Sila bilan chala amerikali finansist bo'ldi." (Finansist center "proud" + flip, "beat" 0.4, ding). Undan oldingi sahna — izoh savoli. O'zbek profilida bu 1M+ qoidasi 3 (yashirin loop, oxirida xayrlashuv yo'q) dan ustun: spec "loop": false.

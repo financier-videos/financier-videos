@@ -2,7 +2,7 @@
  "lang": "uz",
  "format": "short",
  "sfx": true,
- "loop": true,
+ "loop": false,
  "theme": "mint",
  "source": "Manba: Bankrate so'rovi, 2024",
  "scenes": [
@@ -125,12 +125,25 @@
    ]
   },
   {
-   "text": "Ha, sila, silaga etvomman. Tortmada nima yotibdi? Borib qarela, chunki...",
+   "text": "Ha, sila, silaga etvomman. Tortmada nima yotibdi? Borib qarela!",
    "head": "SILA-CHI?",
    "mascot": {
     "mood": "point",
     "pos": "center"
    }
+  },
+  {
+   "text": "Sila bilan chala amerikali finansist bo'ldi.",
+   "head": "CHALA AMERIKALI",
+   "beat": 0.4,
+   "mascot": {
+    "mood": "proud",
+    "pos": "center",
+    "act": "flip"
+   },
+   "sfx": [
+    "ding@1.2"
+   ]
   }
  ],
  "buck_voice": {
