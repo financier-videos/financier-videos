@@ -63,7 +63,7 @@ Yangilangan: 2026-11-20 23:30 (C: birinchi natijalar — trillion61 3 soatda 241
 - SHOHJAHON RUXSATLARI (2026-11-21 00:45, "3 tasigayam ha"):
   - Wan 2.2 image-to-video (Apache-2.0) RunPod Public Endpoint orqali: ~$0.30/5 s, chegarasi kuniga ≤$1.20 (Short'ga 1–2 klip; joy/muhit kadrlari; real yuz/logotip yo'q; Buck AI ga berilmaydi). RunPod akkaunti ishlaydi (balans $8.88), LEKIN api.runpod.ai muhit tarmog'ida YOPIQ → Shohjahon muhit sozlamasida ochguncha ishlatib bo'lmaydi. Balans <$3 bo'lsa — to'xtat va xabar ber.
   - Remotion: Free License (jismoniy shaxs) — ISHLADI, `work/remotion/README.md`.
-  - Pexels API: Shohjahon akkaunt ochadi; kalitni muhitning tarmoq sirlari (network secret) ga qo'shadi — repoga YOZILMAYDI. Kelguncha vidIQ find_broll.
+  - Pexels API: 2026-11-21 da Pexels yangi kalit berishni TO'XTATGAN ("New API key issuance is currently paused"). O'rniga Pixabay API (bepul, kalit darhol): Shohjahon kalitni pixabay.com uchun tarmoq siri qiladi — repoga YOZILMAYDI. Kelguncha vidIQ find_broll (u Pexels'dan oladi).
 - GPU (pod): Runpod REST hozir 502; pod yo'li qimmatroq — Public Endpoint afzal.
 - AVTONOM OQIM: dvigatel → MP4 → shu repo "media" branch (7 kundan eski mp4 o'chiriladi; assets/, engine/, docs/, work/ ga tegma) → raw URL → Metricool createScheduledPost.
 - OVOZ LABORATORIYASI: BAJARILDI (2026-11-20 01:40) — A/B/C (+ D chatda) yaratildi, voice_id lar docs/youtube_character_buck.md 2-bo'limda, namunalar work/voice_lab/out/. Tanlangan: D. Qayta yaratma.
