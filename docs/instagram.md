@@ -24,3 +24,6 @@ TALAB: YouTube'ga qaysi Short qo'yilsa, Instagram'ga ham qo'yiladi (Reel). Faqat
 - Ovoz: ElevenLabs hujjatiga ko'ra o'zbek tilini faqat Eleven v3 qo'llaydi (Multilingual v2 — yo'q). Spec: "buck_voice": {"variant": "D", "model": "eleven_v3"}. SINALMAGAN: v3 da so'z vaqt belgilari (/with-timestamps) va Buck D ovozining o'zbekcha talaffuzi.
 - BIRINCHI QADAM (post emas): bitta Short ("Gift Cards") o'zbekcha render; ishlasa `work/uz_test/` ga mp4 ni qo'yib push qil va Shohjahonga xabar: "o'zbekcha namuna tayyor — talaffuzni baholang". U "ha" demaguncha finansist424 ga HECH NARSA qo'yilmaydi (yomon talaffuz bilan kanal ochish — zarar). Ishlamasa (model/timestamps) — xatoni yoz, Kokoro yoki boshqa ovoz bilan chiqarma.
 - voice_check o'zbekcha uchun ishlamaydi (model inglizcha) — o'zbekcha videolar hozircha faqat sahna uzunligi bo'yicha tekshiriladi.
+
+## OVOZ PROFILLARI (2026-11-20 20:15; ig-reel/ig-caption `voice.md` o'rniga)
+`docs/instagram_voice/voice_buck_en.md` — inglizcha; `docs/instagram_voice/voice_finansist_uz.md` — o'zbekcha. Har ssenariy va caption oldidan mos faylni o'qi. Haftalik tartib (dushanba): ig-viral (nishada nima ishlayapti — loginsiz manbalar bilan) → ig-plan → har video ig-reel → ig-caption; ig-reply — faqat qoralama, Shohjahonga.
