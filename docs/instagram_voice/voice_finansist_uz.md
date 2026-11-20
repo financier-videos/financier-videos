@@ -45,3 +45,11 @@ Spec'ga o'tkazish:
 ## OVOZ SOZLAMASI — TANLANGAN (Shohjahon 2026-11-20 23:40, test5 "f")
 Spec: "lang": "uz", "buck_voice": {"variant": "UZ", "model": "eleven_v3", "script": "lat", "settings": {"stability": 0.0, "speed": 0.88}}.
 Ya'ni: Finansist 8 ovozi, LOTIN matn o'zgarishsiz (kirillga o'girilmaydi), audio teglar ([excited] va h.k.) YO'Q, erkin ijro (stability 0), butun ssenariy bitta take. Kirill + uz_lex yo'li — zaxira.
+
+## USLUBNI O'STIRISH (Shohjahon 2026-11-20 23:50: "gapirish stilini ko'proq videolar ko'rib yaxshilab bor") — DOIMIY
+- Har B ishida (15:xx) 1 qisqa tadqiqot: o'zbek tilidagi kulgili/hazil Shorts va Reels (Toshkent shevasidagi blogerlar, stend-ap, skechlar) — bepul manbalar (WebSearch, ochiq sahifalar, transkript); haftasiga ≤1 vidiq_watch_shortform (10 kredit, producer_task (3) chegarasi). Boshqalarning kontenti, ovozi, iboralari va hazillari KO'CHIRILMAYDI — faqat umumiy usul (temp, pauza, intonatsiya, murojaat shakli, so'z tanlash).
+- Topilmani shu faylga "USLUB SABOQLARI" ostida 1–3 qator yoz (sana, manba turi, nima o'rganildi) va keyingi o'zbekcha videoda bitta saboqni qo'lla: ssenariy (so'z, gap uzunligi, pauza "..."), ovoz (speed, stability) yoki mimika (mood/act/zoom). Natija growth_log ga.
+- Yangi sheva so'zi yoki ibora — avval 1 qisqa TTS sinovi (Finansist 8, tanlangan sozlama); Shohjahon tasdiqlagan so'zlar shu faylda ro'yxatda.
+
+## USLUB SABOQLARI
+- 2026-11-20 (Shohjahon bilan sinovlar): yaxlit take > alohida gaplar; audio teglar talaffuzni buzadi; lotin matn + stability 0 — eng tabiiy; tez gapirsa "shoshib" eshitiladi (0.88); Toshkent shakllari: oka, brat, shepim, man/san/ula/biza/sila, shoshmen, etvomman, qarela, ishlatmidi.
