@@ -32,3 +32,4 @@ Har yangi manba uchun tartib: (1) LICENSE o'qi — tijoratga ruxsat va ochiq rep
 | 2026-11-20 | YouTube ko'nikmalari to'plami (hook, shorts, script, metadata, thumbnail, analyze...) | claude-youtube, MIT | docs/skills/claude-youtube/ | o'qiladi; raqamlari — gipoteza |
 | 2026-11-20 | Fon ko'rinishlari (6 theme) + xilma-xillik matritsasi | o'zimiz | engine v6.1, producer_task | ISHLADI (7 Short) |
 | 2026-11-20 | Agent Reach — platformalarni o'qish (YouTube subtitr, GitHub, web) | Panniantong/Agent-Reach, MIT | docs/skills/notes/2026-11-20_agent-reach.md | SAQLANDI, o'rnatilmagan; faqat loginsiz kanallar, faqat bulutda |
+| 2026-11-20 | Ovozni matnga qayta tekshirish — `engine/voice_check.py` (sherpa-onnx Whisper base.en, GitHub releases) | o'zimiz yozdik; g'oya Lemo-Opuscar asr_check dan | engine/voice_check.py | ISHLADI: rejadagi 7 Short 0.92–1.00, buzuq jumla yo'q |
