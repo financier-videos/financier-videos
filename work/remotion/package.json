@@ -1,0 +1,13 @@
+{
+  "name": "financier-remotion",
+  "private": true,
+  "description": "Remotion inserts (Free License: individual creator, approved by Shohjahon 2026-11-21)",
+  "dependencies": {
+    "@remotion/bundler": "4.0.545",
+    "@remotion/cli": "4.0.545",
+    "@remotion/renderer": "4.0.545",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.545"
+  }
+}
