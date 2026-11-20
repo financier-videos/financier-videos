@@ -5,6 +5,7 @@ TALAB: YouTube'ga qaysi Short qo'yilsa, Instagram'ga ham qo'yiladi (Reel). Faqat
 ## HOLAT (2026-11-20 20:00)
 - finansist424: bio to'ldirildi (brauzer orqali). Profil rasmi, ko'rsatiladigan ism, havola — Shohjahon o'zi qo'yadi (rasm fayllari unga yuborilgan; ism va havola faqat ilova/Accounts Center orqali).
 - financier424: hali tegilmagan (brauzerda o'sha akkauntga o'tilmagan). Bio matni Shohjahonga berilgan.
+- 2026-11-20 19:53: finansist424 vidIQ ga ULANDI (platformAccountId 29160998936886806, canPublish true). financier424 — hali ulanmagan. O'zbekcha namunaga Shohjahonning "ha" si: HALI YO'Q.
 - ULANISH: Instagram akkauntlari hali HECH QAYERGA ulanmagan (Metricool brendida faqat YouTube; vidIQ da faqat YouTube). Ulanmaguncha post QILIB BO'LMAYDI. Shohjahon vidIQ ga OAuth bilan ulaydi (akkaunt Professional — Creator/Business bo'lishi shart). Tekshirish: vidiq_social_account_list platform INSTAGRAM, canPublish true.
 
 ## JOYLASH TARTIBI (ulangandan keyin; producer_task ga kiritilgan)
