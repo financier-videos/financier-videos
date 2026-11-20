@@ -46,7 +46,8 @@
    "stat": "$16.6B",
    "sfx": [
     "slide_up"
-   ]
+   ],
+   "say": "Every day? About sixteen point six billion dollars."
   },
   {
    "text": "Every minute? $11.5 million.",
@@ -54,7 +55,8 @@
    "stat": "$11.5M",
    "sfx": [
     "slide_up"
-   ]
+   ],
+   "say": "Every minute? Eleven point five million dollars."
   },
   {
    "text": "Every second?! $192,000!",
@@ -93,7 +95,7 @@
   },
   {
    "text": "So yeah... that's $5.8 million every 30 seconds. Because this season, Americans are expected to spend…",
-   "say": "So yeah... that's 5.8 million dollars every thirty seconds. Because this season, Americans are expected to spend...",
+   "say": "So yeah... that's five point eight million dollars every thirty seconds. Because this season, Americans are expected to spend...",
    "head": "EVERY 30 SECONDS",
    "stat": "$5.8M",
    "broll": "/tmp/fin/broll/tags_seg.mp4",
@@ -104,7 +106,9 @@
   }
  ],
  "buck_voice": {
-  "variant": "D"
+  "variant": "D",
+  "tempo": 1.08,
+  "max_pause": 0.45
  },
  "theme": "royal"
 }
