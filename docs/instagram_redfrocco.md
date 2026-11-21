@@ -45,3 +45,11 @@ Qoidalar: isAiGenerated — Rocco original multfilm, real odam emas (Buffer'da f
 - FTC "How To Avoid a Scam": 4 belgi — pretend, problem/prize, pressure, pay (consumer.ftc.gov/articles/how-avoid-scam).
 - AARP Fraud Watch Network Helpline 877-908-3360, du–ju 8:00–20:00 ET, bepul, a'zo bo'lmaganlarga ham (aarp.org/money/scams-fraud/helpline).
 - ReportFraud.ftc.gov (FTC), ic3.gov (FBI IC3).
+
+## BAJARILDI — chat (Trade), 2026-11-22 00:30 Toshkent (Chrome orqali, @redfrocco akkauntida)
+- Profil rasmi: Rocco (vektor rocco.svg dan 1080 px, aylanaga mos) — QO'YILDI.
+- Ism: "Red Flag Rocco | Scam Alerts" — QO'YILDI (Accounts Center; 14 kunda 2 marta o'zgartirish mumkin — tegma).
+- Bio — QO'YILDI (yuqoridagi 3 qator).
+- 3 ta birinchi post — JOYLANDI, to'rda chapdan o'ngga: Meet Rocco | 4 Signs It's a Scam | Got Scammed? Report It. Rasmlar sahifada canvas bilan 1080x1350 chizildi (Instagram CSP tashqi fayl yuklashga yo'l qo'ymaydi; sarlavha shrifti Impact — to'plamdagi Black Ops One o'rniga). Captionlar yuqoridagilar + "Educational content, not legal or financial advice" + 5 heshteg.
+- QILINMADI (veb-versiyada imkon yo'q): bio HAVOLASI (faqat telefon ilovasida: Edit profile → Links → https://www.youtube.com/@RedFrocco); HIGHLIGHT muqovalari (story kerak — telefon); Professional akkaunt turi/kategoriya (akkaunt sozlamasi — Shohjahon qarori; vidIQ OAuth uchun kerak).
+- Tashqi faylni Instagram sahifasiga yuklash usuli (INDEX G uchun): raw GitHub dan fetch CSP bilan bloklanadi → rasmni sahifaning o'zida canvas bilan chizish yoki sessionStorage + atob → File → input[type=file] (accept ichida video bor input) → change hodisasi.
