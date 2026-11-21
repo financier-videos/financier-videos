@@ -6,6 +6,7 @@ Shohjahon 2026-11-21: "use all the skills every time without me reminding you". 
         [--thumb "THUMB TEXT"] [--out work/<date>/<name>_qc.json]
 
 Steps (skill -> check):
+  0 freshness                   repo not behind origin/media; rendered with current engine or no 'QAYTA RENDER: HA' change since (docs/changes.md)
   1 ffmpeg-skill/check.py        platform compliance (codec, size, fps, colour tags, loudness, duration)
   2 ebur128                      integrated loudness -16..-12 LUFS (target -14)
   3 blackdetect                  no empty/black frames >= 0.1 s
@@ -61,6 +62,26 @@ def main():
     def put(k, status, note=""):
         R[k] = {"status": status, "note": note.strip()[-600:]}
         print(f"[{status:4}] {k}: {note.strip().splitlines()[-1] if note.strip() else ''}"[:200])
+
+    # 0 freshness: repo up to date + video rendered with the CURRENT engine and after every "QAYTA RENDER: HA" change
+    #   (Shohjahon 2026-11-21: "other chats ship improvements but you keep releasing videos in the old state")
+    run(["git", "-C", ROOT, "fetch", "-q", "origin", "media"])
+    rc, behind = run(["git", "-C", ROOT, "rev-list", "--count", "HEAD..origin/media"])
+    probs = []
+    if rc == 0 and behind.strip() not in ("", "0"): probs.append(f"repo {behind.strip()} commit(s) behind origin/media - git pull --rebase and re-render")
+    if a.rendered and os.path.exists(a.rendered):
+        rj = json.load(open(a.rendered)); import hashlib
+        cur = hashlib.sha1(open(os.path.join(ROOT, "engine", "make_video.py"), "rb").read()).hexdigest()[:12]
+        if not rj.get("engine_sha"): probs.append("rendered.json has no engine stamp (engine < 6.9) - re-render")
+        elif rj["engine_sha"] != cur:
+            when = rj.get("rendered_at", "")
+            ch = [l for l in open(os.path.join(ROOT, "docs", "changes.md")).read().splitlines()
+                  if l.startswith("| 20") and l.split("|")[1].strip() > when[:16].replace("T", " ") and "QAYTA RENDER: HA" in l]
+            if ch: probs.append("engine changed since render with re-render required: " + " / ".join(c.split("|")[3].strip() for c in ch))
+            else: R["0_note"] = {"status": "INFO", "note": "engine changed since render, no re-render-required change"}
+    else:
+        probs.append("no --rendered json - freshness unknown")
+    put("0_freshness", "FAIL" if probs else "PASS", "; ".join(probs) or "up to date")
 
     # 1 platform check
     rc, o = run([sys.executable, os.path.join(SK, "ffmpeg-skill", "scripts", "check.py"), a.video, "--platform", a.platform])
@@ -146,7 +167,7 @@ def main():
             "clipped highlights (big number burnt)" if clipped else ("dark/dull frames - brighten bg or less b-roll dimming" if warn else "exposure and colour OK"))
 
     st = [r["status"] for k, r in R.items()]
-    blocking_skip = any(R[k]["status"] == "SKIP" for k in R if k[0] in "12345")
+    blocking_skip = any(R[k]["status"] == "SKIP" for k in R if k[0] in "012345")
     verdict = "FAIL" if "FAIL" in st else ("BLOCKED" if blocking_skip else "PASS")
     R["verdict"] = verdict
     os.makedirs(os.path.dirname(os.path.abspath(out)), exist_ok=True)

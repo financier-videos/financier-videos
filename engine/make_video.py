@@ -935,6 +935,8 @@ def caption_chunks_timed(text, words):
     return out
 
 
+ENGINE_VERSION = "6.9"  # bump on every engine change and add a line to docs/changes.md
+
 THEMES = {  # v6.1: per-video look so videos don't all share one background. Spec "theme": name | "auto" (default: from the first line).
     "vault": ([((9, 14, 28), (19, 30, 54)), ((12, 10, 30), (32, 20, 58)), ((6, 20, 24), (14, 42, 48))], "grid"),
     "mint":  ([((5, 24, 18), (10, 52, 38)), ((8, 30, 30), (16, 58, 44)), ((4, 18, 22), (12, 44, 30))], "stripes"),
@@ -2172,7 +2174,10 @@ def main():
     workdir = tempfile.mkdtemp(prefix="fin_")
     wav, total = tts(spec, args, workdir)
     rc = render(spec, wav, total, args.out, workdir)
-    print(json.dumps({"rc": rc, "seconds": round(total, 2), "out": args.out,
+    import hashlib, datetime as _dt
+    _sha = hashlib.sha1(open(os.path.abspath(__file__), "rb").read()).hexdigest()[:12]  # v6.9: freshness stamp (qc_gate step 0)
+    print(json.dumps({"rc": rc, "seconds": round(total, 2), "out": args.out, "engine": ENGINE_VERSION, "engine_sha": _sha,
+                      "rendered_at": _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
                       "buck_voice": sorted(set(_EL["used"])), "buck3d": _B3.get("ver"), "cinema": spec.get("cinema", True),
                       "timings": [[round(s["start"], 2), round(s["dur"], 2)] for s in spec["scenes"]]}))
 

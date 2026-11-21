@@ -66,6 +66,12 @@ Bir xil skelet (raqam → "Wait?!" → manba → vs → savol → loop) ketma-ke
 - Har tugallangan qadamdan keyin (fayl, qaror, holat o'zgarishi, render natijasi, post id) — `git pull --rebase origin media && git commit && git push origin HEAD:media`. Ish oxirini kutma. Push bo'lmagan ish boshqa chat uchun "yo'q".
 - Push oldidan `git status`: __pycache__ va /tmp fayllari commit qilinmaydi (`git checkout -- docs/skills` bilan tozala); kalit/parol yo'q.
 
+## ESKI HOLATDA CHIQARMA (Shohjahon 2026-11-21: "boshqa chatda yangilik qilsak ham sen eski holatda video chiqarasan") — MAJBURIY
+- HAR render va HAR post oldidan: `git pull --rebase origin media`; `docs/changes.md` ni oxirgi ishingdan beri o'qi va har yangi qatorni shu videoda qo'lla (spec maydoni, uslub, QC). Qo'llanmagan bo'lsa — sababi playbook yozuvida.
+- "QAYTA RENDER: HA" qatori bo'lsa — hali chiqmagan (getScheduledPosts PENDING, slotgacha ≥60 daq) videolarni qayta render qil va Metricool/Buffer media'sini almashtir (BUYURTMA 4 tartibi).
+- qc_gate 0-qadami: repo orqada yoki render eski dvigatel bilan (HA o'zgarishdan oldin) bo'lsa — FAIL, post yo'q.
+- O'zing dvigatel/qoidani o'zgartirsang — changes.md ga qator + ENGINE_VERSION oshir + push.
+
 ## O'Z-O'ZIDAN RIVOJLANISH (Shohjahon 2026-11-21: "rivojlan, to'xtab qolma; men aytishimdan oldin o'zing qilgan bo'l") — MAJBURIY, HAR ishga tushishda
 - `docs/improvement_backlog.md`: har ishga tushishda (A, B, C va "slotlar to'la / bugun bajarilgan" ishlarda ham) tepadagi OCHIQ bandni bajar, sina, natijani yoz. "Hech narsa qilinmadi, faqat tekshirildi" — TAQIQ: video kerak bo'lmasa, vaqt backlog'ga ketadi (bitta ishda 1–2 band).
 - Har ishda backlog'ga yangi band qo'sh: qc_gate WARN/FAIL lar, eng past ko'rsatkichli video sababi, 3 kundan ortiq SINALMAGAN skill, raqobatchida ko'rilgan va bizda yo'q narsa. Shohjahon biror narsani aytishidan OLDIN: u so'ragan narsalarning keyingi mantiqiy qadamini o'zing qo'sh (masalan rang → thumbnail ranglari → A/B).
