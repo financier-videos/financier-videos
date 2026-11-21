@@ -11,3 +11,19 @@ Qoida: har kuni navbatdagi 1 kanal, so'nggi 7 kundagi eng ko'p ko'rilgan 1 Short
 | Alicia Invests (74.3K) | OutlierKit: +7.1% | o'sha manba | hali ko'rilmagan | — |
 
 Navbat: Warren Buffett Wisdom → Alicia Invests → Humphrey Yang → Bald Guy Money → (har kuni 1 yangi kanal qo'shiladi, maqsad ≥10).
+
+## 2026-11-21 — "portlagan" Shortlar tahlili (vidIQ outliers: "money facts", Shorts, shu oy, kanal ≤100K obunachi, ≥100K ko'rish; 5 kredit → qoldi 17)
+Inglizcha fakt-kanallardagi natijalar (obunachi → ko'rish, uzunlik):
+| Short | Kanal (obunachi) | Ko'rish | Uzunlik |
+|---|---|---|---|
+| 5 Shocking Money Facts They Never Taught You! | Why We Do It (11.2K, US) | 797.1K | 0:09 |
+| 10 Weird Human Body Facts That Sound Fake | Health Path (17.1K, US) | 447.2K | 0:13 |
+| How Long Does It Take to Double Your Money? (Gold vs FD vs Mutual Funds vs Stocks) | Ritika Sharma (1.9K) | 368.8K | 0:21 |
+| How Much Money Exists in the Entire World? | Shai Ritesh (22.5K) | 184.1K | 0:43 |
+| TOP 10 RICHEST PEOPLE — How Much They Make Per Minute | Bet You Didn't Know (7.3K, US) | 175.5K | 0:12 |
+| Benjamin Franklin's 200-Year Legacy | Stories of Kindness (8.4K) | 166.3K | 0:05 |
+| Your Penny Is Mostly ZINC, Not Copper! | Fact Flashess (2.8K, US) | 127.8K | 0:06 |
+| Who Really Got Marilyn Monroe's $7 Million Fortune? | Jakab Gipsz (2K, US) | 103.5K | 0:32 |
+KUCHLI: (1) juda qisqa — 8 tadan 5 tasi 5–13 soniya (bizniki 30–48 s); (2) sarlavha = bitta aniq da'vo yoki savol, raqam bilan; (3) mavzu — keng "pul viktorinasi": tanga tarkibi, dunyodagi jami pul, boylar daqiqasiga qancha topadi, pulni ikki baravar qilish muddati, mashhur meros — do'kon narxlari EMAS.
+KUCHSIZ: layk ulushi past (0.2–0.6%) — tomoshabin ko'radi-yu bog'lanmaydi; manba ko'rsatilmaydi; bir xil shablon (YouTube "inauthentic" xavfi). Eslatma: Shorts ko'rishi har ijroni sanaydi, 6 soniyalik loop raqamni shishiradi — bu "haqiqiy qiziqish" emas, lekin tavsiya oqimiga chiqish belgisi.
+ERTAGA SINAYMIZ: "MIKRO" format — 8–12 s, BITTA fakt, birinchi kadrda raqam, Buck bitta jumla aytadi, oxiri boshiga ulanadi. Manba tavsifda (bizning ustunligimiz saqlanadi). Reallarning ismi/merosi mavzusi (Monroe) OLINMAYDI — real shaxslar qoidasi.

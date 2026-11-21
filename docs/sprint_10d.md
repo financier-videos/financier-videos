@@ -10,6 +10,11 @@ Maqsad juda yuqori: hozirgi eng yaxshi natijadan ~13,000 baravar. Unga faqat bir
 - Har Short 20–30 s, bitta savol, loop, birinchi kadrda raqam. Sifat nazorati qisqartirilmaydi (voice_check, check.py, kadrlar).
 - Platforma yoki xizmat limiti to'sqinlik qilsa (yuklash limiti, Metricool/Buffer, ElevenLabs) — o'sha kuni Shohjahonga 1 qator: qaysi limit, nima kerak.
 
+## 1.5 MIKRO-SHORT SINOVI (2026-11-21, docs/competitors.md tahlilidan) — 22-noyabrdan
+- Kunlik 8 Shortning 4 tasi MIKRO (8–12 s: bitta fakt, bitta raqam, bitta jumla + qisqa reaksiya, loop), 4 tasi odatdagi (25–30 s). Mavzu savatlari qoidasi ikkalasiga ham amal qiladi.
+- Mikro uchun birinchi mavzular (har raqam render oldidan rasmiy manbadan tekshiriladi, tavsifda manba): bir sentlik tanga tarkibi (US Mint); 100 dollarlik banknotning o'rtacha "umri" (Federal Reserve); AQShda muomaladagi naqd pul hajmi (Federal Reserve); 1 trillion dollar soniyasiga 1 dollardan sanalsa necha yil; eng ko'p bosiladigan banknot nominali (BEP); tanga yasash tannarxi (US Mint yillik hisoboti).
+- O'lchov (docs/results.md, "format" ustuni): mikro vs odatdagi — 24 va 72 soatlik ko'rish, layk ulushi. 3 kun ketma-ket mikro ≥2 baravar yutsa — nisbat 6:2 ga o'tadi; yutqazsa — 2:6. YouTube "bir xil shablon" xavfi uchun mikrolar ham vizual jihatdan har xil (theme, Buck kayfiyati, joylashuv).
+
 ## 2. Mavzu — XILMA-XIL (Shohjahon 2026-11-21 18:33: "nega videolaringning ko'pi bir xil mavzu?")
 Holat (18 ta chiqgan/navbatdagi video): 9 tasi "do'kon narxlari / bayram xaridi", 3 tasi sayohat, 2 tasi obuna, 2 tasi to'lovlar — ya'ni yarmi bitta mavzu. Bu xato: tomoshabin kanalni "yana o'sha narsa" deb o'tkazib yuboradi, YouTube ham bir xil shablonni jazolaydi.
 MAVZU SAVATLARI (har video bittasiga tegishli; spec'da "topic" maydoni):

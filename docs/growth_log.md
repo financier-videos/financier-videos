@@ -95,3 +95,7 @@ Har kuni KAMIDA bitta yozuv. Format: sana — O'RGANILDI (manba, sana) → O'ZGA
 31. O'RGANILDI (2026-11-21 kech, Shohjahon: "rivojlan, to'xtab qolma; aytishimdan oldin qil"): yaxshilash faqat Shohjahon aytganda bo'layotgan edi; "slotlar to'la" ishlar bo'sh o'tayotgan edi (12:14, 15:18, 18:15).
    O'ZGARTIRILDI: docs/improvement_backlog.md + producer_task "O'Z-O'ZIDAN RIVOJLANISH" (har ishda 1–2 band); shu zahoti 2 band bajarildi: dvigatel v6.9 "bg_bright", Rocco ovozi (ElevenLabs Voice Design).
    O'LCHOV: har kuni backlog'dan yopilgan bandlar soni (maqsad ≥3/kun); Shohjahon "nega qilmading" degan holatlar soni (maqsad 0).
+
+30. O'RGANILDI (chat, 2026-11-21 19:05, Shohjahon: "rivojlan"): vidIQ outliers — kichik inglizcha fakt-kanallarda portlagan 8 Shortdan 5 tasi 5–13 soniya, mavzusi keng "pul viktorinasi" (jadval: docs/competitors.md). Bizning Shortlar 30–48 s va yarmi do'kon narxlari haqida.
+   O'ZGARTIRILDI: sprint 1.5 — har kuni 4 mikro (8–12 s) + 4 odatdagi; mikro mavzular ro'yxati.
+   O'LCHOV: 72 soatda mikro vs odatdagi ko'rish (results.md "format" ustuni); qaror qoidasi sprint 1.5 da.
