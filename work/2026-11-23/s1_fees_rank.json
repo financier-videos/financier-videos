@@ -1,0 +1,173 @@
+{
+ "format": "short",
+ "sfx": true,
+ "loop": true,
+ "theme": "ember",
+ "source": "Sources: Bankrate checking & ATM fee study (Sep 2025); airline fee updates (Apr 2026); FTC fee rule (May 2025)",
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
+ },
+ "bg": [
+  "/tmp/fin/bg/fees_money.mp4",
+  "/tmp/fin/bg/fees_luggage.mp4",
+  "/tmp/fin/bg/fees_hotel.mp4"
+ ],
+ "scenes": [
+  {
+   "text": "Five fees quietly eating your money.",
+   "head": "SNEAKIEST FEES \u00b7 RANKED",
+   "stat": "5",
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "drop_in"
+   },
+   "zoom": {
+    "at": 0.4,
+    "amt": 1.2,
+    "hold": 0.5,
+    "on": "stat"
+   },
+   "sfx": [
+    "impact@0.4"
+   ]
+  },
+  {
+   "text": "Number three: someone else's ATM. $4.86. A record.",
+   "say": "Number three: someone else's ATM. Four eighty-six. A record.",
+   "head": "#3 \u00b7 SOMEONE ELSE'S ATM",
+   "stat": "$4.86",
+   "color": "#FF4D4D",
+   "bg": "/tmp/fin/bg/fees_money.mp4",
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner"
+   },
+   "sfx": [
+    "fxr_hurt@1.9"
+   ]
+  },
+  {
+   "text": "Number five: your first checked bag. Now $45.",
+   "say": "Number five: your first checked bag. Now forty-five bucks.",
+   "head": "#5 \u00b7 CHECKED BAG",
+   "stat": "$45",
+   "bg": "/tmp/fin/bg/fees_luggage.mp4",
+   "mascot": {
+    "mood": "angry",
+    "pos": "corner",
+    "act": "dodge",
+    "act_at": 1.4
+   },
+   "sfx": [
+    "whip@1.4"
+   ],
+   "transition": "flash"
+  },
+  {
+   "text": "Number two: overdraft. About $27.",
+   "say": "Number two: overdraft. About twenty-seven dollars.",
+   "head": "#2 \u00b7 OVERDRAFT \u00b7 9 IN 10 CHARGE IT",
+   "stat": "$26.77",
+   "color": "#FF4D4D",
+   "mascot": {
+    "mood": "dizzy",
+    "pos": "corner",
+    "act": "bonk",
+    "act_at": 0.6
+   },
+   "sfx": [
+    "bonk@0.7"
+   ],
+   "land": 0.3
+  },
+  {
+   "text": "Number four: monthly checking fees.",
+   "head": "#4 \u00b7 INTEREST CHECKING FEE",
+   "vs": {
+    "left": "$15.65",
+    "left_label": "Fee per month",
+    "right": "$10,705",
+    "right_label": "Balance to skip it",
+    "win": "right",
+    "at": [
+     0.3,
+     1.3
+    ],
+    "vs_at": 0.9,
+    "left_color": "#FF4D4D",
+    "right_color": "#F5C542"
+   }
+  },
+  {
+   "text": "Heh... unless you park ten grand.",
+   "head": "TEN GRAND?!",
+   "mascot": {
+    "mood": "laugh",
+    "pos": "center",
+    "act": "flip",
+    "act_at": 0.3
+   },
+   "sfx": [
+    "boing@0.4"
+   ],
+   "land": 0.4
+  },
+  {
+   "text": "Which one got you?",
+   "head": "WHICH ONE GOT YOU?",
+   "sticker": "#?",
+   "sticker_at": 0.8,
+   "mascot": {
+    "mood": "confused",
+    "pos": "center"
+   },
+   "sfx": [
+    "fxr_select@0.8"
+   ]
+  },
+  {
+   "text": "And number one... hidden hotel and ticket fees.",
+   "head": "#1 \u00b7 HIDDEN \"RESORT\" FEES",
+   "beat": 0.6,
+   "stat": "#1",
+   "bg": "/tmp/fin/bg/fees_hotel.mp4",
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner"
+   },
+   "sfx": [
+    "drumroll"
+   ],
+   "transition": "punch"
+  },
+  {
+   "text": "Now the FTC says the total must show up front.",
+   "say": "Now the F T C says the total must show up front.",
+   "head": "FTC RULE \u00b7 TOTAL PRICE FIRST",
+   "show_source": "FTC Rule on Unfair or Deceptive Fees, effective May 12, 2025",
+   "mascot": {
+    "mood": "thumbsup",
+    "pos": "center"
+   },
+   "sfx": [
+    "fxr_powerup@2.0"
+   ],
+   "sticker": "TOTAL PRICE",
+   "sticker_at": 2.0,
+   "sticker_color": "#2BD67B"
+  },
+  {
+   "text": "So check the total, because there are...",
+   "head": "CHECK THE TOTAL",
+   "mascot": {
+    "mood": "point",
+    "pos": "center"
+   },
+   "transition": "slide"
+  }
+ ]
+}

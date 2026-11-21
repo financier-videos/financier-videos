@@ -1,0 +1,17 @@
+{
+ "rc": 1,
+ "match": 0.909,
+ "missing": [
+  "checked",
+  "heh",
+  "park",
+  "f t c"
+ ],
+ "extra": [
+  "check",
+  "huh",
+  "parked",
+  "ftc"
+ ],
+ "heard": "Five fees quietly eating your money. Number three, someone else's ATM. 486, a record. Number five, your first check bag. Now, 45 bucks. Number two, overdraft. About $27. Number four, monthly checking fees. Huh? Unless you parked 10 grand. Which one got you? And number one, Hidden Hotel and Ticket Fees. Now the FTC says the total must show up front. So check the total, because there are."
+}
