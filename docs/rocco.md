@@ -9,6 +9,7 @@ TREND (2026-11-21, docs/trend_radar.md): GTA 6 shu hafta eng tez o'sayotgan mavz
 ## 1. HOLAT
 | Narsa | Holat |
 |---|---|
+| Instagram | @redfrocco — Shohjahon 2026-11-22 qo'shdi (vidIQ'da manual, joylash uchun OAuth kerak). To'plam: docs/instagram_redfrocco.md, assets/instagram/redfrocco/ |
 | Kanal | OCHILDI 2026-11-21 13:13 — "Red Flag Rocco", @RedFrocco, https://www.youtube.com/@RedFrocco |
 | Avatar / banner / tavsif | QO'YILDI 2026-11-21 18:45 (chat sessiyasi, Shohjahon Chrome'i orqali YouTube Studio): avatar_800.png, banner_2560x1440.png, channel_description.txt. Ommaviy sahifada tavsif ko'rinadi |
 | Izohlar | YOQILGAN (Studio → Настройки → Модерация сообщества: "Комментарии: Включены", moderatsiya "Базовая") — tekshirildi 2026-11-21 18:46 |
