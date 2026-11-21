@@ -108,3 +108,15 @@ Sessiya 2026-11-20 06:40–07:45 Toshkent. ElevenLabs 200 (Buck D). Lip-sync kut
 - n4 2026-11-20_giftcards.mp4 — 27.3 s (1-render 31.8 s: oxirgi jumla buzuq take, qayta render) — 2026-11-21 13:00 ET — Metricool 435023666 — lip-sync bor.
 - n5 2026-11-20_overbooking.mp4 — 26.1 s — 2026-11-21 16:00 ET — Metricool 435023719 — lip-sync bor. Kichik kamchilik: 3-sahnada 3 qatorli subtitr manba qatoriga tegadi (o'qiladi).
 - 6-band: trillion61 (39.7 s) va turkeyflights (35.0 s) v2 + lip-sync bilan qayta render qilinib, xuddi shu fayl nomlari bilan repoda almashtirildi. QAYTA POST QILINMADI. DIQQAT: Metricool videoni o'z serveriga ko'chirgan, shuning uchun 434764903 / 434764979 postlari eski versiyani chiqaradi (yangilash uchun Metricool'da media almashtirish kerak).
+
+## BUYURTMA 5 — TREND: GTA 6 (chat Trade, 2026-11-21 14:56 UTC) — HOLAT: OCHIQ, muddat 2026-11-23 15:00 UTC (48 soat; kech qolsa bekor)
+Nega: hozir YouTube'dagi eng katta mavzu (docs/trend_radar.md, SKAN 20:00). O'yin kadri, logotip, personaj rasmi, musiqa ISHLATILMAYDI — faqat o'z animatsiya, raqam grafikasi.
+FINANCIER (keyingi bo'sh slotlar, sprint chelagi "trend", kuniga ≤2, ketma-ket emas):
+ 1. MIKRO 8–12 s: "$3.79 Billion in ONE Day" — birinchi kun savdosi, bitta taqqos (GTA V 2013: $800M).
+ 2. 25–30 s: "GTA 6 Made More in a Day Than…" — $3.79B vs GTA V $800M; 32.5M nusxa oldindan; "bu savdo bahosi, foyda emas" jumlasi shart.
+ 3. 25–30 s: "32.5 Million Copies Before Launch" — oldindan sotuv rekordi + 13 yillik kutish (GTA V 2013 → 2026).
+ Manba satri: "Source: Take-Two Interactive press release, Nov 20, 2026". Byudjet/foyda mish-mishlari YO'Q. Sarlavhada raqam.
+ROCCO (Buffer, vidIQ Rocco profili):
+ 4. "GTA 6 on PC? It's a Trap" — qizil bayroq: PC/mobil versiya yo'q; himoya qadami: faqat rasmiy konsol do'koni.
+ 5. "Free GTA 6 Key = Stolen Account" — bepul kalit/keygen; himoya: hech narsa yuklamaslik, 2 bosqichli himoya. Manba: McAfee, NordVPN ogohlantirishlari (2026-11). Hujum usuli ko'rsatilmaydi.
+O'lchov: results.md da "trend" belgisi, 72 soatda odatdagi Shortlar bilan solishtiruv.

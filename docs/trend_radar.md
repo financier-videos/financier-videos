@@ -68,3 +68,12 @@ Baho: OCHISHGA ARZIYDI, lekin sprint (10 kun) raqamiga yordam bermaydi — sekin
 - Xavf 3: raqobat juda katta, kichik kanallar yillab sekin o'sadi → tor nisha bilan kirish ("momaqaldiroqsiz yomg'ir", "qora ekran", aniq yuza).
 - Qoida: sarlavha so'zma-so'z qidiruvdek ("Rain on Tin Roof, No Thunder | 8 Hours | Black Screen"); pleylistlar; hech qanday "uyquni davolaydi" kabi tibbiy va'da; 8 soatlik faylni qisqa uzluksiz bo'lakdan yig'ish (takror sezilmasin), tasvir — o'z 3D/stok loop yoki qora ekran.
 - Sinov rejasi: 10 ta turli sahna, 2 hafta, keyin raqam bo'yicha qaror (qaysi yuza/uzunlik ishlaydi).
+
+## SKAN 2026-11-21 20:00 Toshkent (bepul manbalar: vidiq.com/youtube-trending, youtube.trends24.in, creatordb, yangiliklar; kredit sarflanmadi)
+| Klaster | Dalil | Filtr | Qaror |
+|---|---|---|---|
+| GTA 6 (2/3 skan) — hozir YouTube'dagi №1 mavzu | vidIQ qidiruv o'sishi top-13 ning 11 tasi GTA 6 ("gta 6 ending" ~982K/oy, +10,163%); AQSh trendida MrBeast Gaming "I Survived 100 Hours In GTA 6" 30M, 1.2M/soat | o'yin kadri OLINMAYDI; raqam va firibgarlik burchagi o'z animatsiyamiz bilan | FINANCIER: BUGUN/ERTAGA 3 Short (night_order BUYURTMA 5). ROCCO: 2 Short |
+| Black Friday (27-noyabr) | haftalik pik oldidan | bor chelakda | sprint chelagi bo'yicha, kuniga ≤2 |
+| CMA Awards, kino treylerlar, K-pop | trendda | real odam/musiqa/begona kadr | yo'q |
+RASMIY RAQAMLAR (Take-Two press-relizi 2026-11-20, take2games.com/ir/news/grand-theft-auto-vi-shatters-entertainment-box-office-records): birinchi kun chakana savdosi $3.79 mlrd — "har qanday mediada rekord"; chiqishdan oldin 32.5 mln nusxa; chiqish 2026-11-19 (PS5, Xbox Series X|S). Taqqos: GTA V birinchi kuni $800 mln+ (Take-Two 8-K, 2013-09-18, sec.gov). Eslatma: $3.79 mlrd — kompaniya BAHOSI, chakana savdo, foyda emas — videoda shunday aytiladi. Byudjet haqidagi raqamlar mish-mish — YOZILMAYDI.
+FIRIBGARLIK (Rocco): PC/mobil versiya YO'Q — har qanday "GTA 6 PC download / keygen / APK / bepul kalit" soxta (McAfee blog 2026-11; NordVPN ogohlantirishi TechRepublic 2026-11-21; Netcraft/Help Net Security 2026-11-05). Himoya qadami: faqat PlayStation Store / Xbox Store; hech narsa yuklab ishga tushirmaslik. Hujum usuli ko'rsatilmaydi.
