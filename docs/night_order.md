@@ -171,7 +171,7 @@ BUGUNGI 23:17 ishga tushishda ENG BIRINCHI ISH (Financier trendidan ham oldin, c
 
 ### JARAYON (kod sessiyasi 01MWGZtb7, 2026-11-21 22:15–00:00 Toshkent) — START_HERE navbati
 - 1. ROCCO r01: eski post 6b01befd… o'chirildi; r01 v2 (why_story, fullbleed, 44 s, 25 kesim) qc_gate PASS → Buffer (hozir 6b01e0a5…, 21-noy 22:00 UTC; vazifa sessiyasi tasodifan o'chirib qayta qo'ygan).
-- 2. TREND: T-02 → Metricool 22-noy 02:00 Toshkent (YT 436903322, IG 436903474). Eski no seat / subscriptions 24-noy 02:00/05:00 ga SURILDI. T-01 → 22-noy 05:00 (shu sessiyada). T-04 (Rocco) → Buffer 6b01e461…, 22-noy 15:00 UTC.
+- 2. TREND: T-02 → Metricool 22-noy 02:00 Toshkent (YT 436903322, IG 436903474). Eski no seat / subscriptions 24-noy 02:00/05:00 ga SURILDI. T-01 → 22-noy 05:00 (YT 436928897, IG 436929041). T-04 (Rocco) → Buffer 6b01e461…, 22-noy 15:00 UTC.
 - 3. DVIGATEL v6.14: (a) shots + auto_shots, (b) 1–3 so'zli subtitr + headline hook, (c) look fullbleed — TAYYOR. QILINMADI: (d) paper, split; (e) ikkinchi ovoz ("voices") — sabab: shu sessiya trend videolariga ketdi; keyingi kod sessiyasida birinchi navbatda. Neon look ham yo'q (T-02 fullbleed bilan chiqdi).
 - QILINMADI: T-03, T-05 (trend, muddat 23-noy 15:00 UTC), V-01…V-05, C-01/C-02, R-05 (BF, 27-noyabrgacha), R-01…R-08 — sabab: vaqt; 22-noy 20:00 (airport) va 23:00 (BF vs CM) eski shablondagi postlar hali surilmagan — keyingi sessiya slotdan ≥30 daq oldin yangi versiya qo'ysin yoki sursin.
 - DIQQAT: kod sessiyasi videolari `claude/lucid-volta-x5cic0` branchida (raw URL shu branchdan); media ga merge Shohjahon ruxsati bilan.
