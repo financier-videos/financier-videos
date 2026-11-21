@@ -14,3 +14,34 @@ MAKET: docs/looks_samples/rocco_style_v2_mock.jpg (generator: work/rocco/style_v
 8. BIRINCHI VIDEO (uslub sinovi): T-04 shu uslubda qayta — ssenariy:
    Penny: "Rocco! Free GTA Six! For PC!" — Rocco: "Red flag." — Penny: "But it's FREE." — Rocco: "Red flag." — Penny: "It says 'tonight only'!" — Rocco: "Two red flags." | Rocco: "It's on PlayStation and Xbox. There is no PC version." — Penny: "...So what am I downloading?" — Rocco: "A very bad week." | Rocco: "Your move: buy it only in the console store." — Penny: "And the free one?" — Rocco (deadpan): "Free cheese. Mousetrap." Manbalar: Rockstar (platformalar); McAfee, NordVPN, Malwarebytes ogohlantirishlari.
 9. Tekshiruv: look_check luma ≥0.50; Rocco kadr ulushi ≥70%; hazillar soni; script_check PASS. Instagram'dagi eski T-04 Reel yangi versiya chiqqach arxivlanadi (o'chirish — Shohjahon qarori).
+
+## NEGA BOSHQALARNIKI PORTLAYDI — tahlil (2026-11-22 02:00; vidIQ: 2 outlier qidiruv, Instagram/TikTok outlier, 2 ta kadrma-kadr "watch"; ~45 kredit). Uslub olinadi, matn/kadr ko'chirilmaydi.
+| G'olib | Raqam | Nima uchun ishlaydi |
+|---|---|---|
+| "Scam Call (cat memes)" — animatsion mushuklar | 391K obunachi → 4.9M, 58 s | FIRIBGAR — AHMOQ, nishon — AQLLI: bola qo'ng'iroqni ataylab ko'tarib, firibgarni laqillatadi. ~8 hazil / 58 s: til sirg'alishi ("I can scam you— save you"), yolg'on ism, hisob raqami deb haqoratni yozdirish (reversal), absurd yakun. Yorug' xonalar, plan almashinuvi har 1–2 s, har replikaga subtitr |
+| "Don't Fall For This Scam" — ikki rol (sodda do'st / biladigan do'st) | 46K → 2.2M, 66 s | 1-soniyada VOQEA: "Menga kimdir $1 000 yubordi!"; BASHORAT: "hozir 'adashib yubordim' deb yozadi" → *ding* — aynan shunday bo'ladi; ANIQ ZARAR HISOBI (−$1 000 + qaytarilgan $1 000); 3 qadamli maslahat; "buni kerakli odamga yubor". Yorug' oshxona, emoji va 1–3 so'zli subtitr |
+| @dadthelawyer — AI ovoz firibgarligi | 96K → 24M (1070x) | Video firibgarlikning O'ZI bilan boshlanadi ("DAUGHTER: Dad!") — tushuntirish keyin; bitta oddiy himoya (oila uchun maxfiy so'z) |
+| 3D animatsiya "IF YOU SEE A BABY FLYING" | 8K → 607K, 26 s | "Agar X ni ko'rsang..." hook; g'alati aniq tasvir; loop |
+| "Buyer About to Reset Seller's Phone" | 38K → 4.2M, 20 s | firibgarlik amalda, 20 soniya |
+BIZNING T-04 da NIMA YO'Q EDI: voqea o'rniga hikoyachi ("Someone's offering..."), personajlar o'rtasida to'qnashuv yo'q, firibgar personaj yo'q, bashorat/burilish yo'q, zarar hisobi yo'q, hazil 1 ta, qorong'i.
+
+## ROCCO FORMULASI (bundan keyin faqat shu 4 formatdan; ketma-ket ikkitasi bir xil emas)
+Uchinchi personaj: FIRIBGAR "SLICK" — kulgili, omadsiz tulki (yoki kalamush) telefon/ekran ichida; hech qachon qo'rqinchli emas, doim yutqazadi. Sprite — kod chati (rocco_sprites uslubi), ovozi — bo'g'iq, shoshgan.
+1. SCAM-BAIT (45–60 s): Slick qo'ng'iroq qiladi → Rocco sovuqqonlik bilan uni chalg'itadi (takroriy hazil) → Slick o'zi o'zini fosh qiladi → Rocco kameraga 1 jumla himoya: "Siz esa — shunchaki go'shakni qo'ying." (Rasmiy maslahat: firibgar bilan gaplashmaslik — shuni AYTAMIZ; Rocco "mutaxassis" sifatida hazil qiladi.)
+2. BASHORAT (40–55 s): Penny xushxabar bilan keladi → Rocco: "Hozir u ... deydi" → *ding* → Penny: "QANDAY?!" → zarar hisobi ekranda (−$… ) → 3 qadam → "buni buvingga yubor".
+3. "AGAR ... KO'RSANG" (12–20 s, mikro): bitta g'alati aniq belgi + bitta harakat. Loop.
+4. FIRIBGARLIKNING O'ZI BILAN BOSHLANADI (25–40 s): 1-kadr — xabar/qo'ng'iroq ekranda (Slick ovozi), Penny javob bermoqchi → Rocco qo'lini ushlaydi → 1 oddiy himoya.
+HAR VIDEODA: hazil ≥1 har 6 s da; firibgar — ahmoq, jabrlanuvchi — hech qachon kulgi emas; yorqinlik ≥0.50; plan almashinuvi ≤2 s; oxirgi kadrda himoya qadami KATTA yozuv bilan + "Send this to someone who'd pick up."
+ETALON KARTASI (majburiy, playbook yozuvida): qaysi g'olibga qiyoslab yasaldi; hook turi; hazillar soni; yorqinlik; personaj kadr ulushi; kesim tempi — g'olibnikidan past bo'lsa CHIQMAYDI.
+
+## SSENARIYLAR (yozdi: chat Trade; faktlarni render oldidan rasmiy manbadan qayta tekshir)
+### [TAYYOR] RC-01 SCAM-BAIT · ~55 s · "Scammer Calls a Detective. Big Mistake."
+Manba (himoya qadami): FTC — bank hech qachon "pulni himoya qilish uchun boshqa hisobga o'tkazing" demaydi; go'shakni qo'yib, kartangiz orqasidagi raqamga o'zingiz qo'ng'iroq qiling (consumer.ftc.gov, impostor scams).
+Slick: "Hello! This is Brenda. From your bank." — Rocco: "Which bank?" — "...Yours." — "Name it." — "The... big one. With the money." — Penny (shivirlab): "Ooh, I have that one!" — Rocco: "Shh." | Slick: "Sir, there's fraud on your account. I can steal— SECURE it. Just move your money to a safe account." — Rocco: "Sure. Write down my account number." — "Ready!" — "R. E. D." — "Mm-hm." — "F. L. A. G." — "...Red flag?" — Rocco: "Read it again. Slowly." — *go'shak qo'yiladi* | Penny: "Aww. I liked Brenda." — Rocco (kameraga, deadpan): "Real banks never ask you to move money. You? Just hang up. Call the number on your card."
+Takroriy hazil: Slick bank nomini ayta olmaydi. Harakatlar: Rocco deadpan ×2, shrug; Penny doubletake; Slick jawdrop. Yakun yozuvi: "HANG UP. CALL THE NUMBER ON YOUR CARD."
+### [TAYYOR] RC-02 BASHORAT · ~45 s · "Someone Sent You $1,000 'By Mistake'" (V-05 o'rniga)
+Manba: FTC (payment apps: report to the app); National Cybersecurity Alliance — "accidental deposit" firibgarligi.
+Penny: "ROCCO! A stranger sent me a thousand dollars!" — Rocco: "Don't touch it. In five seconds he'll say it was a mistake." — *ding* — Penny (o'qiydi): "'Oops, wrong person, please send it back'... HOW?!" — Rocco: "Detective." — Penny: "So I send it back. I'm NICE." — Rocco: "That money can be stolen. It gets pulled back later. And the thousand YOU sent?" — ekranda: −$1,000 — Penny: "...is gone?" — Rocco: "Gone." | "Your move: don't send anything. Report it in the app. Let the app reverse it." — Penny: "And if he begs?" — Rocco: "A real mistake can wait. A scammer can't." Yakun: "Send this to the nicest person you know."
+### [TAYYOR] RC-03 "AGAR KO'RSANG" (mikro) · ~15 s · "If There's a QR Code in a Box You Never Ordered"
+Manba: FTC "brushing" ogohlantirishi (2026-08). 1-kadr: quti ochiladi, ichida faqat QR kod. Rocco: "A box you never ordered. Inside: just a QR code." — Penny telefon ko'taradi — Rocco panjasi bilan to'sadi: "Don't scan it. Keep the box. Change your shopping passwords." Loop: quti yana ochiladi.
+### [TAYYOR] RC-04 BASHORAT · ~40 s · "Free GTA 6 for PC" (T-04 o'rniga) — yuqoridagi 8-banddagi suhbat + boshida Slick'ning xabari ekranda ("FREE GTA 6 PC — tonight only!!!") va oxirida "Free cheese. Mousetrap." + sichqon qopqoni gagi.

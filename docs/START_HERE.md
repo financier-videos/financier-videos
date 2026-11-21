@@ -32,6 +32,8 @@ QAT'IY CHEGARALAR o'zgarmagan: behayo/noqonuniy narsa yo'q, musiqa yo'q, logotip
 
 - INSTAGRAM TRIAL REELS: docs/instagram.md "TRIAL REELS" — obunachi soni yetgan kundan boshlab ruxsat etilgan maksimumgacha (5 → 10 → 15 → 20/kun), har biri boshqa video; har kuni imkoniyat ochilganini tekshir.
 
+- ETALON KARTASI (2026-11-22, Shohjahon: "nega yana yomon kontent?"): HAR yangi video uchun playbook yozuvida — qaysi PORTLAGAN videoga qiyoslab yasaldi (havola), va 5 o'lchov bo'yicha solishtiruv: hook turi, hazillar soni, yorqinlik, personaj kadr ulushi, kesim tempi. Etalondan aniq past bo'lsa — video CHIQMAYDI, qayta yasaladi. Rocco: docs/rocco_style_v2.md (formula + RC-01…RC-04).
+
 ## 3. HISOBOT
 Har tugagan ishdan keyin: changes.md ga qator + push. Birinchi 3 ta yangi videodan 10 kadrlik kontakt-varaq → docs/looks_samples/. Qilinmagan har narsa: "QILINMADI: sababi, qachon" — night_order ga. "Bilmadim / esimdan chiqdi" yozilmaydi — shu fayl va INDEX buning uchun.
 
