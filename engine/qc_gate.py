@@ -16,6 +16,9 @@ Steps (skill -> check):
   7 yt-package/title.py          title lint (>= 80, number in first 40 chars if the title has one)
   10 engine/look_check.py      --prev <last 4 videos>: similarity >= 0.70 = FAIL (docs/looks.md)
   9 engine/color_check.py frames  CLIPPED = FAIL; CRUSHED/DULL = WARN (color skill)
+  11 pacing                     rendered.json "cuts": >= duration/2 (a new picture every <= 2 s)
+  12 engine/script_check.py      --prev-specs <last 4 specs>: skeleton repeat / footage share < 40% = FAIL
+  13 skills line                 --skills "Skillar: ...; ishlatilmadi: ... (sababi)" missing = FAIL
   8 contact sheet                8 frames tiled -> <out>_sheet.png; Claude MUST Read it (12-point visual QC: sharp text,
                                  Buck not covering numbers, nothing cut off, no blocky gradients, no unsuitable frame)
 Result: exit 0 = all PASS (posting allowed); 1 = a FAIL (fix and rerun); 2 = a step could not run (SKIP is listed with
@@ -56,6 +59,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("video"); ap.add_argument("--spec"); ap.add_argument("--rendered"); ap.add_argument("--title")
     ap.add_argument("--thumb"); ap.add_argument("--platform", default="shorts"); ap.add_argument("--out"); ap.add_argument("--prev", nargs="*", default=[])
+    ap.add_argument("--prev-specs", nargs="*", default=[], dest="prev_specs")  # v6.14: last 4 specs of the channel -> script_check
+    ap.add_argument("--skills", default="")  # v6.14: the "Skillar: ...; ishlatilmadi: ..." line (docs/skills/INDEX.md rule 2)
     a = ap.parse_args()
     out = a.out or os.path.splitext(a.video)[0] + "_qc.json"
     R = {}
@@ -192,6 +197,23 @@ def main():
         put("10_look", "SKIP" if "Traceback" in o else ("PASS" if rc == 0 else "FAIL"), o)
     else:
         put("10_look", "SKIP", "no --prev videos given (pass the last 4 videos of this channel)")
+
+    # 11 pacing (docs/lessons_winners_2026-11-21.md): a new picture every <= 2 s -> 30 s >= 15 cuts, 60 s >= 30
+    rjc = json.load(open(a.rendered)) if a.rendered and os.path.exists(a.rendered) else {}
+    if "cuts" in rjc and dur > 0:
+        nc = len(rjc["cuts"]); need = int(dur / 2)
+        put("11_pacing", "PASS" if nc >= need else "FAIL", f"{nc} cuts in {dur:.1f} s (need >= {need}; engine 'shots' / 'auto_shots')")
+    else:
+        put("11_pacing", "FAIL", "rendered.json has no 'cuts' (engine < 6.14) - re-render with shots")
+    # 12 script skeleton vs the last 4 specs of the channel (docs/script_rules.md, engine/script_check.py)
+    if a.spec and a.prev_specs:
+        rc, o = run([sys.executable, "-I", os.path.join(ROOT, "engine", "script_check.py"), a.spec] + a.prev_specs)
+        put("12_script", "SKIP" if "Traceback" in o else ("PASS" if rc == 0 else "FAIL"), o)
+    else:
+        put("12_script", "SKIP", "no --prev-specs (pass the last 4 specs of this channel)")
+    # 13 skills line (docs/skills/INDEX.md: missing = FAIL)
+    put("13_skills_line", "PASS" if re.search(r"Skillar:.+;\s*ishlatilmadi:", a.skills) else "FAIL",
+        a.skills or 'no --skills "Skillar: ...; ishlatilmadi: ... (sababi)"')
 
     st = [r["status"] for k, r in R.items()]
     blocking_skip = any(R[k]["status"] == "SKIP" for k in R if k[0] in "012345")

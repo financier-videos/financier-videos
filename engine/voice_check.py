@@ -20,7 +20,14 @@ NUMW = set("zero one two three four five six seven eight nine ten eleven twelve 
 def norm(t):
     t = t.lower().replace("-", " ").replace("’", "'")
     w = re.findall(r"[a-z']+|\d[\d,.]*", t)
-    return [x.strip("'") for x in w if not x[0].isdigit() and x.strip("'") not in NUMW and x.strip("'")]
+    w = [x.strip("'") for x in w if not x[0].isdigit() and x.strip("'") not in NUMW and x.strip("'")]
+    out, run = [], False  # 2026-11-21: "F T C" / "Q R" spelled for TTS == "FTC" / "QR" from ASR -> join runs of single letters
+    for x in w:
+        single = len(x) == 1 and x not in ("a", "i")
+        if single and run: out[-1] += x
+        else: out.append(x)
+        run = single or (run and single)
+    return out
 
 
 def spoken(spec):

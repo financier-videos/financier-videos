@@ -13,7 +13,9 @@ import json, re, sys
 
 def lines(spec): return [(s.get("say") or s.get("text") or "").strip() for s in spec.get("scenes", [])]
 def norm(t): return re.sub(r"[^a-z' ]", " ", t.lower()).split()
+def footage(s): return bool(s.get("broll") or s.get("shots"))  # v6.14: "shots" scenes are full-screen footage too
 def kind(s):
+    if s.get("shots") and not any(s.get(k) for k in ("vs", "chart", "stat")): return "broll"
     for k in ("vs", "chart", "stat", "broll", "phone", "sticker"):
         if s.get(k): return k
     return "plain"
@@ -22,7 +24,7 @@ def info(path):
     sp = json.load(open(path)); ls = lines(sp); sc = sp.get("scenes", [])
     return {"path": path.split("/")[-1], "l2": " ".join(norm(ls[1])[:1]) if len(ls) > 1 else "", "end": " ".join(norm(ls[-1])[-1:]) if ls else "",
             "shape": [kind(s) for s in sc], "words": sum(len(l.split()) for l in ls), "scenes": len(sc),
-            "broll": sum(1 for s in sc if s.get("broll")), "look": sp.get("look") or sp.get("style") or "-"}
+            "broll": sum(1 for s in sc if footage(s)), "look": sp.get("look") or sp.get("style") or "-"}
 
 def main():
     a = sys.argv[1:]

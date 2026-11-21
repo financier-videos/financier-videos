@@ -1,0 +1,31 @@
+{
+ "format": "short", "sfx": true, "loop": false, "theme": "noir", "style": "rocco", "look": "fullbleed", "structure": "myth_bust",
+ "captions": "words", "headline": "hook", "auto_shots": 1.8, "bg_bright": 1.3,
+ "brand": "RED FLAG ROCCO", "brand_color": "#FF3B3B",
+ "source": "Sources: Rockstar (platforms: PS5, Xbox Series X|S); Malwarebytes (Aug 2026), McAfee, NordVPN scam warnings",
+ "buck_voice": {"voice_id": "eYibgGvZyWzJUi8HBmQM", "label": "Rocco (Scam Detective)", "settings": {"speed": 1.08}},
+ "scenes": [
+  {"text": "Someone offers you GTA 6 for PC? Free download, tonight only?", "say": "Someone offers you G T A Six for P C? Free download, tonight only?",
+   "head": "THERE IS NO GTA 6 FOR PC",
+   "shots": [{"broll": "/tmp/fin/bg/t04/gameroom.mp4", "at": 0, "kb": "in"}, {"broll": "/tmp/fin/bg/t04/dl.mp4", "at": 1.7},
+             {"broll": "/tmp/fin/bg/t04/gameroom.mp4", "at": 3.2, "start": 5, "zoom": 1.5}], "sfx": ["impact@0.1"]},
+  {"text": "Red flag.", "beat": 0.2, "land": 0.3, "stat": "RED FLAG", "bg": "/tmp/fin/bg/t04/gameroom.mp4",
+   "mascot": {"mood": "sideeye", "pos": "corner", "act": "deadpan"}, "sfx": ["buzzer@0.25"]},
+  {"text": "It came out on PlayStation 5 and Xbox Series only. No PC version exists.", "say": "It came out on PlayStation Five and Xbox Series only. No P C version exists.",
+   "head": "THE FACT", "chapter": true,
+   "shots": [{"broll": "/tmp/fin/bg/t04/pad.mp4", "at": 0}, {"broll": "/tmp/fin/bg/t04/pad.mp4", "at": 1.8, "start": 4, "zoom": 1.4, "kb": "left"},
+             {"broll": "/tmp/fin/bg/t04/dl2.mp4", "at": 3.4}], "show_source": "Rockstar Games: PS5 and Xbox Series X|S (Nov 19, 2026)"},
+  {"text": "Security researchers found fake GTA downloads that steal your passwords.",
+   "phone": {"from": "FREE_GTA6_PC.exe", "msgs": [{"t": "Installing... 99%", "at": 0.4}, {"t": "Your saved passwords: uploading", "at": 1.9, "flag": true}]},
+   "bg": "/tmp/fin/bg/t04/hacker.mp4", "show_source": "Malwarebytes (Aug 2026); McAfee; NordVPN", "sfx": ["scratch@2.0"]},
+  {"text": "The only thing it installs is a bad week.", "land": 0.4,
+   "bg": "/tmp/fin/bg/t04/virus.mp4", "mascot": {"mood": "sideeye", "pos": "center", "act": "shrug"}, "sfx": ["crickets@1.4"]},
+  {"text": "Your move: buy it only inside the PlayStation or Xbox store.",
+   "head": "YOUR MOVE", "chapter": true, "stat": "STORE ONLY",
+   "shots": [{"broll": "/tmp/fin/bg/t04/pad.mp4", "at": 0, "start": 6}, {"broll": "/tmp/fin/bg/t04/gameroom.mp4", "at": 1.8, "zoom": 1.3}], "sfx": ["ding@0.3"]},
+  {"text": "And if a video tells you to download something to play... that's not a game. That's the bait.", "land": 0.4,
+   "shots": [{"broll": "/tmp/fin/bg/t04/dl.mp4", "at": 0, "start": 3}, {"broll": "/tmp/fin/bg/t04/hacker.mp4", "at": 2.0, "start": 4},
+             {"broll": "/tmp/fin/bg/t04/virus.mp4", "at": 3.8, "zoom": 1.3}],
+   "mascot": {"mood": "point", "pos": "corner", "at": 3.6}, "sfx": ["impact@3.8"]}
+ ]
+}

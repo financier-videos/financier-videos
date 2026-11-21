@@ -39,6 +39,13 @@ v6 CINEMA QUALITY (default ON; spec "cinema": false = old look, e.g. for quick t
 spec.json:
 {
   "format": "short" | "long",          # short = 1080x1920, long = 1920x1080
+  "look": "fullbleed"   # v6.14 (docs/looks.md): footage bright (<= 25% dim) + bottom gradient, hook text mid-frame, no top headline,
+                        #   Anton 1-3 word captions in the lower third, corner character = big half-body bottom-right. Default "vault" (old look).
+  "captions": "words"   # v6.14: 1-3 word captions synced to the voice, one line, big (auto with look fullbleed)
+  "headline": "hook"    # v6.14: no permanent headline: scene 0 "head" shows ~2 s (full hook on frame 1); scene "chapter": true shows its head 1.5 s
+  "auto_shots": 1.8     # v6.14: a new picture every <= N s: footage scenes are re-framed (zoom/pan cuts), graphic scenes get a punch-in cut.
+                        #   Scene "shots": [{"broll": "a.mp4"|"b.jpg", "at": 0.0, "start": 2.0, "zoom": 1.0, "kb": "in|out|left|right"}, ...]
+                        #   (an item without "broll" re-frames the previous footage). Result JSON "cuts" -> qc_gate step 11 (30 s >= 15).
   "style": "rocco"   # v6.12: Rocco look (case-file headline, typewriter, red stamp stats, label captions); scene "phone": {"from": "Unknown number", "msgs": [{"t": "...", "at": 0.3, "flag": true}]}
   "brand": "FINANCIER", "brand_color": "#F5C542"   # v6.11: corner brand text (Rocco: "RED FLAG ROCCO"); character library = env FIN_BUCK3D (Rocco: work/rocco/rocco_sprites.py)
   "bg": "clip.mp4" | ["a.mp4", "b.jpg", ...],   # v6.6: real blurred BACKDROP behind non-b-roll scenes (list = rotates per scene; scene "bg" overrides, false = plain); "bg_mix": 0.62, "bg_blur": 6, "bg_bright": 1.0 (v6.9: 1.3–1.5 = brighter theme + less backdrop dimming; A/B, notes/2026-11-21_color.md). Fetch: engine/pixabay_bg.py
@@ -895,15 +902,23 @@ def wrap(draw, text, font, maxw):
     return lines
 
 
-def caption_chunks(text, start, dur):
-    words = text.split(); chunks = []; cur = []
+def _chunk_words(words, maxn=4):
+    """Split caption words into chunks. maxn=4 = classic 2-line captions; maxn<=3 = v6.14 "words" mode (1-3 words,
+    a chunk ends at punctuation even after 1 word; a lone trailing word joins the previous chunk only if it fits)."""
+    chunks = []; cur = []
     for w in words:
         cur.append(w)
-        if len(cur) >= 4 or (re.search(r'[.,:?!;]$', w) and len(cur) >= 2):
+        if len(cur) >= maxn or (re.search(r'[.,:?!;]$', w) and len(cur) >= (1 if maxn <= 3 else 2)):
             chunks.append(cur); cur = []
     if cur:
-        if chunks and len(cur) < 2: chunks[-1] += cur
+        if chunks and len(cur) < 2 and len(chunks[-1]) + len(cur) <= maxn: chunks[-1] += cur
+        elif chunks and len(cur) < 2 and maxn > 3: chunks[-1] += cur
         else: chunks.append(cur)
+    return chunks
+
+
+def caption_chunks(text, start, dur, maxn=4):
+    words = text.split(); chunks = _chunk_words(words, maxn)
     total = sum(len(' '.join(c)) for c in chunks) or 1
     out = []; t = start
     for c in chunks:
@@ -912,7 +927,7 @@ def caption_chunks(text, start, dur):
     return out
 
 
-def caption_chunks_timed(text, words):
+def caption_chunks_timed(text, words, maxn=4):
     """v6: caption chunks timed by Buck's real word timings (ElevenLabs alignment). The on-screen words ("text") are
     mapped onto the spoken words ("say") by position, so spelled-out numbers still line up."""
     tw = text.split()
@@ -925,13 +940,8 @@ def caption_chunks_timed(text, words):
         if q is None: q = min(p, n_s - 1)
         st.append(words[q][1]); p = min(q + 1, n_s - 1) if q >= p else p
     end_all = words[-1][2]
-    chunks = []; cur = []
-    for j, w in enumerate(tw):
-        cur.append(j)
-        if len(cur) >= 4 or (re.search(r'[.,:?!;]$', w) and len(cur) >= 2): chunks.append(cur); cur = []
-    if cur:
-        if chunks and len(cur) < 2: chunks[-1] += cur
-        else: chunks.append(cur)
+    idx_chunks = _chunk_words([f"{j}\x00{w}" for j, w in enumerate(tw)], maxn)
+    chunks = [[int(x.split("\x00")[0]) for x in c] for c in idx_chunks]
     out = []
     for ci, c in enumerate(chunks):
         t0 = st[c[0]]; t1 = st[chunks[ci + 1][0]] if ci + 1 < len(chunks) else end_all + 0.25
@@ -939,7 +949,7 @@ def caption_chunks_timed(text, words):
     return out
 
 
-ENGINE_VERSION = "6.13"  # bump on every engine change and add a line to docs/changes.md
+ENGINE_VERSION = "6.14"  # bump on every engine change and add a line to docs/changes.md
 
 THEMES = {  # v6.1: per-video look so videos don't all share one background. Spec "theme": name | "auto" (default: from the first line).
     "vault": ([((9, 14, 28), (19, 30, 54)), ((12, 10, 30), (32, 20, 58)), ((6, 20, 24), (14, 42, 48))], "grid"),
@@ -993,7 +1003,9 @@ def make_bg(W, H, seed, theme="vault"):
 def broll_frames(path, W, H, n, start=0.0):
     # decode slightly larger than the frame so a slow Ken Burns zoom never shows edges
     BW, BH = int(W * 1.1) // 2 * 2, int(H * 1.1) // 2 * 2
-    cmd = ["ffmpeg", "-loglevel", "error", "-ss", f"{start}", "-i", path, "-vf",
+    img = path.lower().endswith((".jpg", ".jpeg", ".png", ".webp"))  # v6.14: a photo works as a shot too
+    pre = ["-loop", "1"] if img else ["-stream_loop", "-1", "-ss", f"{start}"]  # v6.14: short clips loop instead of freezing
+    cmd = ["ffmpeg", "-loglevel", "error"] + pre + ["-i", path, "-vf",
            f"scale={BW}:{BH}:force_original_aspect_ratio=increase,crop={BW}:{BH},fps={FPS}",
            "-frames:v", str(n), "-f", "rawvideo", "-pix_fmt", "rgb24", "-"]
     p = subprocess.run(cmd, capture_output=True)
@@ -1014,6 +1026,19 @@ def backdrop_frames(path, W, H, n, start=0.0, blur=6):
     raw = subprocess.run(cmd, capture_output=True).stdout
     BW, BH = int(bw * 1.12) // 2 * 2, int(bh * 1.12) // 2 * 2; fs = BW * BH * 3
     return [raw[i:i + fs] for i in range(0, len(raw) - fs + 1, fs)], (BW, BH)
+
+
+_FBG = {}
+
+
+def _fb_grad(W, H):
+    """v6.14 fullbleed: transparent top, dark bottom third so white captions read on bright footage."""
+    if (W, H) not in _FBG:
+        a = np.zeros((H, 1), dtype=np.float32); y = np.arange(H) / H
+        a[:, 0] = np.clip((y - 0.52) / 0.48, 0, 1) ** 1.4 * 175
+        al = Image.fromarray(np.repeat(a, W, axis=1).astype(np.uint8), "L")
+        g = Image.new("RGBA", (W, H), (0, 0, 0, 255)); g.putalpha(al); _FBG[(W, H)] = g
+    return _FBG[(W, H)]
 
 
 def ease_out(x):
@@ -1778,6 +1803,12 @@ def render(spec, wav, total, out, workdir):
     W, H = (1920, 1080) if long else (1080, 1920)
     S = min(W, H)
     ROC = spec.get("style") == "rocco"  # v6.12: Red Flag Rocco look - case-file tabs, typewriter, red stamps, label captions, phone SMS
+    LOOK = spec.get("look", "vault")  # v6.14: "fullbleed" (bright full-screen footage, text in the lower third); docs/looks.md
+    FB = LOOK == "fullbleed"
+    WORDCAP = spec.get("captions") == "words" or FB  # v6.14: 1-3 word captions synced to the voice
+    HOOKHEAD = spec.get("headline") == "hook" or FB  # v6.14: no permanent headline - full hook on frame 1 of scene 0 only (+ scene "chapter")
+    AUTOSHOT = float(spec.get("auto_shots", 1.8 if (WORDCAP or FB) else 0) or 0)  # v6.14: new framing every <= N s inside a scene
+    cuts = []  # v6.14: every hard cut (scene start, shot change, auto reframe) -> result JSON "cuts" (qc_gate pacing check)
     f_head = ImageFont.truetype(fun_font("CourierPrime-Bold.ttf") if ROC else ANTON, int(S * (0.075 if long else (0.088 if ROC else 0.105))))
     f_stamp = ImageFont.truetype(fun_font("BlackOpsOne-Regular.ttf"), int(S * 0.17)) if ROC else None
     f_phone = ImageFont.truetype(INTER_SB, int(S * 0.044)); f_phone_b = ImageFont.truetype(INTER_XB, int(S * 0.036))
@@ -1785,6 +1816,7 @@ def render(spec, wav, total, out, workdir):
     cap_sz = int(S * (0.05 if long else 0.07))
     f_cap = ImageFont.truetype(INTER_XB, cap_sz)
     f_cap_big = ImageFont.truetype(INTER_XB, int(cap_sz * 1.12))
+    wcap_sz = int(S * (0.07 if long else 0.092)); f_wcap = ImageFont.truetype(ANTON if FB else INTER_XB, wcap_sz)
     f_stat = ImageFont.truetype(ANTON, int(S * (0.22 if long else 0.30)))
     f_src = ImageFont.truetype(INTER_SB, int(S * 0.030))   # v6.4: was 0.024 — unreadable on a phone
     f_brand = ImageFont.truetype(ANTON, int(S * 0.04))
@@ -1795,8 +1827,9 @@ def render(spec, wav, total, out, workdir):
     for sc in spec["scenes"]:
         sp0 = sc.get("speech", sc["start"])
         if sc.get("text", "").strip():
-            caps += (caption_chunks_timed(sc["text"], sc["words"]) if sc.get("words") else
-                     caption_chunks(sc["text"], sp0, sc.get("sdur", sc["dur"] - (sp0 - sc["start"])) + 0.1))
+            _mx = 3 if WORDCAP else 4
+            caps += (caption_chunks_timed(sc["text"], sc["words"], _mx) if sc.get("words") else
+                     caption_chunks(sc["text"], sp0, sc.get("sdur", sc["dur"] - (sp0 - sc["start"])) + 0.1, _mx))
     bgs = {}
     rng = np.random.default_rng(5)
     # floating "$" particles for the animated background (shared, drift upward forever)
@@ -1826,7 +1859,36 @@ def render(spec, wav, total, out, workdir):
     for si, sc in enumerate(spec["scenes"]):
         f0 = int(round(sc["start"] * FPS)); f1 = min(nframes, int(round((sc["start"] + sc["dur"]) * FPS)))
         n = max(1, f1 - f0)
-        clip, csz = (broll_frames(sc["broll"], W, H, n, sc.get("broll_start", 0)) if sc.get("broll") and os.path.exists(sc["broll"]) else (None, None))
+        clip, csz = (broll_frames(sc["broll"], W, H, n, sc.get("broll_start", 0)) if sc.get("broll") and os.path.exists(sc["broll"]) and not sc.get("shots") else (None, None))
+        # v6.14 SHOTS: a scene is cut into several pictures, a new one every <= 2 s (docs/lessons_winners_2026-11-21.md).
+        #   scene "shots": [{"broll": "a.mp4"|"photo.jpg", "at": 0.0, "start": 3.0, "zoom": 1.0, "kb": "in|out|left|right"}, ...]
+        #   an item without "broll" re-frames the previous footage (closer crop, "zoom" 1.3-1.5) = a new camera angle.
+        #   spec "auto_shots": 1.8 (default ON with captions "words" / look fullbleed): a plain "broll" scene longer than
+        #   that is auto-cut into re-framed shots; graphic scenes get a hard punch-in cut on the same beat.
+        shots = []
+        _sl = sc.get("shots")
+        if not _sl and clip and AUTOSHOT and sc["dur"] > AUTOSHOT * 1.25:
+            _k = int(math.ceil(sc["dur"] / AUTOSHOT)); _zs = [1.0, 1.42, 1.18, 1.55]; _kbs = ["in", "left", "out", "right"]
+            _sl = [{"at": round(j * sc["dur"] / _k, 2), "zoom": _zs[j % 4], "kb": _kbs[j % 4]} for j in range(_k)]
+            _sl[0]["broll"] = sc["broll"]; _sl[0]["start"] = sc.get("broll_start", 0)
+            clip, csz = None, None
+        if _sl:
+            _path, _st = sc.get("broll"), float(sc.get("broll_start", 0))
+            for j, sh in enumerate(_sl):
+                a0 = float(sh.get("at", 0)); a1 = float(_sl[j + 1].get("at", sc["dur"])) if j + 1 < len(_sl) else sc["dur"]
+                k0 = int(round(a0 * FPS)); k1 = min(n, int(round(a1 * FPS)))
+                if k1 <= k0: continue
+                if sh.get("broll"): _path, _st = sh["broll"], float(sh.get("start", 0))
+                elif _path: _st = _st + (shots[-1][1] - shots[-1][0]) / FPS if shots else _st
+                if not (_path and os.path.exists(_path)): continue
+                frs, fsz = broll_frames(_path, W, H, k1 - k0, sh.get("start", _st) if sh.get("broll") else _st)
+                if frs: shots.append((k0, k1, frs, fsz, float(sh.get("zoom", 1.0)), sh.get("kb", ["in", "left", "out", "right"][j % 4])))
+            if shots: clip, csz = shots[0][2], shots[0][3]
+        cut_ks = sorted(set([0] + [s_[0] for s_ in shots]))
+        if not shots and not clip and AUTOSHOT and sc["dur"] > AUTOSHOT * 1.25:  # graphic scene: hard punch-in reframe on the beat
+            _k = int(math.ceil(sc["dur"] / AUTOSHOT)); cut_ks = [int(round(j * sc["dur"] / _k * FPS)) for j in range(_k)]
+        g_cut = (not shots and not clip and len(cut_ks) > 1)
+        cuts.extend(round(sc["start"] + k_ / FPS, 2) for k_ in cut_ks)
         bdclip = None
         if not clip:
             if si % 3 not in bgs:
@@ -1838,8 +1900,8 @@ def render(spec, wav, total, out, workdir):
             _bd = sc.get("bg", spec.get("bg"))  # v6.6: str or list of clips/photos; scene "bg": false = plain theme
             if isinstance(_bd, list) and _bd: _bd = _bd[si % len(_bd)]
             if isinstance(_bd, str) and os.path.exists(_bd):
-                bdclip, bdsz = backdrop_frames(_bd, W, H, n, sc.get("bg_start", (si * 3.7) % 9), spec.get("bg_blur", 6))
-                bd_mix = float(spec.get("bg_mix", 0.62))  # share of the real picture vs theme colour
+                bdclip, bdsz = backdrop_frames(_bd, W, H, n, sc.get("bg_start", (si * 3.7) % 9), spec.get("bg_blur", 2 if FB else 6))
+                bd_mix = float(spec.get("bg_mix", 0.9 if FB else 0.62))  # share of the real picture vs theme colour
         col = hex2rgb(sc.get("color", "#FF3B3B" if spec.get("style") == "rocco" else "#F5C542"))
         trans = sc.get("transition") or ("punch" if sc.get("stat") else trans_cycle[si % 3])
         stat_sz = f_stat.size
@@ -1860,7 +1922,9 @@ def render(spec, wav, total, out, workdir):
             mood = masc.get("mood", "happy") if masc.get("mood", "happy") in MOODS else "happy"
             mpos = masc.get("pos") or ("corner" if (sc.get("stat") or sc.get("chart") or sc.get("vs") or clip or sc.get("phone")) else "center")
             m_at = float(masc.get("at", 0))
-            if mpos == "center":
+            if FB and not long and mpos != "center":  # v6.14 fullbleed: half-body in the lower-right corner, bigger
+                mR = W * 0.11; mx, my = W * 0.80, H * 0.915
+            elif mpos == "center":
                 mR = H * 0.13 if long else W * 0.17; mx, my = W * 0.5, H * 0.47
             else:
                 # corner = upper-left, between the headline and the big stat (keeps the stat and captions clear)
@@ -1874,6 +1938,9 @@ def render(spec, wav, total, out, workdir):
                 if mpos == "center":
                     bub = bubble_patch(masc["say"], S * 0.05, W * (0.6 if long else 0.8), "down")
                     bub_xy = (W / 2 - bub.width / 2, my - mR * 1.38 - bub.height)
+                elif FB and not long:  # bubble above the corner character, kept inside the frame
+                    bub = bubble_patch(masc["say"], S * 0.042, W * 0.5, "down")
+                    bub_xy = (min(W * 0.96 - bub.width, mx - bub.width / 2), my - mR * 2.15 - bub.height)
                 else:
                     bx0 = mx + mR * 1.3
                     bub = bubble_patch(masc["say"], S * 0.04, (W * 0.84 - bx0), "left")
@@ -1909,14 +1976,29 @@ def render(spec, wav, total, out, workdir):
             fi = f0 + k; t = fi / FPS; lt = k / FPS; prog = k / max(1, n - 1)
             # ---------- background ----------
             if clip:
-                BW, BH = csz
-                fr = Image.frombytes("RGB", (BW, BH), clip[min(k, len(clip) - 1)])
-                z = 1.0 + 0.06 * prog  # Ken Burns push-in
-                cw, ch = int(BW / z / 1.1 * 1.0), int(BH / z / 1.1)
-                cx0 = (BW - cw) // 2 + int((BW - cw) * 0.15 * (prog - 0.5)); cy0 = (BH - ch) // 2
+                if shots:  # v6.14: active shot, its own Ken Burns move and framing
+                    sh_ = next((x for x in reversed(shots) if k >= x[0]), shots[0])
+                    BW, BH = sh_[3]; kk = k - sh_[0]; frs_ = sh_[2]
+                    fr = Image.frombytes("RGB", (BW, BH), frs_[min(kk, len(frs_) - 1)])
+                    pg = kk / max(1, sh_[1] - sh_[0] - 1); zb = sh_[4]; kb = sh_[5]
+                    z = zb * (1.0 + (0.08 * pg if kb != "out" else 0.08 * (1 - pg)))
+                    cw, ch = int(BW / z / 1.1), int(BH / z / 1.1)
+                    pan = {"left": -0.5 + pg, "right": 0.5 - pg}.get(kb, 0.0)
+                    cx0 = int((BW - cw) / 2 + (BW - cw) * 0.45 * pan); cy0 = int((BH - ch) / 2 - (BH - ch) * (0.12 if zb > 1.2 else 0))
+                    cx0 = max(0, min(BW - cw, cx0)); cy0 = max(0, min(BH - ch, cy0))
+                else:
+                    BW, BH = csz
+                    fr = Image.frombytes("RGB", (BW, BH), clip[min(k, len(clip) - 1)])
+                    z = 1.0 + 0.06 * prog  # Ken Burns push-in
+                    cw, ch = int(BW / z / 1.1 * 1.0), int(BH / z / 1.1)
+                    cx0 = (BW - cw) // 2 + int((BW - cw) * 0.15 * (prog - 0.5)); cy0 = (BH - ch) // 2
                 base = fr.crop((cx0, cy0, cx0 + cw, cy0 + ch)).resize((W, H), Image.BILINEAR).convert("RGBA")
                 base = ImageEnhance.Color(ImageEnhance.Contrast(base.convert("RGB")).enhance(1.12)).enhance(1.15).convert("RGBA")
-                base = Image.alpha_composite(base, Image.new("RGBA", (W, H), (0, 0, 0, 105)))
+                if FB:  # v6.14 fullbleed: footage stays bright (<= 20% dim) + a bottom gradient for the text
+                    base = Image.alpha_composite(base, Image.new("RGBA", (W, H), (0, 0, 0, 40)))
+                    base = Image.alpha_composite(base, _fb_grad(W, H))
+                else:
+                    base = Image.alpha_composite(base, Image.new("RGBA", (W, H), (0, 0, 0, 105)))
             elif bdclip:
                 BW2, BH2 = bdsz
                 fr = Image.frombytes("RGB", (BW2, BH2), bdclip[min(k, len(bdclip) - 1)])
@@ -1928,6 +2010,7 @@ def render(spec, wav, total, out, workdir):
                 _lum = float(np.asarray(fr.convert("L"), dtype=np.float32).mean())  # bright backdrops (sky, white walls) get darker
                 _dk = int(max(70, min(185, 70 + (_lum - 70) * 1.3 + (35 if (chart or vsd) else 0))))
                 if bg_bright != 1.0: _dk = int(max(30, _dk / bg_bright))  # v6.9: less dimming of the real backdrop
+                if FB: _dk = min(_dk, 64 + (40 if (chart or vsd or sc.get("stat")) else 0))  # v6.14 fullbleed: <= 25% dim
                 base = Image.alpha_composite(base, Image.new("RGBA", (W, H), (0, 0, 0, _dk)))
             else:
                 base = base_static.copy()
@@ -2030,13 +2113,22 @@ def render(spec, wav, total, out, workdir):
                             pts = [(ax, ay - s2), (ax - s2, ay + s2 * 0.2), (ax + s2, ay + s2 * 0.2)] if arrow == "arrow_up" else [(ax, ay + s2), (ax - s2, ay - s2 * 0.2), (ax + s2, ay - s2 * 0.2)]
                             fd.polygon(pts, fill=ac + (int(255 * a),))
             # ---------- headline: drop-in with overshoot + underline sweep ----------
-            if sc.get("head") and not (ROC and clip and si > 0):  # Rocco: full-screen footage scenes carry no headline
+            _hd_on = sc.get("head") and not (ROC and clip and si > 0 and not HOOKHEAD)  # Rocco: full-screen footage scenes carry no headline
+            if _hd_on and HOOKHEAD:  # v6.14: hook text on frame 1 for ~2 s, a "chapter" scene shows its tab for 1.5 s, else none
+                _hlim = float(sc.get("head_secs", 2.0 if si == 0 else (1.5 if sc.get("chapter") else 0)))
+                _hd_on = lt < _hlim
+                _hfade = max(0.0, min(1.0, (_hlim - lt) / 0.2))
+            else:
+                _hfade = 1.0
+            if _hd_on:
                 lh_t = lt + (0.4 if si == 0 else 0.0)  # hook: headline fully visible on frame 1 (works with sound off)
                 a = ease_back(lh_t / 0.4) if lh_t < 0.4 else 1.0
-                al = int(255 * min(1.0, lh_t / 0.2))
+                al = int(255 * min(1.0, lh_t / 0.2) * _hfade)
                 lines = wrap(fd, sc["head"], f_head, W * 0.86)
                 lh = f_head.size * 1.08
                 y0 = (H * 0.815 + (1 - a) * 70) if ROC else (H * (0.095 if not long else 0.075) - (1 - a) * 70)  # Rocco: case-file tab at the bottom
+                if ROC and HOOKHEAD and WORDCAP: y0 = H * 0.13 - (1 - a) * 70  # v6.14: word captions own the lower third -> tab on top
+                if FB and not ROC and not long: y0 = H * 0.27 - (1 - a) * 70   # v6.14 fullbleed: hook in the upper-middle, clear of the captions
                 boxh = lh * len(lines) + S * 0.04
                 if ROC:  # manila case-file tab, typewriter text, left aligned
                     fd.rectangle([W * 0.05, y0 - S * 0.045, W * 0.32, y0 - S * 0.015], fill=(205, 170, 96, al))
@@ -2091,6 +2183,7 @@ def render(spec, wav, total, out, workdir):
                         if s_ > 0.05:
                             bp = bub if abs(s_ - 1) < 1e-3 else bub.resize((max(1, int(bub.width * s_)), max(1, int(bub.height * s_))), Image.BILINEAR)
                             if mpos == "center": paste_rgba(fx, bp, W / 2 - bp.width / 2, bub_xy[1] + bub.height - bp.height)
+                            elif FB and not long: paste_rgba(fx, bp, bub_xy[0] + (bub.width - bp.width) / 2, bub_xy[1] + bub.height - bp.height)
                             else: paste_rgba(fx, bp, bub_xy[0], bub_xy[1] + (bub.height - bp.height) / 2)
             if stk is not None and lt >= stk_at:
                 lts = lt - stk_at
@@ -2126,7 +2219,28 @@ def render(spec, wav, total, out, workdir):
                             fd.text((px_ + S * 0.03 + bw_ - S * 0.04, yy_ - S * 0.035), "!", font=f_head, fill=ACC + (255,), stroke_width=4, stroke_fill=(0, 0, 0, 255))
                         yy_ += bh_ + S * 0.025
             # ---------- karaoke captions ----------
-            for cap in caps:
+            for cap in (caps if WORDCAP else []):  # v6.14: 1-3 big words, one line, synced to the voice
+                c0, c1, txt = cap[:3]
+                if c0 <= t < c1:
+                    words = txt.split()
+                    act = max([i for i, ws in enumerate(cap[3]) if ws <= t] or [0]) if len(cap) > 3 else len(words) - 1
+                    pop = ease_out((t - c0) / 0.08); sc_ = 0.82 + 0.18 * ease_back(min(1.0, (t - c0) / 0.12))
+                    fnt = f_wcap
+                    while ud.textlength(txt, font=fnt) * sc_ > W * 0.86 and fnt.size > 40: fnt = ImageFont.truetype(fnt.path, int(fnt.size * 0.9))
+                    if abs(sc_ - 1) > 0.01: fnt = ImageFont.truetype(fnt.path, max(20, int(fnt.size * sc_)))
+                    sp = ud.textlength(" ", font=fnt); widths = [ud.textlength(w_, font=fnt) for w_ in words]
+                    lw = sum(widths) + sp * (len(words) - 1); x = (W - lw) / 2
+                    yb = H * (0.80 if long else (0.70 if FB else 0.66)) - fnt.size / 2
+                    if ROC: ud.rectangle([x - S * 0.025, yb - fnt.size * 0.1, x + lw + S * 0.025, yb + fnt.size * 1.22], fill=(12, 12, 14, int(225 * pop)))
+                    for i, wd in enumerate(words):
+                        isnum = bool(re.search(r'[\d$¢%]', wd))
+                        fill = (ACC if i == act else (GREEN if isnum and not ROC else WHITE)) if len(words) > 1 else (GOLD if isnum and not ROC else WHITE)
+                        if ROC and i == act and len(words) > 1:
+                            ud.rectangle([x - S * 0.006, yb - fnt.size * 0.06, x + widths[i] + S * 0.006, yb + fnt.size * 1.18], fill=ACC + (int(255 * pop),)); fill = WHITE
+                        ud.text((x, yb), wd, font=fnt, fill=fill + (int(255 * pop),), stroke_width=max(6, fnt.size // 8), stroke_fill=(0, 0, 0, int(255 * pop)))
+                        x += widths[i] + sp
+                    break
+            for cap in ([] if WORDCAP else caps):
                 c0, c1, txt = cap[:3]
                 if c0 <= t < c1:
                     words = txt.split()
@@ -2190,6 +2304,11 @@ def render(spec, wav, total, out, workdir):
                     im = _avg([_zoomed(im, zoom_amt(zt_ + o / FPS, z_amt, z_hold)) for o in _SHUTTER])
                 else:
                     im = _zoomed(im, zoom_amt(zt_, z_amt, z_hold))
+            if g_cut:  # v6.14: hard reframe on the beat (alternating 1.0 / 1.09) = a new picture without new footage
+                _ci = max([j for j, k_ in enumerate(cut_ks) if k >= k_] or [0])
+                if _ci % 2 == 1:
+                    _zz = 1.09; _bw, _bh = int(W * _zz), int(H * _zz)
+                    im = im.resize((_bw, _bh), Image.BILINEAR).crop(((_bw - W) // 2, int((_bh - H) * 0.4), (_bw - W) // 2 + W, int((_bh - H) * 0.4) + H))
             if cinema:
                 im = Image.alpha_composite(im, vignette)
                 im = cg.scene(im)
@@ -2229,6 +2348,7 @@ def render(spec, wav, total, out, workdir):
             enc.stdin.write(frame.tobytes())
     enc.stdin.close(); enc.wait()
     if enc.returncode == 0: os.replace(out + ".tmp.mp4", out)
+    spec["_cuts"] = sorted(set(cuts))
     return enc.returncode
 
 
@@ -2256,14 +2376,16 @@ def main():
     ap.add_argument("--model", required=True); ap.add_argument("--voices", required=True)
     args = ap.parse_args()
     spec = json.load(open(args.spec))
+    import hashlib, datetime as _dt
+    _sha = hashlib.sha1(open(os.path.abspath(__file__), "rb").read()).hexdigest()[:12]  # v6.14: stamp the engine as it was at START (edits during a render no longer fake freshness)
     workdir = tempfile.mkdtemp(prefix="fin_")
     wav, total = tts(spec, args, workdir)
     rc = render(spec, wav, total, args.out, workdir)
-    import hashlib, datetime as _dt
-    _sha = hashlib.sha1(open(os.path.abspath(__file__), "rb").read()).hexdigest()[:12]  # v6.9: freshness stamp (qc_gate step 0)
     print(json.dumps({"rc": rc, "seconds": round(total, 2), "out": args.out, "engine": ENGINE_VERSION, "engine_sha": _sha,
                       "rendered_at": _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
                       "buck_voice": sorted(set(_EL["used"])), "buck3d": _B3.get("ver"), "cinema": spec.get("cinema", True),
+                      "look": spec.get("look", "vault"), "captions": spec.get("captions", "lines"),
+                      "cuts": spec.get("_cuts", []), "cuts_per_30s": round(len(spec.get("_cuts", [])) * 30 / max(1.0, total), 1),
                       "timings": [[round(s["start"], 2), round(s["dur"], 2)] for s in spec["scenes"]]}))
 
 
