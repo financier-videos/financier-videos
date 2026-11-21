@@ -1,0 +1,59 @@
+{
+ "0_freshness": {
+  "status": "FAIL",
+  "note": "engine changed since render with re-render required: INSTAGRAM @redfrocco vidIQ'ga ULANDI (id 29264618826539059, canPublish). T-04 Reel urinishi Instagram xatosi bilan o'tmadi (fayl formati to'g'ri) \u2014 1 marta qayta uriniladi. r01v2: 2-kadrdagi yaqin yuzli klip almashtirilsin (jabrlanuvchi rolida yuz), keyin Reel / KO'RIK \u21161 (night_order): yangi 5 Financier videosi o'lchandi \u2014 3 yangi look farq qiladi (eskiga 0.17\u20130.69); tuzatishlar: paper takrori 0.93, paper bo'sh joyi, kadr tempi 4\u20137 s, eski shablondagi 5 post navbatda. Rocco T-04 Reel Instagram'da chiqdi"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    55.4 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.1 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -14.1 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 12.4 Mbit/s, 37.5s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "ucks\",\n  \"checking\",\n  \"tm\",\n  \"up front\"\n ],\n \"extra\": [\n  \"check\",\n  \"atm\",\n  \"upfront\",\n  \"buzzer buzzes\"\n ],\n \"heard\": \"Five fees you paid without noticing. Number five, checked bag. $45 on most big US airlines. Four overdraft, about $27 for being short. Three, check and fee, 15, 65 a month, unless you keep over 10 grand in there. Two, someone else's ATM, 486 on average. A record. third year in a row. Number one, Hidden Hotel and Ticket Fees. Since May 2025, the FTC makes them show the total price upfront. Is there a fee for reading this list? Not yet. Which one got you? (buzzer buzzes)\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "\n 3   8.24s range=13.2 st  gap=0.29  ok  | Four: overdraft. About twenty-seven bucks for being short.\n 4  12.00s range=13.6 st  gap=0.3  ok  | Three: checking fee. Fifteen sixty-five a month, unless you \n 5  17.24s range= 6.7 st  gap=0.35  ok  | Two: someone else's A T M. Four eighty-six on average. A rec\n 6  23.01s range= 8.1 st  gap=0.33  ok  | Number one: hidden hotel and ticket fees. Since May twenty t\n 7  32.29s range=15.3 st  gap=0.2  ok  | Is there a fee for reading this list? Not yet.\n 8  36.45s range= 4.6 st  gap=0.06  ok  | Which one got you?\n{\"median_f0\": 277.5, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 100"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/2026-11-22r/r08_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "PASS",
+  "note": "ok  0.29  (layout 0.40, palette 0.05, tone 0.49)  vs 2026-11-23_pink_r07.mp4\nok  0.58  (layout 0.68, palette 0.57, tone 0.37)  vs 2026-11-23_cart_r06.mp4\nok  0.29  (layout 0.38, palette 0.05, tone 0.48)  vs 2026-11-22_bfcm_r05.mp4\nok  0.29  (layout 0.14, palette 0.33, tone 0.57)  vs 2026-11-22_airport_r04.mp4\nLOOK_CHECK: PASS"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "25 cuts in 37.5 s (need >= 18; engine 'shots' / 'auto_shots')"
+ },
+ "12_script": {
+  "status": "PASS",
+  "note": "r08_fees.json                      words  94 scenes  8 broll 6 look fullbleed line2 \"checked\" end \"you\"\nr07_pink.json                      words  73 scenes  7 broll 7 look split     line2 \"blue\" end \"one\"\nr06_cart.json                      words  74 scenes  7 broll 3 look paper     line2 \"blame\" end \"stop\"\nr05_bfcm.json                      words  78 scenes 10 broll 9 look split     line2 \"black\" end \"monday\"\nr04_airport.json                   words  67 scenes  6 broll 3 look split     line2 \"in\" end \"paid\"\nSCRIPT_CHECK: PASS"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: script_rules ranking (tez), comedy (sigh, deadpan; 'fee for reading this list'), looks fullbleed, Pixabay 4 yo'l, qc_gate, look_check, script_check, voice_check, prosody, title.py, color_check; ishlatilmadi: receipt look (dvigatelda yo'q - fullbleed), hookscore (hook script_bank R-08 dan)"
+ },
+ "verdict": "FAIL"
+}

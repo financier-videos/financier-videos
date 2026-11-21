@@ -16,7 +16,7 @@ Steps (skill -> check):
   7 yt-package/title.py          title lint (>= 80, number in first 40 chars if the title has one)
   10 engine/look_check.py      --prev <last 4 videos>: similarity >= 0.70 = FAIL (docs/looks.md)
   9 engine/color_check.py frames  CLIPPED = FAIL; CRUSHED/DULL = WARN (color skill)
-  11 pacing                     rendered.json "cuts": >= duration/2 (a new picture every <= 2 s)
+  11 pacing                     ffmpeg scene>0.22 hard cuts >= duration/2 (a new picture every <= 2 s)
   12 engine/script_check.py      --prev-specs <last 4 specs>: skeleton repeat / footage share < 40% = FAIL
   13 skills line                 --skills "Skillar: ...; ishlatilmadi: ... (sababi)" missing = FAIL
   8 contact sheet                8 frames tiled -> <out>_sheet.png; Claude MUST Read it (12-point visual QC: sharp text,
@@ -198,13 +198,17 @@ def main():
     else:
         put("10_look", "SKIP", "no --prev videos given (pass the last 4 videos of this channel)")
 
-    # 11 pacing (docs/lessons_winners_2026-11-21.md): a new picture every <= 2 s -> 30 s >= 15 cuts, 60 s >= 30
-    rjc = json.load(open(a.rendered)) if a.rendered and os.path.exists(a.rendered) else {}
-    if "cuts" in rjc and dur > 0:
-        nc = len(rjc["cuts"]); need = int(dur / 2)
-        put("11_pacing", "PASS" if nc >= need else "FAIL", f"{nc} cuts in {dur:.1f} s (need >= {need}; engine 'shots' / 'auto_shots')")
+    # 11 pacing (docs/lessons_winners_2026-11-21.md; KO'RIK №1): a new picture every <= 2 s -> hard cuts >= duration/2.
+    #    Measured on the VIDEO with ffmpeg scene detection (scene > 0.22, as the Trade review does) - camera moves and
+    #    re-framing the same clip do not count; the engine's own "cuts" list is shown for reference only.
+    if dur > 0:
+        rc, o = run(["ffmpeg", "-nostats", "-i", a.video, "-vf", "scale=270:-2,select='gt(scene,0.22)',showinfo", "-an", "-f", "null", "-"])
+        nc = 1 + len(re.findall(r"pts_time:", o)); need = int(dur / 2)
+        rjc = json.load(open(a.rendered)) if a.rendered and os.path.exists(a.rendered) else {}
+        put("11_pacing", "PASS" if nc >= need else "FAIL",
+            f"{nc} hard cuts (ffmpeg scene>0.22) in {dur:.1f} s = {dur / max(1, nc):.1f} s/cut (need >= {need}); engine planned {len(rjc.get('cuts', []))}")
     else:
-        put("11_pacing", "FAIL", "rendered.json has no 'cuts' (engine < 6.14) - re-render with shots")
+        put("11_pacing", "SKIP", "no duration")
     # 12 script skeleton vs the last 4 specs of the channel (docs/script_rules.md, engine/script_check.py)
     if a.spec and a.prev_specs:
         rc, o = run([sys.executable, "-I", os.path.join(ROOT, "engine", "script_check.py"), a.spec] + a.prev_specs)

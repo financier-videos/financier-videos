@@ -1,16 +1,131 @@
-{"format":"short","sfx":true,"look":"paper","captions":"words","headline":"hook","auto_shots":1.8,"structure":"timeline",
- "source":"Sources: Take-Two Interactive (Sep 2013; Nov 20, 2026)",
- "buck_voice":{"variant":"D","settings":{"speed":1.1}},
- "scenes":[
-  {"text":"2013. GTA 5 makes $800 million. In one day.","say":"Twenty thirteen. G T A Five makes eight hundred million dollars. In one day.","head":"13 YEARS. 4.7X BIGGER.",
-   "stat":"$800M","shots":[{"broll":"/tmp/fin/bg/t03/nightcity.mp4","at":0},{"broll":"/tmp/fin/bg/t03/stadium.mp4","at":1.8}],"show_source":"Take-Two Interactive (Sep 2013)"},
-  {"text":"The biggest launch anyone had ever seen.","shots":[{"broll":"/tmp/fin/bg/t03/stadium.mp4","at":0,"start":5},{"broll":"/tmp/fin/bg/gta/city.mp4","at":1.6}],
-   "mascot":{"mood":"shocked","pos":"corner","act":"jawdrop","act_at":0.6}},
-  {"text":"Then... thirteen years of waiting.","beat":0.2,"shots":[{"broll":"/tmp/fin/bg/t03/cal.mp4","at":0},{"broll":"/tmp/fin/bg/t03/clouds.mp4","at":1.6}]},
-  {"text":"I aged. And I'm a coin.","land":0.4,"bg":"/tmp/fin/bg/t03/clouds.mp4","mascot":{"mood":"sad","pos":"corner","act":"sigh"},"sfx":["wahwah@0.8"]},
-  {"text":"2026. Day one: $3.79 billion.","say":"Twenty twenty-six. Day one: three point seven nine billion dollars.",
-   "chart":{"labels":["2013","2026"],"values":[0.8,3.79],"texts":["$800M","$3.79B"],"at":[0.2,1.4]},"bg":"/tmp/fin/bg/gta/city2.mp4","show_source":"Take-Two Interactive (Nov 20, 2026), retail sales estimate"},
-  {"text":"Plus 32.5 million copies sold before it even came out.","say":"Plus thirty-two and a half million copies sold before it even came out.",
-   "stat":"32.5M","shots":[{"broll":"/tmp/fin/bg/r01/conveyor.mp4","at":0},{"broll":"/tmp/fin/bg/r01/boxline.mp4","at":1.8}]},
-  {"text":"Almost five times bigger. Same series.","stat":"4.7X","bg":"/tmp/fin/bg/gta/count.mp4","land":0.4,"sfx":["impact@0.2"]}
- ]}
+{
+ "format": "short",
+ "sfx": true,
+ "look": "paper",
+ "captions": "words",
+ "headline": "hook",
+ "auto_shots": 1.8,
+ "structure": "timeline",
+ "source": "Sources: Take-Two Interactive (Sep 2013; Nov 20, 2026)",
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
+ },
+ "scenes": [
+  {
+   "text": "2013. GTA 5 makes $800 million. In one day.",
+   "say": "Twenty thirteen. G T A Five makes eight hundred million dollars. In one day.",
+   "head": "13 YEARS. 4.7X BIGGER.",
+   "stat": "$800M",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/t03/nightcity.mp4",
+     "at": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/t03/stadium.mp4",
+     "at": 1.8
+    }
+   ],
+   "show_source": "Take-Two Interactive (Sep 2013)"
+  },
+  {
+   "text": "The biggest launch anyone had ever seen.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/t03/stadium.mp4",
+     "at": 0,
+     "start": 5
+    },
+    {
+     "broll": "/tmp/fin/bg/gta/city.mp4",
+     "at": 1.6
+    }
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "jawdrop",
+    "act_at": 0.6
+   }
+  },
+  {
+   "text": "Then... thirteen years of waiting.",
+   "beat": 0.2,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/t03/cal.mp4",
+     "at": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/t03/clouds.mp4",
+     "at": 1.6
+    }
+   ]
+  },
+  {
+   "text": "I aged. And I'm a coin.",
+   "land": 0.4,
+   "bg": "/tmp/fin/bg/t03/clouds.mp4",
+   "mascot": {
+    "mood": "sad",
+    "pos": "corner",
+    "act": "sigh"
+   },
+   "sfx": [
+    "wahwah@0.8"
+   ]
+  },
+  {
+   "text": "2026. Day one: $3.79 billion.",
+   "say": "Twenty twenty-six. Day one: three point seven nine billion dollars.",
+   "chart": {
+    "labels": [
+     "2013",
+     "2026"
+    ],
+    "values": [
+     0.8,
+     3.79
+    ],
+    "texts": [
+     "$800M",
+     "$3.79B"
+    ],
+    "at": [
+     0.2,
+     1.4
+    ]
+   },
+   "bg": "/tmp/fin/bg/gta/city2.mp4",
+   "show_source": "Take-Two Interactive (Nov 20, 2026), retail sales estimate"
+  },
+  {
+   "text": "Plus 32.5 million copies sold before it even came out.",
+   "say": "Plus thirty-two and a half million copies sold before it even came out.",
+   "stat": "32.5M",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r01/conveyor.mp4",
+     "at": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r01/boxline.mp4",
+     "at": 1.8
+    }
+   ]
+  },
+  {
+   "text": "Almost five times bigger. Same series.",
+   "stat": "4.7X",
+   "bg": "/tmp/fin/bg/gta/count.mp4",
+   "land": 0.4,
+   "sfx": [
+    "impact@0.2"
+   ]
+  }
+ ],
+ "paper": "news"
+}

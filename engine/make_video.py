@@ -961,7 +961,7 @@ def caption_chunks_timed(text, words, maxn=4):
     return out
 
 
-ENGINE_VERSION = "6.14"  # bump on every engine change and add a line to docs/changes.md
+ENGINE_VERSION = "6.15"  # bump on every engine change and add a line to docs/changes.md
 
 THEMES = {  # v6.1: per-video look so videos don't all share one background. Spec "theme": name | "auto" (default: from the first line).
     "vault": ([((9, 14, 28), (19, 30, 54)), ((12, 10, 30), (32, 20, 58)), ((6, 20, 24), (14, 42, 48))], "grid"),
@@ -1040,29 +1040,43 @@ def backdrop_frames(path, W, H, n, start=0.0, blur=6):
     return [raw[i:i + fs] for i in range(0, len(raw) - fs + 1, fs)], (BW, BH)
 
 
-def _paper_texture(W, H):
+def _paper_texture(W, H, variant="cream"):
     """v6.14 paper look: warm cream sheet with soft fibres and a few darker flecks (generated, no assets)."""
     rng = np.random.default_rng(42)
     n = rng.normal(0, 1, (H // 4, W // 4)).astype(np.float32)
     n = np.asarray(Image.fromarray(((n * 18) + 128).clip(0, 255).astype(np.uint8)).resize((W, H), Image.BICUBIC).filter(ImageFilter.GaussianBlur(2)), np.float32) - 128
-    base = np.empty((H, W, 3), np.float32); base[:] = (222, 213, 192)  # keeps paper below broadcast white (Y < 235 after the grade)
+    base = np.empty((H, W, 3), np.float32)
+    base[:] = {"news": (206, 204, 196), "grid": (214, 220, 226)}.get(variant, (222, 213, 192))  # all below broadcast white (Y < 235 after the grade)
     base += n[..., None] * np.array([0.30, 0.28, 0.24])
     yy = np.linspace(-1, 1, H)[:, None]; xx = np.linspace(-1, 1, W)[None, :]
     base *= (1 - 0.06 * (xx ** 2 + yy ** 2))[..., None]
     im = Image.fromarray(base.clip(0, 255).astype(np.uint8)); d = ImageDraw.Draw(im)
+    if variant == "grid":  # squared notebook
+        for x in range(0, W, 54): d.line([(x, 0), (x, H)], fill=(170, 192, 220), width=2)
+        for y in range(0, H, 54): d.line([(0, y), (W, y)], fill=(170, 192, 220), width=2)
+        d.line([(int(W * 0.06), 0), (int(W * 0.06), H)], fill=(214, 120, 120), width=3)
+    if variant == "news":  # faint column rules of a newspaper page
+        for x in (int(W * 0.34), int(W * 0.67)): d.line([(x, 0), (x, H)], fill=(178, 176, 170), width=2)
     for _ in range(260):
         x, y = rng.uniform(0, W), rng.uniform(0, H); l = rng.uniform(6, 26); a = rng.uniform(0, 3.14)
         d.line([(x, y), (x + l * math.cos(a), y + l * math.sin(a))], fill=(222, 212, 190), width=1)
     return im.convert("RGBA")
 
 
-def _look_base(look, foot, W, H, tex, A, B, si, prog, lt):
+def _look_base(look, foot, W, H, tex, A, B, si, prog, lt, var=0):
     """v6.14 backgrounds: paper = footage as a tilted photo print on cream paper (top), split = two saturated halves,
     footage in the top half when the scene has any."""
     if look == "paper":
         im = tex.copy()
+        if foot is not None and var % 2 == 1:  # v6.15: alternate shots: the photo fills the top of the page (big change = a real cut)
+            pw, ph = W, int(H * 0.42)
+            f = foot.convert("RGB").resize((W, H), Image.BILINEAR); top = int(H * 0.25)
+            ph_im = ImageEnhance.Brightness(f.crop((0, top, W, top + ph))).enhance(1.2)
+            im.paste(ph_im, (0, int(H * 0.05))); d = ImageDraw.Draw(im)
+            d.rectangle([0, int(H * 0.05) + ph, W, int(H * 0.05) + ph + 8], fill=(40, 36, 30, 255))
+            return im
         if foot is not None:
-            pw, ph = int(W * 0.86), int(H * 0.24)
+            pw, ph = int(W * 0.88), int(H * 0.25)
             ph_im = foot.convert("RGB").resize((pw, int(pw * H / W)), Image.BILINEAR)
             top = max(0, (ph_im.height - ph) // 2); ph_im = ph_im.crop((0, top, pw, top + ph))
             ph_im = ImageEnhance.Brightness(ImageEnhance.Contrast(ph_im).enhance(1.05)).enhance(1.25)
@@ -1074,8 +1088,17 @@ def _look_base(look, foot, W, H, tex, A, B, si, prog, lt):
             x0, y0 = (W - card.width) // 2, int(H * 0.235)
             im.alpha_composite(sh, (x0 + 10, y0 + 14)); im.alpha_composite(card, (x0, y0))
         return im
+    if var % 2 == 1: A, B = B, A  # v6.15 split: alternate shots swap the halves' colours and put the footage below the line
     im = Image.new("RGBA", (W, H), B + (255,)); d = ImageDraw.Draw(im)
     mid = int(H * 0.50)
+    if foot is not None and var % 2 == 1:
+        f = foot.convert("RGB")
+        crop = ImageEnhance.Color(ImageEnhance.Brightness(f.crop((0, int((H - mid) * 0.45), W, int((H - mid) * 0.45) + mid))).enhance(1.12)).enhance(1.15)
+        d.rectangle([0, 0, W, mid], fill=A + (255,))
+        for k in range(-H, W, 90): d.line([(k, mid), (k + mid, 0)], fill=tuple(min(255, c + 18) for c in A) + (255,), width=18)
+        im.paste(crop, (0, mid)); im.alpha_composite(Image.new("RGBA", (W, H - mid), B + (55,)), (0, mid))
+        d.rectangle([0, mid - 7, W, mid + 7], fill=(212, 212, 218, 255))
+        return im
     if foot is not None:
         f = foot.convert("RGB"); fh = int(W * H / W)
         crop = f.crop((0, int((H - mid) * 0.45), W, int((H - mid) * 0.45) + mid))
@@ -1874,10 +1897,25 @@ def render(spec, wav, total, out, workdir):
     INK = (34, 30, 26); PAPER_RED = (196, 38, 38); HILITE = (255, 226, 70)
     SPL_A = hex2rgb(spec.get("split_colors", ["#1F6FEB", "#FF8A00"])[0]); SPL_B = hex2rgb(spec.get("split_colors", ["#1F6FEB", "#FF8A00"])[1])
     STATF = fun_font("AbrilFatface-Regular.ttf") if PAPER else (fun_font("ArchivoBlack-Regular.ttf") if SPLIT else ANTON)
-    paper_tex = _paper_texture(1080 if not long else 1920, 1920 if not long else 1080) if PAPER else None
+    _pv = spec.get("paper", ["cream", "news", "grid"][sum(map(ord, (spec.get("scenes") or [{}])[0].get("text", ""))) % 3])
+    paper_tex = _paper_texture(1080 if not long else 1920, 1920 if not long else 1080, _pv) if PAPER else None
     WORDCAP = spec.get("captions") == "words" or FB  # v6.14: 1-3 word captions synced to the voice
     HOOKHEAD = spec.get("headline") == "hook" or FB  # v6.14: no permanent headline - full hook on frame 1 of scene 0 only (+ scene "chapter")
     AUTOSHOT = float(spec.get("auto_shots", 1.8 if (WORDCAP or FB) else 0) or 0)  # v6.14: new framing every <= N s inside a scene
+    POOL = []  # v6.14b: every footage file of this video - automatic cuts switch to ANOTHER clip (a re-frame of the same clip is not a cut)
+    for _sc in spec["scenes"]:
+        for _p in ([_sc.get("broll")] + [x.get("broll") for x in (_sc.get("shots") or [])] + ([_sc.get("bg")] if isinstance(_sc.get("bg"), str) else (_sc.get("bg") or []) if isinstance(_sc.get("bg"), list) else [])):
+            if isinstance(_p, str) and os.path.exists(_p) and _p not in POOL: POOL.append(_p)
+    for _p in ([spec["bg"]] if isinstance(spec.get("bg"), str) else (spec.get("bg") or [])):
+        if isinstance(_p, str) and os.path.exists(_p) and _p not in POOL: POOL.append(_p)
+
+    def _pool_next(cur, j):
+        if not POOL: return cur
+        i0 = POOL.index(cur) if cur in POOL else -1
+        for d in range(1, len(POOL) + 1):
+            c = POOL[(i0 + d + j) % len(POOL)]
+            if c != cur: return c
+        return cur
     cuts = []  # v6.14: every hard cut (scene start, shot change, auto reframe) -> result JSON "cuts" (qc_gate pacing check)
     f_head = ImageFont.truetype(fun_font("CourierPrime-Bold.ttf") if ROC else ANTON, int(S * (0.075 if long else (0.088 if ROC else 0.105))))
     f_stamp = ImageFont.truetype(fun_font("BlackOpsOne-Regular.ttf"), int(S * 0.17)) if ROC else None
@@ -1944,8 +1982,10 @@ def render(spec, wav, total, out, workdir):
         _sl = sc.get("shots")
         if not _sl and clip and AUTOSHOT and sc["dur"] > AUTOSHOT * 1.25:
             _k = int(math.ceil(sc["dur"] / AUTOSHOT)); _zs = [1.0, 1.42, 1.18, 1.55]; _kbs = ["in", "left", "out", "right"]
-            _sl = [{"at": round(j * sc["dur"] / _k, 2), "zoom": _zs[j % 4], "kb": _kbs[j % 4]} for j in range(_k)]
+            _sl = [{"at": round(j * sc["dur"] / _k, 2), "zoom": _zs[j % 2], "kb": _kbs[j % 4]} for j in range(_k)]
             _sl[0]["broll"] = sc["broll"]; _sl[0]["start"] = sc.get("broll_start", 0)
+            for j in range(1, _k):  # v6.14b: a different clip on every auto cut
+                _sl[j]["broll"] = sc["broll"] if j % 2 == 0 else _pool_next(sc["broll"], si + j); _sl[j]["start"] = round((si * 2.3 + j * 1.7) % 5, 2)
             clip, csz = None, None
         if _sl and AUTOSHOT:  # v6.14: an explicit shot longer than auto_shots*1.25 gets re-framed cuts inside it too
             _ex = []
@@ -1954,8 +1994,10 @@ def render(spec, wav, total, out, workdir):
                 _ex.append(sh)
                 if a1 - a0 > AUTOSHOT * 1.25:
                     _k = int(math.ceil((a1 - a0) / AUTOSHOT))
-                    for q in range(1, _k):
-                        _ex.append({"at": round(a0 + q * (a1 - a0) / _k, 2), "zoom": [1.38, 1.12, 1.5][(q + j) % 3], "kb": ["left", "out", "right"][(q + j) % 3]})
+                    _cur = sh.get("broll") or sc.get("broll")
+                    for q in range(1, _k):  # v6.14b: another clip from this video's footage, not a re-frame
+                        _ex.append({"at": round(a0 + q * (a1 - a0) / _k, 2), "zoom": [1.0, 1.2][(q + j) % 2], "kb": ["left", "out", "right"][(q + j) % 3],
+                                    "broll": _pool_next(_cur, si + q + j), "start": round((si * 1.9 + q * 2.1) % 5, 2)})
             _sl = _ex
         if _sl:
             _path, _st = sc.get("broll"), float(sc.get("broll_start", 0))
@@ -1974,7 +2016,7 @@ def render(spec, wav, total, out, workdir):
             _k = int(math.ceil(sc["dur"] / AUTOSHOT)); cut_ks = [int(round(j * sc["dur"] / _k * FPS)) for j in range(_k)]
         g_cut = (not shots and not clip and len(cut_ks) > 1)
         cuts.extend(round(sc["start"] + k_ / FPS, 2) for k_ in cut_ks)
-        bdclip = None
+        bdclip = None; bd_segs = []
         if not clip:
             if si % 3 not in bgs:
                 bgs[si % 3] = make_bg(W, H, si % 3, pick_theme(spec))
@@ -1985,8 +2027,17 @@ def render(spec, wav, total, out, workdir):
             _bd = sc.get("bg", spec.get("bg"))  # v6.6: str or list of clips/photos; scene "bg": false = plain theme
             if isinstance(_bd, list) and _bd: _bd = _bd[si % len(_bd)]
             if isinstance(_bd, str) and os.path.exists(_bd):
-                bdclip, bdsz = backdrop_frames(_bd, W, H, n, sc.get("bg_start", (si * 3.7) % 9), spec.get("bg_blur", 2 if FB else 6))
+                bdclip, bdsz = backdrop_frames(_bd, W, H, n, sc.get("bg_start", (si * 3.7) % 9), spec.get("bg_blur", 2 if (FB or PAPER or SPLIT) else 6))
                 bd_mix = float(spec.get("bg_mix", 0.9 if FB else 0.62))  # share of the real picture vs theme colour
+                bd_segs = []
+                if g_cut and len(POOL) > 1:  # v6.14b: graphic scene longer than auto_shots -> the backdrop footage changes on the beat
+                    _cur = _bd; bd_segs.append((0, bdclip, bdsz))
+                    for j, k0_ in enumerate(cut_ks[1:], 1):
+                        k1_ = cut_ks[j + 1] if j + 1 < len(cut_ks) else n
+                        _cur = _pool_next(_cur, si + j)
+                        _f, _z = backdrop_frames(_cur, W, H, k1_ - k0_, (si * 1.3 + j * 2.2) % 6, spec.get("bg_blur", 2 if (FB or PAPER or SPLIT) else 6))
+                        if _f: bd_segs.append((k0_, _f, _z))
+                    if len(bd_segs) > 1: g_cut = False  # real cuts replace the punch-in
         col = hex2rgb(sc.get("color", "#FF3B3B" if spec.get("style") == "rocco" else "#F5C542"))
         trans = sc.get("transition") or ("punch" if sc.get("stat") else trans_cycle[si % 3])
         stat_sz = f_stat.size
@@ -2010,7 +2061,7 @@ def render(spec, wav, total, out, workdir):
             if FB and not long and mpos != "center":  # v6.14 fullbleed: half-body in the lower-right corner, bigger
                 mR = W * 0.11; mx, my = W * 0.80, H * 0.915
             elif PAPER and not long:  # v6.14 paper: big, lower right (>= 1/3 of the frame height with the hat)
-                mR = W * 0.12; mx, my = W * 0.83, H * 0.93
+                mR = W * 0.145; mx, my = W * 0.80, H * 0.92
             elif SPLIT and not long and mpos != "center":  # v6.14 split: on the divider, reacting to both halves
                 mR = W * 0.15; mx, my = W * 0.50, H * 0.86
             elif mpos == "center":
@@ -2089,8 +2140,10 @@ def render(spec, wav, total, out, workdir):
                 else:
                     base = Image.alpha_composite(base, Image.new("RGBA", (W, H), (0, 0, 0, 105)))
             elif bdclip:
-                BW2, BH2 = bdsz
-                fr = Image.frombytes("RGB", (BW2, BH2), bdclip[min(k, len(bdclip) - 1)])
+                BW2, BH2 = bdsz; _bdf = bdclip; _kk = k
+                if bd_segs:
+                    _sg = next((x for x in reversed(bd_segs) if k >= x[0]), bd_segs[0]); _bdf = _sg[1]; BW2, BH2 = _sg[2]; _kk = k - _sg[0]
+                fr = Image.frombytes("RGB", (BW2, BH2), _bdf[min(_kk, len(_bdf) - 1)])
                 cw, ch = int(BW2 / 1.12), int(BH2 / 1.12)
                 dx = int((BW2 - cw) * (0.5 + 0.45 * math.sin(si * 1.7 + prog * 1.2) * 0.9)); dy = int((BH2 - ch) * (0.5 + 0.4 * (prog - 0.5)))
                 bd = fr.crop((dx, dy, dx + cw, dy + ch)).resize((W, H), Image.BILINEAR)
@@ -2121,7 +2174,9 @@ def render(spec, wav, total, out, workdir):
                     o.text((xx, yy), "$", font=f_part[key], fill=(245, 197, 66, 26))
                 base = Image.alpha_composite(base, ov)
             if PAPER or SPLIT:  # v6.14: rebuild the whole background for the paper / split looks
-                base = _look_base(LOOK, base if ((clip or bdclip) and not (PAPER and (chart or vsd))) else None, W, H, paper_tex, SPL_A, SPL_B, si, prog, lt)  # paper: a chart/VS gets the whole sheet
+                _var = si + max([j for j, k_ in enumerate(cut_ks) if k >= k_] or [0])
+                if si == 0 and lt < 2.3: _var = 0  # the hook headline keeps its layout
+                base = _look_base(LOOK, base if ((clip or bdclip) and not (PAPER and (chart or vsd))) else None, W, H, paper_tex, SPL_A, SPL_B, si, prog, lt, _var)  # paper: a chart/VS gets the whole sheet
             if look == "sepia":  # old-film look for "legend says..." beats
                 g = ImageOps.grayscale(base.convert("RGB"))
                 base = ImageOps.colorize(g, black=(26, 17, 8), white=(240, 220, 180)).convert("RGBA")

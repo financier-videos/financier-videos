@@ -1,12 +1,10 @@
 {
  "format": "short",
  "sfx": true,
- "theme": "ocean",
  "structure": "scale_ladder",
  "captions": "words",
  "headline": "hook",
  "auto_shots": 1.8,
- "bg_bright": 1.15,
  "source": "Source: Take-Two Interactive press release, Nov 20, 2026 (day-one retail sales estimate)",
  "buck_voice": {
   "variant": "D",
@@ -227,5 +225,9 @@
    ]
   }
  ],
- "bg_mix": 0.75
+ "look": "split",
+ "split_colors": [
+  "#12306B",
+  "#E0A100"
+ ]
 }
