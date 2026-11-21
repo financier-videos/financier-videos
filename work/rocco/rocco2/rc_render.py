@@ -19,7 +19,7 @@ W, H, FPS = 1080, 1920, 30
 INK = (35, 39, 45)
 FONT = os.path.join(ROOT, "assets/fonts/LilitaOne-Regular.ttf")
 LIB = os.environ.get("FIN_BUCK3D", "/tmp/fin_rocco_lib")
-VOICE = {"R": "hYvMKGEmKYHZz9qvD8oj", "P": "XeHmOH0wYkEbMfZqbCws"}
+VOICE = {"R": "hYvMKGEmKYHZz9qvD8oj", "P": "XeHmOH0wYkEbMfZqbCws", "S": "sKpya0iNfGuRwEz634c4"}  # S = Slick, the scammer fox
 SETS = {"yellow": ((255, 214, 64), (255, 170, 40)), "teal": ((64, 201, 198), (30, 150, 170)), "green": ((178, 236, 120), (96, 200, 110)),
         "pink": ((255, 170, 205), (214, 120, 230)), "sky": ((120, 200, 255), (70, 150, 240)), "peach": ((255, 196, 150), (255, 140, 110))}
 _FC = {}
@@ -250,6 +250,63 @@ def mousetrap(im, cx, cy, s, snapped, label="FREE GTA 6"):
         txt(im, (cx, cy - s * 0.65), "SNAP!", int(s * 0.36), (255, 59, 59), sw=12, ang=8)
 
 
+def slick(im, cx, cy, s, mood="sly", talk=0.0, t=0.0):
+    """Slick the scammer fox (always the butt of the joke). mood: sly|panic|laugh. Holds a phone."""
+    d = ImageDraw.Draw(im, "RGBA"); u = s / 400; O = (255, 132, 50); OD = (214, 96, 30); CREAM = (250, 236, 214); SUIT = (118, 70, 170)
+    cy = cy + (math.sin(t * 40) * 6 * u if mood == "panic" else 0)
+    d.ellipse([cx - 170 * u, cy + 330 * u, cx + 170 * u, cy + 360 * u], fill=(0, 0, 0, 60))
+    d.rounded_rectangle([cx - 150 * u, cy + 120 * u, cx + 150 * u, cy + 345 * u], 70 * u, fill=SUIT, outline=INK, width=int(8 * u))  # shady suit
+    d.polygon([(cx - 40 * u, cy + 125 * u), (cx, cy + 230 * u), (cx + 40 * u, cy + 125 * u)], fill=CREAM, outline=INK)
+    d.polygon([(cx - 14 * u, cy + 140 * u), (cx + 14 * u, cy + 140 * u), (cx + 8 * u, cy + 215 * u), (cx - 8 * u, cy + 215 * u)], fill=(230, 60, 60))  # tie
+    for sx in (-1, 1):  # ears
+        d.polygon([(cx + sx * 150 * u, cy - 70 * u), (cx + sx * 175 * u, cy - 235 * u), (cx + sx * 60 * u, cy - 135 * u)], fill=O, outline=INK)
+        d.polygon([(cx + sx * 140 * u, cy - 95 * u), (cx + sx * 158 * u, cy - 195 * u), (cx + sx * 85 * u, cy - 135 * u)], fill=INK)
+    d.ellipse([cx - 175 * u, cy - 155 * u, cx + 175 * u, cy + 145 * u], fill=O, outline=INK, width=int(8 * u))
+    d.polygon([(cx - 165 * u, cy + 10 * u), (cx, cy + 150 * u), (cx + 165 * u, cy + 10 * u), (cx, cy + 40 * u)], fill=CREAM)  # muzzle
+    d.ellipse([cx - 22 * u, cy + 20 * u, cx + 22 * u, cy + 52 * u], fill=INK)  # nose
+    ey = cy - 45 * u
+    for sx in (-1, 1):
+        ex = cx + sx * 72 * u
+        if mood == "panic":
+            r = 34 * u; d.ellipse([ex - r, ey - r, ex + r, ey + r], fill=(240, 240, 240), outline=INK, width=int(6 * u)); d.ellipse([ex - 8 * u, ey - 8 * u, ex + 8 * u, ey + 8 * u], fill=INK)
+        else:  # half-closed sly eyes
+            d.ellipse([ex - 32 * u, ey - 20 * u, ex + 32 * u, ey + 20 * u], fill=(250, 230, 120), outline=INK, width=int(6 * u))
+            d.ellipse([ex - 9 * u + sx * 8 * u, ey - 9 * u, ex + 9 * u + sx * 8 * u, ey + 9 * u], fill=INK)
+            d.rectangle([ex - 34 * u, ey - 24 * u, ex + 34 * u, ey - 4 * u], fill=O); d.line([(ex - 34 * u, ey - 4 * u), (ex + 34 * u, ey - 4 * u)], fill=INK, width=int(6 * u))
+    mo = talk * 40 * u + (30 * u if mood == "panic" else 0)
+    if mo > 4 * u: d.ellipse([cx - 40 * u, cy + 70 * u, cx + 40 * u, cy + 76 * u + mo], fill=INK)
+    else: d.arc([cx - 70 * u, cy + 40 * u, cx + 70 * u, cy + 110 * u], 15, 165, fill=INK, width=int(8 * u))  # grin
+    if mood == "panic":
+        for sx in (-1, 1): d.ellipse([cx + sx * 175 * u, cy - 150 * u, cx + sx * 175 * u + 26 * u, cy - 112 * u], fill=(140, 210, 255), outline=INK, width=int(4 * u))
+    # phone in hand
+    px, py = cx + 150 * u, cy + 150 * u
+    d.rounded_rectangle([px - 45 * u, py - 80 * u, px + 45 * u, py + 80 * u], 16 * u, fill=INK); d.rounded_rectangle([px - 36 * u, py - 70 * u, px + 36 * u, py + 70 * u], 12 * u, fill=(120, 220, 140))
+    d.ellipse([px - 70 * u, py + 20 * u, px - 10 * u, py + 80 * u], fill=O, outline=INK, width=int(6 * u))  # paw
+
+
+def callout(im, cx, cy, r, lt, label=None, at=0.15):
+    """Red hand-drawn circle that draws itself (0.3 s) + label pill: the 'look HERE' device of PSA winners."""
+    q = max(0.0, min(1.0, (lt - at) / 0.3))
+    if q <= 0: return
+    d = ImageDraw.Draw(im)
+    d.arc([cx - r, cy - r * 0.8, cx + r, cy + r * 0.8], -90, -90 + 360 * q, fill=(255, 40, 40), width=16)
+    if label and q >= 1:
+        f = F(70); tw = d.textlength(label, font=f); lx = min(W - tw - 70, max(40, cx - tw / 2)); ly = cy + r * 0.8 + 30
+        d.rounded_rectangle([lx - 26, ly - 10, lx + tw + 26, ly + 86], 30, fill=(255, 40, 40), outline=INK, width=6)
+        d.text((lx, ly + 38), label, font=f, fill=(240, 240, 240), anchor="lm")
+
+
+def footage_img(frames, fsz, k, n, kb="in", bright=1.0, blur=0):
+    BW, BH = fsz; fr = Image.frombytes("RGB", (BW, BH), frames[min(k, len(frames) - 1)])
+    p = k / max(1, n - 1); z = 1.0 + 0.06 * (p if kb == "in" else 1 - p)
+    cw, ch = int(BW / z / 1.1), int(BH / z / 1.1); x0 = (BW - cw) // 2; y0 = (BH - ch) // 2
+    im = fr.crop((x0, y0, x0 + cw, y0 + ch)).resize((W, H), Image.BILINEAR)
+    if blur: im = im.filter(ImageFilter.GaussianBlur(blur))
+    a_ = np.asarray(im, np.float32) * bright; Y = a_ @ np.array([0.299, 0.587, 0.114], np.float32)
+    a_ *= np.minimum(1.0, 226.0 / np.maximum(Y, 1.0))[..., None]
+    return Image.fromarray(a_.clip(0, 255).astype(np.uint8)).convert("RGBA")
+
+
 # ---------------- frame composer ----------------
 def env_track(wav, segs):
     import soundfile as sf
@@ -261,16 +318,34 @@ def env_track(wav, segs):
     who = np.full(n, "", dtype=object)
     for s in segs:
         a, b = int(s["start_time_seconds"] * FPS), int(s["end_time_seconds"] * FPS)
-        who[a:b] = "P" if s["voice_id"] == VOICE["P"] else "R"
+        who[a:b] = next((k for k, v in VOICE.items() if v == s["voice_id"]), "R")
     return e, who
 
 
-def compose(shot, lt, t, talkR, talkP, extra):
-    k = shot["kind"]; im = setbg(shot.get("set", "yellow"))
+def compose(shot, lt, t, talkR, talkP, extra, talkS=0.0, fimg=None, fimg2=None):
+    k = shot["kind"]; im = fimg.copy() if fimg is not None else setbg(shot.get("set", "yellow"))
     moodR = shot.get("r", "happy"); moodP = shot.get("p", "happy")
     act = shot.get("act"); act_t = lt - shot.get("act_at", 0)
     if act and not (0 <= act_t < shot.get("act_len", 1.0)): act = None
-    if k == "two":
+    if k == "slick":  # the scammer in his lair
+        slick(im, W * 0.5, H * 0.50, 760, shot.get("s", "sly"), talkS, t)
+        if shot.get("msg") and lt >= shot.get("msg_at", 0): txt(im, (W * 0.5, H * 0.17), shot["msg"], 96, (255, 226, 60), sw=12, ang=-5)
+    elif k == "insert":  # real footage + red circle callout (+ small reacting character)
+        c = shot.get("circle")
+        if c: callout(im, c[0] * W, c[1] * H, c[2] * W, lt, shot.get("label"), shot.get("circle_at", 0.15))
+        if shot.get("card"): txt(im, (W * 0.5, H * 0.16), shot["card"], 104, (255, 226, 60), sw=14, ang=-4)
+        who = shot.get("who")
+        if who == "r": rocco(im, W * 0.80, H * 1.0, 560, moodR, talkR, t, act, act_t)
+        elif who == "p": penny(im, W * 0.80, H * 0.86, 330, moodP, talkP, t)
+        elif who == "s": slick(im, W * 0.78, H * 0.80, 330, shot.get("s", "sly"), talkS, t)
+    elif k == "split":  # two places at once: top = fimg2 (e.g. the scammer), bottom = fimg (the victim)
+        top = (fimg2 if fimg2 is not None else setbg("sky")).crop((0, int(H * 0.2), W, int(H * 0.7))).resize((W, H // 2))
+        im.alpha_composite(top.convert("RGBA"), (0, 0)); dd = ImageDraw.Draw(im); dd.rectangle([0, H // 2 - 6, W, H // 2 + 6], fill=(232, 232, 234))
+        slick(im, W * 0.5, H * 0.26, 420, shot.get("s", "sly"), talkS, t)
+        penny(im, W * 0.30, H * 0.80, 400, moodP, talkP, t)
+        c = shot.get("circle")
+        if c: callout(im, c[0] * W, c[1] * H, c[2] * W, lt, shot.get("label"), shot.get("circle_at", 0.15))
+    elif k == "two":
         penny(im, W * 0.30, H * 0.60, 440, moodP, talkP, t)
         rocco(im, W * 0.70, H * 0.76, 700, moodR, talkR, t, act, act_t)
     elif k == "cu_r":
@@ -383,6 +458,13 @@ def main():
                             "-pix_fmt", "yuv420p", "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
                             "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-ar", "48000", "-ac", "2", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", out],
                            stdin=subprocess.PIPE)
+    import make_video as mv2
+    for sh in shots:  # decode the shot's real footage once (bg = main picture, bg2 = top half of a split)
+        n_ = int((sh["_t1"] - sh["_t0"]) * FPS) + 2
+        for key in ("bg", "bg2"):
+            if sh.get(key) and os.path.exists(sh[key]):
+                fr_, fsz_ = mv2.broll_frames(sh[key], W, H, n_, sh.get(key + "_start", 0))
+                sh["_" + key] = (fr_, fsz_, n_) if fr_ else None
     nfr = int(total * FPS); cuts = []
     for fi in range(nfr):
         t = fi / FPS
@@ -390,7 +472,10 @@ def main():
         if not cuts or cuts[-1] != round(sh["_t0"], 2): cuts.append(round(sh["_t0"], 2))
         lt = t - sh["_t0"]
         e = float(env[min(fi, len(env) - 1)]); w_ = who[min(fi, len(who) - 1)]
-        im = compose(sh, lt, t, e if w_ == "R" else 0.0, e if w_ == "P" else 0.0, None)
+        kk = int(lt * FPS)
+        fimg = footage_img(*sh["_bg"][:2], kk, sh["_bg"][2], sh.get("kb", "in"), sh.get("bright", 1.1), sh.get("blur", 0)) if sh.get("_bg") else None
+        fimg2 = footage_img(*sh["_bg2"][:2], kk, sh["_bg2"][2], "in", sh.get("bright2", 1.2), 0) if sh.get("_bg2") else None
+        im = compose(sh, lt, t, e if w_ == "R" else 0.0, e if w_ == "P" else 0.0, None, e if w_ == "S" else 0.0, fimg, fimg2)
         z = 1.0 + 0.035 * min(1.0, lt / max(0.5, sh["_t1"] - sh["_t0"])) + (0.06 * max(0.0, 1 - lt / 0.12))  # slow push + punch on the cut
         if z > 1.001:
             bw, bh = int(W * z), int(H * z); im = im.resize((bw, bh), Image.BILINEAR).crop(((bw - W) // 2, (bh - H) // 2, (bw - W) // 2 + W, (bh - H) // 2 + H))

@@ -1,0 +1,59 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    30.3 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -15.3 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.2 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -15.3 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 5.4 Mbit/s, 47.0s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": ",\n  \"your move\",\n  \"mousetrap\"\n ],\n \"extra\": [\n  \"you're moved\",\n  \"mouse trap\"\n ],\n \"heard\": \"Hey you, free GTA 6 for PC, tonight only. Rocco Rocco, free GTA 6 for PC. Red flag. But it's free. Red flag. Just click the link. Trust me, I'm a professional. Two red flags. GTA 6 is only on PlayStation and Xbox. There is no PC version. So what am I downloading? A very bad week. It steals your passwords. My passwords! I only have like three! You're moved! Buy it only in the official console store. Wait, what about the free one? Free cheese! Mouse trap! I'm deleting it! Wait, what? No, no, no, no!\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "4 st  gap=0.3  ok  | A very bad week. It steals your passwords.\n11  28.08s range=12.3 st  gap=0.62  ok  | My passwords?! I only have, like, three!\n12  31.84s range=14.9 st  gap=0.14  ok  | Your move: buy it only in the official console store.\n13  34.56s range=10.1 st  gap=0.54  ok  | Wait... what about the FREE one?\n14  37.04s range=19.4 st  gap=1.01  ok  | Free cheese... mousetrap.\n15  39.76s range=10.6 st  gap=0.38  ok  | ...I'm deleting it.\n16  41.60s range=18.6 st  gap=0.19  ok  | Wait, what?! No, no, no, no!\n17  44.00s range=   - st  gap=-  ok  | \n{\"median_f0\": 282.7, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 100"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/rocco/rocco2/rc04b_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "PASS",
+  "note": "ok  0.29  (layout 0.17, palette 0.35, tone 0.44)  vs rocco_2026-11-22_t04b_gta_pc_trap.mp4\nok  0.53  (layout 0.33, palette 0.74, tone 0.59)  vs rocco_2026-11-22_r01v2b_brushing.mp4\nLOOK_CHECK: PASS"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "26 hard cuts (ffmpeg scene>0.22) in 47.0 s = 1.8 s/cut (need >= 23); engine planned 24"
+ },
+ "12_script": {
+  "status": "SKIP",
+  "note": "no --prev-specs (pass the last 4 specs of this channel)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: vidIQ outliers + 3 ta kadrma-kadr tahlil (JMI-iIpHdt8, ZmaE7zI3fmY, ANQMfkHNMqc), claude-youtube shorts, rocco_style_v2 (firibgarlik amalda + suhbat, Slick/Penny/Rocco), real lavha + qizil doira callout, split hook, ElevenLabs Text-to-Dialogue eleven_v3 his teglari (3 ovoz), comedy (takroriy 'red flag', qopqon gagi, firibgar yutqazadi + wahwah), qc_gate, look_check, voice_check, prosody, title.py, color_check; ishlatilmadi: script_check (lavha qoidasi rocco_style_v2 da), hookscore (hook \u2014 firibgar xabari, g'olib andozasi)"
+ },
+ "verdict": "PASS"
+}
