@@ -96,5 +96,4 @@ QOIDA (har chat, har vazifa sessiyasi, Financier ham, Rocco ham):
 | Videolar bir-biriga o'xshamasligi (ko'rinish) | `docs/looks.md` + `engine/look_check.py` | HAR video: spec "look"; post oldidan look_check (≥0.70 = FAIL) |
 | Ssenariy skeleti takrorlanmasligi | `docs/script_rules.md` + `engine/script_check.py` | HAR ssenariy: "structure"; post oldidan script_check |
 | Hazil, gag, aktyorlik harakatlari | `docs/comedy.md` | HAR ssenariy: gag va reaksiya ustuni; skit — comedy_skit |
-
 | Lavha tanlash (b-roll) | `docs/footage_bank.md`, `engine/footage_bank.json`; yangi qidiruv: vidIQ `find_broll` (1 kredit), prevyu ko'rib | repo |
