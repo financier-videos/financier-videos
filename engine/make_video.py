@@ -2338,7 +2338,7 @@ def render(spec, wav, total, out, workdir):
                     if abs(sc_ - 1) > 0.01: fnt = ImageFont.truetype(fnt.path, max(20, int(fnt.size * sc_)))
                     sp = ud.textlength(" ", font=fnt); widths = [ud.textlength(w_, font=fnt) for w_ in words]
                     lw = sum(widths) + sp * (len(words) - 1); x = (W - lw) / 2
-                    yb = H * (0.80 if long else (0.70 if FB else (0.655 if PAPER else (0.575 if SPLIT else 0.66)))) - fnt.size / 2
+                    yb = H * (0.80 if long else (0.70 if FB else (0.655 if PAPER else ((0.665 if (vsd or chart) else 0.575) if SPLIT else 0.66)))) - fnt.size / 2
                     if PAPER: yb = H * 0.735 - fnt.size / 2; x = W * 0.07  # ink text, left aligned, under the photo / figure
                     if ROC: ud.rectangle([x - S * 0.025, yb - fnt.size * 0.1, x + lw + S * 0.025, yb + fnt.size * 1.22], fill=(12, 12, 14, int(225 * pop)))
                     for i, wd in enumerate(words):
