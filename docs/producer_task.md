@@ -117,5 +117,13 @@ Sen uch kanalning egasidek ishlaysan: YouTube @FINANCIER4241, Instagram financie
 - QC — Financier'dagi barcha tekshiruvlar. Post: `engine/buffer_post.py schedule` (Buffer, bir vaqtda ≤10 rejalashtirilgan). vidIQ — faqat `engine/vidiq_rocco.py` (Rocco krediti).
 - C ishida: Rocco raqamlari (vidiq_rocco.py vidiq_channel_analytics / user_videos) → rocco.md "KUNLIK RAQAMLAR"; eng yaxshi hook ertaga 2 baravar.
 
+## 1.9) KUNLIK TOP TAHLIL (Shohjahon 2026-11-21: "har kuni ko'rishi uchib ketgan top kanal va videolarni ko'rib chiq, mavzu tuz, video yasa; eng topga chiqadigan kanal qil") — MAJBURIY, har kuni A (09:xx) BOSHIDA, ikkala kanal uchun
+1. TOPISH: (a) Rocco nishasi — `python3 -I engine/vidiq_rocco.py vidiq_trending_videos '{"videoFormat":"short","titleQuery":"scam","sortBy":"vph","limit":15}'` (5 kredit, Rocco hisobi); dushanba qo'shimcha vidiq_outliers (1.8). (b) Financier nishasi — Financier vidIQ balansi ≥40 bo'lsa vidiq_trending_videos (short, "money facts" / "personal finance", 5 kredit), aks holda Rocco hisobidan shu so'rov (Rocco balansi ≥40 bo'lsa), aks holda 2–3 WebSearch (bepul). Rocco krediti tugamasligi uchun: balans <40 → faqat har 2 kunda.
+2. TAHLIL: har nishadan 3–5 eng tez o'sayotgan video (ko'rish/soat, kanal hajmiga nisbatan breakout): mavzu, hook (birinchi 2 s), format, uzunlik, hazil turi. Kichik kanal + katta ko'rish = eng qimmatli signal.
+3. MAVZU: har kanal uchun 2–3 YANGI mavzu — o'sha mexanika, lekin O'Z faktimiz (rasmiy manba), Buck/Rocco, o'z matnimiz. Ko'chirish, real odam, begona klip — TAQIQ (QAT'IY CHEGARA 1, 1b).
+4. YOZUV: `docs/daily_trends.md` boshiga sana bloki (≤12 qator; 7 kundan eskisi o'chiriladi): topilgan videolar (sarlavha qisqa, kanal hajmi, ko'rish, vph), xulosa, mavzular. Mavzular → Financier: script_bank.md [TREND]; Rocco: rocco_inspiration.md 3-bo'lim boshiga.
+5. VIDEO: o'sha kungi Shortlardan kamida 2 tasi (Financier 1, Rocco 1) shu kungi trend mavzusidan. XILMA-XILLIK qoidalari baribir majburiy.
+6. 23:17 / C: trend mavzusidagi videolar vs qolganlar — ko'rish/ushlab qolish → playbook "IKKI BARAVAR OSHIR"/"TO'XTAT" va rocco.md.
+
 ## 2) HAR REJIM OXIRIDA
 `docs/youtube_playbook.md` ni yangila ("Yangilangan" sanasi, jurnalga 1–3 qator, 14 kundan eskisini xulosaga; ≤200 qator), `git pull --rebase origin media`, commit, `git push origin HEAD:media`. Oxirgi javobda "Ochiq qolganlar" (faqat bo'lsa).
