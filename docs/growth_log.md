@@ -85,3 +85,7 @@ Har kuni KAMIDA bitta yozuv. Format: sana — O'RGANILDI (manba, sana) → O'ZGA
    OLINMADI: real odamlar (Bruce Lee, McGregor) bilan AI video — QAT'IY CHEGARA 1b; raqobatchi thumbnail'ini AI bilan o'zgartirish va suv belgisini kesib olib tashlash — mualliflik/litsenziya buzilishi; soxta tug'ilgan sana; "AI monetizatsiyasini saqlaydigan sirli personalizatsiya" — tushuntirilmagan, kurs reklamasi. Monetizatsiya raqamlari (1000 obunachi + 4000 soat yoki 10 mln Shorts) — hozirgi shart; playbook 2-bo'limdagi 2027 o'zgarishi o'z kuchida; O'zbekistonda YPP baribir yo'q.
    O'ZGARTIRILDI: playbook 4-bo'lim — "NISHA SIGNALI VA BIRINCHI BO'L" qoidasi (kuniga kamida 2 doimiy mavzu).
    O'LCHOV: 7 kundan keyin hype vs doimiy Shortlarning 7-kunlik ko'rish o'sishi (doimiylar sekin, lekin to'xtamay o'sishi kerak).
+
+29. O'RGANILDI (chat, 2026-11-21 18:25, Shohjahon: "kanalni rivojlantirmayapsan, konkurentlarni kuzatmayapsan"): har video bo'yicha haqiqiy ko'rish olindi (vidiq_user_videos, 5 kredit → qoldi 22). Jami 1,712 (vidiq_user_channels 128 ko'rsatgan — kechikadi). Raqamli sarlavhali yangi uslub Shortlar 185–1,134, raqamsizlar 11–31. Raqobatchi kuzatuvi shu paytgacha 3 kanal bilan to'xtab qolgan edi.
+   O'ZGARTIRILDI: producer_task 1.8 — har kuni 1 raqobatchi, har kuni 1 sinov, har kuni raqamli hisobot; docs/results.md va docs/competitors.md ochildi.
+   O'LCHOV: 72 soatdan keyin results.md da raqamli vs raqamsiz sarlavha (6 ga 2); 7 kunda competitors.md da ≥7 yangi tahlil va ≥5 sinov natijasi.
