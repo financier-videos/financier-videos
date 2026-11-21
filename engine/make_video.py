@@ -1872,6 +1872,16 @@ def render(spec, wav, total, out, workdir):
             _sl = [{"at": round(j * sc["dur"] / _k, 2), "zoom": _zs[j % 4], "kb": _kbs[j % 4]} for j in range(_k)]
             _sl[0]["broll"] = sc["broll"]; _sl[0]["start"] = sc.get("broll_start", 0)
             clip, csz = None, None
+        if _sl and AUTOSHOT:  # v6.14: an explicit shot longer than auto_shots*1.25 gets re-framed cuts inside it too
+            _ex = []
+            for j, sh in enumerate(_sl):
+                a0 = float(sh.get("at", 0)); a1 = float(_sl[j + 1].get("at", sc["dur"])) if j + 1 < len(_sl) else sc["dur"]
+                _ex.append(sh)
+                if a1 - a0 > AUTOSHOT * 1.25:
+                    _k = int(math.ceil((a1 - a0) / AUTOSHOT))
+                    for q in range(1, _k):
+                        _ex.append({"at": round(a0 + q * (a1 - a0) / _k, 2), "zoom": [1.38, 1.12, 1.5][(q + j) % 3], "kb": ["left", "out", "right"][(q + j) % 3]})
+            _sl = _ex
         if _sl:
             _path, _st = sc.get("broll"), float(sc.get("broll_start", 0))
             for j, sh in enumerate(_sl):
