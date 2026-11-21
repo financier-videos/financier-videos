@@ -60,6 +60,8 @@ v2.2: "say": what the voice reads (captions keep "text"); money/percent are auto
 ($58.63 -> "58 dollars and 63 cents", $1.2 trillion -> "1.2 trillion dollars", 9% -> "9 percent").
 v3 HUMOR PACK (scene fields):
   "beat": 0.5            comedic pause (silence) BEFORE the line; the mascot/sticker reacts during it.
+  "land": 0.4            v6.7: extra silence AFTER the line (punchline "landing"; comics pause after the joke so it registers,
+                         keep speech rate steady and vary the gaps instead). Use on 1-2 punchlines per Short, 0.3-0.6 s.
   "mascot": {"mood": "shocked|happy|laugh|smug|confused|sideeye|sad|angry|point|dizzy|thumbsup|proud",
              "say": "short bubble text (<= 6 words)", "pos": "center|corner", "at": 0.0,
              "act": "roll_in|drop_in|flip|bonk|dodge", "act_at": 0.0}
@@ -544,7 +546,7 @@ def tts(spec, args, workdir):
             sc["buck_t"] = t + beat; sc["speech"] = t + beat + (len(bk) + len(bgap)) / sr
             seq += [bk, bgap, s.astype(np.float32)]
         if sc.get("words"): sc["words"] = [(w, sc["speech"] + a, sc["speech"] + b) for w, a, b in sc["words"]]
-        seq.append(np.zeros(int(gap * sr), dtype=np.float32))
+        seq.append(np.zeros(int((gap + float(sc.get("land", 0))) * sr), dtype=np.float32))  # v6.7 "land": let a punchline land
         seg = np.concatenate(seq); chunks.append(seg)
         sc["sdur"] = dur; sc["dur"] = len(seg) / sr
         t += sc["dur"]

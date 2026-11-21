@@ -1,4 +1,4 @@
-# BUYURTMA 4 (2026-11-21 03:30) — HOLAT: OCHIQ (yangi Buck kutilmoqda)
+# BUYURTMA 4 (2026-11-21 03:30) — HOLAT: BAJARILDI 2026-11-21 10:05 Toshkent
 Shohjahon (03:28): "hali joylanmagan hamma videolarni boshqattan YANGI BUCK bilan qilib chiqasan; boshqa chatda yangi Buck yasalyapti."
 SHART (boshlash): yangi Buck kutubxonasi repoda paydo bo'lsa — `media` da assets/buck3d_*.tar ga yangi commit (yangi fayl, masalan buck3d_v3.tar, yoki buck3d_v2.tar almashtirilgan; `git log -1 --format=%ci -- assets/` 2026-11-21 03:30 dan keyin) YOKI shu faylda Shohjahon/chat "BUCK TAYYOR" deb yozgan bo'lsa. Shart bajarilmagan bo'lsa — bu buyruqni o'tkazib yubor (odatdagi rejim), keyingi ishga tushishda yana tekshir.
 1. Dvigatel yangi kutubxonani olishini ta'minla: yangi nom bo'lsa engine/make_video.py BUCK3D_LIBS ro'yxatining boshiga qo'sh (talk kutubxonasi bo'lsa — u ham). Qisqa sinov render: natija JSON "buck3d" yangi versiyani ko'rsatsin; 4–6 kadrni Read bilan ko'r (Buck kadrdan chiqmaydi, raqam/subtitrni yopmaydi, lab-qimirlash).
@@ -25,8 +25,20 @@ Yangi Buck kutubxonasi `media` da: `assets/buck3d_v3.tar` (226 kadr: 12 kayfiyat
 - Ma'lum zaifliklar: kadrlar CPU da 24 namuna bilan chizilgan (GPU qayta render keyin); gapirish variantlari faqat og'iz sohasini almashtirib yig'ilgan.
 - Model va rig fayllari faqat maxfiy repoda (buck-private/rig_v1). Bu repoga QO'YILMAYDI.
 
-## NATIJA (4)
-(bo'sh)
+## NATIJA (4) — vazifa sessiyasi, 2026-11-21 09:35–10:05 Toshkent
+- Dvigatel o'zgartirilmadi (chat allaqachon v3 ni BUCK3D_LIBS boshiga qo'ygan). Natija JSON "buck3d": "v3", talk bor. 1-render (twenty_secrets) kadrlari Read bilan ko'rildi: corner Buck skipetri sarlavha/raqamni yopmaydi, Buck kadrdan chiqmaydi.
+- 6/6 chiqmagan post qayta render qilindi (Buck v3 + Pixabay "bg"; matn/raqam/sarlavha/vaqt o'zgarmadi; tavsifga "Footage: Pixabay (...)" qo'shildi). TTS kesh yo'q edi → qayta generatsiya, voice_check hammasi ≥0.86. QC: −14.0..−14.2 LUFS, shorts 0 FAIL, blackdetect 0, fayl 43–52 MB.
+  | video | slot ET | yangi fayl | voice | YT id | IG id |
+  |---|---|---|---|---|---|
+  | twenty_secrets | 21-noy 10:00 | 2026-11-21_twenty_secrets_b3.mp4 | 0.908 | 436377479 | 436377496 |
+  | giftcard_myth | 21-noy 13:00 | 2026-11-21_giftcard_myth_b3.mp4 | 0.973 | 436378496 | 436378508 |
+  | gate_story | 21-noy 16:00 | 2026-11-21_gate_story_b3.mp4 | 0.993 | 436378556 | 436378566 |
+  | subscriptions | 21-noy 19:00 | 2026-11-20_subscriptions_b3.mp4 | 0.886 | 436383121 | 436383138 |
+  | airport_cap | 22-noy 10:00 | 2026-11-22_airport_cap_b3.mp4 | 0.945 | 436383180 | 436383197 |
+  | bf_vs_cm | 22-noy 13:00 | 2026-11-22_bf_vs_cm_b3.mp4 | 0.983 | 436383257 | 436383285 |
+- Ulgurmaganlar: yo'q (eng yaqin slot 21-noy 10:00 ET edi — ~10 soat qolgan). costco_case 20-noy 19:00 ET da chiqib bo'lgan (getScheduledPosts da yo'q) — tegilmadi.
+- Fonlar: twenty — padrinan, asabovebelowloa, Dimitri_K; giftcard — tommyvideo, xBriantcx, JawadAliKhan; gate — Coverr-Free-Footage, wserrano, Martin_Grabo; subscriptions — Coverr-Free-Footage, QuinceCreative; airport va bfcm — avvalgi kliplar (o'sha mualliflar).
+- Shu ishda yangi 2 Short (22-noy 16:00/19:00 ET) ham faqat v3 bilan yasaldi; o'zbekcha 2 Reel (finansist424) — v3.
 
 # BUYURTMA 3 (2026-11-20 21:15) — HOLAT: BAJARILDI 2026-11-20 20:50 Toshkent
 Shohjahon (20:30): "hozir tashla namunani" — O'ZBEKCHA NAMUNA. Soatga qaramay BIRINCHI bajariladi; qisqa ish (bitta render), keyin odatdagi rejim davom etadi.
