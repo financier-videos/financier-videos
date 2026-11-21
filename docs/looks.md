@@ -29,3 +29,6 @@ Rocco: o'z "case-file" uslubi (v6.12) + shu qoidalar; Rocco uchun looklar: case-
 
 ## O'LCHOV
 look ustuni docs/results.md ga qo'shiladi; 72 soatda look bo'yicha o'rtacha ko'rish solishtiriladi — eng yaxshi 2 look ko'proq, eng yomoni to'xtatiladi.
+
+## MAVZUGA MOS LAVHA (2026-11-21 20:33) — to'liq qoida producer_task "g" bandida
+O'lchov (navbatdagi speclar): airport 9 sahnadan 1 ta lavha, bf_vs_cm 10/0, cart 9/2, pink_or_blue 10/0, fees_rank 10/0. Vosita BOR (pixabay_bg.py, vidiq_find_broll, dvigatel "broll" sahnasi) — eski "g. B-roll: 1 ta" qoidasi cheklab qo'ygan edi. Yangi me'yor: ≥40% sahna, gapga mos, to'liq ekran, yorqin.

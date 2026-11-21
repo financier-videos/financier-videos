@@ -127,4 +127,5 @@ Shohjahon 20:26: "videolar yana bir xil: yozuvlar, grafikalar, lavhalar, stillar
 2. engine/look_check.py ni qc_gate ga qadam qilib ula (yangi video vs oxirgi 4): ≥0.70 = FAIL.
 3. Hali CHIQMAGAN navbatdagi videolar (2026-11-22 va keyingilari): slotgacha ≥60 daqiqa bo'lsa yangi look bilan QAYTA RENDER (ovoz qayta yozilmaydi — faqat tasvir), Metricool'da almashtir. Ketma-ket 3 ta bir xil look bo'lmasin.
 4. Har look uchun 1 kadrlik kontakt-varaqni docs/looks_samples/ ga qo'y va changes.md ga yoz — chat (Trade) ko'rib tekshiradi.
+5a. MAVZUGA MOS LAVHA: producer_task "g" (yangi) — har Shortda ≥40% sahna aytilayotgan gapga mos Pixabay lavhasi, to'liq ekran, yorqin; qc_gate ga "broll ulushi" tekshiruvi. Qayta renderda ham qo'lla.
 5. Qila olmagan qismingni "QILINMADI: sababi" deb shu yerga yoz — jim qoldirma.
