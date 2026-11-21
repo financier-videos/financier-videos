@@ -1,0 +1,177 @@
+{
+ "format": "short",
+ "sfx": true,
+ "loop": true,
+ "theme": "mint",
+ "source": "Source: Martin Lindstrom, Brandwashed (2011); NPR interview, Oct 23, 2011",
+ "scenes": [
+  {
+   "text": "Bigger cart? You buy up to 40% more.",
+   "say": "Bigger cart? You buy up to forty percent more.",
+   "head": "BIGGER CART = +40%",
+   "stat": "+40%",
+   "color": "#2BD67B",
+   "broll": "/tmp/fin/broll/carts.mp4",
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "drop_in",
+    "at": 0.3
+   },
+   "sfx": [
+    "impact"
+   ],
+   "zoom": {
+    "at": 1.3,
+    "amt": 1.12,
+    "hold": 0.5,
+    "on": "stat"
+   }
+  },
+  {
+   "text": "Wait... the CART is doing that?",
+   "head": "THE CART?!",
+   "mascot": {
+    "mood": "confused",
+    "pos": "center"
+   },
+   "zoom": {
+    "at": 0.0,
+    "amt": 1.25,
+    "hold": 0.7,
+    "on": "buck"
+   },
+   "sfx": [
+    "scratch"
+   ]
+  },
+  {
+   "text": "That's marketing consultant Martin Lindstrom, in his book Brandwashed.",
+   "head": "WHO SAYS?",
+   "sticker": "BRANDWASHED · 2011",
+   "sticker_at": 1.2,
+   "show_source": true,
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   },
+   "sfx": [
+    "pop@1.2"
+   ]
+  },
+  {
+   "text": "Double the cart... and shoppers buy up to 40% more.",
+   "say": "Double the cart... and shoppers buy up to forty percent more.",
+   "head": "DOUBLE THE CART",
+   "chart": {
+    "labels": [
+     "Normal cart",
+     "2x cart"
+    ],
+    "values": [
+     100,
+     140
+    ],
+    "texts": [
+     "100%",
+     "up to 140%"
+    ],
+    "at": [
+     0.3,
+     1.6
+    ]
+   },
+   "fx": [
+    "arrow_up"
+   ],
+   "sfx": [
+    "slide_up@1.6"
+   ]
+  },
+  {
+   "text": "So I tested it. Tiny coin. GIANT cart.",
+   "head": "BUCK'S EXPERIMENT",
+   "broll": "/tmp/fin/bg/basket_market.mp4",
+   "mascot": {
+    "mood": "proud",
+    "pos": "corner",
+    "act": "roll_in"
+   },
+   "transition": "slide",
+   "sfx": [
+    "whoosh"
+   ]
+  },
+  {
+   "text": "Five minutes later...",
+   "head": "5 MINUTES LATER",
+   "look": "sepia",
+   "beat": 0.5,
+   "mascot": {
+    "mood": "dizzy",
+    "pos": "center",
+    "act": "bonk",
+    "act_at": 0.9
+   },
+   "buck": "Not today, price tag!",
+   "buck_after": true,
+   "shake": 0.3,
+   "sfx": [
+    "bonk@0.95",
+    "boing@1.1"
+   ]
+  },
+  {
+   "text": "My theory? A half-empty cart just looks... unfinished.",
+   "head": "MY THEORY",
+   "sticker": "HALF EMPTY = \"NOT DONE\"",
+   "sticker_at": 1.6,
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner"
+   },
+   "sfx": [
+    "tick@1.6"
+   ]
+  },
+  {
+   "text": "Team cart or team basket?",
+   "head": "CART OR BASKET?",
+   "mascot": {
+    "mood": "laugh",
+    "pos": "center",
+    "act": "flip"
+   },
+   "zoom": {
+    "at": 0.6,
+    "amt": 1.18,
+    "hold": 0.5,
+    "on": "buck"
+   },
+   "sfx": [
+    "ding@0.4"
+   ]
+  },
+  {
+   "text": "Tell me. Next time, skip the giant cart, because...",
+   "head": "SKIP THE GIANT ONE",
+   "mascot": {
+    "mood": "smug",
+    "pos": "center",
+    "act": "dodge",
+    "act_at": 1.2
+   }
+  }
+ ],
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
+ },
+ "bg": [
+  "/tmp/fin/bg/supermarket_shelf.mp4",
+  "/tmp/fin/bg/fruit_cartoon.mp4",
+  "/tmp/fin/bg/basket_market.mp4"
+ ]
+}

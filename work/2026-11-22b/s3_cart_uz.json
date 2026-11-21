@@ -1,0 +1,198 @@
+{
+ "format": "short",
+ "sfx": true,
+ "loop": false,
+ "theme": "mint",
+ "source": "Manba: Martin Lindstrom, Brandwashed (2011); NPR, 2011-10-23",
+ "scenes": [
+  {
+   "text": "Shepim, eshittizmii?!",
+   "head": "ESHITTIZMI?!",
+   "mascot": {
+    "mood": "shocked",
+    "pos": "center",
+    "act": "drop_in"
+   },
+   "zoom": {
+    "at": 0.5,
+    "amt": 1.22,
+    "hold": 0.5,
+    "on": "buck"
+   },
+   "sfx": [
+    "impact@0.4"
+   ]
+  },
+  {
+   "text": "Katta aravacha olsangiz, qirq foizgacha ko'proq narsa olarkansiz.",
+   "head": "KATTA ARAVA = +40%",
+   "stat": "+40%",
+   "color": "#2BD67B",
+   "broll": "/tmp/fin/broll/carts.mp4",
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "drop_in",
+    "at": 0.3
+   },
+   "sfx": [
+    "impact"
+   ],
+   "zoom": {
+    "at": 1.3,
+    "amt": 1.12,
+    "hold": 0.5,
+    "on": "stat"
+   }
+  },
+  {
+   "text": "Shoshmen... aravacha shunaqa qiladimi?",
+   "head": "ARAVACHAMI?!",
+   "mascot": {
+    "mood": "confused",
+    "pos": "center"
+   },
+   "zoom": {
+    "at": 0.0,
+    "amt": 1.25,
+    "hold": 0.7,
+    "on": "buck"
+   },
+   "sfx": [
+    "scratch"
+   ]
+  },
+  {
+   "text": "Buni marketolog Martin Lindstrom etgan, \"Brandwashed\" degan kitobida.",
+   "head": "KIM ETGAN?",
+   "sticker": "BRANDWASHED · 2011",
+   "sticker_at": 1.2,
+   "show_source": true,
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   },
+   "sfx": [
+    "pop@1.2"
+   ]
+  },
+  {
+   "text": "Aravachani ikki baravar kattalashtirsa, odamla qirq foizgacha ko'proq oladi.",
+   "head": "IKKI BARAVAR ARAVA",
+   "chart": {
+    "labels": [
+     "Oddiy arava",
+     "2x arava"
+    ],
+    "values": [
+     100,
+     140
+    ],
+    "texts": [
+     "100%",
+     "140% gacha"
+    ],
+    "at": [
+     0.3,
+     1.6
+    ]
+   },
+   "fx": [
+    "arrow_up"
+   ],
+   "sfx": [
+    "slide_up@1.6"
+   ]
+  },
+  {
+   "text": "Man sinab ko'rdim. Kichkina tanga, ULKAN aravacha.",
+   "head": "TAJRIBA",
+   "broll": "/tmp/fin/bg/basket_market.mp4",
+   "mascot": {
+    "mood": "proud",
+    "pos": "corner",
+    "act": "roll_in"
+   },
+   "transition": "slide",
+   "sfx": [
+    "whoosh"
+   ]
+  },
+  {
+   "text": "Besh minutdan keyin... Uf. Hamma yoqda narx yorliqlari.",
+   "head": "5 MINUTDAN KEYIN",
+   "look": "sepia",
+   "beat": 0.5,
+   "mascot": {
+    "mood": "dizzy",
+    "pos": "center",
+    "act": "bonk",
+    "act_at": 0.9
+   },
+   "shake": 0.3,
+   "sfx": [
+    "bonk@0.95",
+    "boing@1.1"
+   ]
+  },
+  {
+   "text": "Man o'ylaymanki, yarim bo'sh aravacha... chala ko'rinadi.",
+   "head": "MANIMCHA",
+   "sticker": "YARIM BO'SH = CHALA",
+   "sticker_at": 1.6,
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner"
+   },
+   "sfx": [
+    "tick@1.6"
+   ]
+  },
+  {
+   "text": "Sila qaysi biri: aravachami, savatmi? Yozvorin.",
+   "head": "ARAVAMI, SAVATMI?",
+   "mascot": {
+    "mood": "laugh",
+    "pos": "center",
+    "act": "flip"
+   },
+   "zoom": {
+    "at": 0.6,
+    "amt": 1.18,
+    "hold": 0.5,
+    "on": "buck"
+   },
+   "sfx": [
+    "ding@0.4"
+   ]
+  },
+  {
+   "text": "Sila bilan chala amerikali finansist bo'ldi.",
+   "head": "FINANSIST",
+   "beat": 0.4,
+   "mascot": {
+    "mood": "proud",
+    "pos": "center",
+    "act": "flip"
+   },
+   "sfx": [
+    "ding@0.5"
+   ]
+  }
+ ],
+ "buck_voice": {
+  "variant": "UZ",
+  "model": "eleven_v3",
+  "script": "lat",
+  "settings": {
+   "stability": 0.0,
+   "speed": 0.88
+  }
+ },
+ "bg": [
+  "/tmp/fin/bg/supermarket_shelf.mp4",
+  "/tmp/fin/bg/fruit_cartoon.mp4",
+  "/tmp/fin/bg/basket_market.mp4"
+ ],
+ "lang": "uz"
+}
