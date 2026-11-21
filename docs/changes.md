@@ -29,3 +29,4 @@ Ishlab chiqaruvchi (vazifa/chat): HAR render va HAR post oldidan `git pull --reb
 | 2026-11-21 17:12 | chat (Trade) | docs/START_HERE.md — kod chati uchun yagona tartib (navbat, har video majburiy jadvali, tayyor/yo'q ro'yxati); sprint §1.5 eskirgan deb belgilandi | QAYTA RENDER: YO'Q |
 | 2026-11-21 17:21 | chat (Trade) | assets/buck3d_v3_acts.tar push qilindi (Buck: doubletake, jawdrop, shrug, sigh, deadpan — 79 kadr, 800 px; dvigatel v6.13 o'zi yuklaydi). Eslatma: sigh da yuz biroz oqarib ko'rinadi (yaltirash) — kamroq ishlat | QAYTA RENDER: YO'Q |
 | 2026-11-21 18:20 | vazifa sessiyasi | ROCCO r01 Buffer posti (6b01d6af…, 22:00 UTC) o'chirildi — eski ko'rinishda chiqmaydi; yangi qoidada qayta yasaladi | QAYTA RENDER: HA (r01) |
+| 2026-11-21 18:35 | vazifa sessiyasi | TUZATISH: 18:20 da o'chirilgan Buffer posti yangi r01 v2 edi — qayta rejalashtirildi (6b01e0a50247969092f278c1, 22:00 UTC); rocco_2026-11-22_r01v2_brushing.mp4 media da | QAYTA RENDER: YO'Q |

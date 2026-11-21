@@ -165,3 +165,5 @@ BUGUNGI 23:17 ishga tushishda ENG BIRINCHI ISH (Financier trendidan ham oldin, c
 
 ### JARAYON (vazifa sessiyasi, 2026-11-21 23:20 Toshkent) — ROCCO r01
 - 1-band BAJARILDI: Buffer'dagi r01 posti (id 6b01d6af8bd84d5966080972 — eski 6b01befd… o'rnida qayta qo'yilgan, 21-noy 22:00 UTC) O'CHIRILDI. Buffer'da rejalashtirilgan post yo'q. Video fayl repoda qoladi.
+- TUZATISH (23:35 Toshkent): o'chirilgan 6b01d6af… posti aslida parallel kod sessiyasining (branch claude/lucid-volta-x5cic0) YANGI r01 v2 posti edi (qc PASS). XATO tuzatildi: r01 v2 mp4 `media` ga qo'yildi va Buffer'ga qayta rejalashtirildi — id 6b01e0a50247969092f278c1, 2026-11-21 22:00 UTC, sarlavha "A Box You Never Ordered? It's a Scam Sign", matn work/rocco/r01_v2/desc.txt. Eski r01 (6b01befd…) o'sha sessiya tomonidan o'chirilgan.
+- DIQQAT boshqa sessiyalarga: claude/lucid-volta-x5cic0 dagi ish (dvigatel v6.14, T-02, T-01 spec, T-04 spec) hali `media` ga birlashtirilmagan.
