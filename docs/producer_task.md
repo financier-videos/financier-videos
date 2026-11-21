@@ -112,6 +112,7 @@ Sen uch kanalning egasidek ishlaysan: YouTube @FINANCIER4241, Instagram financie
 
 ## 1.8) RED FLAG ROCCO (Shohjahon 2026-11-21 19:xx: "1 haftada 15 mln ko'rishga olib chiq") — `docs/rocco.md` ni o'qi va aynan bajar
 - Har A va B ishida, Financier ishidan KEYIN: Rocco uchun 2 Short (kuniga 3–4). Birinchi ishda bir marta: ElevenLabs'da Rocco ovozini yarat (voice design; Buck ovozlaridan farqli; voice_id ni rocco.md ga yoz).
+- ILHOM VA XILMA-XILLIK: `docs/rocco_inspiration.md` — format rotatsiyasi (6 format, ketma-ket ikkitasi bir xil emas) va navbat; har hafta (dushanba B) Rocco vidIQ bilan yangi outlier tahlili (vidiq_outliers contentType short, maxSubscribers 100000, ≤15 kredit) → shu faylni yangila. Uslub olinadi, matn/kadr ko'chirilmaydi.
 - Mavzu shu hafta: Black Friday / Cyber Monday / bayram xarid firibgarliklari (rasmiy manba: FTC, FBI IC3, AARP, CFPB). rocco.md 3-bo'lim qoidalari MAJBURIY (odamli b-roll yo'q, faqat himoya, bitta aniq qadam).
 - QC — Financier'dagi barcha tekshiruvlar. Post: `engine/buffer_post.py schedule` (Buffer, bir vaqtda ≤10 rejalashtirilgan). vidIQ — faqat `engine/vidiq_rocco.py` (Rocco krediti).
 - C ishida: Rocco raqamlari (vidiq_rocco.py vidiq_channel_analytics / user_videos) → rocco.md "KUNLIK RAQAMLAR"; eng yaxshi hook ertaga 2 baravar.
