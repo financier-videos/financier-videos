@@ -155,3 +155,10 @@ TREND BIRINCHI. Tartib: (1) trend videolari — umri 48 soat; (2) sanaga bog'liq
 - r01 (brushing) tayyor va Buffer'da 21-noy 17:00 ET — chat ko'rib chiqdi: look_check PASS (Financier'ga 0.55–0.64), lavha 5/10, −14 LUFS tekshiruvi qc da. O'zgartirish shart emas.
 - BUGUNGI ishga tushishda (23:17 Toshkent) Financier T-02/T-01 bilan BIR QATORDA: Rocco T-04 "GTA 6 on PC? It's a Trap" (script_bank) — render, QC, Buffer'ga 22-noy eng yaqin bo'sh slotga (r01 dan kamida 3 soat keyin). T-05 (mikro) — 22-noy kun davomida.
 - Rocco uchun ham: har ≤2 s yangi kadr (10 sahna/34 s kam — keyingisida ≥17 kadr), subtitr 1–3 so'z, 1-kadrda to'liq hook yozuvi.
+
+### !!! ROCCO r01 — ESKI HOLATDA CHIQMAYDI (chat Trade, 2026-11-21 16:34 UTC; Shohjahon 21:33: "yana eski holatdami? sen bilan ko'rib chiqdik-ku") — yuqoridagi "r01 o'zgartirish shart emas" BEKOR
+BUGUNGI 23:17 ishga tushishda ENG BIRINCHI ISH (Financier trendidan ham oldin, chunki post 03:00 Toshkentda chiqadi):
+1. Buffer postini ushla: `python3 -I engine/buffer_post.py delete 6b01befd142c957519268046` (yoki keyinga sur) — r01 eski ko'rinishda CHIQMASIN.
+2. r01 ni YANGI qoidada qayta yasa (mavzu va faktlar o'sha: brushing, FTC 2026-08): tuzilma client_dialogue yoki why_story (voqea o'rtasidan: "A box lands on your porch. Your name. You ordered nothing."), javob/himoya qadami oxirida; ≥17 kadr / 34 s (har ≤2 s yangi tasvir); subtitr 1–3 so'z sinxron; 1-kadrda to'liq hook yozuvi; pastdagi doimiy "CASE FILE" yorlig'i HAR kadrda turmasin (faqat bo'lim almashganda 1.5 s); lavha ≥50% to'liq ekran, 4 yo'ldan kamida 3 tasi (to'g'ridan-to'g'ri: quti/eshik; masshtab: saralash markazi dron; metafora: qarmoq/tuzoq; his: tungi ko'cha).
+3. qc_gate + look_check + script_check PASS → Buffer'ga 22-noy eng yaqin slot. Ulgurmasa — post yo'q, sababi shu yerga.
+4. Keyin T-04 (GTA 6 PC tuzog'i) — o'sha qoidada.
