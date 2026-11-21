@@ -89,6 +89,8 @@ Yangilangan: 2026-11-21 12:20 (jadvaldan tashqari tekshiruv: slotlar to'la, yang
 - Xavfsiz zona (Shorts): pastki 20% va o'ng tugmalar — dvigatel avtomatik.
 - O'tishlar: zarbada "punch", mavzu almashganda "flash"/"slide". Rang: oltin asosiy, qizil #FF4D4D yo'qotish, yashil #2BD67B foyda.
 - Ovoz: Buck birinchi o'rinda; qo'shimcha effektlar 3–6 urg'u, punchline so'zi bilan sinxron ("ding@5.0"); wahwah — videoga ≤1.
+- REYTING FORMATI (i) (Kellan Henneberry "How I Make $24,937/mo Posting YouTube Shorts", 1.85M ko'rish, 2026-06; Shorts "ranking" nishasi): 5–7 band (5 dan kam — tomosha vaqti kam, 7 dan ko'p — oxirigacha ko'rishmaydi; uning tajribasi, GIPOTEZA); tartib KAMAYIB BORMAYDI — aralash (masalan #3, #6, #2, #5, #4, #1), #1 doim oxirida → "keyingisi qaysi?" qiziqishi. Bizda faqat o'z faktlarimiz + Buck + Pixabay (boshqalar kliplarini olish — QAT'IY CHEGARA 1b, OLINMAYDI). Har band ≤4 s, katta "#N" stat.
+- SARLAVHA-PLASHKA (o'sha manba): ekrandagi asosiy sarlavha ROSA 2 qator, kalit so'z(lar) boshqa rangda (biz: oltin/oq + teal yoki qizil) — tomoshabin 1 soniyada mavzuni tushunsin. Kalit so'z = mavzuning o'zi ("PINK TAX"), "best/ever/most" emas.
 - SIFAT NAZORATI: 0.5-bo'lim cheklisti + 6–8 kadr, ovoz o'rtacha −20..−12 dB, stereo, Short ≤40 s.
 
 ## 5. RAQOBATCHILAR VA ETALONLAR (har biri 3–4 qator; ≤10)
