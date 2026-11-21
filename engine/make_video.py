@@ -39,7 +39,7 @@ v6 CINEMA QUALITY (default ON; spec "cinema": false = old look, e.g. for quick t
 spec.json:
 {
   "format": "short" | "long",          # short = 1080x1920, long = 1920x1080
-  "bg": "clip.mp4" | ["a.mp4", "b.jpg", ...],   # v6.6: real blurred BACKDROP behind non-b-roll scenes (list = rotates per scene; scene "bg" overrides, false = plain); "bg_mix": 0.62, "bg_blur": 6. Fetch: engine/pixabay_bg.py
+  "bg": "clip.mp4" | ["a.mp4", "b.jpg", ...],   # v6.6: real blurred BACKDROP behind non-b-roll scenes (list = rotates per scene; scene "bg" overrides, false = plain); "bg_mix": 0.62, "bg_blur": 6, "bg_bright": 1.0 (v6.9: 1.3–1.5 = brighter theme + less backdrop dimming; A/B, notes/2026-11-21_color.md). Fetch: engine/pixabay_bg.py
   "theme": "vault|mint|ember|royal|ocean|noir",   # v6.1 background look (palette + pattern); omit = picked from the first line. Never the same theme for two videos in a row.
   "voice": "am_michael", "speed": 1.05,
   "scenes": [
@@ -1794,13 +1794,18 @@ def render(spec, wav, total, out, workdir):
     cg = CineGrade(W, H) if cinema else None
     bok = bokeh_sprites(S) if cinema else None
     leak = light_leak(W, H) if cinema else None
+    bg_bright = max(0.6, min(2.0, float(spec.get("bg_bright", 1.0))))  # v6.9
     for si, sc in enumerate(spec["scenes"]):
         f0 = int(round(sc["start"] * FPS)); f1 = min(nframes, int(round((sc["start"] + sc["dur"]) * FPS)))
         n = max(1, f1 - f0)
         clip, csz = (broll_frames(sc["broll"], W, H, n, sc.get("broll_start", 0)) if sc.get("broll") and os.path.exists(sc["broll"]) else (None, None))
         bdclip = None
         if not clip:
-            if si % 3 not in bgs: bgs[si % 3] = make_bg(W, H, si % 3, pick_theme(spec))
+            if si % 3 not in bgs:
+                bgs[si % 3] = make_bg(W, H, si % 3, pick_theme(spec))
+                if bg_bright != 1.0:  # v6.9: A/B "bright" look (notes/2026-11-21_color.md) - lifts the theme gradient
+                    _rgb = ImageEnhance.Brightness(bgs[si % 3].convert("RGB")).enhance(bg_bright)
+                    bgs[si % 3] = _rgb.convert("RGBA")
             base_static = bgs[si % 3]
             _bd = sc.get("bg", spec.get("bg"))  # v6.6: str or list of clips/photos; scene "bg": false = plain theme
             if isinstance(_bd, list) and _bd: _bd = _bd[si % len(_bd)]
@@ -1894,6 +1899,7 @@ def render(spec, wav, total, out, workdir):
                 base = Image.blend(base_static.convert("RGB"), bd, bd_mix).convert("RGBA")
                 _lum = float(np.asarray(fr.convert("L"), dtype=np.float32).mean())  # bright backdrops (sky, white walls) get darker
                 _dk = int(max(70, min(185, 70 + (_lum - 70) * 1.3 + (35 if (chart or vsd) else 0))))
+                if bg_bright != 1.0: _dk = int(max(30, _dk / bg_bright))  # v6.9: less dimming of the real backdrop
                 base = Image.alpha_composite(base, Image.new("RGBA", (W, H), (0, 0, 0, _dk)))
             else:
                 base = base_static.copy()
