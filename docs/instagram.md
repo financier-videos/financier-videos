@@ -58,3 +58,7 @@ Shohjahon: namunada g' inglizcha g/j kabi, x esa "iks" deb o'qilyapti. eleven_v3
   3. Har bir trial HAQIQATAN BOSHQA video (takroriy kontent cheklangan): boshqa hook yoki 1-kadr, boshqa uzunlik yoki boshqa mavzu. Manba: kunlik 8 Short + har birining 1–2 hook-varianti (faqat 1-sahna qayta yasaladi). Bir xil faylni qayta yuklash — YO'Q.
   4. G'olib (o'sha kungi triallar ichida ko'rish va o'tkazib yuborish ko'rsatkichi eng yaxshi 20%) ertasi kuni oddiy Reel sifatida ochiladi (MANUAL); qolganlari arxivda qoladi. Natija docs/results.md ga "trial" belgisi bilan.
   5. Vosita: vidiq_instagram_publish_reel, trialParams {graduationStrategy: MANUAL}; har konteynerni kamida 45 s kutib so'ra. Pullik "avtomat trial" xizmatlari OLINMAYDI.
+
+### YouTube'da shunga o'xshash narsa (2026-11-21 20:32 UTC, Shohjahon so'radi)
+- "Trial Shorts" kabi alohida funksiya TOPILMADI (2 ta veb-qidiruv). YouTube'ning o'z A/B vositasi — "Test & Compare" (3 tagacha sarlavha/muqova, g'olib tomosha vaqti ulushi bo'yicha) — faqat UZUN videolar uchun, Shorts'da ISHLAMAYDI; kompyuterdagi Studio va "advanced features" yoqilgan bo'lishi kerak.
+- QOIDA: (1) har UZUN videoda Test & Compare — 3 sarlavha + 3 muqova (ikkala kanal). (2) Shorts'da sinov = hook varianti alohida Short sifatida, kuniga ko'pi bilan 1 juft, kamida 6 soat oraliq bilan, 1-sahna va sarlavha haqiqatan boshqa (bir xil videoni qayta yuklash — takroriy kontent xavfi); 48 soatda g'olib qoladi, yutqazgani "unlisted" qilinadi.
