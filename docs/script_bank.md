@@ -139,6 +139,6 @@ Sahnalar (~76 so'z):
 8. "Tell me, because apparently..." — Buck dodge; loop → 1-sahna.
 Sarlavha: "Airport Prices Actually Have a Limit". Izoh savoli: "Worst airport price you've paid?"
 
-## [KONSEPT — raqamlar manbadan tekshirilsin] S-12 "Ranking the Sneakiest Fees in America" (2026-11-21, reyting formati (i))
+## [CHIQDI 2026-11-23 10:00 ET — "5 Sneaky Fees, Ranked: #1 Got a New Rule", work/2026-11-23/s1_fees_rank.json] S-12 "Ranking the Sneakiest Fees in America" (2026-11-21, reyting formati (i))
 G'oya manbasi: Kellan Henneberry videosidagi "ranking" format (faqat format; kontent — o'zimizniki). 5–6 band, ARALASH tartib, #1 oxirida; har band — rasmiy manbali to'lov (masalan: bank overdraft — CFPB; konsert/chipta "service fee" — FTC junk fees qoidasi 2025; mehmonxona "resort fee" — FTC; aviakompaniya bagaj — DOT/BTS; ATM tarmoqdan tashqari — Bankrate yillik so'rovi). Har raqam render oldidan joriy manbadan olinadi; tasdiqlanmagani olib tashlanadi.
 Ko'rinish: tepada 2 qatorli sarlavha "RANKING THE / SNEAKIEST FEES" (kalit "SNEAKIEST FEES" — teal), har bandda katta "#N" stat + Buck reaksiyasi (har bandda boshqa kayfiyat), #1 dan oldin beat. Izoh savoli: "Which fee made you angriest?" Theme: ember. Emotsiya: "adolatsizlik" (yengil).
