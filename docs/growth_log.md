@@ -74,3 +74,6 @@ Har kuni KAMIDA bitta yozuv. Format: sana — O'RGANILDI (manba, sana) → O'ZGA
 25. O'RGANILDI (2026-11-21 12:20–12:50, Shohjahon: "hamma skillarni ko'rib chiqib yangiliklar qil"): SINALMAGAN skillardan 3 tasi sinaldi. Parselmouth: Buck D juda jonli (F0 diapazoni 5.6–23.4 st) — "monoton" xavfi yo'q; A-yoki-B savollar ohangi tabiiy pasayadi. title.py: 2 sarlavha raqamsiz, 3 tasi mobil kesimda raqamni yo'qotadi.
    O'ZGARTIRILDI: engine/prosody_check.py (yangi QC); dvigatel v6.8 — pyfxr 8-bit sfx palitrasi (engine/sfx_fxr.py); gift card sarlavhasi raqamli qilindi. Rhubarb — binar yuklash bloklandi.
    O'LCHOV: gift card Short (21-noy 13:00 ET) ko'rishi vs shu kungi qolgan 3 Short; fxr sfx ishlatilgan birinchi Shortlarda ushlab qolish (C da). Yangi muhitda: pip pillow --ignore-installed, Anton/ComicRelief google/fonts dan (aks holda render yiqiladi).
+26. O'RGANILDI (2026-11-21 12:55, Shohjahon "Ruhsat"): Rhubarb 1.14.0 Linux binari ishlaydi (5.2 s ovoz → 12 s, 41 og'iz shakli).
+   O'ZGARTIRILDI: dvigatel v6.8 lip-sync — talk_level endi fonema jadvalidan (rhubarb_cues), sprite tezligida (har 2 kadr); binar yo'q/xato → eski ovoz-balandligi usuli. graphify xaritasi yangilandi.
+   O'LCHOV: keyingi 2 Shortda Buck og'zini 0.5x tezlikda ko'rib, eski usul bilan solishtir (lab "yolg'on gapirayotgandek" ko'rinmasligi); render vaqtiga +10–20 s.

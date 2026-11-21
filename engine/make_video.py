@@ -103,6 +103,8 @@ v4.2 REACTION CRASH-ZOOM (scene field):
   new "sfx": whip (short rising swish for crash zooms / fast moves).
   v6.8 "sfx": fxr_pickup, fxr_powerup, fxr_hurt, fxr_select, fxr_jump (8-bit game palette via pyfxr, engine/sfx_fxr.py;
   skipped silently if pyfxr is missing). 1-2 per Short: coin grab / win / money lost / list beat / Buck hop.
+  v6.8 lip-sync: Rhubarb phoneme cues drive Buck's mouth when the binary exists (env FIN_RHUBARB, default
+  ~/tools/rhubarb/...; never in the repo). Spec "lipsync": "envelope" forces the old loudness method.
 """
 import json, os, re, subprocess, sys, argparse, math, tempfile
 import numpy as np
@@ -558,6 +560,7 @@ def tts(spec, args, workdir):
     envf = np.array([np.sqrt(np.mean(audio[j * hop:(j + 1) * hop] ** 2)) if j * hop < len(audio) else 0.0 for j in range(nfr)], np.float32)
     spec["_speech_env"] = (envf / (np.percentile(envf, 95) + 1e-6)).clip(0, 1.2).tolist()
     spec["_speech_words"] = [w for sc in spec["scenes"] for w in (sc.get("words") or [])]
+    spec["_mouth_cues"] = rhubarb_cues(audio, sr, spec, workdir)  # v6.8: phoneme lip-sync (None -> envelope fallback)
     audio = mix_sfx(audio, sr, spec)
     wav = os.path.join(workdir, "voice.wav"); sf.write(wav, audio, sr)
     return wav, t
@@ -1389,9 +1392,43 @@ def buck3d_frame(clip, i, size):
 OPEN_MOODS = ("happy", "laugh", "thumbsup")  # idle mouth already open -> use the small-open variant between syllables
 
 
-def talk_level(env, words, fi, t):
+RHUBARB = os.environ.get("FIN_RHUBARB", os.path.expanduser("~/tools/rhubarb/Rhubarb-Lip-Sync-1.14.0-Linux/rhubarb"))
+_SHAPE_LV = {"A": 0, "X": 0, "B": 1, "G": 1, "H": 1, "C": 2, "D": 2, "E": 3, "F": 3}
+
+
+def rhubarb_cues(audio, sr, spec, workdir):
+    """v6.8 lip-sync (skill: docs/skills/notes/2026-11-21_rhubarb-lip-sync.md; Rhubarb 1.14.0, MIT, offline binary kept
+    OUTSIDE the repo - env FIN_RHUBARB). Dry voice (before sfx) + spoken script as dialog hint -> [(start, end, level)]
+    with level 0 closed/rest, 1 half, 2 wide, 3 rounded. Cached by audio hash. Any failure -> None (envelope fallback)."""
+    if spec.get("lipsync") == "envelope" or not os.path.isfile(RHUBARB): return None
+    try:
+        import hashlib, soundfile as sf
+        h = hashlib.sha1(np.asarray(audio, np.float32).tobytes()).hexdigest()[:16]
+        cdir = os.environ.get("FIN_TTS_CACHE", os.path.join(tempfile.gettempdir(), "fin_tts_cache"))
+        os.makedirs(cdir, exist_ok=True); cj = os.path.join(cdir, f"rhubarb_{h}.json")
+        if not os.path.exists(cj):
+            w16 = os.path.join(workdir, "lips16k.wav"); tmp = os.path.join(workdir, "lips_tmp.wav"); sf.write(tmp, audio, sr)
+            subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", tmp, "-ar", "16000", "-ac", "1", w16], check=True)
+            dlg = os.path.join(workdir, "dialog.txt")
+            txt = " ".join(" ".join(p for p in (sc.get("buck"), sc.get("say", sc.get("text", ""))) if p) for sc in spec["scenes"])
+            open(dlg, "w").write(re.sub(r"\s+", " ", txt))
+            subprocess.run([RHUBARB, "-q", "-f", "json", "-d", dlg, "--extendedShapes", "GHX", w16, "-o", cj + ".part"],
+                           check=True, timeout=600, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            os.replace(cj + ".part", cj)
+        cues = [(c["start"], c["end"], _SHAPE_LV.get(c["value"], 1)) for c in json.load(open(cj))["mouthCues"]]
+        print(f"[lipsync] rhubarb: {len(cues)} cues", file=sys.stderr)
+        return cues
+    except Exception as e:
+        print(f"[lipsync] rhubarb failed ({e}); envelope fallback", file=sys.stderr)
+        return None
+
+
+def talk_level(env, words, fi, t, cues=None):
     """Lip-sync: mouth variant for this video frame (0 = idle pose, 1 half open, 2 wide, 3 rounded 'o') from the speech
     envelope (sampled at the sprite rate so it never flickers) and the vowel of the word being spoken."""
+    if cues:  # v6.8 phoneme cues, sampled at the sprite rate (every 2nd frame) so the mouth never flickers
+        tj = ((fi // 2) * 2) / FPS
+        return next((lv for st_, en_, lv in cues if st_ <= tj < en_), 0)
     if not env: return None
     j = (fi // 2) * 2; a = max(env[min(j, len(env) - 1)], env[min(j + 1, len(env) - 1)])
     if a < 0.12: return 0
@@ -1966,7 +2003,7 @@ def render(spec, wav, total, out, workdir):
                     oy_ = -(1 - ease_out(max(0.0, act_lt) / 0.45) ** 2) * (my + mR * 3)
                 mp = "missing"
                 if use3d:
-                    tk_ = talk_level(spec.get("_speech_env"), spec.get("_speech_words"), fi, t)
+                    tk_ = talk_level(spec.get("_speech_env"), spec.get("_speech_words"), fi, t, spec.get("_mouth_cues"))
                     mp, (pax, pay) = mascot3d_patch(mR, mood, t, m_lt, act=act, act_lt=act_lt, talk=tk_)
                 if isinstance(mp, str): mp, (pax, pay) = mascot_patch(mR, mood, t, m_lt, act=act, act_lt=act_lt)  # 2D fallback
                 env_ = spec.get("_speech_env")
