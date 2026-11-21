@@ -34,3 +34,9 @@ Har tugagan ishdan keyin: changes.md ga qator + push. Birinchi 3 ta yangi videod
 ## 4. NIMA TAYYOR, NIMA YO'Q (2026-11-21 22:10)
 TAYYOR: qoidalar (script_rules v2.2, looks, comedy, lessons), 20 ssenariy (T-01…05, V-01…05, C-01…02, R-01…08), tekshiruvchilar (look_check, script_check; look_check qc_gate ga ulangan), dvigatel v6.13 (5 komediya harakati), Rocco sprite'lari (845 kadr), Buck harakatlari (assets/buck3d_v3_acts.tar — push qilinadi), vidIQ Pro (2 500 kredit).
 YO'Q (kod qiladi): dvigatelda shots / 1–3 so'zli subtitr / fullbleed-paper-split looklar / ikkinchi ovoz; script_check ni qc_gate ga ulash; videolarning o'zi.
+
+## 5. YANGI (vazifa sessiyasi, 2026-11-22 01:00 Toshkent) — boshqa chatlar o'qisin
+- `docs/run_checklist.md` — har ishga tushishda boshida/oxirida (post o'chirishdan oldin matnni solishtirish, claude/* branchlarni tekshirish).
+- `docs/instagram_redfrocco.md` + `assets/instagram/redfrocco/` — Rocco Instagram'i: avatar, ism, bio, 3 post, 4 highlight, Reel captionlar. Joylash uchun redfrocco OAuth ulanishi kerak (hozir manual).
+- graphify ishlaydi (ruxsat `.claude/settings.json` da).
+- Kunlik natijalar: `docs/results.md` (21-noy 18:40 UTC), trend: `docs/trend_radar.md`, `docs/daily_trends.md`; bank S-13, S-14.
