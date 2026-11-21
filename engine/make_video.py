@@ -101,6 +101,8 @@ v4.2 REACTION CRASH-ZOOM (scene field):
                          Auto "whip" sfx at the zoom (needs global "sfx": true). Use 1-2 per Short, amt 1.15-1.35
                          (on a big stat <= 1.15 or the number touches the edges; a corner Buck is auto-kept in frame).
   new "sfx": whip (short rising swish for crash zooms / fast moves).
+  v6.8 "sfx": fxr_pickup, fxr_powerup, fxr_hurt, fxr_select, fxr_jump (8-bit game palette via pyfxr, engine/sfx_fxr.py;
+  skipped silently if pyfxr is missing). 1-2 per Short: coin grab / win / money lost / list beat / Buck hop.
 """
 import json, os, re, subprocess, sys, argparse, math, tempfile
 import numpy as np
@@ -795,6 +797,14 @@ SFX_MIX = {"coin": (0.2, 0.22), "cash": (0.2, 0.24), "impact": (0.2, 0.35), "scr
            "slide_up": (0.05, 0.20), "slide_down": (0.05, 0.22), "bonk": (0.1, 0.40), "ding": (0.15, 0.22),
            "buzzer": (0.1, 0.16), "crickets": (0.05, 0.16), "drumroll": (0.0, 0.26), "wahwah": (0.1, 0.24),
            "whip": (0.0, 0.20), "riser": (0.0, 0.13), "subboom": (0.0, 0.30), "shimmer": (0.0, 0.10)}
+try:  # v6.8: optional 8-bit palette (pyfxr) - fxr_pickup / fxr_powerup / fxr_hurt / fxr_select / fxr_jump
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import sfx_fxr as _fxr
+    if _fxr.available():
+        for _n in _fxr.PRESETS:
+            SFX[_n] = (lambda n: (lambda sr, rng: _fxr.render(n, sr)))(_n)
+            SFX_MIX[_n] = (0.05, 0.16)
+except Exception:
+    pass
 SFX_PAN = {"coin": 0.25, "cash": 0.2, "boing": -0.25, "bonk": -0.2, "crickets": 0.35, "slide_up": -0.15, "slide_down": 0.15}
 
 
