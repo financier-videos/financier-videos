@@ -13,7 +13,7 @@ Sahnalar (text = say; ~62 so'z):
 6. "Go open your bank app, because right now..." — Buck point; loop → 1-sahna.
 Sarlavha: "You Pay $1,332 a Year for THIS". Izoh savoli (tavsif 1-qator): "Keep them all, or cancel one tonight?"
 
-## [TAYYOR] S-02 "A Bigger Cart Makes You Buy 40% More" (2026-11-20)
+## [CHIQDI 2026-11-22 16:00 ET — "Bigger Cart? You Buy Up to 40% More", work/2026-11-22b/s3_cart.json] S-02 "A Bigger Cart Makes You Buy 40% More" (2026-11-20)
 Manba: Martin Lindstrom, "Brandwashed" (2011) va NPR intervyusi (2011-10-23): savat hajmi ikki baravar oshirilsa, xaridor "up to 40 percent more" sotib oladi. Bu bitta marketing maslahatchisining da'vosi — "Lindstrom says" deb ayt, "study proved" dema.
 Olib tashlandi (manbasiz): "stores doubled the size of carts", "4,000 impulse traps", "milk and eggs are always in the back".
 Sahnalar (~60 so'z):
@@ -33,7 +33,7 @@ Sabab: (1) takror — "The Penny Cost 4 Cents to Make" 2026-11-19 da chiqqan; (2
 ## [KONSEPT, uzun video — keyingisi uchun] "Everyday Traps Quietly Draining Your Wallet" (obunalar qismi 2026-11-20 "The Subscription Trap" da ishlatildi — takrorlama)
 "$4,500 a year" raqami manbasiz — sarlavhaga QO'YMA; har bobning o'z manbali raqami bo'lsin (obunalar $252/yil ishlatilmaydi — CNET 2026; savat +40% — Lindstrom; $X.99 narxlar — Anderson & Simester 2003; gym — DellaVigna & Malmendier 2006 va h.k., playbook 8-bo'lim). Jami raqam faqat manbali raqamlar yig'indisi bo'lsa aytiladi.
 
-## [TAYYOR] S-04 "Pink Costs More 42% of the Time" (2026-11-20, 2-partiya)
+## [CHIQDI 2026-11-22 19:00 ET — "Pink or Blue? One Costs More 42% of the Time"; $6.99 vs $4.99 ustara misoli tasdiqlanmadi → olinmadi] S-04 "Pink Costs More 42% of the Time" (2026-11-20, 2-partiya)
 Manba: NYC Department of Consumer Affairs, "From Cradle to Cane: The Cost of Being a Female Consumer" (2015-12-18): 794 mahsulot, 35 toifa; ayollar uchun mahsulot 42% holatda qimmatroq (erkaklarniki 18% holatda), o'rtacha +7%, shaxsiy gigiyena mahsulotlarida +13%. Misol (Consumerist 2015-12-23, o'sha tadqiqotdan): CVS'da o'xshash ustara to'plami $6.99 vs $4.99.
 MUHIM: tadqiqot 2015 yil va faqat Nyu-York do'konlari — "a 2015 New York City study" deb ayt; "today" yoki "nationwide" dema. Siyosiy baho berma, faqat raqam.
 Olib tashlandi (manbasiz): "$42,000", "a pink razor costs 13% more than the exact same blue one" (13% — butun toifaning o'rtachasi), "over a lifetime thousands" (aniq summa yo'q).

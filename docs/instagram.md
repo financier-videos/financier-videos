@@ -5,6 +5,7 @@ TALAB: YouTube'ga qaysi Short qo'yilsa, Instagram'ga ham qo'yiladi (Reel). Faqat
 ## HOLAT (2026-11-20 20:00)
 - 2026-11-20 23:50: O'ZBEKCHA NAMUNAGA SHOHJAHONNING "HA"SI BOR ("zo'r"; giftcard_uz.mp4, test5-f sozlamasi). Bundan keyin A va B ishlarida o'zbekcha versiyalar yasaladi (voice_finansist_uz.md: Toshkent shevasi, hook iboralari, hazilkash buzg'unchi, TANLANGAN ovoz sozlamasi). Qo'shimcha talab: "gapirish uslubini videolar ko'rib yaxshilab bor" — voice_finansist_uz.md USLUBNI O'STIRISH.
 - 2026-11-21 02:40: finansist424 ga BIRINCHI 2 o'zbekcha Reel chiqdi (vidIQ, isAiGenerated true): aeroport narx chegarasi https://www.instagram.com/reel/Df-qXoOiJ1A/ , Black Friday vs Cyber Monday https://www.instagram.com/reel/Df-qekDlHR2/ . Muammo yo'q (0 kredit).
+- 2026-11-21 10:25: finansist424 ga 2 o'zbekcha Reel (Buck v3): aravacha https://www.instagram.com/reel/Df_dfI0DqA1/ , pushti/ko'k https://www.instagram.com/reel/Df_df1tjDyB/ . financier424 (EN) — Metricool, 22-noy 16:00/19:00 ET (436389672, 436389720).
 - finansist424: bio to'ldirildi (brauzer orqali). Profil rasmi, ko'rsatiladigan ism, havola — Shohjahon o'zi qo'yadi (rasm fayllari unga yuborilgan; ism va havola faqat ilova/Accounts Center orqali).
 - financier424: hali tegilmagan (brauzerda o'sha akkauntga o'tilmagan). Bio matni Shohjahonga berilgan.
 - 2026-11-20 19:53: finansist424 vidIQ ga ULANDI (platformAccountId 29160998936886806, canPublish true). financier424 — hali ulanmagan. O'zbekcha namunaga Shohjahonning "ha" si: HALI YO'Q.
