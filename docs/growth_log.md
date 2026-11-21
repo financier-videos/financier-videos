@@ -99,3 +99,6 @@ Har kuni KAMIDA bitta yozuv. Format: sana — O'RGANILDI (manba, sana) → O'ZGA
 30. O'RGANILDI (chat, 2026-11-21 19:05, Shohjahon: "rivojlan"): vidIQ outliers — kichik inglizcha fakt-kanallarda portlagan 8 Shortdan 5 tasi 5–13 soniya, mavzusi keng "pul viktorinasi" (jadval: docs/competitors.md). Bizning Shortlar 30–48 s va yarmi do'kon narxlari haqida.
    O'ZGARTIRILDI: sprint 1.5 — har kuni 4 mikro (8–12 s) + 4 odatdagi; mikro mavzular ro'yxati.
    O'LCHOV: 72 soatda mikro vs odatdagi ko'rish (results.md "format" ustuni); qaror qoidasi sprint 1.5 da.
+32. O'RGANILDI (2026-11-21, navbatdagi 8 video ko'rigi): grafik ustuni animatsiyasi (at + 0.5 s) qisqa sahnada tugamaydi — tomoshabin asosiy raqamni KO'RMAYDI (airport_cap: +15% o'rniga +11%). Teng oraliqli kontakt-varaq animatsiya o'rtasini olib yolg'on xato ko'rsatadi; eski rendered.json boshqa render vaqtlarini beradi.
+   O'ZGARTIRILDI: dvigatel v6.10 (ustunlar sahna oxiridan 0.7 s oldin to'liq; loop jumlasida "..." TTS ga ketmaydi); qc_gate — kontakt-varaq har sahnaning 80% nuqtasidan, rendered.json davomiyligi mos kelmasa ogohlantiradi; map_insert yaqin marshrutni zoom qiladi. airport_cap b4 bilan almashtirildi.
+   O'LCHOV: keyingi 10 videoda "asosiy raqam ekranda to'liq ko'rinmadi" holatlari soni (maqsad 0); airport_cap ko'rishi va o'rtacha ko'rish % (22-noy 10:00 ET).
