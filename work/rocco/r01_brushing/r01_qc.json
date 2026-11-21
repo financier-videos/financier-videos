@@ -1,15 +1,15 @@
 {
  "0_freshness": {
-  "status": "FAIL",
-  "note": "repo 1 commit(s) behind origin/media - git pull --rebase and re-render"
+  "status": "PASS",
+  "note": "up to date"
  },
  "1_platform_check": {
   "status": "PASS",
-  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    52.1 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -13.9 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    51.3 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.0 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.4 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
  },
  "2_loudness": {
   "status": "PASS",
-  "note": "I = -13.9 LUFS (target -14)"
+  "note": "I = -14.0 LUFS (target -14)"
  },
  "3_blackdetect": {
   "status": "PASS",
@@ -17,15 +17,15 @@
  },
  "4_export": {
   "status": "PASS",
-  "note": "h264 High, 12.5 Mbit/s, 35.1s, stereo"
+  "note": "h264 High, 12.5 Mbit/s, 34.5s, stereo"
  },
  "5_voice_check": {
   "status": "PASS",
-  "note": "c\": 0,\n \"match\": 0.983,\n \"missing\": [\n  \"heh\",\n  \"phishing\"\n ],\n \"extra\": [\n  \"fishing\"\n ],\n \"heard\": \"got a box you never ordered. That's not luck. It's called brushing. Sellers ship to real addresses, then post fake reviews in your name. Inside, a note. Scan to see who sent it. Wait, don't. The FTC warned in August. That code can lead to a... Fishing Site Your move. Change your shopping passwords tonight. Good news, you can legally keep it. Just use it carefully. Have you ever gotten one of these boxes? Send this to someone who opens every box, because if you got a box, you never ordered.\"\n}"
+  "note": "{\n \"rc\": 0,\n \"match\": 0.983,\n \"missing\": [\n  \"heh\",\n  \"phishing\"\n ],\n \"extra\": [\n  \"fishing\"\n ],\n \"heard\": \"got a box you never ordered. That's not luck. It's called brushing. Sellers ship to real addresses, then post fake reviews in your name. Inside, a note. Scan to see who sent it. Wait, don't. The FTC warned in August. That code can lead to a... Fishing Site Your move! Change your shopping passwords tonight! Good news! You can legally keep it, just use it carefully! Would you keep it or toss it? Send this to someone who opens every box, because if you got a box, you never ordered!\"\n}"
  },
  "6_prosody": {
-  "status": "FAIL",
-  "note": "see who sent it.\n 5  13.49s range=16.0 st  gap=0.07  ok  | Wait. Don't!\n 6  14.33s range=16.6 st  gap=0.23  ok  | The FTC warned in August: that code can lead to a phishing s\n 7  19.16s range=14.5 st  gap=0.44  ok  | Your move: change your shopping passwords tonight.\n 8  22.74s range=14.6 st  gap=0.28  ok  | Good news? You can legally keep it. Just use it carefully.\n 9  26.69s range=15.2 st  gap=0.16  FLAT_Q  | Have you ever gotten one of these boxes?\n10  29.20s range=15.1 st  gap=0.41  ok  | Send this to someone who opens every box. Because if you got\n{\"median_f0\": 141.9, \"flagged_scenes\": 1}"
+  "status": "PASS",
+  "note": "note: scan to see who sent it.\n 5  13.49s range=13.0 st  gap=0.07  ok  | Wait. Don't!\n 6  14.33s range=16.5 st  gap=0.23  ok  | The FTC warned in August: that code can lead to a phishing s\n 7  19.16s range=14.5 st  gap=0.43  ok  | Your move: change your shopping passwords tonight.\n 8  22.74s range=17.2 st  gap=0.43  ok  | Good news? You can legally keep it. Just use it carefully.\n 9  26.99s range=17.7 st  gap=0.13  ok  | Would you keep it, or toss it?\n10  28.88s range=15.4 st  gap=0.34  ok  | Send this to someone who opens every box. Because if you got\n{\"median_f0\": 148.5, \"flagged_scenes\": 0}"
  },
  "7_title": {
   "status": "PASS",
@@ -36,8 +36,12 @@
   "note": "work/rocco/r01_brushing/r01_qc_sheet.png - Read it before posting"
  },
  "9_color": {
-  "status": "FAIL",
-  "note": "clipped highlights (big number burnt)"
+  "status": "WARN",
+  "note": "dark/dull frames - brighten bg or less b-roll dimming"
  },
- "verdict": "FAIL"
+ "10_look": {
+  "status": "PASS",
+  "note": "ok  0.64  (layout 0.66, palette 0.59, tone 0.69)  vs 2026-11-22_cart_trick_b3.mp4\nok  0.51  (layout 0.42, palette 0.56, tone 0.64)  vs 2026-11-22_pink_or_blue_b3.mp4\nok  0.55  (layout 0.53, palette 0.55, tone 0.58)  vs 2026-11-23_fees_rank.mp4\nok  0.53  (layout 0.54, palette 0.51, tone 0.54)  vs 2026-11-22_airport_cap_b4.mp4\nLOOK_CHECK: PASS"
+ },
+ "verdict": "PASS"
 }
