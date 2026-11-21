@@ -31,7 +31,8 @@ QOIDA (har chat, har vazifa sessiyasi, Financier ham, Rocco ham):
 | Xarita insert | iart map-animation | work/pilot_map/map_insert.py; docs/skills/iart-motion/ |
 | Grafik, kinetik matn, tushuntiruvchi animatsiya | iart-motion (data-animation, kinetic-typography, explainer-video) | docs/skills/iart-motion/ |
 | Ovoz effektlari (musiqa YO'Q) | pyfxr palitrasi; Lemo sfx | engine/sfx_fxr.py (spec sfx fxr_*); engine/vendor/lemo/audio/sfx.py |
-| Rang, kontrast, o'qiluvchanlik | color-expert + o'lchov | docs/skills/color-expert/, engine/color_check.py |
+| Rang, kontrast, o'qiluvchanlik | color-expert + o'lchov | docs/skills/color-expert/, engine/color_check.py palette|frames; qoidalar notes/2026-11-21_color.md |
+| Fon yorqinligi (A/B) | dvigatel v6.9 | spec "bg_bright": 1.0–1.5 |
 | Harakat va dizayn tamoyillari | emil-skills, impeccable | docs/skills/emil-skills/, docs/skills/impeccable/ |
 | Uslubli insert, rejissorlik saboqlari | style library (Lemo) | docs/style_library.md, engine/vendor/lemo/ |
 | Montaj saboqlari | ghost-editor, yt-edit + deadair.py | docs/skills/ghost-editor/, youtube-agent-skill/yt-edit/ |
@@ -43,7 +44,8 @@ QOIDA (har chat, har vazifa sessiyasi, Financier ham, Rocco ham):
 ## C. SIFAT NAZORATI — HAR VIDEO, CHIQARISHDAN OLDIN
 | Tekshiruv | Skill | Buyruq |
 |---|---|---|
-| Hammasi birga | QC darvozasi | engine/qc_gate.py |
+| Hammasi birga (9 qadam, VERDICT PASS shart) | QC darvozasi | python3 engine/qc_gate.py <mp4> --spec <spec> --rendered <r.json> --title "..." --platform shorts |
+| Bosqichma-bosqich xarita (trend→hook→ssenariy→vizual→rang→ovoz→QC→paket→IG→tahlil) | skill xaritasi | docs/skill_map.md |
 | Ovoz matnga mosmi (≥0.86) + oxirgi jumlani ko'z bilan o'qi | voice_check | python3 -I engine/voice_check.py video.mp4 spec.json |
 | Ohang, pauza | prosody_check (Parselmouth) | engine/prosody_check.py |
 | Platforma talablari | check.py | docs/skills/ffmpeg-skill/scripts/check.py --platform shorts|reels|youtube |
@@ -67,6 +69,8 @@ QOIDA (har chat, har vazifa sessiyasi, Financier ham, Rocco ham):
 | Har video ko'rishi (kunlik) | natijalar jadvali | docs/results.md; vidiq_user_videos (5 kredit) — vidiq_user_channels jami soni KECHIKADI |
 | Rocco statistikasi | Rocco'ning o'z vidIQ profili | python3 -I engine/vidiq_rocco.py <tool> '<json>' |
 | Retention tahlili | retention.py; ruptures (sinalmagan) | docs/skills/youtube-agent-skill/yt-retention/; notes/2026-11-21_ruptures-retention.md |
+| Kunlik top/viral tahlil (ikkala kanal) | yt-viral swipe + vidIQ trending/outliers | producer_task 1.9; docs/daily_trends.md; Rocco: docs/rocco_inspiration.md |
+| O'z-o'zidan yaxshilash (har ishga tushishda 1–2 band) | yaxshilash navbati | docs/improvement_backlog.md |
 | Raqobatchi tahlili (har kuni 1 ta) | competitor.md; kuzatuv jadvali | docs/skills/claude-youtube/sub-skills/competitor.md; docs/competitors.md |
 | Izohlardan g'oya | comment-intel, yt-comment | docs/skills/claude-youtube/sub-skills/comment-intel_adityaarsharma.md |
 | Kanal auditi | audit.md, yt-audit, ig-audit | docs/skills/claude-youtube/sub-skills/audit.md va b. |

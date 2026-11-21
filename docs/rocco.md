@@ -12,14 +12,14 @@ SKILLAR: har ish oldidan `docs/skills/INDEX.md` — Rocco uchun ham majburiy (ss
 | Kanal kalit so'zlari / auditoriya | 2026-11-21 18:47: "velox" olib tashlandi; qo'yildi: scam alerts, how to spot a scam, scam red flags, phishing text, fraud prevention, online safety, protect parents from scams, scam awareness, text message scams, phone scams. Auditoriya: "kanal bolalar uchun emas" |
 | Akkaunt | Kanal velox.int.logistics@gmail.com Google akkauntida (Chrome'da kirilgan). Studio'da "Страна проживания" = AQSh deb turibdi — chat o'zgartirmadi; haqiqiy yashash davlati bo'lishi kerak (Shohjahon qarori) |
 | Post qilish vositasi | Buffer (bepul) ulandi 2026-11-21; env BUFFER_API_KEY; api.buffer.com ochiq; engine/buffer_post.py — draft sinovi o'tdi va o'chirildi |
-| Rocco ovozi (ElevenLabs) | YARATILMAGAN — ElevenLabs limiti bo'yicha qaror kutilmoqda (4-bo'lim) |
+| Rocco ovozi (ElevenLabs) | YARATILMAGAN — qaror bor (Financier uzun videosi qisqartirildi, 1.5); navbatda: docs/improvement_backlog.md 1-band |
 | vidIQ | ULANDI 2026-11-21 (alohida vidIQ profili, Free, 150 kredit, yangilanish 2026-12-21; kanal UCUyPbjsSFdWKnC4nVRDhOiA). Kalit env VIDIQ_API_KEY; `python3 -I engine/vidiq_rocco.py <tool> '<json args>'` (sessiyadagi tayyor vidIQ vositalari — Financier profili, Rocco uchun ISHLATILMAYDI) |
 | Chiqqan / rejalashtirilgan video | 0 |
 
 ## 1.5 MAQSAD VA QARORLAR (Shohjahon, 2026-11-21 19:xx)
 - MAQSAD: 1 hafta ichida 15 mln ko'rish. Claude'ning baholashi (Shohjahonga aytildi): yangi kanal uchun real emas, kafolatlanmaydi; sun'iy oshirish (bot, sotib olish) TAQIQ. Shunga qaramay eng yuqori ehtimolli yo'l bilan ishlanadi: shu hafta Black Friday / Cyber Monday xarid firibgarliklari, kuniga 3–4 Short, "ota-onangga yubor" ulashish uslubi, har kuni Rocco vidIQ tahlili va moslashuv. Har kuni haqiqiy raqam yoziladi.
 - ElevenLabs: Financier uzun videosi haftasiga 2 taga tushirildi (producer_task) — bo'shagan belgi Rocco ovoziga. Rocco ovozi va videolari BOSHLANADI.
-- KANAL SOZLAMALARI: Shohjahon — "o'zing sozla". Holat 2026-11-21: vidIQ ko'rsatadi — tavsif bo'sh, avatar standart. Avatar/banner/tavsifni o'zgartirish uchun YouTube Studio login yoki YouTube Data API OAuth kerak — sessiyada yo'q (vidIQ va Buffer'da kanal brending funksiyasi yo'q). Imkon paydo bo'lsa (OAuth token, brauzer) — darhol o'zi qo'yadi. Shohjahon 2026-11-21: "menga ish qildirma" → bu haqda QAYTA SO'RALMAYDI; kanal tavsifi o'rniga har video tavsifida 1 qator kanal haqida ("Rocco spots scams so you don't fall for them").
+- KANAL SOZLAMALARI: Shohjahon — "o'zing sozla". → BAJARILDI 2026-11-21 18:45 chat sessiyasida (Chrome orqali, 1-jadval). Saboq: brauzer ishi vazifa sessiyasida yo'q — docs/night_order.md ga "CHAT UCHUN" buyurtma yoziladi (INDEX G). Shohjahon 2026-11-21: "menga ish qildirma" → bu haqda QAYTA SO'RALMAYDI; kanal tavsifi o'rniga har video tavsifida 1 qator kanal haqida ("Rocco spots scams so you don't fall for them").
 - vidIQ eslatma: get_channels_by_ids 5 kredit oladi (bepul emas).
 
 ## 2. QABUL QILINGAN QARORLAR
