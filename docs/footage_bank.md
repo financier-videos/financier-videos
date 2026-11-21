@@ -47,6 +47,8 @@ Yo'l: 1 = aynan aytilgan narsa, 2 = masshtab/taqqos, 3 = metafora, 4 = kayfiyat.
 | `city_night` | Tungi shahar tepadan, chiroqlar | katta iqtisod, 'butun shahar', GTA shahar kayfiyati | 4 | [Suarez Media](https://www.pexels.com/video/40937394/) |
 | `city_fireworks` | Tungi shahar, mushak | rekord, chiqish kuni | 4 | [JeetsVids](https://www.pexels.com/video/29025308/) |
 | `gamepad_hands` | Divanda qo'lda geympad, yorug' (logo ko'rinsa — kesib olinadi) | o'yin savdosi (GTA 6 mavzulari) | 1 | [Ron Lach](https://www.pexels.com/video/7855852/) |
+| `typing_keys` | Klaviaturada terayotgan qo'llar, yorug' | parol, login | 1 | [MELQUIZEDEQUE ALMEIDA](https://www.pexels.com/video/34124550/) |
+| `laptop_phone` | Noutbuk + telefon, yorug' | yuklab olish, havola | 1 | [RDNE Stock project](https://www.pexels.com/video/10374892/) |
 
 ## Rad etilganlar (ishlatilmaydi) va sababi
 

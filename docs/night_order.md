@@ -219,3 +219,16 @@ Shohjahon: ovoz yaxshilandi, lekin grafika buzildi (subs_r03: yarim ekran bo'sh 
    tekshirilsin; bo'sh panel yoki aloqasiz lavha bo'lsa — chiqishidan oldin qayta render, bo'lmasa o'sha video ushlab turiladi.
 4. Tavsif oxiriga `Footage: Pexels — <mualliflar>`.
 5. Hisobotda har video uchun 10 kadrlik varaq (`docs/looks_samples/`) — chat ko'rib tasdiqlaydi.
+
+
+## KO'RIK №2 — rocco_rc04b_free_gta_pc.mp4 (2026-11-22, chat; 24 kadr bo'yicha, ovoz eshitilmagan)
+
+Yaxshi: yorug', 3 personaj, suhbat, hazil har 3–4 s, 26 kesim, split hook, Slick yutqazadi, himoya qadami bor. Eski uslubdan ancha yuqori.
+CHIQISHDAN OLDIN TUZATILSIN (4 ta qo'shimcha lavha zaif, qolgani tegilmaydi):
+1. "SHADY LINK" (qorong'i ko'k xira barmoq) → `phone_scroll` (bank), qizil doira ekrandagi havola ustida.
+2. "PS5 + XBOX ONLY" (ko'k shisha bino — mavzuga aloqasiz) → `gamepad_hands` (bank; logo ko'rinsa kesib olinadi).
+3. "INSTALLING…?" (yashil chiziq) → `laptop_phone`; "steals your passwords" so'zida `typing_keys`.
+4. "OFFICIAL STORE ONLY" (savdo markazi olomoni, xira, do'kon yozuvlari ko'rinadi) → o'z multfilm "do'kon kartasi" buyumi yoki `online_card`; yakuniy kartada ham mall o'rniga yorug' xona.
+5. Rocco bir necha kadrda burchakda mitti (~1/5) — gapirayotganda ≥ 1/3 kadr.
+6. Ekrandagi 'PLAYSTATION 5 / XBOX SERIES' — faqat matn (logo emas) qolsin; manba satri qo'shilsin (Take-Two press-relizi, 2026-11-20).
+Tuzatilgach 10 kadrlik varaq → chat tasdiqlaydi → Buffer.

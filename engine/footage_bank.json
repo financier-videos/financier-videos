@@ -328,5 +328,27 @@
   "use_for": "o'yin savdosi (GTA 6 mavzulari)",
   "route": 1,
   "ok": true
+ },
+ {
+  "key": "typing_keys",
+  "pexels_id": "34124550",
+  "mp4": "https://videos.pexels.com/video-files/34124550/14469547_1080_1920_30fps.mp4",
+  "page": "https://www.pexels.com/video/34124550/",
+  "author": "MELQUIZEDEQUE ALMEIDA",
+  "shows": "Klaviaturada terayotgan qo'llar, yaqin, yorug'",
+  "use_for": "parol, login, 'parollaringni o'g'irlaydi'",
+  "route": 1,
+  "ok": true
+ },
+ {
+  "key": "laptop_phone",
+  "pexels_id": "10374892",
+  "mp4": "https://videos.pexels.com/video-files/10374892/10374892-hd_1080_1920_24fps.mp4",
+  "page": "https://www.pexels.com/video/10374892/",
+  "author": "RDNE Stock project",
+  "shows": "Noutbukda ishlash, yonida telefon, yorug'",
+  "use_for": "yuklab olish, havolani bosish, 'nimani yuklayapman?'",
+  "route": 1,
+  "ok": true
  }
 ]
