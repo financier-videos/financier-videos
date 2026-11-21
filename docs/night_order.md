@@ -143,3 +143,10 @@ Shohjahon 21:27: "hamma narsani yangi ishlaydiganiga almashtir, videolarni boshq
 4. Yangi videolar: script_bank T-01…T-05 (GTA 6, muddat 23-noy 15:00 UTC) va V-01…V-05 — kuniga 8 slot (sprint_10d.md), aralashma script_rules v2.1.
 5. Birinchi 3 ta yangi video chiqishi bilan: har biridan 10 kadrlik kontakt-varaq docs/looks_samples/ ga + changes.md ga qator — chat (Trade) eski 8 tasi bilan yonma-yon tekshiradi va Shohjahonga ko'rsatadi.
 6. Ulgurmagan har band: "QILINMADI: sababi, qachon" — shu yerga.
+
+### BUYURTMA 7 ga TUZATISH — NAVBAT TARTIBI (chat Trade, 2026-11-21 16:31 UTC; Shohjahon 21:30: "hozir trenddagi mavzularni birinchi qilish foydaliroq emasmi?") — USTUN
+TREND BIRINCHI. Tartib: (1) trend videolari — umri 48 soat; (2) sanaga bog'liq (Black Friday R-05 — 27-noyabrgacha); (3) yangi doimiy formatlar V-01…V-05; (4) eski mavzularni qayta yasash R-01…R-08 (ular eskirmaydi — kutishi mumkin).
+- Eng yaqin slotlar (22-noy 02:00 va 05:00 Toshkent): T-02 (mikro "$43,866 Every Second" — eng tez yasaladi) va T-01 ("How Big Is $3.79 Billion in ONE Day?"). Shu slotlardagi eski postlar (no seat, subscriptions) keyinga SURILADI.
+- 22-noy kun davomida: T-03 (Financier), T-04 va T-05 (Rocco, Buffer). Hammasi 23-noy 15:00 UTC gacha; kech qolgani bekor.
+- Dvigatelning yangi imkoniyati (shots/subtitr/fullbleed) trend slotiga ulgurmasa: trend videosi baribir chiqadi — mavjud dvigatelda, lekin yangi ssenariy, ≥40% yorqin to'liq ekranli lavha (bg_bright bilan) va script_check PASS bilan. Trendni kutib o'tkazib yuborma.
+- DOIMIY QOIDA: har ishga tushishda avval trend_radar ning oxirgi skani; trend videosi bor bo'lsa — o'sha kunning BIRINCHI slotlari unga.

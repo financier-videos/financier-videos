@@ -1,6 +1,8 @@
 # TREND RADARI — YouTube va Instagram (Shohjahon 2026-11-21 19:05)
 Shohjahon: "YouTube va Instagram'ni kuzatib bor, eng tez o'sayotgan va trendga chiqayotgan mavzu va videolarni top, shu bo'yicha kontent qilaylik. Faqat 2 kanal emas — juda ko'p kanal ochib rivojlantiramiz, lekin faqat eng trend, eng tez, eng ko'p ko'rilayotgan, eng yangi g'oyalar bilan."
 
+## USTUVORLIK (2026-11-21 21:30): trend videolari har doim BIRINCHI slotlarga (umri 48 soat); doimiy mavzular va qayta yasashlar keyin.
+
 ## QOIDA — HAR KUNI (B ishida; sprint davomida A dan OLDIN)
 1. SKAN (kuniga 1 marta, natija shu faylga jadval bo'lib yoziladi):
    - (2026-11-21 21:16 dan: vidIQ Pro 2 500 kredit — byudjet producer_task (3) bandida; skan kuniga 1 emas, 2 marta; g'oliblarning transkripti o'qiladi)
