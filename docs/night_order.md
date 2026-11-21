@@ -150,3 +150,8 @@ TREND BIRINCHI. Tartib: (1) trend videolari — umri 48 soat; (2) sanaga bog'liq
 - 22-noy kun davomida: T-03 (Financier), T-04 va T-05 (Rocco, Buffer). Hammasi 23-noy 15:00 UTC gacha; kech qolgani bekor.
 - Dvigatelning yangi imkoniyati (shots/subtitr/fullbleed) trend slotiga ulgurmasa: trend videosi baribir chiqadi — mavjud dvigatelda, lekin yangi ssenariy, ≥40% yorqin to'liq ekranli lavha (bg_bright bilan) va script_check PASS bilan. Trendni kutib o'tkazib yuborma.
 - DOIMIY QOIDA: har ishga tushishda avval trend_radar ning oxirgi skani; trend videosi bor bo'lsa — o'sha kunning BIRINCHI slotlari unga.
+
+### BUYURTMA 7 ga QO'SHIMCHA — ROCCO BUGUN (chat Trade, 2026-11-21 16:33 UTC; Shohjahon 21:32: "Rocco'ning ham videosini bugunning o'zida tayyorla")
+- r01 (brushing) tayyor va Buffer'da 21-noy 17:00 ET — chat ko'rib chiqdi: look_check PASS (Financier'ga 0.55–0.64), lavha 5/10, −14 LUFS tekshiruvi qc da. O'zgartirish shart emas.
+- BUGUNGI ishga tushishda (23:17 Toshkent) Financier T-02/T-01 bilan BIR QATORDA: Rocco T-04 "GTA 6 on PC? It's a Trap" (script_bank) — render, QC, Buffer'ga 22-noy eng yaqin bo'sh slotga (r01 dan kamida 3 soat keyin). T-05 (mikro) — 22-noy kun davomida.
+- Rocco uchun ham: har ≤2 s yangi kadr (10 sahna/34 s kam — keyingisida ≥17 kadr), subtitr 1–3 so'z, 1-kadrda to'liq hook yozuvi.
