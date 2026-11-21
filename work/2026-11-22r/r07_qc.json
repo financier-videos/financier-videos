@@ -1,0 +1,59 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    45.6 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.2 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -14.2 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 12.5 Mbit/s, 30.6s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 0.982,\n \"missing\": [\n  \"cost\"\n ],\n \"extra\": [\n  \"costs\"\n ],\n \"heard\": \"Same razor, one pink, one blue. Which one costs more? Blue, men's stuff costs more. A New York City study, checked 794 products. The women's version costs more 42% of the time. The men's 18%. Wait. So the pink tax is real. In that study, women's products cost 7% more on average. Personal care? 13%. Same plastic? Different paint job. Would you just buy the blue one?\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "\n 2   4.32s range=16.1 st  gap=0.29  ok  | Blue? Men's stuff costs more.\n 3   6.43s range= 9.6 st  gap=0.32  ok  | A New York City study checked seven hundred ninety-four prod\n 4  11.42s range=15.0 st  gap=0.29  ok  | The women's version cost more forty-two percent of the time.\n 5  17.65s range=12.0 st  gap=0.43  ok  | Wait... so the pink tax is real.\n 6  19.94s range=15.2 st  gap=0.3  ok  | In that study, women's products cost seven percent more on a\n 7  26.50s range= 6.4 st  gap=0.31  ok  | Same plastic. Different paint job. Would you just buy the bl\n{\"median_f0\": 247.0, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 94"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/2026-11-22r/r07_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "PASS",
+  "note": "ok  0.28  (layout 0.41, palette 0.11, tone 0.27)  vs 2026-11-23_cart_r06.mp4\nok  0.60  (layout 0.93, palette 0.04, tone 0.84)  vs r05_bfcm.mp4\nok  0.56  (layout 0.84, palette 0.05, tone 0.82)  vs 2026-11-22_airport_r04.mp4\nok  0.29  (layout 0.45, palette 0.13, tone 0.22)  vs 2026-11-22_gta_timeline.mp4\nLOOK_CHECK: PASS"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "20 cuts in 30.6 s (need >= 15; engine 'shots' / 'auto_shots')"
+ },
+ "12_script": {
+  "status": "PASS",
+  "note": "r07_pink.json                      words  73 scenes  7 broll 7 look split     line2 \"blue\" end \"one\"\nr06_cart.json                      words  74 scenes  7 broll 3 look paper     line2 \"blame\" end \"stop\"\nr05_bfcm.json                      words  78 scenes 10 broll 9 look split     line2 \"black\" end \"monday\"\nr04_airport.json                   words  67 scenes  6 broll 3 look split     line2 \"in\" end \"paid\"\nt03_timeline.json                  words  61 scenes  7 broll 4 look paper     line2 \"the\" end \"series\"\nSCRIPT_CHECK: PASS"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: script_rules guess_reveal, ikkinchi ovoz (Jessica), comedy (flip, jawdrop, deadpan; 'pay later... a lot later', 'different paint job'), looks split, Pixabay 4 yo'l, qc_gate, look_check, script_check, voice_check, prosody, title.py, color_check; ishlatilmadi: hookscore (hook script_bank R-xx dan), vidIQ (kredit tejaldi)"
+ },
+ "verdict": "PASS"
+}

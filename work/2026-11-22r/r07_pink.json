@@ -1,0 +1,138 @@
+{
+ "format": "short",
+ "sfx": true,
+ "look": "split",
+ "split_colors": [
+  "#E8418C",
+  "#2F6FEB"
+ ],
+ "captions": "words",
+ "headline": "hook",
+ "auto_shots": 1.8,
+ "structure": "guess_reveal",
+ "source": "Source: NYC Department of Consumer Affairs, From Cradle to Cane (Dec 2015)",
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
+ },
+ "voices": {
+  "guest": {
+   "voice_id": "cgSgspJ2msm6clMCkdW9",
+   "label": "Guest (Jessica, ElevenLabs premade)",
+   "settings": {
+    "speed": 1.05
+   }
+  }
+ },
+ "scenes": [
+  {
+   "text": "Same razor. One pink, one blue. Which one costs more?",
+   "head": "SAME RAZOR. DIFFERENT PRICE.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r/shave.mp4",
+     "at": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r/mall.mp4",
+     "at": 1.8
+    }
+   ]
+  },
+  {
+   "text": "Blue? Men's stuff costs more.",
+   "voice": "guest",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r/crowd.mp4",
+     "at": 0
+    }
+   ]
+  },
+  {
+   "text": "A New York City study checked 794 products.",
+   "say": "A New York City study checked seven hundred ninety-four products.",
+   "stat": "794",
+   "show_source": true,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r/mall.mp4",
+     "at": 0
+    }
+   ]
+  },
+  {
+   "text": "The women's version cost more 42% of the time. The men's? 18%.",
+   "say": "The women's version cost more forty-two percent of the time. The men's? Eighteen percent.",
+   "vs": {
+    "left": "42%",
+    "left_label": "Women's costs more",
+    "right": "18%",
+    "right_label": "Men's costs more",
+    "win": "left",
+    "at": [
+     0.4,
+     2.6
+    ],
+    "vs_at": 1.6,
+    "left_color": "#FFFFFF",
+    "right_color": "#FFFFFF"
+   },
+   "show_source": true,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r/mall.mp4",
+     "at": 0,
+     "start": 3
+    }
+   ]
+  },
+  {
+   "text": "Wait... so the pink tax is real.",
+   "voice": "guest",
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "jawdrop",
+    "act_at": 0.2
+   },
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r/shave.mp4",
+     "at": 0
+    }
+   ]
+  },
+  {
+   "text": "In that study, women's products cost 7% more on average. Personal care: 13%.",
+   "say": "In that study, women's products cost seven percent more on average. Personal care: thirteen percent.",
+   "stat": "+13%",
+   "show_source": "NYC stores, 2015",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r/shave.mp4",
+     "at": 0
+    }
+   ]
+  },
+  {
+   "text": "Same plastic. Different paint job. Would you just buy the blue one?",
+   "land": 0.3,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r/mall.mp4",
+     "at": 0,
+     "start": 5
+    }
+   ],
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner",
+    "act": "deadpan",
+    "act_at": 1.2
+   }
+  }
+ ]
+}
