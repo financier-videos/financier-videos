@@ -76,6 +76,7 @@ QOIDA (har chat, har vazifa sessiyasi, Financier ham, Rocco ham):
 | Kanal auditi | audit.md, yt-audit, ig-audit | docs/skills/claude-youtube/sub-skills/audit.md va b. |
 | Kunlik o'rganish yozuvi (gipoteza → sinov → raqam) | o'sish jurnali | docs/growth_log.md |
 | 10 kunlik sprint qoidalari | sprint | docs/sprint_10d.md |
+| Trend topish (har kuni), yangi kanal nomzodlari | trend radari | docs/trend_radar.md |
 
 ## F. TOPISH VA ESLASH
 | Vaziyat | Skill / vosita | Qayerda |

@@ -8,6 +8,8 @@ SHOHJAHON KO'RSATMALARI: kontentni o'zing reja qil va o'zing chiqar, "ha"sini ku
 
 **SKILLAR: har ish oldidan `docs/skills/INDEX.md` ni o'qi — mos qatorlar majburiy; hisobotda "Skillar: … ; ishlatilmadi: … (sababi)" qatori bo'lsin. Yangi skill o'sha sessiyada repoga va INDEX ga yoziladi.**
 
+**TREND RADARI: har kuni `docs/trend_radar.md` bo'yicha 1 skan (YouTube + Instagram), klaster, filtr va O'SHA KUNI qaror; trendga 48 soat ichida kiriladi. Bugungi qaror (2026-11-21): Financier — 2 ta "GTA 6 raqamlarda" Short, Rocco — "GTA 6 firibgarliklari" Short (faqat manbali).**
+
 ## QAT'IY CHEGARALAR
 (0) KONTENT XAVFSIZLIGI: yalang'ochlik, behayo, shahvoniy, noqonuniy narsa yo'q (kadr, matn, mavzu). Qimor targ'iboti, firibgarlik sxemalari, soliqdan qochish, giyohvand, qaroqchilik — taqiq (faqat ogohlantiruvchi fakt). So'kinish yo'q. B-roll preview'ini tekshir.
 (1) Halollik: har fakt manbali (nom, sana); prognoz — prognoz; afsona — afsona. Moliyaviy maslahat yo'q. Raqobatchi matnini ko'chirma.
