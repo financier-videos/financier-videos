@@ -35,7 +35,7 @@ TREND (2026-11-21, docs/trend_radar.md): GTA 6 shu hafta eng tez o'sayotgan mavz
 - JADVAL: boshida kuniga 1 Short (2 hafta), natijaga qarab 2. Financier ustuvor.
 
 ## 3. MAJBURIY QOIDALAR (Shohjahon, 2026-11-21 13:2x)
-- Behayo kontent yo'q; musiqa yo'q (ovoz + sintez sfx); ochiq kiyimdagi ayollar yo'q → amalda odamli b-roll UMUMAN yo'q (narsalar, ekranlar, shahar, tabiat, grafika), har klip kadr-kadr ko'riladi.
+- Behayo kontent yo'q; musiqa yo'q (ovoz + sintez sfx); ochiq kiyimdagi ayollar yo'q. ODATIY kiyimdagi odamlar lavhada RUXSAT (Shohjahon 2026-11-21 20:37 aniqlik kiritdi; avvalgi "odamli b-roll umuman yo'q" talqini bekor) — qoida: producer_task "LAVHADA ODAMLAR"; har klip kadr-kadr ko'riladi; tanib bo'ladigan yaqin yuz "firibgar/jabrlanuvchi" rolida ko'rsatilmaydi.
 - Financier'ning QAT'IY CHEGARALARI (producer_task) to'liq: manbali fakt, real odam yuzi/ovozi yo'q, begona kontent yo'q, maslahat emas.
 - "FOYDALI BO'LSIN": har Short — bitta aniq himoya qadami rasmiy manbadan (FTC, FBI IC3, CFPB, AARP), tavsifda manba. Render oldidan: "tomoshabin ertaga o'zini/ota-onasini qanday himoya qiladi?" — bir jumlada javob bo'lmasa, chiqmaydi.
 - Ohang xotirjam va hazilli, panika thumbnail yo'q, aldangan odam masxara qilinmaydi; tabiiy ulashish chaqiruvi ("Send this to someone who still answers unknown numbers").
