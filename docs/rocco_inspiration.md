@@ -11,6 +11,20 @@ Shohjahon 2026-11-21: "videolarni har xil qil; eng tez o'sgan kanallar va uchib 
 | Juda qisqa (5–30 s) | Ko'p outlier 11–30 s | Har 4-video ≤15 s "tez bayroq" |
 Kuzatuv: nishadagi yangilik kanallari (WCPO, WRTV, CBS) quruq — 1–4K ko'rish; hazilsiz ogohlantirish ishlamaydi. Bizning bo'shliq: HAZIL + ANIQ HIMOYA.
 
+## 1b. SKILLAR BILAN QAYTA TAHLIL (2026-11-21 kech; yt-viral swipe.py + competitor.md A/C/D + ideate.md; 25 kredit)
+yt-viral (kanalning O'Z medianasiga nisbatan, 4 kanal × 50 Short):
+| Ko'paytma | Ko'rish | Kanal (median) | Video turi |
+|---|---|---|---|
+| 340x | 1.54M | Kruz_anime 3D (4.5K) | 3D anim hazil sahnachasi |
+| 294x | 634K | explicable TV anim (2.2K) | animatsion firibgar "kirib keldi" |
+| 90x | 14.5M | KarolkaShow (161K) | "Answering a SCAM call" — qo'ng'iroqqa javob, hazil |
+| 58x / 38x | 264K / 173K | Kruz_anime | "911 ga qo'ng'iroq", "scammer meets the wrong guy" |
+| 26x | 3.6M | bekifaayati (140K) | "Car Parking Scam" — 2–3 so'zli sarlavha, izohli kundalik hiyla |
+UMUMIY STRUKTURA (yt-viral "bitta narsa"): QO'NG'IROQ/SUHBAT SAHNASI — firibgar gapiradi, qahramon kutilmagan javob beradi, firibgar asabiylashadi → kulgi; uzunlik 20–60 s. Sarlavha formulasi aniqlanmadi (hashtag sarlavhalar) — sarlavhalar QISQA: "<Narsa> Scam", "Answering a SCAM call".
+competitor.md D (auditoriya, "scammer meets the wrong guy" izohlari): eng ko'p layk — absurd detal va iqtibos qilinadigan ibora ("on top of my own OTP" — bir necha marta takrorlangan); "firibgar hamkorlik qilmasang jahli chiqadi" — kutilgan yakun; bitta izoh: "kulgili, lekin foydali ham — firibgar qanday ishlashini ko'rsatadi". → Rocco'ga: har videoda 1 iqtibos qilinadigan ibora + 1 absurd fon detali (izoh tortadi) + foyda.
+competitor.md C (format bo'shlig'i): AQSh auditoriyasi uchun hazilli animatsion "qo'ng'iroq" Shortlari deyarli yo'q (top kanallar NG/PL/IN); AQSh yangilik kanallari quruq. → Rocco bo'shlig'i: AQSh firibgarliklari, hazilli anim qo'ng'iroq + rasmiy himoya qadami.
+ideate.md (10 g'oya, ball = trend × CTR × ishlab chiqarish × nisha): 1-o'rin format 1 "ROCCO vs SCAMMER" qo'ng'iroq sahnasi. Birinchi 3 video: (1) "Answering the 'Your Package Is Held' Call" — brushing/yetkazish; (2) "Bank Fraud Department Scam" — Rocco "xavfsizlik bo'limi"ni ag'daradi, qadam: kartangiz orqasidagi raqamga o'zing qo'ng'iroq qil (FTC/CFPB); (3) "Gift Card Scam" ≤15 s tez bayroq.
+
 ## 2. FORMAT ROTATSIYASI (ketma-ket ikki video bir xil emas)
 1. ROCCO vs SCAMMER — qo'ng'iroq/SMS chat, Rocco hazil bilan ag'daradi (scambait komediyasi), oxirida qadam.
 2. HIYLA OCHILDI — bitta narsa (paket, QR stiker, sovg'a karta) yaqin plan, "qarang..." → ochilish.
