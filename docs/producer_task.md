@@ -108,5 +108,11 @@ Sen uch kanalning egasidek ishlaysan: YouTube @FINANCIER4241, Instagram financie
 - SARLAVHA GIPOTEZASI (2026-11-21, 9 video, kichik tanlanma — isbot emas): sarlavhasida ANIQ RAQAM bor Shortlar 185 / 218 / 1,134 ko'rish oldi ("$1 Trillion in 61 Days", "Guess What a 1% Fee Costs You", "…17% Pricier"); raqamsiz "sir" sarlavhalar 11–31 ("The $4.99 Chicken Mystery" hali 18 soatlik, "They Raised the Price. Sales Went UP.", "Black Friday TVs Aren't What You Think"). Keyingi 8 Shortda 6 tasi raqamli sarlavha + birinchi kadrda o'sha raqam, 2 tasi raqamsiz (nazorat). Natijani results.md da tekshir.
 - SHOHJAHONGA KUNLIK HISOBOT (C oxirida, HAR KUNI, 6 qatordan oshmasin, faqat raqam va fakt): (1) kechagi videolar ko'rishi va eng yaxshisi; (2) jami ko'rish va obunachi, kechagidan farqi; (3) bugun qaysi raqobatchi ko'rildi va undan nima olindi; (4) qaysi sinov yutdi/yutqazdi; (5) ertaga nima o'zgaradi; (6) Shohjahondan kerak narsa (bo'lsa). "Hammasi yaxshi" degan umumiy gap YO'Q.
 
+## 1.8) RED FLAG ROCCO (Shohjahon 2026-11-21 19:xx: "1 haftada 15 mln ko'rishga olib chiq") — `docs/rocco.md` ni o'qi va aynan bajar
+- Har A va B ishida, Financier ishidan KEYIN: Rocco uchun 2 Short (kuniga 3–4). Birinchi ishda bir marta: ElevenLabs'da Rocco ovozini yarat (voice design; Buck ovozlaridan farqli; voice_id ni rocco.md ga yoz).
+- Mavzu shu hafta: Black Friday / Cyber Monday / bayram xarid firibgarliklari (rasmiy manba: FTC, FBI IC3, AARP, CFPB). rocco.md 3-bo'lim qoidalari MAJBURIY (odamli b-roll yo'q, faqat himoya, bitta aniq qadam).
+- QC — Financier'dagi barcha tekshiruvlar. Post: `engine/buffer_post.py schedule` (Buffer, bir vaqtda ≤10 rejalashtirilgan). vidIQ — faqat `engine/vidiq_rocco.py` (Rocco krediti).
+- C ishida: Rocco raqamlari (vidiq_rocco.py vidiq_channel_analytics / user_videos) → rocco.md "KUNLIK RAQAMLAR"; eng yaxshi hook ertaga 2 baravar.
+
 ## 2) HAR REJIM OXIRIDA
 `docs/youtube_playbook.md` ni yangila ("Yangilangan" sanasi, jurnalga 1–3 qator, 14 kundan eskisini xulosaga; ≤200 qator), `git pull --rebase origin media`, commit, `git push origin HEAD:media`. Oxirgi javobda "Ochiq qolganlar" (faqat bo'lsa).
