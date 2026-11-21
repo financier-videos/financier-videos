@@ -164,3 +164,14 @@ Avvalgi "odamli lavha umuman olinmaydi" talqini XATO edi (Financier va Rocco ikk
 - Aniq tanib bo'ladigan yaqin yuzni "firibgar", "jabrlanuvchi", "qarzdor" kabi yomon rolda ko'rsatma (Pixabay litsenziyasi va odob) — bunday gapda qo'l, orqadan/uzoqdan plan yoki grafika.
 - Bolalar yaqin plani, logotip/brend, taniqli shaxslar — avvalgidek yo'q.
 pixabay_bg.py filtri shunga o'zgartirildi.
+
+## LAVHA TANLASHDA KENG O'YLASH (Shohjahon 2026-11-21 15:42 UTC: "faqat do'kon-aeroport-kassa emas, hamma narsani ishlat: ko'cha, uy, osmon, yer, koinot... kalta o'ylama, masshtabli o'yla") — MAJBURIY
+Lavha mavzu JOYI bilan cheklanmaydi. Har sahna uchun 4 xil yo'ldan o'yla va eng kuchlisini ol; bir videoda kamida 3 xil yo'l ishlatilsin:
+1. TO'G'RIDAN-TO'G'RI — aytilgan narsaning o'zi.
+2. MASSHTAB — raqamni his qildiradigan tasvir: "$3.79 mlrd" — tungi shahar tepadan, Yer orbitadan, stadion, konteyner porti; "kichik to'lov" — makro tanga, tomchi.
+3. METAFORA — gapning ma'nosi: yashirin to'lov — tuman, aysberg; qarz — ko'chki, botqoq; tejash — unib chiqayotgan nihol (taymlaps); narx o'sishi — raketa uchishi, ko'tarilayotgan suv.
+4. HIS / RITM — kayfiyat beradigan kadr: bo'ron buluti, quyosh chiqishi, okean to'lqini, tungi yo'l, olov, qor.
+MANBA DOIRASI (hammasi ochiq): shahar va ko'cha, uy ichi, tabiat (o'rmon, tog', cho'l, okean, hayvonlar), osmon va ob-havo, KOINOT (NASA — jamoat mulki, images.nasa.gov / svs.gsfc.nasa.gov; NASA logotipi va astronavt yuzlarisiz), dron/aerofoto, makro, taymlaps, sekinlashtirilgan kadr, zavod va mexanizmlar, transport, sport maydonlari (o'yin translyatsiyasi emas), abstrakt (siyoh suvda, zarrachalar, yorug'lik).
+Qo'shimcha bepul manbalar: Pexels, Coverr, Mixkit (litsenziyasini o'qib, tavsifda muallif) — Pixabay'da topilmasa. O'z 3D sahnamiz (Blender) — hech qayerda yo'q kadr uchun.
+TAQIQLAR o'zgarmaydi: behayo/ochiq kiyim, logotip/brend, film/o'yin/TV/sport translyatsiyasi kadri, taniqli shaxslar, yaqin yuz yomon rolda. Metafora faktni buzmasin (raketa — "narx o'sdi" uchun, "siz boyib ketasiz" uchun emas).
+Ketma-ket 5 videoda bir xil lavha turi (masalan faqat do'kon ichi) takrorlanmasin; playbook jadvaliga "yo'l" ustuni (1/2/3/4).
