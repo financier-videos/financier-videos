@@ -162,3 +162,6 @@ BUGUNGI 23:17 ishga tushishda ENG BIRINCHI ISH (Financier trendidan ham oldin, c
 2. r01 ni YANGI qoidada qayta yasa (mavzu va faktlar o'sha: brushing, FTC 2026-08): tuzilma client_dialogue yoki why_story (voqea o'rtasidan: "A box lands on your porch. Your name. You ordered nothing."), javob/himoya qadami oxirida; ≥17 kadr / 34 s (har ≤2 s yangi tasvir); subtitr 1–3 so'z sinxron; 1-kadrda to'liq hook yozuvi; pastdagi doimiy "CASE FILE" yorlig'i HAR kadrda turmasin (faqat bo'lim almashganda 1.5 s); lavha ≥50% to'liq ekran, 4 yo'ldan kamida 3 tasi (to'g'ridan-to'g'ri: quti/eshik; masshtab: saralash markazi dron; metafora: qarmoq/tuzoq; his: tungi ko'cha).
 3. qc_gate + look_check + script_check PASS → Buffer'ga 22-noy eng yaqin slot. Ulgurmasa — post yo'q, sababi shu yerga.
 4. Keyin T-04 (GTA 6 PC tuzog'i) — o'sha qoidada.
+
+### JARAYON (vazifa sessiyasi, 2026-11-21 23:20 Toshkent) — ROCCO r01
+- 1-band BAJARILDI: Buffer'dagi r01 posti (id 6b01d6af8bd84d5966080972 — eski 6b01befd… o'rnida qayta qo'yilgan, 21-noy 22:00 UTC) O'CHIRILDI. Buffer'da rejalashtirilgan post yo'q. Video fayl repoda qoladi.
