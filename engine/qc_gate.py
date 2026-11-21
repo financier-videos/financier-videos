@@ -14,6 +14,7 @@ Steps (skill -> check):
   5 engine/voice_check.py        ASR transcript vs spec (>= 0.86); prints "heard" - READ the numbers and the last sentence
   6 engine/prosody_check.py      MONOTONE / FLAT_Q / NO_LAND
   7 yt-package/title.py          title lint (>= 80, number in first 40 chars if the title has one)
+  10 engine/look_check.py      --prev <last 4 videos>: similarity >= 0.70 = FAIL (docs/looks.md)
   9 engine/color_check.py frames  CLIPPED = FAIL; CRUSHED/DULL = WARN (color skill)
   8 contact sheet                8 frames tiled -> <out>_sheet.png; Claude MUST Read it (12-point visual QC: sharp text,
                                  Buck not covering numbers, nothing cut off, no blocky gradients, no unsuitable frame)
@@ -54,7 +55,7 @@ def main():
     setup()
     ap = argparse.ArgumentParser()
     ap.add_argument("video"); ap.add_argument("--spec"); ap.add_argument("--rendered"); ap.add_argument("--title")
-    ap.add_argument("--thumb"); ap.add_argument("--platform", default="shorts"); ap.add_argument("--out")
+    ap.add_argument("--thumb"); ap.add_argument("--platform", default="shorts"); ap.add_argument("--out"); ap.add_argument("--prev", nargs="*", default=[])
     a = ap.parse_args()
     out = a.out or os.path.splitext(a.video)[0] + "_qc.json"
     R = {}
@@ -184,6 +185,13 @@ def main():
         clipped = "CLIPPED" in o; warn = ("CRUSHED" in o) or ("DULL" in o)
         put("9_color", "FAIL" if clipped else ("WARN" if warn else "PASS"),
             "clipped highlights (big number burnt)" if clipped else ("dark/dull frames - brighten bg or less b-roll dimming" if warn else "exposure and colour OK"))
+
+    # 10 look similarity vs the last 4 published/queued videos (docs/looks.md, engine/look_check.py; >= 0.70 = FAIL)
+    if a.prev:
+        rc, o = run([sys.executable, "-I", os.path.join(ROOT, "engine", "look_check.py"), a.video] + a.prev)
+        put("10_look", "SKIP" if "Traceback" in o else ("PASS" if rc == 0 else "FAIL"), o)
+    else:
+        put("10_look", "SKIP", "no --prev videos given (pass the last 4 videos of this channel)")
 
     st = [r["status"] for k, r in R.items()]
     blocking_skip = any(R[k]["status"] == "SKIP" for k in R if k[0] in "012345")

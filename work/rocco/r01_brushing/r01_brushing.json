@@ -6,7 +6,7 @@
  "style": "rocco",
  "brand": "RED FLAG ROCCO",
  "brand_color": "#FF3B3B",
- "bg_bright": 1.4,
+ "bg_bright": 1.25,
  "bg_mix": 0.8,
  "bg_blur": 2,
  "source": "Source: FTC consumer alert on brushing scams (Aug 2026)",
@@ -96,7 +96,7 @@
    "sfx": [
     "fxr_hurt@0.2"
    ],
-   "bg": "/tmp/fin/bg/rocco_phone1.mp4"
+   "broll": "/tmp/fin/bg/rocco_phone1.mp4"
   },
   {
    "text": "The FTC warned in August: that code can lead to a phishing site.",
@@ -124,7 +124,7 @@
     "fxr_select@0.3",
     "impact@2.0"
    ],
-   "bg": "/tmp/fin/bg/rocco_phone1.mp4"
+   "bg": "/tmp/fin/bg/rocco_box1.mp4"
   },
   {
    "text": "Your move: change your shopping passwords tonight.",
@@ -138,7 +138,7 @@
    "sfx": [
     "fxr_powerup@1.2"
    ],
-   "bg": "/tmp/fin/bg/rocco_phone1.mp4"
+   "broll": "/tmp/fin/bg/rocco_phone1.mp4"
   },
   {
    "text": "Good news? You can legally keep it. Just use it carefully.",
@@ -166,7 +166,7 @@
    "sfx": [
     "ding@0.3"
    ],
-   "bg": "/tmp/fin/bg/rocco_conv.mp4"
+   "broll": "/tmp/fin/bg/rocco_conv.mp4"
   },
   {
    "text": "Send this to someone who opens every box. Because if you got a box you never ordered...",
@@ -177,5 +177,6 @@
    },
    "bg": "/tmp/fin/bg/rocco_door.mp4"
   }
- ]
+ ],
+ "look": "case-file"
 }

@@ -2087,9 +2087,9 @@ def render(spec, wav, total, out, workdir):
                 pa = ease_back(min(1.0, lt / 0.3)) if lt < 0.3 else 1.0
                 pw_, phh = W * 0.62 * pa, H * 0.44 * pa; px_, py_ = (W - pw_) / 2 + (W * 0.08 if masc else 0), H * 0.20
                 fd.rounded_rectangle([px_ - S * 0.012, py_ - S * 0.012, px_ + pw_ + S * 0.012, py_ + phh + S * 0.012], radius=int(S * 0.06), fill=(18, 18, 22, 255))
-                fd.rounded_rectangle([px_, py_, px_ + pw_, py_ + phh], radius=int(S * 0.05), fill=(176, 182, 194, 255))
+                fd.rounded_rectangle([px_, py_, px_ + pw_, py_ + phh], radius=int(S * 0.05), fill=(150, 156, 170, 255))
                 if pa > 0.95:
-                    fd.rectangle([px_, py_ + S * 0.05, px_ + pw_, py_ + S * 0.11], fill=(228, 228, 234, 255))
+                    fd.rectangle([px_, py_ + S * 0.05, px_ + pw_, py_ + S * 0.11], fill=(186, 190, 202, 255))
                     hdr = ph.get("from", "Unknown number"); tw = fd.textlength(hdr, font=f_phone_b)
                     fd.text((px_ + (pw_ - tw) / 2, py_ + S * 0.062), hdr, font=f_phone_b, fill=(30, 30, 36, 255))
                     yy_ = py_ + S * 0.14
@@ -2102,7 +2102,7 @@ def render(spec, wav, total, out, workdir):
                         bw_ = max(fd.textlength(l, font=f_phone) for l in ln_) + S * 0.04
                         flag = isinstance(m_, dict) and m_.get("flag") and lt > m_at + 0.6
                         fd.rounded_rectangle([px_ + S * 0.03, yy_, px_ + S * 0.03 + bw_ * ma, yy_ + bh_ * ma], radius=int(S * 0.03),
-                                             fill=(240, 190, 190, 255) if flag else (214, 217, 224, 255), outline=(ACC + (255,)) if flag else None, width=int(S * 0.006))
+                                             fill=(226, 168, 168, 255) if flag else (196, 200, 210, 255), outline=(ACC + (255,)) if flag else None, width=int(S * 0.006))
                         if ma > 0.9:
                             for k_, l in enumerate(ln_): fd.text((px_ + S * 0.05, yy_ + S * 0.015 + k_ * f_phone.size * 1.25), l, font=f_phone, fill=(20, 20, 24, 255))
                         if flag:
