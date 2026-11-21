@@ -4,7 +4,7 @@ Sabab: 2026-11-21 23:17 C ishida (1) parallel sessiyaning yangi Buffer posti "es
 ## BOSHIDA (hammasi, tartib bilan)
 1. `git pull --rebase origin media`; `git ls-remote origin` — `claude/*` branchlarda media'da yo'q yangi commit bo'lsa `git log` + diff --stat bilan o'qi: kim nima qilyapti (dublikat va to'qnashuv yo'q).
 2. docs/START_HERE.md → docs/changes.md (oxirgi 20) → docs/night_order.md (OCHIQ buyurtmalar) → docs/skills/INDEX.md (mos qatorlar MAJBURIY).
-3. graphify: `pip install --break-system-packages -q graphifyy` + `graphify update .` (ruxsat berilmasa — "QILINMADI: ruxsat" deb yoz).
+3. graphify: `pip install --break-system-packages -q graphifyy` + `graphify update .` — ruxsat .claude/settings.json da (Shohjahon 2026-11-22 qo'shdi; 00:40 da ISHLADI: 3136 tugun). Ish oxirida graphify-out ni commit qil.
 4. ElevenLabs 200? Metricool getScheduledPosts (48 soat) + `engine/buffer_post.py list`.
 5. Trend radari skani (docs/trend_radar.md) — kuniga kamida 1 (sprintda 2).
 6. improvement_backlog — tepadagi OCHIQ band.
