@@ -1,0 +1,484 @@
+{
+ "id": "RC-04c",
+ "title": "Free GTA 6 for PC? Free Cheese.",
+ "structure": "scam-in-action + dialogue",
+ "tail": 3.0,
+ "lines": [
+  [
+   "S",
+   "[whispering] [sneaky] Psst! Hey you! Free GTA Six, for PC! Tonight only!"
+  ],
+  [
+   "P",
+   "[gasps] [excited] Rocco! Rocco! FREE GTA Six! For PC!"
+  ],
+  [
+   "R",
+   "[deadpan] Red flag."
+  ],
+  [
+   "P",
+   "[whiny] But it's FREE!"
+  ],
+  [
+   "R",
+   "[sighs] Red flag."
+  ],
+  [
+   "S",
+   "[fast] [pushy] Just click the link! Trust me! I'm a professional!"
+  ],
+  [
+   "R",
+   "[dryly] Two red flags."
+  ],
+  [
+   "R",
+   "GTA Six is only on PlayStation and Xbox. [pause] There is no PC version."
+  ],
+  [
+   "P",
+   "[confused] ...So what am I downloading?"
+  ],
+  [
+   "R",
+   "[deadpan] A very bad week. It steals your passwords."
+  ],
+  [
+   "P",
+   "[gasps] My passwords?! [panicked] I only have, like, three!"
+  ],
+  [
+   "R",
+   "[warmly] Your move: buy it only in the official console store."
+  ],
+  [
+   "P",
+   "[curious] Wait... what about the FREE one?"
+  ],
+  [
+   "R",
+   "[deadpan] Free cheese... [pause] mousetrap."
+  ],
+  [
+   "P",
+   "[nervous laugh] ...I'm deleting it."
+  ],
+  [
+   "S",
+   "[panicked] Wait, what?! No, no, no, no!"
+  ]
+ ],
+ "shots": [
+  {
+   "line": 0,
+   "from": 0.0,
+   "kind": "split",
+   "bg": "/tmp/fin/bg/rc/pennyroom2.mp4",
+   "bg2": "/tmp/fin/bg/rc/lair2.mp4",
+   "bright2": 1.1,
+   "p": "happy",
+   "s": "sly",
+   "hook": "FREE GTA 6 FOR PC?!"
+  },
+  {
+   "line": 0,
+   "from": 0.55,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc/lair2.mp4",
+   "bg_start": 4,
+   "bright": 1.1,
+   "s": "sly",
+   "msg": "TONIGHT ONLY!!!",
+   "msg_at": 0.2,
+   "blur": 2
+  },
+  {
+   "line": 1,
+   "from": 0.0,
+   "kind": "insert",
+   "bg": "/tmp/fin/bg/rc/ringphone.mp4",
+   "circle": [
+    0.5,
+    0.55,
+    0.32
+   ],
+   "label": "FREE GTA 6??",
+   "who": "p",
+   "p": "happy"
+  },
+  {
+   "line": 1,
+   "from": 0.42,
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc/pennyroom2.mp4",
+   "blur": 3,
+   "p": "happy",
+   "r": "sideeye"
+  },
+  {
+   "line": 2,
+   "from": 0.0,
+   "kind": "flags",
+   "bg": "/tmp/fin/bg/rc/pennyroom2.mp4",
+   "bg_start": 3,
+   "blur": 4,
+   "r": "sideeye",
+   "n": 1,
+   "n_prev": 0,
+   "pop_word": "flag"
+  },
+  {
+   "line": 3,
+   "from": 0.0,
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc/pennyroom.mp4",
+   "blur": 3,
+   "p": "hope",
+   "r": "sideeye"
+  },
+  {
+   "line": 4,
+   "from": 0.0,
+   "kind": "flags",
+   "bg": "/tmp/fin/bg/rc/pennyroom2.mp4",
+   "bg_start": 5,
+   "blur": 4,
+   "r": "sad",
+   "n": 2,
+   "n_prev": 1,
+   "pop_word": "flag",
+   "act": "sigh_sad",
+   "act_at": 0.0,
+   "act_len": 1.15
+  },
+  {
+   "line": 5,
+   "from": 0.0,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc/lair2.mp4",
+   "bg_start": 7,
+   "bright": 1.1,
+   "s": "sly",
+   "blur": 2
+  },
+  {
+   "line": 5,
+   "from": 0.5,
+   "kind": "insert",
+   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
+   "bright": 1.0,
+   "circle": [
+    0.52,
+    0.55,
+    0.22
+   ],
+   "label": "SHADY LINK",
+   "who": "s",
+   "s": "sly",
+   "bg_start": 1
+  },
+  {
+   "line": 6,
+   "from": 0.0,
+   "kind": "flags",
+   "bg": "/tmp/fin/bg/rc/pennyroom2.mp4",
+   "bg_start": 7,
+   "blur": 4,
+   "r": "smug",
+   "n": 4,
+   "n_prev": 2,
+   "pop_word": "flags"
+  },
+  {
+   "line": 7,
+   "from": 0.0,
+   "kind": "insert",
+   "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
+   "circle": [
+    0.63,
+    0.58,
+    0.24
+   ],
+   "label": "PS5 + XBOX ONLY",
+   "card": "CONSOLES ONLY",
+   "who": "r",
+   "r": "point",
+   "bright": 1.0,
+   "bg_start": 1,
+   "rx": 0.25
+  },
+  {
+   "line": 7,
+   "from": 0.45,
+   "kind": "fact",
+   "bg": "/tmp/fin/bg/rc/gamingpc.mp4",
+   "blur": 6,
+   "bright": 1.6,
+   "r": "smug",
+   "title": "GTA 6 IS ON",
+   "rows": [
+    [
+     "PLAYSTATION 5",
+     true
+    ],
+    [
+     "XBOX SERIES",
+     true
+    ],
+    [
+     "PC",
+     false
+    ]
+   ],
+   "stamp": "NO PC VERSION",
+   "stamp_word": "pc",
+   "src": "Source: Rockstar Games / Take-Two, Nov 2026"
+  },
+  {
+   "line": 8,
+   "from": 0.0,
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc/pennyroom.mp4",
+   "bg_start": 4,
+   "blur": 3,
+   "p": "sad",
+   "r": "sideeye"
+  },
+  {
+   "line": 9,
+   "from": 0.0,
+   "kind": "insert",
+   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "circle": [
+    0.4,
+    0.3,
+    0.16
+   ],
+   "label": "DOWNLOADING...?",
+   "who": "r",
+   "r": "sideeye",
+   "bright": 1.0,
+   "bg_start": 1
+  },
+  {
+   "line": 9,
+   "from": 0.3,
+   "kind": "insert",
+   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
+   "circle": [
+    0.4,
+    0.42,
+    0.28
+   ],
+   "label": "YOUR PASSWORDS",
+   "who": "r",
+   "r": "sideeye",
+   "bright": 1.0
+  },
+  {
+   "line": 9,
+   "from": 0.62,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc/lair2.mp4",
+   "bg_start": 2,
+   "bright": 1.1,
+   "s": "sly",
+   "msg": "PASSWORDS: MINE!",
+   "msg_at": 0.3,
+   "blur": 2
+  },
+  {
+   "line": 10,
+   "from": 0.0,
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc/pennyroom2.mp4",
+   "blur": 3,
+   "p": "shock",
+   "r": "sideeye"
+  },
+  {
+   "line": 10,
+   "from": 0.5,
+   "kind": "two",
+   "bg": "/tmp/fin/bg/rc/pennyroom2.mp4",
+   "bg_start": 6,
+   "blur": 4,
+   "p": "nervous",
+   "r": "sideeye",
+   "act": "shrug_confused",
+   "act_at": 0.4,
+   "act_len": 0.95
+  },
+  {
+   "line": 11,
+   "from": 0.0,
+   "kind": "insert",
+   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "circle": [
+    0.66,
+    0.7,
+    0.17
+   ],
+   "label": "OFFICIAL STORE ONLY",
+   "who": "r",
+   "r": "happy",
+   "bright": 1.0,
+   "bg_start": 1,
+   "rx": 0.25
+  },
+  {
+   "line": 11,
+   "from": 0.55,
+   "kind": "store",
+   "bg": "/tmp/fin/bg/rc/pennyroom2.mp4",
+   "blur": 6,
+   "r": "thumbsup"
+  },
+  {
+   "line": 12,
+   "from": 0.0,
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc/pennyroom.mp4",
+   "bg_start": 7,
+   "blur": 3,
+   "p": "hope",
+   "r": "sideeye"
+  },
+  {
+   "line": 13,
+   "from": 0.0,
+   "kind": "trap",
+   "bg": "/tmp/fin/bg/rc/pennyroom2.mp4",
+   "blur": 6,
+   "r": "sideeye",
+   "penny": true,
+   "p": "hope",
+   "snap_word": "mousetrap"
+  },
+  {
+   "line": 14,
+   "from": 0.0,
+   "kind": "two",
+   "bg": "/tmp/fin/bg/rc/pennyroom2.mp4",
+   "bg_start": 8,
+   "blur": 4,
+   "p": "nervous",
+   "r": "sideeye",
+   "act": "deadpan_sideeye",
+   "act_at": 0.4,
+   "act_len": 1.0
+  },
+  {
+   "line": 15,
+   "from": 0.0,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc/lair2.mp4",
+   "bg_start": 5,
+   "bright": 1.1,
+   "s": "panic",
+   "msg": "NOOO!",
+   "msg_at": 0.4,
+   "blur": 2
+  },
+  {
+   "line": 15,
+   "from": 1.0,
+   "kind": "end",
+   "bg": "/tmp/fin/bg/rc/pennyroom.mp4",
+   "blur": 5,
+   "bright": 1.2,
+   "l1": "FREE PC GAME = BAIT",
+   "l2": "OFFICIAL STORE ONLY",
+   "l3": "Send this to someone who'd click it."
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "ding",
+   "gain": 0.3
+  },
+  {
+   "line": 1,
+   "frac": 0.0,
+   "name": "ding",
+   "gain": 0.25
+  },
+  {
+   "line": 2,
+   "word": "flag",
+   "name": "buzzer",
+   "gain": 0.22
+  },
+  {
+   "line": 4,
+   "word": "flag",
+   "name": "pop",
+   "gain": 0.4
+  },
+  {
+   "line": 5,
+   "frac": 0.5,
+   "name": "whip",
+   "gain": 0.3
+  },
+  {
+   "line": 6,
+   "word": "flags",
+   "name": "buzzer",
+   "gain": 0.22
+  },
+  {
+   "line": 6,
+   "word": "flags",
+   "dt": 0.25,
+   "name": "buzzer",
+   "gain": 0.18
+  },
+  {
+   "line": 7,
+   "frac": 0.75,
+   "name": "impact",
+   "gain": 0.3
+  },
+  {
+   "line": 9,
+   "frac": 0.5,
+   "name": "scratch",
+   "gain": 0.25
+  },
+  {
+   "line": 10,
+   "frac": 0.0,
+   "name": "boing",
+   "gain": 0.3
+  },
+  {
+   "line": 11,
+   "frac": 0.1,
+   "name": "ding",
+   "gain": 0.25
+  },
+  {
+   "line": 13,
+   "word": "mousetrap",
+   "name": "bonk",
+   "gain": 0.5
+  },
+  {
+   "line": 15,
+   "frac": 0.6,
+   "name": "wahwah",
+   "gain": 0.35
+  }
+ ],
+ "sources": "Rockstar Games (GTA VI platforms: PlayStation 5, Xbox Series X|S); Malwarebytes (Aug 2026), McAfee, NordVPN GTA 6 scam warnings",
+ "footage": "Pixabay: MrWashingt0n, Openly, u_50q7hv51at, VirtualZero, raitton, gr8effect, Darioguzben, MahNoormnd123, Werni; Pexels: RDNE Stock project, Ron Lach, MELQUIZEDEQUE ALMEIDA, Leeloo The First",
+ "benchmarks": [
+  "JMI-iIpHdt8 scammer calls the wrong person (27x): two locations intercut, scammer is the butt, emotional acting",
+  "ZmaE7zI3fmY gas pump scam (7x): real footage + red circle callouts, split-screen hook",
+  "ANQMfkHNMqc (13x): rapid context switching"
+ ]
+}

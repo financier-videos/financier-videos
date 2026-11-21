@@ -1,0 +1,206 @@
+{
+ "format": "short",
+ "sfx": true,
+ "captions": "words",
+ "headline": "hook",
+ "auto_shots": 1.8,
+ "structure": "guess_reveal",
+ "source": "Source: Adobe Digital Insights, 2026 U.S. holiday forecast (Sep 28, 2026) - forecasts",
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
+ },
+ "voices": {
+  "guest": {
+   "voice_id": "cgSgspJ2msm6clMCkdW9",
+   "label": "Guest (Jessica, ElevenLabs premade)",
+   "settings": {
+    "speed": 1.05
+   }
+  }
+ },
+ "scenes": [
+  {
+   "text": "Black Friday or Cyber Monday: which one makes more online?",
+   "head": "FRIDAY OR MONDAY: GUESS WHO WINS",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
+     "at": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/online_card.mp4",
+     "at": 1.7
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_desk.mp4",
+     "at": 3.2
+    }
+   ],
+   "mascot": {
+    "mood": "smug",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Black Friday. Obviously.",
+   "voice": "guest",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_desk.mp4",
+     "at": 0,
+     "start": 4
+    }
+   ],
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Nope. Cyber Monday: about $15 billion. Black Friday: almost thirteen.",
+   "say": "Nope. Cyber Monday: about fifteen billion dollars. Black Friday: almost thirteen.",
+   "vs": {
+    "left": "$12.9B",
+    "left_label": "Black Friday",
+    "right": "$15.1B",
+    "right_label": "Cyber Monday",
+    "win": "right",
+    "at": [
+     1.2,
+     0.5
+    ],
+    "vs_at": 0.9
+   },
+   "show_source": "Adobe forecast (Sep 28, 2026)",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/laptop_phone.mp4",
+     "at": 0
+    }
+   ]
+  },
+  {
+   "text": "Okay. Which one is growing faster?",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/online_card.mp4",
+     "at": 0,
+     "start": 4
+    }
+   ],
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Monday again?",
+   "voice": "guest",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
+     "at": 0,
+     "start": 5
+    }
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Friday. Plus 9.2%, versus 6.2.",
+   "say": "Friday. Plus nine point two percent, versus six point two.",
+   "stat": "+9.2%",
+   "mascot": {
+    "mood": "happy",
+    "pos": "corner",
+    "act": "flip",
+    "act_at": 0.3
+   },
+   "sfx": [
+    "ding@0.3"
+   ],
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_desk.mp4",
+     "at": 0
+    }
+   ]
+  },
+  {
+   "text": "Last one. Buy now, pay later on Black Friday. How much?",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/laptop_phone.mp4",
+     "at": 0,
+     "start": 3
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/online_card.mp4",
+     "at": 1.8
+    }
+   ],
+   "mascot": {
+    "mood": "smug",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Uh... a million, tops.",
+   "voice": "guest",
+   "beat": 0.2,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
+     "at": 0
+    }
+   ],
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "$807 million. Pay later... a lot later.",
+   "say": "Eight hundred and seven million dollars. Pay later... a lot later.",
+   "land": 0.4,
+   "stat": "$807M",
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner",
+    "act": "deadpan",
+    "act_at": 2.0
+   },
+   "sfx": [
+    "crickets@2.4"
+   ],
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/laptop_phone.mp4",
+     "at": 0
+    }
+   ]
+  },
+  {
+   "text": "All forecasts, by the way. Team Friday or team Monday?",
+   "sticker": "FORECAST",
+   "sticker_at": 0.2,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_desk.mp4",
+     "at": 0,
+     "start": 6
+    }
+   ],
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   }
+  }
+ ],
+ "look": "fullbleed"
+}

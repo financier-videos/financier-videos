@@ -81,8 +81,12 @@ def main():
         if not rj.get("engine_sha"): probs.append("rendered.json has no engine stamp (engine < 6.9) - re-render")
         elif rj["engine_sha"] != cur:
             when = rj.get("rendered_at", "")
+            if when.endswith("Z"):  # changes.md rows are Tashkent time (UTC+5); rendered_at is UTC
+                import datetime as _dt
+                when = (_dt.datetime.strptime(when, "%Y-%m-%dT%H:%M:%SZ") + _dt.timedelta(hours=5)).strftime("%Y-%m-%d %H:%M")
             ch = [l for l in open(os.path.join(ROOT, "docs", "changes.md")).read().splitlines()
-                  if l.startswith("| 20") and l.split("|")[1].strip() > when[:16].replace("T", " ") and "QAYTA RENDER: HA" in l]
+                  if l.startswith("| 20") and l.split("|")[1].strip() > when[:16].replace("T", " ") and "QAYTA RENDER: HA" in l
+                  and re.search(r"dvigatel|engine|make_video|ENGINE", l)]  # only engine changes; a review of one video is not a global re-render
             if ch: probs.append("engine changed since render with re-render required: " + " / ".join(c.split("|")[3].strip() for c in ch))
             else: R["0_note"] = {"status": "INFO", "note": "engine changed since render, no re-render-required change"}
     else:
@@ -215,6 +219,12 @@ def main():
         put("12_script", "SKIP" if "Traceback" in o else ("PASS" if rc == 0 else "FAIL"), o)
     else:
         put("12_script", "SKIP", "no --prev-specs (pass the last 4 specs of this channel)")
+    # 14 empty panel (night_order BUYURTMA 8 #2): one flat colour/stripe area > 15 % of any of 12 frames = FAIL
+    if dur > 0:
+        rc, o = run([sys.executable, "-I", os.path.join(ROOT, "engine", "empty_check.py"), a.video])
+        put("14_empty_panel", "SKIP" if (rc == 2 or "Traceback" in o) else ("PASS" if rc == 0 else "FAIL"), o.strip().splitlines()[-1] if o.strip() else o)
+    else:
+        put("14_empty_panel", "SKIP", "no duration")
     # 13 skills line (docs/skills/INDEX.md: missing = FAIL)
     put("13_skills_line", "PASS" if re.search(r"Skillar:.+;\s*ishlatilmadi:", a.skills) else "FAIL",
         a.skills or 'no --skills "Skillar: ...; ishlatilmadi: ... (sababi)"')

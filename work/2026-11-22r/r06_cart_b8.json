@@ -1,0 +1,146 @@
+{
+ "format": "short",
+ "sfx": true,
+ "look": "fullbleed",
+ "captions": "words",
+ "headline": "hook",
+ "auto_shots": 1.8,
+ "structure": "why_story",
+ "source": "Source: Martin Lindstrom, Brandwashed (2011); NPR interview (Oct 23, 2011)",
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
+ },
+ "scenes": [
+  {
+   "text": "You came in for milk. You're leaving with forty dollars of stuff.",
+   "head": "WHY SHOPPING CARTS KEEP GETTING BIGGER",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
+     "at": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
+     "at": 1.7
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cart_empty.mp4",
+     "at": 3.2
+    }
+   ],
+   "mascot": {
+    "mood": "smug",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Blame the cart.",
+   "beat": 0.2,
+   "land": 0.3,
+   "mascot": {
+    "mood": "smug",
+    "pos": "corner",
+    "act": "shrug"
+   },
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
+     "at": 0
+    }
+   ]
+  },
+  {
+   "text": "Marketing consultant Martin Lindstrom says when stores doubled cart size, shoppers bought up to 40% more.",
+   "say": "Marketing consultant Martin Lindstrom says when stores doubled cart size, shoppers bought up to forty percent more.",
+   "stat": "+40%",
+   "show_source": true,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
+     "at": 0,
+     "start": 4
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cart_empty.mp4",
+     "at": 2.0
+    }
+   ],
+   "mascot": {
+    "mood": "happy",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "That's his claim, from his book. Not a published study.",
+   "sticker": "HIS CLAIM",
+   "sticker_at": 0.5,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
+     "at": 0
+    }
+   ],
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "My theory? A half-empty cart looks unfinished. So you finish it.",
+   "sticker": "BUCK'S THEORY",
+   "sticker_at": 0.3,
+   "mascot": {
+    "mood": "point",
+    "pos": "corner",
+    "act": "doubletake",
+    "act_at": 2.2
+   },
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cart_empty.mp4",
+     "at": 0
+    }
+   ]
+  },
+  {
+   "text": "Same store. Same milk. Bigger cart, bigger bill.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
+     "at": 0,
+     "start": 4
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
+     "at": 1.6,
+     "start": 6
+    }
+   ],
+   "mascot": {
+    "mood": "thumbsup",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "The fix? Grab a basket. Your arms will tell you when to stop.",
+   "land": 0.4,
+   "mascot": {
+    "mood": "thumbsup",
+    "pos": "corner"
+   },
+   "sfx": [
+    "ding@2.6"
+   ],
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cart_empty.mp4",
+     "at": 0
+    }
+   ]
+  }
+ ],
+ "bg_bright": 1.3
+}

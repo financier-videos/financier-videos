@@ -1,0 +1,177 @@
+{
+ "format": "short",
+ "sfx": true,
+ "look": "fullbleed",
+ "captions": "words",
+ "headline": "hook",
+ "auto_shots": 1.8,
+ "structure": "scale_ladder",
+ "source": "Source: CNET subscription survey (July 2026)",
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
+ },
+ "voices": {
+  "guest": {
+   "voice_id": "cgSgspJ2msm6clMCkdW9",
+   "label": "Guest (Jessica, ElevenLabs premade)",
+   "settings": {
+    "speed": 1.05
+   }
+  }
+ },
+ "scenes": [
+  {
+   "text": "The average American pays $111 a month for subscriptions.",
+   "say": "The average American pays a hundred and eleven dollars a month for subscriptions.",
+   "head": "WHAT $111 A MONTH REALLY IS",
+   "stat": "$111/MO",
+   "show_source": true,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/phone_scroll.mp4",
+     "at": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/tv_remote.mp4",
+     "at": 1.8
+    }
+   ],
+   "mascot": {
+    "mood": "smug",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Pfft. That's nothing at all.",
+   "voice": "guest",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/tv_remote.mp4",
+     "at": 0
+    }
+   ],
+   "beat": 0.15,
+   "mascot": {
+    "mood": "sideeye",
+    "act": "deadpan",
+    "act_at": 0.2,
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Every day? About $3.65. A coffee.",
+   "say": "Every day? About three sixty-five. A coffee.",
+   "stat": "$3.65/DAY",
+   "show_source": "Our math: $111 \u00d7 12 \u00f7 365",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/coffee_pour.mp4",
+     "at": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/coffee_glass.mp4",
+     "at": 1.6
+    }
+   ],
+   "mascot": {
+    "mood": "happy",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Every year: $1,332.",
+   "say": "Every year: thirteen hundred thirty-two dollars.",
+   "stat": "$1,332/YR",
+   "show_source": "Our math: $111 \u00d7 12",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
+     "at": 0
+    }
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "act": "doubletake",
+    "act_at": 0.3,
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Ten years? $13,320. That's a used car.",
+   "say": "Ten years? Thirteen thousand three hundred twenty dollars. That's a used car.",
+   "stat": "$13,320/10 YEARS",
+   "show_source": "Our math: $1,332 \u00d7 10",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/car_lot_top.mp4",
+     "at": 3.15
+    }
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "jawdrop",
+    "act_at": 1.2
+   }
+  },
+  {
+   "text": "Okay, that's something.",
+   "voice": "guest",
+   "land": 0.2,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/car_lot_top.mp4",
+     "at": 0
+    }
+   ],
+   "mascot": {
+    "mood": "smug",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "And about $252 a year goes to stuff people don't even use.",
+   "say": "And about two hundred fifty-two dollars a year goes to stuff people don't even use.",
+   "stat": "$252/WASTED A YEAR",
+   "show_source": true,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/online_card.mp4",
+     "at": 1.8
+    }
+   ],
+   "mascot": {
+    "mood": "sad",
+    "act": "sigh",
+    "act_at": 0.5,
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Up 23% in one year. Which one would you not even miss?",
+   "say": "Up twenty-three percent in one year. Which one would you not even miss?",
+   "stat": "+23%",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/phone_bed.mp4",
+     "at": 0
+    }
+   ],
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   }
+  }
+ ]
+}

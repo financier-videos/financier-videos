@@ -335,7 +335,7 @@ def compose(shot, lt, t, talkR, talkP, extra, talkS=0.0, fimg=None, fimg2=None):
         if c: callout(im, c[0] * W, c[1] * H, c[2] * W, lt, shot.get("label"), shot.get("circle_at", 0.15))
         if shot.get("card"): txt(im, (W * 0.5, H * 0.16), shot["card"], 104, (255, 226, 60), sw=14, ang=-4)
         who = shot.get("who")
-        if who == "r": rocco(im, W * 0.80, H * 1.0, 560, moodR, talkR, t, act, act_t)
+        if who == "r": rocco(im, W * shot.get("rx", 0.76), H * 1.0, 1000, moodR, talkR, t, act, act_t, flip=shot.get("rx", 0.76) < 0.5)
         elif who == "p": penny(im, W * 0.80, H * 0.86, 330, moodP, talkP, t)
         elif who == "s": slick(im, W * 0.78, H * 0.80, 330, shot.get("s", "sly"), talkS, t)
     elif k == "split":  # two places at once: top = fimg2 (e.g. the scammer), bottom = fimg (the victim)
@@ -382,25 +382,55 @@ def compose(shot, lt, t, talkR, talkP, extra, talkS=0.0, fimg=None, fimg2=None):
         d.ellipse([440, 300, 628, 488], fill=(52, 199, 89), outline=INK, width=10); d.line([(480, 400), (525, 445), (595, 345)], fill=(255, 255, 255), width=22)
         txt(im, (534, 580), shot.get("l1", "BUY IT ONLY IN THE"), 70, INK, sw=0); txt(im, (534, 690), shot.get("l2", "CONSOLE STORE"), 104, (40, 150, 60), sw=0)
         rocco(im, W * 0.55, H * 0.97, 950, moodR, talkR, t, act, act_t)
+    elif k == "math":  # damage math (winner moment #3): rows pop in on their word, total stamps last
+        d = ImageDraw.Draw(im); d.rounded_rectangle([102, 236, 990, 1000], 60, fill=(0, 0, 0, 60)); d.rounded_rectangle([90, 220, 978, 984], 60, fill=(230, 233, 238), outline=INK, width=10)
+        txt(im, (534, 300), shot.get("title", "YOUR MONEY"), 70, INK, sw=0)
+        for j, (lab, val, good) in enumerate(shot["rows"]):
+            at = shot.get(f"r{j}_at", 0.2 + 0.6 * j)
+            if lt < at: break
+            q = min(1.0, (lt - at) / 0.15); yy = 420 + j * 150
+            d.text((150, yy), lab, font=F(62), fill=INK, anchor="lm")
+            txt(im, (930, yy), val, int(84 + 30 * (1 - q)), (40, 170, 70) if good else (220, 40, 40), sw=0, anchor="rm")
+        if lt >= shot.get("total_at", 99):
+            q = min(1.0, (lt - shot["total_at"]) / 0.15); d.line([(150, 860), (930, 860)], fill=INK, width=8)
+            txt(im, (534, 925), shot.get("total", "TOTAL: -$1,000"), int(96 + 50 * (1 - q)), (220, 40, 40), sw=0, ang=-3)
+        rocco(im, W * 0.70, H * 0.99, 760, moodR, talkR, t, act, act_t)
+        if shot.get("penny"): penny(im, W * 0.22, H * 0.80, 300, moodP, talkP, t)
     elif k == "end":
         txt(im, (W / 2, H * 0.15), shot["l1"], 92, (255, 255, 255), sw=12)
         txt(im, (W / 2, H * 0.24), shot["l2"], 120, (255, 230, 60), sw=14)
         penny(im, W * 0.30, H * 0.62, 430, "happy", 0, t); rocco(im, W * 0.70, H * 0.78, 700, "thumbsup", 0, t)
         txt(im, (W / 2, H * 0.88), shot.get("l3", "Send this to someone who'd click it."), 58, (255, 255, 255), sw=8)
+    if shot.get("src"):  # source line on a small dark plate (Review 2 #6)
+        d = ImageDraw.Draw(im); f_ = F(34); tw = d.textlength(shot["src"], font=f_)
+        d.rounded_rectangle([W / 2 - tw / 2 - 20, H * 0.785 - 28, W / 2 + tw / 2 + 20, H * 0.785 + 28], 16, fill=(0, 0, 0, 150))
+        d.text((W / 2, H * 0.785), shot["src"], font=f_, fill=(232, 232, 234), anchor="mm")
     txt(im, (W - 50, 70), "RED FLAG ROCCO", 44, (255, 59, 59), sw=6, anchor="rm")
     return im
 
 
+LINE_SPK = []  # speaker letter per dialogue line (set in main)
+HOT = set()     # extra spec words drawn yellow
+DANGER = {"STOLEN", "SCAM", "SCAMMER", "MINUS", "NEVER", "DON'T", "DONT", "BLOCKED", "FAKE", "RED", "FLAG", "FLAGS", "PASSWORDS", "MOUSETRAP", "NO"}
+SPK_COL = {"P": (255, 226, 60), "S": (120, 220, 255), "R": (232, 232, 234)}  # victim yellow, scammer cyan, Rocco white
+
+
 def caption(im, chunk, active):
+    """1-3 words; colour by speaker (winner moment #10); $/money green, danger red, active word pops yellow-white."""
     if not chunk: return
     words = [w.upper() for w, *_ in chunk]; f = F(104); d = ImageDraw.Draw(im)
+    spk = LINE_SPK[chunk[0][3]] if LINE_SPK and chunk[0][3] < len(LINE_SPK) else "R"
     sp = d.textlength(" ", font=f); ws = [d.textlength(w, font=f) for w in words]; tot = sum(ws) + sp * (len(ws) - 1)
     while tot > W * 0.9 and f.size > 60:
         f = F(f.size * 0.9); ws = [d.textlength(w, font=f) for w in words]; sp = d.textlength(" ", font=f); tot = sum(ws) + sp * (len(ws) - 1)
     x = (W - tot) / 2; y = H * 0.885
     for j, w in enumerate(words):
-        hot = re.sub(r"[^A-Z]", "", w.upper()) in ("FREE", "RED", "FLAG", "FLAGS", "PC", "PASSWORDS", "MOUSETRAP", "STORE", "NO", "TWO", "WEEK", "CHEESE")
-        col = (255, 226, 60) if (hot or j == active) else (232, 232, 234)
+        core = re.sub(r"[^A-Z0-9$']", "", w)
+        if "$" in w or core in ("THOUSAND", "MONEY", "CASH", "DOLLARS", "RICH"): col = (90, 230, 120)
+        elif core in DANGER: col = (255, 80, 80)
+        elif core in HOT: col = (255, 226, 60)
+        else: col = SPK_COL.get(spk, (232, 232, 234))
+        if j == active: col = tuple(min(255, int(c * 0.6 + 255 * 0.4)) for c in col)
         d.text((x, y), w, font=f, fill=col, stroke_width=12, stroke_fill=INK, anchor="ls"); x += ws[j] + sp
 
 
@@ -410,6 +440,7 @@ def main():
     _sha = hashlib.sha1(open(os.path.abspath(__file__), "rb").read()).hexdigest()[:12]  # stamp at START (qc_gate step 0)
     cache = os.environ.get("FIN_TTS_CACHE", os.path.join(tempfile.gettempdir(), "fin_tts_cache")); os.makedirs(cache, exist_ok=True)
     lines = [tuple(x) for x in spec["lines"]]
+    LINE_SPK[:] = [a for a, _ in lines]; HOT.update(w.upper() for w in spec.get("hot", []))
     d, mp3 = dialogue(lines, cache)
     segs = sorted(d["voice_segments"], key=lambda s: s["start_time_seconds"])
     lt_ = {s["dialogue_input_index"]: (s["start_time_seconds"], s["end_time_seconds"]) for s in segs}

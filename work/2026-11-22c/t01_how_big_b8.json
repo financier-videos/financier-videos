@@ -1,0 +1,266 @@
+{
+ "format": "short",
+ "sfx": true,
+ "structure": "scale_ladder",
+ "captions": "words",
+ "headline": "hook",
+ "auto_shots": 1.8,
+ "source": "Source: Take-Two Interactive press release, Nov 20, 2026 (day-one retail sales estimate)",
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.08
+  }
+ },
+ "scenes": [
+  {
+   "text": "A video game just made $3.79 billion. In one day.",
+   "say": "A video game just made three point seven nine billion dollars. In one day.",
+   "head": "A VIDEO GAME MADE $3.79 BILLION IN ONE DAY",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/gamepad_hands.mp4",
+     "at": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_stacks.mp4",
+     "at": 1.6
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 3.2
+    }
+   ],
+   "sfx": [
+    "impact@0.1"
+   ]
+  },
+  {
+   "text": "Take-Two's own estimate for day one. Sales, not profit.",
+   "say": "Take Two's own estimate for day one. Sales, not profit.",
+   "show_source": true,
+   "sticker": "SALES, NOT PROFIT",
+   "sticker_at": 2.6,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/gta/bills.mp4",
+     "at": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/gta/bills.mp4",
+     "at": 1.7,
+     "start": 4,
+     "zoom": 1.5,
+     "kb": "left"
+    }
+   ],
+   "sfx": [
+    "pop@2.6"
+   ]
+  },
+  {
+   "text": "That's about $44,000. Every second.",
+   "say": "That's about forty-four thousand dollars. Every second.",
+   "stat": "$43,866/SEC",
+   "show_source": "Our math: $3.79B \u00f7 86,400 seconds",
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "jawdrop",
+    "act_at": 1.4
+   },
+   "sfx": [
+    "tick@0.3",
+    "tick@1.3"
+   ],
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_stacks.mp4",
+     "at": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/coins_fall.mp4",
+     "at": 1.6
+    }
+   ]
+  },
+  {
+   "text": "My whole net worth is one dollar.",
+   "buck_after": false,
+   "beat": 0.2,
+   "land": 0.4,
+   "bg": "/tmp/fin/bg/gta/fly.mp4",
+   "mascot": {
+    "mood": "sad",
+    "pos": "center",
+    "act": "sigh"
+   },
+   "sfx": [
+    "wahwah@0.9"
+   ]
+  },
+  {
+   "text": "Now lay it out in one-dollar bills, end to end...",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/gta/road.mp4",
+     "at": 0,
+     "kb": "in"
+    },
+    {
+     "broll": "/tmp/fin/bg/gta/bills.mp4",
+     "at": 1.5,
+     "start": 6,
+     "kb": "right"
+    }
+   ]
+  },
+  {
+   "text": "...and you'd pass the Moon. Then keep going. Bring snacks.",
+   "land": 0.3,
+   "stat": "1.5\u00d7 MOON",
+   "show_source": "Our math: 3.79B \u00d7 6.14 in \u2248 591,000 km; Moon \u2248 384,400 km",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/earth_moons.mp4",
+     "at": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/moon_big.mp4",
+     "at": 1.8
+    }
+   ],
+   "sfx": [
+    "whoosh@0.1"
+   ]
+  },
+  {
+   "text": "Stack them instead? The pile ends where the space station flies.",
+   "stat": "\u2248413 KM",
+   "show_source": "Our math: 3.79B \u00d7 0.0043 in \u2248 413 km; ISS orbits \u2248 400\u2013420 km",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/earth_night.mp4",
+     "at": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/earth_globe.mp4",
+     "at": 1.8
+    }
+   ]
+  },
+  {
+   "text": "Weigh it? About 3,800 tons of paper. Eight loaded jumbo jets.",
+   "say": "Weigh it? About thirty-eight hundred tons of paper. Eight loaded jumbo jets.",
+   "stat": "3,800 T",
+   "show_source": "Our math: 1 g per bill; jumbo jet max takeoff \u2248 450 t",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/gta/plane.mp4",
+     "at": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/gta/plane.mp4",
+     "at": 1.8,
+     "start": 4,
+     "zoom": 1.4
+    }
+   ]
+  },
+  {
+   "text": "Count it, one bill a second? See you in 120 years.",
+   "say": "Count it, one bill a second? See you in a hundred and twenty years.",
+   "land": 0.3,
+   "stat": "120 YEARS",
+   "show_source": "Our math: 3.79B seconds \u2248 120 years",
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner",
+    "act": "deadpan",
+    "act_at": 2.2
+   },
+   "sfx": [
+    "crickets@2.4"
+   ],
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
+     "at": 1.6
+    }
+   ]
+  },
+  {
+   "text": "The last one, GTA 5, made $800 million on day one. In 2013.",
+   "say": "The last one, G T A Five, made eight hundred million on day one. In twenty thirteen.",
+   "chart": {
+    "labels": [
+     "2013",
+     "2026"
+    ],
+    "values": [
+     0.8,
+     3.79
+    ],
+    "texts": [
+     "$800M",
+     "$3.79B"
+    ],
+    "at": [
+     0.6,
+     2.4
+    ]
+   },
+   "show_source": "GTA V: Take-Two, Sep 2013 \u00b7 GTA VI: Take-Two, Nov 20, 2026",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/gamepad_hands.mp4",
+     "at": 0
+    }
+   ]
+  },
+  {
+   "text": "Almost five times more. Same series.",
+   "stat": "4.7\u00d7",
+   "sfx": [
+    "impact@0.2"
+   ],
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/coins_fall.mp4",
+     "at": 1.4
+    }
+   ]
+  },
+  {
+   "text": "Tell me what YOU'd buy with one second of that.",
+   "land": 0.4,
+   "mascot": {
+    "mood": "happy",
+    "pos": "center",
+    "act": "drop_in"
+   },
+   "sfx": [
+    "ding@1.6"
+   ],
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/gamepad_hands.mp4",
+     "at": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_stacks.mp4",
+     "at": 1.8
+    }
+   ]
+  }
+ ],
+ "look": "fullbleed"
+}

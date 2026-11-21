@@ -1,0 +1,63 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    46.3 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.1 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.4 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -14.1 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 12.5 Mbit/s, 31.1s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 0.952,\n \"missing\": [\n  \"pfft\",\n  \"okay\",\n  \"up\"\n ],\n \"extra\": [\n  \"ok\"\n ],\n \"heard\": \"The average American pays $111 a month for subscriptions. That's nothing at all. Every day, about $365, a coffee, every year, $1,332. 10 years, $13,320. That's a used car. OK, that's something. And about $252 a year goes to stuff people don't even use. A 23% in one year. Which one would you not even miss?\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "t all.\n 3   6.78s range=18.4 st  gap=0.22  ok  | Every day? About three sixty-five. A coffee.\n 4  10.37s range= 6.9 st  gap=0.17  ok  | Every year: thirteen hundred thirty-two dollars.\n 5  13.54s range=17.6 st  gap=0.46  ok  | Ten years? Thirteen thousand three hundred twenty dollars. T\n 6  18.62s range= 6.7 st  gap=0.12  ok  | Okay, that's something.\n 7  19.94s range=12.7 st  gap=0.3  ok  | And about two hundred fifty-two dollars a year goes to stuff\n 8  26.58s range=18.6 st  gap=0.16  ok  | Up twenty-three percent in one year. Which one would you not\n{\"median_f0\": 263.1, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 100"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/2026-11-22r/r03_subs_b8_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "FAIL",
+  "note": "clipped highlights (big number burnt)"
+ },
+ "10_look": {
+  "status": "FAIL",
+  "note": "ok  0.48  (layout 0.14, palette 0.75, tone 0.80)  vs 2026-11-24_noseat_r02.mp4\nok  0.61  (layout 0.72, palette 0.57, tone 0.44)  vs 2026-11-23_fees_r08.mp4\nok  0.42  (layout 0.60, palette 0.10, tone 0.58)  vs 2026-11-23_pink_r07_v615.mp4\nFAIL  0.87  (layout 0.83, palette 0.90, tone 0.89)  vs 2026-11-23_cart_r06_v615.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "18 hard cuts (ffmpeg scene>0.22) in 31.1 s = 1.7 s/cut (need >= 15); engine planned 19"
+ },
+ "12_script": {
+  "status": "SKIP",
+  "note": "no --prev-specs (pass the last 4 specs of this channel)"
+ },
+ "14_empty_panel": {
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 10% of the frame (limit 15%)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: footage_bank (Buyurtma 8), layout rule (yellow card, Buck >=1/4), empty_check, qc_gate; ishlatilmadi: vidiq_find_broll (bank yetarli)"
+ },
+ "verdict": "FAIL"
+}

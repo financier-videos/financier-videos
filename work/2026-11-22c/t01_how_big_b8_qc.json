@@ -1,0 +1,63 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    76.5 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.1 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -14.0 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 12.4 Mbit/s, 51.9s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "gta v\"\n ],\n \"heard\": \"A video game just made $3.79 billion. In one day, take two zone estimate for day one. Sales, not profit. That's about $44,000 every second. My whole net worth is $1. Now lay it out in $1 bills end to end and you'd pass the moon. Then keep going. Bring snacks? Stag them instead? The pile ends where the space station flies. Wait! About 3,800 tons of paper! Eight loaded jumbo jets! Count it! One bill a second? See you in 120 years! The last one, GTA V, made 800 million on day one in 2013. Almost five times more. Same series. Tell me what you'd buy with one second of that.\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": " st  gap=0.26  ok  | Stack them instead? The pile ends where the space station fl\n 8  28.99s range=11.6 st  gap=0.2  ok  | Weigh it? About thirty-eight hundred tons of paper. Eight lo\n 9  33.65s range= 9.7 st  gap=0.22  ok  | Count it, one bill a second? See you in a hundred and twenty\n10  38.05s range=13.7 st  gap=0.35  ok  | The last one, G T A Five, made eight hundred million on day \n11  45.40s range=10.4 st  gap=0.33  ok  | Almost five times more. Same series.\n12  48.53s range=18.0 st  gap=0.12  ok  | Tell me what YOU'd buy with one second of that.\n{\"median_f0\": 259.0, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 100"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/2026-11-22c/t01_how_big_b8_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "WARN",
+  "note": "dark/dull frames - brighten bg or less b-roll dimming"
+ },
+ "10_look": {
+  "status": "FAIL",
+  "note": "FAIL  0.89  (layout 0.94, palette 0.81, tone 0.91)  vs 2026-11-22_gta_per_second.mp4\nok  0.57  (layout 0.45, palette 0.71, tone 0.62)  vs 2026-11-21_twenty_secrets_b3.mp4\nok  0.54  (layout 0.34, palette 0.76, tone 0.58)  vs 2026-11-21_gate_story_b3.mp4\nok  0.48  (layout 0.26, palette 0.71, tone 0.56)  vs 2026-11-21_giftcard_myth_b3.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "29 hard cuts (ffmpeg scene>0.22) in 51.9 s = 1.8 s/cut (need >= 25); engine planned 34"
+ },
+ "12_script": {
+  "status": "SKIP",
+  "note": "no --prev-specs (pass the last 4 specs of this channel)"
+ },
+ "14_empty_panel": {
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 11% of the frame (limit 15%)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: footage_bank (Buyurtma 8), layout rule (yellow card, Buck >=1/4), empty_check, qc_gate; ishlatilmadi: vidiq_find_broll (bank yetarli)"
+ },
+ "verdict": "FAIL"
+}

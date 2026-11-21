@@ -1,0 +1,197 @@
+{
+ "format": "short",
+ "sfx": true,
+ "theme": "ocean",
+ "bg_bright": 1.25,
+ "bg_mix": 0.78,
+ "captions": "words",
+ "headline": "hook",
+ "auto_shots": 1.8,
+ "structure": "client_dialogue",
+ "source": "Source: U.S. Department of Transportation, Bumping & Oversales (limits effective Jan 22, 2025)",
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
+ },
+ "voices": {
+  "guest": {
+   "voice_id": "cgSgspJ2msm6clMCkdW9",
+   "label": "Passenger (Jessica, ElevenLabs premade)",
+   "settings": {
+    "speed": 1.05
+   }
+  }
+ },
+ "scenes": [
+  {
+   "text": "They gave my seat away!",
+   "voice": "guest",
+   "head": "THEY SOLD YOUR SEAT TWICE",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cabin_empty.mp4",
+     "at": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/airport_walk.mp4",
+     "at": 1.2
+    }
+   ],
+   "sfx": [
+    "impact@0.1"
+   ],
+   "mascot": {
+    "mood": "smug",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Legally.",
+   "beat": 0.2,
+   "land": 0.3,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cabin_empty.mp4",
+     "at": 0,
+     "start": 5
+    }
+   ],
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner",
+    "act": "deadpan"
+   }
+  },
+  {
+   "text": "Excuse me?!",
+   "voice": "guest",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/airport_hall.mp4",
+     "at": 0
+    }
+   ],
+   "sfx": [
+    "scratch@0.1"
+   ],
+   "mascot": {
+    "mood": "happy",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Airlines are allowed to sell more tickets than seats.",
+   "show_source": true,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/airport_hall.mp4",
+     "at": 0,
+     "start": 4
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/plane_wing.mp4",
+     "at": 1.8
+    }
+   ],
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "So I just get nothing.",
+   "voice": "guest",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cabin_empty.mp4",
+     "at": 0,
+     "start": 8
+    }
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "If they bump you against your will: up to four times your one-way fare.",
+   "stat": "UP TO 4X",
+   "show_source": true,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/plane_wing.mp4",
+     "at": 0,
+     "start": 4
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/airport_walk.mp4",
+     "at": 2.0,
+     "start": 6
+    }
+   ],
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Four times?!",
+   "voice": "guest",
+   "beat": 0.1,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cabin_yellow.mp4",
+     "at": 0
+    }
+   ],
+   "mascot": {
+    "mood": "happy",
+    "pos": "corner",
+    "act": "flip",
+    "act_at": 0.1
+   }
+  },
+  {
+   "text": "Capped at $2,150. And first, they have to ask for volunteers.",
+   "say": "Capped at twenty-one fifty. And first, they have to ask for volunteers.",
+   "stat": "$2,150 CAP",
+   "show_source": true,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cabin_empty.mp4",
+     "at": 0,
+     "start": 3
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/airport_hall.mp4",
+     "at": 2.0,
+     "start": 7
+    }
+   ],
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Not legal advice. Cash or seat?",
+   "land": 0.3,
+   "sticker": "NOT LEGAL ADVICE",
+   "sticker_at": 0.2,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/plane_wing.mp4",
+     "at": 0,
+     "start": 7
+    }
+   ],
+   "mascot": {
+    "mood": "smug",
+    "pos": "corner"
+   }
+  }
+ ],
+ "look": "fullbleed"
+}

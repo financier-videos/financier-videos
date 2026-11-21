@@ -961,7 +961,7 @@ def caption_chunks_timed(text, words, maxn=4):
     return out
 
 
-ENGINE_VERSION = "6.15"  # bump on every engine change and add a line to docs/changes.md
+ENGINE_VERSION = "6.16"  # bump on every engine change and add a line to docs/changes.md
 
 THEMES = {  # v6.1: per-video look so videos don't all share one background. Spec "theme": name | "auto" (default: from the first line).
     "vault": ([((9, 14, 28), (19, 30, 54)), ((12, 10, 30), (32, 20, 58)), ((6, 20, 24), (14, 42, 48))], "grid"),
@@ -1018,7 +1018,7 @@ def broll_frames(path, W, H, n, start=0.0):
     img = path.lower().endswith((".jpg", ".jpeg", ".png", ".webp"))  # v6.14: a photo works as a shot too
     pre = ["-loop", "1"] if img else ["-stream_loop", "-1", "-ss", f"{start}"]  # v6.14: short clips loop instead of freezing
     cmd = ["ffmpeg", "-loglevel", "error"] + pre + ["-i", path, "-vf",
-           f"scale={BW}:{BH}:force_original_aspect_ratio=increase,crop={BW}:{BH},fps={FPS}",
+           f"scale={BW}:{BH}:force_original_aspect_ratio=increase,crop={BW}:{BH},lutyuv=y='min(val\\,208)',fps={FPS}",  # v6.16: white backgrounds never burn (qc 9)
            "-frames:v", str(n), "-f", "rawvideo", "-pix_fmt", "rgb24", "-"]
     p = subprocess.run(cmd, capture_output=True)
     raw = p.stdout; fs = BW * BH * 3
@@ -1088,28 +1088,27 @@ def _look_base(look, foot, W, H, tex, A, B, si, prog, lt, var=0):
             x0, y0 = (W - card.width) // 2, int(H * 0.235)
             im.alpha_composite(sh, (x0 + 10, y0 + 14)); im.alpha_composite(card, (x0, y0))
         return im
-    if var % 2 == 1: A, B = B, A  # v6.15 split: alternate shots swap the halves' colours and put the footage below the line
-    im = Image.new("RGBA", (W, H), B + (255,)); d = ImageDraw.Draw(im)
+    # v6.16 split (BUYURTMA 8: bo'sh panel TAQIQ): BOTH halves are footage. The "busy" half is the sharp clip, the other
+    # half is the same clip from another region, softly blurred and tinted with the split colour (Buck + number live there).
+    # No footage -> the whole frame is the brand colour with a soft radial light (no flat stripe panel; specs must give footage).
+    if var % 2 == 1: A, B = B, A
     mid = int(H * 0.50)
-    if foot is not None and var % 2 == 1:
-        f = foot.convert("RGB")
-        crop = ImageEnhance.Color(ImageEnhance.Brightness(f.crop((0, int((H - mid) * 0.45), W, int((H - mid) * 0.45) + mid))).enhance(1.12)).enhance(1.15)
-        d.rectangle([0, 0, W, mid], fill=A + (255,))
-        for k in range(-H, W, 90): d.line([(k, mid), (k + mid, 0)], fill=tuple(min(255, c + 18) for c in A) + (255,), width=18)
-        im.paste(crop, (0, mid)); im.alpha_composite(Image.new("RGBA", (W, H - mid), B + (55,)), (0, mid))
-        d.rectangle([0, mid - 7, W, mid + 7], fill=(212, 212, 218, 255))
-        return im
-    if foot is not None:
-        f = foot.convert("RGB"); fh = int(W * H / W)
-        crop = f.crop((0, int((H - mid) * 0.45), W, int((H - mid) * 0.45) + mid))
-        crop = ImageEnhance.Color(ImageEnhance.Brightness(crop).enhance(1.12)).enhance(1.15)
-        im.paste(crop, (0, 0))
-        tint = Image.new("RGBA", (W, mid), A + (55,)); im.alpha_composite(tint, (0, 0))
+    if foot is None:
+        im = Image.new("RGBA", (W, H), B + (255,)); g = Image.new("L", (W, H), 0); gd = ImageDraw.Draw(g)
+        for r_ in range(10, 0, -1): gd.ellipse([W / 2 - r_ * W * 0.09, H * 0.42 - r_ * H * 0.07, W / 2 + r_ * W * 0.09, H * 0.42 + r_ * H * 0.07], fill=int(120 - r_ * 11))
+        lit = Image.new("RGBA", (W, H), tuple(min(255, c + 70) for c in B) + (255,)); lit.putalpha(g.filter(ImageFilter.GaussianBlur(60)))
+        im.alpha_composite(lit); return im
+    f = foot.convert("RGB")
+    sharp = ImageEnhance.Color(ImageEnhance.Brightness(f.crop((0, int((H - mid) * 0.45), W, int((H - mid) * 0.45) + mid))).enhance(1.12)).enhance(1.15)
+    soft = f.crop((0, H - mid, W, H)) if var % 2 == 0 else f.crop((0, 0, W, mid))
+    soft = ImageEnhance.Brightness(soft.filter(ImageFilter.GaussianBlur(14))).enhance(1.05).convert("RGBA")
+    soft.alpha_composite(Image.new("RGBA", (W, mid), (B if var % 2 == 0 else A) + (110,)))
+    im = Image.new("RGBA", (W, H), (0, 0, 0, 255))
+    if var % 2 == 1:
+        im.paste(soft, (0, 0)); im.paste(sharp, (0, mid))
     else:
-        d.rectangle([0, 0, W, mid], fill=A + (255,))
-        for k in range(-H, W, 90): d.line([(k, mid), (k + mid, 0)], fill=tuple(min(255, c + 18) for c in A) + (255,), width=18)
-    for k in range(-H, W, 90): d.line([(k, H), (k + (H - mid), mid)], fill=tuple(min(255, c + 16) for c in B) + (255,), width=18)
-    d.rectangle([0, mid - 7, W, mid + 7], fill=(212, 212, 218, 255))
+        im.paste(sharp, (0, 0)); im.alpha_composite(Image.new("RGBA", (W, mid), A + (40,)), (0, 0)); im.paste(soft, (0, mid))
+    d = ImageDraw.Draw(im); d.rectangle([0, mid - 7, W, mid + 7], fill=(212, 212, 218, 255))
     return im
 
 
@@ -2059,7 +2058,7 @@ def render(spec, wav, total, out, workdir):
             mpos = masc.get("pos") or ("corner" if (sc.get("stat") or sc.get("chart") or sc.get("vs") or clip or sc.get("phone")) else "center")
             m_at = float(masc.get("at", 0))
             if FB and not long and mpos != "center":  # v6.14 fullbleed: half-body in the lower-right corner, bigger
-                mR = W * 0.11; mx, my = W * 0.80, H * 0.915
+                mR = W * 0.16; mx, my = W * 0.27, H * 0.875  # v6.16 (BUYURTMA 8): Buck >= 1/4 of the frame, lower left
             elif PAPER and not long:  # v6.14 paper: big, lower right (>= 1/3 of the frame height with the hat)
                 mR = W * 0.145; mx, my = W * 0.80, H * 0.92
             elif SPLIT and not long and mpos != "center":  # v6.14 split: on the divider, reacting to both halves
@@ -2250,9 +2249,18 @@ def render(spec, wav, total, out, workdir):
                     if PAPER:  # v6.14 paper: red ink number, left aligned like a newspaper figure, no glow
                         sy = H * 0.495 if not long else sy
                         fd.text((W * 0.07, sy), txt, font=fs, fill=PAPER_RED + (255,))
-                    elif SPLIT:  # v6.14 split: white geometric number sitting on the divider
-                        sy = H * 0.30 if not long else sy
-                        fd.text(((W - tw) / 2, sy), txt, font=fs, fill=(214, 214, 220, 255), stroke_width=8, stroke_fill=tuple(int(c * 0.35) for c in SPL_A) + (255,))
+                    elif SPLIT or (FB and spec.get("stat_card", True)):  # v6.16 (BUYURTMA 8): number on a yellow rounded card, unit under it
+                        sy = H * (0.30 if SPLIT else (0.46 if (si == 0 and lt < 2.4) else 0.40)) if not long else sy
+                        _num, _unit = (txt.split("/", 1) + [""])[:2] if "/" in txt else (txt, sc.get("stat_unit", ""))
+                        _unit = {"MO": "EVERY MONTH", "DAY": "EVERY DAY", "YR": "A YEAR", "YEAR": "A YEAR", "S": "EVERY SECOND", "SEC": "EVERY SECOND"}.get(_unit.upper(), _unit.upper())
+                        tw = fd.textlength(_num, font=fs); fu = ImageFont.truetype(fun_font("ArchivoBlack-Regular.ttf"), int(S * 0.04))
+                        bb = fd.textbbox(((W - tw) / 2, sy), _num, font=fs); px_, py_ = S * 0.04, S * 0.025
+                        ub = (S * 0.055) if _unit else 0
+                        box = [min(bb[0], W / 2 - fd.textlength(_unit, font=fu) / 2) - px_, bb[1] - py_, max(bb[2], W / 2 + fd.textlength(_unit, font=fu) / 2) + px_, bb[3] + py_ + ub]
+                        fd.rounded_rectangle([box[0] + 10, box[1] + 14, box[2] + 10, box[3] + 14], int(S * 0.04), fill=(0, 0, 0, 90))
+                        fd.rounded_rectangle(box, int(S * 0.04), fill=(255, 214, 64, 255), outline=(17, 17, 17, 255), width=8)
+                        fd.text(((W - tw) / 2, sy), _num, font=fs, fill=(17, 17, 17, 255))
+                        if _unit: fd.text((W / 2, bb[3] + py_ * 0.4 + ub / 2), _unit, font=fu, fill=(17, 17, 17, 255), anchor="mm")
                     else:
                         # soft glow
                         fd.text(((W - tw) / 2, sy), txt, font=fs, fill=col + (60,), stroke_width=22, stroke_fill=col + (40,))
