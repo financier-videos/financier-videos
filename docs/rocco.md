@@ -12,6 +12,12 @@ Manba: docs/new_channel_plan.md (to'liq reja, nomzodlar jadvali, manbalar), engi
 | vidIQ | ULANDI 2026-11-21 (alohida vidIQ profili, Free, 150 kredit, yangilanish 2026-12-21; kanal UCUyPbjsSFdWKnC4nVRDhOiA). Kalit env VIDIQ_API_KEY; `python3 -I engine/vidiq_rocco.py <tool> '<json args>'` (sessiyadagi tayyor vidIQ vositalari — Financier profili, Rocco uchun ISHLATILMAYDI) |
 | Chiqqan / rejalashtirilgan video | 0 |
 
+## 1.5 MAQSAD VA QARORLAR (Shohjahon, 2026-11-21 19:xx)
+- MAQSAD: 1 hafta ichida 15 mln ko'rish. Claude'ning baholashi (Shohjahonga aytildi): yangi kanal uchun real emas, kafolatlanmaydi; sun'iy oshirish (bot, sotib olish) TAQIQ. Shunga qaramay eng yuqori ehtimolli yo'l bilan ishlanadi: shu hafta Black Friday / Cyber Monday xarid firibgarliklari, kuniga 3–4 Short, "ota-onangga yubor" ulashish uslubi, har kuni Rocco vidIQ tahlili va moslashuv. Har kuni haqiqiy raqam yoziladi.
+- ElevenLabs: Financier uzun videosi haftasiga 2 taga tushirildi (producer_task) — bo'shagan belgi Rocco ovoziga. Rocco ovozi va videolari BOSHLANADI.
+- KANAL SOZLAMALARI: Shohjahon — "o'zing sozla". Holat 2026-11-21: vidIQ ko'rsatadi — tavsif bo'sh, avatar standart. Avatar/banner/tavsifni o'zgartirish uchun YouTube Studio login yoki YouTube Data API OAuth kerak — sessiyada yo'q (vidIQ va Buffer'da kanal brending funksiyasi yo'q). Imkon paydo bo'lsa (OAuth token, brauzer) — darhol o'zi qo'yadi.
+- vidIQ eslatma: get_channels_by_ids 5 kredit oladi (bepul emas).
+
 ## 2. QABUL QILINGAN QARORLAR
 - NISHA (2026-11-21, Shohjahon: "boshla — nishani o'zing top"): A — firibgarlikdan himoya / raqamli xavfsizlik, AQSh kattalari. Rad etildi: B "qanday ishlaydi" (AI-klonlar ko'p, tibbiy kadr xavfi), C psixologiya faktlari (b-roll asosan odamlar — shartga zid).
 - NOM: "Red Flag Rocco" (@RedFrocco).
@@ -40,7 +46,7 @@ Manba: docs/new_channel_plan.md (to'liq reja, nomzodlar jadvali, manbalar), engi
 
 ## 6. OCHIQ — SHOHJAHON QARORI KERAK
 1. Avatar, banner, tavsifni kanalga qo'yish va izohlarni yoqish (fayllar work/rocco/ da).
-2. ElevenLabs limiti: "creator" 131,000 belgi/oy; Financier rejasi o'zi ≈138,000/oy (limitdan oshadi), Rocco +≈12,000/oy. Variantlar: (a) tarifni oshirish (to'lov — faqat Shohjahon); (b) uzun videoni haftasiga 2 taga tushirish; (c) TTS keshini sessiyalar orasida saqlash. Qaror bo'lmaguncha Rocco ovozi va videolari boshlanmaydi.
+2. ElevenLabs limiti: "creator" 131,000 belgi/oy; Financier rejasi o'zi ≈138,000/oy (limitdan oshadi), Rocco +≈12,000/oy. Variantlar: (a) tarifni oshirish (to'lov — faqat Shohjahon); (b) uzun videoni haftasiga 2 taga tushirish; (c) TTS keshini sessiyalar orasida saqlash. QAROR 2026-11-21: (b) — Financier uzun videosi haftasiga 2 ta.
 
 ## 7. KEYINGI QADAMLAR (qarordan keyin)
 Rocco ovozini yaratish (ElevenLabs voice design, bir marta) → yangi theme + telefon mock-up shabloni → 1-mavzu Short, QC (producer_task dagi barcha tekshiruvlar) → raw URL → buffer_post.py schedule → shu faylga "CHIQGAN VIDEOLAR" bo'limi.

@@ -11,6 +11,7 @@ Yangilangan: 2026-11-21 18:20 (jadvaldan tashqari: A/B bajarilgan, slotlar to'la
 - MAQSAD: 6 oyda (2027-05-18 gacha) jami 1 mlrd ko'rish; 12 oyda (2027-11) nishada TOP-10. Har hafta natijaga qarab keskin moslashuv.
 - Limitga urilsa: avval B rejimni, keyin uzun videoni qisqartir va Shohjahonga ayt.
 
+- SHOHJAHON KO'RSATMASI (2026-11-21 19:xx): uzun video HAFTASIGA 2 TA (yakshanba, chorshanba 15:00 ET) — ElevenLabs belgisi Rocco kanaliga ajratiladi. Quyidagi "har 2 kunda" bekor.
 - SHOHJAHON KO'RSATMASI (2026-11-20 03:00): hajmni oshirish — kuniga 4 Shorts + har 2 kunda 1 uzun video; sifat va xilma-xillik birinchi o'rinda ("pul muammo emas, eng zo'r montaj va grafika"). 1 haftada monetizatsiya REAL EMAS (O'zbekistonda YPP yo'q; shartlar 2-bo'limda) — Shohjahonga aytilgan. ElevenLabs krediti <15% qolsa uzunni qisqartir va Pro haqida so'ra.
 
 ## 0.5 TOP-10 VA CINEMA QUALITY STANDARTI
