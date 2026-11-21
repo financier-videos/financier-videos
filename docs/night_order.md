@@ -120,3 +120,11 @@ ROCCO (Buffer, vidIQ Rocco profili):
  4. "GTA 6 on PC? It's a Trap" — qizil bayroq: PC/mobil versiya yo'q; himoya qadami: faqat rasmiy konsol do'koni.
  5. "Free GTA 6 Key = Stolen Account" — bepul kalit/keygen; himoya: hech narsa yuklamaslik, 2 bosqichli himoya. Manba: McAfee, NordVPN ogohlantirishlari (2026-11). Hujum usuli ko'rsatilmaydi.
 O'lchov: results.md da "trend" belgisi, 72 soatda odatdagi Shortlar bilan solishtiruv.
+
+## BUYURTMA 6 — KO'RINISH XILMA-XILLIGI (chat Trade, 2026-11-21 15:29 UTC) — HOLAT: OCHIQ, ENG YUQORI USTUVORLIK (yangi video yasashdan OLDIN)
+Shohjahon 20:26: "videolar yana bir xil: yozuvlar, grafikalar, lavhalar, stillar". To'liq qoida va dalil: docs/looks.md, docs/looks_evidence_2026-11-21.jpg.
+1. Dvigatelga `spec["look"]` qo'sh (Rocco "style" kabi tarmoq): birinchi navbatda 3 ta — **paper, fullbleed, split**; keyin chalk, receipt, neon. Har biri docs/looks.md jadvalidagi 6 o'qning hammasini o'zgartiradi. Shriftlar faqat ochiq litsenziyali (OFL) — assets/fonts ga.
+2. engine/look_check.py ni qc_gate ga qadam qilib ula (yangi video vs oxirgi 4): ≥0.70 = FAIL.
+3. Hali CHIQMAGAN navbatdagi videolar (2026-11-22 va keyingilari): slotgacha ≥60 daqiqa bo'lsa yangi look bilan QAYTA RENDER (ovoz qayta yozilmaydi — faqat tasvir), Metricool'da almashtir. Ketma-ket 3 ta bir xil look bo'lmasin.
+4. Har look uchun 1 kadrlik kontakt-varaqni docs/looks_samples/ ga qo'y va changes.md ga yoz — chat (Trade) ko'rib tekshiradi.
+5. Qila olmagan qismingni "QILINMADI: sababi" deb shu yerga yoz — jim qoldirma.

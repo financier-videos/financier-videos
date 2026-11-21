@@ -93,3 +93,4 @@ QOIDA (har chat, har vazifa sessiyasi, Financier ham, Rocco ham):
 - Ulagichlar: vidIQ (Financier profili), Metricool, Gmail, Google Drive — chat va vazifada; Buffer va Rocco vidIQ — kalit orqali (env).
 - Brauzer va kompyuter (Chrome, Studio, Instagram veb) — FAQAT chat sessiyasida. Vazifa sessiyasiga brauzer ishi kerak bo'lsa, docs/night_order.md ga "CHAT UCHUN" deb yoz — chat keyingi murojaatda bajaradi.
 - ElevenLabs va Runpod — faqat Default muhitdagi vazifa/kod sessiyasida; oddiy chatdan ochilmaydi.
+| Videolar bir-biriga o'xshamasligi (ko'rinish) | `docs/looks.md` + `engine/look_check.py` | HAR video: spec "look"; post oldidan look_check (≥0.70 = FAIL) |
