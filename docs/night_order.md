@@ -111,6 +111,7 @@ Sessiya 2026-11-20 06:40–07:45 Toshkent. ElevenLabs 200 (Buck D). Lip-sync kut
 
 ## BUYURTMA 5 — TREND: GTA 6 (chat Trade, 2026-11-21 14:56 UTC) — HOLAT: OCHIQ, muddat 2026-11-23 15:00 UTC (48 soat; kech qolsa bekor)
 Nega: hozir YouTube'dagi eng katta mavzu (docs/trend_radar.md, SKAN 20:00). O'yin kadri, logotip, personaj rasmi, musiqa ISHLATILMAYDI — faqat o'z animatsiya, raqam grafikasi.
+YANGILANDI: tayyor ssenariylar docs/script_bank.md T-01…T-05 (yangi tuzilmalar, sahnama-sahna tasvir rejasi) — pastdagi 1–5 o'rniga O'SHALARNI ishlat.
 FINANCIER (keyingi bo'sh slotlar, sprint chelagi "trend", kuniga ≤2, ketma-ket emas):
  1. MIKRO 8–12 s: "$3.79 Billion in ONE Day" — birinchi kun savdosi, bitta taqqos (GTA V 2013: $800M).
  2. 25–30 s: "GTA 6 Made More in a Day Than…" — $3.79B vs GTA V $800M; 32.5M nusxa oldindan; "bu savdo bahosi, foyda emas" jumlasi shart.
@@ -128,4 +129,5 @@ Shohjahon 20:26: "videolar yana bir xil: yozuvlar, grafikalar, lavhalar, stillar
 3. Hali CHIQMAGAN navbatdagi videolar (2026-11-22 va keyingilari): slotgacha ≥60 daqiqa bo'lsa yangi look bilan QAYTA RENDER (ovoz qayta yozilmaydi — faqat tasvir), Metricool'da almashtir. Ketma-ket 3 ta bir xil look bo'lmasin.
 4. Har look uchun 1 kadrlik kontakt-varaqni docs/looks_samples/ ga qo'y va changes.md ga yoz — chat (Trade) ko'rib tekshiradi.
 5a. MAVZUGA MOS LAVHA: producer_task "g" (yangi) — har Shortda ≥40% sahna aytilayotgan gapga mos Pixabay lavhasi, to'liq ekran, yorqin; qc_gate ga "broll ulushi" tekshiruvi. Qayta renderda ham qo'lla.
+5b. SSENARIY v2: docs/script_rules.md; engine/script_check.py ni qc_gate ga ula; dvigatelga uzun Short (45–85 s) va 'har sahnaga o'z tasviri' uchun kerakli sahna turlari (hisoblagich, tasma/taxlam, yil taymlayni). 5c. Har video yozuvida 'Skillar:' qatori bo'lmasa qc_gate FAIL.
 5. Qila olmagan qismingni "QILINMADI: sababi" deb shu yerga yoz — jim qoldirma.

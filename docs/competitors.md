@@ -27,3 +27,7 @@ Inglizcha fakt-kanallardagi natijalar (obunachi → ko'rish, uzunlik):
 KUCHLI: (1) juda qisqa — 8 tadan 5 tasi 5–13 soniya (bizniki 30–48 s); (2) sarlavha = bitta aniq da'vo yoki savol, raqam bilan; (3) mavzu — keng "pul viktorinasi": tanga tarkibi, dunyodagi jami pul, boylar daqiqasiga qancha topadi, pulni ikki baravar qilish muddati, mashhur meros — do'kon narxlari EMAS.
 KUCHSIZ: layk ulushi past (0.2–0.6%) — tomoshabin ko'radi-yu bog'lanmaydi; manba ko'rsatilmaydi; bir xil shablon (YouTube "inauthentic" xavfi). Eslatma: Shorts ko'rishi har ijroni sanaydi, 6 soniyalik loop raqamni shishiradi — bu "haqiqiy qiziqish" emas, lekin tavsiya oqimiga chiqish belgisi.
 ERTAGA SINAYMIZ: "MIKRO" format — 8–12 s, BITTA fakt, birinchi kadrda raqam, Buck bitta jumla aytadi, oxiri boshiga ulanadi. Manba tavsifda (bizning ustunligimiz saqlanadi). Reallarning ismi/merosi mavzusi (Monroe) OLINMAYDI — real shaxslar qoidasi.
+
+## 2026-11-21 15:51 UTC — outlier tahlili №2 (to'liq: docs/audit_2026-11-21.md)
+Kuzatiladigan yangi kanallar: Canonically (2.9K; "Why Prices End In 99 Cents" 1.1M, 60 s, chizilgan hikoya), Begofox (19.7K; "How Big Is a Trillion?" 2.6M, 85 s, masshtab narvoni), DuskFrame (15.6K; "How Fast Companies Make $1 Million" 550K, 47 s), Business Tactic (44.5K; 930K, 52 s), Why We Do It (11.2K; 9 s mikro 798K).
+Saboq: bizning ikki mavzu (99 sent, trillion) ularda 1–2.6M — farq ijroda: bitta savol, har 8–10 s yangi tasvir, yorqin sahna, 45–90 s.

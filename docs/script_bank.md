@@ -142,3 +142,34 @@ Sarlavha: "Airport Prices Actually Have a Limit". Izoh savoli: "Worst airport pr
 ## [CHIQDI 2026-11-23 10:00 ET — "5 Sneaky Fees, Ranked: #1 Got a New Rule", work/2026-11-23/s1_fees_rank.json] S-12 "Ranking the Sneakiest Fees in America" (2026-11-21, reyting formati (i))
 G'oya manbasi: Kellan Henneberry videosidagi "ranking" format (faqat format; kontent — o'zimizniki). 5–6 band, ARALASH tartib, #1 oxirida; har band — rasmiy manbali to'lov (masalan: bank overdraft — CFPB; konsert/chipta "service fee" — FTC junk fees qoidasi 2025; mehmonxona "resort fee" — FTC; aviakompaniya bagaj — DOT/BTS; ATM tarmoqdan tashqari — Bankrate yillik so'rovi). Har raqam render oldidan joriy manbadan olinadi; tasdiqlanmagani olib tashlanadi.
 Ko'rinish: tepada 2 qatorli sarlavha "RANKING THE / SNEAKIEST FEES" (kalit "SNEAKIEST FEES" — teal), har bandda katta "#N" stat + Buck reaksiyasi (har bandda boshqa kayfiyat), #1 dan oldin beat. Izoh savoli: "Which fee made you angriest?" Theme: ember. Emotsiya: "adolatsizlik" (yengil).
+
+## ===== TREND: GTA 6 (yozdi: chat Trade, 2026-11-21; qoida: docs/script_rules.md v2; muddat 2026-11-23 15:00 UTC) =====
+MANBA (hammasi uchun): Take-Two Interactive press-relizi, 2026-11-20 — birinchi kun chakana savdosi $3.79B (kompaniya bahosi, foyda emas), chiqishgacha 32.5M nusxa, chiqish 2026-11-19. GTA V: birinchi kun $800M+ (Take-Two 8-K, 2013-09-18). $1 kupyura: 6.14 × 2.61 dyuym, qalinligi 0.0043 dyuym, ~1 g (U.S. Currency Education Program / BEP). Oygacha o'rtacha 384 400 km; XKS balandligi ~400 km (NASA).
+O'Z HISOBIMIZ (ekranda "our math"): $3.79B ÷ 86 400 s ≈ $43 866/soniya (o'rtacha); ÷ 1 440 ≈ $2.63M/daqiqa; uchma-uch: 3.79 mlrd × 0.156 m ≈ 591 000 km ≈ Oygacha 1.5 marta; taxlam: 3.79 mlrd × 0.109 mm ≈ 414 km ≈ XKS orbitasi balandligi; og'irlik ≈ 3 790 tonna; GTA V ga nisbatan ≈ 4.7×.
+TAQIQ: o'yin kadri, logotip, personaj rasmi, o'yin musiqasi YO'Q. Byudjet/foyda mish-mishi YO'Q. Render oldidan raqamlarni manbadan qayta tekshir.
+
+### [TAYYOR] T-01 scale_ladder · look fullbleed · ~55 s · "How Big Is $3.79 Billion in ONE Day?"
+Hook yozuvi (1-kadr): "A video game made $3.79 BILLION in one day."
+| # | Aytiladi | Tasvir (yo'l) |
+|---|---|---|
+| 1 | "A video game just made three point seven nine billion dollars. In one day." | tungi shahar tepadan, dron (2 masshtab); raqam sanab chiqadi |
+| 2 | "That's Take-Two's own estimate for day one. Sales, not profit." | qog'oz press-reliz mock-up, sana shtampi (o'z grafika); show_source |
+| 3 | "That's about forty-four thousand dollars. Every second." | soniya hisoblagichi + tushayotgan kupyuralar (o'z animatsiya) |
+| 4 | "Lay it out in one-dollar bills, end to end..." | yo'l/dala ustida ufqqa ketgan kupyura tasmasi (o'z 3D) |
+| 5 | "...and you'd reach the Moon. Then keep going." | NASA: Yer–Oy kadri; tasma Oydan o'tadi; "≈1.5×" (2) |
+| 6 | "Stack them instead? The pile ends where the space station flies." | NASA: orbitadan Yer; taxlam chizig'i 414 km (2) |
+| 7 | "The last one, GTA Five, made eight hundred million on day one. In 2013." | split: 2013 $800M | 2026 $3.79B, ustunlar (o'z grafika) |
+| 8 | "So what would YOU do with one second of that?" | Buck markazda, qo'lida bitta kupyura dastasi; savol yozuvi |
+Buck: 1, 3, 8-sahnalarda. Yakun: savol (loop emas). Sarlavha: "How Big Is $3.79 Billion in ONE Day?" Tavsif 1-qator: "What would you do with one second of it?"
+
+### [TAYYOR] T-02 one_number (mikro) · look neon · ~10 s · "$43,866 Every Second"
+1-kadr yozuvi: "GTA 6 day one: $43,866 EVERY SECOND". | 1: "Forty-four thousand dollars. Every second." — neon hisoblagich tez aylanadi. | 2: "That's GTA Six, day one. Three point seven nine billion." — raqam + "Take-Two estimate, our math". | Loop: hisoblagich 0 ga qaytadi. Buck yo'q yoki oxirgi 1 s burchakda.
+
+### [TAYYOR] T-03 timeline · look split · ~35 s · "13 Years, 4.7× Bigger"
+1: "2013. GTA Five. Eight hundred million dollars on day one." — 2013 davri lavhasi (eski telefon, shahar) + ustun. | 2: "It was the biggest launch anyone had seen." — stadion/olomon uzoqdan (4 his). | 3: "Then... thirteen years of waiting." — taqvim varaqlari uchadi, taymlaps bulutlar (3 metafora). | 4: "2026. Day one: three point seven nine billion." — ustun 4.7× o'sadi, kamera orqaga. | 5: "Thirty-two and a half million copies sold before it even came out." — konveyer/qutilar lavhasi (1). | 6: "Almost five times bigger. Same series." — split yakun, bitta raqam "4.7×". Yakun: bitta raqam qora fonda.
+
+### [TAYYOR] T-04 (ROCCO) myth_bust · look phone · ~30 s · "GTA 6 on PC? It's a Trap"
+1-kadr: "There is NO GTA 6 for PC." | 1: "Someone offers you GTA Six for PC? Red flag." — telefon ekrani, soxta xabar (brend logotipisiz). | 2: "It's out on PlayStation Five and Xbox only." — ikki konsol silueti (o'z grafika). | 3: "Security firms found fake downloads carrying password-stealing malware." — qulf sinishi/ogohlantirish belgisi; manba: McAfee, NordVPN (Nov 2026). | 4: "Do this: buy only inside the PlayStation or Xbox store." — himoya qadami kartasi. | 5: "And never run a file a video told you to download." — "DELETE" muhri. Hujum usuli ko'rsatilmaydi.
+
+### [TAYYOR] T-05 (ROCCO) one_number (mikro) · look case-file · ~12 s · "Free GTA 6 Key = Stolen Account"
+1: "A free GTA Six key? That's the bait." — yorliq "FREE KEY" ustiga qizil muhr. | 2: "Real keys come from the console store. Nowhere else." — himoya qadami. Loop.
