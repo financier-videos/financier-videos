@@ -39,6 +39,8 @@ v6 CINEMA QUALITY (default ON; spec "cinema": false = old look, e.g. for quick t
 spec.json:
 {
   "format": "short" | "long",          # short = 1080x1920, long = 1920x1080
+  "style": "rocco"   # v6.12: Rocco look (case-file headline, typewriter, red stamp stats, label captions); scene "phone": {"from": "Unknown number", "msgs": [{"t": "...", "at": 0.3, "flag": true}]}
+  "brand": "FINANCIER", "brand_color": "#F5C542"   # v6.11: corner brand text (Rocco: "RED FLAG ROCCO"); character library = env FIN_BUCK3D (Rocco: work/rocco/rocco_sprites.py)
   "bg": "clip.mp4" | ["a.mp4", "b.jpg", ...],   # v6.6: real blurred BACKDROP behind non-b-roll scenes (list = rotates per scene; scene "bg" overrides, false = plain); "bg_mix": 0.62, "bg_blur": 6, "bg_bright": 1.0 (v6.9: 1.3–1.5 = brighter theme + less backdrop dimming; A/B, notes/2026-11-21_color.md). Fetch: engine/pixabay_bg.py
   "theme": "vault|mint|ember|royal|ocean|noir",   # v6.1 background look (palette + pattern); omit = picked from the first line. Never the same theme for two videos in a row.
   "voice": "am_michael", "speed": 1.05,
@@ -298,7 +300,7 @@ def el_speak(text, workdir, tag, cfg=None, prev=None, nxt=None, sr=24000):
         y = y[a0:a1]; sh = a0 / sr
         words = [(w, max(0.0, t0 - sh), max(0.0, t1 - sh)) for w, t0, t1 in words]
         y, words = _tighten(y, words, sr, float(cfg.get("max_pause", 0)), float(cfg.get("tempo", 1.0)), workdir, tag)
-        _EL["used"].append(f"elevenlabs:{_EL.get('name') or BUCK_EL['name']}/{m}")
+        _EL["used"].append(f"elevenlabs:{cfg.get('label') or _EL.get('name') or BUCK_EL['name']}/{m}")
         return (y / pk * 0.85).astype(np.float32), words
     return None
 
@@ -937,7 +939,7 @@ def caption_chunks_timed(text, words):
     return out
 
 
-ENGINE_VERSION = "6.10"  # bump on every engine change and add a line to docs/changes.md
+ENGINE_VERSION = "6.12"  # bump on every engine change and add a line to docs/changes.md
 
 THEMES = {  # v6.1: per-video look so videos don't all share one background. Spec "theme": name | "auto" (default: from the first line).
     "vault": ([((9, 14, 28), (19, 30, 54)), ((12, 10, 30), (32, 20, 58)), ((6, 20, 24), (14, 42, 48))], "grid"),
@@ -1077,7 +1079,8 @@ def fun_font(name="Bangers-Regular.ttf"):
     """Open-licence (OFL) display fonts from github.com/google/fonts; falls back to Comic Relief."""
     p = os.path.join(FONT_DIR, name)
     if not os.path.exists(p):
-        sub = {"Bangers-Regular.ttf": "bangers", "LilitaOne-Regular.ttf": "lilitaone"}.get(name)
+        sub = {"Bangers-Regular.ttf": "bangers", "LilitaOne-Regular.ttf": "lilitaone", "CourierPrime-Bold.ttf": "courierprime",
+               "BlackOpsOne-Regular.ttf": "blackopsone"}.get(name)
         try:
             os.makedirs(FONT_DIR, exist_ok=True)
             subprocess.run(["curl", "-sSfL", "-o", p + ".part", f"https://raw.githubusercontent.com/google/fonts/main/ofl/{sub}/{name}"], timeout=60, check=True)
@@ -1757,7 +1760,11 @@ def render(spec, wav, total, out, workdir):
     long = spec.get("format") == "long"
     W, H = (1920, 1080) if long else (1080, 1920)
     S = min(W, H)
-    f_head = ImageFont.truetype(ANTON, int(S * (0.075 if long else 0.105)))
+    ROC = spec.get("style") == "rocco"  # v6.12: Red Flag Rocco look - case-file tabs, typewriter, red stamps, label captions, phone SMS
+    f_head = ImageFont.truetype(fun_font("CourierPrime-Bold.ttf") if ROC else ANTON, int(S * (0.075 if long else (0.088 if ROC else 0.105))))
+    f_stamp = ImageFont.truetype(fun_font("BlackOpsOne-Regular.ttf"), int(S * 0.17)) if ROC else None
+    f_phone = ImageFont.truetype(INTER_SB, int(S * 0.044)); f_phone_b = ImageFont.truetype(INTER_XB, int(S * 0.036))
+    ACC = (255, 59, 59) if ROC else GOLD
     cap_sz = int(S * (0.05 if long else 0.07))
     f_cap = ImageFont.truetype(INTER_XB, cap_sz)
     f_cap_big = ImageFont.truetype(INTER_XB, int(cap_sz * 1.12))
@@ -1816,7 +1823,7 @@ def render(spec, wav, total, out, workdir):
             if isinstance(_bd, str) and os.path.exists(_bd):
                 bdclip, bdsz = backdrop_frames(_bd, W, H, n, sc.get("bg_start", (si * 3.7) % 9), spec.get("bg_blur", 6))
                 bd_mix = float(spec.get("bg_mix", 0.62))  # share of the real picture vs theme colour
-        col = hex2rgb(sc.get("color", "#F5C542"))
+        col = hex2rgb(sc.get("color", "#FF3B3B" if spec.get("style") == "rocco" else "#F5C542"))
         trans = sc.get("transition") or ("punch" if sc.get("stat") else trans_cycle[si % 3])
         stat_sz = f_stat.size
         if sc.get("stat"):
@@ -1834,7 +1841,7 @@ def render(spec, wav, total, out, workdir):
         masc = sc.get("mascot"); bub = None
         if masc:
             mood = masc.get("mood", "happy") if masc.get("mood", "happy") in MOODS else "happy"
-            mpos = masc.get("pos") or ("corner" if (sc.get("stat") or sc.get("chart") or sc.get("vs") or clip) else "center")
+            mpos = masc.get("pos") or ("corner" if (sc.get("stat") or sc.get("chart") or sc.get("vs") or clip or sc.get("phone")) else "center")
             m_at = float(masc.get("at", 0))
             if mpos == "center":
                 mR = H * 0.13 if long else W * 0.17; mx, my = W * 0.5, H * 0.47
@@ -1969,7 +1976,23 @@ def render(spec, wav, total, out, workdir):
             # ---------- v4.1 split-screen VS ----------
             if vsd: draw_vs(fd, vsd, lt)
             # ---------- stat: count-up + overshoot punch ----------
-            if sc.get("stat") and not chart and not vsd:
+            if sc.get("stat") and not chart and not vsd and ROC:  # red rubber stamp slams down
+                p_in = (lt - 0.12) / 0.22
+                if p_in > 0:
+                    k_ = 1.0 + 0.7 * (1 - ease_out(min(1.0, p_in)))
+                    txt = sc["stat"]; tw_ = int(fd.textlength(txt, font=f_stamp)); th_ = int(f_stamp.size * 1.25)
+                    pad = int(S * 0.035); st_im = Image.new("RGBA", (tw_ + pad * 2, th_ + pad * 2), (0, 0, 0, 0)); sd_ = ImageDraw.Draw(st_im)
+                    sd_.rounded_rectangle([4, 4, st_im.width - 5, st_im.height - 5], radius=int(S * 0.02), outline=col + (235,), width=int(S * 0.012))
+                    sd_.text((pad, pad - f_stamp.size * 0.08), txt, font=f_stamp, fill=col + (240,))
+                    rng_ = np.random.default_rng(si)  # ink texture: a few worn specks
+                    for _ in range(40):
+                        x_, y_ = rng_.uniform(0, st_im.width), rng_.uniform(0, st_im.height); r_ = rng_.uniform(1, S * 0.006)
+                        sd_.ellipse([x_ - r_, y_ - r_, x_ + r_, y_ + r_], fill=(0, 0, 0, 0))
+                    st_im = st_im.rotate(-7, expand=True, resample=Image.BICUBIC)
+                    if abs(k_ - 1) > 1e-3: st_im = st_im.resize((int(st_im.width * k_), int(st_im.height * k_)), Image.BILINEAR)
+                    if st_im.width > W * 0.92: st_im = st_im.resize((int(W * 0.92), int(st_im.height * W * 0.92 / st_im.width)), Image.LANCZOS)
+                    paste_rgba(fx, st_im, (W - st_im.width) / 2 + (W * 0.07 if masc and masc.get("pos", "corner") == "corner" else 0), H * 0.43 - st_im.height / 2)
+            elif sc.get("stat") and not chart and not vsd:
                 p_in = (lt - 0.15) / 0.45
                 if p_in > 0:
                     sc_k = 0.6 + 0.4 * ease_back(p_in)
@@ -1998,15 +2021,22 @@ def render(spec, wav, total, out, workdir):
                 lh = f_head.size * 1.08
                 y0 = H * (0.095 if not long else 0.075) - (1 - a) * 70
                 boxh = lh * len(lines) + S * 0.04
-                fd.rounded_rectangle([W * 0.05, y0 - S * 0.02, W * 0.95, y0 + boxh - S * 0.02], radius=int(S * 0.025), fill=(0, 0, 0, int(175 * al / 255)))
-                for li, ln in enumerate(lines):
-                    tw = fd.textlength(ln, font=f_head)
-                    fd.text(((W - tw) / 2, y0 + li * lh), ln, font=f_head, fill=col + (al,))
+                if ROC:  # manila case-file tab, typewriter text, left aligned
+                    fd.rectangle([W * 0.05, y0 - S * 0.045, W * 0.32, y0 - S * 0.015], fill=(205, 170, 96, al))
+                    fd.rectangle([W * 0.05, y0 - S * 0.02, W * 0.95, y0 + boxh - S * 0.02], fill=(222, 190, 120, al))
+                    fd.text((W * 0.065, y0 - S * 0.045), "CASE FILE", font=f_src, fill=(70, 50, 25, al))
+                    for li, ln in enumerate(lines):
+                        fd.text((W * 0.08, y0 + li * lh), ln, font=f_head, fill=(28, 24, 20, al))
+                else:
+                    fd.rounded_rectangle([W * 0.05, y0 - S * 0.02, W * 0.95, y0 + boxh - S * 0.02], radius=int(S * 0.025), fill=(0, 0, 0, int(175 * al / 255)))
+                    for li, ln in enumerate(lines):
+                        tw = fd.textlength(ln, font=f_head)
+                        fd.text(((W - tw) / 2, y0 + li * lh), ln, font=f_head, fill=col + (al,))
                 u = ease_out((lh_t - 0.2) / 0.5)
                 if u > 0:
                     uw = W * 0.5 * u
                     by = y0 + boxh - S * 0.02  # underline sits just below the headline box
-                    fd.rectangle([W / 2 - uw / 2, by + S * 0.008, W / 2 + uw / 2, by + S * 0.016], fill=col + (255,))
+                    fd.rectangle([W / 2 - uw / 2, by + S * 0.008, W / 2 + uw / 2, by + S * 0.016], fill=(ACC if ROC else col) + (255,))
             # ---------- v3: Buck the coin + speech bubble + sticker ----------
             if masc and lt >= m_at:
                 m_lt = lt - m_at; act = masc.get("act"); act_lt = m_lt - float(masc.get("act_at", 0))
@@ -2051,6 +2081,33 @@ def render(spec, wav, total, out, workdir):
                 sp_ = stk if abs(s_ - 1) < 1e-3 else stk.resize((max(1, int(stk.width * s_)), max(1, int(stk.height * s_))), Image.BILINEAR)
                 jit = (math.sin(fi * 2.1) * S * 0.006 * max(0.0, 1 - lts / 0.4))
                 paste_rgba(fx, sp_, stk_c[0] - sp_.width / 2 + jit, stk_c[1] - sp_.height / 2)
+            # ---------- v6.12 phone: generic SMS screen, messages pop in (no real brand, no real number) ----------
+            ph = sc.get("phone")
+            if ph:
+                pa = ease_back(min(1.0, lt / 0.3)) if lt < 0.3 else 1.0
+                pw_, phh = W * 0.62 * pa, H * 0.44 * pa; px_, py_ = (W - pw_) / 2 + (W * 0.08 if masc else 0), H * 0.20
+                fd.rounded_rectangle([px_ - S * 0.012, py_ - S * 0.012, px_ + pw_ + S * 0.012, py_ + phh + S * 0.012], radius=int(S * 0.06), fill=(18, 18, 22, 255))
+                fd.rounded_rectangle([px_, py_, px_ + pw_, py_ + phh], radius=int(S * 0.05), fill=(214, 217, 224, 255))
+                if pa > 0.95:
+                    fd.rectangle([px_, py_ + S * 0.05, px_ + pw_, py_ + S * 0.11], fill=(228, 228, 234, 255))
+                    hdr = ph.get("from", "Unknown number"); tw = fd.textlength(hdr, font=f_phone_b)
+                    fd.text((px_ + (pw_ - tw) / 2, py_ + S * 0.062), hdr, font=f_phone_b, fill=(30, 30, 36, 255))
+                    yy_ = py_ + S * 0.14
+                    for mi, m_ in enumerate(ph.get("msgs", [])):
+                        m_at = float(m_.get("at", 0.3 + 0.8 * mi)) if isinstance(m_, dict) else 0.3 + 0.8 * mi
+                        mt = m_["t"] if isinstance(m_, dict) else m_
+                        if lt < m_at: break
+                        ma = ease_back(min(1.0, (lt - m_at) / 0.25))
+                        ln_ = wrap(fd, mt, f_phone, pw_ * 0.72); bh_ = len(ln_) * f_phone.size * 1.25 + S * 0.03
+                        bw_ = max(fd.textlength(l, font=f_phone) for l in ln_) + S * 0.04
+                        flag = isinstance(m_, dict) and m_.get("flag") and lt > m_at + 0.6
+                        fd.rounded_rectangle([px_ + S * 0.03, yy_, px_ + S * 0.03 + bw_ * ma, yy_ + bh_ * ma], radius=int(S * 0.03),
+                                             fill=(255, 205, 205, 255) if flag else (236, 237, 241, 255), outline=(ACC + (255,)) if flag else None, width=int(S * 0.006))
+                        if ma > 0.9:
+                            for k_, l in enumerate(ln_): fd.text((px_ + S * 0.05, yy_ + S * 0.015 + k_ * f_phone.size * 1.25), l, font=f_phone, fill=(20, 20, 24, 255))
+                        if flag:
+                            fd.text((px_ + S * 0.03 + bw_ - S * 0.04, yy_ - S * 0.035), "!", font=f_head, fill=ACC + (255,), stroke_width=4, stroke_fill=(0, 0, 0, 255))
+                        yy_ += bh_ + S * 0.025
             # ---------- karaoke captions ----------
             for cap in caps:
                 c0, c1, txt = cap[:3]
@@ -2070,10 +2127,15 @@ def render(spec, wav, total, out, workdir):
                     for li, idxs in enumerate(lines):
                         widths = [ud.textlength(words[i], font=(f_cap_big if i == act else f_cap)) for i in idxs]
                         lw = sum(widths) + sp * (len(idxs) - 1); x = (W * (1.0 if long else 0.94) - lw) / 2
+                        if ROC:  # black label strip behind each caption line
+                            ud.rectangle([x - S * 0.02, yb + li * cap_sz * 1.2 - cap_sz * 0.08, x + lw + S * 0.02, yb + li * cap_sz * 1.2 + cap_sz * 1.12], fill=(12, 12, 14, int(225 * pop)))
                         for j, i in enumerate(idxs):
                             wd = words[i]; fnt = f_cap_big if i == act else f_cap
                             isnum = bool(re.search(r'[\d$¢%]', wd))
                             fill = GOLD if i == act else (GREEN if isnum else WHITE)
+                            if ROC:
+                                fill = WHITE if i == act else ((255, 214, 90) if isnum else (225, 228, 235))
+                                if i == act: ud.rectangle([x - S * 0.006, yb + li * cap_sz * 1.2 - cap_sz * 0.1, x + widths[j] + S * 0.006, yb + li * cap_sz * 1.2 + cap_sz * 1.1], fill=ACC + (int(255 * pop),))
                             yy = yb + li * cap_sz * 1.2 - (cap_sz * 0.06 if i == act else 0)
                             ud.text((x, yy), wd, font=fnt, fill=fill + (int(255 * pop),), stroke_width=max(5, cap_sz // 9), stroke_fill=(0, 0, 0, int(255 * pop)))
                             x += widths[j] + sp
@@ -2086,8 +2148,8 @@ def render(spec, wav, total, out, workdir):
                     fs_ = ImageFont.truetype(INTER_SB, max(int(S * 0.020), int(S * 0.030 * W * 0.92 / tw))); tw = ud.textlength(src_txt, font=fs_)
                 ud.text(((W - tw) / 2, H * (0.93 if long else 0.775)), src_txt, font=fs_, fill=(196, 204, 220, 255),
                         stroke_width=max(1, int(S * 0.002)), stroke_fill=(0, 0, 0, 200))
-            ud.rectangle([0, 0, int(W * t / total), int(S * 0.009)], fill=GOLD + (255,))
-            ud.text((W * 0.04, (H - S * 0.07) if long else S * 0.03), "FINANCIER", font=f_brand, fill=GOLD + (150,))
+            ud.rectangle([0, 0, int(W * t / total), int(S * 0.009)], fill=ACC + (255,))
+            ud.text(((W * 0.96 - ud.textlength(spec.get("brand", ""), font=f_brand)) if ROC else W * 0.04, (H - S * 0.07) if long else S * 0.03), spec.get("brand", "FINANCIER"), font=f_brand, fill=(hex2rgb(spec["brand_color"]) if spec.get("brand_color") else GOLD) + (150,))
             if cinema:  # v6: parallax — background 0.55x, content 1x, near bokeh 1.6x of the camera move
                 cz, cpx, cpy = cam_at(cam_keys, lt) if cam_keys else (1.0, 0.0, 0.0)
                 im = cam_xform(im, 1 + (cz - 1) * 0.55, cpx * 0.55, cpy * 0.55)

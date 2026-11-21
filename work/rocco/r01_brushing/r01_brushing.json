@@ -1,0 +1,181 @@
+{
+ "format": "short",
+ "sfx": true,
+ "loop": true,
+ "theme": "noir",
+ "style": "rocco",
+ "brand": "RED FLAG ROCCO",
+ "brand_color": "#FF3B3B",
+ "bg_bright": 1.4,
+ "bg_mix": 0.8,
+ "bg_blur": 2,
+ "source": "Source: FTC consumer alert on brushing scams (Aug 2026)",
+ "topic": 7,
+ "buck_voice": {
+  "voice_id": "eYibgGvZyWzJUi8HBmQM",
+  "label": "Rocco (Scam Detective)",
+  "settings": {
+   "speed": 1.05
+  }
+ },
+ "scenes": [
+  {
+   "text": "Got a box you never ordered?",
+   "head": "NEVER ORDERED IT",
+   "vs": {
+    "left": "0",
+    "left_label": "You ordered",
+    "right": "1 BOX",
+    "right_label": "At your door",
+    "win": "right",
+    "at": [
+     0.1,
+     0.5
+    ],
+    "vs_at": 0.35,
+    "left_color": "#9AA3AD",
+    "right_color": "#FF3B3B"
+   },
+   "sfx": [
+    "impact@0.5"
+   ],
+   "bg": "/tmp/fin/bg/rocco_door.mp4"
+  },
+  {
+   "text": "That's not luck. Heh... it's called brushing.",
+   "head": "THE TRICK",
+   "stat": "BRUSHING",
+   "beat": 0.3,
+   "mascot": {
+    "mood": "smug",
+    "pos": "corner",
+    "act": "drop_in"
+   },
+   "sfx": [
+    "impact@0.3"
+   ],
+   "bg": "/tmp/fin/bg/rocco_door.mp4"
+  },
+  {
+   "text": "Sellers ship to real addresses, then post fake reviews in your name.",
+   "head": "WHY THEY DO IT",
+   "broll": "/tmp/fin/bg/rocco_conv.mp4",
+   "sticker": "FAKE 5-STAR REVIEWS",
+   "sticker_at": 2.0,
+   "mascot": {
+    "mood": "angry",
+    "pos": "corner"
+   },
+   "sfx": [
+    "pop@2.0"
+   ]
+  },
+  {
+   "text": "Inside, a note: scan to see who sent it.",
+   "head": "RED FLAG #1",
+   "broll": "/tmp/fin/bg/rocco_box1.mp4",
+   "sticker": "SCAN ME :)",
+   "sticker_at": 1.0,
+   "mascot": {
+    "mood": "confused",
+    "pos": "corner"
+   },
+   "sfx": [
+    "fxr_select@1.0"
+   ]
+  },
+  {
+   "text": "Wait. Don't!",
+   "head": "DON'T SCAN IT",
+   "mascot": {
+    "mood": "shocked",
+    "pos": "center",
+    "act": "dodge"
+   },
+   "shake": 0.3,
+   "sfx": [
+    "fxr_hurt@0.2"
+   ],
+   "bg": "/tmp/fin/bg/rocco_phone1.mp4"
+  },
+  {
+   "text": "The FTC warned in August: that code can lead to a phishing site.",
+   "head": "WHERE IT LEADS",
+   "phone": {
+    "from": "unknown website",
+    "msgs": [
+     {
+      "t": "Scan complete! See who sent your gift:",
+      "at": 0.3
+     },
+     {
+      "t": "Enter your card number to confirm",
+      "at": 1.4,
+      "flag": true
+     }
+    ]
+   },
+   "show_source": true,
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner"
+   },
+   "sfx": [
+    "fxr_select@0.3",
+    "impact@2.0"
+   ],
+   "bg": "/tmp/fin/bg/rocco_phone1.mp4"
+  },
+  {
+   "text": "Your move: change your shopping passwords tonight.",
+   "head": "YOUR MOVE",
+   "sticker": "NEW PASSWORDS",
+   "sticker_at": 1.2,
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   },
+   "sfx": [
+    "fxr_powerup@1.2"
+   ],
+   "bg": "/tmp/fin/bg/rocco_phone1.mp4"
+  },
+  {
+   "text": "Good news? You can legally keep it. Just use it carefully.",
+   "head": "GOOD NEWS",
+   "stat": "KEEP IT",
+   "color": "#2BD67B",
+   "land": 0.4,
+   "mascot": {
+    "mood": "thumbsup",
+    "pos": "corner"
+   },
+   "sfx": [
+    "fxr_pickup@0.4"
+   ],
+   "bg": "/tmp/fin/bg/rocco_door.mp4"
+  },
+  {
+   "text": "Would you keep it, or toss it?",
+   "head": "KEEP OR TOSS?",
+   "mascot": {
+    "mood": "happy",
+    "pos": "center",
+    "act": "flip"
+   },
+   "sfx": [
+    "ding@0.3"
+   ],
+   "bg": "/tmp/fin/bg/rocco_conv.mp4"
+  },
+  {
+   "text": "Send this to someone who opens every box. Because if you got a box you never ordered...",
+   "head": "SEND THIS",
+   "mascot": {
+    "mood": "proud",
+    "pos": "center"
+   },
+   "bg": "/tmp/fin/bg/rocco_door.mp4"
+  }
+ ]
+}
