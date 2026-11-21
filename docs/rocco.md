@@ -67,3 +67,8 @@ Rocco ovozini yaratish (ElevenLabs voice design, bir marta) → yangi theme + te
 | # | Fayl | Sarlavha | Vaqt | Buffer id | Format / QC |
 |---|---|---|---|---|---|
 | r01 | rocco_2026-11-21_r01_brushing.mp4 (34.5 s) | 1 Free Box, 1 QR Code, 1 Big Red Flag | 2026-11-21 17:00 ET | 6b01befd142c957519268046 | hiyla ochildi + telefon (soxta QR sahifa); hook "Got a box you never ordered?" (hookscore 81.4); FTC 2026-08; qc_gate PASS (voice ok, prosody 0 bayroq, title 100, look 0.51–0.64 vs Financier); Skillar: hookscore, beats, title.py, qc_gate, color_check, look_check, Pixabay (Openly, flutie8211, magicmore, matlevesque) |
+
+## KUNLIK RAQAMLAR
+| sana (Toshkent) | obunachi | video | ko'rish | izoh |
+|---|---|---|---|---|
+| 2026-11-21 23:50 | 0 | 0 | 0 | hali video chiqmagan; r01 v2 Buffer 22:00 UTC (6b01e0a5…). Rocco vidIQ balansi 95/150 |
