@@ -2013,13 +2013,13 @@ def render(spec, wav, total, out, workdir):
                             pts = [(ax, ay - s2), (ax - s2, ay + s2 * 0.2), (ax + s2, ay + s2 * 0.2)] if arrow == "arrow_up" else [(ax, ay + s2), (ax - s2, ay - s2 * 0.2), (ax + s2, ay - s2 * 0.2)]
                             fd.polygon(pts, fill=ac + (int(255 * a),))
             # ---------- headline: drop-in with overshoot + underline sweep ----------
-            if sc.get("head"):
+            if sc.get("head") and not (ROC and clip and si > 0):  # Rocco: full-screen footage scenes carry no headline
                 lh_t = lt + (0.4 if si == 0 else 0.0)  # hook: headline fully visible on frame 1 (works with sound off)
                 a = ease_back(lh_t / 0.4) if lh_t < 0.4 else 1.0
                 al = int(255 * min(1.0, lh_t / 0.2))
                 lines = wrap(fd, sc["head"], f_head, W * 0.86)
                 lh = f_head.size * 1.08
-                y0 = H * (0.095 if not long else 0.075) - (1 - a) * 70
+                y0 = (H * 0.815 + (1 - a) * 70) if ROC else (H * (0.095 if not long else 0.075) - (1 - a) * 70)  # Rocco: case-file tab at the bottom
                 boxh = lh * len(lines) + S * 0.04
                 if ROC:  # manila case-file tab, typewriter text, left aligned
                     fd.rectangle([W * 0.05, y0 - S * 0.045, W * 0.32, y0 - S * 0.015], fill=(205, 170, 96, al))
@@ -2146,7 +2146,7 @@ def render(spec, wav, total, out, workdir):
                 fs_ = f_src; tw = ud.textlength(src_txt, font=fs_)
                 if tw > W * 0.92:   # v6.4: shrink a long source line to fit instead of running off the frame
                     fs_ = ImageFont.truetype(INTER_SB, max(int(S * 0.020), int(S * 0.030 * W * 0.92 / tw))); tw = ud.textlength(src_txt, font=fs_)
-                ud.text(((W - tw) / 2, H * (0.93 if long else 0.775)), src_txt, font=fs_, fill=(196, 204, 220, 255),
+                ud.text(((W - tw) / 2, H * (0.93 if long else (0.915 if ROC else 0.775))), src_txt, font=fs_, fill=(196, 204, 220, 255),
                         stroke_width=max(1, int(S * 0.002)), stroke_fill=(0, 0, 0, 200))
             ud.rectangle([0, 0, int(W * t / total), int(S * 0.009)], fill=ACC + (255,))
             ud.text(((W * 0.96 - ud.textlength(spec.get("brand", ""), font=f_brand)) if ROC else W * 0.04, (H - S * 0.07) if long else S * 0.03), spec.get("brand", "FINANCIER"), font=f_brand, fill=(hex2rgb(spec["brand_color"]) if spec.get("brand_color") else GOLD) + (150,))
