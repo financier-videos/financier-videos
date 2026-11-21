@@ -4,6 +4,7 @@ QOIDA (har chat, har vazifa): (1) ish boshida `git pull` va shu faylning yuqorid
 
 | Vaqt (Toshkent) | Kim | Nima qilindi | Fayl | Keyingi qadam |
 |---|---|---|---|---|
+| 11-21 19:15 | chat | Shohjahon tuzatishi: kanalga personaj/ovoz SHART EMAS; formatlar xaritasi (5 o'q) + 8 xil kanal g'oyasi (ovozsiz tabiat, 3D, "topa olasizmi", xaritalar, uzun tinchlantiruvchi va b.) | docs/trend_radar.md | hamma: yangi g'oyani kamida 3 xil formatda o'ylash |
 | 11-21 19:10 | chat | Trend radari: kunlik skan qoidasi + birinchi skan (GTA 6 haftasi); yangi kanal nomzodlari | docs/trend_radar.md | vazifa/code: 48 soat ichida Financier 2 ta "GTA 6 raqamlarda", Rocco "GTA 6 firibgarliklari" (faqat manbali) |
 | 11-21 19:05 | chat | Raqobatchi tahlili (portlagan Shortlar 5–13 s) → mikro-Short sinovi: kuniga 4 mikro + 4 odatdagi | docs/competitors.md, docs/sprint_10d.md 1.5 | vazifa: 22-noyabrdan mikrolar; 72 soatda solishtirish |
 | 11-21 18:57 | chat | Skillar ko'rsatkichi (qachon nimani ishlataman) + majburiy "Skillar:" qatori; akkaunt skilli financier-toolbox | docs/skills/INDEX.md | hamma: har ish oldidan o'qish |

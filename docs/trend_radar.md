@@ -14,7 +14,7 @@ Shohjahon: "YouTube va Instagram'ni kuzatib bor, eng tez o'sayotgan va trendga c
 
 ## YANGI KANAL OCHISH QOIDASI
 - Nomzod → kanal: (a) klaster ≥3 skanda; (b) kichik kanallar (≤50K) ham millionlab ko'rish olyapti; (c) kuniga kamida 2 Short chiqara oladigan quvvat bor (ovoz belgilari, render, post vositasi); (d) Shohjahon "och" deydi — akkaunt/kanal yaratish, parol va tasdiqlash faqat u orqali.
-- Har kanal o'z personaji, o'z ovozi, o'z vizuali bilan (bir xil shablonni ko'paytirish — YouTube "inauthentic content" xavfi, kanal darajasida jazolanadi).
+- FORMAT ERKIN (Shohjahon 2026-11-21 19:13: "hamma kanal personajli va ovozli bo'lishi shart degan qoida yo'q; har xil yo'nalishda o'yla"). Kanalga personaj ham, ovoz ham SHART EMAS — format nishaga qarab tanlanadi (pastdagi "FORMATLAR XARITASI"). Yagona talab: kanallar bir-birining nusxasi bo'lmasin va har videoda o'zimiz qo'shgan qiymat bo'lsin (montaj, matn, fakt, tartib) — sof qayta yuklangan lavha YouTube'da "reused content" hisoblanadi.
 - Har yangi kanal uchun docs/<kanal>.md (Rocco namunasida) va docs/skills/INDEX.md ga qator.
 
 ## SKAN 2026-11-21 19:10 (vidIQ trending; Financier profili, 5 kredit → qoldi 12)
@@ -35,3 +35,27 @@ Kuzatuv: tez o'sayotgan 40 Shortning ko'pi ≤30 soniya yoki 2.5–3 daqiqalik r
 | 1 | Tabiat va geografiya g'aroyibotlari (xarita + stok kadr) | 1/3 | 20.8K obunachili kanal 16.7M | personaj, ovoz, Pixabay, map_insert |
 | 2 | 3D "nega bunday yasalgan" tushuntirishlari | 1/3 | 11.2K → 3.2M; Blender tajribamiz bor | GPU render, 3D sahna shablonlari |
 | 3 | Texnika qiziqliklari | 1/3 | 4.1K → 493K 10 soatda | fakt tekshiruvi, animatsiya |
+
+## FORMATLAR XARITASI — har xil yo'nalishda o'ylash uchun (2026-11-21 19:15)
+Yangi g'oya har safar KAMIDA 3 xil formatda o'ylab ko'riladi; "personaj + ovoz" faqat bittasi. O'qlar:
+| O'q | Variantlar |
+|---|---|
+| Tasvir manbai | o'z 3D animatsiyamiz · litsenziyali stok lavha (Pixabay) · xarita va ma'lumot grafikasi · faqat matn (kinetik tipografika) · ekran mock-up'lari · aralash |
+| Ovoz | personaj ovozi · personajsiz hikoyachi · OVOZSIZ: tabiiy tovush + ekrandagi matn · faqat sintez effektlar |
+| Uzunlik | mikro 6–12 s · Short 20–35 s · 2–3 daqiqalik · uzun 8–15 daq · cheksiz loop/tinchlantiruvchi 1 soat+ |
+| Tuzilma | bitta fakt · reyting · taqqoslash (A vs B) · "topa olasizmi?" · oldin/keyin · savol-javob · hikoya · jarayon (qanday yasaladi) |
+| Maqsad | ko'rish (Shorts oqimi) · obunachi · uzoq tomosha (uzun video RPM) · qidiruvdan doimiy ko'rish |
+
+Kanal g'oyalari — ataylab har xil (hali qaror emas; radar skanlari bilan tekshiriladi):
+| № | G'oya | Tasvir | Ovoz | Personaj | Nega arziydi / xavfi |
+|---|---|---|---|---|---|
+| 1 | Tabiat lavhalari va g'aroyib joylar | stok lavha + xarita | ovozsiz: tabiiy tovush + 1–2 qator matn | yo'q | bugungi skanda 20.8K kanal 16.7M; ovoz belgisi sarflanmaydi. Xavf: sof stok = "reused" — har videoda fakt/matn/xarita qo'shiladi |
+| 2 | 3D "nega bunday yasalgan" | o'z 3D | qisqa hikoyachi yoki matn | yo'q | 11.2K → 3.2M; bizda Blender bor. Xavf: render vaqti |
+| 3 | "Topa olasizmi?" / diqqat testlari | o'z grafika | effektlar, taymer | yo'q | izoh va qayta ko'rish ko'p ("Find the iphone 18": 1K obunachi → 629K). Juda arzon ishlab chiqarish |
+| 4 | Xaritalarda dunyo (chegaralar, masofalar, rekordlar) | xarita animatsiyasi | ovozsiz yoki hikoyachi | yo'q | map_insert tayyor; doimiy qidiruv mavzusi |
+| 5 | Texnika qiziqliklari | mock-up + grafika | hikoyachi | ixtiyoriy | 4.1K → 493K 10 soatda. Xavf: fakt tekshiruvi |
+| 6 | Tinchlantiruvchi uzun videolar (yomg'ir, o'rmon, olov) | stok/3D loop | faqat tabiiy tovush | yo'q | uzun tomosha vaqti; Shorts emas, RPM yuqoriroq. Xavf: raqobat katta, sekin o'sadi |
+| 7 | Raqamlar taqqoslashi (o'lcham, narx, tezlik "nimadan nima katta") | 3D/2D taqqoslash | effektlar | yo'q | til to'sig'i yo'q — butun dunyo ko'radi |
+| 8 | Financier (Buck) va Rocco | o'z animatsiya | personaj ovozi | bor | mavjud |
+Til: ovozsiz/matni kam formatlar (1, 3, 4, 6, 7) butun dunyoga ishlaydi — faqat AQSh emas.
+Musiqa: Shohjahonning "musiqa yo'q" qoidasi Financier va Rocco uchun aytilgan; yangi kanallarda ham standart — musiqasiz (tabiiy tovush/effekt), u boshqacha demaguncha.
