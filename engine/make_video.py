@@ -939,7 +939,7 @@ def caption_chunks_timed(text, words):
     return out
 
 
-ENGINE_VERSION = "6.12"  # bump on every engine change and add a line to docs/changes.md
+ENGINE_VERSION = "6.13"  # bump on every engine change and add a line to docs/changes.md
 
 THEMES = {  # v6.1: per-video look so videos don't all share one background. Spec "theme": name | "auto" (default: from the first line).
     "vault": ([((9, 14, 28), (19, 30, 54)), ((12, 10, 30), (32, 20, 58)), ((6, 20, 24), (14, 42, 48))], "grid"),
@@ -1311,7 +1311,21 @@ BUCK3D_DIR = os.environ.get("FIN_BUCK3D", "")  # optional local library (any ver
 _GH = "https://raw.githubusercontent.com/financier-videos/financier-videos/media/assets/"
 BUCK3D_LIBS = [("v3", _GH + "buck3d_v3.tar"), ("v2", _GH + "buck3d_v2.tar"), ("v1", _GH + "buck3d_v1.tar")]  # v3 = rigged Buck (2026-11-21, 800 px); v2 = cinema 1080 px; v1 = 600 px fallback
 BUCK3D_FPS = 15
-ACT_CLIP = {"flip": ("flip_happy", 0.7), "bonk": ("bonk_dizzy", 1.5), "dodge": ("dodge_shocked", 0.75)}
+ACT_CLIP = {"flip": ("flip_happy", 0.7), "bonk": ("bonk_dizzy", 1.5), "dodge": ("dodge_shocked", 0.75),
+            # v6.13 comedy acts (docs/comedy.md): OPTIONAL clips - Buck: assets/buck3d_v3_acts.tar; Rocco: rocco_sprites.py. Missing clip = act is ignored.
+            "doubletake": ("doubletake_shocked", 1.07), "jawdrop": ("jawdrop_shocked", 1.07), "shrug": ("shrug_confused", 0.93),
+            "sigh": ("sigh_sad", 1.2), "deadpan": ("deadpan_sideeye", 1.0)}
+_ACT_OK = {}
+
+
+def act_ok(act):
+    """True when `act` has a clip in the active sprite library (the 5 comedy acts are optional)."""
+    if act not in ACT_CLIP: return False
+    if act not in _ACT_OK:
+        d = _B3.get("dir") or ""
+        _ACT_OK[act] = any(os.path.exists(os.path.join(d, f"{ACT_CLIP[act][0]}_00.{e}")) for e in ("webp", "png"))
+    return _ACT_OK[act]
+
 BUCK3D_CLIPS = list(MOODS) + ["flip_happy", "bonk_dizzy", "dodge_shocked"]
 _B3 = {"ok": None, "cache": {}, "dir": None, "ver": None, "n": {}, "ext": {}}
 
@@ -1374,6 +1388,9 @@ def buck3d_ready():
                 _B3.update(dir=d, ver=ver)
                 if ver in ("v2", "v3") and not os.path.exists(os.path.join(d, "happy_t1_00.webp")):  # optional lip-sync mouth variants
                     _fetch_tar(_GH + f"buck3d_{ver}_talk.tar", d, timeout=900)
+                if ver == "v3" and not os.path.exists(os.path.join(d, "doubletake_shocked_00.webp")):  # v6.13 optional comedy acts
+                    try: _fetch_tar(_GH + "buck3d_v3_acts.tar", d, timeout=300)
+                    except Exception: pass
                 _B3["talk"] = any(os.path.exists(os.path.join(d, f"happy_t1_00.{e}")) for e in ("webp", "png"))
                 break
         _B3["ok"] = _B3["dir"] is not None
@@ -1451,7 +1468,7 @@ def mascot3d_patch(R, mood, t, lt, act=None, act_lt=-1.0, talk=None):
     if act in ("roll_in", "drop_in"): a = 1.0
     if a < 0.04: return None, (0, 0)
     clip = mood if mood in MOODS else "happy"
-    if act in ACT_CLIP and 0 <= act_lt < ACT_CLIP[act][1]:
+    if act_ok(act) and 0 <= act_lt < ACT_CLIP[act][1]:
         clip = ACT_CLIP[act][0]; fi = int(act_lt * BUCK3D_FPS)
     else:
         fi = int(lt * BUCK3D_FPS)
@@ -2051,7 +2068,7 @@ def render(spec, wav, total, out, workdir):
                     mp, (pax, pay) = mascot3d_patch(mR, mood, t, m_lt, act=act, act_lt=act_lt, talk=tk_)
                 if isinstance(mp, str): mp, (pax, pay) = mascot_patch(mR, mood, t, m_lt, act=act, act_lt=act_lt)  # 2D fallback
                 env_ = spec.get("_speech_env")
-                if mp is not None and env_ and not (act in ACT_CLIP and 0 <= act_lt < ACT_CLIP[act][1]):
+                if mp is not None and env_ and not (act_ok(act) and 0 <= act_lt < ACT_CLIP[act][1]):
                     a_ = env_[min(fi, len(env_) - 1)]  # v6: Buck is talking -> squash & stretch on the syllables
                     if a_ > 0.15:
                         sy_ = 1 + 0.045 * a_; sx_ = 1 - 0.022 * a_

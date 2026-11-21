@@ -35,6 +35,7 @@ def mood_params(m):
     elif m == "point": p.update(brow_r=0.0, mouth="smile", arm="point")
     elif m == "dizzy": p.update(eye_open=-1, mouth="wavy", extra="stars", tilt=6)
     elif m == "thumbsup": p.update(brow_r=0.0, mouth="grin", arm="thumb")
+    elif m == "deadpan": p.update(brow_l=-0.05, brow_r=-0.05, brow_y=4, eye_open=0.55, look=(0, 0), mouth="flat")  # flat stare at the viewer (comedy act)
     elif m == "proud": p.update(brow_l=-0.1, brow_r=-0.1, eye_open=0.7, look=(0, -0.1), mouth="smile", arm="flag_up")
     return p
 
@@ -208,6 +209,33 @@ def main():
     for f in range(12):  # dodge_shocked: lean away and come back
         k = f / 11; s = math.sin(k * math.pi)
         transform(draw_rocco(size, "shocked", k), ang=18 * s, dx=-size * 0.16 * s).save(os.path.join(out, f"dodge_shocked_{f:02d}.webp"), quality=92); n += 1
+    # ---- comedy acts (2026-11-21, docs/comedy.md): same clip names as Buck's buck3d_v3_acts.tar ----
+    for f in range(16):  # doubletake_shocked: glance away -> squash beat -> snap back, eyes pop
+        k = f / 15
+        if f < 6: im = draw_rocco(size, "sideeye", k)
+        elif f < 8: im = transform(draw_rocco(size, "sideeye", k, 0, True), sx=1.08, sy=0.88)
+        else:
+            o = math.sin(min(1, (f - 8) / 5) * math.pi); im = transform(draw_rocco(size, "shocked", k), sx=1 - 0.05 * o, sy=1 + 0.08 * o)
+        im.save(os.path.join(out, f"doubletake_shocked_{f:02d}.webp"), quality=92); n += 1
+    for f in range(16):  # jawdrop_shocked: freeze, stretch pop, tiny shake
+        k = f / 15
+        if f < 3: im = draw_rocco(size, "happy", k)
+        else:
+            o = math.sin(min(1, (f - 3) / 6) * math.pi); sh = math.sin(f * 2.4) * (2.5 if f > 9 else 0)
+            im = transform(draw_rocco(size, "shocked", 0.0), sx=1 - 0.04 * o, sy=1 + 0.07 * o, ang=sh)
+        im.save(os.path.join(out, f"jawdrop_shocked_{f:02d}.webp"), quality=92); n += 1
+    for f in range(14):  # shrug_confused: shoulders up, head tilts, comes back
+        k = f / 13; o = math.sin(k * math.pi)
+        transform(draw_rocco(size, "confused", k), sx=1 + 0.03 * o, sy=1 + 0.05 * o, ang=-5 * o, dy=-size * 0.025 * o).save(os.path.join(out, f"shrug_confused_{f:02d}.webp"), quality=92); n += 1
+    for f in range(18):  # sigh_sad: small inhale, shoulders drop, slow head shake
+        k = f / 17
+        if f < 4: im = transform(draw_rocco(size, "deadpan", k), sy=1 + 0.04 * math.sin(k / 0.22 * math.pi))
+        else:
+            sh = math.sin((k - 0.5) / 0.36 * 2 * math.pi) * (3.5 if 0.5 < k < 0.86 else 0)
+            im = transform(draw_rocco(size, "sad", k, 0, f in (5, 6, 7)), sx=1.03, sy=0.94, ang=sh)
+        im.save(os.path.join(out, f"sigh_sad_{f:02d}.webp"), quality=92); n += 1
+    for f in range(15):  # deadpan_sideeye: flat stare at the viewer, one slow blink
+        draw_rocco(size, "deadpan", 0.0, 0, f in (6, 7, 8, 9)).save(os.path.join(out, f"deadpan_sideeye_{f:02d}.webp"), quality=92); n += 1
     print({"out": out, "frames": n})
 
 
