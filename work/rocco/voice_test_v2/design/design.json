@@ -1,0 +1,116 @@
+{
+ "R1": {
+  "role": "rocco",
+  "prompt": "Wise-cracking cartoon raccoon detective. Fast-talking, street-smart male voice, mid thirties, slightly raspy and a little nasal, wry and playful, quick comic timing, confident deadpan one-liners, animated movie character energy, American accent.",
+  "model": "eleven_ttv_v3",
+  "previews": [
+   {
+    "file": "/tmp/vd/R1_1.mp3",
+    "generated_voice_id": "aIgRKVGemfpH7mxtNskm"
+   },
+   {
+    "file": "/tmp/vd/R1_2.mp3",
+    "generated_voice_id": "zGaY9S7vnchnkpue0H3M"
+   },
+   {
+    "file": "/tmp/vd/R1_3.mp3",
+    "generated_voice_id": "0o4f8iwuWBBtfkVpfhWZ"
+   }
+  ]
+ },
+ "R2": {
+  "role": "rocco",
+  "prompt": "Comic noir parody detective who is a cartoon raccoon. Low, smoky, gravelly male voice with a dramatic old-time private-eye cadence, but warm and funny, dry deadpan punchlines, clear diction, animated series character.",
+  "model": "eleven_ttv_v3",
+  "previews": [
+   {
+    "file": "/tmp/vd/R2_1.mp3",
+    "generated_voice_id": "nUqpk2sRm3KhrPhRLXqV"
+   },
+   {
+    "file": "/tmp/vd/R2_2.mp3",
+    "generated_voice_id": "xaG89PE1CjLI08XRUFyt"
+   },
+   {
+    "file": "/tmp/vd/R2_3.mp3",
+    "generated_voice_id": "v7dMMhspOsLeHjvu6jy3"
+   }
+  ]
+ },
+ "R3": {
+  "role": "rocco",
+  "prompt": "Scrappy cartoon raccoon detective. Mid-high, raspy, mischievous male voice, quick and snappy, sarcastic but lovable, a smirk in every line, big cartoon energy, American accent.",
+  "model": "eleven_ttv_v3",
+  "previews": [
+   {
+    "file": "/tmp/vd/R3_1.mp3",
+    "generated_voice_id": "3NKxdiB2hVkm3Yx7OGMI"
+   },
+   {
+    "file": "/tmp/vd/R3_2.mp3",
+    "generated_voice_id": "WDiZDlwMaK1mamUodfyv"
+   },
+   {
+    "file": "/tmp/vd/R3_3.mp3",
+    "generated_voice_id": "8mJMrHS0BKogonezKplO"
+   }
+  ]
+ },
+ "R4": {
+  "role": "rocco",
+  "prompt": "Friendly cartoon raccoon detective for a family animation. Bright, warm, slightly husky young male voice, clever and curious, upbeat with sly dry humor, crisp American accent, big animated personality.",
+  "model": "eleven_ttv_v3",
+  "previews": [
+   {
+    "file": "/tmp/vd/R4_1.mp3",
+    "generated_voice_id": "5HSCHofkYskegZ5Xq6Xl"
+   },
+   {
+    "file": "/tmp/vd/R4_2.mp3",
+    "generated_voice_id": "hYvMKGEmKYHZz9qvD8oj"
+   },
+   {
+    "file": "/tmp/vd/R4_3.mp3",
+    "generated_voice_id": "xxssiZMQiMduIldXEijA"
+   }
+  ]
+ },
+ "P1": {
+  "role": "penny",
+  "prompt": "Cartoon piggy bank character. High-pitched, bubbly, excitable young woman's voice, sweet and a bit naive, slightly nasal and squeaky but clear, fast and breathless when excited, endearing comic sidekick, American accent.",
+  "model": "eleven_ttv_v3",
+  "previews": [
+   {
+    "file": "/tmp/vd/P1_1.mp3",
+    "generated_voice_id": "i2oR2NhsFxgoc4dsoM2S"
+   },
+   {
+    "file": "/tmp/vd/P1_2.mp3",
+    "generated_voice_id": "uDPIQQHyRDcWikTFqOo4"
+   },
+   {
+    "file": "/tmp/vd/P1_3.mp3",
+    "generated_voice_id": "CiPX4PMotEi3lgwPcVnJ"
+   }
+  ]
+ },
+ "P2": {
+  "role": "penny",
+  "prompt": "Cheerful cartoon pig sidekick. Bright, playful, youthful female voice with a cute rounded slightly squeaky tone, big expressive reactions, gasps and giggles, warm American accent, animated series energy.",
+  "model": "eleven_ttv_v3",
+  "previews": [
+   {
+    "file": "/tmp/vd/P2_1.mp3",
+    "generated_voice_id": "XeHmOH0wYkEbMfZqbCws"
+   },
+   {
+    "file": "/tmp/vd/P2_2.mp3",
+    "generated_voice_id": "4QjRcZMb3d43TNBDWcay"
+   },
+   {
+    "file": "/tmp/vd/P2_3.mp3",
+    "generated_voice_id": "KR7ehcAZh0ifSw6Y4fDS"
+   }
+  ]
+ }
+}

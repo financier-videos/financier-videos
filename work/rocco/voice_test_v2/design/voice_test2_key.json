@@ -1,0 +1,93 @@
+[
+ {
+  "num": "1",
+  "preview": "R1_1",
+  "desc": "street-smart wise-cracker",
+  "generated_voice_id": "aIgRKVGemfpH7mxtNskm",
+  "prompt": "Wise-cracking cartoon raccoon detective. Fast-talking, street-smart male voice, mid thirties, slightly raspy and a little nasal, wry and playful, quick comic timing, confident deadpan one-liners, animated movie character energy, American accent."
+ },
+ {
+  "num": "2",
+  "preview": "R1_3",
+  "desc": "street-smart wise-cracker",
+  "generated_voice_id": "0o4f8iwuWBBtfkVpfhWZ",
+  "prompt": "Wise-cracking cartoon raccoon detective. Fast-talking, street-smart male voice, mid thirties, slightly raspy and a little nasal, wry and playful, quick comic timing, confident deadpan one-liners, animated movie character energy, American accent."
+ },
+ {
+  "num": "3",
+  "preview": "R2_3",
+  "desc": "noir detective, gravelly",
+  "generated_voice_id": "v7dMMhspOsLeHjvu6jy3",
+  "prompt": "Comic noir parody detective who is a cartoon raccoon. Low, smoky, gravelly male voice with a dramatic old-time private-eye cadence, but warm and funny, dry deadpan punchlines, clear diction, animated series character."
+ },
+ {
+  "num": "4",
+  "preview": "R2_1",
+  "desc": "noir detective, gravelly",
+  "generated_voice_id": "nUqpk2sRm3KhrPhRLXqV",
+  "prompt": "Comic noir parody detective who is a cartoon raccoon. Low, smoky, gravelly male voice with a dramatic old-time private-eye cadence, but warm and funny, dry deadpan punchlines, clear diction, animated series character."
+ },
+ {
+  "num": "5",
+  "preview": "R3_2",
+  "desc": "scrappy & sarcastic",
+  "generated_voice_id": "WDiZDlwMaK1mamUodfyv",
+  "prompt": "Scrappy cartoon raccoon detective. Mid-high, raspy, mischievous male voice, quick and snappy, sarcastic but lovable, a smirk in every line, big cartoon energy, American accent."
+ },
+ {
+  "num": "6",
+  "preview": "R3_1",
+  "desc": "scrappy & sarcastic",
+  "generated_voice_id": "3NKxdiB2hVkm3Yx7OGMI",
+  "prompt": "Scrappy cartoon raccoon detective. Mid-high, raspy, mischievous male voice, quick and snappy, sarcastic but lovable, a smirk in every line, big cartoon energy, American accent."
+ },
+ {
+  "num": "7",
+  "preview": "R4_2",
+  "desc": "warm & sly",
+  "generated_voice_id": "hYvMKGEmKYHZz9qvD8oj",
+  "prompt": "Friendly cartoon raccoon detective for a family animation. Bright, warm, slightly husky young male voice, clever and curious, upbeat with sly dry humor, crisp American accent, big animated personality."
+ },
+ {
+  "num": "8",
+  "preview": "R4_1",
+  "desc": "warm & sly",
+  "generated_voice_id": "5HSCHofkYskegZ5Xq6Xl",
+  "prompt": "Friendly cartoon raccoon detective for a family animation. Bright, warm, slightly husky young male voice, clever and curious, upbeat with sly dry humor, crisp American accent, big animated personality."
+ },
+ {
+  "num": "9",
+  "preview": "P1_1",
+  "desc": "bubbly & squeaky",
+  "generated_voice_id": "i2oR2NhsFxgoc4dsoM2S",
+  "prompt": "Cartoon piggy bank character. High-pitched, bubbly, excitable young woman's voice, sweet and a bit naive, slightly nasal and squeaky but clear, fast and breathless when excited, endearing comic sidekick, American accent."
+ },
+ {
+  "num": "10",
+  "preview": "P1_3",
+  "desc": "bubbly & squeaky",
+  "generated_voice_id": "CiPX4PMotEi3lgwPcVnJ",
+  "prompt": "Cartoon piggy bank character. High-pitched, bubbly, excitable young woman's voice, sweet and a bit naive, slightly nasal and squeaky but clear, fast and breathless when excited, endearing comic sidekick, American accent."
+ },
+ {
+  "num": "11",
+  "preview": "P2_1",
+  "desc": "playful & giggly",
+  "generated_voice_id": "XeHmOH0wYkEbMfZqbCws",
+  "prompt": "Cheerful cartoon pig sidekick. Bright, playful, youthful female voice with a cute rounded slightly squeaky tone, big expressive reactions, gasps and giggles, warm American accent, animated series energy."
+ },
+ {
+  "num": "12",
+  "preview": "P2_2",
+  "desc": "playful & giggly",
+  "generated_voice_id": "4QjRcZMb3d43TNBDWcay",
+  "prompt": "Cheerful cartoon pig sidekick. Bright, playful, youthful female voice with a cute rounded slightly squeaky tone, big expressive reactions, gasps and giggles, warm American accent, animated series energy."
+ },
+ {
+  "num": "F",
+  "preview": null,
+  "desc": "old F (reference)",
+  "generated_voice_id": null,
+  "prompt": "ElevenLabs premade Jessica cgSgspJ2msm6clMCkdW9"
+ }
+]
