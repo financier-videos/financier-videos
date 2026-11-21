@@ -144,5 +144,9 @@
   "settings": {
    "speed": 1.1
   }
- }
+ },
+ "bg": [
+  "/tmp/fin/bg/phone_typing.mp4",
+  "/tmp/fin/bg/piggy.mp4"
+ ]
 }
