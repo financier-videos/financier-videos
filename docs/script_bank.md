@@ -173,3 +173,32 @@ Buck: 1, 3, 8-sahnalarda. Yakun: savol (loop emas). Sarlavha: "How Big Is $3.79 
 
 ### [TAYYOR] T-05 (ROCCO) one_number (mikro) · look case-file · ~12 s · "Free GTA 6 Key = Stolen Account"
 1: "A free GTA Six key? That's the bait." — yorliq "FREE KEY" ustiga qizil muhr. | 2: "Real keys come from the console store. Nowhere else." — himoya qadami. Loop.
+
+## ===== YANGI FORMATLAR (yozdi: chat Trade, 2026-11-21 21:40; qoida: script_rules v2.1; har birida har ≤2 s yangi kadr) =====
+
+### [TAYYOR] V-01 why_story · look paper (chizilgan savdo posti, yorqin) · ~55 s · ~150 so'z · "Why Is a Dollar Called a 'Buck'?"
+MANBA: Konrad Vayzer kundaligi, 1748 (viski bochkasi "5 Bucks"; "robbed of the value of 300 Bucks") — Britannica / Merriam-Webster / Snopes orqali tekshir; birinchi AQSh dollari 1792 (Coinage Act). HALOLLIK: kelib chiqishi BAHSLI — ekranda "most likely origin" va ovozda "probably". Render oldidan 2 manbani och.
+1-kadr yozuvi: "Why is a dollar called a BUCK?"
+Ssenariy (Buck hikoya qiladi, 2-ovoz — savdogar, 1 luqma):
+"Seventeen forty-eight. A trader slides a cask of whiskey across the counter. The price? Not coins. Not paper. Five deer skins. | Out here, nobody has money. But everybody has deer. | A good skin buys you a knife. Five buy you whiskey. And one day a man writes in his journal that he was robbed... of three hundred bucks. | Not dollars. The dollar doesn't exist yet. It won't for another forty-four years. | When it finally shows up, people already have a word for 'one unit of stuff you can trade.' | So that's probably why your dollar is a buck. Historians still argue about it. | Me? I just like the name."
+Kadrlar (≥28): bochka sirpanadi → qo'l → 5 teri taxlami → bo'sh hamyon → o'rmon, kiyiklar uzoqdan (lavha, yo'l 1) → pichoq = 1 teri → viski = 5 teri → kundalik sahifasi yozilyapti (o'z grafika) → "300 Bucks" siyoh → taqvim 1748 → 1792 varaqlanadi (44) → birinchi kumush dollar (stilizatsiya) → olomon og'zidan "buck" pufakchalari → zamonaviy $1 (SPECIMEN) → savol belgisi, ikki tarixchi bahsi (siluet) → Buck o'z ismiga ishora qiladi. Yakun: 1-kadrga qaytish (bochka).
+Buck: faqat oxirgi 2 kadrda to'liq; qolganida ovoz.
+
+### [TAYYOR] V-02 guess_reveal · look split · ~40 s · "Guess What Each Coin Costs to Make"
+MANBA: U.S. Mint 2024 Annual Report (FY2024): penny 3.69¢, nickel 13.78¢, dime 5.76¢, quarter 14.68¢. Penny zarbi 2025-yil noyabrda to'xtagan (St. Louis Fed). RENDER OLDIDAN: Mint FY2025 hisobotini tekshir — yangiroq raqam bo'lsa o'shani ol va sanasini yoz.
+Tuzilma: Buck so'raydi, 2-ovoz ("mehmon") taxmin qiladi. | "A nickel. Five cents. Guess what it costs to make?" — "Uh... two cents?" — "Almost fourteen." | "A dime?" — "Twenty?" — "Under six. It's the bargain." | "A quarter?" — "Ten?" — "Nearly fifteen." | "And the penny cost almost four cents. That's why they stopped making it." | "So the cheapest coin to make... is not the smallest one." Yakun: bitta raqam "13.78¢" + nickel.
+Kadrlar (≥20): har tanga makro (lavha, yo'l 1) → taxmin raqami qalam bilan → haqiqiy raqam muhr bilan → zarbxona pressi (lavha) → tarozi: 5¢ vs 13.78¢ → oxirida 4 tanga qatori narx yorliqlari bilan.
+
+### [TAYYOR] V-03 guess_reveal/ranking · look fullbleed · ~35 s · "Which Bill Dies First?"
+MANBA: Federal Reserve FAQ "How long is the lifespan of U.S. paper money?" (2025-yil may holati): $1 — 7.2 yil, $5 — 5.8, $10 — 5.7, $20 — 11.1, $50 — 14.9, $100 — 24.0. Qog'oz: 75% paxta, 25% zig'ir (BEP).
+"Six bills. One of them wears out first. Guess which. | The one-dollar? Seven point two years. Not even close to last... but not first. | The hundred? Twenty-four years. It mostly sits in a drawer. | The loser is the ten. Five point seven years. | Why? It gets passed around... and nobody saves it. | It's not even paper. Three-quarters cotton. | So the bill that lives longest is the one you spend the least."
+Kadrlar (≥18): 6 kupyura poyga chizig'ida (o'z grafika, SPECIMEN) → hamyondan-hamyonga qo'llar (lavha) → kir yuvish mashinasi (3 metafora) → seyf/tortma → paxta dalasi (lavha, 2 masshtab) → poyga finishi: $10 birinchi "yiqiladi".
+
+### [TAYYOR] V-04 one_number (mikro) · look receipt · ~9 s · "11.3 Cents"
+MANBA: Federal Reserve "How much does it cost to produce currency and coin?" (2025 byudjeti): $100 — 11.3¢, $1 — 4.1¢.
+"It costs eleven point three cents... to print a hundred dollars." | "A one? Four point one." Chek lentasi: "$100 — 11.3¢ / $1 — 4.1¢". Loop.
+
+### [TAYYOR] V-05 (ROCCO) client_dialogue · look phone + case-file · ~45 s · "A Stranger Sent You $1,000 'By Mistake'"
+MANBA: FTC consumer.ftc.gov (payment apps: report to the app); National Cybersecurity Alliance "accidental deposit scams" (staysafeonline.org). Himoya qadami rasmiy manbadan; usul tafsiloti rasmiy ogohlantirishdan ortiq aytilmaydi.
+Mijoz (2-ovoz): "Rocco! Someone just sent me a thousand dollars!" — Rocco: "Don't touch it." — "Now they say it was a mistake. They want it back." — "That's the red flag." — "But it's their money!" — "Maybe not. It can come from a stolen account. When it gets pulled back... what you sent is gone too." — "So what do I do?" — "Don't send anything yourself. Report it in the app. Let the app reverse it." — "And the stranger?" — "A real mistake can wait for the app. A scammer can't."
+Kadrlar (≥24): telefon ekrani "+$1,000" (brendsiz) → mijozning quvonchi → Rocco qo'lini ko'taradi → xabar pufakchasi "sent by mistake" qizil bayroq → ikki yo'l: "SEND BACK" (qizil) / "REPORT IN APP" (yashil) → muhr "DON'T SEND" → himoya kartasi 3 qadam. Yakun: Rocco oxirgi jumla + case-file muhri.

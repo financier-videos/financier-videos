@@ -36,3 +36,9 @@ BIZGA QOIDA:
 - scale_ladder: Buck + ikkinchi ovoz (hayratlanuvchi; ElevenLabs'da ikkinchi ovoz yoki Buck'ning o'ziga savol-javob) — sinov sifatida 1 ta.
 - FAKT HALOLLIGI: mashhur rivoyat (masalan 99 sent va kassa apparati) hujjatlashmagan bo'lsa — "one popular explanation" deb aytiladi va ekranda "legend / popular theory" belgisi; isbotlangan fakt sifatida berilmaydi.
 - Birinchi sinov: S-yangi "Why Is It Called a 'Buck'?" yoki "Why Do Receipts Fade?" — manbasi topilgan mavzudan (render oldidan manba shart).
+
+## v2.1 (2026-11-21 21:40; dalil: docs/lessons_winners_2026-11-21.md)
+- Yangi tuzilmalar: `guess_reveal` (savol → ikkinchi ovoz taxmin qiladi → javob; 5–8 marta; 35–50 s) va `client_dialogue` (Rocco: mijoz + Rocco suhbati → himoya qadami; 40–60 s).
+- KADR TEMPI: spec sahnasida "shots": [...] — har ≤2 s da yangi tasvir. 30 s ≥15 kadr; 60 s ≥30 kadr.
+- SUBTITR 1–3 so'z; doimiy sarlavha yo'q. JAVOB oxirgi 5 s da; oxiri boshiga ulanadi.
+- Kunlik aralashma (8 Short): 2 mikro, 2 sabab hikoyasi, 1 masshtab narvoni, 1 taxmin–javob, 1 reyting/taymlayn, 1 trend. Ketma-ket ikki bir xil tuzilma yo'q.
