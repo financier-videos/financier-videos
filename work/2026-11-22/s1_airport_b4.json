@@ -1,0 +1,166 @@
+{
+ "format": "short",
+ "sfx": true,
+ "loop": true,
+ "theme": "ocean",
+ "source": "Source: Port Authority of NY & NJ, airport street-pricing rules",
+ "scenes": [
+  {
+   "text": "New York airports can NOT overcharge you past 15%.",
+   "say": "New York airports can NOT overcharge you past fifteen percent.",
+   "head": "MAX +15%",
+   "stat": "+15%",
+   "color": "#2BD67B",
+   "sfx": [
+    "impact"
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "drop_in",
+    "at": 0.5
+   },
+   "zoom": {
+    "at": 1.4,
+    "amt": 1.12,
+    "hold": 0.5,
+    "on": "stat"
+   }
+  },
+  {
+   "text": "Wait... extra over WHAT? Street prices.",
+   "head": "EXTRA OVER WHAT?",
+   "mascot": {
+    "mood": "confused",
+    "pos": "center"
+   },
+   "zoom": {
+    "at": 0.0,
+    "amt": 1.25,
+    "hold": 0.7,
+    "on": "buck"
+   },
+   "sfx": [
+    "whip"
+   ]
+  },
+  {
+   "text": "Shops charge what city stores charge... plus a little.",
+   "head": "CITY PRICE + A LITTLE",
+   "sticker": "CITY PRICE + A LITTLE",
+   "sticker_at": 1.4,
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   },
+   "sfx": [
+    "pop@1.4"
+   ]
+  },
+  {
+   "text": "That's the Port Authority's rule for JFK, LaGuardia and Newark.",
+   "head": "THE RULE",
+   "broll": "/tmp/fin/broll/nyc_map.mp4",
+   "show_source": true,
+   "transition": "slide"
+  },
+  {
+   "text": "It used to be 10%.",
+   "say": "It used to be ten percent.",
+   "head": "IT USED TO BE +10%",
+   "chart": {
+    "labels": [
+     "Before",
+     "Now"
+    ],
+    "values": [
+     10,
+     15
+    ],
+    "texts": [
+     "+10%",
+     "+15%"
+    ],
+    "at": [
+     0.1,
+     0.4
+    ]
+   },
+   "fx": [
+    "arrow_up"
+   ],
+   "sfx": [
+    "slide_up@0.4"
+   ],
+   "land": 0.5
+  },
+  {
+   "text": "Heh... so the limit went UP.",
+   "head": "THE LIMIT WENT UP",
+   "beat": 0.6,
+   "mascot": {
+    "mood": "dizzy",
+    "pos": "center",
+    "act": "bonk",
+    "act_at": 0.9
+   },
+   "shake": 0.3,
+   "sfx": [
+    "boing@1.0"
+   ]
+  },
+  {
+   "text": "Why any extra? Rent. Security. Staff. Pretzels past a metal detector aren't cheap.",
+   "head": "WHY ANY EXTRA?",
+   "sticker": "RENT \u00b7 SECURITY \u00b7 STAFF",
+   "sticker_at": 0.6,
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner"
+   },
+   "sfx": [
+    "tick@0.9",
+    "tick@1.5"
+   ],
+   "zoom": {
+    "at": 2.6,
+    "amt": 1.15,
+    "hold": 0.6,
+    "on": "sticker"
+   }
+  },
+  {
+   "text": "Worst airport price you ever paid?",
+   "head": "WORST PRICE?",
+   "mascot": {
+    "mood": "thumbsup",
+    "pos": "center",
+    "act": "flip"
+   },
+   "sfx": [
+    "ding@0.4"
+   ]
+  },
+  {
+   "text": "Tell me below. Because, legally...",
+   "head": "LEGALLY...",
+   "mascot": {
+    "mood": "smug",
+    "pos": "center",
+    "act": "dodge"
+   },
+   "say": "Tell me below. Because, legally"
+  }
+ ],
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
+ },
+ "bg": [
+  "/tmp/fin/bg/airport_terminal.mp4",
+  "/tmp/fin/bg/airplane_window.mp4",
+  "/tmp/fin/bg/airport_runway.mp4"
+ ]
+}

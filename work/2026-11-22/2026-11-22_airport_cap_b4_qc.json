@@ -1,0 +1,43 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    44.6 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -13.9 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -13.9 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 12.5 Mbit/s, 29.9s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 0.929,\n \"missing\": [\n  \"can not\",\n  \"heh\",\n  \"worst airport\"\n ],\n \"extra\": [\n  \"cannot\",\n  \"or stair port\"\n ],\n \"heard\": \"New York airports cannot overcharge you past 15%. Wait, extra over what? Street prices. Shops charge what city stores charge. Plus a little. That's the Port Authority's rule for JFK, LaGuardia and Newark. It used to be 10%. So the limit went up. Why any extra? Rent, security, staff. Pretzels past a metal detector aren't cheap. Or a stair port price you ever paid? Tell me below, because legally.\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "7  ok  | Shops charge what city stores charge... plus a little.\n 4  10.53s range=10.7 st  gap=0.2  ok  | That's the Port Authority's rule for JFK, LaGuardia and Newa\n 5  15.08s range=15.7 st  gap=0.14  ok  | It used to be ten percent.\n 6  17.23s range=10.4 st  gap=0.55  ok  | Heh... so the limit went UP.\n 7  20.00s range=13.1 st  gap=0.37  ok  | Why any extra? Rent. Security. Staff. Pretzels past a metal \n 8  25.89s range= 8.7 st  gap=0.1  ok  | Worst airport price you ever paid?\n 9  27.87s range=17.3 st  gap=0.24  ok  | Tell me below. Because, legally\n{\"median_f0\": 257.6, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 94"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/2026-11-22/2026-11-22_airport_cap_b4_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "WARN",
+  "note": "dark/dull frames - brighten bg or less b-roll dimming"
+ },
+ "verdict": "PASS"
+}

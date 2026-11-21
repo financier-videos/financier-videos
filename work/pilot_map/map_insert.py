@@ -77,6 +77,11 @@ def main():
     # vertical frame: start TIGHT on the origin, pull out until the whole route fits the width (reveal)
     z0, z1 = W / 1000 * 2.8, W / 1000 * 1.02
     c0, c1 = (p0[0], p0[1] - 40), (487, 290)
+    span = math.hypot(p1[0] - p0[0], p1[1] - p0[1])
+    if span < 250:  # 2026-11-21: local route (e.g. NY -> NJ) - pulling out to the whole US pushed the pins off the right
+        # edge of the vertical frame. End on the route midpoint instead, tight enough that the region fills the width.
+        z1 = min(W * 0.55 / max(span, 1), W / 1000 * 4.5); z0 = z1 * 1.6
+        c0, c1 = (p0[0], p0[1] - 20), (mid[0], mid[1] - 20)
     font = ImageFont.truetype(ANTON, 96); small = ImageFont.truetype(ANTON, 54)
     tmp = tempfile.mkdtemp(prefix="mapins_")
     n = int(secs * FPS)

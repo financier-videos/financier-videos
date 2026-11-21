@@ -149,10 +149,29 @@ def main():
 
     # 8 contact sheet (8 frames) - must be looked at
     sheet = os.path.splitext(out)[0] + "_sheet.png"
-    if dur > 0:
+    tim = []
+    if a.rendered and os.path.exists(a.rendered):
+        _rj = json.load(open(a.rendered)); tim = _rj.get("timings") or []
+        if tim and abs(float(_rj.get("seconds", 0)) - dur) > 0.6:  # rendered.json is from another render of this spec
+            R["8_note"] = {"status": "WARN", "note": f"rendered.json is {_rj.get('seconds')} s but video is {dur:.1f} s - stale json, even sampling used"}
+            tim = []
+    if dur > 0 and tim:
+        # one frame per scene at 80% of the scene - animations (count-ups, slide-ins, flips) have settled by then,
+        # so a mid-animation frame is not mistaken for a wrong number or a cut-off panel
+        ts = [st + 0.8 * d for st, d in tim][:12]; frames = []
+        for i, t in enumerate(ts):
+            f = os.path.splitext(sheet)[0] + f"_{i}.png"
+            run(["ffmpeg", "-y", "-loglevel", "error", "-ss", f"{t:.2f}", "-i", a.video, "-frames:v", "1", "-vf", "scale=270:-2", f])
+            if os.path.exists(f): frames.append(f)
+        cmd = ["ffmpeg", "-y", "-loglevel", "error"]
+        for f in frames: cmd += ["-i", f]
+        rc, o = run(cmd + ["-filter_complex", f"hstack=inputs={len(frames)}", sheet]) if len(frames) > 1 else (1, "no frames")
+        for f in frames: os.remove(f)
+    elif dur > 0:
         n = 8; fps = n / dur
         rc, o = run(["ffmpeg", "-y", "-loglevel", "error", "-i", a.video, "-vf",
                      f"fps={fps:.5f},scale=270:-2,tile={n}x1", "-frames:v", "1", sheet])
+    if dur > 0:
         put("8_contact_sheet", "LOOK" if rc == 0 and os.path.exists(sheet) else "SKIP", sheet + " - Read it before posting" + ("" if rc == 0 else "\n" + o))
     else:
         put("8_contact_sheet", "SKIP", "no duration")
