@@ -1287,7 +1287,7 @@ def mascot_patch(R, mood, t, lt, SS=2, act=None, act_lt=-1.0):
 # ---- BUCK 3D: pre-rendered Blender (Cycles) sprite library, see buck3d.py ----
 BUCK3D_DIR = os.environ.get("FIN_BUCK3D", "")  # optional local library (any version)
 _GH = "https://raw.githubusercontent.com/financier-videos/financier-videos/media/assets/"
-BUCK3D_LIBS = [("v2", _GH + "buck3d_v2.tar"), ("v1", _GH + "buck3d_v1.tar")]  # v2 = cinema 1080 px; v1 = 600 px fallback
+BUCK3D_LIBS = [("v3", _GH + "buck3d_v3.tar"), ("v2", _GH + "buck3d_v2.tar"), ("v1", _GH + "buck3d_v1.tar")]  # v3 = rigged Buck (2026-11-21, 800 px); v2 = cinema 1080 px; v1 = 600 px fallback
 BUCK3D_FPS = 15
 ACT_CLIP = {"flip": ("flip_happy", 0.7), "bonk": ("bonk_dizzy", 1.5), "dodge": ("dodge_shocked", 0.75)}
 BUCK3D_CLIPS = list(MOODS) + ["flip_happy", "bonk_dizzy", "dodge_shocked"]
@@ -1297,7 +1297,7 @@ _B3 = {"ok": None, "cache": {}, "dir": None, "ver": None, "n": {}, "ext": {}}
 def b3_feet():
     """Feet line of the sprite (fraction of its height): v1 framing 0.79; the v2 slot holds the hybrid Buck (taller hat, longer
     legs, framing scaled 1.234x) whose shoes sit at 0.86."""
-    return 0.86 if _B3.get("ver") == "v2" else 0.79
+    return 0.86 if _B3.get("ver") in ("v2", "v3") else 0.79
 
 
 def buck3d_extent(clip, size):
@@ -1350,8 +1350,8 @@ def buck3d_ready():
                 _fetch_tar(url, d)
             if _lib_complete(d):
                 _B3.update(dir=d, ver=ver)
-                if ver == "v2" and not os.path.exists(os.path.join(d, "happy_t1_00.webp")):  # optional lip-sync mouth variants
-                    _fetch_tar(_GH + "buck3d_v2_talk.tar", d, timeout=900)
+                if ver in ("v2", "v3") and not os.path.exists(os.path.join(d, "happy_t1_00.webp")):  # optional lip-sync mouth variants
+                    _fetch_tar(_GH + f"buck3d_{ver}_talk.tar", d, timeout=900)
                 _B3["talk"] = any(os.path.exists(os.path.join(d, f"happy_t1_00.{e}")) for e in ("webp", "png"))
                 break
         _B3["ok"] = _B3["dir"] is not None

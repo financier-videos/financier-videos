@@ -17,6 +17,14 @@ SHART (boshlash): yangi Buck kutubxonasi repoda paydo bo'lsa — `media` da asse
 6. O'zbekcha Reellar (finansist424) allaqachon chiqqan — qayta qo'yilmaydi. Bundan keyingi barcha videolar faqat yangi Buck bilan.
 7. HOLAT ni "BAJARILDI <vaqt>" qil, NATIJA yoz, Shohjahonga xabar (PushNotification): nechta video yangilandi, qaysilari ulgurmadi.
 
+## BUCK TAYYOR (chat, 2026-11-21 10:55 Toshkent)
+Yangi Buck kutubxonasi `media` da: `assets/buck3d_v3.tar` (226 kadr: 12 kayfiyat x 15 + flip 11 / bonk 23 / dodge 12) va `assets/buck3d_v3_talk.tar` (540 kadr: har kayfiyat uchun _t1/_t2/_t3). 800 px WebP, oyoq chizig'i 0.86 (v2 bilan bir xil).
+- Dvigatel allaqachon yangilangan (engine/make_video.py: BUCK3D_LIBS boshida "v3", talk `buck3d_v3_talk.tar`, b3_feet v3 = 0.86). Chatda tekshirildi: buck3d_ready() -> ver "v3", talk True; mascot3d_patch happy/smug/shocked/point/dizzy + talk 1-3 to'g'ri chiqdi. To'liq video render (ovoz bilan) chatda sinalmagan — 1-banddagi qisqa sinovni baribir qil.
+- Yangi Buck KENGROQ: o'ng qo'lida (kadrda chapda) skipetr, "happy" da chap qo'li tepada. "corner" holatda skipetr yoki qo'l sarlavha/raqamni yopmasligini kadrlarda tekshir; yopsa mascot "pos" ni almashtir yoki o'sha sahnada boshqa kayfiyat ol.
+- "shocked", "dodge", "bonk" da monokl zanjirida osilib turadi (ataylab). "flip" o'rta kadrlarida Buck kadr tepasidan qisman chiqadi (v2 dagidek).
+- Ma'lum zaifliklar: kadrlar CPU da 24 namuna bilan chizilgan (GPU qayta render keyin); gapirish variantlari faqat og'iz sohasini almashtirib yig'ilgan.
+- Model va rig fayllari faqat maxfiy repoda (buck-private/rig_v1). Bu repoga QO'YILMAYDI.
+
 ## NATIJA (4)
 (bo'sh)
 
