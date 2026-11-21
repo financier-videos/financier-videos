@@ -69,7 +69,9 @@ def main():
         if rng < a.mono: r["flags"].append("MONOTONE")
         vt = ts[v]; last = vt.max()
         q = txt.rstrip().rsplit(".", 1)[-1].lower().split("...")[-1].strip()
-        yn = q.endswith("?") and " or " not in q and q.split()[0].strip("¿") not in WH if q.split() else False
+        _w = [x.strip("¿.…,!") for x in q.lower().split()]
+        while _w and _w[0] in ("so", "and", "but", "wait", "okay", "ok", "um", "uh", "well", "then", "") and len(_w) > 1: _w = _w[1:]  # 2026-11-22: "...So what am I...?" is a wh-question
+        yn = q.endswith("?") and " or " not in q and _w[0] not in WH if _w else False
         if yn:  # yes/no question only: "A or B?" and wh-questions normally FALL in English
             e = s_[vt >= last - 0.35]; b_ = s_[(vt < last - 0.35) & (vt >= last - 0.7)]
             if len(e) > 3 and len(b_) > 3:

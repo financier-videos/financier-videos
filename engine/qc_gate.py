@@ -77,7 +77,7 @@ def main():
     if rc == 0 and behind.strip() not in ("", "0"): probs.append(f"repo {behind.strip()} commit(s) behind origin/media - git pull --rebase and re-render")
     if a.rendered and os.path.exists(a.rendered):
         rj = json.load(open(a.rendered)); import hashlib
-        cur = hashlib.sha1(open(os.path.join(ROOT, "engine", "make_video.py"), "rb").read()).hexdigest()[:12]
+        cur = hashlib.sha1(open(os.path.join(ROOT, rj.get("renderer_path") or "engine/make_video.py"), "rb").read()).hexdigest()[:12]  # Rocco v2: own renderer
         if not rj.get("engine_sha"): probs.append("rendered.json has no engine stamp (engine < 6.9) - re-render")
         elif rj["engine_sha"] != cur:
             when = rj.get("rendered_at", "")
@@ -220,7 +220,7 @@ def main():
         a.skills or 'no --skills "Skillar: ...; ishlatilmadi: ... (sababi)"')
 
     st = [r["status"] for k, r in R.items()]
-    blocking_skip = any(R[k]["status"] == "SKIP" for k in R if k[0] in "012345")
+    blocking_skip = any(R[k]["status"] == "SKIP" for k in R if k.split("_")[0].isdigit() and int(k.split("_")[0]) <= 5)  # 2026-11-22: "12_script" is not step 1
     verdict = "FAIL" if "FAIL" in st else ("BLOCKED" if blocking_skip else "PASS")
     R["verdict"] = verdict
     os.makedirs(os.path.dirname(os.path.abspath(out)), exist_ok=True)

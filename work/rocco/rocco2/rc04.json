@@ -1,0 +1,422 @@
+{
+ "id": "RC-04",
+ "title": "Free GTA 6 for PC? Free Cheese.",
+ "structure": "prediction/dialogue",
+ "tail": 3.2,
+ "lines": [
+  [
+   "P",
+   "[gasps] [excited] Rocco! Rocco! FREE GTA Six! For PC!"
+  ],
+  [
+   "R",
+   "[deadpan] Red flag."
+  ],
+  [
+   "P",
+   "[whiny] But it's FREE!"
+  ],
+  [
+   "R",
+   "[sighs] Red flag."
+  ],
+  [
+   "P",
+   "[excited] It says tonight only!"
+  ],
+  [
+   "R",
+   "[dryly] Two red flags."
+  ],
+  [
+   "R",
+   "GTA Six is only on PlayStation and Xbox. [pause] There is no PC version."
+  ],
+  [
+   "P",
+   "[confused] ...So what am I downloading?"
+  ],
+  [
+   "R",
+   "[deadpan] A very bad week. It steals your passwords."
+  ],
+  [
+   "P",
+   "[gasps] My passwords?! [panicked] I only have, like, three!"
+  ],
+  [
+   "R",
+   "[warmly] Your move: buy it only in the console store."
+  ],
+  [
+   "P",
+   "[curious] Wait... and the FREE one?"
+  ],
+  [
+   "R",
+   "[deadpan] Free cheese... [pause] mousetrap."
+  ],
+  [
+   "P",
+   "[nervous laugh] ...I'm deleting it."
+  ]
+ ],
+ "shots": [
+  {
+   "line": 0,
+   "from": 0.0,
+   "kind": "phone",
+   "set": "yellow",
+   "p": "happy",
+   "hook": "FREE GTA 6 FOR PC?!",
+   "msgs": [
+    {
+     "t": "FREE GTA 6\nfor PC!!!",
+     "at": 0.0
+    },
+    {
+     "t": "TONIGHT ONLY",
+     "at": 0.5,
+     "col": [
+      255,
+      59,
+      59
+     ]
+    }
+   ]
+  },
+  {
+   "line": 0,
+   "from": 0.38,
+   "kind": "cu_p",
+   "set": "pink",
+   "p": "happy",
+   "r": "sideeye"
+  },
+  {
+   "line": 0,
+   "from": 0.72,
+   "kind": "two",
+   "set": "yellow",
+   "p": "happy",
+   "r": "sideeye"
+  },
+  {
+   "line": 1,
+   "from": 0.0,
+   "kind": "flags",
+   "set": "teal",
+   "r": "sideeye",
+   "n": 1,
+   "n_prev": 0,
+   "pop_word": "flag"
+  },
+  {
+   "line": 2,
+   "from": 0.0,
+   "kind": "cu_p",
+   "set": "peach",
+   "p": "hope",
+   "r": "sideeye"
+  },
+  {
+   "line": 3,
+   "from": 0.0,
+   "kind": "flags",
+   "set": "teal",
+   "r": "sad",
+   "n": 2,
+   "n_prev": 1,
+   "pop_word": "flag",
+   "act": "sigh_sad",
+   "act_at": 0.0,
+   "act_len": 1.15
+  },
+  {
+   "line": 4,
+   "from": 0.0,
+   "kind": "phone",
+   "set": "yellow",
+   "p": "happy",
+   "msgs": [
+    {
+     "t": "FREE GTA 6\nfor PC!!!",
+     "at": -1
+    },
+    {
+     "t": "TONIGHT ONLY",
+     "at": -1,
+     "col": [
+      255,
+      59,
+      59
+     ]
+    },
+    {
+     "t": "CLICK NOW!!!",
+     "at": 0.3,
+     "col": [
+      255,
+      59,
+      59
+     ]
+    }
+   ]
+  },
+  {
+   "line": 5,
+   "from": 0.0,
+   "kind": "flags",
+   "set": "pink",
+   "r": "smug",
+   "n": 4,
+   "n_prev": 2,
+   "pop_word": "flags"
+  },
+  {
+   "line": 6,
+   "from": 0.0,
+   "kind": "fact",
+   "set": "sky",
+   "r": "point",
+   "title": "GTA 6 IS ON",
+   "rows": [
+    [
+     "PLAYSTATION 5",
+     true
+    ],
+    [
+     "XBOX SERIES",
+     true
+    ],
+    [
+     "PC",
+     false
+    ]
+   ]
+  },
+  {
+   "line": 6,
+   "from": 0.34,
+   "kind": "cu_r",
+   "set": "green",
+   "r": "point"
+  },
+  {
+   "line": 6,
+   "from": 0.66,
+   "kind": "fact",
+   "set": "teal",
+   "r": "smug",
+   "title": "GTA 6 IS ON",
+   "rows": [
+    [
+     "PLAYSTATION 5",
+     true
+    ],
+    [
+     "XBOX SERIES",
+     true
+    ],
+    [
+     "PC",
+     false
+    ]
+   ],
+   "stamp": "NO PC VERSION",
+   "stamp_word": "pc"
+  },
+  {
+   "line": 7,
+   "from": 0.0,
+   "kind": "cu_p",
+   "set": "peach",
+   "p": "sad",
+   "r": "sideeye"
+  },
+  {
+   "line": 8,
+   "from": 0.0,
+   "kind": "cu_r",
+   "set": "sky",
+   "r": "sideeye"
+  },
+  {
+   "line": 8,
+   "from": 0.48,
+   "kind": "phone",
+   "set": "pink",
+   "p": "shock",
+   "rocco": true,
+   "r": "sideeye",
+   "msgs": [
+    {
+     "t": "Installing... 99%",
+     "at": 0.0,
+     "col": [
+      120,
+      130,
+      150
+     ]
+    },
+    {
+     "t": "Your passwords:\nuploading...",
+     "at": 0.5,
+     "col": [
+      255,
+      59,
+      59
+     ]
+    }
+   ]
+  },
+  {
+   "line": 9,
+   "from": 0.0,
+   "kind": "cu_p",
+   "set": "yellow",
+   "p": "shock",
+   "r": "sideeye"
+  },
+  {
+   "line": 9,
+   "from": 0.5,
+   "kind": "two",
+   "set": "teal",
+   "p": "nervous",
+   "r": "sideeye",
+   "act": "shrug_confused",
+   "act_at": 0.4,
+   "act_len": 0.95
+  },
+  {
+   "line": 10,
+   "from": 0.0,
+   "kind": "store",
+   "set": "green",
+   "r": "happy"
+  },
+  {
+   "line": 10,
+   "from": 0.55,
+   "kind": "cu_r",
+   "set": "sky",
+   "r": "thumbsup"
+  },
+  {
+   "line": 11,
+   "from": 0.0,
+   "kind": "cu_p",
+   "set": "pink",
+   "p": "hope",
+   "r": "sideeye"
+  },
+  {
+   "line": 12,
+   "from": 0.0,
+   "kind": "trap",
+   "set": "yellow",
+   "r": "sideeye",
+   "penny": true,
+   "p": "hope",
+   "snap_word": "mousetrap"
+  },
+  {
+   "line": 13,
+   "from": 0.4,
+   "kind": "two",
+   "set": "teal",
+   "p": "nervous",
+   "r": "sideeye",
+   "act": "deadpan_sideeye",
+   "act_at": 0.3,
+   "act_len": 1.0
+  },
+  {
+   "line": 13,
+   "from": 1.0,
+   "kind": "end",
+   "set": "green",
+   "l1": "FREE PC GAME = BAIT",
+   "l2": "CONSOLE STORE ONLY",
+   "l3": "Send this to someone who'd click it."
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "ding",
+   "gain": 0.3
+  },
+  {
+   "line": 1,
+   "word": "flag",
+   "name": "buzzer",
+   "gain": 0.22
+  },
+  {
+   "line": 3,
+   "word": "flag",
+   "name": "pop",
+   "gain": 0.4
+  },
+  {
+   "line": 4,
+   "frac": 0.15,
+   "name": "ding",
+   "gain": 0.25
+  },
+  {
+   "line": 5,
+   "word": "flags",
+   "name": "buzzer",
+   "gain": 0.22
+  },
+  {
+   "line": 5,
+   "word": "flags",
+   "dt": 0.25,
+   "name": "buzzer",
+   "gain": 0.18
+  },
+  {
+   "line": 6,
+   "frac": 0.75,
+   "name": "impact",
+   "gain": 0.3
+  },
+  {
+   "line": 8,
+   "frac": 0.75,
+   "name": "scratch",
+   "gain": 0.25
+  },
+  {
+   "line": 9,
+   "frac": 0.0,
+   "name": "boing",
+   "gain": 0.3
+  },
+  {
+   "line": 10,
+   "frac": 0.1,
+   "name": "ding",
+   "gain": 0.25
+  },
+  {
+   "line": 12,
+   "word": "mousetrap",
+   "name": "bonk",
+   "gain": 0.5
+  },
+  {
+   "line": 13,
+   "frac": 1.0,
+   "dt": 0.1,
+   "name": "impact",
+   "gain": 0.3
+  }
+ ],
+ "sources": "Rockstar Games (GTA VI platforms: PlayStation 5, Xbox Series X|S); Malwarebytes (Aug 2026), McAfee, NordVPN GTA 6 scam warnings"
+}

@@ -1,0 +1,59 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    25.5 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -15.8 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -15.7 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 5.3 Mbit/s, 40.4s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 0.933,\n \"missing\": [\n  \"rocco rocco\",\n  \"mousetrap\"\n ],\n \"extra\": [\n  \"rock or rock or\",\n  \"mouse trap\"\n ],\n \"heard\": \"Rock or Rock or Free GTA 6 for PC Red Flag But it's free Red Flag It says tonight only Two red flags GTA 6 is only on PlayStation and Xbox There is no PC version So what am I downloading? A very bad week. It steals your passwords. My passwords? I only have like three! Your move! Buy it only in the console store. Wait! And the free one? Free cheese! Mouse trap! I'm deleting it!\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "17.84s range=10.8 st  gap=0.62  ok  | ...So what am I downloading?\n 9  20.08s range=18.4 st  gap=0.41  ok  | A very bad week. It steals your passwords.\n10  23.20s range= 7.6 st  gap=0.78  ok  | My passwords?! I only have, like, three!\n11  27.36s range=22.6 st  gap=0.36  ok  | Your move: buy it only in the console store.\n12  30.24s range=10.4 st  gap=0.65  ok  | Wait... and the FREE one?\n13  32.64s range=18.6 st  gap=0.79  ok  | Free cheese... mousetrap.\n14  34.96s range= 9.4 st  gap=0.5  ok  | ...I'm deleting it.\n15  37.20s range=   - st  gap=-  ok  | \n{\"median_f0\": 286.0, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 100"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/rocco/rocco2/rc04_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "PASS",
+  "note": "ok  0.29  (layout 0.28, palette 0.31, tone 0.25)  vs rocco_2026-11-22_t04b_gta_pc_trap.mp4\nok  0.36  (layout 0.33, palette 0.39, tone 0.38)  vs rocco_2026-11-22_r01v2b_brushing.mp4\nLOOK_CHECK: PASS"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "22 hard cuts (ffmpeg scene>0.22) in 40.4 s = 1.8 s/cut (need >= 20); engine planned 22"
+ },
+ "12_script": {
+  "status": "SKIP",
+  "note": "no --prev-specs (pass the last 4 specs of this channel)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: rocco_style_v2 (BASHORAT/suhbat, Penny+Rocco, takroriy hazil 'red flag' + bayroqlar uyumi, ko'rinadigan gag qopqon, yorug' to'plamlar, Lilita One, o'z buyumlar), ElevenLabs Text-to-Dialogue eleven_v3 his teglari, comedy (sigh, shrug, deadpan), qc_gate, look_check, voice_check, prosody, title.py, color_check; ishlatilmadi: script_check (lavha ulushi qoidasi rocco_style_v2 da o'z grafika bilan almashtirilgan), Slick sprite (hali yo'q \u2014 telefon avatari)"
+ },
+ "verdict": "PASS"
+}

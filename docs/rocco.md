@@ -73,3 +73,9 @@ Rocco ovozini yaratish (ElevenLabs voice design, bir marta) → yangi theme + te
 | sana (Toshkent) | obunachi | video | ko'rish | izoh |
 |---|---|---|---|---|
 | 2026-11-21 23:50 | 0 | 0 | 0 | hali video chiqmagan; r01 v2 Buffer 22:00 UTC (6b01e0a5…). Rocco vidIQ balansi 95/150 |
+
+
+## OVOZ v2 (2026-11-22, Shohjahon tanladi)
+- Rocco: hYvMKGEmKYHZz9qvD8oj (Voice Design: iliq, ayyorona multfilm yenot-detektiv). Penny: XeHmOH0wYkEbMfZqbCws (o'ynoqi cho'chqa-kopilka).
+- HAR DOIM Text-to-Dialogue (eleven_v3) + his teglari bilan yoziladi — alohida jumlalar va multilingual_v2 diktor uslubi ISHLATILMAYDI. Renderer: work/rocco/rocco2/rc_render.py, namuna spec: rc04.json.
+- Eski ovoz eYibgGvZyWzJUi8HBmQM — to'xtatildi.
