@@ -13,6 +13,7 @@ Steps (skill -> check):
   5 engine/voice_check.py        ASR transcript vs spec (>= 0.86); prints "heard" - READ the numbers and the last sentence
   6 engine/prosody_check.py      MONOTONE / FLAT_Q / NO_LAND
   7 yt-package/title.py          title lint (>= 80, number in first 40 chars if the title has one)
+  9 engine/color_check.py frames  CLIPPED = FAIL; CRUSHED/DULL = WARN (color skill)
   8 contact sheet                8 frames tiled -> <out>_sheet.png; Claude MUST Read it (12-point visual QC: sharp text,
                                  Buck not covering numbers, nothing cut off, no blocky gradients, no unsuitable frame)
 Result: exit 0 = all PASS (posting allowed); 1 = a FAIL (fix and rerun); 2 = a step could not run (SKIP is listed with
@@ -134,6 +135,15 @@ def main():
         put("8_contact_sheet", "LOOK" if rc == 0 and os.path.exists(sheet) else "SKIP", sheet + " - Read it before posting" + ("" if rc == 0 else "\n" + o))
     else:
         put("8_contact_sheet", "SKIP", "no duration")
+
+    # 9 colour / exposure (docs/skills/notes/2026-11-21_color.md)
+    rc, o = run([sys.executable, "-I", os.path.join(ROOT, "engine", "color_check.py"), "frames", a.video])
+    if "Traceback" in o or rc not in (0, 1):
+        put("9_color", "SKIP", o)
+    else:
+        clipped = "CLIPPED" in o; warn = ("CRUSHED" in o) or ("DULL" in o)
+        put("9_color", "FAIL" if clipped else ("WARN" if warn else "PASS"),
+            "clipped highlights (big number burnt)" if clipped else ("dark/dull frames - brighten bg or less b-roll dimming" if warn else "exposure and colour OK"))
 
     st = [r["status"] for k, r in R.items()]
     blocking_skip = any(R[k]["status"] == "SKIP" for k in R if k[0] in "12345")

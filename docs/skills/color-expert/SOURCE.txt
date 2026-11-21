@@ -1,0 +1,3 @@
+Source: https://github.com/meodai/skill.color-expert (commit 5bf7c7704d56bccc6aeea38c36bcf449abe56a6c, 2026-10-21)
+Author: meodai (David Aerne). License of SKILL.md: CC BY 4.0 (LICENSE). Copied unchanged on 2026-11-21.
+NOT copied: references/ (third-party derived material, original rights apply - see upstream THIRD_PARTY_NOTICES.md).
