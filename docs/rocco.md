@@ -17,7 +17,7 @@ TREND (2026-11-21, docs/trend_radar.md): GTA 6 shu hafta eng tez o'sayotgan mavz
 | Post qilish vositasi | Buffer (bepul) ulandi 2026-11-21; env BUFFER_API_KEY; api.buffer.com ochiq; engine/buffer_post.py — draft sinovi o'tdi va o'chirildi |
 | Rocco ovozi (ElevenLabs) | YARATILDI 2026-11-21: "Rocco (Scam Detective)", voice_id `eYibgGvZyWzJUi8HBmQM` (Voice Design eleven_ttv_v3, 3 previewdan F0 diapazoni eng kengi; iliq, xotirjam, quruq hazil; median F0 ~182 Hz — Buck D ~259 Hz dan aniq farqli). Namuna: work/rocco/voice_lab/out/Rocco_R_sample.mp3; ASR tekshiruvi — matn to'g'ri eshitildi. Skript: work/rocco/voice_lab/rocco_voice_lab.py (qayta ishga tushsa yangi ovoz yaratmaydi). TTS sozlamasi Buck bilan bir xil (multilingual_v2, stability 0.28, style 0.85) |
 | vidIQ | ULANDI 2026-11-21 (alohida vidIQ profili, Free, 150 kredit, yangilanish 2026-12-21; kanal UCUyPbjsSFdWKnC4nVRDhOiA). Kalit env VIDIQ_API_KEY; `python3 -I engine/vidiq_rocco.py <tool> '<json args>'` (sessiyadagi tayyor vidIQ vositalari — Financier profili, Rocco uchun ISHLATILMAYDI) |
-| Chiqqan / rejalashtirilgan video | 0 |
+| Chiqqan / rejalashtirilgan video | 1 — r01 brushing (Buffer 6b01befd142c957519268046, 2026-11-21 22:00 UTC / 17:00 ET) |
 
 ## 1.5 MAQSAD VA QARORLAR (Shohjahon, 2026-11-21 19:xx)
 - MAQSAD: 1 hafta ichida 15 mln ko'rish. Claude'ning baholashi (Shohjahonga aytildi): yangi kanal uchun real emas, kafolatlanmaydi; sun'iy oshirish (bot, sotib olish) TAQIQ. Shunga qaramay eng yuqori ehtimolli yo'l bilan ishlanadi: shu hafta Black Friday / Cyber Monday xarid firibgarliklari, kuniga 3–4 Short, "ota-onangga yubor" ulashish uslubi, har kuni Rocco vidIQ tahlili va moslashuv. Har kuni haqiqiy raqam yoziladi.
@@ -57,3 +57,13 @@ TREND (2026-11-21, docs/trend_radar.md): GTA 6 shu hafta eng tez o'sayotgan mavz
 
 ## 7. KEYINGI QADAMLAR (qarordan keyin)
 Rocco ovozini yaratish (ElevenLabs voice design, bir marta) → yangi theme + telefon mock-up shabloni → 1-mavzu Short, QC (producer_task dagi barcha tekshiruvlar) → raw URL → buffer_post.py schedule → shu faylga "CHIQGAN VIDEOLAR" bo'limi.
+
+## RENDER (Rocco) — 2026-11-21
+- Personaj: `python3 -I work/rocco/rocco_sprites.py /tmp/fin_rocco_lib` (766 kadr, ~1 daq; chibi Rocco, 12 kayfiyat, og'iz t1–t3, flip/bonk/dodge) → `FIN_BUCK3D=/tmp/fin_rocco_lib python3 -I engine/make_video.py spec.json out.mp4 --model /tmp/kokoro/kokoro-v1.0.int8.onnx --voices /tmp/kokoro/voices-v1.0.bin`.
+- Spec: "style": "rocco" (v6.12: case-file yorliq PASTDA, Courier Prime, qizil muhr stat, qora yorliqli subtitr, qizil progress, "phone" SMS ekran), "brand": "RED FLAG ROCCO", "brand_color": "#FF3B3B", "buck_voice": {"voice_id": "eYibgGvZyWzJUi8HBmQM", "label": "Rocco (Scam Detective)"}, theme noir (qizil fon YO'Q), bg_bright 1.25, bg_mix 0.8, bg_blur 2; sahnalarning ≥40% "broll" to'liq ekran (lavha sahnasida sarlavha chiqmaydi).
+- QC: `engine/qc_gate.py ... --prev <oxirgi 4 video>` (look_check: Financier'dan ham farq qilsin).
+
+## CHIQGAN VIDEOLAR
+| # | Fayl | Sarlavha | Vaqt | Buffer id | Format / QC |
+|---|---|---|---|---|---|
+| r01 | rocco_2026-11-21_r01_brushing.mp4 (34.5 s) | 1 Free Box, 1 QR Code, 1 Big Red Flag | 2026-11-21 17:00 ET | 6b01befd142c957519268046 | hiyla ochildi + telefon (soxta QR sahifa); hook "Got a box you never ordered?" (hookscore 81.4); FTC 2026-08; qc_gate PASS (voice ok, prosody 0 bayroq, title 100, look 0.51–0.64 vs Financier); Skillar: hookscore, beats, title.py, qc_gate, color_check, look_check, Pixabay (Openly, flutie8211, magicmore, matlevesque) |
