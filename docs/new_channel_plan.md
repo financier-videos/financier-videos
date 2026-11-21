@@ -1,5 +1,5 @@
 # IKKINCHI KANAL REJASI (2026-11-21; Shohjahon: "boshla" — nishani o'zing top)
-HOLAT: NISHA TANLANDI, KANAL OCHILMAGAN. Shohjahondan kerak: (1) YouTube kanal ochish, (2) Metricool'ga ulash, (3) ElevenLabs limiti bo'yicha qaror (pastda).
+HOLAT: KANAL OCHILDI 2026-11-21 13:13 — "Red Flag Rocco", @RedFrocco (https://www.youtube.com/@RedFrocco). Avatar, banner, tavsif: work/rocco/ (avatar_800.png, banner_2560x1440.png, channel_description.txt; manba rocco.svg — o'zimiz chizdik). Shohjahondan kerak: (1) avatar/banner/tavsifni qo'yish, izohlarni yoqish; (2) Metricool'ga ulash; (3) ElevenLabs limiti bo'yicha qaror (pastda).
 
 ## SHOHJAHON SHARTLARI (2026-11-21 13:2x) — MAJBURIY, Financier qoidalari bilan birga
 - Behayo kontent YO'Q (kadr, matn, mavzu, sarlavha, thumbnail).

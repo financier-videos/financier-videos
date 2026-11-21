@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+ <defs>
+  <radialGradient id="bg" cx="50%" cy="40%" r="70%"><stop offset="0" stop-color="#1f3b5c"/><stop offset="1" stop-color="#0b1626"/></radialGradient>
+  <linearGradient id="fur" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9aa3ad"/><stop offset="1" stop-color="#6c7580"/></linearGradient>
+ </defs>
+ <rect width="400" height="400" fill="url(#bg)"/>
+ <!-- flag -->
+ <g transform="translate(292 70) rotate(12)">
+  <rect x="0" y="0" width="9" height="190" rx="4" fill="#d9c08a"/>
+  <path d="M9 6 C45 -6 70 22 108 8 L100 46 L108 82 C70 96 45 68 9 80 Z" fill="#ff3b3b" stroke="#a11212" stroke-width="4"/>
+ </g>
+ <!-- ears -->
+ <path d="M100 150 L86 70 L160 118 Z" fill="#6c7580" stroke="#2a2f36" stroke-width="6" stroke-linejoin="round"/>
+ <path d="M300 150 L314 70 L240 118 Z" fill="#6c7580" stroke="#2a2f36" stroke-width="6" stroke-linejoin="round"/>
+ <path d="M106 132 L98 90 L140 118 Z" fill="#f2d7d0"/>
+ <path d="M294 132 L302 90 L260 118 Z" fill="#f2d7d0"/>
+ <!-- head -->
+ <ellipse cx="200" cy="215" rx="125" ry="110" fill="url(#fur)" stroke="#2a2f36" stroke-width="6"/>
+ <!-- white face -->
+ <path d="M90 215 C110 150 290 150 310 215 C300 285 250 318 200 318 C150 318 100 285 90 215 Z" fill="#f4f1ea"/>
+ <!-- mask -->
+ <path d="M80 200 C110 165 165 175 200 205 C235 175 290 165 320 200 C305 240 250 248 200 228 C150 248 95 240 80 200 Z" fill="#23272d"/>
+ <!-- eyes -->
+ <circle cx="148" cy="207" r="24" fill="#fff"/><circle cx="252" cy="207" r="24" fill="#fff"/>
+ <circle cx="154" cy="209" r="12" fill="#3a2414"/><circle cx="246" cy="209" r="12" fill="#3a2414"/>
+ <circle cx="159" cy="203" r="4.5" fill="#fff"/><circle cx="251" cy="203" r="4.5" fill="#fff"/>
+ <!-- skeptical brow -->
+ <path d="M120 176 Q150 164 178 180" stroke="#f4f1ea" stroke-width="7" fill="none" stroke-linecap="round"/>
+ <path d="M222 172 Q252 156 282 168" stroke="#f4f1ea" stroke-width="7" fill="none" stroke-linecap="round"/>
+ <!-- nose & smirk -->
+ <ellipse cx="200" cy="255" rx="17" ry="12" fill="#23272d"/>
+ <path d="M200 267 L200 280 M178 284 Q200 296 226 280" stroke="#23272d" stroke-width="6" fill="none" stroke-linecap="round"/>
+ <!-- detective hat -->
+ <path d="M92 132 C120 108 280 108 308 132 C290 140 110 140 92 132 Z" fill="#7a5a3a" stroke="#2a2f36" stroke-width="6" stroke-linejoin="round"/>
+ <path d="M130 128 C132 70 268 70 270 128 Z" fill="#8c6a45" stroke="#2a2f36" stroke-width="6" stroke-linejoin="round"/>
+ <rect x="131" y="108" width="138" height="16" fill="#ff3b3b"/>
+</svg>
