@@ -5,7 +5,7 @@
  },
  "1_platform_check": {
   "status": "PASS",
-  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    76.5 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.1 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    76.3 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.1 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
  },
  "2_loudness": {
   "status": "PASS",
@@ -17,7 +17,7 @@
  },
  "4_export": {
   "status": "PASS",
-  "note": "h264 High, 12.4 Mbit/s, 51.9s, stereo"
+  "note": "h264 High, 12.3 Mbit/s, 51.9s, stereo"
  },
  "5_voice_check": {
   "status": "PASS",
@@ -41,19 +41,19 @@
  },
  "10_look": {
   "status": "PASS",
-  "note": "ok  0.54  (layout 0.20, palette 0.89, tone 0.71)  vs 2026-11-22_gta_per_second.mp4\nok  0.66  (layout 0.52, palette 0.76, tone 0.79)  vs 2026-11-22_pink_or_blue_b3.mp4\nok  0.69  (layout 0.60, palette 0.72, tone 0.84)  vs 2026-11-22_cart_trick_b3.mp4\nok  0.70  (layout 0.64, palette 0.77, tone 0.71)  vs 2026-11-22_bf_vs_cm_b3.mp4\nLOOK_CHECK: PASS"
+  "note": "ok  0.49  (layout 0.35, palette 0.59, tone 0.62)  vs 2026-11-22_gta_per_second.mp4\nok  0.36  (layout 0.00, palette 0.77, tone 0.45)  vs 2026-11-21_giftcard_myth_b3.mp4\nok  0.33  (layout 0.00, palette 0.66, tone 0.49)  vs 2026-11-21_gate_story_b3.mp4\nok  0.34  (layout 0.00, palette 0.72, tone 0.47)  vs 2026-11-21_twenty_secrets_b3.mp4\nLOOK_CHECK: PASS"
  },
  "11_pacing": {
   "status": "PASS",
-  "note": "35 cuts in 51.9 s (need >= 25; engine 'shots' / 'auto_shots')"
+  "note": "34 hard cuts (ffmpeg scene>0.22) in 51.9 s = 1.5 s/cut (need >= 25); engine planned 35"
  },
  "12_script": {
   "status": "PASS",
-  "note": "t01_how_big.json                   words 128 scenes 12 broll 6 look -         line2 \"take\" end \"that\"\nt02_per_second.json                words  31 scenes  3 broll 3 look fullbleed line2 \"that's\" end \"by\"\ns4_pink.json                       words  66 scenes 10 broll 0 look -         line2 \"a\" end \"because\"\ns3_cart.json                       words  68 scenes  9 broll 2 look -         line2 \"wait\" end \"because\"\ns2_bfcm.json                       words  81 scenes 10 broll 0 look -         line2 \"wait\" end \"now\"\nSCRIPT_CHECK: PASS"
+  "note": "t01_how_big.json                   words 128 scenes 12 broll 6 look split     line2 \"take\" end \"that\"\nt02_per_second.json                words  31 scenes  3 broll 3 look fullbleed line2 \"that's\" end \"by\"\nr4_giftcard_myth.json              words  75 scenes  7 broll 0 look -         line2 \"hold\" end \"because\"\nr5_gate_story.json                 words  78 scenes  8 broll 0 look -         line2 \"what\" end \"day\"\nr3_twenty_secrets.json             words  83 scenes  8 broll 0 look -         line2 \"one\" end \"because\"\nSCRIPT_CHECK: PASS"
  },
  "13_skills_line": {
   "status": "PASS",
-  "note": "Skillar: script_rules scale_ladder, comedy (jawdrop, sigh, deadpan, 3 hazil gap), looks vault+words (T-02 fullbleed dan farq), Pixabay 4 yo'l, qc_gate, look_check, script_check, voice_check, prosody, title.py, color_check; ishlatilmadi: ikkinchi ovoz (dvigatelda hali yo'q), NASA kadri (Pixabay Yer/Oy lavhasi)"
+  "note": "Skillar: script_rules, comedy (jawdrop, sigh, deadpan), looks (split/paper/fullbleed), Pixabay 4 yo'l, dvigatel v6.15 haqiqiy kesimlar, qc_gate, look_check, script_check, voice_check, prosody, title.py, color_check; ishlatilmadi: hookscore (hook script_bank dan tayyor), ikkinchi ovoz (bu ssenariylarda rol yo'q)"
  },
  "verdict": "PASS"
 }

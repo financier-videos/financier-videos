@@ -1,15 +1,11 @@
 {
- "0_note": {
-  "status": "INFO",
-  "note": "engine changed since render, no re-render-required change"
- },
  "0_freshness": {
   "status": "PASS",
   "note": "up to date"
  },
  "1_platform_check": {
   "status": "PASS",
-  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    41.4 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.1 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.6 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    41.2 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.1 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.6 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
  },
  "2_loudness": {
   "status": "PASS",
@@ -21,7 +17,7 @@
  },
  "4_export": {
   "status": "PASS",
-  "note": "h264 High, 12.5 Mbit/s, 27.8s, stereo"
+  "note": "h264 High, 12.4 Mbit/s, 27.8s, stereo"
  },
  "5_voice_check": {
   "status": "PASS",
@@ -45,19 +41,19 @@
  },
  "10_look": {
   "status": "PASS",
-  "note": "ok  0.24  (layout 0.21, palette 0.26, tone 0.29)  vs 2026-11-22_airport_r04.mp4\nok  0.31  (layout 0.13, palette 0.59, tone 0.24)  vs 2026-11-22_gta_how_big.mp4\nok  0.59  (layout 0.75, palette 0.55, tone 0.33)  vs 2026-11-22_gta_per_second.mp4\nok  0.43  (layout 0.30, palette 0.71, tone 0.24)  vs 2026-11-22_cart_trick_b3.mp4\nLOOK_CHECK: PASS"
+  "note": "ok  0.29  (layout 0.37, palette 0.05, tone 0.53)  vs 2026-11-22_bfcm_r05.mp4\nok  0.35  (layout 0.24, palette 0.36, tone 0.61)  vs 2026-11-22_airport_r04.mp4\nok  0.66  (layout 0.80, palette 0.60, tone 0.44)  vs t03_timeline.mp4\nok  0.45  (layout 0.24, palette 0.62, tone 0.66)  vs t01_how_big.mp4\nLOOK_CHECK: PASS"
  },
  "11_pacing": {
   "status": "PASS",
-  "note": "19 cuts in 27.8 s (need >= 13; engine 'shots' / 'auto_shots')"
+  "note": "19 hard cuts (ffmpeg scene>0.22) in 27.8 s = 1.5 s/cut (need >= 13); engine planned 19"
  },
  "12_script": {
   "status": "PASS",
-  "note": "r06_cart.json                      words  74 scenes  7 broll 3 look paper     line2 \"blame\" end \"stop\"\nr04_airport.json                   words  67 scenes  6 broll 3 look split     line2 \"in\" end \"paid\"\nt01_how_big.json                   words 128 scenes 12 broll 6 look -         line2 \"take\" end \"that\"\nt02_per_second.json                words  31 scenes  3 broll 3 look fullbleed line2 \"that's\" end \"by\"\ns3_cart.json                       words  68 scenes  9 broll 2 look -         line2 \"wait\" end \"because\"\nSCRIPT_CHECK: PASS"
+  "note": "r06_cart.json                      words  74 scenes  7 broll 3 look fullbleed line2 \"blame\" end \"stop\"\nr05_bfcm.json                      words  78 scenes 10 broll 9 look split     line2 \"black\" end \"monday\"\nr04_airport.json                   words  67 scenes  6 broll 3 look split     line2 \"in\" end \"paid\"\nt03_timeline.json                  words  61 scenes  7 broll 4 look paper     line2 \"the\" end \"series\"\nt01_how_big.json                   words 128 scenes 12 broll 6 look split     line2 \"take\" end \"that\"\nSCRIPT_CHECK: PASS"
  },
  "13_skills_line": {
   "status": "PASS",
-  "note": "Skillar: script_rules (why_story/guess_reveal), comedy (shrug, doubletake, jawdrop, deadpan; BUCK'S THEORY), looks (paper/split), ikkinchi ovoz (Jessica), Pixabay 4 yo'l, qc_gate, look_check, script_check, voice_check, prosody, title.py, color_check; ishlatilmadi: hookscore (hook script_bank R-xx dan tayyor), vidIQ (kredit tejaldi)"
+  "note": "Skillar: script_rules, comedy (jawdrop, sigh, deadpan), looks (split/paper/fullbleed), Pixabay 4 yo'l, dvigatel v6.15 haqiqiy kesimlar, qc_gate, look_check, script_check, voice_check, prosody, title.py, color_check; ishlatilmadi: hookscore (hook script_bank dan tayyor), ikkinchi ovoz (bu ssenariylarda rol yo'q)"
  },
  "verdict": "PASS"
 }
