@@ -12,7 +12,7 @@ SKILLAR: har ish oldidan `docs/skills/INDEX.md` — Rocco uchun ham majburiy (ss
 | Kanal kalit so'zlari / auditoriya | 2026-11-21 18:47: "velox" olib tashlandi; qo'yildi: scam alerts, how to spot a scam, scam red flags, phishing text, fraud prevention, online safety, protect parents from scams, scam awareness, text message scams, phone scams. Auditoriya: "kanal bolalar uchun emas" |
 | Akkaunt | Kanal velox.int.logistics@gmail.com Google akkauntida (Chrome'da kirilgan). Studio'da "Страна проживания" = AQSh deb turibdi — chat o'zgartirmadi; haqiqiy yashash davlati bo'lishi kerak (Shohjahon qarori) |
 | Post qilish vositasi | Buffer (bepul) ulandi 2026-11-21; env BUFFER_API_KEY; api.buffer.com ochiq; engine/buffer_post.py — draft sinovi o'tdi va o'chirildi |
-| Rocco ovozi (ElevenLabs) | YARATILMAGAN — qaror bor (Financier uzun videosi qisqartirildi, 1.5); navbatda: docs/improvement_backlog.md 1-band |
+| Rocco ovozi (ElevenLabs) | YARATILDI 2026-11-21: "Rocco (Scam Detective)", voice_id `eYibgGvZyWzJUi8HBmQM` (Voice Design eleven_ttv_v3, 3 previewdan F0 diapazoni eng kengi; iliq, xotirjam, quruq hazil; median F0 ~182 Hz — Buck D ~259 Hz dan aniq farqli). Namuna: work/rocco/voice_lab/out/Rocco_R_sample.mp3; ASR tekshiruvi — matn to'g'ri eshitildi. Skript: work/rocco/voice_lab/rocco_voice_lab.py (qayta ishga tushsa yangi ovoz yaratmaydi). TTS sozlamasi Buck bilan bir xil (multilingual_v2, stability 0.28, style 0.85) |
 | vidIQ | ULANDI 2026-11-21 (alohida vidIQ profili, Free, 150 kredit, yangilanish 2026-12-21; kanal UCUyPbjsSFdWKnC4nVRDhOiA). Kalit env VIDIQ_API_KEY; `python3 -I engine/vidiq_rocco.py <tool> '<json args>'` (sessiyadagi tayyor vidIQ vositalari — Financier profili, Rocco uchun ISHLATILMAYDI) |
 | Chiqqan / rejalashtirilgan video | 0 |
 

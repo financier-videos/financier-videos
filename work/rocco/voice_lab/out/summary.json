@@ -1,0 +1,46 @@
+{
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.28,
+    "similarity_boost": 0.75,
+    "style": 0.85,
+    "use_speaker_boost": true
+  },
+  "sample_text": "A free package at your door... that you never ordered? Heh. That's not luck. That's a brushing scam. Keep it, it's yours, but change your password tonight. Send this to someone who still opens every box.",
+  "variants": [
+    {
+      "variant": "R",
+      "name": "Rocco (Scam Detective)",
+      "prompt": "A warm, relaxed, wry adult male cartoon detective voice with a slightly husky low-mid tone. Calm and reassuring, with dry deadpan humor and a knowing half-smile in every line; slows down for the important warning, then lands a quick sarcastic aside. Clear American diction, friendly and trustworthy, never scary, never robotic or flat.",
+      "seed": 505,
+      "design_model": "eleven_ttv_v3",
+      "previews": [
+        {
+          "i": 1,
+          "f0": 115.9,
+          "spread": 128.6,
+          "score": 114.96
+        },
+        {
+          "i": 2,
+          "f0": 134.5,
+          "spread": 143.0,
+          "score": 136.8
+        },
+        {
+          "i": 3,
+          "f0": 152.4,
+          "spread": 160.4,
+          "score": 159.44
+        }
+      ],
+      "chosen_preview": 3,
+      "voice_id": "eYibgGvZyWzJUi8HBmQM",
+      "sample": "/tmp/claude-0/rv/Rocco_R_sample.mp3",
+      "sample_stats": {
+        "f0": 181.8,
+        "spread": 158.7
+      }
+    }
+  ]
+}
