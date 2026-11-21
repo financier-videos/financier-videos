@@ -1,5 +1,5 @@
 # YOUTUBE PLAYBOOK — FINANCIER (moliya, AQSh auditoriyasi)
-Yangilangan: 2026-11-21 10:25 (B — jadvaldan tashqari: BUYURTMA 4 bajarildi — chiqmagan 6 Short Buck v3 + Pixabay fonlari bilan qayta render; yangi 2 Short 22-noy 16:00/19:00 ET; dvigatel v6.7 "land"). Bu hujjatni har bir YouTube agent ishga tushganda o'qiydi va yangilaydi. 200 qatordan oshmasin. Personaj qoidalari: `docs/youtube_character_buck.md`. Vazifa ko'rsatmasi: `docs/producer_task.md`.
+Yangilangan: 2026-11-21 12:20 (jadvaldan tashqari tekshiruv: slotlar to'la, yangi ish yo'q; oldingi — 10:25 B — jadvaldan tashqari: BUYURTMA 4 bajarildi — chiqmagan 6 Short Buck v3 + Pixabay fonlari bilan qayta render; yangi 2 Short 22-noy 16:00/19:00 ET; dvigatel v6.7 "land"). Bu hujjatni har bir YouTube agent ishga tushganda o'qiydi va yangilaydi. 200 qatordan oshmasin. Personaj qoidalari: `docs/youtube_character_buck.md`. Vazifa ko'rsatmasi: `docs/producer_task.md`.
 
 ## 0. MAQSAD VA VAKOLAT
 - SHOHJAHON KO'RSATMASI (2026-11-18): kontentni Claude o'zi reja qiladi va o'zi chiqaradi, "ha"sini kutmaydi. Kuniga 2 Shorts + har 3 kunda 1 uzun video. Raqobatchilarni o'rganib eng zo'r bo'lish. Tomoshabin fikrini o'zi yig'adi. PROFESSIONAL MONTAJCHI darajasi.
