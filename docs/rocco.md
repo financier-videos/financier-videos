@@ -15,7 +15,7 @@ Manba: docs/new_channel_plan.md (to'liq reja, nomzodlar jadvali, manbalar), engi
 ## 1.5 MAQSAD VA QARORLAR (Shohjahon, 2026-11-21 19:xx)
 - MAQSAD: 1 hafta ichida 15 mln ko'rish. Claude'ning baholashi (Shohjahonga aytildi): yangi kanal uchun real emas, kafolatlanmaydi; sun'iy oshirish (bot, sotib olish) TAQIQ. Shunga qaramay eng yuqori ehtimolli yo'l bilan ishlanadi: shu hafta Black Friday / Cyber Monday xarid firibgarliklari, kuniga 3–4 Short, "ota-onangga yubor" ulashish uslubi, har kuni Rocco vidIQ tahlili va moslashuv. Har kuni haqiqiy raqam yoziladi.
 - ElevenLabs: Financier uzun videosi haftasiga 2 taga tushirildi (producer_task) — bo'shagan belgi Rocco ovoziga. Rocco ovozi va videolari BOSHLANADI.
-- KANAL SOZLAMALARI: Shohjahon — "o'zing sozla". Holat 2026-11-21: vidIQ ko'rsatadi — tavsif bo'sh, avatar standart. Avatar/banner/tavsifni o'zgartirish uchun YouTube Studio login yoki YouTube Data API OAuth kerak — sessiyada yo'q (vidIQ va Buffer'da kanal brending funksiyasi yo'q). Imkon paydo bo'lsa (OAuth token, brauzer) — darhol o'zi qo'yadi.
+- KANAL SOZLAMALARI: Shohjahon — "o'zing sozla". Holat 2026-11-21: vidIQ ko'rsatadi — tavsif bo'sh, avatar standart. Avatar/banner/tavsifni o'zgartirish uchun YouTube Studio login yoki YouTube Data API OAuth kerak — sessiyada yo'q (vidIQ va Buffer'da kanal brending funksiyasi yo'q). Imkon paydo bo'lsa (OAuth token, brauzer) — darhol o'zi qo'yadi. Shohjahon 2026-11-21: "menga ish qildirma" → bu haqda QAYTA SO'RALMAYDI; kanal tavsifi o'rniga har video tavsifida 1 qator kanal haqida ("Rocco spots scams so you don't fall for them").
 - vidIQ eslatma: get_channels_by_ids 5 kredit oladi (bepul emas).
 
 ## 2. QABUL QILINGAN QARORLAR
