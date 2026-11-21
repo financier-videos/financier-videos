@@ -102,5 +102,10 @@
   "settings": {
    "speed": 1.1
   }
- }
+ },
+ "bg": [
+  "/tmp/fin/bg/boarding.mp4",
+  "/tmp/fin/bg/plane_sky.mp4",
+  "/tmp/fin/bg/vienna_gate.mp4"
+ ]
 }
