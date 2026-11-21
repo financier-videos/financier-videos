@@ -42,6 +42,13 @@ def main():
     elif a.cmd == "list":
         print(json.dumps(gql("query($o:OrganizationId!){posts(first:50,input:{organizationId:$o}){edges{node{id status dueAt text channelId}}}}", {"o": ORG}), indent=1)[:6000])
     elif a.cmd == "delete":
+        # 2026-11-21: back up the post before deleting (another session's fresh post was once deleted by mistake)
+        posts = gql("query($o:OrganizationId!){posts(first:50,input:{organizationId:$o}){edges{node{id status dueAt text channelId}}}}", {"o": ORG})
+        node = next((e["node"] for e in posts["posts"]["edges"] if e["node"]["id"] == a.arg), None)
+        if node:
+            os.makedirs("work/rocco/deleted_posts", exist_ok=True)
+            json.dump(node, open("work/rocco/deleted_posts/%s.json" % a.arg, "w"), indent=1)
+            print("backup: work/rocco/deleted_posts/%s.json | due %s | %s" % (a.arg, node["dueAt"], node["text"][:120].replace("\n", " ")))
         print(json.dumps(gql("mutation($i:DeletePostInput!){deletePost(input:$i){__typename}}", {"i": {"id": a.arg}})))
     elif a.cmd == "schedule":
         text = open(a.text).read().strip() if a.text and os.path.exists(a.text) else (a.text or "")
