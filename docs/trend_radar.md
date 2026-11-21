@@ -59,3 +59,12 @@ Kanal g'oyalari — ataylab har xil (hali qaror emas; radar skanlari bilan teksh
 | 8 | Financier (Buck) va Rocco | o'z animatsiya | personaj ovozi | bor | mavjud |
 Til: ovozsiz/matni kam formatlar (1, 3, 4, 6, 7) butun dunyoga ishlaydi — faqat AQSh emas.
 Musiqa: Shohjahonning "musiqa yo'q" qoidasi Financier va Rocco uchun aytilgan; yangi kanallarda ham standart — musiqasiz (tabiiy tovush/effekt), u boshqacha demaguncha.
+
+### 6-g'oya bo'yicha baho (2026-11-21, Shohjahon so'radi: "uxlashdan oldin qo'yiladigan yomg'ir/tabiiy tovush kanali ochsakmi?")
+Baho: OCHISHGA ARZIYDI, lekin sprint (10 kun) raqamiga yordam bermaydi — sekin, uzoq muddatli aktiv. Shohjahon "och" desa boshlanadi (akkauntni u ochadi).
+- Plyus: ovoz/personaj kerak emas (ElevenLabs sarfi 0), til to'sig'i yo'q, bitta video yillar ishlaydi, tomosha vaqti soatlab.
+- Xavf 1: YouTube "bir xil/takroriy kontent" siyosati — shablon bo'yicha deyarli farqsiz videolar monetizatsiyadan o'tmaydi. Shuning uchun HAR video alohida sahna: boshqa tovush manbai + boshqa tasvir + boshqa joy (tunuka tom, chodir, mashina tomi, deraza, o'rmon, dengiz, kamin).
+- Xavf 2: ovoz huquqi — faqat litsenziyali (YouTube Audio Library, Pixabay Audio) yoki o'zimiz sintez/yozib olgan tovush; begona kanal audiosi HECH QACHON.
+- Xavf 3: raqobat juda katta, kichik kanallar yillab sekin o'sadi → tor nisha bilan kirish ("momaqaldiroqsiz yomg'ir", "qora ekran", aniq yuza).
+- Qoida: sarlavha so'zma-so'z qidiruvdek ("Rain on Tin Roof, No Thunder | 8 Hours | Black Screen"); pleylistlar; hech qanday "uyquni davolaydi" kabi tibbiy va'da; 8 soatlik faylni qisqa uzluksiz bo'lakdan yig'ish (takror sezilmasin), tasvir — o'z 3D/stok loop yoki qora ekran.
+- Sinov rejasi: 10 ta turli sahna, 2 hafta, keyin raqam bo'yicha qaror (qaysi yuza/uzunlik ishlaydi).

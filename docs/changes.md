@@ -8,3 +8,4 @@ Ishlab chiqaruvchi (vazifa/chat): HAR render va HAR post oldidan `git pull --reb
 | 2026-11-21 14:15 | vazifa sessiyasi | dvigatel v6.9: spec "bg_bright" (fon yorqinligi A/B); natija JSON'da "engine", "engine_sha", "rendered_at" | QAYTA RENDER: YO'Q |
 | 2026-11-21 14:15 | vazifa sessiyasi | QC darvozasi (engine/qc_gate.py) majburiy: 0 yangilik, platforma, LUFS, qora kadr, eksport, voice/prosody, sarlavha, kontakt-varaq, rang | QAYTA RENDER: YO'Q |
 | 2026-11-21 14:15 | vazifa sessiyasi | rang qoidalari (notes/2026-11-21_color.md): qizil kichik matn yo'q, 1 theme + oltin + 1 urg'u | QAYTA RENDER: YO'Q |
+| 2026-11-21 14:20 | chat (Trade) | trend_radar: 6-g'oya (uyqu uchun yomg'ir/tabiiy tovush kanali) bahosi, xavflar va sinov rejasi yozildi; kanal ochilmagan — Shohjahon qarorini kutadi | QAYTA RENDER: YO'Q |
