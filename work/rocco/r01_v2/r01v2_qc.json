@@ -41,11 +41,11 @@
  },
  "10_look": {
   "status": "PASS",
-  "note": "ok  0.64  (layout 0.41, palette 0.81, tone 0.86)  vs rocco_2026-11-21_r01_brushing.mp4\nLOOK_CHECK: PASS"
+  "note": "ok  0.63  (layout 0.40, palette 0.79, tone 0.87)  vs rocco_2026-11-21_r01_brushing.mp4\nLOOK_CHECK: PASS"
  },
  "11_pacing": {
   "status": "PASS",
-  "note": "25 cuts in 44.1 s (need >= 22; engine 'shots' / 'auto_shots')"
+  "note": "27 hard cuts (ffmpeg scene>0.22) in 44.1 s = 1.6 s/cut (need >= 22); engine planned 29"
  },
  "12_script": {
   "status": "PASS",
@@ -53,7 +53,7 @@
  },
  "13_skills_line": {
   "status": "PASS",
-  "note": "Skillar: script_rules why_story, comedy (deadpan, doubletake), looks fullbleed, Pixabay 4 yo'l, qc_gate, look_check, script_check, voice_check, prosody, title.py, color_check; ishlatilmadi: hookscore (hook FTC faktidan olingan), ikkinchi ovoz (dvigatelda hali yo'q)"
+  "note": "Skillar: script_rules why_story, comedy (deadpan, doubletake), looks fullbleed, Pixabay 4 yo'l, qc_gate, look_check, script_check, voice_check, prosody, title.py, color_check; ishlatilmadi: hookscore (hook FTC faktidan), ikkinchi ovoz (mijoz roli bu ssenariyda yo'q)"
  },
  "verdict": "PASS"
 }
