@@ -1,0 +1,59 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    50.8 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.1 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -14.1 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 12.4 Mbit/s, 34.4s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 0.972,\n \"missing\": [\n  \"uh\",\n  \"forecasts\"\n ],\n \"extra\": [\n  \"forecast\"\n ],\n \"heard\": \"Black Friday or Cyber Monday? Which one makes more online? Black Friday, obviously. Nope, Cyber Monday, about $15 billion. Black Friday, almost 13. Okay, which one is growing faster? Monday again? Friday, plus 9.2%. Versus 6.2. Last one. Buy now. Pay later on Black Friday. How much? A million tops. $807 million. Pay later. A lot later. All forecast, by the way. Team Friday or Team Monday?\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "  | Okay. Which one is growing faster?\n 5  13.71s range= 6.1 st  gap=0.04  ok  | Monday again?\n 6  14.59s range=16.4 st  gap=0.27  ok  | Friday. Plus nine point two percent, versus six point two.\n 7  20.61s range=19.1 st  gap=0.17  ok  | Last one. Buy now, pay later on Black Friday. How much?\n 8  24.80s range=11.2 st  gap=0.22  ok  | Uh... a million, tops.\n 9  26.80s range=14.6 st  gap=0.44  ok  | Eight hundred and seven million dollars. Pay later... a lot \n10  31.18s range= 8.8 st  gap=0.14  ok  | All forecasts, by the way. Team Friday or team Monday?\n{\"median_f0\": 262.4, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 90"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/2026-11-22r/r05_bfcm_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "PASS",
+  "note": "ok  0.59  (layout 0.90, palette 0.04, tone 0.86)  vs r04_airport.mp4\nok  0.29  (layout 0.46, palette 0.05, tone 0.32)  vs 2026-11-22_gta_timeline_v615.mp4\nok  0.58  (layout 0.87, palette 0.04, tone 0.85)  vs 2026-11-22_gta_how_big_v615.mp4\nok  0.33  (layout 0.48, palette 0.05, tone 0.51)  vs 2026-11-22_gta_per_second.mp4\nLOOK_CHECK: PASS"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "20 hard cuts (ffmpeg scene>0.22) in 34.4 s = 1.7 s/cut (need >= 17); engine planned 23"
+ },
+ "12_script": {
+  "status": "PASS",
+  "note": "r05_bfcm.json                      words  78 scenes 10 broll 9 look split     line2 \"black\" end \"monday\"\nr04_airport.json                   words  67 scenes  6 broll 3 look split     line2 \"in\" end \"paid\"\nt03_timeline.json                  words  61 scenes  7 broll 4 look paper     line2 \"the\" end \"series\"\nt01_how_big.json                   words 128 scenes 12 broll 6 look split     line2 \"take\" end \"that\"\nt02_per_second.json                words  31 scenes  3 broll 3 look fullbleed line2 \"that's\" end \"by\"\nSCRIPT_CHECK: PASS"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: script_rules (myth_bust/guess_reveal), ikkinchi ovoz (Jessica), comedy (shrug, doubletake, jawdrop, flip, deadpan), looks split, Pixabay 4 yo'l, dvigatel v6.15 haqiqiy kesimlar, qc_gate, look_check, script_check, voice_check, prosody, title.py, color_check; ishlatilmadi: hookscore (hook script_bank R-xx dan), map_insert (split yarmida joy yo'q)"
+ },
+ "verdict": "PASS"
+}
