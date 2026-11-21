@@ -1,0 +1,17 @@
+# SKILL XARITASI — har video, har bosqich, ESLATMASIZ (Shohjahon 2026-11-21: "hamma skillarni ko'rib chiqib foydalan, har safar eslatib o'tirmay")
+Qoida: har bosqichda shu jadvaldagi qatorni bajar. Playbook 9-bo'lim / rocco.md dagi video yozuvida "Skillar:" qatori — har bosqichdan nima qo'llandi; qo'llanmagani — sababi bilan. Skill matnlari — ma'lumotnoma, QAT'IY CHEGARALAR ustun. Yangi skill qo'shilsa — shu jadvalga ham qo'shiladi (aks holda u ishlatilmaydi).
+
+| Bosqich | Skill (fayl) | Nima qilinadi — majburiy natija |
+|---|---|---|
+| 1. Trend / g'oya | yt-viral (`docs/skills/youtube-agent-skill/yt-viral/swipe.py`), claude-youtube `sub-skills/competitor.md` (A,C,D), `ideate.md`, `comment-intel_adityaarsharma.md` (yakshanba), ig-viral | kanal medianasiga nisbatan outlier ro'yxati → daily_trends.md; 2–3 mavzu ball bilan |
+| 2. Hook | claude-youtube `hook.md`; ig-reel `hooks.json` + `hookscore.py`; yt-script `hooks.json` (21 formula); sergebulaev `yt-hook-scripter` | 3 formula × hook, hookscore ≥50, eng yuqorisi |
+| 3. Ssenariy | `shorts.md`, `references/retention-scripting-guide.md`, style_library 12 saboq, sergebulaev `retention-beats`; ig-reel `beats.py --target`; ghost-editor saboqlari | beats.py: hook ≤3 s, jumla ≤4 s, loop; 2 "beat", 1–2 "land" |
+| 4. Vizual rejissura | XILMA-XILLIK (producer_task), theme, Pixabay fon (`engine/pixabay_bg.py`), `notes/2026-11-21_cinematic_visuals.md`, emil-skills (harakat), impeccable (tipografika/rang), iart-motion: `kinetic-typography`, `data-animation` (chart), `explainer-video`, `map-animation` (`work/pilot_map/map_insert.py`), `motion-design`; style_library uslubli insert (kuniga ≤1); hyperframes (NOMZOD) | har videoda kamida 1 YANGI vizual narsa (yangi kombinatsiya, chart "at" uchlik, xarita, kinetik matn) — spec'da va yozuvda nomi bilan |
+| 5. Ovoz | ElevenLabs (Buck D / Rocco), pyfxr sfx (`engine/sfx_fxr.py`), Rhubarb lip-sync (avtomatik), "land" pauzalar | sfx har ko'rinadigan harakatga; 1–2 fxr |
+| 6. QC — DARVOZA | `python3 engine/qc_gate.py <mp4> --spec <spec> --rendered <rendered.json> --title "<sarlavha>" --platform shorts` — ichida: ffmpeg-skill check.py, ebur128 −14 LUFS, blackdetect, eksport (h264 High, ≥5 Mbit/s), voice_check, prosody_check, title.py, 8 kadrli kontakt-varaq | VERDICT PASS bo'lmaguncha POST YO'Q. Kontakt-varaqni Read bilan ko'r — vizual sifat direktori 12 nuqtasi (`notes/2026-11-21_visual_quality_director.md`). voice_check "heard" dagi RAQAMLAR va oxirgi jumla ko'z bilan. `_qc.json` spec yonida commit |
+| 7. Paket | yt-package `title.py`, claude-youtube `metadata.md`, `seo.md`, sergebulaev `yt-title-optimizer`, `yt-description-writer`; uzun video: `thumbnail.md`, `yt-thumbnail-brief`, `chapters.py` | sarlavha ≥80 ball, raqam birinchi 40 belgida; tavsif 1-qator = izoh savoli |
+| 8. Instagram | ig-caption, ig-human (`humanize.py`), voice_buck_en.md | instagram.md tartibi |
+| 9. Tahlil (C) | claude-youtube `analyze.md`, yt-retention `retention.py` (+ ruptures, Studio CSV bo'lsa), audit.md (yakshanba) | growth_log: hook bali vs haqiqiy ushlab qolish |
+| 10. Uzun videodan keyin | claude-shorts (2 klip-Short sinovi) | ertasi kuni |
+
+Darvozaning birinchi sinovi (2026-11-21, 2026-11-23_fees_rank.mp4): 1–4, 6, 7 PASS; voice_check 0.909 → rc 1 ("heh"→"huh", "checked"→"check" — ma'no buzilmagan, lekin darvoza to'xtatadi: qayta TTS yoki sabab bilan qo'lda qaror yozuvi); kontakt-varaq — matn o'qiladi, Buck raqamni yopmaydi.

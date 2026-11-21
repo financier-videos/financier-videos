@@ -34,6 +34,10 @@ Har Short uchun spec yozishdan oldin playbook 9-bo'limdagi oxirgi 4 videoni ko'r
 5. TUZILMA VA HAZIL: sahna soni 6–10 oralig'ida o'zgarsin; Buck tryuki, luqmasi va "Wait...", "Heh..." kabi iboralar oldingi 2 videodagidan boshqa; savol sahnasi har doim oxiridan oldingi bo'lishi SHART EMAS (ba'zan o'rtada); "vs" va "chart" navbatlashsin; har videoda kamida bitta OLDIN ISHLATILMAGAN narsa (yangi effekt kombinatsiyasi, yangi Buck harakati, yangi sfx, sepia sahna, chart "at" bilan uchlik va h.k.).
 Bir xil skelet (raqam → "Wait?!" → manba → vs → savol → loop) ketma-ket ikki martadan ko'p ishlatilmaydi.
 
+## SKILL XARITASI VA QC DARVOZASI (Shohjahon 2026-11-21: "hamma skillardan eslatmasiz foydalan") — MAJBURIY, Financier va Rocco
+- Har video: `docs/skill_map.md` jadvali bosqichma-bosqich (trend → hook → ssenariy → vizual → ovoz → QC → paket → IG → tahlil). Yozuvda "Skillar:" qatori.
+- POST OLDIDAN: `python3 engine/qc_gate.py <mp4> --spec <spec> --rendered <rendered.json> --title "<sarlavha>" --platform shorts|youtube|reels` → VERDICT PASS shart; kontakt-varaq PNG ni Read bilan ko'r. FAIL/BLOCKED — tuzat va qayta. `_qc.json` commit.
+
 ## USLUBLAR KUTUBXONASI VA REJISSORLIK (Shohjahon 2026-11-20 18:44) — `docs/style_library.md` ni A va B ishida o'qi
 - Har Short: tuzilmaning 3 variantini qisqa yoz, birini tanla; bitta "imzo kadr"; kamida 2 sukunat ("beat") va har ko'ringan harakatga sfx; temp bir tekis emas; ekrandagi matn ≥1.8 s.
 - OVOZ BALANDLIGI: maqsad integrated ≈ −14 LUFS (`ffmpeg -i f.mp4 -af ebur128 -f null -` oxiridagi "I:"); −16 dan past yoki −12 dan baland bo'lsa spec'da balandlikni to'g'rilab qayta mux qil. `ffmpeg -vf blackdetect=d=0.1` — bo'sh kadr yo'q.
