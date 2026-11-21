@@ -82,7 +82,7 @@ QOIDA (har chat, har vazifa sessiyasi, Financier ham, Rocco ham):
 | Vaziyat | Skill / vosita | Qayerda |
 |---|---|---|
 | "Bu haqda repoda nima bor?" | graphify bilim xaritasi | pip install graphifyy; `graphify query "<savol>"`; graphify-out/GRAPH_REPORT.md |
-| Boshqa chat nima qildi? | repo — yagona umumiy xotira | git pull; git log; docs/night_order.md, docs/rocco.md, docs/growth_log.md |
+| Boshqa chat nima qildi? | o'zgarishlar jurnali (har ishdan keyin qator + push) | docs/changes.md; keyin git log, docs/night_order.md, docs/rocco.md, docs/growth_log.md |
 | Tashqi platformalarni o'qish (loginsiz) | Agent Reach (saqlangan, o'rnatilmagan) | docs/skills/notes/2026-11-20_agent-reach.md |
 | Bir martalik buyurtma vazifaga | buyurtma fayli | docs/night_order.md ("HOLAT: OCHIQ") |
 

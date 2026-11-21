@@ -1,6 +1,7 @@
 # RED FLAG ROCCO — qarorlar va holat (yig'ma, 2026-11-21 18:30 Toshkent)
 Manba: docs/new_channel_plan.md (to'liq reja, nomzodlar jadvali, manbalar), engine/buffer_post.py, work/rocco/, git tarixi (dc0261d, c07d755, 9e9e454, aa82e79). Bu fayl — qisqa "hozir qayerdamiz"; batafsil tahlil new_channel_plan.md da.
 
+XABARDORLIK: har tugagan ishdan keyin `docs/changes.md` ga bitta qator + push.
 SKILLAR: har ish oldidan `docs/skills/INDEX.md` — Rocco uchun ham majburiy (ssenariy, QC, chiqarish, o'lchash bo'limlari).
 
 TREND (2026-11-21, docs/trend_radar.md): GTA 6 shu hafta eng tez o'sayotgan mavzu — Rocco uchun "GTA 6 firibgarliklari: qizil bayroqlar" Shorti 48 soat ichida (rasmiy ogohlantirish manbasi bilan; hujum usuli ko'rsatilmaydi).
