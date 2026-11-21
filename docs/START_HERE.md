@@ -28,6 +28,8 @@ Hajm: kuniga 8 Short (Financier) + Rocco kuniga 1–2; aralashma script_rules v2
 | "Skillar: … ; ishlatilmadi: … (sababi)" qatori | INDEX | yo'q bo'lsa qc FAIL |
 QAT'IY CHEGARALAR o'zgarmagan: behayo/noqonuniy narsa yo'q, musiqa yo'q, logotip/brend/film/o'yin kadri yo'q, real shaxs yo'q, moliyaviy maslahat yo'q, sotib olingan ko'rish/obunachi yo'q.
 
+- INSTAGRAM TRIAL REELS: docs/instagram.md "TRIAL REELS" — obunachi soni yetgan kundan boshlab ruxsat etilgan maksimumgacha (5 → 10 → 15 → 20/kun), har biri boshqa video; har kuni imkoniyat ochilganini tekshir.
+
 ## 3. HISOBOT
 Har tugagan ishdan keyin: changes.md ga qator + push. Birinchi 3 ta yangi videodan 10 kadrlik kontakt-varaq → docs/looks_samples/. Qilinmagan har narsa: "QILINMADI: sababi, qachon" — night_order ga. "Bilmadim / esimdan chiqdi" yozilmaydi — shu fayl va INDEX buning uchun.
 
