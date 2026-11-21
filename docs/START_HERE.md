@@ -5,6 +5,8 @@ Shohjahon: "hammasi tayyor bo'lsa kodni ishga tushiraman". Bu fayl boshqa hamma 
 **Avval `docs/run_checklist.md` (2026-11-22) — boshida va oxirida, bandma-band.**
 `git pull --rebase origin media` → docs/changes.md oxirgi 20 qator → docs/night_order.md (BUYURTMA 6, 7 va ularning tuzatishlari) → docs/skills/INDEX.md.
 
+## 0.5 ROCCO: eski uslub TO'XTATILDI — docs/rocco_style_v2.md (yorug' fon, Rocco + Penny suhbati, hazil, yangi ovoz tanlovi). Ovoz tanlanguncha yangi Rocco videosi chiqmaydi; birinchi ish — rocco_voice_test.mp4.
+
 ## 1. NAVBAT (qat'iy shu tartibda)
 1. ROCCO r01: Buffer postini ushla (6b01befd142c957519268046) — eski ko'rinishda chiqmasin; yangi qoidada qayta yasa.
 2. TREND: script_bank T-02 → T-01 (Financier, 22-noy 02:00 va 05:00 Toshkent slotlari; u yerdagi eski postlar suriladi), T-04 (Rocco). Muddat 23-noy 15:00 UTC. Dvigatel yangiligi ulgurmasa — mavjud dvigatelda, lekin yangi ssenariy + yorqin to'liq ekranli lavha bilan chiqar.
