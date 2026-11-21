@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install --break-system-packages -q graphifyy)",
+      "Bash(python3 -m pip install --break-system-packages -q graphifyy)",
+      "Bash(graphify update:*)",
+      "Bash(graphify query:*)",
+      "Bash(graphify section:*)",
+      "Bash(graphify affected:*)"
+    ]
+  }
+}
