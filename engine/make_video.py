@@ -1045,7 +1045,7 @@ def _paper_texture(W, H):
     rng = np.random.default_rng(42)
     n = rng.normal(0, 1, (H // 4, W // 4)).astype(np.float32)
     n = np.asarray(Image.fromarray(((n * 18) + 128).clip(0, 255).astype(np.uint8)).resize((W, H), Image.BICUBIC).filter(ImageFilter.GaussianBlur(2)), np.float32) - 128
-    base = np.empty((H, W, 3), np.float32); base[:] = (241, 233, 214)
+    base = np.empty((H, W, 3), np.float32); base[:] = (222, 213, 192)  # keeps paper below broadcast white (Y < 235 after the grade)
     base += n[..., None] * np.array([0.30, 0.28, 0.24])
     yy = np.linspace(-1, 1, H)[:, None]; xx = np.linspace(-1, 1, W)[None, :]
     base *= (1 - 0.06 * (xx ** 2 + yy ** 2))[..., None]
@@ -1818,14 +1818,16 @@ class CineGrade:
         rng = np.random.default_rng(77)
         self.grains = [np.clip(rng.normal(0, 3.0, (H, W, 1)), -10, 10).astype(np.int16) for _ in range(4)]
 
-    def scene(self, im):
+    def scene(self, im, bloom=True):
         W, H = self.W, self.H; rgb = im.convert("RGB"); e = 0.0022
         r_, g_, b_ = rgb.split()
         r_ = r_.transform((W, H), Image.EXTENT, (W * e, H * e, W * (1 - e), H * (1 - e)), Image.BILINEAR)
         b_ = b_.transform((W, H), Image.EXTENT, (-W * e, -H * e, W * (1 + e), H * (1 + e)), Image.BILINEAR)
         rgb = Image.merge("RGB", (r_, g_, b_))
-        glow = rgb.resize((W // 6, H // 6), Image.BILINEAR).point(self.bloom).filter(ImageFilter.GaussianBlur(4))
-        rgb = ImageChops.add(rgb, glow.resize((W, H), Image.BILINEAR)).point(self.lut)
+        if bloom:
+            glow = rgb.resize((W // 6, H // 6), Image.BILINEAR).point(self.bloom).filter(ImageFilter.GaussianBlur(4))
+            rgb = ImageChops.add(rgb, glow.resize((W, H), Image.BILINEAR))
+        rgb = rgb.point(self.lut)
         return rgb.convert("RGBA")
 
     def grain(self, rgb, fi):
@@ -2336,7 +2338,7 @@ def render(spec, wav, total, out, workdir):
                     if abs(sc_ - 1) > 0.01: fnt = ImageFont.truetype(fnt.path, max(20, int(fnt.size * sc_)))
                     sp = ud.textlength(" ", font=fnt); widths = [ud.textlength(w_, font=fnt) for w_ in words]
                     lw = sum(widths) + sp * (len(words) - 1); x = (W - lw) / 2
-                    yb = H * (0.80 if long else (0.70 if FB else (0.655 if PAPER else (0.50 if SPLIT else 0.66)))) - fnt.size / 2
+                    yb = H * (0.80 if long else (0.70 if FB else (0.655 if PAPER else (0.575 if SPLIT else 0.66)))) - fnt.size / 2
                     if PAPER: yb = H * 0.735 - fnt.size / 2; x = W * 0.07  # ink text, left aligned, under the photo / figure
                     if ROC: ud.rectangle([x - S * 0.025, yb - fnt.size * 0.1, x + lw + S * 0.025, yb + fnt.size * 1.22], fill=(12, 12, 14, int(225 * pop)))
                     for i, wd in enumerate(words):
@@ -2423,7 +2425,7 @@ def render(spec, wav, total, out, workdir):
                     im = im.resize((_bw, _bh), Image.BILINEAR).crop(((_bw - W) // 2, int((_bh - H) * 0.4), (_bw - W) // 2 + W, int((_bh - H) * 0.4) + H))
             if cinema:
                 if not (PAPER or SPLIT): im = Image.alpha_composite(im, vignette)  # v6.14: flat print looks keep clean corners
-                im = cg.scene(im)
+                im = cg.scene(im, bloom=not PAPER)
             # ---------- scene transition ----------
             def _trans(img, lt_):
                 q = max(0.0, lt_) / 0.22
