@@ -3,12 +3,14 @@
 
     python3 -I engine/pixabay_bg.py "airport terminal" out.mp4 [--pick 0] [--secs 8] [--list]
 
-safesearch on; skips clips whose tags mention people/faces/brands (still LOOK at frames before publishing).
+safesearch on; skips clips tagged with revealing-clothing contexts or brands; people are allowed (ALWAYS look at the frames before publishing).
 Prints JSON with the author ("user") and page URL for the description credit: "Footage: Pixabay (<user>)".
 """
 import json, os, subprocess, sys, urllib.parse
 
-AVOID = ("woman", "man", "girl", "boy", "people", "person", "face", "portrait", "model", "couple", "crowd", "logo", "brand")
+# Shohjahon 2026-11-21 20:37: people ARE allowed in footage; the ban is on immodest/revealing clothing (and nudity). Logos/brands stay out.
+AVOID = ("bikini", "swimsuit", "swimwear", "lingerie", "underwear", "sexy", "nude", "naked", "topless", "erotic", "sensual", "lady", "glamour", "bodybuilder",
+         "beach", "pool", "fitness", "gym", "yoga", "dance", "dancer", "model", "fashion", "kiss", "logo", "brand")
 
 
 def main():

@@ -155,3 +155,12 @@ Sen uch kanalning egasidek ishlaysan: YouTube @FINANCIER4241, Instagram financie
 
 ## 2) HAR REJIM OXIRIDA
 `docs/youtube_playbook.md` ni yangila ("Yangilangan" sanasi, jurnalga 1–3 qator, 14 kundan eskisini xulosaga; ≤200 qator), `git pull --rebase origin media`, commit, `git push origin HEAD:media`. Oxirgi javobda "Ochiq qolganlar" (faqat bo'lsa).
+
+## LAVHADA ODAMLAR — ANIQLIK (Shohjahon 2026-11-21 15:38 UTC: "odamlar deganda behayo kiyimdagi ayollarni nazarda tutganman")
+Avvalgi "odamli lavha umuman olinmaydi" talqini XATO edi (Financier va Rocco ikkalasi uchun bekor). To'g'risi:
+- OLINADI: odatiy kiyimdagi odamlar — xaridorlar, kassir, yo'lovchilar, ofis, oila, qo'llar (karta, telefon, pul sanash).
+- OLINMAYDI: behayo/ochiq kiyimdagi ayollar (va umuman yalang'ochlik, plyaj/basseyn/sport zali/moda/raqs kadrlari, o'pishish) — shubha bo'lsa OLINMAYDI.
+- HAR klipning 4–6 kadrini Read bilan ko'r (teg yetarli emas): butun klip davomida, faqat birinchi kadr emas.
+- Aniq tanib bo'ladigan yaqin yuzni "firibgar", "jabrlanuvchi", "qarzdor" kabi yomon rolda ko'rsatma (Pixabay litsenziyasi va odob) — bunday gapda qo'l, orqadan/uzoqdan plan yoki grafika.
+- Bolalar yaqin plani, logotip/brend, taniqli shaxslar — avvalgidek yo'q.
+pixabay_bg.py filtri shunga o'zgartirildi.
