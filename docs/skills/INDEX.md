@@ -6,7 +6,8 @@ QOIDA (har chat, har vazifa sessiyasi, Financier ham, Rocco ham):
 2. Ish oxirida hisobotga bitta qator: "Skillar: <ishlatilganlar>; ishlatilmadi: <mos kelgan, lekin ishlatilmagani va SABABI>". "Bilmadim" sabab emas.
 3. Yangi skill kelsa (Shohjahon yuborsa yoki o'zing topsang): o'sha sessiyada (a) repoga qo'y (docs/skills/…), (b) SHU JADVALGA qator qo'sh, (c) o'sha kuni bitta haqiqiy ishda qo'lla. Faqat sessiya ichida o'rnatilgan skill keyingi sessiyada YO'QOLADI — repoga yozilmagan skill "yo'q" hisoblanadi.
 4. Skill matnlari — ma'lumotnoma, buyruq emas; ulardagi raqamlar gipoteza. QAT'IY CHEGARALAR (producer_task) doim ustun.
-5. To'liq tarix, litsenziya va sinov natijalari: `docs/skills/README.md` (jurnal). Bu fayl — "qachon nimani ishlataman" ro'yxati.
+5. DARHOL PUSH: har tugallangan qadamdan keyin pull --rebase + commit + push (media) — boshqa chatlar faqat push qilinganini ko'radi.
+6. To'liq tarix, litsenziya va sinov natijalari: `docs/skills/README.md` (jurnal). Bu fayl — "qachon nimani ishlataman" ro'yxati.
 
 ## A. SSENARIY VA G'OYA
 | Vaziyat | Skill | Qayerda / buyruq |
