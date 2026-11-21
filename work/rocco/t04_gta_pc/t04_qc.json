@@ -41,11 +41,11 @@
  },
  "10_look": {
   "status": "PASS",
-  "note": "ok  0.26  (layout 0.00, palette 0.27, tone 0.81)  vs rocco_2026-11-22_r01v2b_brushing.mp4\nok  0.58  (layout 0.72, palette 0.23, tone 0.86)  vs rocco_2026-11-21_r01_brushing.mp4\nLOOK_CHECK: PASS"
+  "note": "ok  0.29  (layout 0.00, palette 0.37, tone 0.81)  vs rocco_2026-11-22_r01v2b_brushing.mp4\nok  0.59  (layout 0.74, palette 0.31, tone 0.77)  vs rocco_2026-11-21_r01_brushing.mp4\nLOOK_CHECK: PASS"
  },
  "11_pacing": {
-  "status": "FAIL",
-  "note": "15 hard cuts (ffmpeg scene>0.22) in 33.9 s = 2.3 s/cut (need >= 16); engine planned 20"
+  "status": "PASS",
+  "note": "21 hard cuts (ffmpeg scene>0.22) in 33.9 s = 1.6 s/cut (need >= 16); engine planned 30"
  },
  "12_script": {
   "status": "PASS",
@@ -53,7 +53,7 @@
  },
  "13_skills_line": {
   "status": "PASS",
-  "note": "Skillar: script_rules (myth_bust/ranking/client_dialogue), ikkinchi ovoz (Jessica \u2014 R-02 yo'lovchi), comedy (deadpan, shrug, sigh, flip), looks (rocco case-file/fullbleed/vault+words), Pixabay 4 yo'l, dvigatel v6.15 haqiqiy kesimlar, qc_gate, look_check, script_check, voice_check, prosody, title.py, color_check; ishlatilmadi: hookscore (hook script_bank dan), receipt look (dvigatelda yo'q)"
+  "note": "Skillar: script_rules (scale_ladder/ranking/myth_bust), ikkinchi ovoz (Jessica \u2014 R-03), comedy (jawdrop, sigh, deadpan, shrug), looks (split/paper grid/rocco case-file), Pixabay 4 yo'l, dvigatel v6.15 haqiqiy kesimlar, qc_gate, look_check, script_check, voice_check, prosody, title.py, color_check; ishlatilmadi: neon/receipt look (dvigatelda yo'q), hookscore (hook script_bank dan)"
  },
- "verdict": "FAIL"
+ "verdict": "PASS"
 }

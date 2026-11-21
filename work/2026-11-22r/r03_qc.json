@@ -1,0 +1,59 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    44.5 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.1 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -14.1 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 12.6 Mbit/s, 29.7s, stereo"
+ },
+ "5_voice_check": {
+  "status": "FAIL",
+  "note": "{\n \"rc\": 1,\n \"match\": 0.883,\n \"missing\": [\n  \"that's nothing per\",\n  \"per\",\n  \"okay\",\n  \"up\"\n ],\n \"extra\": [\n  \"her\",\n  \"her\",\n  \"ok\"\n ],\n \"heard\": \"The average American pays $111 a month for subscriptions. Her day? About $365 a coffee. Her year? $1,332. 10 years? $13,320? That's a used car. OK, that's something. And about $252 a year goes to stuff people don't even use. A 23% in one year. Which one would you not even miss?\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": " nothing.\n 3   5.86s range=10.0 st  gap=0.21  ok  | Per day? About three sixty-five. A coffee.\n 4   9.32s range= 7.0 st  gap=0.23  ok  | Per year: thirteen hundred thirty-two dollars.\n 5  12.07s range=11.4 st  gap=0.36  ok  | Ten years? Thirteen thousand three hundred twenty dollars. T\n 6  17.22s range= 6.7 st  gap=0.13  ok  | Okay, that's something.\n 7  18.54s range=12.3 st  gap=0.31  ok  | And about two hundred fifty-two dollars a year goes to stuff\n 8  25.18s range=19.1 st  gap=0.15  ok  | Up twenty-three percent in one year. Which one would you not\n{\"median_f0\": 261.2, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 100"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/2026-11-22r/r03_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "PASS",
+  "note": "ok  0.14  (layout 0.00, palette 0.14, tone 0.47)  vs 2026-11-24_noseat_r02.mp4\nok  0.23  (layout 0.22, palette 0.13, tone 0.40)  vs r08_fees.mp4\nok  0.49  (layout 0.79, palette 0.06, tone 0.57)  vs 2026-11-23_pink_r07_v615.mp4\nok  0.29  (layout 0.29, palette 0.12, tone 0.60)  vs 2026-11-23_cart_r06_v615.mp4\nLOOK_CHECK: PASS"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "20 hard cuts (ffmpeg scene>0.22) in 29.7 s = 1.5 s/cut (need >= 14); engine planned 19"
+ },
+ "12_script": {
+  "status": "PASS",
+  "note": "r03_subs.json                      words  71 scenes  8 broll 8 look split     line2 \"that's\" end \"miss\"\nr02_noseat.json                    words  56 scenes  9 broll 9 look -         line2 \"legally\" end \"seat\"\nr08_fees.json                      words  94 scenes  8 broll 6 look paper     line2 \"checked\" end \"you\"\nr07_pink.json                      words  73 scenes  7 broll 7 look split     line2 \"blue\" end \"one\"\nr06_cart.json                      words  74 scenes  7 broll 3 look fullbleed line2 \"blame\" end \"stop\"\nSCRIPT_CHECK: PASS"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: script_rules (scale_ladder/ranking/myth_bust), ikkinchi ovoz (Jessica \u2014 R-03), comedy (jawdrop, sigh, deadpan, shrug), looks (split/paper grid/rocco case-file), Pixabay 4 yo'l, dvigatel v6.15 haqiqiy kesimlar, qc_gate, look_check, script_check, voice_check, prosody, title.py, color_check; ishlatilmadi: neon/receipt look (dvigatelda yo'q), hookscore (hook script_bank dan)"
+ },
+ "verdict": "FAIL"
+}

@@ -1,19 +1,154 @@
-{"format":"short","sfx":true,"look":"split","split_colors":["#E0A100","#0B8FAC"],"captions":"words","headline":"hook","auto_shots":1.8,"structure":"scale_ladder",
- "source":"Source: CNET subscription survey (July 2026)",
- "buck_voice":{"variant":"D","settings":{"speed":1.1}},
- "voices":{"guest":{"voice_id":"cgSgspJ2msm6clMCkdW9","label":"Guest (Jessica, ElevenLabs premade)","settings":{"speed":1.05}}},
- "scenes":[
-  {"text":"The average American pays $111 a month for subscriptions.","say":"The average American pays a hundred and eleven dollars a month for subscriptions.","head":"WHAT $111 A MONTH REALLY IS",
-   "stat":"$111/MO","show_source":true,"shots":[{"broll":"/tmp/fin/bg/r2/ring.mp4","at":0},{"broll":"/tmp/fin/bg/r/laptop.mp4","at":1.8}]},
-  {"text":"That's nothing.","voice":"guest","shots":[{"broll":"/tmp/fin/bg/r2/ring.mp4","at":0,"start":4}]},
-  {"text":"Per day? About $3.65. A coffee.","say":"Per day? About three sixty-five. A coffee.","stat":"$3.65/DAY","show_source":"Our math: $111 × 12 ÷ 365",
-   "shots":[{"broll":"/tmp/fin/bg/r2/drip.mp4","at":0}]},
-  {"text":"Per year: $1,332.","say":"Per year: thirteen hundred thirty-two dollars.","stat":"$1,332","show_source":"Our math: $111 × 12","shots":[{"broll":"/tmp/fin/bg/t03/cal.mp4","at":0}]},
-  {"text":"Ten years? $13,320. That's a used car.","say":"Ten years? Thirteen thousand three hundred twenty dollars. That's a used car.","stat":"$13,320","show_source":"Our math: $1,332 × 10",
-   "shots":[{"broll":"/tmp/fin/bg/r2/river.mp4","at":0},{"broll":"/tmp/fin/bg/r2/river.mp4","at":1.8,"start":5,"zoom":1.4}],"mascot":{"mood":"shocked","pos":"corner","act":"jawdrop","act_at":1.2}},
-  {"text":"Okay, that's something.","voice":"guest","land":0.2,"shots":[{"broll":"/tmp/fin/bg/r2/drip.mp4","at":0,"start":5,"zoom":1.4}]},
-  {"text":"And about $252 a year goes to stuff people don't even use.","say":"And about two hundred fifty-two dollars a year goes to stuff people don't even use.","stat":"$252/YR",
-   "show_source":true,"shots":[{"broll":"/tmp/fin/bg/r/online.mp4","at":0},{"broll":"/tmp/fin/bg/r2/ring.mp4","at":2.0,"start":2}]},
-  {"text":"Up 23% in one year. Which one would you not even miss?","say":"Up twenty-three percent in one year. Which one would you not even miss?","stat":"+23%",
-   "shots":[{"broll":"/tmp/fin/bg/r/laptop.mp4","at":0,"start":5}],"mascot":{"mood":"point","pos":"corner"}}
- ]}
+{
+ "format": "short",
+ "sfx": true,
+ "look": "split",
+ "split_colors": [
+  "#E0A100",
+  "#0B8FAC"
+ ],
+ "captions": "words",
+ "headline": "hook",
+ "auto_shots": 1.8,
+ "structure": "scale_ladder",
+ "source": "Source: CNET subscription survey (July 2026)",
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
+ },
+ "voices": {
+  "guest": {
+   "voice_id": "cgSgspJ2msm6clMCkdW9",
+   "label": "Guest (Jessica, ElevenLabs premade)",
+   "settings": {
+    "speed": 1.05
+   }
+  }
+ },
+ "scenes": [
+  {
+   "text": "The average American pays $111 a month for subscriptions.",
+   "say": "The average American pays a hundred and eleven dollars a month for subscriptions.",
+   "head": "WHAT $111 A MONTH REALLY IS",
+   "stat": "$111/MO",
+   "show_source": true,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r2/ring.mp4",
+     "at": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r/laptop.mp4",
+     "at": 1.8
+    }
+   ]
+  },
+  {
+   "text": "Pfft. That's nothing at all.",
+   "voice": "guest",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r2/ring.mp4",
+     "at": 0,
+     "start": 4
+    }
+   ],
+   "beat": 0.15
+  },
+  {
+   "text": "Every day? About $3.65. A coffee.",
+   "say": "Every day? About three sixty-five. A coffee.",
+   "stat": "$3.65/DAY",
+   "show_source": "Our math: $111 × 12 ÷ 365",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r2/drip.mp4",
+     "at": 0
+    }
+   ]
+  },
+  {
+   "text": "Every year: $1,332.",
+   "say": "Every year: thirteen hundred thirty-two dollars.",
+   "stat": "$1,332",
+   "show_source": "Our math: $111 × 12",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/t03/cal.mp4",
+     "at": 0
+    }
+   ]
+  },
+  {
+   "text": "Ten years? $13,320. That's a used car.",
+   "say": "Ten years? Thirteen thousand three hundred twenty dollars. That's a used car.",
+   "stat": "$13,320",
+   "show_source": "Our math: $1,332 × 10",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r2/river.mp4",
+     "at": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r2/river.mp4",
+     "at": 1.8,
+     "start": 5,
+     "zoom": 1.4
+    }
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "jawdrop",
+    "act_at": 1.2
+   }
+  },
+  {
+   "text": "Okay, that's something.",
+   "voice": "guest",
+   "land": 0.2,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r2/drip.mp4",
+     "at": 0,
+     "start": 5,
+     "zoom": 1.4
+    }
+   ]
+  },
+  {
+   "text": "And about $252 a year goes to stuff people don't even use.",
+   "say": "And about two hundred fifty-two dollars a year goes to stuff people don't even use.",
+   "stat": "$252/YR",
+   "show_source": true,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r/online.mp4",
+     "at": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r2/ring.mp4",
+     "at": 2.0,
+     "start": 2
+    }
+   ]
+  },
+  {
+   "text": "Up 23% in one year. Which one would you not even miss?",
+   "say": "Up twenty-three percent in one year. Which one would you not even miss?",
+   "stat": "+23%",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r/laptop.mp4",
+     "at": 0,
+     "start": 5
+    }
+   ],
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   }
+  }
+ ]
+}
