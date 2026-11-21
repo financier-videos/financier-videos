@@ -1,0 +1,17 @@
+{"format":"short","sfx":true,"look":"split","split_colors":["#1F6FEB","#FF8A00"],"captions":"words","headline":"hook","auto_shots":1.8,"structure":"myth_bust",
+ "source":"Source: Port Authority of NY & NJ, street pricing rules for airport concessions",
+ "buck_voice":{"variant":"D","settings":{"speed":1.1}},
+ "scenes":[
+  {"text":"Everyone says airports can charge whatever they want.","head":"AIRPORT PRICES HAVE A LEGAL LIMIT",
+   "shots":[{"broll":"/tmp/fin/bg/r/terminal.mp4","at":0},{"broll":"/tmp/fin/bg/r/store.mp4","at":1.6},{"broll":"/tmp/fin/bg/r/luggage.mp4","at":3.0}]},
+  {"text":"In New York? Nope. Put the wallet down.","sticker":"MYTH","sticker_at":0.3,"bg":"/tmp/fin/bg/r/terminal.mp4",
+   "mascot":{"mood":"smug","pos":"corner","act":"shrug","act_at":0.4},"sfx":["buzzer@0.3"]},
+  {"text":"At JFK, LaGuardia and Newark, shops can't charge more than 15% over regular city prices.","say":"At J F K, LaGuardia and Newark, shops can't charge more than fifteen percent over regular city prices.",
+   "stat":"+15% MAX","show_source":true,"shots":[{"broll":"/tmp/fin/bg/r/store.mp4","at":0,"start":4},{"broll":"/tmp/fin/bg/r/terminal.mp4","at":2.0,"start":5}]},
+  {"text":"A three-dollar water in the city? Three forty-five here, tops.",
+   "vs":{"left":"$3.00","left_label":"City store","right":"$3.45","right_label":"Airport max","win":null,"at":[0.3,2.0],"vs_at":1.2,"left_color":"#FFFFFF","right_color":"#FFD34D"},
+   "bg":"/tmp/fin/bg/r/luggage.mp4","show_source":"Our math: $3.00 + 15%"},
+  {"text":"The twist? The cap used to be 10%. So the limit got a raise. Must be nice.","land":0.4,
+   "stat":"10% TO 15%","bg":"/tmp/fin/bg/r/terminal.mp4","mascot":{"mood":"shocked","pos":"corner","act":"doubletake","act_at":0.9},"sfx":["scratch@0.8"]},
+  {"text":"Worst airport price you ever paid?","shots":[{"broll":"/tmp/fin/bg/r/luggage.mp4","at":0,"start":5}],"mascot":{"mood":"point","pos":"corner"}}
+ ]}

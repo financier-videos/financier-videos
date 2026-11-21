@@ -1,0 +1,63 @@
+{
+ "0_note": {
+  "status": "INFO",
+  "note": "engine changed since render, no re-render-required change"
+ },
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    39.7 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.0 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -14.0 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 12.5 Mbit/s, 26.5s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 1.0,\n \"missing\": [],\n \"extra\": [],\n \"heard\": \"Everyone says airports can charge whatever they want. In New York, nope, put the wallet down. At JFK, LaGuardia, and Newark, shops can't charge more than 15% over regular city prices. A $3 water in the city. 345 here, tops, the twist, the cap used to be 10%, so the limit got a raise. Must be nice. Worst airport price you ever paid?\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "0.00s range=13.5 st  gap=0.36  ok  | Everyone says airports can charge whatever they want.\n 2   4.17s range=17.1 st  gap=0.35  ok  | In New York? Nope. Put the wallet down.\n 3   6.73s range=17.7 st  gap=0.31  ok  | At J F K, LaGuardia and Newark, shops can't charge more than\n 4  14.17s range=14.9 st  gap=0.23  ok  | A three-dollar water in the city? Three forty-five here, top\n 5  18.84s range=13.5 st  gap=0.35  ok  | The twist? The cap used to be 10%. So the limit got a raise.\n 6  24.52s range= 4.7 st  gap=0.12  ok  | Worst airport price you ever paid?\n{\"median_f0\": 265.5, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 90"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/2026-11-22r/r04_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "PASS",
+  "note": "ok  0.30  (layout 0.00, palette 0.57, tone 0.51)  vs 2026-11-22_gta_how_big.mp4\nok  0.44  (layout 0.35, palette 0.50, tone 0.57)  vs 2026-11-22_gta_per_second.mp4\nok  0.26  (layout 0.10, palette 0.34, tone 0.50)  vs 2026-11-22_cart_trick_b3.mp4\nok  0.23  (layout 0.00, palette 0.39, tone 0.45)  vs 2026-11-22_pink_or_blue_b3.mp4\nLOOK_CHECK: PASS"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "18 cuts in 26.5 s (need >= 13; engine 'shots' / 'auto_shots')"
+ },
+ "12_script": {
+  "status": "PASS",
+  "note": "r04_airport.json                   words  67 scenes  6 broll 3 look split     line2 \"in\" end \"paid\"\nt01_how_big.json                   words 128 scenes 12 broll 6 look -         line2 \"take\" end \"that\"\nt02_per_second.json                words  31 scenes  3 broll 3 look fullbleed line2 \"that's\" end \"by\"\ns3_cart.json                       words  68 scenes  9 broll 2 look -         line2 \"wait\" end \"because\"\ns4_pink.json                       words  66 scenes 10 broll 0 look -         line2 \"a\" end \"because\"\nSCRIPT_CHECK: PASS"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: script_rules myth_bust, comedy (shrug, doubletake, 'got a raise'), looks split, Pixabay 4 yo'l, qc_gate, look_check, script_check, voice_check, prosody, title.py, color_check; ishlatilmadi: hookscore (hook script_bank R-04 dan), map_insert xarita (split yarmida joy yo'q)"
+ },
+ "verdict": "PASS"
+}
