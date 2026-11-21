@@ -200,3 +200,8 @@ INSTAGRAM @redfrocco: T-04 Reel CHIQDI (ikkinchi urinish; birinchisida konteyner
 - 1 PAPER TAKRORI: R-06 fullbleed ga o'tdi; paper 3 variant (cream/news/grid): T-03 news, R-08 grid. 2 PAPER BO'SH: foto kattaroq, har kesimda katta foto ↔ karta, Buck kattaroq. 3 KADR TEMPI: dvigatel v6.15 — avtomatik kesim boshqa klipga o'tadi; qc_gate 11 endi ffmpeg scene>0.22 bilan o'lchaydi; navbatdagi hamma video 1.5–1.9 s/kesim. 4 gta_how_big: vault → split (yorqinroq). 5 per_second: QILINMADI (chiqib bo'lgan slotga yaqin; 8 kesim / 13.7 s me'yorda). 6 ESKI SHABLON: hammasi almashtirildi (Metricool id: changes.md 02:00 qatori). 7 Ikkinchi ovoz: R-02, R-03, R-05, R-07 da (ElevenLabs premade Jessica); komediya harakatlari (doubletake/jawdrop/sigh/deadpan/shrug) hamma yangi videolarda.
 - r01v2: yuzli klip (qutini ochayotgan odam) olib tashlandi → rocco_2026-11-22_r01v2b_brushing.mp4, Buffer 6b01ff74… (Instagram Reel uchun ham shu faylni ishlating).
 - QILINMADI: V-01…V-05, C-01, C-02 (slot ham yo'q, 24-noy 05:00 dan keyingi bo'sh slotlar uchun) — sabab: vaqt navbatni v6.15 da qayta yasashga ketdi; keyingi sessiya v6.15 bilan (look navbatini look_check --prev bilan tekshirib).
+
+### ROCCO v2 — JARAYON (kod sessiyasi, 2026-11-22 02:10 Toshkent)
+- rocco_voice_test.mp4 (repo ildizi) — Shohjahon tanlaydi: Rocco A/B/C/D, Penny E/F. Tanlanguncha yangi Rocco videosi CHIQMAYDI.
+- Buffer: eski uslubdagi 3 Rocco posti ushlandi (r01v2b, T-04b, T-05). Instagram @redfrocco dagi eski T-04 Reel — arxivlash Shohjahon qarori (tegilmadi).
+- Keyingi: Penny va Slick sprite'lari (rocco_sprites.py uslubida), dvigatelga "style": "rocco2" (yorug' fon, Lilita One, Rocco ≥1/3 kadr, suhbat), keyin RC-04 / RC-02.
