@@ -229,3 +229,16 @@ Ikki bir xil buyum, ikki rang → mehmon taxmin qiladi → 794 mahsulot, ayollar
 
 ### R-08 (eski: "5 Sneaky Fees, Ranked", 436535579) → ranking, lekin TEZ · look receipt · ~40 s · "5 Fees You Paid Without Noticing"
 Chek lentasi tepadan pastga suriladi, har qator — bitta to'lov va o'z lavhasi: bagaj $45 (lenta) → overdraft ~$27 → hisob yuritish $15.65/oy → begona bankomat $4.86 (rekord) → №1 yashirin mehmonxona/chipta to'lovlari + FTC qoidasi (2025-05-12 dan to'liq narx oldindan). Yakun: chek jami + "Which one got you?" Manbalar eski specda. Reyting — Buck fikri (ekranda).
+
+## ===== KULGILI SKITLAR (comedy_skit; yozdi: chat Trade, 2026-11-21 21:50; qoida: docs/comedy.md) =====
+### [TAYYOR] C-01 comedy_skit · look split (Buck | bank oynasi) · ~40 s · "Buck vs. The Bank"
+MANBA (ichidagi 3 raqam): Bankrate Checking Account and ATM Fee Study (2025-09-10): begona bankomat o'rtacha $4.86 (rekord), overdraft ~$27, foizli hisob yuritish $15.65/oy. Render oldidan yangi (2026) tadqiqot chiqqan-chiqmaganini tekshir. Bank — o'ylab topilgan, nomsiz, logotipsiz.
+Takroriy hazil: "Fee."
+Buck: "Hi. I'd like twenty dollars. Of my money." — Bank: "That'll be four eighty-six." — "For what?" — "Fee." — "It's MY money." — "Not our ATM." — "It's in YOUR lobby." — "...Fee." | "Fine. What's my balance?" — "Minus seven." — "MINUS?" — "Overdraft. Twenty-seven dollars." — "For being broke?!" — "Fee." | "I'm closing my account." — "Fifteen sixty-five." — "To LEAVE?" — "No. That's just for having it. Monthly." | Buck (deadpan, kameraga): "Is there a fee for asking questions?" — Bank: "...There is now."
+Yakun yozuvi: "Real averages: ATM $4.86 · overdraft ~$27 · monthly fee $15.65 (Bankrate)". Harakatlar: doubletake ("minus?"), jawdrop ("to leave?"), sigh, deadpan (oxiri). Kadrlar ≥22: bankomat ekrani, chek, hamyondan uchib chiqayotgan kupyura (gag), hisob-kitob cho'ti, eshik "EXIT — $", Buck yaqin plan reaksiyalari.
+
+### [TAYYOR] C-02 comedy_skit · look neon (telefon ekrani) · ~35 s · "Cancel My Subscription"
+MANBA: CNET obuna so'rovi 2026-07: o'rtacha $111/oy, shundan $21/oy ishlatilmaydigan obunalar. Xizmat — o'ylab topilgan ("StreamyMax+" kabi mavjud brendga o'xshamaydigan nom; render oldidan nom band emasligini tekshir).
+Takroriy hazil: "Are you sure?"
+Buck: "Cancel." — App: "Are you sure?" — "Yes." — "Are you REALLY sure?" — "Yes!" — "What if we said... please?" — "No." — "Here's fifty percent off." — "I haven't opened you since March." — "We noticed. We kept charging." — "CANCEL." — "Okay. To cancel, call us. Between two and two-oh-five. On a fax machine." | Buck (sigh, keyin kameraga): "Americans pay about twenty-one dollars a month for stuff they never use." (pauza) "Asking for a friend. The friend is me."
+Harakatlar: shrug, doubletake, sigh, deadpan. Kadrlar ≥20: "Cancel" tugmasi qochib yuradi (gag), tugma kichrayib boradi, faks apparati, taqvim "March", kartadan sizib chiqayotgan tangalar.

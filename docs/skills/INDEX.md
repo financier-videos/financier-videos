@@ -95,3 +95,4 @@ QOIDA (har chat, har vazifa sessiyasi, Financier ham, Rocco ham):
 - ElevenLabs va Runpod — faqat Default muhitdagi vazifa/kod sessiyasida; oddiy chatdan ochilmaydi.
 | Videolar bir-biriga o'xshamasligi (ko'rinish) | `docs/looks.md` + `engine/look_check.py` | HAR video: spec "look"; post oldidan look_check (≥0.70 = FAIL) |
 | Ssenariy skeleti takrorlanmasligi | `docs/script_rules.md` + `engine/script_check.py` | HAR ssenariy: "structure"; post oldidan script_check |
+| Hazil, gag, aktyorlik harakatlari | `docs/comedy.md` | HAR ssenariy: gag va reaksiya ustuni; skit — comedy_skit |

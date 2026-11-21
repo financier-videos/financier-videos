@@ -37,6 +37,8 @@ BIZGA QOIDA:
 - FAKT HALOLLIGI: mashhur rivoyat (masalan 99 sent va kassa apparati) hujjatlashmagan bo'lsa — "one popular explanation" deb aytiladi va ekranda "legend / popular theory" belgisi; isbotlangan fakt sifatida berilmaydi.
 - Birinchi sinov: S-yangi "Why Is It Called a 'Buck'?" yoki "Why Do Receipts Fade?" — manbasi topilgan mavzudan (render oldidan manba shart).
 
+## v2.2: yangi tuzilma `comedy_skit` (docs/comedy.md: har 3–4 s hazil, takroriy hazil, quruq yakun) — kunlik 8 Shortdan 1–2 tasi; fakt videolarida har 8–10 s da 1 kulgili gap yoki gag.
+
 ## v2.1 (2026-11-21 21:40; dalil: docs/lessons_winners_2026-11-21.md)
 - Yangi tuzilmalar: `guess_reveal` (savol → ikkinchi ovoz taxmin qiladi → javob; 5–8 marta; 35–50 s) va `client_dialogue` (Rocco: mijoz + Rocco suhbati → himoya qadami; 40–60 s).
 - KADR TEMPI: spec sahnasida "shots": [...] — har ≤2 s da yangi tasvir. 30 s ≥15 kadr; 60 s ≥30 kadr.
