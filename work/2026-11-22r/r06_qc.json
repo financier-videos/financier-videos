@@ -1,0 +1,63 @@
+{
+ "0_note": {
+  "status": "INFO",
+  "note": "engine changed since render, no re-render-required change"
+ },
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    41.4 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.1 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.6 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -14.1 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 12.5 Mbit/s, 27.8s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 1.0,\n \"missing\": [],\n \"extra\": [],\n \"heard\": \"You came in for milk. You're leaving with $40 of stuff. Blame the cart. Marketing consultant Martin Lindstrom says when stores doubled cart size, shoppers bought up to 40% more. That's his claim from his book, not a published study. My theory, a half empty cart looks unfinished. So you finish it. Same store, same milk. Bigger cart, bigger bill. The fix? Grab a basket. Your arms will tell you when to stop.\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "of s\n 2   3.43s range=13.8 st  gap=0.13  ok  | Blame the cart.\n 3   5.29s range=15.1 st  gap=0.3  ok  | Marketing consultant Martin Lindstrom says when stores doubl\n 4  12.95s range=18.6 st  gap=0.24  ok  | That's his claim, from his book. Not a published study.\n 5  16.20s range=12.7 st  gap=0.38  ok  | My theory? A half-empty cart looks unfinished. So you finish\n 6  20.45s range=15.9 st  gap=0.2  ok  | Same store. Same milk. Bigger cart, bigger bill.\n 7  23.61s range= 8.6 st  gap=0.42  ok  | The fix? Grab a basket. Your arms will tell you when to stop\n{\"median_f0\": 264.4, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 90"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/2026-11-22r/r06_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "PASS",
+  "note": "ok  0.24  (layout 0.21, palette 0.26, tone 0.29)  vs 2026-11-22_airport_r04.mp4\nok  0.31  (layout 0.13, palette 0.59, tone 0.24)  vs 2026-11-22_gta_how_big.mp4\nok  0.59  (layout 0.75, palette 0.55, tone 0.33)  vs 2026-11-22_gta_per_second.mp4\nok  0.43  (layout 0.30, palette 0.71, tone 0.24)  vs 2026-11-22_cart_trick_b3.mp4\nLOOK_CHECK: PASS"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "19 cuts in 27.8 s (need >= 13; engine 'shots' / 'auto_shots')"
+ },
+ "12_script": {
+  "status": "PASS",
+  "note": "r06_cart.json                      words  74 scenes  7 broll 3 look paper     line2 \"blame\" end \"stop\"\nr04_airport.json                   words  67 scenes  6 broll 3 look split     line2 \"in\" end \"paid\"\nt01_how_big.json                   words 128 scenes 12 broll 6 look -         line2 \"take\" end \"that\"\nt02_per_second.json                words  31 scenes  3 broll 3 look fullbleed line2 \"that's\" end \"by\"\ns3_cart.json                       words  68 scenes  9 broll 2 look -         line2 \"wait\" end \"because\"\nSCRIPT_CHECK: PASS"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: script_rules (why_story/guess_reveal), comedy (shrug, doubletake, jawdrop, deadpan; BUCK'S THEORY), looks (paper/split), ikkinchi ovoz (Jessica), Pixabay 4 yo'l, qc_gate, look_check, script_check, voice_check, prosody, title.py, color_check; ishlatilmadi: hookscore (hook script_bank R-xx dan tayyor), vidIQ (kredit tejaldi)"
+ },
+ "verdict": "PASS"
+}

@@ -1086,7 +1086,7 @@ def _look_base(look, foot, W, H, tex, A, B, si, prog, lt):
         d.rectangle([0, 0, W, mid], fill=A + (255,))
         for k in range(-H, W, 90): d.line([(k, mid), (k + mid, 0)], fill=tuple(min(255, c + 18) for c in A) + (255,), width=18)
     for k in range(-H, W, 90): d.line([(k, H), (k + (H - mid), mid)], fill=tuple(min(255, c + 16) for c in B) + (255,), width=18)
-    d.rectangle([0, mid - 7, W, mid + 7], fill=(255, 255, 255, 255))
+    d.rectangle([0, mid - 7, W, mid + 7], fill=(230, 230, 234, 255))
     return im
 
 
@@ -2121,7 +2121,7 @@ def render(spec, wav, total, out, workdir):
                     o.text((xx, yy), "$", font=f_part[key], fill=(245, 197, 66, 26))
                 base = Image.alpha_composite(base, ov)
             if PAPER or SPLIT:  # v6.14: rebuild the whole background for the paper / split looks
-                base = _look_base(LOOK, base if (clip or bdclip) else None, W, H, paper_tex, SPL_A, SPL_B, si, prog, lt)
+                base = _look_base(LOOK, base if ((clip or bdclip) and not (PAPER and (chart or vsd))) else None, W, H, paper_tex, SPL_A, SPL_B, si, prog, lt)  # paper: a chart/VS gets the whole sheet
             if look == "sepia":  # old-film look for "legend says..." beats
                 g = ImageOps.grayscale(base.convert("RGB"))
                 base = ImageOps.colorize(g, black=(26, 17, 8), white=(240, 220, 180)).convert("RGBA")
@@ -2197,7 +2197,7 @@ def render(spec, wav, total, out, workdir):
                         fd.text((W * 0.07, sy), txt, font=fs, fill=PAPER_RED + (255,))
                     elif SPLIT:  # v6.14 split: white geometric number sitting on the divider
                         sy = H * 0.30 if not long else sy
-                        fd.text(((W - tw) / 2, sy), txt, font=fs, fill=(255, 255, 255, 255), stroke_width=8, stroke_fill=tuple(int(c * 0.35) for c in SPL_A) + (255,))
+                        fd.text(((W - tw) / 2, sy), txt, font=fs, fill=(232, 232, 236, 255), stroke_width=8, stroke_fill=tuple(int(c * 0.35) for c in SPL_A) + (255,))
                     else:
                         # soft glow
                         fd.text(((W - tw) / 2, sy), txt, font=fs, fill=col + (60,), stroke_width=22, stroke_fill=col + (40,))
