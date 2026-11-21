@@ -2,6 +2,7 @@
 Shohjahon: "hammasi tayyor bo'lsa kodni ishga tushiraman". Bu fayl boshqa hamma hujjatdan OLDIN o'qiladi; ziddiyat bo'lsa — bu fayl va unda ko'rsatilgan yangi hujjatlar ustun (producer_task va sprint_10d dagi eski andoza bandlaridan).
 
 ## 0. Har ishga tushishda
+**Avval `docs/run_checklist.md` (2026-11-22) — boshida va oxirida, bandma-band.**
 `git pull --rebase origin media` → docs/changes.md oxirgi 20 qator → docs/night_order.md (BUYURTMA 6, 7 va ularning tuzatishlari) → docs/skills/INDEX.md.
 
 ## 1. NAVBAT (qat'iy shu tartibda)
