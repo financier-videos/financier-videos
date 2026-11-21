@@ -205,3 +205,17 @@ INSTAGRAM @redfrocco: T-04 Reel CHIQDI (ikkinchi urinish; birinchisida konteyner
 - rocco_voice_test.mp4 (repo ildizi) — Shohjahon tanlaydi: Rocco A/B/C/D, Penny E/F. Tanlanguncha yangi Rocco videosi CHIQMAYDI.
 - Buffer: eski uslubdagi 3 Rocco posti ushlandi (r01v2b, T-04b, T-05). Instagram @redfrocco dagi eski T-04 Reel — arxivlash Shohjahon qarori (tegilmadi).
 - Keyingi: Penny va Slick sprite'lari (rocco_sprites.py uslubida), dvigatelga "style": "rocco2" (yorug' fon, Lilita One, Rocco ≥1/3 kadr, suhbat), keyin RC-04 / RC-02.
+
+
+## BUYURTMA 8 — LAVHA VA MAKET (2026-11-22, chat → kod; ustuvor)
+
+Shohjahon: ovoz yaxshilandi, lekin grafika buzildi (subs_r03: yarim ekran bo'sh panel, aloqasiz xira lavha, mitti Buck).
+
+1. `docs/footage_bank.md` + `engine/footage_bank.json` — ko'rib tanlangan 30 lavha. Bundan buyon lavha faqat bankdan yoki
+   bankka qo'shilgandan keyin (prevyu ko'rilgan) olinadi. `/tmp/fin/bg/r2/river.mp4` va boshqa xira/aloqasiz kliplar ishlatilmaydi.
+2. Maket qoidasi (o'sha fayl, "bo'sh panel TAQIQ"): lavha butun ekran, raqam sariq kartochkada, Buck ≥ 1/4 kadr.
+   `split` ko'rinishidagi bo'sh chiziqli panel olib tashlansin; qc_gate'ga "bir rangli bo'sh maydon > 15%" = FAIL qo'shilsin.
+3. Qayta render: `2026-11-24_subs_r03` (jadval faylda tayyor). Navbatdagi boshqa videolar (R-04…R-08, T-03) shu qoida bilan
+   tekshirilsin; bo'sh panel yoki aloqasiz lavha bo'lsa — chiqishidan oldin qayta render, bo'lmasa o'sha video ushlab turiladi.
+4. Tavsif oxiriga `Footage: Pexels — <mualliflar>`.
+5. Hisobotda har video uchun 10 kadrlik varaq (`docs/looks_samples/`) — chat ko'rib tasdiqlaydi.
