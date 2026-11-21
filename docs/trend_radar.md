@@ -80,3 +80,12 @@ Baho: OCHISHGA ARZIYDI, lekin sprint (10 kun) raqamiga yordam bermaydi — sekin
 | CMA Awards, kino treylerlar, K-pop | trendda | real odam/musiqa/begona kadr | yo'q |
 RASMIY RAQAMLAR (Take-Two press-relizi 2026-11-20, take2games.com/ir/news/grand-theft-auto-vi-shatters-entertainment-box-office-records): birinchi kun chakana savdosi $3.79 mlrd — "har qanday mediada rekord"; chiqishdan oldin 32.5 mln nusxa; chiqish 2026-11-19 (PS5, Xbox Series X|S). Taqqos: GTA V birinchi kuni $800 mln+ (Take-Two 8-K, 2013-09-18, sec.gov). Eslatma: $3.79 mlrd — kompaniya BAHOSI, chakana savdo, foyda emas — videoda shunday aytiladi. Byudjet haqidagi raqamlar mish-mish — YOZILMAYDI.
 FIRIBGARLIK (Rocco): PC/mobil versiya YO'Q — har qanday "GTA 6 PC download / keygen / APK / bepul kalit" soxta (McAfee blog 2026-11; NordVPN ogohlantirishi TechRepublic 2026-11-21; Netcraft/Help Net Security 2026-11-05). Himoya qadami: faqat PlayStation Store / Xbox Store; hech narsa yuklab ishga tushirmaslik. Hujum usuli ko'rsatilmaydi.
+
+## SKAN 2026-11-21 23:45 Toshkent (vidIQ trending, Financier profili, 5 kredit; short, "money", ≤200K, 14-noy dan, recentVphEngaged, 25 ta)
+| Klaster | Misollar (obunachi → ko'rish, uzunlik) | Filtr | Qaror |
+|---|---|---|---|
+| Motivatsion/hissiy "money" kliplar | "A Man With No Money" (3.2K → 558K, 28 s); "Money money Money" (2.5K → 429K) | real odam/musiqa, fakt yo'q — OLINMAYDI | yo'q |
+| Biznes sxema tushuntirish | "How Empty shop Launders Money?" (3.9K → 175K, 77 s) | jinoyat sxemasi — TAQIQ (faqat ogohlantiruvchi fakt) | yo'q |
+| Pul qiziqliklari (AQSh) | "The Problem With American Money" (47K → 11.7K, 41 s, 49 izoh) | o'z animatsiyamiz bilan mumkin | bank: "AQSh pulining g'alati tomonlari" (bir xil rang/o'lcham — manbali) |
+| GTA 6 pul (3/3 skan) | "GTA 6 Money Glitch" (74.5K → 5.5K, 89 s) | o'yin kadri — OLINMAYDI | Financier T-01/T-02/T-03 + Rocco T-04/T-05 (kod sessiyasi T-01/T-02/T-04 ni qilyapti) |
+Xulosa: moliya nishasida yangi kuchli breakout klaster yo'q; GTA 6 hali ustun (48 soat muddati 23-noy 15:00 UTC).
