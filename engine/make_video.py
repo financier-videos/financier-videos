@@ -46,6 +46,8 @@ spec.json:
   "auto_shots": 1.8     # v6.14: a new picture every <= N s: footage scenes are re-framed (zoom/pan cuts), graphic scenes get a punch-in cut.
                         #   Scene "shots": [{"broll": "a.mp4"|"b.jpg", "at": 0.0, "start": 2.0, "zoom": 1.0, "kb": "in|out|left|right"}, ...]
                         #   (an item without "broll" re-frames the previous footage). Result JSON "cuts" -> qc_gate step 11 (30 s >= 15).
+  "voices": {"guest": {"voice_id": "cgSgspJ2msm6clMCkdW9", "label": "Guest (Jessica, ElevenLabs premade)"}}   # v6.14 second voice:
+                        #   scene "voice": "guest" is read by that voice (captions turn light blue, Buck's mouth stays still)
   "style": "rocco"   # v6.12: Rocco look (case-file headline, typewriter, red stamp stats, label captions); scene "phone": {"from": "Unknown number", "msgs": [{"t": "...", "at": 0.3, "flag": true}]}
   "brand": "FINANCIER", "brand_color": "#F5C542"   # v6.11: corner brand text (Rocco: "RED FLAG ROCCO"); character library = env FIN_BUCK3D (Rocco: work/rocco/rocco_sprites.py)
   "bg": "clip.mp4" | ["a.mp4", "b.jpg", ...],   # v6.6: real blurred BACKDROP behind non-b-roll scenes (list = rotates per scene; scene "bg" overrides, false = plain); "bg_mix": 0.62, "bg_blur": 6, "bg_bright": 1.0 (v6.9: 1.3–1.5 = brighter theme + less backdrop dimming; A/B, notes/2026-11-21_color.md). Fetch: engine/pixabay_bg.py
@@ -534,9 +536,15 @@ def tts(spec, args, workdir):
                         sw = [w for w in r[1] if "[" not in w[0] and "]" not in w[0]]
                         lw_ = [w for w in txt.split() if "[" not in w and "]" not in w]
                         r = (r[0], [(l, a, b) for l, (_, a, b) in zip(lw_, sw)] if len(sw) == len(lw_) else sw)
+                elif sc.get("voice") and sc["voice"] in (spec.get("voices") or {}):  # v6.14 second voice (guest / client)
+                    _sp = lambda j: (spec["scenes"][j].get("voice") if 0 <= j < len(lines) else "-")
+                    r = el_speak(txt, workdir, f"n{i}", spec["voices"][sc["voice"]],
+                                 prev=(lines[i - 1] or None) if i > 0 and _sp(i - 1) == sc["voice"] else None,
+                                 nxt=(lines[i + 1] or None) if i + 1 < len(lines) and _sp(i + 1) == sc["voice"] else None)
                 else:
-                    r = el_speak(txt, workdir, f"n{i}", bcfg, prev=(lines[i - 1] or None) if i > 0 else None,
-                                 nxt=(lines[i + 1] or None) if i + 1 < len(lines) else None)
+                    _sp = lambda j: (spec["scenes"][j].get("voice") if 0 <= j < len(lines) else "-")
+                    r = el_speak(txt, workdir, f"n{i}", bcfg, prev=(lines[i - 1] or None) if i > 0 and not _sp(i - 1) else None,
+                                 nxt=(lines[i + 1] or None) if i + 1 < len(lines) and not _sp(i + 1) else None)
             if r is not None:
                 s, words = r; sr = 24000
             elif narr == "buck":  # emergency fallback: Buck's old Kokoro voice (do not publish such a render)
@@ -566,11 +574,15 @@ def tts(spec, args, workdir):
         sc["sdur"] = dur; sc["dur"] = len(seg) / sr
         t += sc["dur"]
     audio = np.concatenate(chunks).astype(np.float32)
-    # speech envelope at video fps (drives Buck's talking bounce)
+    # speech envelope at video fps (drives Buck's talking bounce); v6.14: the guest voice does not move Buck's mouth
     hop = int(sr / FPS); nfr = len(audio) // hop + 1
-    envf = np.array([np.sqrt(np.mean(audio[j * hop:(j + 1) * hop] ** 2)) if j * hop < len(audio) else 0.0 for j in range(nfr)], np.float32)
+    buck_only = audio.copy()
+    for sc in spec["scenes"]:
+        if sc.get("voice"):
+            a0 = int(sc.get("speech", sc["start"]) * sr); buck_only[a0:a0 + int(sc.get("sdur", 0) * sr)] = 0
+    envf = np.array([np.sqrt(np.mean(buck_only[j * hop:(j + 1) * hop] ** 2)) if j * hop < len(buck_only) else 0.0 for j in range(nfr)], np.float32)
     spec["_speech_env"] = (envf / (np.percentile(envf, 95) + 1e-6)).clip(0, 1.2).tolist()
-    spec["_speech_words"] = [w for sc in spec["scenes"] for w in (sc.get("words") or [])]
+    spec["_speech_words"] = [w for sc in spec["scenes"] if not sc.get("voice") for w in (sc.get("words") or [])]
     spec["_mouth_cues"] = rhubarb_cues(audio, sr, spec, workdir)  # v6.8: phoneme lip-sync (None -> envelope fallback)
     audio = mix_sfx(audio, sr, spec)
     wav = os.path.join(workdir, "voice.wav"); sf.write(wav, audio, sr)
@@ -1028,6 +1040,56 @@ def backdrop_frames(path, W, H, n, start=0.0, blur=6):
     return [raw[i:i + fs] for i in range(0, len(raw) - fs + 1, fs)], (BW, BH)
 
 
+def _paper_texture(W, H):
+    """v6.14 paper look: warm cream sheet with soft fibres and a few darker flecks (generated, no assets)."""
+    rng = np.random.default_rng(42)
+    n = rng.normal(0, 1, (H // 4, W // 4)).astype(np.float32)
+    n = np.asarray(Image.fromarray(((n * 18) + 128).clip(0, 255).astype(np.uint8)).resize((W, H), Image.BICUBIC).filter(ImageFilter.GaussianBlur(2)), np.float32) - 128
+    base = np.empty((H, W, 3), np.float32); base[:] = (241, 233, 214)
+    base += n[..., None] * np.array([0.30, 0.28, 0.24])
+    yy = np.linspace(-1, 1, H)[:, None]; xx = np.linspace(-1, 1, W)[None, :]
+    base *= (1 - 0.06 * (xx ** 2 + yy ** 2))[..., None]
+    im = Image.fromarray(base.clip(0, 255).astype(np.uint8)); d = ImageDraw.Draw(im)
+    for _ in range(260):
+        x, y = rng.uniform(0, W), rng.uniform(0, H); l = rng.uniform(6, 26); a = rng.uniform(0, 3.14)
+        d.line([(x, y), (x + l * math.cos(a), y + l * math.sin(a))], fill=(222, 212, 190), width=1)
+    return im.convert("RGBA")
+
+
+def _look_base(look, foot, W, H, tex, A, B, si, prog, lt):
+    """v6.14 backgrounds: paper = footage as a tilted photo print on cream paper (top), split = two saturated halves,
+    footage in the top half when the scene has any."""
+    if look == "paper":
+        im = tex.copy()
+        if foot is not None:
+            pw, ph = int(W * 0.86), int(H * 0.24)
+            ph_im = foot.convert("RGB").resize((pw, int(pw * H / W)), Image.BILINEAR)
+            top = max(0, (ph_im.height - ph) // 2); ph_im = ph_im.crop((0, top, pw, top + ph))
+            ph_im = ImageEnhance.Brightness(ImageEnhance.Contrast(ph_im).enhance(1.05)).enhance(1.25)
+            card = Image.new("RGBA", (pw + 28, ph + 28), (252, 250, 245, 255)); card.paste(ph_im, (14, 14))
+            ang = [-2.2, 1.6, -1.2, 2.4][si % 4]
+            card = card.rotate(ang, expand=True, resample=Image.BICUBIC)
+            sh = Image.new("RGBA", card.size, (0, 0, 0, 0)); sh.putalpha(card.split()[3].point(lambda v: 60 if v else 0))
+            sh = sh.filter(ImageFilter.GaussianBlur(10))
+            x0, y0 = (W - card.width) // 2, int(H * 0.235)
+            im.alpha_composite(sh, (x0 + 10, y0 + 14)); im.alpha_composite(card, (x0, y0))
+        return im
+    im = Image.new("RGBA", (W, H), B + (255,)); d = ImageDraw.Draw(im)
+    mid = int(H * 0.50)
+    if foot is not None:
+        f = foot.convert("RGB"); fh = int(W * H / W)
+        crop = f.crop((0, int((H - mid) * 0.45), W, int((H - mid) * 0.45) + mid))
+        crop = ImageEnhance.Color(ImageEnhance.Brightness(crop).enhance(1.12)).enhance(1.15)
+        im.paste(crop, (0, 0))
+        tint = Image.new("RGBA", (W, mid), A + (55,)); im.alpha_composite(tint, (0, 0))
+    else:
+        d.rectangle([0, 0, W, mid], fill=A + (255,))
+        for k in range(-H, W, 90): d.line([(k, mid), (k + mid, 0)], fill=tuple(min(255, c + 18) for c in A) + (255,), width=18)
+    for k in range(-H, W, 90): d.line([(k, H), (k + (H - mid), mid)], fill=tuple(min(255, c + 16) for c in B) + (255,), width=18)
+    d.rectangle([0, mid - 7, W, mid + 7], fill=(255, 255, 255, 255))
+    return im
+
+
 _FBG = {}
 
 
@@ -1105,7 +1167,8 @@ def fun_font(name="Bangers-Regular.ttf"):
     p = os.path.join(FONT_DIR, name)
     if not os.path.exists(p):
         sub = {"Bangers-Regular.ttf": "bangers", "LilitaOne-Regular.ttf": "lilitaone", "CourierPrime-Bold.ttf": "courierprime",
-               "BlackOpsOne-Regular.ttf": "blackopsone"}.get(name)
+               "BlackOpsOne-Regular.ttf": "blackopsone",
+               "AbrilFatface-Regular.ttf": "abrilfatface", "ArchivoBlack-Regular.ttf": "archivoblack", "PatrickHand-Regular.ttf": "patrickhand"}.get(name)
         try:
             os.makedirs(FONT_DIR, exist_ok=True)
             subprocess.run(["curl", "-sSfL", "-o", p + ".part", f"https://raw.githubusercontent.com/google/fonts/main/ofl/{sub}/{name}"], timeout=60, check=True)
@@ -1805,6 +1868,11 @@ def render(spec, wav, total, out, workdir):
     ROC = spec.get("style") == "rocco"  # v6.12: Red Flag Rocco look - case-file tabs, typewriter, red stamps, label captions, phone SMS
     LOOK = spec.get("look", "vault")  # v6.14: "fullbleed" (bright full-screen footage, text in the lower third); docs/looks.md
     FB = LOOK == "fullbleed"
+    PAPER = LOOK == "paper" and not ROC; SPLIT = LOOK == "split" and not ROC  # v6.14 (docs/looks.md)
+    INK = (34, 30, 26); PAPER_RED = (196, 38, 38); HILITE = (255, 226, 70)
+    SPL_A = hex2rgb(spec.get("split_colors", ["#1F6FEB", "#FF8A00"])[0]); SPL_B = hex2rgb(spec.get("split_colors", ["#1F6FEB", "#FF8A00"])[1])
+    STATF = fun_font("AbrilFatface-Regular.ttf") if PAPER else (fun_font("ArchivoBlack-Regular.ttf") if SPLIT else ANTON)
+    paper_tex = _paper_texture(1080 if not long else 1920, 1920 if not long else 1080) if PAPER else None
     WORDCAP = spec.get("captions") == "words" or FB  # v6.14: 1-3 word captions synced to the voice
     HOOKHEAD = spec.get("headline") == "hook" or FB  # v6.14: no permanent headline - full hook on frame 1 of scene 0 only (+ scene "chapter")
     AUTOSHOT = float(spec.get("auto_shots", 1.8 if (WORDCAP or FB) else 0) or 0)  # v6.14: new framing every <= N s inside a scene
@@ -1816,20 +1884,25 @@ def render(spec, wav, total, out, workdir):
     cap_sz = int(S * (0.05 if long else 0.07))
     f_cap = ImageFont.truetype(INTER_XB, cap_sz)
     f_cap_big = ImageFont.truetype(INTER_XB, int(cap_sz * 1.12))
-    wcap_sz = int(S * (0.07 if long else 0.092)); f_wcap = ImageFont.truetype(ANTON if FB else INTER_XB, wcap_sz)
+    wcap_sz = int(S * (0.07 if long else 0.092))
+    f_wcap = ImageFont.truetype(ANTON if FB else (fun_font("ArchivoBlack-Regular.ttf") if SPLIT else INTER_XB), int(wcap_sz * (0.9 if SPLIT else 1)))
+    if PAPER: f_head = ImageFont.truetype(fun_font("AbrilFatface-Regular.ttf"), int(S * 0.082))
+    if SPLIT: f_head = ImageFont.truetype(fun_font("ArchivoBlack-Regular.ttf"), int(S * 0.082))
     f_stat = ImageFont.truetype(ANTON, int(S * (0.22 if long else 0.30)))
     f_src = ImageFont.truetype(INTER_SB, int(S * 0.030))   # v6.4: was 0.024 — unreadable on a phone
     f_brand = ImageFont.truetype(ANTON, int(S * 0.04))
     f_lbl = ImageFont.truetype(INTER_XB, int(S * 0.04))
     f_val = ImageFont.truetype(ANTON, int(S * 0.06))
     nframes = int(math.ceil(total * FPS))
-    caps = []
+    caps = []; guest_caps = set(); GUEST = (110, 205, 255)
     for sc in spec["scenes"]:
         sp0 = sc.get("speech", sc["start"])
         if sc.get("text", "").strip():
             _mx = 3 if WORDCAP else 4
-            caps += (caption_chunks_timed(sc["text"], sc["words"], _mx) if sc.get("words") else
-                     caption_chunks(sc["text"], sp0, sc.get("sdur", sc["dur"] - (sp0 - sc["start"])) + 0.1, _mx))
+            _cc = (caption_chunks_timed(sc["text"], sc["words"], _mx) if sc.get("words") else
+                   caption_chunks(sc["text"], sp0, sc.get("sdur", sc["dur"] - (sp0 - sc["start"])) + 0.1, _mx))
+            if sc.get("voice"): guest_caps.update((round(c[0], 3), c[2]) for c in _cc)  # v6.14: second voice = other caption colour
+            caps += _cc
     bgs = {}
     rng = np.random.default_rng(5)
     # floating "$" particles for the animated background (shared, drift upward forever)
@@ -1917,7 +1990,7 @@ def render(spec, wav, total, out, workdir):
         stat_sz = f_stat.size
         if sc.get("stat"):
             _m = ImageDraw.Draw(Image.new("RGB", (8, 8)))
-            while stat_sz > 40 and _m.textlength(sc["stat"], font=ImageFont.truetype(ANTON, stat_sz)) > W * 0.84:
+            while stat_sz > 40 and _m.textlength(sc["stat"], font=ImageFont.truetype(STATF, stat_sz)) > W * 0.84:
                 stat_sz = int(stat_sz * 0.92)
         chart = sc.get("chart")  # {"labels": [...], "values": [...], "texts": [...]}
         vsd = prep_vs(sc["vs"], W, H, S, long) if sc.get("vs") else None  # v4.1 split-screen comparison
@@ -1934,6 +2007,10 @@ def render(spec, wav, total, out, workdir):
             m_at = float(masc.get("at", 0))
             if FB and not long and mpos != "center":  # v6.14 fullbleed: half-body in the lower-right corner, bigger
                 mR = W * 0.11; mx, my = W * 0.80, H * 0.915
+            elif PAPER and not long:  # v6.14 paper: big, lower right (>= 1/3 of the frame height with the hat)
+                mR = W * 0.12; mx, my = W * 0.83, H * 0.93
+            elif SPLIT and not long and mpos != "center":  # v6.14 split: on the divider, reacting to both halves
+                mR = W * 0.15; mx, my = W * 0.50, H * 0.86
             elif mpos == "center":
                 mR = H * 0.13 if long else W * 0.17; mx, my = W * 0.5, H * 0.47
             else:
@@ -1948,7 +2025,7 @@ def render(spec, wav, total, out, workdir):
                 if mpos == "center":
                     bub = bubble_patch(masc["say"], S * 0.05, W * (0.6 if long else 0.8), "down")
                     bub_xy = (W / 2 - bub.width / 2, my - mR * 1.38 - bub.height)
-                elif FB and not long:  # bubble above the corner character, kept inside the frame
+                elif (FB or PAPER or SPLIT) and not long:  # bubble above the corner character, kept inside the frame
                     bub = bubble_patch(masc["say"], S * 0.042, W * 0.5, "down")
                     bub_xy = (min(W * 0.96 - bub.width, mx - bub.width / 2), my - mR * 2.15 - bub.height)
                 else:
@@ -2041,6 +2118,8 @@ def render(spec, wav, total, out, workdir):
                     if key not in f_part: f_part[key] = ImageFont.truetype(ANTON, key)
                     o.text((xx, yy), "$", font=f_part[key], fill=(245, 197, 66, 26))
                 base = Image.alpha_composite(base, ov)
+            if PAPER or SPLIT:  # v6.14: rebuild the whole background for the paper / split looks
+                base = _look_base(LOOK, base if (clip or bdclip) else None, W, H, paper_tex, SPL_A, SPL_B, si, prog, lt)
             if look == "sepia":  # old-film look for "legend says..." beats
                 g = ImageOps.grayscale(base.convert("RGB"))
                 base = ImageOps.colorize(g, black=(26, 17, 8), white=(240, 220, 180)).convert("RGBA")
@@ -2108,12 +2187,19 @@ def render(spec, wav, total, out, workdir):
                     sc_k = 0.6 + 0.4 * ease_back(p_in)
                     cnt = ease_out((lt - 0.15) / 0.7)
                     txt = count_text(sc["stat"], cnt) if cnt < 0.999 else sc["stat"]
-                    fs = ImageFont.truetype(ANTON, max(10, int(stat_sz * sc_k)))
+                    fs = ImageFont.truetype(STATF, max(10, int(stat_sz * sc_k)))
                     tw = fd.textlength(txt, font=fs)
                     sy = H * (0.36 if not long else 0.30) + (stat_sz - fs.size) * 0.5
-                    # soft glow
-                    fd.text(((W - tw) / 2, sy), txt, font=fs, fill=col + (60,), stroke_width=22, stroke_fill=col + (40,))
-                    fd.text(((W - tw) / 2, sy), txt, font=fs, fill=col + (255,), stroke_width=7, stroke_fill=(0, 0, 0, 255))
+                    if PAPER:  # v6.14 paper: red ink number, left aligned like a newspaper figure, no glow
+                        sy = H * 0.495 if not long else sy
+                        fd.text((W * 0.07, sy), txt, font=fs, fill=PAPER_RED + (255,))
+                    elif SPLIT:  # v6.14 split: white geometric number sitting on the divider
+                        sy = H * 0.30 if not long else sy
+                        fd.text(((W - tw) / 2, sy), txt, font=fs, fill=(255, 255, 255, 255), stroke_width=8, stroke_fill=tuple(int(c * 0.35) for c in SPL_A) + (255,))
+                    else:
+                        # soft glow
+                        fd.text(((W - tw) / 2, sy), txt, font=fs, fill=col + (60,), stroke_width=22, stroke_fill=col + (40,))
+                        fd.text(((W - tw) / 2, sy), txt, font=fs, fill=col + (255,), stroke_width=7, stroke_fill=(0, 0, 0, 255))
                     if arrow:
                         a = ease_out((lt - 0.5) / 0.4)
                         if a > 0:
@@ -2139,6 +2225,8 @@ def render(spec, wav, total, out, workdir):
                 y0 = (H * 0.815 + (1 - a) * 70) if ROC else (H * (0.095 if not long else 0.075) - (1 - a) * 70)  # Rocco: case-file tab at the bottom
                 if ROC and HOOKHEAD and WORDCAP: y0 = H * 0.13 - (1 - a) * 70  # v6.14: word captions own the lower third -> tab on top
                 if FB and not ROC and not long: y0 = H * 0.27 - (1 - a) * 70   # v6.14 fullbleed: hook in the upper-middle, clear of the captions
+                if PAPER and not long: y0 = H * 0.075 - (1 - a) * 40
+                if SPLIT and not long: y0 = H * 0.08 - (1 - a) * 70
                 boxh = lh * len(lines) + S * 0.04
                 if ROC:  # manila case-file tab, typewriter text, left aligned
                     fd.rectangle([W * 0.05, y0 - S * 0.045, W * 0.32, y0 - S * 0.015], fill=(205, 170, 96, al))
@@ -2146,12 +2234,20 @@ def render(spec, wav, total, out, workdir):
                     fd.text((W * 0.065, y0 - S * 0.045), "CASE FILE", font=f_src, fill=(70, 50, 25, al))
                     for li, ln in enumerate(lines):
                         fd.text((W * 0.08, y0 + li * lh), ln, font=f_head, fill=(28, 24, 20, al))
+                elif PAPER:  # newspaper headline: black serif on the paper, left aligned, rule underneath
+                    for li, ln in enumerate(lines):
+                        fd.text((W * 0.07, y0 + li * lh), ln, font=f_head, fill=INK + (al,))
+                    fd.rectangle([W * 0.07, y0 + boxh, W * 0.93, y0 + boxh + S * 0.006], fill=INK + (al,))
+                elif SPLIT:  # headline on a colour bar of side B
+                    fd.rectangle([0, y0 - S * 0.025, W, y0 + boxh - S * 0.015], fill=SPL_B + (int(235 * al / 255),))
+                    for li, ln in enumerate(lines):
+                        tw = fd.textlength(ln, font=f_head); fd.text(((W - tw) / 2, y0 + li * lh), ln, font=f_head, fill=(255, 255, 255, al))
                 else:
                     fd.rounded_rectangle([W * 0.05, y0 - S * 0.02, W * 0.95, y0 + boxh - S * 0.02], radius=int(S * 0.025), fill=(0, 0, 0, int(175 * al / 255)))
                     for li, ln in enumerate(lines):
                         tw = fd.textlength(ln, font=f_head)
                         fd.text(((W - tw) / 2, y0 + li * lh), ln, font=f_head, fill=col + (al,))
-                u = ease_out((lh_t - 0.2) / 0.5)
+                u = ease_out((lh_t - 0.2) / 0.5) if not (PAPER or SPLIT) else 0
                 if u > 0:
                     uw = W * 0.5 * u
                     by = y0 + boxh - S * 0.02  # underline sits just below the headline box
@@ -2193,7 +2289,7 @@ def render(spec, wav, total, out, workdir):
                         if s_ > 0.05:
                             bp = bub if abs(s_ - 1) < 1e-3 else bub.resize((max(1, int(bub.width * s_)), max(1, int(bub.height * s_))), Image.BILINEAR)
                             if mpos == "center": paste_rgba(fx, bp, W / 2 - bp.width / 2, bub_xy[1] + bub.height - bp.height)
-                            elif FB and not long: paste_rgba(fx, bp, bub_xy[0] + (bub.width - bp.width) / 2, bub_xy[1] + bub.height - bp.height)
+                            elif (FB or PAPER or SPLIT) and not long: paste_rgba(fx, bp, bub_xy[0] + (bub.width - bp.width) / 2, bub_xy[1] + bub.height - bp.height)
                             else: paste_rgba(fx, bp, bub_xy[0], bub_xy[1] + (bub.height - bp.height) / 2)
             if stk is not None and lt >= stk_at:
                 lts = lt - stk_at
@@ -2232,7 +2328,7 @@ def render(spec, wav, total, out, workdir):
             for cap in (caps if WORDCAP else []):  # v6.14: 1-3 big words, one line, synced to the voice
                 c0, c1, txt = cap[:3]
                 if c0 <= t < c1:
-                    words = txt.split()
+                    words = txt.split(); gst = (round(c0, 3), txt) in guest_caps
                     act = max([i for i, ws in enumerate(cap[3]) if ws <= t] or [0]) if len(cap) > 3 else len(words) - 1
                     pop = ease_out((t - c0) / 0.08); sc_ = 0.82 + 0.18 * ease_back(min(1.0, (t - c0) / 0.12))
                     fnt = f_wcap
@@ -2240,11 +2336,16 @@ def render(spec, wav, total, out, workdir):
                     if abs(sc_ - 1) > 0.01: fnt = ImageFont.truetype(fnt.path, max(20, int(fnt.size * sc_)))
                     sp = ud.textlength(" ", font=fnt); widths = [ud.textlength(w_, font=fnt) for w_ in words]
                     lw = sum(widths) + sp * (len(words) - 1); x = (W - lw) / 2
-                    yb = H * (0.80 if long else (0.70 if FB else 0.66)) - fnt.size / 2
+                    yb = H * (0.80 if long else (0.70 if FB else (0.655 if PAPER else (0.50 if SPLIT else 0.66)))) - fnt.size / 2
+                    if PAPER: yb = H * 0.735 - fnt.size / 2; x = W * 0.07  # ink text, left aligned, under the photo / figure
                     if ROC: ud.rectangle([x - S * 0.025, yb - fnt.size * 0.1, x + lw + S * 0.025, yb + fnt.size * 1.22], fill=(12, 12, 14, int(225 * pop)))
                     for i, wd in enumerate(words):
                         isnum = bool(re.search(r'[\d$¢%]', wd))
                         fill = (ACC if i == act else (GREEN if isnum and not ROC else WHITE)) if len(words) > 1 else (GOLD if isnum and not ROC else WHITE)
+                        if gst: fill = WHITE if (i == act and len(words) > 1) else GUEST
+                        if PAPER:  # ink on paper, active word marked with a highlighter
+                            if i == act: ud.rectangle([x - S * 0.008, yb + fnt.size * 0.18, x + widths[i] + S * 0.008, yb + fnt.size * 1.08], fill=(HILITE if not gst else (150, 215, 255)) + (int(230 * pop),))
+                            ud.text((x, yb), wd, font=fnt, fill=INK + (int(255 * pop),)); x += widths[i] + sp; continue
                         if ROC and i == act and len(words) > 1:
                             ud.rectangle([x - S * 0.006, yb - fnt.size * 0.06, x + widths[i] + S * 0.006, yb + fnt.size * 1.18], fill=ACC + (int(255 * pop),)); fill = WHITE
                         ud.text((x, yb), wd, font=fnt, fill=fill + (int(255 * pop),), stroke_width=max(6, fnt.size // 8), stroke_fill=(0, 0, 0, int(255 * pop)))
@@ -2274,6 +2375,7 @@ def render(spec, wav, total, out, workdir):
                             wd = words[i]; fnt = f_cap_big if i == act else f_cap
                             isnum = bool(re.search(r'[\d$¢%]', wd))
                             fill = GOLD if i == act else (GREEN if isnum else WHITE)
+                            if (round(c0, 3), txt) in guest_caps: fill = WHITE if i == act else GUEST
                             if ROC:
                                 fill = WHITE if i == act else ((255, 214, 90) if isnum else (225, 228, 235))
                                 if i == act: ud.rectangle([x - S * 0.006, yb + li * cap_sz * 1.2 - cap_sz * 0.1, x + widths[j] + S * 0.006, yb + li * cap_sz * 1.2 + cap_sz * 1.1], fill=ACC + (int(255 * pop),))
@@ -2295,7 +2397,7 @@ def render(spec, wav, total, out, workdir):
                 cz, cpx, cpy = cam_at(cam_keys, lt) if cam_keys else (1.0, 0.0, 0.0)
                 im = cam_xform(im, 1 + (cz - 1) * 0.55, cpx * 0.55, cpy * 0.55)
                 im = Image.alpha_composite(im, cam_xform(fx, cz, cpx, cpy))
-                nl = near_layer(W, H, bok, near_pts, t, lt, leak if (si > 0 and trans != "punch") else None, si)
+                nl = near_layer(W, H, bok, near_pts, t, lt, leak if (si > 0 and trans != "punch") else None, si) if not (PAPER or SPLIT) else None
                 if nl is not None: im = Image.alpha_composite(im, cam_xform(nl, 1 + (cz - 1) * 1.6, cpx * 1.6, cpy * 1.6))
             else:
                 im = Image.alpha_composite(im, vignette)
@@ -2320,7 +2422,7 @@ def render(spec, wav, total, out, workdir):
                     _zz = 1.09; _bw, _bh = int(W * _zz), int(H * _zz)
                     im = im.resize((_bw, _bh), Image.BILINEAR).crop(((_bw - W) // 2, int((_bh - H) * 0.4), (_bw - W) // 2 + W, int((_bh - H) * 0.4) + H))
             if cinema:
-                im = Image.alpha_composite(im, vignette)
+                if not (PAPER or SPLIT): im = Image.alpha_composite(im, vignette)  # v6.14: flat print looks keep clean corners
                 im = cg.scene(im)
             # ---------- scene transition ----------
             def _trans(img, lt_):
