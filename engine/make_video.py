@@ -1990,8 +1990,8 @@ def render(spec, wav, total, out, workdir):
                         sd_.ellipse([x_ - r_, y_ - r_, x_ + r_, y_ + r_], fill=(0, 0, 0, 0))
                     st_im = st_im.rotate(-7, expand=True, resample=Image.BICUBIC)
                     if abs(k_ - 1) > 1e-3: st_im = st_im.resize((int(st_im.width * k_), int(st_im.height * k_)), Image.BILINEAR)
-                    if st_im.width > W * 0.92: st_im = st_im.resize((int(W * 0.92), int(st_im.height * W * 0.92 / st_im.width)), Image.LANCZOS)
-                    paste_rgba(fx, st_im, (W - st_im.width) / 2 + (W * 0.07 if masc and masc.get("pos", "corner") == "corner" else 0), H * 0.43 - st_im.height / 2)
+                    if st_im.width > W * 0.88: st_im = st_im.resize((int(W * 0.88), int(st_im.height * W * 0.88 / st_im.width)), Image.LANCZOS)
+                    paste_rgba(fx, st_im, (W - st_im.width) / 2, H * (0.46 if masc else 0.40) - st_im.height / 2)  # below a corner mascot
             elif sc.get("stat") and not chart and not vsd:
                 p_in = (lt - 0.15) / 0.45
                 if p_in > 0:
@@ -2087,7 +2087,7 @@ def render(spec, wav, total, out, workdir):
                 pa = ease_back(min(1.0, lt / 0.3)) if lt < 0.3 else 1.0
                 pw_, phh = W * 0.62 * pa, H * 0.44 * pa; px_, py_ = (W - pw_) / 2 + (W * 0.08 if masc else 0), H * 0.20
                 fd.rounded_rectangle([px_ - S * 0.012, py_ - S * 0.012, px_ + pw_ + S * 0.012, py_ + phh + S * 0.012], radius=int(S * 0.06), fill=(18, 18, 22, 255))
-                fd.rounded_rectangle([px_, py_, px_ + pw_, py_ + phh], radius=int(S * 0.05), fill=(214, 217, 224, 255))
+                fd.rounded_rectangle([px_, py_, px_ + pw_, py_ + phh], radius=int(S * 0.05), fill=(176, 182, 194, 255))
                 if pa > 0.95:
                     fd.rectangle([px_, py_ + S * 0.05, px_ + pw_, py_ + S * 0.11], fill=(228, 228, 234, 255))
                     hdr = ph.get("from", "Unknown number"); tw = fd.textlength(hdr, font=f_phone_b)
@@ -2102,7 +2102,7 @@ def render(spec, wav, total, out, workdir):
                         bw_ = max(fd.textlength(l, font=f_phone) for l in ln_) + S * 0.04
                         flag = isinstance(m_, dict) and m_.get("flag") and lt > m_at + 0.6
                         fd.rounded_rectangle([px_ + S * 0.03, yy_, px_ + S * 0.03 + bw_ * ma, yy_ + bh_ * ma], radius=int(S * 0.03),
-                                             fill=(255, 205, 205, 255) if flag else (236, 237, 241, 255), outline=(ACC + (255,)) if flag else None, width=int(S * 0.006))
+                                             fill=(240, 190, 190, 255) if flag else (214, 217, 224, 255), outline=(ACC + (255,)) if flag else None, width=int(S * 0.006))
                         if ma > 0.9:
                             for k_, l in enumerate(ln_): fd.text((px_ + S * 0.05, yy_ + S * 0.015 + k_ * f_phone.size * 1.25), l, font=f_phone, fill=(20, 20, 24, 255))
                         if flag:
