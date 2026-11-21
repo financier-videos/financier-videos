@@ -9,13 +9,15 @@ Manba: docs/new_channel_plan.md (to'liq reja, nomzodlar jadvali, manbalar), engi
 | Izohlar | Yoqish — Shohjahon |
 | Post qilish vositasi | Buffer (bepul) ulandi 2026-11-21; env BUFFER_API_KEY; api.buffer.com ochiq; engine/buffer_post.py — draft sinovi o'tdi va o'chirildi |
 | Rocco ovozi (ElevenLabs) | YARATILMAGAN — ElevenLabs limiti bo'yicha qaror kutilmoqda (4-bo'lim) |
+| vidIQ | ULANDI 2026-11-21 (alohida vidIQ profili, Free, 150 kredit, yangilanish 2026-12-21; kanal UCUyPbjsSFdWKnC4nVRDhOiA). Kalit env VIDIQ_API_KEY; `python3 -I engine/vidiq_rocco.py <tool> '<json args>'` (sessiyadagi tayyor vidIQ vositalari — Financier profili, Rocco uchun ISHLATILMAYDI) |
 | Chiqqan / rejalashtirilgan video | 0 |
 
 ## 2. QABUL QILINGAN QARORLAR
 - NISHA (2026-11-21, Shohjahon: "boshla — nishani o'zing top"): A — firibgarlikdan himoya / raqamli xavfsizlik, AQSh kattalari. Rad etildi: B "qanday ishlaydi" (AI-klonlar ko'p, tibbiy kadr xavfi), C psixologiya faktlari (b-roll asosan odamlar — shartga zid).
 - NOM: "Red Flag Rocco" (@RedFrocco).
 - PERSONAJ: Rocco — yenot-detektiv (sobiq "niqobli o'g'ri" endi firibgarlarni ushlaydi). Buck'dan butunlay farqli; Financier'da bir martalik mehmon kesishuvi mumkin.
-- POST: Buffer (bepul). Metricool ikkinchi brendi pullik — yo'q; vidIQ ulanishi 3 marta "verification not completed" — ishlatilmaydi.
+- POST: Buffer (bepul). Metricool ikkinchi brendi pullik — yo'q.
+- vidIQ: Rocco — o'z profili va o'z kreditlari (Financier krediti Rocco'ga sarflanmaydi). Kredit tartibi Financier'dagidek (producer_task 3-band), lekin Rocco hisobidan.
 - isAiGenerated false (Rocco — to'qima multfilm, "realistik o'zgartirilgan kontent" emas); kategoriya 27 Education; madeForKids false.
 - JADVAL: boshida kuniga 1 Short (2 hafta), natijaga qarab 2. Financier ustuvor.
 
