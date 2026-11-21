@@ -1,0 +1,63 @@
+{
+ "0_note": {
+  "status": "INFO",
+  "note": "engine changed since render, no re-render-required change"
+ },
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    17.5 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.1 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -2.8 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -14.1 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 12.9 Mbit/s, 11.3s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 0.957,\n \"missing\": [\n  \"gt\"\n ],\n \"extra\": [\n  \"gta\"\n ],\n \"heard\": \"A free GTA 6 key. That's the bait. They want your login. Not your high score. Real keys come from the console store. Nowhere else.\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "1   0.00s range=17.0 st  gap=0.29  ok  | A free G T A Six key? That's the bait.\n 2   3.84s range=12.5 st  gap=0.37  ok  | They want your login. Not your high score.\n 3   7.51s range=16.8 st  gap=0.27  ok  | Real keys come from the console store. Nowhere else.\n{\"median_f0\": 146.5, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 100"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/rocco/t05_free_key/t05_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "WARN",
+  "note": "dark/dull frames - brighten bg or less b-roll dimming"
+ },
+ "10_look": {
+  "status": "PASS",
+  "note": "ok  0.45  (layout 0.03, palette 0.78, tone 0.83)  vs rocco_2026-11-22_t04_gta_pc_trap.mp4\nok  0.67  (layout 0.89, palette 0.26, tone 0.90)  vs rocco_2026-11-22_r01v2_brushing.mp4\nok  0.43  (layout 0.45, palette 0.15, tone 0.88)  vs rocco_2026-11-21_r01_brushing.mp4\nLOOK_CHECK: PASS"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "9 cuts in 11.3 s (need >= 5; engine 'shots' / 'auto_shots')"
+ },
+ "12_script": {
+  "status": "PASS",
+  "note": "t05.json                           words  27 scenes  3 broll 3 look fullbleed line2 \"they\" end \"else\"\nt04.json                           words  78 scenes  7 broll 4 look rocco     line2 \"red\" end \"bait\"\nr01v2.json                         words 111 scenes  9 broll 6 look fullbleed line2 \"inside\" end \"gadget\"\nr01_brushing.json                  words  91 scenes 10 broll 5 look case-file line2 \"that's\" end \"ordered\"\nSCRIPT_CHECK: PASS"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: script_rules one_number (mikro, loop), comedy (deadpan, 'not your high score'), looks fullbleed rocco, Pixabay 4 yo'l (metafora: qarmoq), qc_gate, look_check, script_check, voice_check, prosody, title.py; ishlatilmadi: ikkinchi ovoz (mikro uchun kerak emas), vidIQ Rocco (kredit tejaldi)"
+ },
+ "verdict": "PASS"
+}

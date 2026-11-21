@@ -1,0 +1,13 @@
+{"format":"short","sfx":true,"loop":true,"theme":"noir","style":"rocco","look":"fullbleed","structure":"one_number",
+ "captions":"words","headline":"hook","auto_shots":1.6,"bg_bright":1.3,
+ "brand":"RED FLAG ROCCO","brand_color":"#FF3B3B",
+ "source":"Sources: Malwarebytes (Aug 2026); NordVPN and McAfee GTA 6 scam warnings",
+ "buck_voice":{"voice_id":"eYibgGvZyWzJUi8HBmQM","label":"Rocco (Scam Detective)","settings":{"speed":1.08}},
+ "scenes":[
+  {"text":"A free GTA 6 key? That's the bait.","say":"A free G T A Six key? That's the bait.","head":"FREE GTA 6 KEY = STOLEN ACCOUNT",
+   "shots":[{"broll":"/tmp/fin/bg/r01/hook.mp4","at":0},{"broll":"/tmp/fin/bg/t04/dl.mp4","at":1.5}],"sticker":"FREE KEY","sticker_at":0.6,"sfx":["pop@0.6"]},
+  {"text":"They want your login. Not your high score.","stat":"BAIT","shots":[{"broll":"/tmp/fin/bg/t04/hacker.mp4","at":0}],
+   "mascot":{"mood":"sideeye","pos":"corner","act":"deadpan","act_at":1.2}},
+  {"text":"Real keys come from the console store. Nowhere else.","shots":[{"broll":"/tmp/fin/bg/t04/pad.mp4","at":0},{"broll":"/tmp/fin/bg/t04/gameroom.mp4","at":1.6,"zoom":1.3}],
+   "show_source":true}
+ ]}
