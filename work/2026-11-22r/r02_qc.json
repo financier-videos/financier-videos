@@ -1,0 +1,59 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    32.3 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.0 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -13.9 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 12.6 Mbit/s, 21.5s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 0.98,\n \"missing\": [\n  \"capped\"\n ],\n \"extra\": [\n  \"cabbed\"\n ],\n \"heard\": \"They gave my seat away. Legally. Excuse me? Airlines are allowed to sell more tickets than seats. So I just get nothing. If they bump you against your will up to four times your one-way fare. Four times? Cabbed at 21.50. And first, they have to ask for volunteers, not legal advice, cash or seat?\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "Legally.\n 3   2.43s range= 5.1 st  gap=0.19  ok  | Excuse me?!\n 4   3.21s range= 9.4 st  gap=0.19  ok  | Airlines are allowed to sell more tickets than seats.\n 5   6.93s range=22.6 st  gap=0.15  ok  | So I just get nothing.\n 6   8.17s range=13.8 st  gap=0.18  ok  | If they bump you against your will: up to four times your on\n 7  12.82s range= 6.0 st  gap=0.11  ok  | Four times?!\n 8  13.82s range=18.2 st  gap=0.32  ok  | Capped at twenty-one fifty. And first, they have to ask for \n 9  18.30s range=13.9 st  gap=0.31  ok  | Not legal advice. Cash or seat?\n{\"median_f0\": 250.0, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 90"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/2026-11-22r/r02_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "WARN",
+  "note": "dark/dull frames - brighten bg or less b-roll dimming"
+ },
+ "10_look": {
+  "status": "PASS",
+  "note": "ok  0.48  (layout 0.13, palette 0.70, tone 0.88)  vs r08_fees.mp4\nok  0.29  (layout 0.34, palette 0.09, tone 0.54)  vs 2026-11-23_pink_r07_v615.mp4\nok  0.46  (layout 0.10, palette 0.73, tone 0.78)  vs 2026-11-23_cart_r06_v615.mp4\nok  0.18  (layout 0.15, palette 0.05, tone 0.47)  vs 2026-11-22_bfcm_r05_v615.mp4\nLOOK_CHECK: PASS"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "12 hard cuts (ffmpeg scene>0.22) in 21.5 s = 1.8 s/cut (need >= 10); engine planned 16"
+ },
+ "12_script": {
+  "status": "PASS",
+  "note": "r02_noseat.json                    words  56 scenes  9 broll 9 look -         line2 \"legally\" end \"seat\"\nr08_fees.json                      words  94 scenes  8 broll 6 look fullbleed line2 \"checked\" end \"you\"\nr07_pink.json                      words  73 scenes  7 broll 7 look split     line2 \"blue\" end \"one\"\nr06_cart.json                      words  74 scenes  7 broll 3 look fullbleed line2 \"blame\" end \"stop\"\nr05_bfcm.json                      words  78 scenes 10 broll 9 look split     line2 \"black\" end \"monday\"\nSCRIPT_CHECK: PASS"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: script_rules (myth_bust/ranking/client_dialogue), ikkinchi ovoz (Jessica \u2014 R-02 yo'lovchi), comedy (deadpan, shrug, sigh, flip), looks (rocco case-file/fullbleed/vault+words), Pixabay 4 yo'l, dvigatel v6.15 haqiqiy kesimlar, qc_gate, look_check, script_check, voice_check, prosody, title.py, color_check; ishlatilmadi: hookscore (hook script_bank dan), receipt look (dvigatelda yo'q)"
+ },
+ "verdict": "PASS"
+}

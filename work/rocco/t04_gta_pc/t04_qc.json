@@ -5,7 +5,7 @@
  },
  "1_platform_check": {
   "status": "PASS",
-  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    50.2 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.3 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.6 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    50.3 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.3 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.6 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
  },
  "2_loudness": {
   "status": "PASS",
@@ -17,7 +17,7 @@
  },
  "4_export": {
   "status": "PASS",
-  "note": "h264 High, 12.4 Mbit/s, 33.9s, stereo"
+  "note": "h264 High, 12.5 Mbit/s, 33.9s, stereo"
  },
  "5_voice_check": {
   "status": "PASS",
@@ -41,11 +41,11 @@
  },
  "10_look": {
   "status": "PASS",
-  "note": "ok  0.27  (layout 0.00, palette 0.31, tone 0.82)  vs rocco_2026-11-22_r01v2_brushing.mp4\nok  0.58  (layout 0.72, palette 0.26, tone 0.80)  vs rocco_2026-11-21_r01_brushing.mp4\nLOOK_CHECK: PASS"
+  "note": "ok  0.26  (layout 0.00, palette 0.27, tone 0.81)  vs rocco_2026-11-22_r01v2b_brushing.mp4\nok  0.58  (layout 0.72, palette 0.23, tone 0.86)  vs rocco_2026-11-21_r01_brushing.mp4\nLOOK_CHECK: PASS"
  },
  "11_pacing": {
-  "status": "PASS",
-  "note": "20 cuts in 33.9 s (need >= 16; engine 'shots' / 'auto_shots')"
+  "status": "FAIL",
+  "note": "15 hard cuts (ffmpeg scene>0.22) in 33.9 s = 2.3 s/cut (need >= 16); engine planned 20"
  },
  "12_script": {
   "status": "PASS",
@@ -53,7 +53,7 @@
  },
  "13_skills_line": {
   "status": "PASS",
-  "note": "Skillar: script_rules myth_bust, comedy (deadpan, shrug, quruq yakun), looks rocco case-file + phone, Pixabay 4 yo'l, qc_gate, look_check, script_check, voice_check, prosody, title.py; ishlatilmadi: vidIQ Rocco kalit so'z (kredit tejaldi, mavzu trend_radar dan), ikkinchi ovoz (dvigatelda hali yo'q)"
+  "note": "Skillar: script_rules (myth_bust/ranking/client_dialogue), ikkinchi ovoz (Jessica \u2014 R-02 yo'lovchi), comedy (deadpan, shrug, sigh, flip), looks (rocco case-file/fullbleed/vault+words), Pixabay 4 yo'l, dvigatel v6.15 haqiqiy kesimlar, qc_gate, look_check, script_check, voice_check, prosody, title.py, color_check; ishlatilmadi: hookscore (hook script_bank dan), receipt look (dvigatelda yo'q)"
  },
- "verdict": "PASS"
+ "verdict": "FAIL"
 }
