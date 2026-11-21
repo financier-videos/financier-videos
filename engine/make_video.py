@@ -489,6 +489,8 @@ def tts(spec, args, workdir):
     narr = spec.get("narrator", "buck")  # v6: Buck narrates everything
     bcfg = spec.get("buck_voice") or {}
     lines = [say_text(x.get("say", x.get("text", ""))).strip() for x in spec["scenes"]]
+    if lines and spec.get("loop") and re.search(r"\.\.\.$", lines[-1]):  # v6.10: a trailing "..." on the loop line makes
+        lines[-1] = re.sub(r"\s*\.\.\.$", "", lines[-1])          # multilingual_v2 stretch into "aaamm" (airport b4, pink 1st take)
     pre = {}
     if spec.get("lang") == "uz" and bcfg.get("one_take", True) and bcfg.get("engine", "auto") != "kokoro":
         # 2026-11-20 (Shohjahon): Uzbek lines read one by one (v3 has no previous/next context) sounded worse than
@@ -935,7 +937,7 @@ def caption_chunks_timed(text, words):
     return out
 
 
-ENGINE_VERSION = "6.9"  # bump on every engine change and add a line to docs/changes.md
+ENGINE_VERSION = "6.10"  # bump on every engine change and add a line to docs/changes.md
 
 THEMES = {  # v6.1: per-video look so videos don't all share one background. Spec "theme": name | "auto" (default: from the first line).
     "vault": ([((9, 14, 28), (19, 30, 54)), ((12, 10, 30), (32, 20, 58)), ((6, 20, 24), (14, 42, 48))], "grid"),
@@ -1949,7 +1951,11 @@ def render(spec, wav, total, out, workdir):
                 area_w = W * (0.72 if long else 0.66); bw = area_w / nb * 0.55; gap = area_w / nb
                 x0 = (W - area_w) / 2 - (0 if long else W * 0.03); ybase = H * (0.60 if not long else 0.68); hmax = H * (0.24 if not long else 0.36)
                 for i, v in enumerate(vals):
-                    b_at = chart.get("at"); p = ease_out((lt - (b_at[i] if b_at else 0.25 + 0.25 * i)) / (0.5 if b_at else 0.8))
+                    b_at = chart.get("at") or [0.25 + 0.25 * j for j in range(nb)]; b_len = 0.5 if chart.get("at") else 0.8
+                    _lim = max(0.6, sc["dur"] - 0.7)  # v6.10: the last bar must finish >= 0.7 s before the cut (airport_cap b3 never showed +15%)
+                    if max(b_at) + b_len > _lim:
+                        _k = max(0.2, (_lim - b_len) / max(max(b_at), 1e-3)); b_at = [x * _k for x in b_at]
+                    p = ease_out((lt - b_at[i]) / b_len)
                     h = hmax * (v / vmax) * p
                     bx = x0 + i * gap + (gap - bw) / 2
                     cc = col if i == chart.get("hi", nb - 1) else (120, 130, 150)  # v6.5: "hi" = highlighted bar index (default last)
