@@ -7,6 +7,13 @@ HOLAT: NISHA TANLANDI, KANAL OCHILMAGAN. Shohjahondan kerak: (1) YouTube kanal o
 - Ochiq kiyimdagi ayollar YO'Q. Amalda: odamli b-roll umuman ishlatilmaydi (faqat narsalar, telefon/kompyuter ekrani, shahar, tabiat, grafika); har klipni kadr-kadr ko'rib chiqish; shubhali kadr — olinmaydi.
 - Financier'ning QAT'IY CHEGARALARI (producer_task) to'liq amal qiladi: manbali faktlar, real odam yuzi/ovozi yo'q, begona kontent yo'q, maslahat emas.
 
+## FOYDALI BO'LSIN (Shohjahon 2026-11-21: "Foydali bo'lsin") — MAJBURIY, har video
+- Har Short tomoshabinga BITTA aniq, darhol qo'llasa bo'ladigan himoya qadamini beradi (masalan: "bankka ilovadagi raqamdan o'zing qo'ng'iroq qil", "oilada maxfiy so'z kelishib ol", "reportfraud.ftc.gov ga xabar ber"). Qadam rasmiy manbadan (FTC, FBI IC3, CFPB, AARP) — manba tavsifda.
+- Render oldidan tekshiruv: "Tomoshabin shu videoni ko'rib, ertaga o'zini yoki ota-onasini qanday himoya qiladi?" — javob bitta jumlada aytilmasa, video chiqmaydi.
+- Qo'rqitish emas, ishonch berish: ohang xotirjam va hazilli, "panika" thumbnail yo'q; aldangan odam masxara qilinmaydi.
+- Ulashishga undash (tabiiy): "Send this to someone who still answers unknown numbers" — oilasini himoya qilish uchun.
+- Hujum usuli, skript yoki "qanday aldash" tafsiloti hech qachon ko'rsatilmaydi — faqat belgilar va himoya.
+
 ## NOMZODLAR (WebSearch 2026-11-21; raqamlar vendor bloglaridan — taxminiy)
 | Nisha | Talab | Daromad (RPM) | Raqobat | Shartlarga mosligi | Baho |
 |---|---|---|---|---|---|
