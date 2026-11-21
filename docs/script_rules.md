@@ -22,3 +22,17 @@ Kunlik aralashma (8 Short): 3 mikro (one_number) + 3 hikoya (why_story / scale_l
 - Yakun 4 xildan biri (savol / keyingi qism / loop / bitta raqam qora fonda) — docs/looks.md.
 - Raqamlar: manba va sana; o'z hisobimiz bo'lsa ekranda "our math" va tavsifda formula.
 ## SARLAVHA (aralashtir): "Why ...", "How big is ...", "How ... is made", raqamli da'vo ("$3.79 Billion in ONE Day") — ketma-ket 3 ta bir xil turdagi sarlavha yo'q.
+
+## HIKOYA MEXANIKASI (2026-11-21 21:20; ikki g'olibning transkripti o'qildi — tuzilma olinadi, matn ko'chirilmaydi)
+"Why Prices End In 99 Cents" (60 s, ~190 so'z ≈ 3.2 so'z/s; bizda 2.3):
+1. VOQEA O'RTASIDAN boshlanadi: birinchi jumlada personaj nimadir QILADI (kirish, "did you know", raqam yo'q).
+2. Mavzu savoliga JAVOB FAQAT OXIRGI JUMLADA — sarlavha savol, javob 55-soniyada. Tomoshabin oxirigacha kutadi.
+3. Kichik mojaro: ikki personaj (xo'jayin va kassir), shubha, burilish ("bir kuni ertalab hamma narx 1 sentga o'zgargan").
+4. Aniq buyumlar va sahnalar (konfet, etik, velosiped, qo'ng'iroq) — har jumla chizsa bo'ladigan rasm. Statistika 0 ta.
+5. Bitta dialog almashinuvi (savol–javob), 1 hazil.
+"How Big Is a Trillion?" (85 s): ikki ovozli SUHBAT (biri aytadi, ikkinchisi hayratlanadi) + 7 pog'onali narvon; har pog'ona oldingisidan katta; oxirgisi koinot.
+BIZGA QOIDA:
+- why_story / how_made: 1-jumla — harakat; javob — oxirgi jumlada; 2 personaj (Buck + bitta yangi obraz: do'kondor, bankir, kassir — o'z chizmamiz); 150–190 so'z / 55–65 s (≈3 so'z/s; Buck ovozi tezligi mos bo'lsin).
+- scale_ladder: Buck + ikkinchi ovoz (hayratlanuvchi; ElevenLabs'da ikkinchi ovoz yoki Buck'ning o'ziga savol-javob) — sinov sifatida 1 ta.
+- FAKT HALOLLIGI: mashhur rivoyat (masalan 99 sent va kassa apparati) hujjatlashmagan bo'lsa — "one popular explanation" deb aytiladi va ekranda "legend / popular theory" belgisi; isbotlangan fakt sifatida berilmaydi.
+- Birinchi sinov: S-yangi "Why Is It Called a 'Buck'?" yoki "Why Do Receipts Fade?" — manbasi topilgan mavzudan (render oldidan manba shart).
