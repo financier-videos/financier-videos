@@ -5,8 +5,10 @@ Manba: docs/new_channel_plan.md (to'liq reja, nomzodlar jadvali, manbalar), engi
 | Narsa | Holat |
 |---|---|
 | Kanal | OCHILDI 2026-11-21 13:13 — "Red Flag Rocco", @RedFrocco, https://www.youtube.com/@RedFrocco |
-| Avatar / banner / tavsif | Tayyor: work/rocco/avatar_800.png, banner_2560x1440.png, channel_description.txt (manba rocco.svg — o'zimiz chizgan). Kanalga qo'yish — Shohjahon (studio) |
-| Izohlar | Yoqish — Shohjahon |
+| Avatar / banner / tavsif | QO'YILDI 2026-11-21 18:45 (chat sessiyasi, Shohjahon Chrome'i orqali YouTube Studio): avatar_800.png, banner_2560x1440.png, channel_description.txt. Ommaviy sahifada tavsif ko'rinadi |
+| Izohlar | YOQILGAN (Studio → Настройки → Модерация сообщества: "Комментарии: Включены", moderatsiya "Базовая") — tekshirildi 2026-11-21 18:46 |
+| Kanal kalit so'zlari / auditoriya | 2026-11-21 18:47: "velox" olib tashlandi; qo'yildi: scam alerts, how to spot a scam, scam red flags, phishing text, fraud prevention, online safety, protect parents from scams, scam awareness, text message scams, phone scams. Auditoriya: "kanal bolalar uchun emas" |
+| Akkaunt | Kanal velox.int.logistics@gmail.com Google akkauntida (Chrome'da kirilgan). Studio'da "Страна проживания" = AQSh deb turibdi — chat o'zgartirmadi; haqiqiy yashash davlati bo'lishi kerak (Shohjahon qarori) |
 | Post qilish vositasi | Buffer (bepul) ulandi 2026-11-21; env BUFFER_API_KEY; api.buffer.com ochiq; engine/buffer_post.py — draft sinovi o'tdi va o'chirildi |
 | Rocco ovozi (ElevenLabs) | YARATILMAGAN — ElevenLabs limiti bo'yicha qaror kutilmoqda (4-bo'lim) |
 | vidIQ | ULANDI 2026-11-21 (alohida vidIQ profili, Free, 150 kredit, yangilanish 2026-12-21; kanal UCUyPbjsSFdWKnC4nVRDhOiA). Kalit env VIDIQ_API_KEY; `python3 -I engine/vidiq_rocco.py <tool> '<json args>'` (sessiyadagi tayyor vidIQ vositalari — Financier profili, Rocco uchun ISHLATILMAYDI) |
@@ -45,7 +47,7 @@ Manba: docs/new_channel_plan.md (to'liq reja, nomzodlar jadvali, manbalar), engi
 - Cheklovlar (bepul): 3 kanal, bir vaqtda 10 tagacha rejalashtirilgan post, tavsifga #PoweredByBuffer qo'shiladi, Shorts thumbnail yo'q. Kalit hech qayerga yozilmaydi/chiqarilmaydi.
 
 ## 6. OCHIQ — SHOHJAHON QARORI KERAK
-1. Avatar, banner, tavsifni kanalga qo'yish va izohlarni yoqish (fayllar work/rocco/ da).
+1. ~~Avatar, banner, tavsif, izohlar~~ — BAJARILDI 2026-11-21 (chat). Qolgani: "Страна проживания" AQSh deb ko'rsatilgan — to'g'rilash yoki qoldirish Shohjahon qarori.
 2. ElevenLabs limiti: "creator" 131,000 belgi/oy; Financier rejasi o'zi ≈138,000/oy (limitdan oshadi), Rocco +≈12,000/oy. Variantlar: (a) tarifni oshirish (to'lov — faqat Shohjahon); (b) uzun videoni haftasiga 2 taga tushirish; (c) TTS keshini sessiyalar orasida saqlash. QAROR 2026-11-21: (b) — Financier uzun videosi haftasiga 2 ta.
 
 ## 7. KEYINGI QADAMLAR (qarordan keyin)
