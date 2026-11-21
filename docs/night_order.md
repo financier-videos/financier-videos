@@ -232,3 +232,21 @@ CHIQISHDAN OLDIN TUZATILSIN (4 ta qo'shimcha lavha zaif, qolgani tegilmaydi):
 5. Rocco bir necha kadrda burchakda mitti (~1/5) — gapirayotganda ≥ 1/3 kadr.
 6. Ekrandagi 'PLAYSTATION 5 / XBOX SERIES' — faqat matn (logo emas) qolsin; manba satri qo'shilsin (Take-Two press-relizi, 2026-11-20).
 Tuzatilgach 10 kadrlik varaq → chat tasdiqlaydi → Buffer.
+
+
+## KO'RIK №3 — b8 qayta renderlar (2026-11-22, chat; 16 kadrdan)
+
+`2026-11-24_subs_r03_b8.mp4` — QABUL (bo'sh panel yo'q, lavhalar gapga mos, sariq kartochka, har kadrda Buck). Mayda tuzatishlar, keyingi videolarga ham:
+1. Buck ~1/5 kadr va butun video bir joyda, bir o'lchamda — qoida ≥1/4; har 2–3 sahnada joy/o'lcham/harakat almashsin (reaksiyada 1/3).
+2. "$13,320 / 10 YEARS" kartochkasi pult lavhasi ustida qolib ketgan — kartochka faqat o'z gapida tursin, mehmon replikasida olinadi.
+3. Manba satri Buck boshi ustiga tushyapti — pastga, plashkaga.
+4. Chetlardagi qorong'i vinyetka kuchli — 50% ga kamaytirilsin (kadr yorug' ko'rinsin).
+5. Raqam sanab chiqish (count-up) — gap tugaguncha yakuniy songa yetib, kamida 0.8 s tursin (kadrda "$686", "$211" oraliq son ko'rinib qoldi).
+
+`2026-11-22_gta_how_big_b8.mp4` — HALI ZAIF, shu holida boshqalarga namuna emas:
+1. Buck 16 kadrdan 5 tasida — har sahnada bo'lsin (≥1/4).
+2. Kartochkalar kadr chetiga tiralgan ("≈413 KM", "1.5× MOON", "3,800 T") — kenglik ≤ 80% kadr, chetdan ≥ 60 px.
+3. Yo'l+osmon lavhasi 3 marta takror — "bills end to end" uchun `cash_count`/`cash_stacks`, balandlik uchun osmon 1 marta.
+4. Koinot sahnalari qora — `earth_night` (quyoshli), `moon_big`; ustma-ust qorong'ilatish olinadi.
+5. Ustunli diagramma xira osmon ustida — yorug' tekis lavha (`cash_desk`) ustida, ustunlar kattaroq.
+Rocco: `rc04c.json` bor, video hali yo'q — render qilingach varaq bilan.
