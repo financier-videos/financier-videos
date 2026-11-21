@@ -12,6 +12,8 @@ SHOHJAHON KO'RSATMALARI: kontentni o'zing reja qil va o'zing chiqar, "ha"sini ku
 
 **XABARDORLIK: ish boshida `docs/changes.md` ning tepasidagi 15 qatorni o'qi; har tugagan ishdan keyin DARHOL shu faylga bitta qator qo'shib push qil (sessiya oxirini kutma). Push qilinmagan ish qilinmagan hisoblanadi.**
 
+## !!! 2026-11-21 21:35 dan: ESKI SHABLON TO'XTATILDI — docs/night_order.md BUYURTMA 7 va 6 birinchi navbatda; qoidalar: docs/script_rules.md (v2.1), docs/looks.md, docs/lessons_winners_2026-11-21.md; tayyor ssenariylar: docs/script_bank.md R-01…R-08, T-01…T-05, V-01…V-05. Shu fayldagi eski andoza bandlari (sahna soni, 'Buck sahnalarning ≥50%', 'loop because...', 'B-roll 1 ta') ularga ZID bo'lsa — yangilari ustun.
+
 ## SSENARIY v2 — MAJBURIY (2026-11-21 audit): `docs/script_rules.md` (7 tuzilma, skelet taqiqi, uzunlik aralashmasi 3 mikro + 3 hikoya + 2 o'rta); post oldidan `engine/script_check.py`. Dalil: `docs/audit_2026-11-21.md`. Sprint §1.5 dagi '4 mikro + 4 oddiy' o'rniga shu aralashma.
 
 ## KO'RINISH (LOOK) — MAJBURIY (Shohjahon 2026-11-21 20:26): har spec'da "look"; qoida va ro'yxat `docs/looks.md`; post oldidan `engine/look_check.py` (≥0.70 = chiqmaydi). Theme almashtirish yetarli EMAS.

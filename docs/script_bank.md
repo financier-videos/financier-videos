@@ -202,3 +202,30 @@ MANBA: Federal Reserve "How much does it cost to produce currency and coin?" (20
 MANBA: FTC consumer.ftc.gov (payment apps: report to the app); National Cybersecurity Alliance "accidental deposit scams" (staysafeonline.org). Himoya qadami rasmiy manbadan; usul tafsiloti rasmiy ogohlantirishdan ortiq aytilmaydi.
 Mijoz (2-ovoz): "Rocco! Someone just sent me a thousand dollars!" — Rocco: "Don't touch it." — "Now they say it was a mistake. They want it back." — "That's the red flag." — "But it's their money!" — "Maybe not. It can come from a stolen account. When it gets pulled back... what you sent is gone too." — "So what do I do?" — "Don't send anything yourself. Report it in the app. Let the app reverse it." — "And the stranger?" — "A real mistake can wait for the app. A scammer can't."
 Kadrlar (≥24): telefon ekrani "+$1,000" (brendsiz) → mijozning quvonchi → Rocco qo'lini ko'taradi → xabar pufakchasi "sent by mistake" qizil bayroq → ikki yo'l: "SEND BACK" (qizil) / "REPORT IN APP" (yashil) → muhr "DON'T SEND" → himoya kartasi 3 qadam. Yakun: Rocco oxirgi jumla + case-file muhri.
+
+## ===== QAYTA YASASH: navbatdagi 8 mavzu YANGI formatda (chat Trade, 2026-11-21 21:35; Shohjahon: "hammasini yangi ishlaydiganiga almashtir, videolarni boshqatdan yasab chiqsin") =====
+Faktlar va manbalar — eski speclardagidek (o'zgarmaydi, render oldidan yana tekshir). O'zgaradi: tuzilma, 1-kadr, temp (har ≤2 s yangi kadr), subtitr 1–3 so'z, javob oxirida, look. Ovoz QAYTA yoziladi (matn yangi). Har birida ≥40% sahna mavzuga mos lavha (4 yo'l).
+
+### R-01 (eski: "$27 Billion in Gift Cards", Metricool 436448923 / 436378508) → why_story · look paper · ~45 s · "The Drawer Worth $27 Billion"
+Boshlanish (harakat): "She opens the junk drawer looking for tape... and finds forty dollars." → har uyda shunday tortma → 43% kattalarda kamida bitta ishlatilmagan karta, o'rtacha $244 (Bankrate/YouGov, 2024-08) → hammasini qo'shsak: ~$27 mlrd → 5 kishidan 1 tasi kartasini kuydirgan → oxiri: tortma yana ochiladi, "Go check yours." Javob ($27B) 35-soniyada. Kadrlar: tortma, lenta, karta, ko'cha bo'ylab uylar (dron — masshtab), har derazada kichik karta belgisi, shahar → mamlakat xaritasi, qum soati (muddat tugashi — metafora).
+
+### R-02 (eski: "Sorry, No Seat", 436378556 / 436378566) → client_dialogue (Buck + yo'lovchi) · look fullbleed · ~40 s · "They Sold Your Seat Twice"
+"— They gave my seat away! — Legally. — WHAT? — Airlines may sell more tickets than seats. — So I get nothing? — If they bump you against your will: up to four times your one-way fare. — Four times?! — Capped at twenty-one fifty. And first, they have to ask for volunteers." Manba: U.S. DOT "Bumping & Oversales" (2025-01-22 dan). "Not legal advice". Kadrlar: chiqish darvozasi, tablo, bo'sh o'rindiq, uchayotgan samolyot (his), chipta ×4 ko'payadi (o'z grafika), ko'tarilgan qo'llar siluetlari (ko'ngillilar).
+
+### R-03 (eski: "You Pay $1,332 a Year", 436383121 / 436383138) → scale_ladder · look neon · ~45 s · "What $111 a Month Really Is"
+"$111 a month doesn't sound like much." → kuniga ~$3.65 → yiliga $1,332 → 10 yilda $13,320 (o'z hisob, "our math") → shundan $252/yil — umuman ishlatilmaydigan obunalar → o'tgan yildan +23% → yakun: "Which one would you not even miss?" Manba: CNET so'rovi 2026-07. Kadrlar: telefon bildirishnomalari yomg'iri, tomchi → jo'mrak → daryo (metafora: sizib chiqish), taqvim varaqlari, 10 yillik taxlam.
+
+### R-04 (eski: "NY Airports Can't Overcharge", 436729765 / 436729817) → myth_bust · look split · ~30 s · "Airport Prices Have a Legal Limit (in New York)"
+Afsona: "Airports can charge whatever they want." → Aslida: JFK, LaGuardia, Newark — shahar narxidan ko'pi bilan +15% (Port Authority) → burilish: avval +10% edi, chegara KO'TARILDI → yakun savol: "Worst airport price you ever paid?" Kadrlar: split — ko'cha do'koni $3 | aeroport $3.45; xarita NY/NJ (map_insert); uchish yo'lagi dron; suv shishasi makro.
+
+### R-05 (eski: "Black Friday vs Cyber Monday", 436383257 / 436383285) → guess_reveal · look split · ~35 s · "Friday or Monday: Guess Who Wins"
+Buck so'raydi, mehmon taxmin qiladi: qaysi kun ko'proq? (Cyber Monday $15.1B vs Black Friday $12.9B) → qaysi biri tezroq o'syapti? (BF +9.2% vs CM +6.2%) → "buy now, pay later" BF da qancha? ($807M). Hammasi PROGNOZ (Adobe, 2026-09-28) — ekranda "forecast". 27-noyabrgacha chiqishi shart. Kadrlar: do'kon eshigi ochilishi (uzoqdan), noutbuk klaviaturasi makro, ikki ustun poygasi, taqvim Fri/Mon.
+
+### R-06 (eski: "Bigger Cart = +40%", 436389660 / 436389672) → why_story · look chalk yoki paper · ~45 s · "Why Shopping Carts Keep Getting Bigger"
+Boshlanish: "You came in for milk. You're leaving with forty dollars of stuff. Blame the cart." → Lindstrom da'vosi: arava ikki baravar kattalashsa — 40% gacha ko'proq xarid ("his claim, not a published study" — ekranda) → Buck nazariyasi: yarim bo'sh arava "tugallanmagan" ko'rinadi (BUCK'S THEORY belgisi) → yakun: savatcha oling. Kadrlar: sut, to'la arava, bo'sh katta arava ichidan ko'rinish (keng burchak), arava o'sib boradi (o'z animatsiya), savatcha.
+
+### R-07 (eski: "Pink or Blue?", 436389711 / 436389720) → guess_reveal · look split (pushti/ko'k — bu yerda rang MAVZUNING o'zi) · ~35 s · "Same Razor. Different Price. Guess Which."
+Ikki bir xil buyum, ikki rang → mehmon taxmin qiladi → 794 mahsulot, ayollar versiyasi 42% holatda qimmat, erkaklarniki 18% (NYC DCA, 2015) → o'rtacha +7%, shaxsiy gigiyena +13% → "NYC stores, 2015" belgisi → yakun: "Would you just buy the blue one?" Kadrlar: ikki ustara/shampun makro (brendsiz, o'z grafika yoki umumiy lavha), javon bo'ylab kamera, narx yorliqlari.
+
+### R-08 (eski: "5 Sneaky Fees, Ranked", 436535579) → ranking, lekin TEZ · look receipt · ~40 s · "5 Fees You Paid Without Noticing"
+Chek lentasi tepadan pastga suriladi, har qator — bitta to'lov va o'z lavhasi: bagaj $45 (lenta) → overdraft ~$27 → hisob yuritish $15.65/oy → begona bankomat $4.86 (rekord) → №1 yashirin mehmonxona/chipta to'lovlari + FTC qoidasi (2025-05-12 dan to'liq narx oldindan). Yakun: chek jami + "Which one got you?" Manbalar eski specda. Reyting — Buck fikri (ekranda).
