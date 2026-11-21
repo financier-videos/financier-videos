@@ -175,3 +175,23 @@ BUGUNGI 23:17 ishga tushishda ENG BIRINCHI ISH (Financier trendidan ham oldin, c
 - 3. DVIGATEL v6.14: (a) shots + auto_shots, (b) 1–3 so'zli subtitr + headline hook, (c) look fullbleed — TAYYOR. QILINMADI: (d) paper, split; (e) ikkinchi ovoz ("voices") — sabab: shu sessiya trend videolariga ketdi; keyingi kod sessiyasida birinchi navbatda. Neon look ham yo'q (T-02 fullbleed bilan chiqdi).
 - QILINMADI: T-03, T-05 (trend, muddat 23-noy 15:00 UTC), V-01…V-05, C-01/C-02, R-05 (BF, 27-noyabrgacha), R-01…R-08 — sabab: vaqt; 22-noy 20:00 (airport) va 23:00 (BF vs CM) eski shablondagi postlar hali surilmagan — keyingi sessiya slotdan ≥30 daq oldin yangi versiya qo'ysin yoki sursin.
 - DIQQAT: kod sessiyasi videolari `claude/lucid-volta-x5cic0` branchida (raw URL shu branchdan); media ga merge Shohjahon ruxsati bilan.
+
+## KO'RIK №1 — yangi videolar (chat Trade, 2026-11-21 19:49 UTC) — kod va vazifa sessiyalari uchun TUZATISHLAR
+Rasm: docs/looks_samples/review_2026-11-22_new_vs_old.jpg. O'lchov (look_check --matrix; kesim = ffmpeg scene>0.22):
+| Video | look | yorqinlik | eski 3 taga o'xshashlik | qattiq kesim |
+|---|---|---|---|---|
+| gta_per_second (13.7 s) | fullbleed | 0.31 | 0.47–0.58 | 7 (1.7 s/kesim) ✔ |
+| gta_how_big (51.9 s) | vault+words | 0.18 | 0.61–0.69 (chegarada) | 11 (4.3 s) |
+| gta_timeline (26.3 s) | paper | 0.69 | 0.30–0.43 | 5 (4.4 s) |
+| airport_r04 (26.5 s) | split | 0.40 | 0.17–0.26 ✔ | 5 (4.4 s) |
+| cart_r06 (27.8 s) | paper | 0.69 | 0.32–0.43 | 3 (6.9 s) |
+YAXSHI: uch xil yangi ko'rinish haqiqatan farq qiladi (eski 8 tasi o'zaro 0.77–0.91 edi); subtitr 1–3 so'z; lavhalar ko'rinadi; Rocco r01v2/T-04 — har sahnada boshqa lavha.
+TUZATILSIN (ustuvorlik tartibida):
+1. PAPER TAKRORI: gta_timeline ↔ cart_r06 = 0.93 (deyarli bir xil), oralarida atigi 2 post. look_check --prev ga navbatdagi (hali chiqmagan) videolar ham kirsin; paper uchun kamida 3 variant (qog'oz rangi: krem / gazeta kulrang / ko'k chizmali daftar; foto joyi: tepa / chap ustun / to'liq kenglik) — yoki cart_r06 boshqa lookka o'tkazilsin (slot 23-noy 02:00 Toshkent).
+2. PAPER BO'SH: kadrning ~55% i bo'sh krem; foto kichik (kenglikning 80%, balandlikning 18%). Foto balandligi ≥35%, raqam va subtitr orasida bo'shliq qolmasin, Buck ≥1/4 kadr. Bitta sahnada foto TO'LIQ sahifa bo'lsin.
+3. KADR TEMPI HALI SEKIN (per_second dan tashqari): 4.3–6.9 s/kesim; me'yor ≤2 s. Kamera siljishi kesim hisoblanmaydi — boshqa lavha/boshqa plan kerak. 27 s video = ≥14 xil tasvir.
+4. gta_how_big hali qorong'i (0.18) va eski shablonga 0.69 gacha o'xshash — scale_ladder pog'onalari (Oy, XKS, taxlam) to'liq ekranli yorqin lavha/grafika bo'lsin, vault emas. Keyingi narvon videosida.
+5. gta_per_second: "$3.79B" 8 kadrdan 4 tasida — raqam bir marta, qolganida yangi tasvir.
+6. NAVBATDA HALI ESKI SHABLON (Metricool): BF vs CM 436383257/436383285 (22-noy 23:00 — ENG YAQIN, R-05), pink/blue 436389711/436389720 (23-noy 05:00, R-07), fees 436535579 (23-noy 20:00, R-08), no seat 436864779/436864859 (24-noy 02:00, R-02), subscriptions 436864890/436865045 (24-noy 05:00, R-03). Slotdan ≥30 daq oldin almashtir yoki sur.
+7. Hali yo'q: ikkinchi ovoz bilan birorta video (C-01, C-02, V-02, R-02, R-05, R-07), komediya harakatlari (doubletake/jawdrop/…) ishlatilgan video, V-01 (buck tarixi).
+INSTAGRAM @redfrocco: T-04 Reel CHIQDI (ikkinchi urinish; birinchisida konteyner 20 s da so'ralgan — kamida 45 s kut): https://www.instagram.com/reel/DgBBJi1HK90/ . Rocco Reel'lari endi vidiq_instagram_publish_reel bilan, platformAccountId 29264618826539059, isAiGenerated true. r01v2 — yuzli klip almashtirilgach.
