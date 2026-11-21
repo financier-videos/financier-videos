@@ -2,6 +2,7 @@
 Har ishga tushishda: tepadagi OCHIQ bandni ol → bajar → sina → natija bilan "BAJARILDI <sana>: ..." yoki "QAYTARILDI: sabab". Yangi muammo topilsa (qc_gate WARN/FAIL, past ko'rsatkich, skill sinalmagan, Shohjahon shikoyati) — shu yerga qo'sh. Kamida 5 ta OCHIQ band doim bo'lsin.
 
 ## OCHIQ
+0. SESSIYALAR KOORDINATSIYASI (2026-11-21): ish boshida `git ls-remote origin` — `claude/*` branchlarda media'dan yangi commit bo'lsa, o'qi va takrorlama; post o'chirish/surishdan oldin matnini repodagi desc bilan solishtir. Kod sessiyasining claude/lucid-volta-x5cic0 dagi dvigatel v6.14 ni media'ga birlashtirish kerak (boshqa sessiyalar eski dvigatelda qolmasin).
 1. Looklar (BUYURTMA 6): dvigatelga "paper", "fullbleed", "split" — Financier uchun; navbatdagi videolarni look bilan qayta render.
 1b. Rocco: BUYURTMA 5 (GTA 6) — 2 Short; keyin "package held" qo'ng'iroq sahnasi (ikki ovozli dialog — dvigatelga sahna "voice" maydoni kerak).
 2. Yorug'lik A/B: keyingi 4 Short spec'ida "bg_bright": 1.4, 4 tasida 1.0 → 72 soatdan keyin o'rtacha ko'rish % (growth_log 30).
@@ -13,6 +14,7 @@ Har ishga tushishda: tepadagi OCHIQ bandni ol → bajar → sina → natija bila
 8. hyperframes (NOMZOD) — 7 kun sinalmasa o'chirish (2026-11-27).
 
 ## BAJARILDI
+- BAJARILDI 2026-11-21 23:45: buffer_post.py delete endi postni o'chirishdan oldin work/rocco/deleted_posts/<id>.json ga zaxiralaydi va matn boshini chiqaradi (xato o'chirishni tiklash oson).
 - 2026-11-21: Rocco 1-Short (brushing) + Rocco uslubi (dvigatel v6.12) + Rocco sprite generatori; airport_cap qayta render (grafik +15% ko'rinmasdi).
 - 2026-11-21: Rocco ovozi yaratildi (voice_id eYibgGvZyWzJUi8HBmQM) — rocco.md.
 - 2026-11-21 18:45: Rocco avatar/banner/tavsif/izohlar — chat sessiyasi (Chrome). Brauzer ishi → night_order "CHAT UCHUN".

@@ -102,3 +102,7 @@ Har kuni KAMIDA bitta yozuv. Format: sana — O'RGANILDI (manba, sana) → O'ZGA
 32. O'RGANILDI (2026-11-21, navbatdagi 8 video ko'rigi): grafik ustuni animatsiyasi (at + 0.5 s) qisqa sahnada tugamaydi — tomoshabin asosiy raqamni KO'RMAYDI (airport_cap: +15% o'rniga +11%). Teng oraliqli kontakt-varaq animatsiya o'rtasini olib yolg'on xato ko'rsatadi; eski rendered.json boshqa render vaqtlarini beradi.
    O'ZGARTIRILDI: dvigatel v6.10 (ustunlar sahna oxiridan 0.7 s oldin to'liq; loop jumlasida "..." TTS ga ketmaydi); qc_gate — kontakt-varaq har sahnaning 80% nuqtasidan, rendered.json davomiyligi mos kelmasa ogohlantiradi; map_insert yaqin marshrutni zoom qiladi. airport_cap b4 bilan almashtirildi.
    O'LCHOV: keyingi 10 videoda "asosiy raqam ekranda to'liq ko'rinmadi" holatlari soni (maqsad 0); airport_cap ko'rishi va o'rtacha ko'rish % (22-noy 10:00 ET).
+
+### 2026-11-21 23:40 Toshkent — C ishi (vazifa sessiyasi)
+O'RGANILDI: ikki sessiya bir vaqtda ishladi (kod sessiyasi claude/lucid-volta branchida, vazifa sessiyasi media'da); vazifa sessiyasi Buffer'dagi post ID ni "eski r01" deb o'chirdi, aslida u yangi r01 v2 edi. O'ZGARTIRILDI: Buffer/Metricool postini o'chirishdan OLDIN matnini repodagi spec/desc bilan solishtirish va boshqa branchlarni (`git ls-remote origin`) tekshirish — improvement_backlog ga band. O'LCHOV: r01 v2 22:00 UTC da chiqdimi — keyingi ishda Buffer list.
+Raqamlar: jami 1,878 (+166), obunachi 3 (+1); "3 Secrets on a $20 Bill" 3.5 soatda 146.
