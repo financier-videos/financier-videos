@@ -143,7 +143,7 @@ Sarlavha: "Airport Prices Actually Have a Limit". Izoh savoli: "Worst airport pr
 G'oya manbasi: Kellan Henneberry videosidagi "ranking" format (faqat format; kontent — o'zimizniki). 5–6 band, ARALASH tartib, #1 oxirida; har band — rasmiy manbali to'lov (masalan: bank overdraft — CFPB; konsert/chipta "service fee" — FTC junk fees qoidasi 2025; mehmonxona "resort fee" — FTC; aviakompaniya bagaj — DOT/BTS; ATM tarmoqdan tashqari — Bankrate yillik so'rovi). Har raqam render oldidan joriy manbadan olinadi; tasdiqlanmagani olib tashlanadi.
 Ko'rinish: tepada 2 qatorli sarlavha "RANKING THE / SNEAKIEST FEES" (kalit "SNEAKIEST FEES" — teal), har bandda katta "#N" stat + Buck reaksiyasi (har bandda boshqa kayfiyat), #1 dan oldin beat. Izoh savoli: "Which fee made you angriest?" Theme: ember. Emotsiya: "adolatsizlik" (yengil).
 
-## [SHOSHILINCH, G'OYA 2026-11-21 C] S-13 "Gift Budgets Just Dropped 21%"
+## [CHIQADI 2026-11-23 21:00 ET — "Gift Budgets Just Dropped 21%", myth_bust, work/2026-11-22t/s13_gifts.json; NerdWallet $879 vs $1,107 tekshirildi] S-13 "Gift Budgets Just Dropped 21%"
 - Fakt: NerdWallet 2026 Holiday Spending Report (2026-11-03, n>2,000 AQSh kattalari): 92% bayramga sarflaydi, o'rtacha $2,525; 41% Black Friday sale kutadi; 37% byudjet qo'yadi. "$880 sovg'a, −21%" — mahalliy TV (Gray, 2026-11-03) iqtibosi, NerdWallet sahifasida render oldidan QAYTA TEKSHIR. Penny Hoarder 2026 (Pollfish n=1,000): 38% asosiy xaridni Black Fridaydan oldin.
 - Burchak: guess_reveal — "Guess how much less people plan to spend on gifts this year" → −21%; Buck jawdrop. 27-noyabrgacha (sanaga bog'liq).
 ## [G'OYA 2026-11-21 C, trend skanidan] S-14 "Why Every US Bill Is the Same Size"
