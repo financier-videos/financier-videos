@@ -1,15 +1,15 @@
 {
  "0_freshness": {
-  "status": "PASS",
-  "note": "up to date"
+  "status": "FAIL",
+  "note": "repo 4 commit(s) behind origin/media - git pull --rebase and re-render"
  },
  "1_platform_check": {
   "status": "PASS",
-  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    61.0 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -13.8 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    67.5 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.0 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.4 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
  },
  "2_loudness": {
   "status": "PASS",
-  "note": "I = -13.8 LUFS (target -14)"
+  "note": "I = -14.0 LUFS (target -14)"
  },
  "3_blackdetect": {
   "status": "PASS",
@@ -17,15 +17,15 @@
  },
  "4_export": {
   "status": "PASS",
-  "note": "h264 High, 12.4 Mbit/s, 41.1s, stereo"
+  "note": "h264 High, 12.4 Mbit/s, 45.7s, stereo"
  },
  "5_voice_check": {
   "status": "PASS",
-  "note": "{\n \"rc\": 0,\n \"match\": 1.0,\n \"rechecked_ok\": [],\n \"missing\": [],\n \"extra\": [],\n \"heard\": \"She opens the junk drawer looking for tape and finds $40 a gift card from two birthdays ago. And it's not just her drawer. 43% of American adults have at least one unused gift card or store credit. The average? $244 each. Now add up every drawer in the country. About $27 billion. Just sitting there. Gift cards. The only money that hides from you. Some expire. Some stores close. Some just get forgotten. So go check your drawer. Then tell me what you found.\"\n}"
+  "note": "checked_ok\": [],\n \"missing\": [\n  \"junk\"\n ],\n \"extra\": [\n  \"jump\"\n ],\n \"heard\": \"There's probably money hiding in your kitchen right now. She opens the jump drawer looking for tape and finds $40. A gift card from two birthdays ago. And it's not just her drawer. 43% of American adults have at least one unused gift card or store credit. The average? $244 each. Now add up every drawer in the country. About $27 billion. Just sitting there. Gift cards. The only money that hides from you. Some expire. Some stores close. Some just get forgotten. So go check your drawer. Then tell me what you found.\"\n}"
  },
  "6_prosody": {
   "status": "PASS",
-  "note": "sed] The average? Two hundred forty-four dollars each\n 6  21.58s range=11.9 st  gap=0.24  ok  | [building up] Now add up every drawer in the country...\n 7  24.55s range=13.0 st  gap=0.57  ok  | [amazed] About twenty-seven billion dollars. Just sitting th\n 8  29.04s range= 9.0 st  gap=0.31  ok  | [deadpan] Gift cards. The only money that hides from you.\n 9  32.38s range=15.8 st  gap=0.7  ok  | Some expire. Some stores close. Some just get... forgotten.\n10  37.74s range= 7.8 st  gap=0.42  ok  | [smug] So go check your drawer. Then tell me what you found.\n{\"median_f0\": 192.2, \"flagged_scenes\": 0}"
+  "note": "sed] The average? Two hundred forty-four dollars each\n 7  26.20s range=11.2 st  gap=0.24  ok  | [building up] Now add up every drawer in the country...\n 8  29.17s range=13.6 st  gap=0.57  ok  | [amazed] About twenty-seven billion dollars. Just sitting th\n 9  33.66s range= 9.1 st  gap=0.31  ok  | [deadpan] Gift cards. The only money that hides from you.\n10  37.00s range=15.0 st  gap=0.7  ok  | Some expire. Some stores close. Some just get... forgotten.\n11  42.36s range= 7.9 st  gap=0.42  ok  | [smug] So go check your drawer. Then tell me what you found.\n{\"median_f0\": 183.2, \"flagged_scenes\": 0}"
  },
  "7_title": {
   "status": "PASS",
@@ -41,11 +41,11 @@
  },
  "10_look": {
   "status": "WARN",
-  "note": "FAIL  0.89  (layout 0.95, palette 0.78, tone 0.94)  vs 2026-11-25_cancel_c02.mp4\nFAIL  0.83  (layout 0.91, palette 0.76, tone 0.76)  vs 2026-11-26_buck_v01.mp4\nFAIL  0.90  (layout 0.92, palette 0.91, tone 0.83)  vs 2026-11-25_print_v04.mp4\nFAIL  0.89  (layout 0.91, palette 0.85, tone 0.88)  vs 2026-11-25_bank_c01.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+  "note": "FAIL  0.91  (layout 0.94, palette 0.86, tone 0.92)  vs 2026-11-25_cancel_c02.mp4\nFAIL  0.82  (layout 0.95, palette 0.66, tone 0.79)  vs 2026-11-26_buck_v01.mp4\nFAIL  0.88  (layout 0.91, palette 0.84, tone 0.86)  vs 2026-11-25_print_v04.mp4\nFAIL  0.89  (layout 0.92, palette 0.85, tone 0.90)  vs 2026-11-25_bank_c01.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
  },
  "11_pacing": {
   "status": "PASS",
-  "note": "28 hard cuts (ffmpeg scene>0.22) in 41.1 s = 1.5 s/cut (need >= 20); engine planned 27"
+  "note": "30 hard cuts (ffmpeg scene>0.22) in 45.7 s = 1.5 s/cut (need >= 22); engine planned 31"
  },
  "12_script": {
   "status": "SKIP",
@@ -57,11 +57,11 @@
  },
  "15_competitors": {
   "status": "PASS",
-  "note": "2 fresh benchmark(s) ['8Sp2jBDdTDM', 'ftA18KGBrwM'] (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)"
+  "note": "3 fresh benchmark(s) ['8Sp2jBDdTDM', 'ftA18KGBrwM', 'vcPnUMJNdkw'] (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)"
  },
  "13_skills_line": {
   "status": "PASS",
-  "note": "Skillar: competitor_watch, eleven_v3 his teglari, vidiq_find_broll (Pexels tortma, sovg'a kartasi), WebSearch (Bankrate tekshiruvi), empty_check, qc_gate; ishlatilmadi: \u2014"
+  "note": "Skillar: YT analitika (vidiq_channel_analytics: engaged 30%), cold open + katta yuz 1-kadrda, competitor_watch, eleven_v3, empty_check, qc_gate; ishlatilmadi: \u2014"
  },
- "verdict": "PASS"
+ "verdict": "FAIL"
 }

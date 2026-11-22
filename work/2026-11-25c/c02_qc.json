@@ -1,11 +1,11 @@
 {
  "0_freshness": {
-  "status": "PASS",
-  "note": "up to date"
+  "status": "FAIL",
+  "note": "repo 3 commit(s) behind origin/media - git pull --rebase and re-render"
  },
  "1_platform_check": {
   "status": "PASS",
-  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    45.1 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.4 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.2 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    50.0 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.4 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
  },
  "2_loudness": {
   "status": "PASS",
@@ -17,15 +17,15 @@
  },
  "4_export": {
   "status": "PASS",
-  "note": "h264 High, 12.5 Mbit/s, 30.3s, stereo"
+  "note": "h264 High, 12.5 Mbit/s, 33.6s, stereo"
  },
  "5_voice_check": {
   "status": "PASS",
-  "note": "{\n \"rc\": 0,\n \"match\": 1.0,\n \"missing\": [],\n \"extra\": [],\n \"heard\": \"Cancel. Are you sure? Yes. Are you really sure? Yes! What if we said please? No. Here's 50% off. I haven't opened you since March. We noticed. We kept charging. Cancel! Okay. To cancel. Call us between 2 and 205 by fax. Americans pay about $21 a month for subscriptions they never use. Asking for a friend. The friend is me.\"\n}"
+  "note": "{\n \"rc\": 0,\n \"match\": 1.0,\n \"rechecked_ok\": [],\n \"missing\": [],\n \"extra\": [],\n \"heard\": \"I tried to cancel a subscription. It begged. Cancel. Are you sure? Yes. Are you really sure? Yes! What if we said, \\\"please\\\"? No. Here's 50% off. I haven't opened you since March. We noticed. We kept charging. Cancel! Okay. To cancel, call us between 2 and 205. by fax. Americans pay about $21 a month for subscriptions they never use. Asking for a friend. The friend is me.\"\n}"
  },
  "6_prosody": {
   "status": "PASS",
-  "note": " Here's fifty percent off!\n 9  10.52s range= 7.5 st  gap=0.13  ok  | [dryly] I haven't opened you since March.\n10  12.53s range=13.8 st  gap=0.17  ok  | [cheerful] We noticed! We kept charging.\n11  14.71s range= 6.5 st  gap=0.1  ok  | [shouting] CANCEL!\n12  16.20s range=15.3 st  gap=0.49  ok  | [sweetly] Okay! To cancel, call us. Between two and two-oh-f\n13  21.57s range=14.5 st  gap=0.29  ok  | [sighs] Americans pay about twenty-one dollars a month for s\n14  28.00s range=12.1 st  gap=0.51  ok  | [pause] [deadpan] Asking for a friend. The friend is me.\n{\"median_f0\": 214.1, \"flagged_scenes\": 0}"
+  "note": "Here's fifty percent off!\n10  13.89s range= 7.0 st  gap=0.13  ok  | [dryly] I haven't opened you since March.\n11  15.90s range=12.9 st  gap=0.25  ok  | [cheerful] We noticed! We kept charging.\n12  18.08s range= 5.9 st  gap=0.11  ok  | [shouting] CANCEL!\n13  19.57s range=15.2 st  gap=0.49  ok  | [sweetly] Okay! To cancel, call us. Between two and two-oh-f\n14  24.94s range=14.5 st  gap=0.29  ok  | [sighs] Americans pay about twenty-one dollars a month for s\n15  31.37s range=11.5 st  gap=0.51  ok  | [pause] [deadpan] Asking for a friend. The friend is me.\n{\"median_f0\": 210.9, \"flagged_scenes\": 0}"
  },
  "7_title": {
   "status": "PASS",
@@ -41,11 +41,11 @@
  },
  "10_look": {
   "status": "WARN",
-  "note": "FAIL  0.87  (layout 0.94, palette 0.75, tone 0.94)  vs 2026-11-24_subs_r03_b8.mp4\nFAIL  0.74  (layout 0.90, palette 0.46, tone 0.90)  vs 2026-11-24_noseat_r02_b8.mp4\nFAIL  0.86  (layout 0.90, palette 0.86, tone 0.79)  vs 2026-11-23_fees_r08_b8.mp4\nFAIL  0.86  (layout 0.92, palette 0.82, tone 0.80)  vs 2026-11-23_bills_v03.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+  "note": "FAIL  0.85  (layout 0.94, palette 0.74, tone 0.83)  vs 2026-11-26_buck_v01.mp4\nFAIL  0.85  (layout 0.88, palette 0.79, tone 0.89)  vs 2026-11-25_print_v04.mp4\nFAIL  0.91  (layout 0.93, palette 0.89, tone 0.91)  vs 2026-11-25_bank_c01.mp4\nFAIL  0.91  (layout 0.92, palette 0.91, tone 0.90)  vs 2026-11-24_subs_r03_b8.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
  },
  "11_pacing": {
   "status": "PASS",
-  "note": "23 hard cuts (ffmpeg scene>0.22) in 30.3 s = 1.3 s/cut (need >= 15); engine planned 23"
+  "note": "25 hard cuts (ffmpeg scene>0.22) in 33.6 s = 1.3 s/cut (need >= 16); engine planned 25"
  },
  "12_script": {
   "status": "SKIP",
@@ -53,7 +53,7 @@
  },
  "14_empty_panel": {
   "status": "PASS",
-  "note": "PASS: largest one-colour flat area 19% of the frame (limit 20%)"
+  "note": "PASS: largest one-colour flat area 8% of the frame (limit 20%)"
  },
  "15_competitors": {
   "status": "PASS",
@@ -61,7 +61,7 @@
  },
  "13_skills_line": {
   "status": "PASS",
-  "note": "Skillar: competitor_watch, comedy.md (takroriy hazil 'Are you sure?', reaksiyalar), eleven_v3 his teglari, footage_bank, empty_check, qc_gate; ishlatilmadi: vidiq_find_broll (bank yetarli)"
+  "note": "Skillar: YT analitika (vidiq_channel_analytics: engaged 30%), cold open + katta yuz 1-kadrda, competitor_watch, eleven_v3, empty_check, qc_gate; ishlatilmadi: \u2014"
  },
- "verdict": "PASS"
+ "verdict": "FAIL"
 }
