@@ -39,13 +39,15 @@ if opt["gpu"]:
     cp = bpy.context.preferences.addons["cycles"].preferences
     for kind in ("OPTIX", "CUDA"):
         try:
-            cp.compute_device_type = kind; cp.get_devices()
+            cp.compute_device_type = kind; cp.refresh_devices()   # Blender 5.x: get_devices() alone does not list new GPUs
             gd = [d for d in cp.devices if d.type == kind]
+            print("RENDER_DEVICE probe", kind, [(d.name, d.type) for d in cp.devices], flush=True)
             if gd:
                 for d in cp.devices: d.use = d.type == kind
                 sc.cycles.device = "GPU"; dev = kind + ":" + gd[0].name; break
         except Exception as e: print("no", kind, e)
 print("RENDER_DEVICE", dev, flush=True)
+if opt["gpu"] and dev == "CPU": sys.exit("RENDER_DEVICE error: --gpu asked but no GPU found (not rendering on CPU)")
 rw, rh = (int(x) for x in opt["res"].split("x"))
 sc.render.resolution_x, sc.render.resolution_y = rw, rh; sc.render.film_transparent = True
 sc.render.image_settings.file_format = "PNG"; sc.render.image_settings.color_mode = "RGBA"
