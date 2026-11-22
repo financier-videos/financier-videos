@@ -128,18 +128,50 @@ def sprite(name, size):
 
 # ---------------- 3D cast (BUYURTMA 9): sprites rendered by work/rocco/rocco3d/build_lib.py ----------------
 LIB3D = os.environ.get("FIN_ROCCO3D", "")  # e.g. /tmp/rocco3d_lib -> rocco/penny/slick drawn from 3D renders
-MAP3D = {"rocco": {"happy": "happy", "sideeye": "sly", "smug": "sly", "sad": "sad", "point": "happy", "thumbsup": "happy",
+MAP3D = {"rocco": {"happy": "happy", "laugh": "happy", "sly": "sly", "neutral": "neutral", "sideeye": "sly", "smug": "sly", "sad": "sad", "point": "happy", "thumbsup": "happy",
                    "shocked": "shock", "shock": "shock", "angry": "angry"},
          "penny": {"happy": "happy", "shock": "shock", "sad": "sad", "hope": "relieved", "nervous": "sad", "angry": "angry", "sly": "sly",
                    "relieved": "relieved"},
-         "slick": {"sly": "sly", "panic": "shock", "laugh": "happy", "angry": "angry", "sad": "sad", "neutral": "neutral"}}
+         "slick": {"sly": "sly", "shock": "shock", "happy": "happy", "panic": "shock", "laugh": "happy", "angry": "angry", "sad": "sad", "neutral": "neutral"}}
+MAP_R3 = {}
 _S3D = {}
 POSE_NOW = {}  # per-shot body poses: spec shot keys r_pose / p_pose / s_pose
 
 
+# animated performance (2026-11-22): FIN_PERF_PLAN=plan.json -> dry run that records every character's state per frame;
+# FIN_ROCCO3D_ANIM=dir -> use dir/<who>/<frame>.png rendered by work/rocco/rocco3d/perform.py instead of library sprites
+PLAN_OUT = os.environ.get("FIN_PERF_PLAN", ""); ANIM = os.environ.get("FIN_ROCCO3D_ANIM", "")
+PLAN = {"rocco": {}, "penny": {}, "slick": {}}; FRAME_NOW = [0]; VIS = []; VIS_WHO = []; SPK_NAME = {"R": "rocco", "P": "penny", "S": "slick"}
+
+
+def viseme(c):  # Preston Blair / Rhubarb shape set from the spoken letter
+    c = c.lower()
+    if c in "mbp": return "A"
+    if c in "a": return "D"
+    if c in "ei": return "C"
+    if c in "o": return "E"
+    if c in "uw": return "F"
+    if c in "fv": return "G"
+    if c in "l": return "H"
+    if c.isalpha(): return "B"
+    return "X"
+
+
 def char3d(im, who, cx, feet_y, height, mood, talk, t, flip=False, pose=None):
     """Paste a 3D-rendered character: feet at feet_y, sprite height `height` px (sprite feet are at 91.6 % of its height)."""
-    m = MAP3D[who].get(mood, "neutral")
+    m = MAP3D[who].get(mood, "neutral"); fi = FRAME_NOW[0]
+    if PLAN_OUT:
+        sp_ = VIS_WHO[fi] if fi < len(VIS_WHO) else ""
+        PLAN[who][fi] = {"mood": m, "pose": pose if pose in ("point", "arms_up", "shrug") else "idle", "talk": round(float(talk), 3),
+                         "vis": VIS[fi] if sp_ == who else "X", "look": (1 if cx < W / 2 else -1) * (-1 if flip else 1), "h": int(height)}
+        return
+    af = next((x for x in (os.path.join(ANIM, who, f"{fi:05d}.{e}") for e in ("png", "webp")) if os.path.exists(x)), "") if ANIM else ""
+    if af:
+        sp = Image.open(af).convert("RGBA"); sp = sp.resize((int(height * sp.width / sp.height), int(height)), Image.LANCZOS)
+        if flip: sp = sp.transpose(Image.FLIP_LEFT_RIGHT)
+        sh = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        ImageDraw.Draw(sh).ellipse([cx - height * 0.2, feet_y - height * 0.02, cx + height * 0.2, feet_y + height * 0.025], fill=(0, 0, 0, 70)); im.alpha_composite(sh)
+        im.alpha_composite(sp, (int(cx - sp.width / 2), int(feet_y - sp.height * 0.916))); return
     if talk < 0.12: mouth = "closed"
     elif talk < 0.4: mouth = "half"
     elif talk < 0.7: mouth = ("e", "o")[int(t * 8) % 2]
@@ -441,6 +473,14 @@ def compose(shot, lt, t, talkR, talkP, extra, talkS=0.0, fimg=None, fimg2=None):
         rocco(im, W * 0.70, H * 0.76, 700, moodR, talkR, t, act, act_t)
     elif k == "cu_r":
         rocco(im, W * 0.52, H * 0.93, 1250, moodR, talkR, t, act, act_t)
+    elif k == "trio" and LIB3D:  # status inversion wide (Pip&Rue 6.7M shot 1/5): small loud scammer vs a huge calm detective
+        rx = shot.get("rx", 0.80)  # rx ~1.0: only Rocco's side enters the frame (the benchmark's giant legs in shot 1)
+        char3d(im, "slick", W * (0.20 if rx > 0.9 else 0.16), H * 0.90, 980, shot.get("s", "sly"), talkS, t, False, POSE_NOW.get("s"))
+        char3d(im, "penny", W * (0.58 if rx > 0.9 else 0.40), H * 0.93, 680, moodP, talkP, t, False, POSE_NOW.get("p"))
+        char3d(im, "rocco", W * rx, H * 1.0, 1600, MAP_R3.get(moodR, moodR), talkR, t, False, POSE_NOW.get("r"))
+    elif k == "loom_r" and LIB3D:  # Rocco looming from below + the scammer small in the foreground (shot 2/4 of the benchmark)
+        char3d(im, "rocco", W * 0.60, H * 1.20, 2350, MAP_R3.get(moodR, moodR), talkR, t, False, POSE_NOW.get("r"))
+        char3d(im, "slick", W * 0.10, H * 1.14, 1350, shot.get("s", "sly"), talkS, t, False, POSE_NOW.get("s"))
     elif k == "cu_p":  # Penny big, Rocco reacting from the right edge (Rocco on screen >= 70% of the frames)
         penny(im, W * 0.42, H * 0.52, 760, moodP, talkP, t)
         rocco(im, W * 0.88, H * 0.99, 700, moodR, talkR, t, act, act_t)
@@ -533,11 +573,16 @@ def main():
     lines = [tuple(x) for x in spec["lines"]]
     LINE_SPK[:] = [a for a, _ in lines]; HOT.update(w.upper() for w in spec.get("hot", []))
     d, mp3 = dialogue(lines, cache)
+    spd = float(spec.get("speed", 1.0))  # snappier delivery (benchmarks: punchline 100-150 ms after the setup); pitch kept (atempo)
+    if spd != 1.0:
+        d = json.loads(json.dumps(d)); al = d["alignment"]
+        for k_ in ("character_start_times_seconds", "character_end_times_seconds"): al[k_] = [x / spd for x in al[k_]]
+        for sg in d["voice_segments"]: sg["start_time_seconds"] /= spd; sg["end_time_seconds"] /= spd
     segs = sorted([dict(x) for x in d["voice_segments"]], key=lambda s: s["start_time_seconds"])
     words = words_from(d, lines)
     # ---- audio: dialogue + effects ----
     work = tempfile.mkdtemp(prefix="rc_"); wav = os.path.join(work, "v.wav")
-    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", mp3, "-ar", "48000", "-ac", "1", wav], check=True)
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", mp3] + (["-filter:a", f"atempo={spd}"] if spd != 1.0 else []) + ["-ar", "48000", "-ac", "1", wav], check=True)
     import soundfile as sf, make_video as mv
     y, sr = sf.read(wav, dtype="float32")
     # dramatic pauses (viral benchmark Pip&Rue: ~0.4 s silence before the shock line, 0.1 s snap after it): {"line": seconds}
@@ -553,6 +598,18 @@ def main():
         words = [(w, _sh(a), _sh(b), i) for w, a, b, i in words]
         sf.write(wav, y, sr)
     lt_ = {s["dialogue_input_index"]: (s["start_time_seconds"], s["end_time_seconds"]) for s in segs}
+    _al = d["alignment"]; _cs, _ce, _ch = _al["character_start_times_seconds"], _al["character_end_times_seconds"], _al["characters"]
+    _shf = _sh if pb else (lambda x: x)
+    _vt = []  # (t0, t1, viseme, speaker)
+    for sg0, sg in zip(sorted(d["voice_segments"], key=lambda s: s["start_time_seconds"]), segs):
+        depth = 0; spk = SPK_NAME.get(lines[sg0["dialogue_input_index"]][0], "")
+        for k in range(sg0["character_start_index"], min(sg0["character_end_index"], len(_ch))):
+            c = _ch[k]
+            if c == "[": depth += 1
+            if depth:
+                if c == "]": depth -= 1
+                continue
+            _vt.append((_shf(_cs[k]), _shf(_ce[k]), viseme(c), spk))
     voice_end = max(e for _, e in lt_.values()); total = voice_end + spec.get("tail", 3.0)
     y = np.concatenate([y, np.zeros(int((total - len(y) / sr) * sr) + sr, np.float32)])
     rng = np.random.default_rng(3); fx = np.zeros_like(y)
@@ -604,7 +661,18 @@ def main():
         cur.append(w)
         if len(cur) == 3 or re.search(r"[.,!?…]$", w[0]) or (len(cur) and w is words[-1]): chunks.append(cur); cur = []
     if cur: chunks.append(cur)
-    enc = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
+    nfr_ = int(total * FPS) + 1; VIS[:] = ["X"] * nfr_; VIS_WHO[:] = [""] * nfr_
+    for a_, b_, v_, w_ in _vt:
+        for f_ in range(int(a_ * FPS), min(nfr_, int(b_ * FPS) + 1)):
+            if a_ <= (f_ + 0.5) / FPS < max(b_, a_ + 1 / FPS): VIS[f_] = v_; VIS_WHO[f_] = w_
+    if PLAN_OUT:
+        class _Null:
+            def write(self, b): pass
+            def close(self): pass
+        class _E: stdin = _Null(); returncode = 0
+        def wait(self): pass
+        _E.wait = lambda self=None: None; enc = _E()
+    else: enc = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
                             "-i", os.path.join(work, "mix.wav"), "-c:v", "libx264", "-preset", "medium", "-crf", "14", "-maxrate", "14M", "-bufsize", "24M",
                             "-pix_fmt", "yuv420p", "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
                             "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-ar", "48000", "-ac", "2", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", out],
@@ -630,6 +698,7 @@ def main():
         kk = int(lt * FPS)
         fimg = footage_img(*sh["_bg"][:2], kk, sh["_bg"][2], sh.get("kb", "in"), sh.get("bright", 1.1), sh.get("blur", 0)) if sh.get("_bg") else None
         fimg2 = footage_img(*sh["_bg2"][:2], kk, sh["_bg2"][2], "in", sh.get("bright2", 1.2), 0) if sh.get("_bg2") else None
+        FRAME_NOW[0] = fi
         POSE_NOW.clear(); POSE_NOW.update({k[0]: sh[k] for k in ("r_pose", "p_pose", "s_pose") if sh.get(k)})
         im = compose(sh, lt, t, e if w_ == "R" else 0.0, e if w_ == "P" else 0.0, None, e if w_ == "S" else 0.0, fimg, fimg2)
         cam = sh.get("cam", {})  # per-shot framing (benchmarks: wide -> low/OTS -> MCU -> ECU micro-zoom on the shock line)
@@ -644,6 +713,9 @@ def main():
         if sh.get("hook") and lt < 2.2: txt(im, (W / 2, H * 0.08), sh["hook"], 104, (255, 255, 255), sw=12)
         enc.stdin.write(im.convert("RGB").tobytes())
     enc.stdin.close(); enc.wait()
+    if PLAN_OUT:
+        json.dump({"fps": FPS, "frames": int(total * FPS), "chars": PLAN}, open(PLAN_OUT, "w"))
+        print(json.dumps({"plan": PLAN_OUT, "frames_per_char": {k: len(v) for k, v in PLAN.items()}})); return
     print(json.dumps({"rc": enc.returncode, "out": out, "seconds": round(total, 2), "cuts": cuts,
                       "renderer": "rc_render", "renderer_path": "work/rocco/rocco2/rc_render.py", "engine_sha": _sha,
                       "rendered_at": _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),

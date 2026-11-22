@@ -1,0 +1,284 @@
+{
+ "id": "RC-12",
+ "title": "He Tried to Scam the Wrong Piggy Bank",
+ "structure": "1:1 benchmark structure (Pip&Rue 6.7M): bravado -> 'meet my friend' twist -> stammer -> deadpan -> cheeky deal -> menace with 0.45 s pause -> instant shameless retort -> big laugh -> dry tag",
+ "style": "rocco3d",
+ "tail": 1.6,
+ "amb": "street",
+ "hot": [
+  "BANK",
+  "FEE",
+  "DETECTIVE",
+  "ARREST",
+  "FREE"
+ ],
+ "lines": [
+  [
+   "S",
+   "[angry, puffed up] Hey! Back off! I'm her BANK! She owes me a fee!"
+  ],
+  [
+   "P",
+   "[unimpressed, flat] Slick, meet my friend. Detective Rocco."
+  ],
+  [
+   "S",
+   "[nervous stammer] D-d-detective? But you're a RACCOON!"
+  ],
+  [
+   "R",
+   "[deadpan, low] Takes one to catch one."
+  ],
+  [
+   "S",
+   "[sleazy] So... fifty-fifty?"
+  ],
+  [
+   "R",
+   "[slow, menacing, very low] You're under arrest."
+  ],
+  [
+   "S",
+   "[instantly cheerful, fast] So I get a FREE ride!"
+  ],
+  [
+   "R",
+   "[booming belly laugh] Ha ha HA! I like this one!"
+  ],
+  [
+   "P",
+   "[dry] You're still arresting him."
+  ],
+  [
+   "R",
+   "[deadpan] Oh, absolutely."
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "trio",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "line": 0,
+   "from": 0,
+   "blur": 1,
+   "s": "angry",
+   "s_pose": "arms_up",
+   "p": "sly",
+   "r": "sideeye",
+   "hook": "HE PICKED THE WRONG PIGGY BANK",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "rx": 1.02
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "line": 0,
+   "from": 0.55,
+   "blur": 1,
+   "s": "angry",
+   "s_pose": "point",
+   "cam": {
+    "z": 1.2,
+    "push": 0.1,
+    "fy": 0.4
+   }
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "line": 1,
+   "from": 0,
+   "blur": 1,
+   "p": "sly",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.15,
+    "push": 0.06,
+    "fy": 0.42
+   }
+  },
+  {
+   "kind": "loom_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "line": 1,
+   "from": 0.62,
+   "blur": 1,
+   "r": "sideeye",
+   "s": "shock"
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "line": 2,
+   "from": 0,
+   "blur": 1,
+   "s": "shock",
+   "s_pose": "arms_up",
+   "cam": {
+    "z": 1.4,
+    "push": 0.06,
+    "fy": 0.36
+   }
+  },
+  {
+   "kind": "loom_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "line": 3,
+   "from": 0,
+   "blur": 1,
+   "r": "sideeye",
+   "s": "shock",
+   "cam": {
+    "z": 1.0,
+    "push": 0.08
+   }
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "line": 4,
+   "from": 0,
+   "blur": 1,
+   "s": "sly",
+   "s_pose": "shrug",
+   "cam": {
+    "z": 1.25,
+    "push": 0.08,
+    "fy": 0.38
+   }
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "line": 5,
+   "from": 0,
+   "blur": 1,
+   "r": "angry",
+   "cam": {
+    "z": 1.45,
+    "push": 0.12,
+    "fy": 0.47
+   }
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "line": 6,
+   "from": 0,
+   "blur": 1,
+   "s": "happy",
+   "s_pose": "arms_up",
+   "cam": {
+    "z": 1.15,
+    "push": 0.06,
+    "fy": 0.4
+   }
+  },
+  {
+   "kind": "loom_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "line": 7,
+   "from": 0,
+   "blur": 1,
+   "r": "laugh",
+   "r_pose": "arms_up",
+   "s": "happy"
+  },
+  {
+   "kind": "trio",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "line": 7,
+   "from": 0.6,
+   "blur": 1,
+   "s": "happy",
+   "p": "sad",
+   "r": "laugh",
+   "r_pose": "arms_up",
+   "rx": 0.84
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "line": 8,
+   "from": 0,
+   "blur": 1,
+   "p": "sly",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   }
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "line": 9,
+   "from": 0,
+   "blur": 1,
+   "r": "sly",
+   "cam": {
+    "z": 1.3,
+    "push": 0.1,
+    "fy": 0.47
+   }
+  },
+  {
+   "kind": "end",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "blur": 3,
+   "line": 9,
+   "from": 1.0,
+   "l1": "YOUR BANK NEVER SHOWS UP",
+   "l2": "TO COLLECT A \"FEE\"",
+   "l3": "Hang up. Call the number on your card."
+  }
+ ],
+ "pause_before": {
+  "5": 0.45,
+  "8": 0.3
+ },
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "impact",
+   "gain": 0.3
+  },
+  {
+   "line": 1,
+   "word": "rocco",
+   "name": "subboom",
+   "gain": 0.35
+  },
+  {
+   "line": 2,
+   "frac": 0.0,
+   "name": "scratch",
+   "gain": 0.2
+  },
+  {
+   "line": 5,
+   "frac": 0.0,
+   "dt": -0.4,
+   "name": "subboom",
+   "gain": 0.3
+  },
+  {
+   "line": 6,
+   "frac": 0.0,
+   "name": "boing",
+   "gain": 0.25
+  },
+  {
+   "line": 9,
+   "word": "absolutely",
+   "name": "bonk",
+   "gain": 0.3
+  }
+ ],
+ "speed": 1.12
+}
