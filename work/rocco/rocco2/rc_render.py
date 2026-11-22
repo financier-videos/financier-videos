@@ -19,7 +19,7 @@ W, H, FPS = 1080, 1920, 30
 INK = (35, 39, 45)
 FONT = os.path.join(ROOT, "assets/fonts/LilitaOne-Regular.ttf")
 LIB = os.environ.get("FIN_BUCK3D", "/tmp/fin_rocco_lib")
-VOICE = {"R": "hYvMKGEmKYHZz9qvD8oj", "P": "XeHmOH0wYkEbMfZqbCws", "S": "sKpya0iNfGuRwEz634c4"}  # S = Slick, the scammer fox
+VOICE = {"R": "hYvMKGEmKYHZz9qvD8oj", "P": "XeHmOH0wYkEbMfZqbCws", "S": "sKpya0iNfGuRwEz634c4", "B": "eH342qEgJkje3sPOEo6z", "J": "cgSgspJ2msm6clMCkdW9"}  # B = Buck A (Financier host), J = guest (Jessica)  # S = Slick, the scammer fox
 SETS = {"yellow": ((255, 214, 64), (255, 170, 40)), "teal": ((64, 201, 198), (30, 150, 170)), "green": ((178, 236, 120), (96, 200, 110)),
         "pink": ((255, 170, 205), (214, 120, 230)), "sky": ((120, 200, 255), (70, 150, 240)), "peach": ((255, 196, 150), (255, 140, 110))}
 _FC = {}
@@ -196,6 +196,29 @@ def char3d(im, who, cx, feet_y, height, mood, talk, t, flip=False, pose=None):
     sh = Image.new("RGBA", im.size, (0, 0, 0, 0))
     ImageDraw.Draw(sh).ellipse([cx - height * 0.2, feet_y - height * 0.02, cx + height * 0.2, feet_y + height * 0.025], fill=(0, 0, 0, 70)); im.alpha_composite(sh)
     im.alpha_composite(sp, (int(cx - sp.width / 2), int(feet_y - sp.height * 0.916 - (h - sp.height))))
+
+
+BUCK3D = os.environ.get("FIN_BUCK3D_DIR", "/tmp/buck3d")  # assets/buck3d_v3.tar + buck3d_v3_talk.tar extracted (15 fps loops, t1..t3 = mouth)
+_BK = {}
+
+
+def buck(im, cx, feet_y, height, mood="happy", talk=0.0, t=0.0, flip=False, shadow=True):
+    """Buck (Financier host, 3D v3): feet at feet_y; sprite feet sit at ~87 % of the 800 px frame."""
+    lv = 0 if talk < 0.12 else (1 if talk < 0.4 else (2 if talk < 0.7 else 3))
+    idx = int(t * 15) % 15
+    names = ([f"{mood}_t{lv}_{idx:02d}"] if lv else []) + [f"{mood}_{idx:02d}", f"happy_{idx:02d}"]
+    f = next((os.path.join(BUCK3D, n + ".webp") for n in names if os.path.exists(os.path.join(BUCK3D, n + ".webp"))), None)
+    if not f: return
+    key = (f, int(height), flip)
+    if key not in _BK:
+        if len(_BK) > 400: _BK.clear()
+        sp = Image.open(f).convert("RGBA").resize((int(height), int(height)), Image.LANCZOS)
+        _BK[key] = sp.transpose(Image.FLIP_LEFT_RIGHT) if flip else sp
+    sp = _BK[key]
+    if shadow:
+        sh = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        ImageDraw.Draw(sh).ellipse([cx - height * 0.16, feet_y - height * 0.015, cx + height * 0.16, feet_y + height * 0.02], fill=(0, 0, 0, 70)); im.alpha_composite(sh)
+    im.alpha_composite(sp, (int(cx - sp.width / 2), int(feet_y - sp.height * 0.87)))
 
 
 def rocco(im, cx, base_y, size, mood="happy", talk=0.0, t=0.0, act=None, act_t=0.0, flip=False):
@@ -401,12 +424,21 @@ def env_track(wav, segs):
     return e, who
 
 
+TALK_NOW = {}
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+try:
+    import fx_kinds; FXK = fx_kinds.KINDS
+except ImportError: FXK = {}
+
+
 def compose(shot, lt, t, talkR, talkP, extra, talkS=0.0, fimg=None, fimg2=None):
     k = shot["kind"]; im = fimg.copy() if fimg is not None else setbg(shot.get("set", "yellow"))
     moodR = shot.get("r", "happy"); moodP = shot.get("p", "happy")
     act = shot.get("act"); act_t = lt - shot.get("act_at", 0)
     if act and not (0 <= act_t < shot.get("act_len", 1.0)): act = None
-    if k == "slick":  # the scammer in his lair
+    if k in FXK:  # graphic formats (fx_kinds.py): counter, scale, quiz, receipt, chart, grid, ... (2026-11-22)
+        FXK[k](im, shot, lt, t, TALK_NOW, sys.modules[__name__])
+    elif k == "slick":  # the scammer in his lair
         slick(im, W * (0.40 if shot.get("r_peek") else 0.5), H * 0.50, 760, shot.get("s", "sly"), talkS, t)
         if shot.get("r_peek"): rocco(im, W * 0.84, H * 1.0, 820, moodR, talkR, t, act, act_t)  # Rocco stays on screen (preflight #12)
         if shot.get("msg") and lt >= shot.get("msg_at", 0): txt(im, (W * 0.5, H * 0.17), shot["msg"], 96, (255, 226, 60), sw=12, ang=-5)
@@ -541,6 +573,7 @@ def compose(shot, lt, t, talkR, talkP, extra, talkS=0.0, fimg=None, fimg2=None):
 
 LINE_SPK = []  # speaker letter per dialogue line (set in main)
 HOT = set()     # extra spec words drawn yellow
+BRAND = ["RED FLAG ROCCO", (255, 59, 59)]  # spec "brand": ["FINANCIER", [255, 210, 60]] or ["", ...] to hide
 DANGER = {"STOLEN", "SCAM", "SCAMMER", "MINUS", "NEVER", "DON'T", "DONT", "BLOCKED", "FAKE", "RED", "FLAG", "FLAGS", "PASSWORDS", "MOUSETRAP", "NO"}
 SPK_COL = {"P": (255, 226, 60), "S": (120, 220, 255), "R": (232, 232, 234)}  # victim yellow, scammer cyan, Rocco white
 
@@ -571,6 +604,7 @@ def main():
     cache = os.environ.get("FIN_TTS_CACHE", os.path.join(tempfile.gettempdir(), "fin_tts_cache")); os.makedirs(cache, exist_ok=True)
     lines = [tuple(x) for x in spec["lines"]]
     LINE_SPK[:] = [a for a, _ in lines]; HOT.update(w.upper() for w in spec.get("hot", []))
+    if "brand" in spec: BRAND[:] = [spec["brand"][0], tuple(spec["brand"][1])]
     d, mp3 = dialogue(lines, cache)
     spd = float(spec.get("speed", 1.0))  # snappier delivery (benchmarks: punchline 100-150 ms after the setup); pitch kept (atempo)
     if spd != 1.0:
@@ -700,6 +734,7 @@ def main():
         fimg2 = footage_img(*sh["_bg2"][:2], kk, sh["_bg2"][2], "in", sh.get("bright2", 1.2), 0) if sh.get("_bg2") else None
         FRAME_NOW[0] = fi
         POSE_NOW.clear(); POSE_NOW.update({k[0]: sh[k] for k in ("r_pose", "p_pose", "s_pose") if sh.get(k)})
+        TALK_NOW.clear(); TALK_NOW[w_] = e
         im = compose(sh, lt, t, e if w_ == "R" else 0.0, e if w_ == "P" else 0.0, None, e if w_ == "S" else 0.0, fimg, fimg2)
         cam = sh.get("cam", {})  # per-shot framing (benchmarks: wide -> low/OTS -> MCU -> ECU micro-zoom on the shock line)
         z = cam.get("z", 1.0) + cam.get("push", 0.035) * min(1.0, lt / max(0.5, sh["_t1"] - sh["_t0"])) + (0.06 * max(0.0, 1 - lt / 0.12))  # slow push + punch on the cut
@@ -710,7 +745,7 @@ def main():
         ch = next((c for c in chunks if c[0][1] - 0.05 <= t < (c[-1][2] + 0.25)), None)
         if ch and sh["kind"] != "end":
             act = max([j for j, w in enumerate(ch) if w[1] <= t] or [0]); caption(im, ch, act)
-        if t >= 2.0: txt(im, (W - 50, 70), "RED FLAG ROCCO", 44, (255, 59, 59), sw=6, anchor="rm")  # after the zoom (never cropped); hidden in the 2 s hook (engine v6.17 rule)
+        if t >= 2.0 and BRAND[0]: txt(im, (W - 50, 70), BRAND[0], 44, BRAND[1], sw=6, anchor="rm")  # after the zoom (never cropped); hidden in the 2 s hook (engine v6.17 rule)
         if sh.get("hook") and lt < 2.2: txt(im, (W / 2, H * 0.08), sh["hook"], 104, (255, 255, 255), sw=12)
         enc.stdin.write(im.convert("RGB").tobytes())
     enc.stdin.close(); enc.wait()
