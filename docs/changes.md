@@ -87,3 +87,4 @@ Ishlab chiqaruvchi (vazifa/chat): HAR render va HAR post oldidan `git pull --reb
 - Skills: new `viral-cartoon-playbook` (rules + scripts/cartoon_metrics.py); vendored `viral-video-decomposer` (MIT) and `analyzing-video` (GPL-3). YouTube/TikTok downloads are blocked in the container → analysis via vidIQ watch.
 - rc_render: `pause_before` (dramatic pauses), per-shot `cam` (ECU micro-zoom), `amb` bed; 3D mood map fixed (Slick sly was neutral, Penny had no angry/sly).
 - RC-08 rocco_rc08_vip_3d.mp4 (59.6 s, 32 shots): qc_gate 15/15 PASS (10_look WARN by design), cartoon_metrics PASS (first word 0.0 s, ASL 2.06 s, dead air 0.45 s, sat 0.57). Sent to Shohjahon. Buffer YouTube 6b02e69f02479690924ddff4 → 25-noy 14:30Z. Commit c8bad88.
+| 2026-11-22 18:10 | chat (Trade) | docs/idea_inbox.md ochildi: Shohjahon ideyalari o'z so'zlari bilan saqlanadi (ishlab chiqilmaydi), so'raganda to'liq qaytariladi. 2 ta ideya yozildi | QAYTA RENDER: YO'Q |
