@@ -1,0 +1,487 @@
+{
+ "id": "RC-11",
+ "title": "He Said He Loves Her. Then He Said Invest.",
+ "style": "rocco3d",
+ "tail": 1.8,
+ "speed": 1.06,
+ "hot": [
+  "INVEST",
+  "UP",
+  "FLAG",
+  "YACHT",
+  "SCAM"
+ ],
+ "lines": [
+  [
+   "P",
+   "[dreamy, swooning] He said I'm the smartest pig he's EVER met!"
+  ],
+  [
+   "S",
+   "[romantic, smooth] Darling... put your savings in MY special app. It only goes up."
+  ],
+  [
+   "P",
+   "[delighted] Only up?"
+  ],
+  [
+   "R",
+   "[deadpan] Red flag."
+  ],
+  [
+   "P",
+   "[defensive] But he's so sweet!"
+  ],
+  [
+   "R",
+   "[deadpan] Red flag."
+  ],
+  [
+   "S",
+   "[urgent] Hurry, my love, before the app... closes forever!"
+  ],
+  [
+   "R",
+   "[flat] Three."
+  ],
+  [
+   "P",
+   "[sly, testing] Okay! Let's video call!"
+  ],
+  [
+   "S",
+   "[panicking] My camera is... broken. Since 2019."
+  ],
+  [
+   "P",
+   "[dry] You're on a yacht with a ring light."
+  ],
+  [
+   "S",
+   "[sweating] ...It's a very small yacht."
+  ],
+  [
+   "R",
+   "[warm, to camera] If someone you've never met asks you to invest, it's a scam. Every single time."
+  ],
+  [
+   "S",
+   "[whiny] Not again!"
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "phone",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "line": 0,
+   "from": 0,
+   "blur": 1,
+   "p": "happy",
+   "p_pose": "arms_up",
+   "sender": "Prince Charming \ud83d\udc8e",
+   "hook": "SHE FELL FOR A FOX",
+   "msgs": [
+    {
+     "t": "You're the smartest pig\nI've ever met \ud83d\ude0d",
+     "at": 0.05,
+     "col": [
+      214,
+      80,
+      160
+     ],
+     "size": 84
+    }
+   ],
+   "amb": "room"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 0,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_yacht3d.jpg",
+   "line": 1,
+   "from": 0,
+   "blur": 1,
+   "s": "sly",
+   "s_pose": "shrug",
+   "msg": "\"IT ONLY GOES UP\"",
+   "msg_word": "only",
+   "amb": "lair",
+   "cam": {
+    "z": 1.15,
+    "push": 0.1,
+    "fy": 0.4
+   }
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 1,
+   "from": 0.28,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_yacht3d.jpg",
+   "line": 1,
+   "from": 0.55,
+   "blur": 1,
+   "s": "happy",
+   "s_pose": "point",
+   "amb": "lair",
+   "cam": {
+    "z": 1.35,
+    "push": 0.05,
+    "fy": 0.38
+   }
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 1,
+   "from": 0.78,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "line": 2,
+   "from": 0,
+   "blur": 1,
+   "p": "happy",
+   "r": "sideeye",
+   "amb": "room",
+   "cam": {
+    "z": 1.2,
+    "push": 0.06,
+    "fy": 0.42
+   }
+  },
+  {
+   "kind": "flags",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "line": 3,
+   "from": 0,
+   "blur": 1,
+   "r": "sideeye",
+   "n": 1,
+   "n_prev": 0,
+   "pop_word": "flag",
+   "amb": "room"
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "line": 4,
+   "from": 0,
+   "blur": 1,
+   "p": "angry",
+   "r": "sideeye",
+   "p_pose": "arms_up",
+   "amb": "room",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   }
+  },
+  {
+   "kind": "flags",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "line": 5,
+   "from": 0,
+   "blur": 1,
+   "r": "sideeye",
+   "n": 2,
+   "n_prev": 1,
+   "pop_word": "flag",
+   "amb": "room"
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_yacht3d.jpg",
+   "line": 6,
+   "from": 0,
+   "blur": 1,
+   "s": "panic",
+   "s_pose": "arms_up",
+   "msg": "CLOSING FOREVER!",
+   "msg_at": 0.3,
+   "amb": "lair",
+   "cam": {
+    "z": 1.2,
+    "push": 0.08,
+    "fy": 0.38
+   }
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 6,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "flags",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "line": 7,
+   "from": 0,
+   "blur": 1,
+   "r": "sly",
+   "r_pose": "point",
+   "n": 3,
+   "n_prev": 2,
+   "pop_word": "three",
+   "amb": "room"
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "line": 8,
+   "from": 0,
+   "blur": 1,
+   "p": "sly",
+   "p_pose": "point",
+   "r": "sly",
+   "amb": "room",
+   "cam": {
+    "z": 1.2,
+    "push": 0.06,
+    "fy": 0.42
+   }
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_yacht3d.jpg",
+   "line": 9,
+   "from": 0,
+   "blur": 1,
+   "s": "shock",
+   "s_pose": "shrug",
+   "msg": "\"SINCE 2019\"",
+   "msg_at": 0.5,
+   "amb": "lair",
+   "cam": {
+    "z": 1.4,
+    "push": 0.05,
+    "fy": 0.36
+   }
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 9,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "line": 10,
+   "from": 0,
+   "blur": 1,
+   "p": "sly",
+   "r": "sly",
+   "amb": "room",
+   "cam": {
+    "z": 1.35,
+    "push": 0.06,
+    "fy": 0.42
+   }
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_yacht3d.jpg",
+   "line": 11,
+   "from": 0,
+   "blur": 1,
+   "s": "sad",
+   "s_pose": "shrug",
+   "amb": "lair",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   }
+  },
+  {
+   "kind": "store",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "line": 12,
+   "from": 0,
+   "blur": 3,
+   "l1": "NEVER MET + ASKS TO INVEST",
+   "l2": "= SCAM",
+   "r": "happy",
+   "amb": "room"
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "line": 12,
+   "from": 0.45,
+   "blur": 1,
+   "r": "happy",
+   "r_pose": "point",
+   "amb": "room",
+   "cam": {
+    "z": 1.15,
+    "push": 0.08,
+    "fy": 0.47
+   }
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "p": "happy",
+   "r": "happy",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 12,
+   "from": 0.73,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_yacht3d.jpg",
+   "line": 13,
+   "from": 0,
+   "blur": 1,
+   "s": "panic",
+   "s_pose": "arms_up",
+   "msg": "NOT AGAIN!",
+   "msg_at": 0.2,
+   "amb": "lair"
+  },
+  {
+   "kind": "end",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "blur": 2,
+   "line": 13,
+   "from": 1.0,
+   "l1": "LOVE + \"INVEST IN MY APP\"",
+   "l2": "= SCAM",
+   "l3": "Send this to someone who's dating online."
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "shimmer",
+   "gain": 0.3
+  },
+  {
+   "line": 1,
+   "word": "up",
+   "name": "slide_up",
+   "gain": 0.25
+  },
+  {
+   "line": 3,
+   "word": "flag",
+   "name": "buzzer",
+   "gain": 0.22
+  },
+  {
+   "line": 5,
+   "word": "flag",
+   "name": "buzzer",
+   "gain": 0.22
+  },
+  {
+   "line": 6,
+   "frac": 0.4,
+   "name": "drumroll",
+   "gain": 0.2
+  },
+  {
+   "line": 7,
+   "word": "three",
+   "name": "buzzer",
+   "gain": 0.28
+  },
+  {
+   "line": 9,
+   "frac": 0.5,
+   "name": "scratch",
+   "gain": 0.25
+  },
+  {
+   "line": 10,
+   "frac": 0.0,
+   "name": "subboom",
+   "gain": 0.3
+  },
+  {
+   "line": 11,
+   "frac": 0.3,
+   "name": "crickets",
+   "gain": 0.25
+  },
+  {
+   "line": 13,
+   "frac": 0.6,
+   "name": "wahwah",
+   "gain": 0.35
+  }
+ ],
+ "pause_before": {
+  "3": 0.3,
+  "5": 0.3,
+  "7": 0.45,
+  "10": 0.45
+ }
+}

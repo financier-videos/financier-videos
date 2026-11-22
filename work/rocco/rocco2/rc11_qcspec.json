@@ -1,0 +1,102 @@
+{
+ "format": "short",
+ "look": "rocco2",
+ "scenes": [
+  {
+   "text": "He said I'm the smartest pig he's EVER met!",
+   "sticker": "SHE FELL FOR A FOX"
+  },
+  {
+   "text": "Darling... put your savings in MY special app. It only goes up.",
+   "sticker": "\"IT ONLY GOES UP\""
+  },
+  {
+   "text": "Only up?",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Red flag.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "But he's so sweet!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Red flag.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Hurry, my love, before the app... closes forever!",
+   "sticker": "CLOSING FOREVER!"
+  },
+  {
+   "text": "Three.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Okay! Let's video call!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "My camera is... broken. Since 2019.",
+   "sticker": "\"SINCE 2019\""
+  },
+  {
+   "text": "You're on a yacht with a ring light.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "...It's a very small yacht.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/slick_yacht3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "If someone you've never met asks you to invest, it's a scam. Every single time.",
+   "sticker": "NEVER MET? ASKS YOU"
+  },
+  {
+   "text": "Not again!",
+   "sticker": "NOT AGAIN!"
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "2IFK69bB4CE - Zovi 239x: scammer as a theatrical villain, micro-pauses, 4th-wall moral",
+  "DfC5DUuTroA - 50M 3D: scale contrast, action in frame 1, ~1.6 s per shot",
+  "pipandrue TikTok 6.7M: double twist + tag, pause before the shock line, ECU micro-zoom"
+ ]
+}

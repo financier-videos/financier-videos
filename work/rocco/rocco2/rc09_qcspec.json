@@ -1,0 +1,94 @@
+{
+ "format": "short",
+ "look": "rocco2",
+ "scenes": [
+  {
+   "text": "Hello? HELLO?! The network is bad! Goodbye!",
+   "sticker": "SCAMMER CALLED THE FRAUD UNIT"
+  },
+  {
+   "text": "Good morning! Your bank account is LOCKED. Read me the six-digit code. You have thirty seconds.",
+   "sticker": "30 SECONDS EARLIER..."
+  },
+  {
+   "text": "Thirty seconds. Wow. Urgent.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "And whisper it. Don't let anyone hear.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/slick_callcenter3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Okay. Whispering... This... is... Detective Rocco. Fraud Unit.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "...Detective WHAT?",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/slick_callcenter3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "And I'm tracing the call!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Hello? HELLO?! The network is bad!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "I hear you perfectly.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "I... I just called to say... have a nice day! Bye!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/slick_callcenter3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Banks never ask for your code. Never. Hang up.",
+   "sticker": "BANKS NEVER ASK"
+  },
+  {
+   "text": "Not again!",
+   "sticker": "NOT AGAIN!"
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "2IFK69bB4CE - Zovi 239x: scammer as a theatrical villain, micro-pauses, 4th-wall moral",
+  "DfC5DUuTroA - 50M 3D: scale contrast, action in frame 1, ~1.6 s per shot",
+  "pipandrue TikTok 6.7M: double twist + tag, pause before the shock line, ECU micro-zoom"
+ ]
+}

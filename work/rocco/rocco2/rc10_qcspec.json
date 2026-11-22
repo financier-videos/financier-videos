@@ -1,0 +1,98 @@
+{
+ "format": "short",
+ "look": "rocco2",
+ "scenes": [
+  {
+   "text": "I won a FREE TV! I just have to pay two ninety-nine!",
+   "sticker": "\"YOU WON A FREE TV\""
+  },
+  {
+   "text": "In five seconds, that link will ask for your card number.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/porch3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "...It's asking for my card number. HOW?!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/porch3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Detective.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/porch3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Customs fee! Very official! Very real!",
+   "sticker": "\"CUSTOMS FEE\""
+  },
+  {
+   "text": "Okay. What's the tracking number?",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/porch3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "It's... one... two... three?",
+   "sticker": "1... 2... 3?"
+  },
+  {
+   "text": "Strong number.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/porch3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "And which store did I win it from?",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/porch3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "The... TV... store?",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/porch3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Real carriers don't text you a link to pay a fee. Type the tracking number on the official site yourself.",
+   "sticker": "REAL CARRIERS NEVER"
+  },
+  {
+   "text": "Deleted!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/porch3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Not again!",
+   "sticker": "NOT AGAIN!"
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "2IFK69bB4CE - Zovi 239x: scammer as a theatrical villain, micro-pauses, 4th-wall moral",
+  "DfC5DUuTroA - 50M 3D: scale contrast, action in frame 1, ~1.6 s per shot",
+  "pipandrue TikTok 6.7M: double twist + tag, pause before the shock line, ECU micro-zoom"
+ ]
+}

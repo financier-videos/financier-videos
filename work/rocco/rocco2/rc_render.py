@@ -620,7 +620,8 @@ def main():
         return at_line(i, 0.5)
     for e in spec.get("sfx", []):
         t0 = (word_t(e["line"], e["word"]) if e.get("word") else at_line(e["line"], e.get("frac", 0))) + e.get("dt", 0)
-        clip = getattr(mv, "sfx_" + e["name"])(sr, rng); i0 = int(t0 * sr)
+        _fn = getattr(mv, "sfx_" + e["name"])
+        clip = _fn(sr, rng, e["dur"]) if "dur" in e else (_fn(sr, rng) if _fn.__code__.co_argcount < 3 or _fn.__defaults__ else _fn(sr, rng, 0.8)); i0 = int(t0 * sr)
         if clip.ndim > 1: clip = clip.mean(axis=1)
         fx[i0:i0 + len(clip)] += clip[:max(0, len(fx) - i0)] * e.get("gain", 0.35)
     # ambience bed under every shot (viral benchmarks: constant room/street tone, never dead digital silence)

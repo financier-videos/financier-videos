@@ -1,0 +1,464 @@
+{
+ "id": "RC-09",
+ "title": "Scammer Called the Fraud Unit",
+ "style": "rocco3d",
+ "tail": 1.8,
+ "speed": 1.06,
+ "hot": [
+  "CODE",
+  "LOCKED",
+  "DETECTIVE",
+  "FRAUD",
+  "NEVER"
+ ],
+ "lines": [
+  [
+   "S",
+   "[panicking] Hello? HELLO?! The network is bad! Goodbye!"
+  ],
+  [
+   "S",
+   "[smooth, confident] Good morning! Your bank account is LOCKED. Read me the six-digit code. You have thirty seconds."
+  ],
+  [
+   "R",
+   "[deadpan] Thirty seconds. Wow. Urgent."
+  ],
+  [
+   "S",
+   "[conspiratorial] And whisper it. Don't let anyone hear."
+  ],
+  [
+   "R",
+   "[whispering] Okay. Whispering... This... is... Detective Rocco. Fraud Unit."
+  ],
+  [
+   "S",
+   "[voice cracks] ...Detective WHAT?"
+  ],
+  [
+   "P",
+   "[excited, cheerful] And I'm tracing the call!"
+  ],
+  [
+   "S",
+   "[panicking] Hello? HELLO?! The network is bad!"
+  ],
+  [
+   "R",
+   "[calm] I hear you perfectly."
+  ],
+  [
+   "S",
+   "[nervous, fake sweet] I... I just called to say... have a nice day! Bye!"
+  ],
+  [
+   "R",
+   "[warm, to camera] Banks never ask for your code. Never. Hang up."
+  ],
+  [
+   "S",
+   "[whiny] Not again!"
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "call",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "line": 0,
+   "from": 0,
+   "blur": 1,
+   "bg2": "/home/user/financier-videos/assets/toon3d/slick_callcenter3d.jpg",
+   "bottom": "r",
+   "p_whisper": true,
+   "s": "panic",
+   "s_pose": "arms_up",
+   "r": "sideeye",
+   "caller": "CALLING: \"FRAUD UNIT\"",
+   "hook": "SCAMMER CALLED THE FRAUD UNIT",
+   "amb": "room"
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.3,
+    "push": 0.1,
+    "fy": 0.47
+   },
+   "line": 0,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_callcenter3d.jpg",
+   "line": 1,
+   "from": 0,
+   "blur": 1,
+   "s": "sly",
+   "s_pose": "point",
+   "msg": "30 SECONDS EARLIER...",
+   "msg_at": 0.0,
+   "amb": "lair",
+   "cam": {
+    "z": 1.1,
+    "push": 0.08,
+    "fy": 0.4
+   }
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.3,
+    "push": 0.1,
+    "fy": 0.47
+   },
+   "line": 1,
+   "from": 0.23,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_callcenter3d.jpg",
+   "line": 1,
+   "from": 0.45,
+   "blur": 1,
+   "s": "sly",
+   "s_pose": "shrug",
+   "msg": "\"READ ME THE CODE\"",
+   "msg_at": 0.1,
+   "amb": "lair",
+   "cam": {
+    "z": 1.3,
+    "push": 0.06,
+    "fy": 0.38
+   }
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.3,
+    "push": 0.1,
+    "fy": 0.47
+   },
+   "line": 1,
+   "from": 0.73,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "loom_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "line": 2,
+   "from": 0,
+   "blur": 1,
+   "r": "sideeye",
+   "amb": "room",
+   "cam": {
+    "z": 1.0,
+    "push": 0.08
+   },
+   "s": "sly"
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_callcenter3d.jpg",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.3,
+    "push": 0.06,
+    "fy": 0.38
+   },
+   "line": 2,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true,
+   "s": "sly",
+   "s_pose": "shrug"
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_callcenter3d.jpg",
+   "line": 3,
+   "from": 0,
+   "blur": 1,
+   "s": "sly",
+   "amb": "lair",
+   "cam": {
+    "z": 1.4,
+    "push": 0.05,
+    "fy": 0.36
+   }
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.3,
+    "push": 0.1,
+    "fy": 0.47
+   },
+   "line": 3,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_callcenter3d.jpg",
+   "line": 4,
+   "from": 0,
+   "blur": 1,
+   "r": "sly",
+   "amb": "lair",
+   "cam": {
+    "z": 1.45,
+    "push": 0.08,
+    "fy": 0.36
+   },
+   "s": "sly",
+   "s_pose": "idle",
+   "msg": "*whispering*",
+   "msg_at": 0.1
+  },
+  {
+   "kind": "loom_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "line": 4,
+   "from": 0.55,
+   "blur": 1,
+   "r": "sideeye",
+   "s": "shock",
+   "amb": "room"
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_callcenter3d.jpg",
+   "line": 5,
+   "from": 0,
+   "blur": 1,
+   "s": "shock",
+   "s_pose": "arms_up",
+   "amb": "lair",
+   "cam": {
+    "z": 1.45,
+    "push": 0.05,
+    "fy": 0.36
+   }
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "line": 6,
+   "from": 0,
+   "blur": 1,
+   "p": "happy",
+   "r": "sly",
+   "p_pose": "point",
+   "amb": "room",
+   "cam": {
+    "z": 1.15,
+    "push": 0.08,
+    "fy": 0.42
+   }
+  },
+  {
+   "kind": "call",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "line": 7,
+   "from": 0,
+   "blur": 1,
+   "bg2": "/home/user/financier-videos/assets/toon3d/slick_callcenter3d.jpg",
+   "bottom": "r",
+   "p_whisper": true,
+   "s": "panic",
+   "s_pose": "arms_up",
+   "r": "sideeye",
+   "caller": "CALLING: \"FRAUD UNIT\"",
+   "amb": "room"
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 7,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "line": 8,
+   "from": 0,
+   "blur": 1,
+   "r": "sly",
+   "amb": "room",
+   "cam": {
+    "z": 1.3,
+    "push": 0.1,
+    "fy": 0.47
+   }
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_callcenter3d.jpg",
+   "line": 9,
+   "from": 0,
+   "blur": 1,
+   "s": "happy",
+   "s_pose": "shrug",
+   "amb": "lair",
+   "cam": {
+    "z": 1.2,
+    "push": 0.06,
+    "fy": 0.38
+   }
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_callcenter3d.jpg",
+   "line": 9,
+   "from": 0.5,
+   "blur": 1,
+   "s": "panic",
+   "s_pose": "arms_up",
+   "amb": "lair",
+   "cam": {
+    "z": 1.35,
+    "push": 0.05,
+    "fy": 0.36
+   }
+  },
+  {
+   "kind": "store",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "line": 10,
+   "from": 0,
+   "blur": 3,
+   "l1": "BANKS NEVER ASK",
+   "l2": "FOR YOUR CODE",
+   "r": "happy",
+   "amb": "room"
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "line": 10,
+   "from": 0.5,
+   "blur": 1,
+   "r": "happy",
+   "r_pose": "point",
+   "amb": "room",
+   "cam": {
+    "z": 1.2,
+    "push": 0.08,
+    "fy": 0.47
+   }
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_callcenter3d.jpg",
+   "line": 11,
+   "from": 0,
+   "blur": 1,
+   "s": "panic",
+   "s_pose": "shrug",
+   "msg": "NOT AGAIN!",
+   "msg_at": 0.2,
+   "amb": "lair"
+  },
+  {
+   "kind": "end",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "blur": 2,
+   "line": 11,
+   "from": 1.0,
+   "l1": "\"READ ME THE CODE\"",
+   "l2": "= SCAM",
+   "l3": "Send this to someone who answers every call."
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "buzzer",
+   "gain": 0.25
+  },
+  {
+   "line": 1,
+   "frac": 0.0,
+   "name": "whoosh",
+   "gain": 0.3
+  },
+  {
+   "line": 1,
+   "word": "locked",
+   "name": "impact",
+   "gain": 0.3
+  },
+  {
+   "line": 4,
+   "word": "detective",
+   "name": "subboom",
+   "gain": 0.35
+  },
+  {
+   "line": 5,
+   "frac": 0.0,
+   "name": "scratch",
+   "gain": 0.25
+  },
+  {
+   "line": 6,
+   "frac": 0.3,
+   "name": "tick",
+   "gain": 0.2
+  },
+  {
+   "line": 9,
+   "frac": 0.7,
+   "name": "slide_down",
+   "gain": 0.25
+  },
+  {
+   "line": 10,
+   "word": "never",
+   "name": "ding",
+   "gain": 0.25
+  },
+  {
+   "line": 11,
+   "frac": 0.6,
+   "name": "wahwah",
+   "gain": 0.35
+  }
+ ],
+ "pause_before": {
+  "4": 0.35,
+  "5": 0.45,
+  "8": 0.4
+ }
+}
