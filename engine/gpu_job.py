@@ -29,7 +29,7 @@ def main():
                "containerDiskInGb": 40, "volumeInGb": 0, "ports": "8000/http", "dockerArgs": BOOT,
                "env": [{"key": "JOB_TOKEN", "value": tok}, {"key": "JOB_MAX_MIN", "value": str(a.max_min + 10)}]}
         pod = None; tried = []
-        for g in [a.gpu] + [x for x in GPUS if x != a.gpu]:
+        for g in [a.gpu] + [x for x in GPUS if x != a.gpu and "5090" not in x]:  # 5090: bpy 5.3 CUDA error 700 (2026-11-22)
             inp["gpuTypeId"] = g
             try:
                 pod = gql("mutation($i:PodFindAndDeployOnDemandInput){podFindAndDeployOnDemand(input:$i){id costPerHr machineId}}", {"i": inp})["podFindAndDeployOnDemand"]

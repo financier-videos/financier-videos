@@ -8,15 +8,15 @@
  "lines": [
   [
    "P",
-   "[curious] Rocco, did you order socks?"
+   "[excited] Rocco! I got a mystery package!"
   ],
   [
    "R",
-   "[flat] No. Why?"
+   "[flat] I didn't order anything for you."
   ],
   [
    "P",
-   "[puzzled] A package came for me. Socks. And a card with a QR code."
+   "[puzzled] Me neither. It's socks. And a card with a QR code."
   ],
   [
    "R",
@@ -49,6 +49,21 @@
    "p": "happy",
    "r": "sideeye",
    "hook": "A PACKAGE YOU NEVER ORDERED"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/porch3d.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 0,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "street",
+   "_auto": true
   },
   {
    "kind": "cu_r",
@@ -90,7 +105,7 @@
   {
    "kind": "box",
    "line": 2,
-   "from": 0.53,
+   "from": 0.55,
    "blur": 1,
    "bg": "/home/user/financier-videos/assets/toon3d/porch3d.jpg",
    "open_at": 0.4,
@@ -117,7 +132,7 @@
   {
    "kind": "box",
    "line": 2,
-   "from": 0.87,
+   "from": 0.88,
    "blur": 1,
    "bg": "/home/user/financier-videos/assets/toon3d/porch3d.jpg",
    "open_at": 0.4,
@@ -181,7 +196,7 @@
     "push": 0.06
    },
    "line": 4,
-   "from": 0.5,
+   "from": 0.33,
    "blur": 1,
    "amb": "street",
    "_auto": true
@@ -189,7 +204,7 @@
   {
    "kind": "chalk",
    "line": 4,
-   "from": 0.77,
+   "from": 0.57,
    "blur": 1,
    "lines": [
     {
@@ -224,6 +239,22 @@
    "cont": true,
    "_auto": true,
    "hook": null
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/porch3d.jpg",
+   "p": "shock",
+   "r": "sly",
+   "cam": {
+    "z": 1.2,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 4,
+   "from": 0.67,
+   "blur": 1,
+   "amb": "street",
+   "_auto": true
   },
   {
    "kind": "stamp",
@@ -304,7 +335,7 @@
   {
    "kind": "stamp",
    "line": 5,
-   "from": 0.89,
+   "from": 0.88,
    "blur": 1,
    "kicker": "THE QR CARD:",
    "claim": "\"SCAN FOR YOUR GIFT\"",
@@ -338,6 +369,21 @@
     "push": 0.05,
     "fy": 0.42
    }
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/porch3d.jpg",
+   "p": "sly",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 6,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "street",
+   "_auto": true
   },
   {
    "kind": "two",
@@ -408,6 +454,5 @@
  ],
  "pause_before": {
   "6": 0.45
- },
- "grade": "gold"
+ }
 }

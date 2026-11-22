@@ -201,9 +201,9 @@ out("RC-19", "Fake IRS Agent Picked the Wrong Grandpa", [
 
 # RC-20 "did you order this?" two-hander (DflN4MGBPX5)
 out("RC-20", "Free Socks and a Very Bad QR Code", [
-    ["P", "[curious] Rocco, did you order socks?"],
-    ["R", "[flat] No. Why?"],
-    ["P", "[puzzled] A package came for me. Socks. And a card with a QR code."],
+    ["P", "[excited] Rocco! I got a mystery package!"],
+    ["R", "[flat] I didn't order anything for you."],
+    ["P", "[puzzled] Me neither. It's socks. And a card with a QR code."],
     ["R", "[knowing] That's a brushing scam."],
     ["R", "[explaining] Sellers mail stuff to real addresses so they can post fake reviews in your name."],
     ["R", "[serious] And that QR code can send you to a site that steals your info. Don't scan it."],
