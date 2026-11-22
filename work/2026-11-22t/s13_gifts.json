@@ -1,0 +1,242 @@
+{
+ "format": "short",
+ "sfx": true,
+ "look": "fullbleed",
+ "grade": "warm",
+ "captions": "words",
+ "headline": "hook",
+ "auto_shots": 1.8,
+ "structure": "myth_bust",
+ "topic": 11,
+ "source": "NerdWallet 2026 Holiday Spending Report (survey of 2,000+ U.S. adults, published Nov 3, 2026)",
+ "buck_voice": {
+  "variant": "D",
+  "model": "eleven_v3",
+  "settings": {
+   "speed": 1.05
+  }
+ },
+ "voices": {
+  "guest": {
+   "voice_id": "cgSgspJ2msm6clMCkdW9",
+   "label": "Shopper (Jessica, ElevenLabs premade)",
+   "model": "eleven_v3",
+   "settings": {
+    "speed": 1.05
+   }
+  }
+ },
+ "benchmarks": [
+  "ftA18KGBrwM \u2014 raqam kartochkada, har 3\u20136 s yangi fakt",
+  "8Sp2jBDdTDM \u2014 paradoks hook ('qimmatlashadi' \u2192 aslida tushdi), quruq hazil yakun",
+  "YANGI: xaridor personaj Buck'ga qarshi 'ko'proq sarflayman' deydi va paypoq bilan yakunlaydi"
+ ],
+ "scenes": [
+  {
+   "text": "Everyone says the holidays get pricier every year.",
+   "say": "[knowingly] Everyone says the holidays get pricier every year.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/s13/fireplace.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "head": "GIFT BUDGETS JUST DROPPED 21%",
+   "mascot": {
+    "mood": "smug",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "So this year I'm spending MORE on gifts, right?",
+   "say": "[excited] So this year I'm spending MORE on gifts, right?",
+   "voice": "guest",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r01/cardshuffle.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ]
+  },
+  {
+   "text": "Nope. Planned gift budgets just dropped 21%.",
+   "say": "[deadpan] Nope. Planned gift budgets just dropped twenty-one percent.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cart_empty.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "stat": "-21%",
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "jawdrop",
+    "act_at": 0.8
+   }
+  },
+  {
+   "text": "Last year, gift buyers planned about $1,107.",
+   "say": "Last year, gift buyers planned about eleven hundred and seven dollars.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r01/cardhand.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "stat": "$1,107",
+   "show_source": "NerdWallet Holiday Spending Report, Nov 2026 (2,000+ U.S. adults)"
+  },
+  {
+   "text": "This year? About $879.",
+   "say": "[dramatic] This year? About eight hundred seventy-nine.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_desk.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "stat": "$879",
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "That's $228 less! (our math)",
+   "say": "[gasps] That's two hundred twenty-eight dollars less!",
+   "voice": "guest",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r01/cardshuffle.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "stat": "-$228",
+   "mascot": {
+    "mood": "confused",
+    "pos": "corner",
+    "act": "doubletake",
+    "act_at": 0.3
+   }
+  },
+  {
+   "text": "NerdWallet's expert blames higher prices on everything else.",
+   "say": "NerdWallet's expert blames higher prices... on everything else.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "show_source": true
+  },
+  {
+   "text": "And nearly half plan to spend under $500 on gifts.",
+   "say": "And nearly half plan to spend under five hundred on gifts.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r01/houses2.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r01/houses.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "stat": "46%",
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "So... are you cutting back this year?",
+   "say": "[curious] So... are YOU cutting back this year?",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/s13/fireplace.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r01/houses2.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "beat": 0.4,
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "I already bought everyone socks.",
+   "say": "[proudly] I already bought everyone socks.",
+   "voice": "guest",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/s13/fireplace.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r01/cardhand.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner",
+    "act": "deadpan",
+    "act_at": 0.2
+   }
+  }
+ ]
+}

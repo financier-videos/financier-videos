@@ -1,0 +1,67 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    55.3 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.0 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -14.0 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 12.4 Mbit/s, 37.3s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 0.943,\n \"rechecked_ok\": [],\n \"missing\": [\n  \"planned\",\n  \"nerdwallet's\",\n  \"everyone\"\n ],\n \"extra\": [\n  \"plan\",\n  \"nerd wallet's\",\n  \"everyone's\"\n ],\n \"heard\": \"Everyone says the holidays get pricier every year. So this year I'm spending more on gifts, right? Nope. Plan gift budgets just dropped 21%. Last year, gift buyers planned about $1,107. This year, about 879. That's $228 less. Nerd wallet's expert blames higher prices on everything else. And nearly half plan to spend under 500 on gifts. So, are you cutting back this year? I already bought everyone's socks.\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "ange=10.1 st  gap=0.24  ok  | [dramatic] This year? About eight hundred seventy-nine.\n 6  19.68s range= 5.0 st  gap=0.36  ok  | [gasps] That's two hundred twenty-eight dollars less!\n 7  23.06s range=11.1 st  gap=0.53  ok  | NerdWallet's expert blames higher prices... on everything el\n 8  27.88s range=15.4 st  gap=0.2  ok  | And nearly half plan to spend under five hundred on gifts.\n 9  31.77s range=20.0 st  gap=0.4  ok  | [curious] So... are YOU cutting back this year?\n10  35.22s range= 3.9 st  gap=0.15  ok  | [proudly] I already bought everyone socks.\n{\"median_f0\": 204.0, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 100"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/2026-11-22t/s13_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "WARN",
+  "note": "FAIL  0.83  (layout 0.89, palette 0.73, tone 0.88)  vs 2026-11-24_subs_r03_b8.mp4\nFAIL  0.74  (layout 0.91, palette 0.44, tone 0.87)  vs 2026-11-24_noseat_r02_b8.mp4\nFAIL  0.88  (layout 0.91, palette 0.79, tone 0.95)  vs 2026-11-23_bills_v03.mp4\nFAIL  0.87  (layout 0.93, palette 0.76, tone 0.91)  vs 2026-11-25_bank_c01.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "25 hard cuts (ffmpeg scene>0.22) in 37.3 s = 1.5 s/cut (need >= 18); engine planned 25"
+ },
+ "12_script": {
+  "status": "SKIP",
+  "note": "no --prev-specs (pass the last 4 specs of this channel)"
+ },
+ "14_empty_panel": {
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 10% of the frame (limit 20%)"
+ },
+ "15_competitors": {
+  "status": "PASS",
+  "note": "2 fresh benchmark(s) ['8Sp2jBDdTDM', 'ftA18KGBrwM'] (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: script_rules v2.2 (myth_bust), script_check, footage_bank + pixabay_bg (to'g'ridan/masshtab/metafora/his), comedy.md (jawdrop/doubletake/deadpan + xaridor gag), competitor_watch benchmarks, eleven_v3 his teglari, title.py, qc_gate; ishlatilmadi: vidiq_find_broll (Pixabay+bank yetarli), hookscore (hook S-13 bankida tayyor)"
+ },
+ "verdict": "PASS"
+}

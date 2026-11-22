@@ -1,0 +1,67 @@
+{
+ "0_freshness": {
+  "status": "FAIL",
+  "note": "repo 1 commit(s) behind origin/media - git pull --rebase and re-render"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    72.3 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.0 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -13.9 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 12.4 Mbit/s, 49.0s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "0.974,\n \"rechecked_ok\": [],\n \"missing\": [\n  \"bankrate\",\n  \"bucks\"\n ],\n \"extra\": [\n  \"bank rate\"\n ],\n \"heard\": \"Somewhere in your house, there's a drawer. Hello, anyone. It's been two years. That's a gift card, unused. And it is not alone. A 2024 bank rate survey. 43% of US adults have at least one. Their average stash. $244 of me just sitting here. Now add up every drawer in America. About $27 billion. That's Bankrate's estimate. And one in five adults let a card expire before using it. Wait. How long have I been in here? So, which card is hiding in your drawer? Go check, it's been waiting.\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "ust... sitt\n 7  28.03s range= 7.1 st  gap=0.26  ok  | Now... add up every drawer in America.\n 8  31.33s range=15.0 st  gap=0.26  ok  | [amazed] About twenty-seven billion dollars. That's Bankrate\n 9  36.87s range=12.4 st  gap=0.28  ok  | And one in five adults let a card expire before using it.\n10  40.70s range=22.5 st  gap=0.52  ok  | [nervous] Wait... how long have I been in here?\n11  43.00s range=19.1 st  gap=0.22  ok  | [curious] So... which card is hiding in YOUR drawer?\n12  46.71s range= 9.2 st  gap=0.29  ok  | [smug] Go check. It's been waiting.\n{\"median_f0\": 239.7, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 100"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/2026-11-22t/r01_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "WARN",
+  "note": "FAIL  0.84  (layout 0.89, palette 0.76, tone 0.87)  vs 2026-11-23_pink_r07_b8.mp4\nFAIL  0.87  (layout 0.91, palette 0.81, tone 0.87)  vs 2026-11-23_cart_r06_b8.mp4\nFAIL  0.84  (layout 0.92, palette 0.73, tone 0.84)  vs 2026-11-22_bfcm_r05_b8.mp4\nFAIL  0.82  (layout 0.94, palette 0.61, tone 0.89)  vs 2026-11-23_coins_v02.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "35 hard cuts (ffmpeg scene>0.22) in 49.0 s = 1.4 s/cut (need >= 24); engine planned 35"
+ },
+ "12_script": {
+  "status": "SKIP",
+  "note": "no --prev-specs (pass the last 4 specs of this channel)"
+ },
+ "14_empty_panel": {
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 10% of the frame (limit 20%)"
+ },
+ "15_competitors": {
+  "status": "PASS",
+  "note": "2 fresh benchmark(s) ['8Sp2jBDdTDM', 'ftA18KGBrwM'] (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: script_rules v2.2 (why_story), script_check, footage_bank + pixabay_bg (4 yo'l: to'g'ridan/masshtab/metafora/his), comedy.md (doubletake/jawdrop/sigh/deadpan + gapiruvchi karta), competitor_watch benchmarks, eleven_v3 his teglari, qc_gate; ishlatilmadi: vidiq_find_broll (Pixabay yetarli), hookscore (hook bank R-01 da berilgan)"
+ },
+ "verdict": "FAIL"
+}

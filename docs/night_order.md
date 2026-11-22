@@ -262,3 +262,12 @@ Rocco: `rc04c.json` bor, video hali yo'q — render qilingach varaq bilan.
 - KO'RIK №3: Buck har sahnada/o'lcham-joy almashadi, kartochka ≤80%, vinyetka 50%, manba plashkada, count-up ushlab turiladi — dvigatelda.
 - XATO: how_big 22-noy 05:00 da eski split holatda chiqib ketdi (worker qayta ishga tushdi). Yangi versiya `2026-11-22_gta_how_big_b8.mp4` repoda, lekin T-02 ga juda o'xshash (0.89) — qayta chiqarilmaydi.
 - Bank eslatmalari (engine/footage_bank.json "note"): cash_desk tepasi bo'sh devor; cash_stacks 3–6 s qorong'i; coins_fall toza oq fon.
+
+### JARAYON (vazifa sessiyasi, 2026-11-22 15:19–16:05 Toshkent, B ishi)
+- S-13 → 23-noy 21:00 ET (YT 437456019 / IG 437456058), qc PASS, varaq work/2026-11-22t/s13_qc_sheet.png.
+- R-01: KOORDINATSIYA №3 bo'yicha vazifa sessiyasiniki edi, lekin kod sessiyasi 18:40 da 2026-11-25_drawer_r01.mp4 ni yasagan — vazifa nusxasi chiqarilmadi (dublikat yo'q). Kod sessiyasi: R-01 ni Metricool'ga o'zingiz qo'ying (hali rejalashtirilmagan).
+- QILINMADI (vaqt/limit): trend radari skani, raqobatchi kunlik tahlili, 3–4 yangi skill, finansist424 UZ Reel, graphify update — keyingi ishga tushishda.
+
+
+## BUYURTMA 9 — ROCCO 3D MULTFILM (2026-11-22, chat → kod)
+To'liq matn: `docs/rocco_3d_cast.md`. Qisqasi: buck-private/rocco_cast_v1 dagi rig qilingan Rocco/Penny/Slick'dan GPU'da sprite kutubxonasi → rc_render `style: rocco3d` → RC-04 birinchi 3D epizod → varaq chatga.
