@@ -255,3 +255,10 @@ Rocco: `rc04c.json` bor, video hali yo'q — render qilingach varaq bilan.
 - START_HERE navbati 4 (yangi formatlar): V-02 (tangalar) → 23-noy 07:00 ET (YT 437269586 / IG 437269599), V-03 (kupyuralar) → 23-noy 13:00 ET (YT 437285216 / IG 437285230). Ikkalasi qc_gate PASS, v6.16, footage_bank.
 - QILINMADI: V-01, V-04, V-05 (Rocco), C-01, C-02 — sabab: vaqt; V-04 manbasi (federalreserve.gov) muhitda ochilmaydi; C-01/C-02 raqamlari 23-noy fees/24-noy subs postlari bilan takrorlanadi → 25-noydan keyin. Rocco: KO'RIK №2/№3 va rc04c — kod sessiyasiniki, tegilmadi. finansist424 (UZ) — qilinmadi (vaqt).
 - 10 kadrlik varaqlar: work/2026-11-23v/v02_qc_sheet.png, v03_qc_sheet.png.
+
+### JARAYON №3 (kod sessiyasi 01MWGZtb7, 2026-11-22 03:00–11:30 Toshkent) — KO'RIK №2, BUYURTMA 8, KO'RIK №3 javobi
+- KO'RIK №2 (RC-04): 1–6 bandlar bajarildi → `rocco_rc04c_free_gta_pc.mp4`, qc PASS, varaq `docs/looks_samples/rc04c_10frames.jpg`. Shohjahon oldindan ruxsat bergani uchun chat tasdig'ini kutmasdan Buffer'da RC-04b o'rniga qo'yildi (6b0252e3…, 22-noy 14:30 UTC). Chat varaqni ko'rib e'tiroz bildirsa — slotgacha almashtiriladi.
+- BUYURTMA 8: 1) bank ishlatildi (muhitga videos.pexels.com qo'shildi; 32 klip /tmp/fin/bg/bank). 2) split'dagi bo'sh panel olib tashlandi; qc_gate 14_empty_panel (engine/empty_check.py). 3) navbat qayta render — natijalar changes.md 11:30 qatorida; fees_r08, subs_r03 jarayonda. 4) tavsiflarda `Footage: Pexels — …`. 5) har video uchun qc varag'i `work/2026-11-22*/…_b8_qc_sheet.png`.
+- KO'RIK №3: Buck har sahnada/o'lcham-joy almashadi, kartochka ≤80%, vinyetka 50%, manba plashkada, count-up ushlab turiladi — dvigatelda.
+- XATO: how_big 22-noy 05:00 da eski split holatda chiqib ketdi (worker qayta ishga tushdi). Yangi versiya `2026-11-22_gta_how_big_b8.mp4` repoda, lekin T-02 ga juda o'xshash (0.89) — qayta chiqarilmaydi.
+- Bank eslatmalari (engine/footage_bank.json "note"): cash_desk tepasi bo'sh devor; cash_stacks 3–6 s qorong'i; coins_fall toza oq fon.

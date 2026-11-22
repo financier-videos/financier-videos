@@ -74,6 +74,11 @@
      "broll": "/tmp/fin/bg/bank/atm_use.mp4",
      "at": 0,
      "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 1.4,
+     "start": 0
     }
    ]
   },
@@ -161,6 +166,11 @@
      "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
      "at": 0,
      "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/online_card.mp4",
+     "at": 1.2,
+     "start": 0
     }
    ]
   },
@@ -168,9 +178,14 @@
    "text": "Which one got you?",
    "shots": [
     {
-     "broll": "/tmp/fin/bg/bank/airport_walk.mp4",
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
      "at": 0,
-     "start": 6
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/airport_walk.mp4",
+     "at": 0.9,
+     "start": 0
     }
    ],
    "mascot": {

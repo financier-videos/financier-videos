@@ -54,6 +54,11 @@
      "broll": "/tmp/fin/bg/bank/tv_remote.mp4",
      "at": 0,
      "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/phone_scroll.mp4",
+     "at": 1.0,
+     "start": 0
     }
    ],
    "beat": 0.15,
@@ -96,6 +101,11 @@
      "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
      "at": 0,
      "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 1.5,
+     "start": 0
     }
    ],
    "mascot": {
@@ -137,6 +147,11 @@
     {
      "broll": "/tmp/fin/bg/bank/car_lot_top.mp4",
      "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 0.8,
      "start": 0
     }
    ],
