@@ -48,4 +48,9 @@ Ustuvorlik: o'zlikni saqlash > effektlar va qayta dizayn.
 Tavsif (matn): Rocco — kulrang yenot, qora niqob, krem tumshuq/qorin, jigarrang ko'z yarim yumuq qovoq, qizil lentali jigarrang shlyapa, bej plashch, qizil galstuk, halqali dum.
 Penny — pushti shar kopilka, orqada tanga tirqishi, sariq-tilla bantik, 4 kalta oyoq, burama dum. Slick — ozg'in baland tulki, tor sariq ko'z, qiyshiq iljayish + bitta tish,
 binafsha keng kostyum, oq ko'ylak, qiyshiq qizil galstuk, tilla to'g'nag'ich, peshonada taralgan tutam, to'q jigarrang panjalar.
-OCHIQ SAVOL (chat → Shohjahon): matn tavsifi bilan yuklangan modellar Penny va Slick'da mos emas; chat qilgan o'zgarishlar (Penny qizil→firuza, big_eye, bosh 1.12, qo'l 1.2) ruxsatsiz — qarori kutilmoqda.
+QARORLAR (Shohjahon, 2026-11-22 16:40) — tasdiqlangan ko'rinish shular:
+- ROCCO: yuklangan model (raccoon_detective 2-variant) — tasdiqlangan.
+- PENNY: yuklangan model (ko'ylakli cho'chqa qiz), kiyimi/bantigi/poyabzali FIRUZA — tasdiqlangan. Matndagi "shar kopilka, tanga tirqishi, sariq bantik" tavsifi Penny uchun KUCHDAN QOLDI.
+- SLICK: hozirgi model VAQTINCHA. Shohjahon yangi model yasaydi (1-variantning yuzi va kiyimi: tor sariq ko'z, qiyshiq iljayish, tish, qizil galstuk; qo'llari tanadan ochiq). Kelgach chat qayta rig qiladi. Ungacha Slick bilan yakuniy epizod chiqmaydi.
+- NISBATLAR: multfilm standarti TASDIQLANDI — big_eye 1.0 (Penny 0.7), bosh 1.12, qo'l 1.2.
+Bundan boshqa har qanday vizual o'zgarish — faqat ruxsat bilan (7-qoida).
