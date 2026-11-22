@@ -3,7 +3,7 @@
  "look": "rocco2",
  "scenes": [
   {
-   "text": "Rocco, did you order socks?",
+   "text": "Rocco! I got a mystery package!",
    "shots": [
     {
      "broll": "/home/user/financier-videos/assets/toon3d/porch3d.jpg"
@@ -11,7 +11,7 @@
    ]
   },
   {
-   "text": "No. Why?",
+   "text": "I didn't order anything for you.",
    "shots": [
     {
      "broll": "/home/user/financier-videos/assets/toon3d/porch3d.jpg"
@@ -19,7 +19,7 @@
    ]
   },
   {
-   "text": "A package came for me. Socks. And a card with a QR code.",
+   "text": "Me neither. Just socks. And a card with a QR code.",
    "shots": [
     {
      "broll": "/home/user/financier-videos/assets/toon3d/porch3d.jpg"

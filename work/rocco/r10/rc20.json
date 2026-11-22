@@ -16,7 +16,7 @@
   ],
   [
    "P",
-   "[puzzled] Me neither. It's socks. And a card with a QR code."
+   "[puzzled] Me neither. Just socks. And a card with a QR code."
   ],
   [
    "R",
@@ -51,21 +51,6 @@
    "hook": "A PACKAGE YOU NEVER ORDERED"
   },
   {
-   "kind": "two",
-   "bg": "/home/user/financier-videos/assets/toon3d/porch3d.jpg",
-   "p": "happy",
-   "r": "sideeye",
-   "cam": {
-    "z": 1.0,
-    "push": 0.06
-   },
-   "line": 0,
-   "from": 0.5,
-   "blur": 1,
-   "amb": "street",
-   "_auto": true
-  },
-  {
    "kind": "cu_r",
    "line": 1,
    "from": 0,
@@ -86,60 +71,6 @@
    "bg": "/home/user/financier-videos/assets/toon3d/porch3d.jpg",
    "open_at": 0.4,
    "r": "sideeye"
-  },
-  {
-   "kind": "two",
-   "bg": "/home/user/financier-videos/assets/toon3d/porch3d.jpg",
-   "p": "happy",
-   "r": "sideeye",
-   "cam": {
-    "z": 1.0,
-    "push": 0.06
-   },
-   "line": 2,
-   "from": 0.33,
-   "blur": 1,
-   "amb": "street",
-   "_auto": true
-  },
-  {
-   "kind": "box",
-   "line": 2,
-   "from": 0.55,
-   "blur": 1,
-   "bg": "/home/user/financier-videos/assets/toon3d/porch3d.jpg",
-   "open_at": 0.4,
-   "r": "sideeye",
-   "cont": true,
-   "_auto": true,
-   "hook": null
-  },
-  {
-   "kind": "two",
-   "bg": "/home/user/financier-videos/assets/toon3d/porch3d.jpg",
-   "p": "happy",
-   "r": "sideeye",
-   "cam": {
-    "z": 1.0,
-    "push": 0.06
-   },
-   "line": 2,
-   "from": 0.67,
-   "blur": 1,
-   "amb": "street",
-   "_auto": true
-  },
-  {
-   "kind": "box",
-   "line": 2,
-   "from": 0.88,
-   "blur": 1,
-   "bg": "/home/user/financier-videos/assets/toon3d/porch3d.jpg",
-   "open_at": 0.4,
-   "r": "sideeye",
-   "cont": true,
-   "_auto": true,
-   "hook": null
   },
   {
    "kind": "loom_r",
@@ -187,76 +118,6 @@
    ]
   },
   {
-   "kind": "two",
-   "bg": "/home/user/financier-videos/assets/toon3d/porch3d.jpg",
-   "p": "happy",
-   "r": "sly",
-   "cam": {
-    "z": 1.05,
-    "push": 0.06
-   },
-   "line": 4,
-   "from": 0.33,
-   "blur": 1,
-   "amb": "street",
-   "_auto": true
-  },
-  {
-   "kind": "chalk",
-   "line": 4,
-   "from": 0.57,
-   "blur": 1,
-   "lines": [
-    {
-     "t": "BRUSHING SCAM:",
-     "c": "y",
-     "u": true,
-     "at": 0.1
-    },
-    {
-     "t": "1. mail you stuff",
-     "c": "w",
-     "at": 0.8,
-     "size": 80
-    },
-    {
-     "t": "2. post fake reviews",
-     "c": "w",
-     "at": 2.2,
-     "size": 80
-    }
-   ],
-   "cast": [
-    {
-     "who": "rocco",
-     "x": 0.82,
-     "y": 1.0,
-     "h": 800,
-     "mood": "sideeye",
-     "pose": "point"
-    }
-   ],
-   "cont": true,
-   "_auto": true,
-   "hook": null
-  },
-  {
-   "kind": "cu_p",
-   "bg": "/home/user/financier-videos/assets/toon3d/porch3d.jpg",
-   "p": "shock",
-   "r": "sly",
-   "cam": {
-    "z": 1.2,
-    "push": 0.06,
-    "fy": 0.42
-   },
-   "line": 4,
-   "from": 0.67,
-   "blur": 1,
-   "amb": "street",
-   "_auto": true
-  },
-  {
    "kind": "stamp",
    "line": 5,
    "from": 0,
@@ -278,85 +139,6 @@
    "dim": 90
   },
   {
-   "kind": "two",
-   "bg": "/home/user/financier-videos/assets/toon3d/porch3d.jpg",
-   "p": "happy",
-   "r": "sly",
-   "cam": {
-    "z": 1.05,
-    "push": 0.06
-   },
-   "line": 5,
-   "from": 0.33,
-   "blur": 1,
-   "amb": "street",
-   "_auto": true
-  },
-  {
-   "kind": "stamp",
-   "line": 5,
-   "from": 0.55,
-   "blur": 1,
-   "kicker": "THE QR CARD:",
-   "claim": "\"SCAN FOR YOUR GIFT\"",
-   "verdict": "DON'T",
-   "at": 1.0,
-   "cast": [
-    {
-     "who": "rocco",
-     "x": 0.82,
-     "y": 1.0,
-     "h": 760,
-     "mood": "angry"
-    }
-   ],
-   "bg": "/home/user/financier-videos/assets/toon3d/porch3d.jpg",
-   "dim": 90,
-   "cont": true,
-   "_auto": true,
-   "hook": null
-  },
-  {
-   "kind": "cu_p",
-   "bg": "/home/user/financier-videos/assets/toon3d/porch3d.jpg",
-   "p": "shock",
-   "r": "sly",
-   "cam": {
-    "z": 1.2,
-    "push": 0.06,
-    "fy": 0.42
-   },
-   "line": 5,
-   "from": 0.67,
-   "blur": 1,
-   "amb": "street",
-   "_auto": true
-  },
-  {
-   "kind": "stamp",
-   "line": 5,
-   "from": 0.88,
-   "blur": 1,
-   "kicker": "THE QR CARD:",
-   "claim": "\"SCAN FOR YOUR GIFT\"",
-   "verdict": "DON'T",
-   "at": 1.0,
-   "cast": [
-    {
-     "who": "rocco",
-     "x": 0.82,
-     "y": 1.0,
-     "h": 760,
-     "mood": "angry"
-    }
-   ],
-   "bg": "/home/user/financier-videos/assets/toon3d/porch3d.jpg",
-   "dim": 90,
-   "cont": true,
-   "_auto": true,
-   "hook": null
-  },
-  {
    "kind": "cu_p",
    "line": 6,
    "from": 0,
@@ -372,42 +154,12 @@
   },
   {
    "kind": "two",
-   "bg": "/home/user/financier-videos/assets/toon3d/porch3d.jpg",
-   "p": "sly",
-   "r": "sideeye",
-   "cam": {
-    "z": 1.0,
-    "push": 0.06
-   },
-   "line": 6,
-   "from": 0.5,
-   "blur": 1,
-   "amb": "street",
-   "_auto": true
-  },
-  {
-   "kind": "two",
    "line": 7,
    "from": 0,
    "blur": 1,
    "bg": "/home/user/financier-videos/assets/toon3d/porch3d.jpg",
    "p": "happy",
    "r": "sly"
-  },
-  {
-   "kind": "two",
-   "bg": "/home/user/financier-videos/assets/toon3d/porch3d.jpg",
-   "p": "happy",
-   "r": "sly",
-   "cam": {
-    "z": 1.05,
-    "push": 0.06
-   },
-   "line": 7,
-   "from": 0.5,
-   "blur": 1,
-   "amb": "street",
-   "_auto": true
   },
   {
    "kind": "end",
@@ -454,5 +206,6 @@
  ],
  "pause_before": {
   "6": 0.45
- }
+ },
+ "grade": "gold"
 }

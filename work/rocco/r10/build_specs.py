@@ -203,7 +203,7 @@ out("RC-19", "Fake IRS Agent Picked the Wrong Grandpa", [
 out("RC-20", "Free Socks and a Very Bad QR Code", [
     ["P", "[excited] Rocco! I got a mystery package!"],
     ["R", "[flat] I didn't order anything for you."],
-    ["P", "[puzzled] Me neither. It's socks. And a card with a QR code."],
+    ["P", "[puzzled] Me neither. Just socks. And a card with a QR code."],
     ["R", "[knowing] That's a brushing scam."],
     ["R", "[explaining] Sellers mail stuff to real addresses so they can post fake reviews in your name."],
     ["R", "[serious] And that QR code can send you to a site that steals your info. Don't scan it."],
@@ -219,7 +219,7 @@ out("RC-20", "Free Socks and a Very Bad QR Code", [
      s("two", 7, 0, PO, p="happy", r="sly"),
      end(7, PO, "UNORDERED PACKAGE + QR CODE", "DON'T SCAN", "Send this to someone who loves free stuff.")],
     [{"line": 2, "frac": 0.2, "name": "pop", "gain": 0.3}, {"line": 3, "frac": 0.0, "name": "subboom", "gain": 0.3}, {"line": 5, "frac": 0.5, "name": "impact", "gain": 0.35}, {"line": 7, "frac": 0.3, "name": "ding", "gain": 0.3}],
-    hot=["SCAM", "QR", "SOCKS", "FAKE"], pause_before={"6": 0.45}, amb="street")
+    hot=["SCAM", "QR", "SOCKS", "FAKE"], pause_before={"6": 0.45}, amb="street", grade="gold")
 
 # RC-21 "this just happened to Penny" (4ILxskhpnpo 602K, 481x)
 out("RC-21", "This Just Happened to Penny", [
