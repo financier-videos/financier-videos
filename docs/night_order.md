@@ -250,3 +250,8 @@ Tuzatilgach 10 kadrlik varaq → chat tasdiqlaydi → Buffer.
 4. Koinot sahnalari qora — `earth_night` (quyoshli), `moon_big`; ustma-ust qorong'ilatish olinadi.
 5. Ustunli diagramma xira osmon ustida — yorug' tekis lavha (`cash_desk`) ustida, ustunlar kattaroq.
 Rocco: `rc04c.json` bor, video hali yo'q — render qilingach varaq bilan.
+
+### JARAYON (vazifa sessiyasi, 2026-11-22 09:21–10:35 Toshkent, A ishi)
+- START_HERE navbati 4 (yangi formatlar): V-02 (tangalar) → 23-noy 07:00 ET (YT 437269586 / IG 437269599), V-03 (kupyuralar) → 23-noy 13:00 ET (YT 437285216 / IG 437285230). Ikkalasi qc_gate PASS, v6.16, footage_bank.
+- QILINMADI: V-01, V-04, V-05 (Rocco), C-01, C-02 — sabab: vaqt; V-04 manbasi (federalreserve.gov) muhitda ochilmaydi; C-01/C-02 raqamlari 23-noy fees/24-noy subs postlari bilan takrorlanadi → 25-noydan keyin. Rocco: KO'RIK №2/№3 va rc04c — kod sessiyasiniki, tegilmadi. finansist424 (UZ) — qilinmadi (vaqt).
+- 10 kadrlik varaqlar: work/2026-11-23v/v02_qc_sheet.png, v03_qc_sheet.png.
