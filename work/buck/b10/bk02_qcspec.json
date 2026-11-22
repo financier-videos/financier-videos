@@ -1,0 +1,61 @@
+{
+ "format": "short",
+ "look": "fx",
+ "scenes": [
+  {
+   "text": "Forbes says Elon Musk is worth eight hundred sixty-nine billion dollars. Let's spend it.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4"
+    }
+   ]
+  },
+  {
+   "text": "First, every copy of GTA 6 sold on day one. Three point seven nine billion.",
+   "stat": "bk02-1"
+  },
+  {
+   "text": "Then all of America's online shopping on Cyber Week. Forty-four billion.",
+   "stat": "bk02-2"
+  },
+  {
+   "text": "Thanksgiving dinner for every single American? Only two billion.",
+   "stat": "bk02-3"
+  },
+  {
+   "text": "Still eight hundred and nineteen billion left.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/atm_use.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Okay. Let's pay off the US debt with everything that's left...",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4"
+    }
+   ]
+  },
+  {
+   "text": "...that covers two percent. Two.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/gamepad_hands.mp4"
+    }
+   ]
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "EpTFo_wkNwA physical scale 3.3M",
+  "siIMLJRNM0c how long until broke 3.7M",
+  "e6XktxbqN00 receipt 1.7M",
+  "R2qQD6IcN2w guess the price 216x",
+  "mofrqidM4Mo ranking table 192x"
+ ],
+ "title": "I Tried to Spend Elon Musk's $869 Billion"
+}

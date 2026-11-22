@@ -1,0 +1,621 @@
+{
+ "id": "RC-17",
+ "title": "Only a Real Detective Can Solve This",
+ "style": "rocco3d",
+ "tail": 1.6,
+ "speed": 1.06,
+ "amb": "lair",
+ "lines": [
+  [
+   "R",
+   "[mysterious, low] Only a real detective can solve this. Listen till the end."
+  ],
+  [
+   "R",
+   "[storytelling] Grandma got a call. 'Grandma, it's me! I'm in jail! Send three thousand dollars, fast!'"
+  ],
+  [
+   "R",
+   "[serious] Four people were near Grandma's phone that day."
+  ],
+  [
+   "R",
+   "Penny says she was baking all day."
+  ],
+  [
+   "R",
+   "Slick says he was at the library. Reading."
+  ],
+  [
+   "R",
+   "The mailman says he only delivers letters."
+  ],
+  [
+   "R",
+   "Cousin Kevin says he's been in Hawaii all week."
+  ],
+  [
+   "R",
+   "[whispering] Clue: the caller said 'Grandma'... but never said his own name."
+  ],
+  [
+   "R",
+   "[sly, to camera] So who's lying? Comment your answer. Real detectives only."
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "loom_r",
+   "line": 0,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg",
+   "r": "sly",
+   "s": "shock",
+   "hook": "CAN YOU SOLVE IT?"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg",
+   "p": "happy",
+   "r": "sly",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 0,
+   "from": 0.33,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg",
+   "p": "shock",
+   "r": "sly",
+   "cam": {
+    "z": 1.2,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 0,
+   "from": 0.67,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "phone",
+   "line": 1,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg",
+   "p": "shock",
+   "sender": "Unknown",
+   "msgs": [
+    {
+     "t": "\"GRANDMA, IT'S ME!\nI'M IN JAIL.\nSEND $3,000 FAST!\"",
+     "at": 0.05,
+     "col": [
+      220,
+      60,
+      60
+     ],
+     "size": 76
+    }
+   ]
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg",
+   "p": "happy",
+   "r": "sly",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 1,
+   "from": 0.33,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "phone",
+   "line": 1,
+   "from": 0.51,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg",
+   "p": "shock",
+   "sender": "Unknown",
+   "msgs": [
+    {
+     "t": "\"GRANDMA, IT'S ME!\nI'M IN JAIL.\nSEND $3,000 FAST!\"",
+     "at": 0.05,
+     "col": [
+      220,
+      60,
+      60
+     ],
+     "size": 76
+    }
+   ],
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg",
+   "p": "shock",
+   "r": "sly",
+   "cam": {
+    "z": 1.2,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 1,
+   "from": 0.67,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "phone",
+   "line": 1,
+   "from": 0.84,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg",
+   "p": "shock",
+   "sender": "Unknown",
+   "msgs": [
+    {
+     "t": "\"GRANDMA, IT'S ME!\nI'M IN JAIL.\nSEND $3,000 FAST!\"",
+     "at": 0.05,
+     "col": [
+      220,
+      60,
+      60
+     ],
+     "size": 76
+    }
+   ],
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "cu_r",
+   "line": 2,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg",
+   "r": "sideeye",
+   "r_pose": "point",
+   "cam": {
+    "z": 1.2,
+    "push": 0.08,
+    "fy": 0.47
+   }
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 2,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "grid",
+   "line": 3,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg",
+   "title": "4 SUSPECTS",
+   "cells": [
+    [
+     "PENNY",
+     "\"BAKING ALL DAY\"",
+     [
+      60,
+      60,
+      70
+     ]
+    ]
+   ],
+   "cols": 2,
+   "cell_h": 300,
+   "stagger": 0.3,
+   "cast": [
+    {
+     "who": "penny",
+     "x": 0.25,
+     "y": 1.0,
+     "h": 650,
+     "mood": "happy"
+    }
+   ]
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg",
+   "p": "happy",
+   "r": "sly",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 3,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "grid",
+   "line": 4,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg",
+   "title": "4 SUSPECTS",
+   "cells": [
+    [
+     "PENNY",
+     "\"BAKING ALL DAY\"",
+     [
+      60,
+      60,
+      70
+     ]
+    ],
+    [
+     "SLICK",
+     "\"AT THE LIBRARY\"",
+     [
+      60,
+      60,
+      70
+     ]
+    ]
+   ],
+   "cols": 2,
+   "cell_h": 300,
+   "stagger": 0.0,
+   "cast": [
+    {
+     "who": "slick",
+     "x": 0.75,
+     "y": 1.0,
+     "h": 750,
+     "mood": "sly"
+    }
+   ]
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg",
+   "p": "happy",
+   "r": "sly",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 4,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "grid",
+   "line": 5,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg",
+   "title": "4 SUSPECTS",
+   "cells": [
+    [
+     "PENNY",
+     "\"BAKING ALL DAY\"",
+     [
+      60,
+      60,
+      70
+     ]
+    ],
+    [
+     "SLICK",
+     "\"AT THE LIBRARY\"",
+     [
+      60,
+      60,
+      70
+     ]
+    ],
+    [
+     "MAILMAN",
+     "\"JUST LETTERS\"",
+     [
+      60,
+      60,
+      70
+     ]
+    ]
+   ],
+   "cols": 2,
+   "cell_h": 300,
+   "stagger": 0.0
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg",
+   "p": "happy",
+   "r": "sly",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 5,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "grid",
+   "line": 6,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg",
+   "title": "4 SUSPECTS",
+   "cells": [
+    [
+     "PENNY",
+     "\"BAKING ALL DAY\"",
+     [
+      60,
+      60,
+      70
+     ]
+    ],
+    [
+     "SLICK",
+     "\"AT THE LIBRARY\"",
+     [
+      60,
+      60,
+      70
+     ]
+    ],
+    [
+     "MAILMAN",
+     "\"JUST LETTERS\"",
+     [
+      60,
+      60,
+      70
+     ]
+    ],
+    [
+     "COUSIN KEV",
+     "\"IN HAWAII\"",
+     [
+      60,
+      60,
+      70
+     ]
+    ]
+   ],
+   "cols": 2,
+   "cell_h": 300,
+   "stagger": 0.0,
+   "cast": [
+    {
+     "who": "rocco",
+     "x": 0.8,
+     "y": 1.0,
+     "h": 700,
+     "mood": "sideeye"
+    }
+   ]
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg",
+   "p": "happy",
+   "r": "sly",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 6,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "chalk",
+   "line": 7,
+   "from": 0,
+   "blur": 1,
+   "lines": [
+    {
+     "t": "CLUE:",
+     "c": "y",
+     "u": true,
+     "at": 0.2
+    },
+    {
+     "t": "\"GRANDMA, IT'S ME\"",
+     "c": "w",
+     "at": 0.8,
+     "size": 90
+    },
+    {
+     "t": "...BUT NO NAME",
+     "c": "r",
+     "at": 2.0,
+     "size": 110
+    }
+   ],
+   "cast": [
+    {
+     "who": "rocco",
+     "x": 0.82,
+     "y": 1.0,
+     "h": 800,
+     "mood": "sly",
+     "pose": "point"
+    }
+   ]
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg",
+   "p": "happy",
+   "r": "sly",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 7,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "chalk",
+   "line": 7,
+   "from": 0.77,
+   "blur": 1,
+   "lines": [
+    {
+     "t": "CLUE:",
+     "c": "y",
+     "u": true,
+     "at": 0.2
+    },
+    {
+     "t": "\"GRANDMA, IT'S ME\"",
+     "c": "w",
+     "at": 0.8,
+     "size": 90
+    },
+    {
+     "t": "...BUT NO NAME",
+     "c": "r",
+     "at": 2.0,
+     "size": 110
+    }
+   ],
+   "cast": [
+    {
+     "who": "rocco",
+     "x": 0.82,
+     "y": 1.0,
+     "h": 800,
+     "mood": "sly",
+     "pose": "point"
+    }
+   ],
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "loom_r",
+   "line": 8,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg",
+   "r": "sly",
+   "s": "sly"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg",
+   "p": "happy",
+   "r": "sly",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 8,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "end",
+   "bg": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg",
+   "blur": 2,
+   "line": 8,
+   "from": 1.0,
+   "l1": "WHO'S LYING?",
+   "l2": "COMMENT BELOW",
+   "l3": "Real detectives only."
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "subboom",
+   "gain": 0.35
+  },
+  {
+   "line": 1,
+   "frac": 0.0,
+   "name": "ding",
+   "gain": 0.3
+  },
+  {
+   "line": 3,
+   "frac": 0.0,
+   "name": "pop",
+   "gain": 0.3
+  },
+  {
+   "line": 4,
+   "frac": 0.0,
+   "name": "pop",
+   "gain": 0.3
+  },
+  {
+   "line": 5,
+   "frac": 0.0,
+   "name": "pop",
+   "gain": 0.3
+  },
+  {
+   "line": 6,
+   "frac": 0.0,
+   "name": "pop",
+   "gain": 0.3
+  },
+  {
+   "line": 7,
+   "frac": 0.6,
+   "name": "riser",
+   "gain": 0.25
+  }
+ ],
+ "hot": [
+  "LYING",
+  "CLUE",
+  "JAIL",
+  "DETECTIVE"
+ ]
+}

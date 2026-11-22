@@ -1,0 +1,89 @@
+{
+ "format": "short",
+ "look": "rocco2",
+ "scenes": [
+  {
+   "text": "Only a real detective can solve this. Listen till the end.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Grandma got a call. 'Grandma, it's me! I'm in jail! Send three thousand dollars, fast!'",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Four people were near Grandma's phone that day.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Penny says she was baking all day.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Slick says he was at the library. Reading.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "The mailman says he only delivers letters.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Cousin Kevin says he's been in Hawaii all week.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Clue: the caller said 'Grandma'... but never said his own name.",
+   "chart": "rc17-7"
+  },
+  {
+   "text": "So who's lying? Comment your answer. Real detectives only.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/interrogation3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "N09VNM2BOD8 spelled trap call 5M",
+  "DdGowjqMDqS karma allegory 13.4M",
+  "jUF_JPKXTWc two scams one real 7.5M",
+  "SS_6KU9qpr0 red flag green flag 20.3M",
+  "PibMox6nk4c whodunit 17x",
+  "Df331TOAaAO POV phishing",
+  "DfSbqCJPpE8 status flip",
+  "DflN4MGBPX5 did you order this",
+  "4ILxskhpnpo this just happened 481x"
+ ],
+ "title": "Only a Real Detective Can Solve This"
+}

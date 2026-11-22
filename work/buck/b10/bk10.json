@@ -1,0 +1,176 @@
+{
+ "id": "BK-10",
+ "title": "32.5 Million People Paid Before GTA 6 Even Existed",
+ "brand": [
+  "FINANCIER",
+  [
+   255,
+   205,
+   60
+  ]
+ ],
+ "props": {
+  "2": "$3.79B",
+  "3": "#1 EVER"
+ },
+ "tail": 1.6,
+ "speed": 1.08,
+ "amb": "room",
+ "lines": [
+  [
+   "B",
+   "[amazed] Thirty-two point five million copies of GTA 6 were sold... before it even came out."
+  ],
+  [
+   "B",
+   "[playful] That's about everyone in Texas. Paying for a game they hadn't played."
+  ],
+  [
+   "B",
+   "[impressed] Then day one: three point seven nine billion dollars in sales."
+  ],
+  [
+   "B",
+   "[sly] Biggest entertainment launch ever. Bigger than any movie opening."
+  ],
+  [
+   "B",
+   "[teasing] Did you pre-order? Be honest."
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "host",
+   "line": 0,
+   "from": 0,
+   "buck": {
+    "mood": "shocked",
+    "h": 1350
+   },
+   "prop": "32,500,000",
+   "prop_at": 0.2,
+   "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
+   "bg_start": 1.0,
+   "dim": 30
+  },
+  {
+   "kind": "counter",
+   "line": 0,
+   "from": 0.5,
+   "to": 32500000.0,
+   "prefix": "",
+   "label": "COPIES SOLD BEFORE LAUNCH",
+   "dur": 1.5,
+   "size": 150,
+   "bg": "/tmp/fin/bg/bank/tv_remote.mp4",
+   "bg_start": 2.7
+  },
+  {
+   "kind": "host",
+   "line": 1,
+   "from": 0,
+   "buck": {
+    "mood": "laugh",
+    "h": 1350
+   },
+   "bubble": "\"ABOUT EVERYONE IN TEXAS\"",
+   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
+   "bg_start": 4.4,
+   "dim": 30
+  },
+  {
+   "kind": "counter",
+   "line": 2,
+   "from": 0,
+   "to": 3790000000.0,
+   "label": "DAY ONE SALES (TAKE-TWO)",
+   "dur": 1.6,
+   "size": 130,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "proud"
+   },
+   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "bg_start": 2.0999999999999996
+  },
+  {
+   "kind": "kinetic",
+   "line": 3,
+   "from": 0,
+   "words": [
+    {
+     "t": "BIGGEST",
+     "size": 180,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "ENTERTAINMENT",
+     "size": 120
+    },
+    {
+     "t": "LAUNCH EVER",
+     "size": 140
+    }
+   ],
+   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
+   "bg_start": 3.8
+  },
+  {
+   "kind": "host",
+   "line": 4,
+   "from": 0,
+   "buck": {
+    "mood": "sideeye",
+    "h": 1350
+   },
+   "bubble": "DID YOU PRE-ORDER?",
+   "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
+   "bg_start": 1.5,
+   "dim": 30
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "impact",
+   "gain": 0.3
+  },
+  {
+   "line": 2,
+   "frac": 0.2,
+   "name": "cash",
+   "gain": 0.3
+  },
+  {
+   "line": 3,
+   "frac": 0.0,
+   "name": "subboom",
+   "gain": 0.3
+  },
+  {
+   "line": 4,
+   "frac": 0.2,
+   "name": "boing",
+   "gain": 0.25
+  }
+ ],
+ "hot": [
+  "MILLION",
+  "BILLION",
+  "EVER"
+ ],
+ "pool": [
+  "gamepad_hands",
+  "tv_remote",
+  "typing_keys",
+  "laptop_phone",
+  "phone_scroll"
+ ]
+}

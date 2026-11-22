@@ -1,0 +1,53 @@
+{
+ "format": "short",
+ "look": "fx",
+ "scenes": [
+  {
+   "text": "Quick! How much did Americans spend online on Cyber Monday last year?",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/laptop_phone.mp4"
+    }
+   ]
+  },
+  {
+   "text": "A, one point four billion. B, fourteen billion. C, a hundred forty billion.",
+   "sticker": "bk05-1"
+  },
+  {
+   "text": "Three... two... one...",
+   "sticker": "bk05-2"
+  },
+  {
+   "text": "B! Fourteen point two five billion dollars. In one day.",
+   "sticker": "bk05-3"
+  },
+  {
+   "text": "That's a hundred sixty-four thousand dollars every second.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/phone_scroll.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Did you get it? Comment A, B or C. No lying.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/laptop_phone.mp4"
+    }
+   ]
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "EpTFo_wkNwA physical scale 3.3M",
+  "siIMLJRNM0c how long until broke 3.7M",
+  "e6XktxbqN00 receipt 1.7M",
+  "R2qQD6IcN2w guess the price 216x",
+  "mofrqidM4Mo ranking table 192x"
+ ],
+ "title": "Guess How Much America Spent Online in ONE Day"
+}

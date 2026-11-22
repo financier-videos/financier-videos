@@ -1,0 +1,655 @@
+{
+ "id": "BK-04",
+ "title": "America's Cyber Week Receipt: $44.2 Billion",
+ "brand": [
+  "FINANCIER",
+  [
+   255,
+   205,
+   60
+  ]
+ ],
+ "props": {
+  "2": "$14.25B IN 1 DAY",
+  "4": "$44.2B",
+  "6": "???"
+ },
+ "tail": 1.6,
+ "speed": 1.08,
+ "amb": "room",
+ "lines": [
+  [
+   "B",
+   "[cheerful] Here's America's receipt for Cyber Week, last year."
+  ],
+  [
+   "B",
+   "[reading] Black Friday, online: eleven point eight billion."
+  ],
+  [
+   "B",
+   "[reading] Cyber Monday: fourteen point two five billion. The biggest online shopping day ever."
+  ],
+  [
+   "B",
+   "[reading] The other three days: eighteen billion more."
+  ],
+  [
+   "B",
+   "[shocked] Total? Forty-four point two billion dollars. In five days."
+  ],
+  [
+   "B",
+   "[sly] And over one billion of Cyber Monday was buy now, pay later."
+  ],
+  [
+   "B",
+   "[teasing] This year's receipt prints next week. Guess the total in the comments."
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "kinetic",
+   "words": [
+    {
+     "t": "AMERICA'S",
+     "size": 150
+    },
+    {
+     "t": "CYBER WEEK",
+     "size": 150,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "RECEIPT",
+     "size": 170
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "happy"
+   },
+   "line": 0,
+   "from": 0,
+   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "line": 0,
+   "from": 0.39,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg_start": 0.5,
+   "dim": 20
+  },
+  {
+   "kind": "kinetic",
+   "words": [
+    {
+     "t": "AMERICA'S",
+     "size": 150
+    },
+    {
+     "t": "CYBER WEEK",
+     "size": 150,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "RECEIPT",
+     "size": 170
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "happy"
+   },
+   "line": 0,
+   "from": 0.721,
+   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg_start": 1.0,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "receipt",
+   "line": 1,
+   "from": 0,
+   "title": "CYBER WEEK 2025",
+   "sub": "U.S. ONLINE SALES - ADOBE",
+   "rows": [
+    [
+     "BLACK FRIDAY",
+     "$11.80B"
+    ]
+   ],
+   "total": "...",
+   "step": 0.01
+  },
+  {
+   "kind": "host",
+   "line": 1,
+   "from": 0.31,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
+   "bg_start": 2.8,
+   "dim": 20
+  },
+  {
+   "kind": "receipt",
+   "line": 1,
+   "from": 0.573,
+   "title": "CYBER WEEK 2025",
+   "sub": "U.S. ONLINE SALES - ADOBE",
+   "rows": [
+    [
+     "BLACK FRIDAY",
+     "$11.80B"
+    ]
+   ],
+   "total": "...",
+   "step": 0.01,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "receipt",
+   "line": 2,
+   "from": 0,
+   "title": "CYBER WEEK 2025",
+   "sub": "U.S. ONLINE SALES - ADOBE",
+   "rows": [
+    [
+     "BLACK FRIDAY",
+     "$11.80B"
+    ],
+    [
+     "CYBER MONDAY",
+     "$14.25B"
+    ]
+   ],
+   "total": "...",
+   "step": 0.01
+  },
+  {
+   "kind": "host",
+   "line": 2,
+   "from": 0.196,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
+   "bg_start": 5.1,
+   "dim": 20,
+   "prop": "$14.25B IN 1 DAY"
+  },
+  {
+   "kind": "receipt",
+   "line": 2,
+   "from": 0.362,
+   "title": "CYBER WEEK 2025",
+   "sub": "U.S. ONLINE SALES - ADOBE",
+   "rows": [
+    [
+     "BLACK FRIDAY",
+     "$11.80B"
+    ],
+    [
+     "CYBER MONDAY",
+     "$14.25B"
+    ]
+   ],
+   "total": "...",
+   "step": 0.01,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 2,
+   "from": 0.603,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg_start": 2.3999999999999995,
+   "dim": 20,
+   "prop": "$14.25B IN 1 DAY"
+  },
+  {
+   "kind": "receipt",
+   "line": 2,
+   "from": 0.769,
+   "title": "CYBER WEEK 2025",
+   "sub": "U.S. ONLINE SALES - ADOBE",
+   "rows": [
+    [
+     "BLACK FRIDAY",
+     "$11.80B"
+    ],
+    [
+     "CYBER MONDAY",
+     "$14.25B"
+    ]
+   ],
+   "total": "...",
+   "step": 0.01,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "receipt",
+   "line": 3,
+   "from": 0,
+   "title": "CYBER WEEK 2025",
+   "sub": "U.S. ONLINE SALES - ADOBE",
+   "rows": [
+    [
+     "BLACK FRIDAY",
+     "$11.80B"
+    ],
+    [
+     "CYBER MONDAY",
+     "$14.25B"
+    ],
+    [
+     "OTHER 3 DAYS",
+     "$18.15B"
+    ]
+   ],
+   "total": "...",
+   "step": 0.01
+  },
+  {
+   "kind": "host",
+   "line": 3,
+   "from": 0.374,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "bg_start": 4.699999999999999,
+   "dim": 20
+  },
+  {
+   "kind": "receipt",
+   "line": 3,
+   "from": 0.69,
+   "title": "CYBER WEEK 2025",
+   "sub": "U.S. ONLINE SALES - ADOBE",
+   "rows": [
+    [
+     "BLACK FRIDAY",
+     "$11.80B"
+    ],
+    [
+     "CYBER MONDAY",
+     "$14.25B"
+    ],
+    [
+     "OTHER 3 DAYS",
+     "$18.15B"
+    ]
+   ],
+   "total": "...",
+   "step": 0.01,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "receipt",
+   "line": 4,
+   "from": 0,
+   "title": "CYBER WEEK 2025",
+   "sub": "U.S. ONLINE SALES - ADOBE",
+   "rows": [
+    [
+     "BLACK FRIDAY",
+     "$11.80B"
+    ],
+    [
+     "CYBER MONDAY",
+     "$14.25B"
+    ],
+    [
+     "OTHER 3 DAYS",
+     "$18.15B"
+    ]
+   ],
+   "total": "$44.20B",
+   "stamp": "5 DAYS",
+   "step": 0.01
+  },
+  {
+   "kind": "host",
+   "line": 4,
+   "from": 0.22,
+   "buck": {
+    "mood": "shocked",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg_start": 2.0,
+   "dim": 20,
+   "prop": "$44.2B"
+  },
+  {
+   "kind": "receipt",
+   "line": 4,
+   "from": 0.405,
+   "title": "CYBER WEEK 2025",
+   "sub": "U.S. ONLINE SALES - ADOBE",
+   "rows": [
+    [
+     "BLACK FRIDAY",
+     "$11.80B"
+    ],
+    [
+     "CYBER MONDAY",
+     "$14.25B"
+    ],
+    [
+     "OTHER 3 DAYS",
+     "$18.15B"
+    ]
+   ],
+   "total": "$44.20B",
+   "stamp": "5 DAYS",
+   "step": 0.01,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 4,
+   "from": 0.676,
+   "buck": {
+    "mood": "shocked",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
+   "bg_start": 4.299999999999999,
+   "dim": 20,
+   "prop": "$44.2B"
+  },
+  {
+   "kind": "receipt",
+   "line": 4,
+   "from": 0.861,
+   "title": "CYBER WEEK 2025",
+   "sub": "U.S. ONLINE SALES - ADOBE",
+   "rows": [
+    [
+     "BLACK FRIDAY",
+     "$11.80B"
+    ],
+    [
+     "CYBER MONDAY",
+     "$14.25B"
+    ],
+    [
+     "OTHER 3 DAYS",
+     "$18.15B"
+    ]
+   ],
+   "total": "$44.20B",
+   "stamp": "5 DAYS",
+   "step": 0.01,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "stamp",
+   "line": 5,
+   "from": 0,
+   "kicker": "CYBER MONDAY 2025:",
+   "claim": "$1.03 BILLION\nWAS 'PAY LATER'",
+   "verdict": "BNPL",
+   "at": 1.2,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "sideeye"
+   },
+   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "bg_start": 2.7
+  },
+  {
+   "kind": "host",
+   "line": 5,
+   "from": 0.283,
+   "buck": {
+    "mood": "smug",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
+   "bg_start": 1.5999999999999979,
+   "dim": 20
+  },
+  {
+   "kind": "stamp",
+   "line": 5,
+   "from": 0.522,
+   "kicker": "CYBER MONDAY 2025:",
+   "claim": "$1.03 BILLION\nWAS 'PAY LATER'",
+   "verdict": "BNPL",
+   "at": 1.2,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "sideeye"
+   },
+   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "bg_start": 2.7,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 5,
+   "from": 0.761,
+   "buck": {
+    "mood": "smug",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg_start": 3.8999999999999986,
+   "dim": 20
+  },
+  {
+   "kind": "kinetic",
+   "line": 6,
+   "from": 0,
+   "words": [
+    {
+     "t": "2026 TOTAL?",
+     "size": 150,
+     "c": [
+      255,
+      205,
+      60
+     ],
+     "font": "Courier"
+    },
+    {
+     "t": "COMMENT YOUR GUESS",
+     "size": 80,
+     "font": "Courier"
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "point"
+   },
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg_start": 4.4
+  },
+  {
+   "kind": "host",
+   "line": 6,
+   "from": 0.297,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "bg_start": 1.1999999999999993,
+   "dim": 20,
+   "prop": "???"
+  },
+  {
+   "kind": "kinetic",
+   "line": 6,
+   "from": 0.549,
+   "words": [
+    {
+     "t": "2026 TOTAL?",
+     "size": 150,
+     "c": [
+      255,
+      205,
+      60
+     ],
+     "font": "Courier"
+    },
+    {
+     "t": "COMMENT YOUR GUESS",
+     "size": 80,
+     "font": "Courier"
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "point"
+   },
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg_start": 4.4,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 6,
+   "from": 0.915,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg_start": 3.5,
+   "dim": 20,
+   "prop": "???"
+  }
+ ],
+ "sfx": [
+  {
+   "line": 1,
+   "frac": 0.0,
+   "name": "tick",
+   "gain": 0.2,
+   "dur": 0.4
+  },
+  {
+   "line": 2,
+   "frac": 0.0,
+   "name": "tick",
+   "gain": 0.2,
+   "dur": 0.4
+  },
+  {
+   "line": 3,
+   "frac": 0.0,
+   "name": "tick",
+   "gain": 0.2,
+   "dur": 0.4
+  },
+  {
+   "line": 4,
+   "word": "total",
+   "name": "cash",
+   "gain": 0.35
+  },
+  {
+   "line": 4,
+   "frac": 0.7,
+   "name": "impact",
+   "gain": 0.3
+  },
+  {
+   "line": 5,
+   "frac": 0.3,
+   "name": "impact",
+   "gain": 0.3
+  }
+ ],
+ "hot": [
+  "BILLION",
+  "TOTAL",
+  "LATER"
+ ],
+ "pool": [
+  "online_card",
+  "laptop_phone",
+  "cart_pov",
+  "pay_terminal",
+  "phone_scroll"
+ ]
+}

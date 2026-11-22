@@ -1,0 +1,67 @@
+{
+ "0_freshness": {
+  "status": "FAIL",
+  "note": "repo 3 commit(s) behind origin/media - git pull --rebase and re-render"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    57.2 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.9 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.2 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -14.7 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 11.8 Mbit/s, 40.7s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 1.0,\n \"rechecked_ok\": [],\n \"missing\": [],\n \"extra\": [],\n \"heard\": \"Forbes says Elon Musk is worth $869 billion. Let's spend it. First, every copy of GTA 6 sold on day one, $3.79 billion. Then, all of America's online shopping on Cyber Week. 44 billion. Thanksgiving dinner for every single American? Only 2 billion. Still 819 billion left. Okay, let's pay off the US debt with everything that's left. That covers 2%. 2.\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "opy of GTA 6 sold on day one. Three point seve\n 3  14.37s range=16.7 st  gap=0.58  ok  | Then all of America's online shopping on Cyber Week. Forty-f\n 4  20.74s range=14.7 st  gap=0.66  ok  | Thanksgiving dinner for every single American? Only two bill\n 5  25.93s range=14.5 st  gap=0.26  ok  | Still eight hundred and nineteen billion left.\n 6  30.59s range=15.9 st  gap=0.32  ok  | Okay. Let's pay off the US debt with everything that's left.\n 7  35.78s range=15.2 st  gap=0.3  ok  | ...that covers two percent. Two.\n 8  39.11s range=   - st  gap=-  ok  | \n{\"median_f0\": 219.1, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 94"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/buck/b10/bk02_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "WARN",
+  "note": "FAIL  0.70  (layout 0.92, palette 0.42, tone 0.71)  vs bk01.mp4\nok  0.59  (layout 0.73, palette 0.26, tone 0.82)  vs bk03.mp4\nFAIL  0.84  (layout 0.83, palette 0.87, tone 0.79)  vs bk04.mp4\nFAIL  0.91  (layout 0.96, palette 0.89, tone 0.83)  vs bk05.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "33 hard cuts (ffmpeg scene>0.22) in 40.7 s = 1.2 s/cut (need >= 20); engine planned 32"
+ },
+ "12_script": {
+  "status": "PASS",
+  "note": "bk02_qcspec.json                   words  72 scenes  8 broll 7 look fx        line2 \"first\" end \"\"\nbk01_qcspec.json                   words  58 scenes  7 broll 6 look fx        line2 \"stack\" end \"\"\nbk03_qcspec.json                   words  63 scenes  8 broll 3 look fx        line2 \"you\" end \"\"\nbk04_qcspec.json                   words  68 scenes  8 broll 3 look fx        line2 \"black\" end \"\"\nbk05_qcspec.json                   words  57 scenes  7 broll 6 look fx        line2 \"a\" end \"\"\nSCRIPT_CHECK: PASS"
+ },
+ "14_empty_panel": {
+  "status": "FAIL",
+  "note": "FAIL: largest one-colour flat area 26% of the frame (limit 20%); 2 frame(s) over: 18.7s=26%, 32.2s=25%"
+ },
+ "15_competitors": {
+  "status": "PASS",
+  "note": "5 fresh benchmark(s) ['EpTFo_wkNwA', 'R2qQD6IcN2w', 'e6XktxbqN00', 'mofrqidM4Mo', 'siIMLJRNM0c'] (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: viral-cartoon-playbook, viral-video-decomposer, dataviz, color-expert, animation-direction; ishlatilmadi: blender-* (Buck 3D kutubxonasi tayyor)"
+ },
+ "verdict": "FAIL"
+}

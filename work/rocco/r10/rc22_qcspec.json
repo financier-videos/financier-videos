@@ -1,0 +1,77 @@
+{
+ "format": "short",
+ "look": "rocco2",
+ "scenes": [
+  {
+   "text": "Level one! Boss fight: Slick!",
+   "stat": "rc22-0"
+  },
+  {
+   "text": "Attack one! A FREE gift card! Just click the link!",
+   "stat": "rc22-1"
+  },
+  {
+   "text": "Penny blocks! No link clicked!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Attack two! URGENT! Your account is locked!",
+   "stat": "rc22-3"
+  },
+  {
+   "text": "Penny blocks! She calls her bank herself!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Final attack! Grandma, it's me, your grandson!",
+   "stat": "rc22-5"
+  },
+  {
+   "text": "Oh really? What's your name, grandson?",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "...Grandson.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/slick_callcenter3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Boss defeated! Level complete!",
+   "sticker": "rc22-8"
+  },
+  {
+   "text": "Not again!",
+   "stat": "rc22-9"
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "N09VNM2BOD8 spelled trap call 5M",
+  "DdGowjqMDqS karma allegory 13.4M",
+  "jUF_JPKXTWc two scams one real 7.5M",
+  "SS_6KU9qpr0 red flag green flag 20.3M",
+  "PibMox6nk4c whodunit 17x",
+  "Df331TOAaAO POV phishing",
+  "DfSbqCJPpE8 status flip",
+  "DflN4MGBPX5 did you order this",
+  "4ILxskhpnpo this just happened 481x"
+ ],
+ "title": "Level 1: Beat the Scam Boss"
+}

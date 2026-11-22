@@ -1,0 +1,523 @@
+{
+ "id": "BK-03",
+ "title": "Paying Off the US Debt at $1 Million a Day",
+ "brand": [
+  "FINANCIER",
+  [
+   255,
+   205,
+   60
+  ]
+ ],
+ "props": {
+  "0": "$40,000,000,000,000",
+  "3": "80 YEARS",
+  "5": "109,514 YRS"
+ },
+ "tail": 1.6,
+ "speed": 1.08,
+ "amb": "room",
+ "lines": [
+  [
+   "B",
+   "[game announcer] New game! Pay off America's forty trillion dollar debt."
+  ],
+  [
+   "B",
+   "[excited] You get one million dollars. Every. Single. Day."
+  ],
+  [
+   "B",
+   "[fast] Day one, one million. Day one hundred, a hundred million."
+  ],
+  [
+   "B",
+   "[confident] Keep going for your whole life. Eighty years."
+  ],
+  [
+   "B",
+   "[nervous] Twenty-nine billion paid. Debt left? Still basically forty trillion."
+  ],
+  [
+   "B",
+   "[shocked] You'd need about a hundred and nine thousand years."
+  ],
+  [
+   "B",
+   "[deadpan] The pyramids aren't even five thousand years old. Game over."
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "pixel",
+   "line": 0,
+   "from": 0,
+   "hud_l": "DEBT",
+   "hud_r": "LV 1",
+   "start": 40000000000000.0,
+   "to": 40000000000000.0,
+   "msg": "PAY OFF $40 TRILLION",
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "happy"
+   }
+  },
+  {
+   "kind": "host",
+   "line": 0,
+   "from": 0.313,
+   "buck": {
+    "mood": "proud",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bg_start": 0.5,
+   "dim": 20,
+   "prop": "$40,000,000,000,000"
+  },
+  {
+   "kind": "pixel",
+   "line": 0,
+   "from": 0.578,
+   "hud_l": "DEBT",
+   "hud_r": "LV 1",
+   "start": 40000000000000.0,
+   "to": 40000000000000.0,
+   "msg": "PAY OFF $40 TRILLION",
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "happy"
+   },
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "counter",
+   "to": 1000000.0,
+   "label": "+$1,000,000 EVERY DAY",
+   "dur": 1.0,
+   "ticker": "+$1M",
+   "rate": 1.5,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "happy"
+   },
+   "line": 1,
+   "from": 0,
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "line": 1,
+   "from": 0.288,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/atm_use.mp4",
+   "bg_start": 2.8,
+   "dim": 20
+  },
+  {
+   "kind": "counter",
+   "to": 1000000.0,
+   "label": "+$1,000,000 EVERY DAY",
+   "dur": 1.0,
+   "ticker": "+$1M",
+   "rate": 1.5,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "happy"
+   },
+   "line": 1,
+   "from": 0.531,
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 1.0,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 1,
+   "from": 0.765,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 5.1,
+   "dim": 20
+  },
+  {
+   "kind": "pixel",
+   "line": 2,
+   "from": 0,
+   "hud_l": "PAID",
+   "hud_r": "DAY 100",
+   "start": 1000000.0,
+   "to": 100000000.0,
+   "dur": 2.0,
+   "msg": "PAID SO FAR",
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "proud"
+   }
+  },
+  {
+   "kind": "host",
+   "line": 2,
+   "from": 0.338,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/calendar_flip.mp4",
+   "bg_start": 2.3999999999999995,
+   "dim": 20
+  },
+  {
+   "kind": "pixel",
+   "line": 2,
+   "from": 0.623,
+   "hud_l": "PAID",
+   "hud_r": "DAY 100",
+   "start": 1000000.0,
+   "to": 100000000.0,
+   "dur": 2.0,
+   "msg": "PAID SO FAR",
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "proud"
+   },
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "pixel",
+   "line": 3,
+   "from": 0,
+   "hud_l": "PAID",
+   "hud_r": "YEAR 80",
+   "start": 100000000.0,
+   "to": 29200000000.0,
+   "dur": 2.0,
+   "msg": "A WHOLE LIFETIME"
+  },
+  {
+   "kind": "host",
+   "line": 3,
+   "from": 0.409,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bg_start": 4.699999999999999,
+   "dim": 20,
+   "prop": "80 YEARS"
+  },
+  {
+   "kind": "pixel",
+   "line": 4,
+   "from": 0,
+   "hud_l": "DEBT LEFT",
+   "hud_r": "YEAR 80",
+   "start": 40000000000000.0,
+   "to": 39970000000000.0,
+   "dur": 1.5,
+   "msg": "STILL ~$40 TRILLION",
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "confused"
+   }
+  },
+  {
+   "kind": "host",
+   "line": 4,
+   "from": 0.24,
+   "buck": {
+    "mood": "confused",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/atm_use.mp4",
+   "bg_start": 2.0,
+   "dim": 20
+  },
+  {
+   "kind": "pixel",
+   "line": 4,
+   "from": 0.444,
+   "hud_l": "DEBT LEFT",
+   "hud_r": "YEAR 80",
+   "start": 40000000000000.0,
+   "to": 39970000000000.0,
+   "dur": 1.5,
+   "msg": "STILL ~$40 TRILLION",
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "confused"
+   },
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 4,
+   "from": 0.722,
+   "buck": {
+    "mood": "confused",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 4.299999999999999,
+   "dim": 20
+  },
+  {
+   "kind": "kinetic",
+   "line": 5,
+   "from": 0,
+   "words": [
+    {
+     "t": "109,514",
+     "size": 220,
+     "c": [
+      255,
+      205,
+      60
+     ],
+     "font": "Pixel"
+    },
+    {
+     "t": "YEARS",
+     "size": 120,
+     "font": "Pixel"
+    }
+   ],
+   "bg": "/tmp/fin/bg/bank/calendar_flip.mp4",
+   "bg_start": 2.7
+  },
+  {
+   "kind": "host",
+   "line": 5,
+   "from": 0.334,
+   "buck": {
+    "mood": "shocked",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/calendar_flip.mp4",
+   "bg_start": 1.5999999999999979,
+   "dim": 20,
+   "prop": "109,514 YRS"
+  },
+  {
+   "kind": "kinetic",
+   "line": 5,
+   "from": 0.617,
+   "words": [
+    {
+     "t": "109,514",
+     "size": 220,
+     "c": [
+      255,
+      205,
+      60
+     ],
+     "font": "Pixel"
+    },
+    {
+     "t": "YEARS",
+     "size": 120,
+     "font": "Pixel"
+    }
+   ],
+   "bg": "/tmp/fin/bg/bank/calendar_flip.mp4",
+   "bg_start": 2.7,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "kinetic",
+   "line": 6,
+   "from": 0,
+   "words": [
+    {
+     "t": "GAME",
+     "size": 170,
+     "font": "Pixel",
+     "c": [
+      235,
+      64,
+      52
+     ]
+    },
+    {
+     "t": "OVER",
+     "size": 170,
+     "font": "Pixel",
+     "c": [
+      235,
+      64,
+      52
+     ]
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "dizzy"
+   },
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bg_start": 4.4
+  },
+  {
+   "kind": "host",
+   "line": 6,
+   "from": 0.295,
+   "buck": {
+    "mood": "sideeye",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bg_start": 3.8999999999999986,
+   "dim": 20
+  },
+  {
+   "kind": "kinetic",
+   "line": 6,
+   "from": 0.544,
+   "words": [
+    {
+     "t": "GAME",
+     "size": 170,
+     "font": "Pixel",
+     "c": [
+      235,
+      64,
+      52
+     ]
+    },
+    {
+     "t": "OVER",
+     "size": 170,
+     "font": "Pixel",
+     "c": [
+      235,
+      64,
+      52
+     ]
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "dizzy"
+   },
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bg_start": 4.4,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 6,
+   "from": 0.907,
+   "buck": {
+    "mood": "sideeye",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/atm_use.mp4",
+   "bg_start": 1.1999999999999993,
+   "dim": 20
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "coin",
+   "gain": 0.3
+  },
+  {
+   "line": 1,
+   "word": "every",
+   "name": "coin",
+   "gain": 0.3
+  },
+  {
+   "line": 2,
+   "frac": 0.3,
+   "name": "coin",
+   "gain": 0.3
+  },
+  {
+   "line": 5,
+   "frac": 0.0,
+   "name": "subboom",
+   "gain": 0.35
+  },
+  {
+   "line": 6,
+   "word": "over",
+   "name": "buzzer",
+   "gain": 0.3
+  }
+ ],
+ "hot": [
+  "DEBT",
+  "MILLION",
+  "YEARS",
+  "OVER"
+ ],
+ "cap_y": 0.93,
+ "pool": [
+  "cash_count",
+  "calendar_flip",
+  "wallet_empty",
+  "atm_use"
+ ]
+}

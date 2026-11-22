@@ -1,0 +1,439 @@
+{
+ "id": "RC-16",
+ "title": "Red Flag or Green Flag: The Dating App Fox",
+ "style": "rocco3d",
+ "tail": 1.6,
+ "speed": 1.06,
+ "amb": "room",
+ "lines": [
+  [
+   "R",
+   "[game show host, big] Red flag or green flag! Tonight's date: a fox from a dating app!"
+  ],
+  [
+   "S",
+   "[charming, smooth] Hi! I'm a crypto millionaire. I live on a yacht."
+  ],
+  [
+   "P",
+   "[suspicious] Can we video call?"
+  ],
+  [
+   "S",
+   "[too fast] My camera is broken."
+  ],
+  [
+   "R",
+   "[host] Judges?"
+  ],
+  [
+   "S",
+   "[sweet] I'll fly you to my yacht! I just need a small fee for... customs."
+  ],
+  [
+   "R",
+   "[host] Judges?"
+  ],
+  [
+   "S",
+   "[desperate] I love you! Also, please buy these gift cards."
+  ],
+  [
+   "P",
+   "[flat] Red flag. Red flag. Red flag."
+  ],
+  [
+   "R",
+   "[warm] No video call. A fee. Gift cards. That's a romance scam. Block."
+  ],
+  [
+   "S",
+   "[whiny] Not again!"
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "trio",
+   "line": 0,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/gameshow3d.jpg",
+   "s": "sly",
+   "p": "happy",
+   "r": "happy",
+   "r_pose": "arms_up",
+   "rx": 0.82,
+   "hook": "RED FLAG OR GREEN FLAG?"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/gameshow3d.jpg",
+   "p": "happy",
+   "r": "happy",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 0,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "slick",
+   "line": 1,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_yacht3d.jpg",
+   "s": "sly",
+   "s_pose": "shrug",
+   "msg": "\"CRYPTO MILLIONAIRE\"",
+   "msg_at": 0.3
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/gameshow3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 1,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "cu_p",
+   "line": 2,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/gameshow3d.jpg",
+   "p": "sly",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.2,
+    "push": 0.06,
+    "fy": 0.42
+   }
+  },
+  {
+   "kind": "slick",
+   "line": 3,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_yacht3d.jpg",
+   "s": "shock",
+   "s_pose": "arms_up",
+   "cam": {
+    "z": 1.35,
+    "push": 0.05,
+    "fy": 0.36
+   }
+  },
+  {
+   "kind": "flagvote",
+   "line": 4,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/gameshow3d.jpg",
+   "q": "\"MY CAMERA IS BROKEN\"",
+   "verdict": "red",
+   "reveal_at": 0.8,
+   "cast": [
+    {
+     "who": "penny",
+     "x": 0.2,
+     "y": 0.98,
+     "h": 650,
+     "mood": "sly"
+    },
+    {
+     "who": "rocco",
+     "x": 0.8,
+     "y": 1.0,
+     "h": 800,
+     "mood": "sideeye"
+    }
+   ]
+  },
+  {
+   "kind": "slick",
+   "line": 5,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_yacht3d.jpg",
+   "s": "happy",
+   "s_pose": "point",
+   "msg": "\"SMALL CUSTOMS FEE\"",
+   "msg_at": 0.5
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/gameshow3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 5,
+   "from": 0.33,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/gameshow3d.jpg",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.3,
+    "push": 0.1,
+    "fy": 0.47
+   },
+   "line": 5,
+   "from": 0.67,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "flagvote",
+   "line": 6,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/gameshow3d.jpg",
+   "q": "\"SEND A FEE FOR CUSTOMS\"",
+   "verdict": "red",
+   "reveal_at": 0.8,
+   "cast": [
+    {
+     "who": "penny",
+     "x": 0.2,
+     "y": 0.98,
+     "h": 650,
+     "mood": "sly"
+    },
+    {
+     "who": "rocco",
+     "x": 0.8,
+     "y": 1.0,
+     "h": 800,
+     "mood": "sideeye"
+    }
+   ]
+  },
+  {
+   "kind": "slick",
+   "line": 7,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_yacht3d.jpg",
+   "s": "panic",
+   "s_pose": "arms_up",
+   "msg": "GIFT CARDS?!",
+   "msg_at": 0.5,
+   "cam": {
+    "z": 1.2,
+    "push": 0.06,
+    "fy": 0.38
+   }
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/gameshow3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 7,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "flagvote",
+   "line": 8,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/gameshow3d.jpg",
+   "q": "\"BUY ME GIFT CARDS\"",
+   "verdict": "red",
+   "reveal_at": 0.3,
+   "cast": [
+    {
+     "who": "penny",
+     "x": 0.5,
+     "y": 1.0,
+     "h": 900,
+     "mood": "angry",
+     "pose": "arms_up"
+    }
+   ]
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/gameshow3d.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 8,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "flags",
+   "line": 9,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "r": "happy",
+   "r_pose": "point",
+   "n": 3,
+   "n_prev": 0,
+   "pop_word": "block"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/gameshow3d.jpg",
+   "p": "happy",
+   "r": "happy",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 9,
+   "from": 0.33,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "flags",
+   "line": 9,
+   "from": 0.55,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "r": "happy",
+   "r_pose": "point",
+   "n": 3,
+   "n_prev": 0,
+   "pop_word": "block",
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/gameshow3d.jpg",
+   "p": "shock",
+   "r": "sly",
+   "cam": {
+    "z": 1.2,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 9,
+   "from": 0.67,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "flags",
+   "line": 9,
+   "from": 0.88,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "r": "happy",
+   "r_pose": "point",
+   "n": 3,
+   "n_prev": 0,
+   "pop_word": "block",
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "slick",
+   "line": 10,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_yacht3d.jpg",
+   "s": "panic",
+   "s_pose": "shrug",
+   "msg": "NOT AGAIN!",
+   "msg_at": 0.2
+  },
+  {
+   "kind": "end",
+   "bg": "/home/user/financier-videos/assets/toon3d/gameshow3d.jpg",
+   "blur": 2,
+   "line": 10,
+   "from": 1.0,
+   "l1": "NO VIDEO CALL + FEE + GIFT CARDS",
+   "l2": "= ROMANCE SCAM",
+   "l3": "Send this to someone dating online."
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "drumroll",
+   "gain": 0.25
+  },
+  {
+   "line": 4,
+   "frac": 0.3,
+   "name": "buzzer",
+   "gain": 0.3
+  },
+  {
+   "line": 6,
+   "frac": 0.3,
+   "name": "buzzer",
+   "gain": 0.3
+  },
+  {
+   "line": 8,
+   "frac": 0.1,
+   "name": "buzzer",
+   "gain": 0.3
+  },
+  {
+   "line": 9,
+   "word": "block",
+   "name": "impact",
+   "gain": 0.35
+  },
+  {
+   "line": 10,
+   "frac": 0.6,
+   "name": "wahwah",
+   "gain": 0.35
+  }
+ ],
+ "hot": [
+  "RED",
+  "FLAG",
+  "GREEN",
+  "FEE",
+  "BLOCK"
+ ]
+}

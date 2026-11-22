@@ -1,0 +1,466 @@
+{
+ "id": "RC-21",
+ "title": "This Just Happened to Penny",
+ "style": "rocco3d",
+ "tail": 1.6,
+ "speed": 1.06,
+ "amb": "room",
+ "lines": [
+  [
+   "R",
+   "[urgent, to camera] This just happened to Penny. Watch closely."
+  ],
+  [
+   "R",
+   "[serious] A text from 'her bank'. Suspicious charge. Call this number."
+  ],
+  [
+   "R",
+   "She called. The 'bank' knew her name and the last four digits of her card."
+  ],
+  [
+   "R",
+   "[slow] Then they told her to move her money to a 'safe account'."
+  ],
+  [
+   "P",
+   "[shaken] It sounded SO real!"
+  ],
+  [
+   "R",
+   "[firm] Real banks never ask you to move money to keep it safe."
+  ],
+  [
+   "R",
+   "[counting] Three rules. Hang up. Call the number on your card. Never move money for anyone."
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "loom_r",
+   "line": 0,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "r": "angry",
+   "s": "shock",
+   "hook": "THIS JUST HAPPENED"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "p": "happy",
+   "r": "angry",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 0,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "phone",
+   "line": 1,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "shock",
+   "sender": "BANK ALERT?",
+   "msgs": [
+    {
+     "t": "Suspicious charge $849.00\nCall us now: (888) 555-0142",
+     "at": 0.05,
+     "col": [
+      220,
+      60,
+      60
+     ],
+     "size": 76
+    }
+   ]
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "p": "happy",
+   "r": "sly",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 1,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "phone",
+   "line": 1,
+   "from": 0.79,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "shock",
+   "sender": "BANK ALERT?",
+   "msgs": [
+    {
+     "t": "Suspicious charge $849.00\nCall us now: (888) 555-0142",
+     "at": 0.05,
+     "col": [
+      220,
+      60,
+      60
+     ],
+     "size": 76
+    }
+   ],
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "cu_r",
+   "line": 2,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "r": "sideeye",
+   "r_pose": "point",
+   "cam": {
+    "z": 1.2,
+    "push": 0.08,
+    "fy": 0.47
+   }
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 2,
+   "from": 0.33,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "shock",
+   "r": "sly",
+   "cam": {
+    "z": 1.2,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 2,
+   "from": 0.67,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "kinetic",
+   "line": 3,
+   "from": 0,
+   "blur": 1,
+   "words": [
+    {
+     "t": "\"SAFE",
+     "size": 220,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "ACCOUNT\"",
+     "size": 220,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "= THEIR ACCOUNT",
+     "size": 110
+    }
+   ],
+   "cast": [
+    {
+     "who": "slick",
+     "x": 0.8,
+     "y": 1.0,
+     "h": 800,
+     "mood": "sly"
+    }
+   ],
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "dim": 150
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "p": "happy",
+   "r": "sly",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 3,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "cu_p",
+   "line": 4,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "sad",
+   "r": "sideeye",
+   "p_pose": "arms_up",
+   "cam": {
+    "z": 1.25,
+    "push": 0.05,
+    "fy": 0.42
+   }
+  },
+  {
+   "kind": "store",
+   "line": 5,
+   "from": 0,
+   "blur": 3,
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "l1": "BANKS NEVER ASK YOU",
+   "l2": "TO MOVE YOUR MONEY",
+   "r": "happy"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "p": "happy",
+   "r": "happy",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 5,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "chalk",
+   "line": 6,
+   "from": 0,
+   "blur": 1,
+   "lines": [
+    {
+     "t": "3 RULES",
+     "c": "y",
+     "u": true,
+     "at": 0.1
+    },
+    {
+     "t": "1. Hang up",
+     "c": "w",
+     "at": 0.9
+    },
+    {
+     "t": "2. Call the # on your card",
+     "c": "w",
+     "at": 1.7,
+     "size": 76
+    },
+    {
+     "t": "3. Never move money",
+     "c": "r",
+     "at": 3.0
+    }
+   ],
+   "cast": [
+    {
+     "who": "rocco",
+     "x": 0.82,
+     "y": 1.0,
+     "h": 760,
+     "mood": "happy",
+     "pose": "point"
+    }
+   ]
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "p": "happy",
+   "r": "sly",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 6,
+   "from": 0.33,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "chalk",
+   "line": 6,
+   "from": 0.55,
+   "blur": 1,
+   "lines": [
+    {
+     "t": "3 RULES",
+     "c": "y",
+     "u": true,
+     "at": 0.1
+    },
+    {
+     "t": "1. Hang up",
+     "c": "w",
+     "at": 0.9
+    },
+    {
+     "t": "2. Call the # on your card",
+     "c": "w",
+     "at": 1.7,
+     "size": 76
+    },
+    {
+     "t": "3. Never move money",
+     "c": "r",
+     "at": 3.0
+    }
+   ],
+   "cast": [
+    {
+     "who": "rocco",
+     "x": 0.82,
+     "y": 1.0,
+     "h": 760,
+     "mood": "happy",
+     "pose": "point"
+    }
+   ],
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "shock",
+   "r": "sly",
+   "cam": {
+    "z": 1.2,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 6,
+   "from": 0.67,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "chalk",
+   "line": 6,
+   "from": 0.89,
+   "blur": 1,
+   "lines": [
+    {
+     "t": "3 RULES",
+     "c": "y",
+     "u": true,
+     "at": 0.1
+    },
+    {
+     "t": "1. Hang up",
+     "c": "w",
+     "at": 0.9
+    },
+    {
+     "t": "2. Call the # on your card",
+     "c": "w",
+     "at": 1.7,
+     "size": 76
+    },
+    {
+     "t": "3. Never move money",
+     "c": "r",
+     "at": 3.0
+    }
+   ],
+   "cast": [
+    {
+     "who": "rocco",
+     "x": 0.82,
+     "y": 1.0,
+     "h": 760,
+     "mood": "happy",
+     "pose": "point"
+    }
+   ],
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "end",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "blur": 2,
+   "line": 6,
+   "from": 1.0,
+   "l1": "\"MOVE IT TO A SAFE ACCOUNT\"",
+   "l2": "= SCAM",
+   "l3": "Send this to someone you'd hate to see lose their savings."
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "impact",
+   "gain": 0.3
+  },
+  {
+   "line": 1,
+   "frac": 0.0,
+   "name": "ding",
+   "gain": 0.3
+  },
+  {
+   "line": 3,
+   "frac": 0.3,
+   "name": "subboom",
+   "gain": 0.35
+  },
+  {
+   "line": 6,
+   "frac": 0.2,
+   "name": "tick",
+   "gain": 0.2,
+   "dur": 1.0
+  }
+ ],
+ "hot": [
+  "SAFE",
+  "ACCOUNT",
+  "NEVER",
+  "HANG"
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "format": "short",
+ "look": "fx",
+ "scenes": [
+  {
+   "text": "Money per second. Who wins?",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Elon Musk's fortune dropped sixty-eight billion in one month. That's twenty-five thousand dollars a second.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/gamepad_hands.mp4"
+    }
+   ]
+  },
+  {
+   "text": "GTA 6 on day one: forty-three thousand dollars every second.",
+   "chart": "bk07-2"
+  },
+  {
+   "text": "The US debt in the last year: seventy-six thousand dollars a second.",
+   "chart": "bk07-3"
+  },
+  {
+   "text": "And the winner... Cyber Monday shoppers. A hundred sixty-four thousand dollars a second!",
+   "chart": "bk07-4"
+  },
+  {
+   "text": "Shoppers beat billionaires. Follow for more money facts.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4"
+    }
+   ]
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "EpTFo_wkNwA physical scale 3.3M",
+  "siIMLJRNM0c how long until broke 3.7M",
+  "e6XktxbqN00 receipt 1.7M",
+  "R2qQD6IcN2w guess the price 216x",
+  "mofrqidM4Mo ranking table 192x"
+ ],
+ "title": "Who Makes the Most Money Per Second?"
+}

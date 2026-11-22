@@ -1,0 +1,33 @@
+{
+ "format": "short",
+ "look": "fx",
+ "scenes": [
+  {
+   "text": "This penny cost three point six nine cents to make. So America stopped making them. November twelfth, 2025.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/coins_hand.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Worth one cent. Cost almost four.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4"
+    }
+   ]
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "EpTFo_wkNwA physical scale 3.3M",
+  "siIMLJRNM0c how long until broke 3.7M",
+  "e6XktxbqN00 receipt 1.7M",
+  "R2qQD6IcN2w guess the price 216x",
+  "mofrqidM4Mo ranking table 192x"
+ ],
+ "title": "The Last Penny Cost 3.69 Cents to Make"
+}

@@ -1,0 +1,57 @@
+{
+ "format": "short",
+ "look": "fx",
+ "scenes": [
+  {
+   "text": "Thirty-two point five million copies of GTA 6 were sold... before it even came out.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/gamepad_hands.mp4"
+    }
+   ]
+  },
+  {
+   "text": "That's about everyone in Texas. Paying for a game they hadn't played.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/typing_keys.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Then day one: three point seven nine billion dollars in sales.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/laptop_phone.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Biggest entertainment launch ever. Bigger than any movie opening.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/phone_scroll.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Did you pre-order? Be honest.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/gamepad_hands.mp4"
+    }
+   ]
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "EpTFo_wkNwA physical scale 3.3M",
+  "siIMLJRNM0c how long until broke 3.7M",
+  "e6XktxbqN00 receipt 1.7M",
+  "R2qQD6IcN2w guess the price 216x",
+  "mofrqidM4Mo ranking table 192x"
+ ],
+ "title": "32.5 Million People Paid Before GTA 6 Even Existed"
+}

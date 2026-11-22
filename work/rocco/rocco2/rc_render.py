@@ -578,6 +578,9 @@ DANGER = {"STOLEN", "SCAM", "SCAMMER", "MINUS", "NEVER", "DON'T", "DONT", "BLOCK
 SPK_COL = {"P": (255, 226, 60), "S": (120, 220, 255), "R": (232, 232, 234)}  # victim yellow, scammer cyan, Rocco white
 
 
+CAP_Y = [0.885]
+
+
 def caption(im, chunk, active):
     """1-3 words; colour by speaker (winner moment #10); $/money green, danger red, active word pops yellow-white."""
     if not chunk: return
@@ -586,7 +589,7 @@ def caption(im, chunk, active):
     sp = d.textlength(" ", font=f); ws = [d.textlength(w, font=f) for w in words]; tot = sum(ws) + sp * (len(ws) - 1)
     while tot > W * 0.9 and f.size > 60:
         f = F(f.size * 0.9); ws = [d.textlength(w, font=f) for w in words]; sp = d.textlength(" ", font=f); tot = sum(ws) + sp * (len(ws) - 1)
-    x = (W - tot) / 2; y = H * 0.885
+    x = (W - tot) / 2; y = H * CAP_Y[0]
     for j, w in enumerate(words):
         core = re.sub(r"[^A-Z0-9$']", "", w)
         if "$" in w or core in ("THOUSAND", "MONEY", "CASH", "DOLLARS", "RICH"): col = (90, 230, 120)
@@ -604,6 +607,7 @@ def main():
     cache = os.environ.get("FIN_TTS_CACHE", os.path.join(tempfile.gettempdir(), "fin_tts_cache")); os.makedirs(cache, exist_ok=True)
     lines = [tuple(x) for x in spec["lines"]]
     LINE_SPK[:] = [a for a, _ in lines]; HOT.update(w.upper() for w in spec.get("hot", []))
+    CAP_Y[0] = spec.get("cap_y", 0.885)
     if "brand" in spec: BRAND[:] = [spec["brand"][0], tuple(spec["brand"][1])]
     d, mp3 = dialogue(lines, cache)
     spd = float(spec.get("speed", 1.0))  # snappier delivery (benchmarks: punchline 100-150 ms after the setup); pitch kept (atempo)
@@ -624,7 +628,7 @@ def main():
         st0 = {sg["dialogue_input_index"]: sg["start_time_seconds"] for sg in segs}; pieces = []; prev = 0; shift_at = []
         for li in sorted(pb):
             if li not in st0: continue
-            cut = int(st0[li] * sr) - int(0.03 * sr); pieces += [y[prev:cut], np.zeros(int(pb[li] * sr), np.float32)]; prev = cut; shift_at.append((st0[li] - 0.03, pb[li]))
+            cut = max(prev, int(st0[li] * sr) - int(0.03 * sr)); pieces += [y[prev:cut], np.zeros(int(pb[li] * sr), np.float32)]; prev = cut; shift_at.append((max(0.0, st0[li] - 0.03), pb[li]))
         y = np.concatenate(pieces + [y[prev:]])
         def _sh(tt): return tt + sum(dur for at, dur in shift_at if tt >= at)
         for sg in segs: sg["start_time_seconds"], sg["end_time_seconds"] = _sh(sg["start_time_seconds"]), _sh(sg["end_time_seconds"])
@@ -686,6 +690,11 @@ def main():
             sh[key[:-5] + "_at"] = word_t(_ln, _w) - t0
         shots.append(sh)
     for j in range(len(shots) - 1): shots[j]["_t1"] = shots[j + 1]["_t0"]  # no gaps
+    for j, x in enumerate(shots):  # "cont": true -> the graphic keeps its own clock across a cutaway (fx_kinds)
+        x["_lt0"] = x["_t0"]
+        if x.get("cont"):
+            prev = next((y for y in reversed(shots[:j]) if y["kind"] == x["kind"] and not y.get("cont")), None)
+            if prev: x["_lt0"] = prev["_t0"]
     _c0 = next((x["_t0"] for x in shots if x["kind"] == "call"), 0.0)
     for x in shots: x["_call_t0"] = _c0
     shots[0]["_t0"] = 0.0; shots[-1]["_t1"] = total
@@ -727,7 +736,7 @@ def main():
             if _cur is not None: _cur.pop("_bg", None); _cur.pop("_bg2", None)
             load(sh); _cur = sh
         if not cuts or cuts[-1] != round(sh["_t0"], 2): cuts.append(round(sh["_t0"], 2))
-        lt = t - sh["_t0"]
+        lt = t - sh.get("_lt0", sh["_t0"])
         e = float(env[min(fi, len(env) - 1)]); w_ = who[min(fi, len(who) - 1)]
         kk = int(lt * FPS)
         fimg = footage_img(*sh["_bg"][:2], kk, sh["_bg"][2], sh.get("kb", "in"), sh.get("bright", 1.1), sh.get("blur", 0)) if sh.get("_bg") else None
@@ -743,8 +752,10 @@ def main():
             x0 = int(min(bw - W, max(0, fx_ * bw - W / 2))); y0 = int(min(bh - H, max(0, fy_ * bh - H / 2)))
             im = im.resize((bw, bh), Image.LANCZOS if z > 1.2 else Image.BILINEAR).crop((x0, y0, x0 + W, y0 + H))
         ch = next((c for c in chunks if c[0][1] - 0.05 <= t < (c[-1][2] + 0.25)), None)
-        if ch and sh["kind"] != "end":
+        if ch and sh["kind"] != "end" and sh.get("cap", True):
             act = max([j for j, w in enumerate(ch) if w[1] <= t] or [0]); caption(im, ch, act)
+        for _tl in spec.get("topline", []):  # fixed poem/caption lines at the top (silent karma format)
+            if t >= _tl.get("at", 0): txt(im, (W / 2, H * (0.07 + 0.055 * spec["topline"].index(_tl))), _tl["t"], 58, (255, 255, 255), sw=8)
         if t >= 2.0 and BRAND[0]: txt(im, (W - 50, 70), BRAND[0], 44, BRAND[1], sw=6, anchor="rm")  # after the zoom (never cropped); hidden in the 2 s hook (engine v6.17 rule)
         if sh.get("hook") and lt < 2.2: txt(im, (W / 2, H * 0.08), sh["hook"], 104, (255, 255, 255), sw=12)
         enc.stdin.write(im.convert("RGB").tobytes())

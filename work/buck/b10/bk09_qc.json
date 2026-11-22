@@ -1,0 +1,67 @@
+{
+ "0_freshness": {
+  "status": "FAIL",
+  "note": "repo 3 commit(s) behind origin/media - git pull --rebase and re-render"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    20.1 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.8 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -14.7 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 10.9 Mbit/s, 15.5s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 0.966,\n \"rechecked_ok\": [],\n \"missing\": [\n  \"twelfth\"\n ],\n \"extra\": [],\n \"heard\": \"This penny cost 3.69 cents to make. So America stopped making them. November 12, 2025. Worth 1 cent cost almost 4.\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "1   0.00s range=16.1 st  gap=0.89  ok  | This penny cost three point six nine cents to make. So Ameri\n 2  10.22s range=11.0 st  gap=0.83  ok  | Worth one cent. Cost almost four.\n 3  14.89s range=   - st  gap=-  ok  | \n{\"median_f0\": 210.3, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 100"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/buck/b10/bk09_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "WARN",
+  "note": "dark/dull frames - brighten bg or less b-roll dimming"
+ },
+ "10_look": {
+  "status": "FAIL",
+  "note": "ok  0.64  (layout 0.87, palette 0.36, tone 0.59)  vs bk01.mp4\nFAIL  0.89  (layout 0.90, palette 0.94, tone 0.79)  vs bk02.mp4\nok  0.52  (layout 0.60, palette 0.26, tone 0.82)  vs bk03.mp4\nFAIL  0.77  (layout 0.76, palette 0.84, tone 0.67)  vs bk04.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "12 hard cuts (ffmpeg scene>0.22) in 15.5 s = 1.3 s/cut (need >= 7); engine planned 12"
+ },
+ "12_script": {
+  "status": "PASS",
+  "note": "bk09_qcspec.json                   words  24 scenes  3 broll 2 look fx        line2 \"worth\" end \"\"\nbk01_qcspec.json                   words  58 scenes  7 broll 6 look fx        line2 \"stack\" end \"\"\nbk02_qcspec.json                   words  72 scenes  8 broll 7 look fx        line2 \"first\" end \"\"\nbk03_qcspec.json                   words  63 scenes  8 broll 3 look fx        line2 \"you\" end \"\"\nbk04_qcspec.json                   words  68 scenes  8 broll 3 look fx        line2 \"black\" end \"\"\nSCRIPT_CHECK: PASS"
+ },
+ "14_empty_panel": {
+  "status": "FAIL",
+  "note": "FAIL: largest one-colour flat area 25% of the frame (limit 20%); 2 frame(s) over: 0.6s=25%, 12.2s=20%"
+ },
+ "15_competitors": {
+  "status": "PASS",
+  "note": "5 fresh benchmark(s) ['EpTFo_wkNwA', 'R2qQD6IcN2w', 'e6XktxbqN00', 'mofrqidM4Mo', 'siIMLJRNM0c'] (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: viral-cartoon-playbook, viral-video-decomposer, dataviz, color-expert, animation-direction; ishlatilmadi: blender-* (Buck 3D kutubxonasi tayyor)"
+ },
+ "verdict": "FAIL"
+}

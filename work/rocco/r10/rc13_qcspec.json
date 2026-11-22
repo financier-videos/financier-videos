@@ -1,0 +1,101 @@
+{
+ "format": "short",
+ "look": "rocco2",
+ "scenes": [
+  {
+   "text": "Hello! Bank fraud department. Read me your card number, please.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Rocco... the bank wants my card number.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Give him this one. Slowly.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Okay... R.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "R. Got it.",
+   "chart": "rc13-4"
+  },
+  {
+   "text": "E... D.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "E, D. Go on, go on.",
+   "chart": "rc13-6"
+  },
+  {
+   "text": "F... L... A... G.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Perfect! R, E, D... F, L, A, G.",
+   "chart": "rc13-8"
+  },
+  {
+   "text": "...Wait. RED FLAG?!",
+   "sticker": "rc13-9"
+  },
+  {
+   "text": "Banks never ask for your card number on a call. Hang up.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Not again!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/slick_callcenter3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "N09VNM2BOD8 spelled trap call 5M",
+  "DdGowjqMDqS karma allegory 13.4M",
+  "jUF_JPKXTWc two scams one real 7.5M",
+  "SS_6KU9qpr0 red flag green flag 20.3M",
+  "PibMox6nk4c whodunit 17x",
+  "Df331TOAaAO POV phishing",
+  "DfSbqCJPpE8 status flip",
+  "DflN4MGBPX5 did you order this",
+  "4ILxskhpnpo this just happened 481x"
+ ],
+ "title": "The Scammer Wrote Down Her Card Number"
+}

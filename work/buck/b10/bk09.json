@@ -1,0 +1,130 @@
+{
+ "id": "BK-09",
+ "title": "The Last Penny Cost 3.69 Cents to Make",
+ "brand": [
+  "FINANCIER",
+  [
+   255,
+   205,
+   60
+  ]
+ ],
+ "props": {
+  "0": "3.69\u00a2",
+  "1": "1\u00a2"
+ },
+ "tail": 0.6,
+ "speed": 1.08,
+ "amb": "room",
+ "lines": [
+  [
+   "B",
+   "[fast, punchy] This penny cost three point six nine cents to make. So America stopped making them. November twelfth, 2025."
+  ],
+  [
+   "B",
+   "[deadpan] Worth one cent. Cost almost four."
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "kinetic",
+   "line": 0,
+   "from": 0,
+   "words": [
+    {
+     "t": "1\u00a2 COIN",
+     "size": 170
+    },
+    {
+     "t": "COST 3.69\u00a2",
+     "size": 170,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "shocked"
+   },
+   "bg": "/tmp/fin/bg/bank/coins_hand.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "kinetic",
+   "line": 0,
+   "from": 0.45,
+   "words": [
+    {
+     "t": "LAST ONE:",
+     "size": 140,
+     "font": "Abril"
+    },
+    {
+     "t": "NOV 12, 2025",
+     "size": 150,
+     "c": [
+      255,
+      205,
+      60
+     ],
+     "font": "Abril"
+    }
+   ],
+   "cap": true,
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 2.7
+  },
+  {
+   "kind": "stamp",
+   "line": 1,
+   "from": 0,
+   "kicker": "THE PENNY:",
+   "claim": "WORTH 1\u00a2\nCOST 3.69\u00a2",
+   "verdict": "LOSS",
+   "at": 0.5,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "sideeye"
+   },
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bg_start": 4.4
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "coin",
+   "gain": 0.35
+  },
+  {
+   "line": 0,
+   "frac": 0.45,
+   "name": "impact",
+   "gain": 0.3
+  },
+  {
+   "line": 1,
+   "frac": 0.3,
+   "name": "impact",
+   "gain": 0.3
+  }
+ ],
+ "hot": [
+  "PENNY",
+  "CENTS"
+ ],
+ "pool": [
+  "coins_hand",
+  "cash_count",
+  "wallet_empty"
+ ]
+}

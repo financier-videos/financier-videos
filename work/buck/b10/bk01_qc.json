@@ -1,0 +1,67 @@
+{
+ "0_freshness": {
+  "status": "FAIL",
+  "note": "repo 3 commit(s) behind origin/media - git pull --rebase and re-render"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    39.9 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -15.4 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.3 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -15.2 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 9.9 Mbit/s, 33.8s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 1.0,\n \"rechecked_ok\": [],\n \"missing\": [],\n \"extra\": [],\n \"heard\": \"This is $40 trillion, America's debt in hundred dollar bills. Stack them up, past the clouds, past the space station, past the satellites, 43,000 kilometers tall. The space station, only 400 kilometers up. So this stack is 107 times taller. And it grows every single day. Follow and I'll show you how fast.\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "erica's debt. In hundred-d\n 2   6.81s range= 9.4 st  gap=0.76  ok  | Stack them up. Past the clouds. Past the space station...\n 3  11.85s range=14.1 st  gap=0.46  ok  | ...past the satellites! Forty-three thousand kilometers tall\n 4  17.93s range=19.9 st  gap=0.14  ok  | The space station? Only four hundred kilometers up.\n 5  21.33s range=15.5 st  gap=0.3  ok  | So this stack is a hundred and seven times taller.\n 6  25.04s range=21.1 st  gap=1.18  ok  | And it grows every single day. Follow, and I'll show you how\n 7  32.22s range=   - st  gap=-  ok  | \n{\"median_f0\": 216.1, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 94"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/buck/b10/bk01_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "WARN",
+  "note": "dark/dull frames - brighten bg or less b-roll dimming"
+ },
+ "10_look": {
+  "status": "WARN",
+  "note": "FAIL  0.70  (layout 0.92, palette 0.42, tone 0.71)  vs bk02.mp4\nok  0.54  (layout 0.66, palette 0.26, tone 0.74)  vs bk03.mp4\nok  0.62  (layout 0.75, palette 0.44, tone 0.64)  vs bk04.mp4\nok  0.67  (layout 0.89, palette 0.45, tone 0.57)  vs bk05.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "25 hard cuts (ffmpeg scene>0.22) in 33.8 s = 1.4 s/cut (need >= 16); engine planned 26"
+ },
+ "12_script": {
+  "status": "FAIL",
+  "note": "bk01_qcspec.json                   words  58 scenes  7 broll 6 look fx        line2 \"stack\" end \"\"\nbk02_qcspec.json                   words  72 scenes  8 broll 7 look fx        line2 \"first\" end \"\"\nbk03_qcspec.json                   words  63 scenes  8 broll 3 look fx        line2 \"you\" end \"\"\nbk04_qcspec.json                   words  68 scenes  8 broll 3 look fx        line2 \"black\" end \"\"\nbk05_qcspec.json                   words  57 scenes  7 broll 6 look fx        line2 \"a\" end \"\"\nFAIL: scene-kind sequence identical to ['bk05_qcspec.json']\nSCRIPT_CHECK: FAIL"
+ },
+ "14_empty_panel": {
+  "status": "FAIL",
+  "note": "FAIL: largest one-colour flat area 38% of the frame (limit 20%); 6 frame(s) over: 1.4s=28%, 12.7s=21%, 18.3s=38%, 21.1s=34%, 29.6s=25%, 32.4s=25%"
+ },
+ "15_competitors": {
+  "status": "PASS",
+  "note": "5 fresh benchmark(s) ['EpTFo_wkNwA', 'R2qQD6IcN2w', 'e6XktxbqN00', 'mofrqidM4Mo', 'siIMLJRNM0c'] (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: viral-cartoon-playbook, viral-video-decomposer, dataviz, color-expert, animation-direction; ishlatilmadi: blender-* (Buck 3D kutubxonasi tayyor)"
+ },
+ "verdict": "FAIL"
+}

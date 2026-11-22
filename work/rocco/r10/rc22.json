@@ -1,0 +1,615 @@
+{
+ "id": "RC-22",
+ "title": "Level 1: Beat the Scam Boss",
+ "style": "rocco3d",
+ "tail": 1.6,
+ "speed": 1.06,
+ "amb": "room",
+ "lines": [
+  [
+   "R",
+   "[retro game announcer] Level one! Boss fight: Slick!"
+  ],
+  [
+   "S",
+   "[villain] Attack one! A FREE gift card! Just click the link!"
+  ],
+  [
+   "R",
+   "[announcer] Penny blocks! No link clicked!"
+  ],
+  [
+   "S",
+   "[villain] Attack two! URGENT! Your account is locked!"
+  ],
+  [
+   "R",
+   "[announcer] Penny blocks! She calls her bank herself!"
+  ],
+  [
+   "S",
+   "[desperate] Final attack! Grandma, it's me, your grandson!"
+  ],
+  [
+   "P",
+   "[sly] Oh really? What's your name, grandson?"
+  ],
+  [
+   "S",
+   "[long pause] ...Grandson."
+  ],
+  [
+   "R",
+   "[triumphant] Boss defeated! Level complete!"
+  ],
+  [
+   "S",
+   "[whiny] Not again!"
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "pixel",
+   "line": 0,
+   "from": 0,
+   "blur": 1,
+   "hud_l": "PENNY HP \u2665\u2665\u2665",
+   "hud_r": "LV 1",
+   "start": 0,
+   "to": 0,
+   "prefix": "",
+   "msg": "BOSS FIGHT: SLICK",
+   "size": 60,
+   "cast": [
+    {
+     "who": "penny",
+     "x": 0.25,
+     "y": 0.83,
+     "h": 620,
+     "mood": "happy",
+     "pose": null
+    },
+    {
+     "who": "slick",
+     "x": 0.72,
+     "y": 0.82,
+     "h": 900,
+     "mood": "sly",
+     "pose": "arms_up"
+    }
+   ],
+   "hook": "LEVEL 1: SCAM BOSS"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "happy",
+   "r": "sly",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 0,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "pixel",
+   "line": 1,
+   "from": 0,
+   "blur": 1,
+   "hud_l": "PENNY HP \u2665\u2665\u2665",
+   "hud_r": "LV 1",
+   "start": 0,
+   "to": 0,
+   "prefix": "",
+   "msg": "ATTACK: FREE GIFT CARD",
+   "size": 60,
+   "cast": [
+    {
+     "who": "penny",
+     "x": 0.25,
+     "y": 0.83,
+     "h": 620,
+     "mood": "shock",
+     "pose": null
+    },
+    {
+     "who": "slick",
+     "x": 0.72,
+     "y": 0.82,
+     "h": 900,
+     "mood": "happy",
+     "pose": "point"
+    }
+   ]
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 1,
+   "from": 0.33,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "pixel",
+   "line": 1,
+   "from": 0.58,
+   "blur": 1,
+   "hud_l": "PENNY HP \u2665\u2665\u2665",
+   "hud_r": "LV 1",
+   "start": 0,
+   "to": 0,
+   "prefix": "",
+   "msg": "ATTACK: FREE GIFT CARD",
+   "size": 60,
+   "cast": [
+    {
+     "who": "penny",
+     "x": 0.25,
+     "y": 0.83,
+     "h": 620,
+     "mood": "shock",
+     "pose": null
+    },
+    {
+     "who": "slick",
+     "x": 0.72,
+     "y": 0.82,
+     "h": 900,
+     "mood": "happy",
+     "pose": "point"
+    }
+   ],
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.3,
+    "push": 0.1,
+    "fy": 0.47
+   },
+   "line": 1,
+   "from": 0.67,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "cu_p",
+   "line": 2,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "happy",
+   "r": "sly",
+   "p_pose": "arms_up",
+   "cam": {
+    "z": 1.2,
+    "push": 0.06,
+    "fy": 0.42
+   }
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "happy",
+   "r": "sly",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 2,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "pixel",
+   "line": 3,
+   "from": 0,
+   "blur": 1,
+   "hud_l": "PENNY HP \u2665\u2665\u2665",
+   "hud_r": "LV 1",
+   "start": 0,
+   "to": 0,
+   "prefix": "",
+   "msg": "ATTACK: ACCOUNT LOCKED!",
+   "size": 60,
+   "cast": [
+    {
+     "who": "penny",
+     "x": 0.25,
+     "y": 0.83,
+     "h": 620,
+     "mood": "shock",
+     "pose": null
+    },
+    {
+     "who": "slick",
+     "x": 0.72,
+     "y": 0.82,
+     "h": 900,
+     "mood": "sly",
+     "pose": "point"
+    }
+   ]
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 3,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "pixel",
+   "line": 3,
+   "from": 0.78,
+   "blur": 1,
+   "hud_l": "PENNY HP \u2665\u2665\u2665",
+   "hud_r": "LV 1",
+   "start": 0,
+   "to": 0,
+   "prefix": "",
+   "msg": "ATTACK: ACCOUNT LOCKED!",
+   "size": 60,
+   "cast": [
+    {
+     "who": "penny",
+     "x": 0.25,
+     "y": 0.83,
+     "h": 620,
+     "mood": "shock",
+     "pose": null
+    },
+    {
+     "who": "slick",
+     "x": 0.72,
+     "y": 0.82,
+     "h": 900,
+     "mood": "sly",
+     "pose": "point"
+    }
+   ],
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "two",
+   "line": 4,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "happy",
+   "r": "happy",
+   "p_pose": "arms_up"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "happy",
+   "r": "happy",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 4,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "pixel",
+   "line": 5,
+   "from": 0,
+   "blur": 1,
+   "hud_l": "PENNY HP \u2665\u2665\u2665",
+   "hud_r": "LV 1",
+   "start": 0,
+   "to": 0,
+   "prefix": "",
+   "msg": "FINAL ATTACK: GRANDSON",
+   "size": 60,
+   "cast": [
+    {
+     "who": "penny",
+     "x": 0.25,
+     "y": 0.83,
+     "h": 620,
+     "mood": "sly",
+     "pose": null
+    },
+    {
+     "who": "slick",
+     "x": 0.72,
+     "y": 0.82,
+     "h": 900,
+     "mood": "happy",
+     "pose": "arms_up"
+    }
+   ]
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 5,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "pixel",
+   "line": 5,
+   "from": 0.77,
+   "blur": 1,
+   "hud_l": "PENNY HP \u2665\u2665\u2665",
+   "hud_r": "LV 1",
+   "start": 0,
+   "to": 0,
+   "prefix": "",
+   "msg": "FINAL ATTACK: GRANDSON",
+   "size": 60,
+   "cast": [
+    {
+     "who": "penny",
+     "x": 0.25,
+     "y": 0.83,
+     "h": 620,
+     "mood": "sly",
+     "pose": null
+    },
+    {
+     "who": "slick",
+     "x": 0.72,
+     "y": 0.82,
+     "h": 900,
+     "mood": "happy",
+     "pose": "arms_up"
+    }
+   ],
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "cu_p",
+   "line": 6,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "sly",
+   "r": "sly",
+   "p_pose": "point",
+   "cam": {
+    "z": 1.2,
+    "push": 0.05,
+    "fy": 0.42
+   }
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "sly",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 6,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "slick",
+   "line": 7,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_callcenter3d.jpg",
+   "s": "shock",
+   "s_pose": "shrug",
+   "cam": {
+    "z": 1.45,
+    "push": 0.05,
+    "fy": 0.36
+   }
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 7,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "kinetic",
+   "line": 8,
+   "from": 0,
+   "blur": 1,
+   "words": [
+    {
+     "t": "BOSS",
+     "size": 150,
+     "font": "Pixel",
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "DEFEATED",
+     "size": 110,
+     "font": "Pixel",
+     "c": [
+      255,
+      205,
+      60
+     ]
+    }
+   ],
+   "cast": [
+    {
+     "who": "penny",
+     "x": 0.5,
+     "y": 1.0,
+     "h": 800,
+     "mood": "happy",
+     "pose": "arms_up"
+    }
+   ],
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "dim": 150
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "happy",
+   "r": "sly",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 8,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "pixel",
+   "line": 9,
+   "from": 0,
+   "blur": 1,
+   "hud_l": "PENNY HP \u2665\u2665\u2665",
+   "hud_r": "WIN",
+   "start": 0,
+   "to": 0,
+   "prefix": "",
+   "msg": "GAME OVER (FOR SLICK)",
+   "size": 60,
+   "cast": [
+    {
+     "who": "penny",
+     "x": 0.25,
+     "y": 0.83,
+     "h": 620,
+     "mood": "happy",
+     "pose": null
+    },
+    {
+     "who": "slick",
+     "x": 0.72,
+     "y": 0.82,
+     "h": 900,
+     "mood": "shock",
+     "pose": "shrug"
+    }
+   ]
+  },
+  {
+   "kind": "end",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "blur": 2,
+   "line": 9,
+   "from": 1.0,
+   "l1": "CLICK LINKS? NO. CALL BACK? YES.",
+   "l2": "LEVEL COMPLETE",
+   "l3": "Send this to your player 2."
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "coin",
+   "gain": 0.3
+  },
+  {
+   "line": 2,
+   "frac": 0.0,
+   "name": "bonk",
+   "gain": 0.3
+  },
+  {
+   "line": 4,
+   "frac": 0.0,
+   "name": "bonk",
+   "gain": 0.3
+  },
+  {
+   "line": 7,
+   "frac": 0.0,
+   "name": "crickets",
+   "gain": 0.25
+  },
+  {
+   "line": 8,
+   "frac": 0.0,
+   "name": "ding",
+   "gain": 0.35
+  },
+  {
+   "line": 9,
+   "frac": 0.6,
+   "name": "wahwah",
+   "gain": 0.35
+  }
+ ],
+ "hot": [
+  "ATTACK",
+  "BLOCKS",
+  "BOSS",
+  "DEFEATED"
+ ],
+ "pause_before": {
+  "7": 0.6
+ }
+}

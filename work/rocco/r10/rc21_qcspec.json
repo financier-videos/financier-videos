@@ -1,0 +1,69 @@
+{
+ "format": "short",
+ "look": "rocco2",
+ "scenes": [
+  {
+   "text": "This just happened to Penny. Watch closely.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "A text from 'her bank'. Suspicious charge. Call this number.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "She called. The 'bank' knew her name and the last four digits of her card.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Then they told her to move her money to a 'safe account'.",
+   "sticker": "rc21-3"
+  },
+  {
+   "text": "It sounded SO real!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Real banks never ask you to move money to keep it safe.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Three rules. Hang up. Call the number on your card. Never move money for anyone.",
+   "chart": "rc21-6"
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "N09VNM2BOD8 spelled trap call 5M",
+  "DdGowjqMDqS karma allegory 13.4M",
+  "jUF_JPKXTWc two scams one real 7.5M",
+  "SS_6KU9qpr0 red flag green flag 20.3M",
+  "PibMox6nk4c whodunit 17x",
+  "Df331TOAaAO POV phishing",
+  "DfSbqCJPpE8 status flip",
+  "DflN4MGBPX5 did you order this",
+  "4ILxskhpnpo this just happened 481x"
+ ],
+ "title": "This Just Happened to Penny"
+}

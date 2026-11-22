@@ -1,0 +1,53 @@
+{
+ "format": "short",
+ "look": "fx",
+ "scenes": [
+  {
+   "text": "Class is in session. You put one thousand dollars on a credit card.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/online_card.mp4"
+    }
+   ]
+  },
+  {
+   "text": "The average card that charges interest: twenty-two percent a year. That's the Fed's number.",
+   "chart": "bk06-1"
+  },
+  {
+   "text": "You pay twenty-five dollars a month. Sounds responsible.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/pay_terminal.mp4"
+    }
+   ]
+  },
+  {
+   "text": "It takes seventy-three months. Six years.",
+   "chart": "bk06-3"
+  },
+  {
+   "text": "You pay back one thousand eight hundred thirty-three dollars.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Eight hundred thirty-three dollars... just for waiting. Pay more than the minimum.",
+   "chart": "bk06-5"
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "EpTFo_wkNwA physical scale 3.3M",
+  "siIMLJRNM0c how long until broke 3.7M",
+  "e6XktxbqN00 receipt 1.7M",
+  "R2qQD6IcN2w guess the price 216x",
+  "mofrqidM4Mo ranking table 192x"
+ ],
+ "title": "$1,000 on a Credit Card Costs You $833 Extra"
+}

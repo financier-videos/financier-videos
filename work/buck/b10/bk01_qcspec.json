@@ -1,0 +1,61 @@
+{
+ "format": "short",
+ "look": "fx",
+ "scenes": [
+  {
+   "text": "This is forty trillion dollars. America's debt. In hundred-dollar bills.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Stack them up. Past the clouds. Past the space station...",
+   "chart": "bk01-1"
+  },
+  {
+   "text": "...past the satellites! Forty-three thousand kilometers tall!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_stacks.mp4"
+    }
+   ]
+  },
+  {
+   "text": "The space station? Only four hundred kilometers up.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/atm_use.mp4"
+    }
+   ]
+  },
+  {
+   "text": "So this stack is a hundred and seven times taller.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/coins_hand.mp4"
+    }
+   ]
+  },
+  {
+   "text": "And it grows every single day. Follow, and I'll show you how fast.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4"
+    }
+   ]
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "EpTFo_wkNwA physical scale 3.3M",
+  "siIMLJRNM0c how long until broke 3.7M",
+  "e6XktxbqN00 receipt 1.7M",
+  "R2qQD6IcN2w guess the price 216x",
+  "mofrqidM4Mo ranking table 192x"
+ ],
+ "title": "$40 Trillion in $100 Bills Reaches Past the Satellites"
+}

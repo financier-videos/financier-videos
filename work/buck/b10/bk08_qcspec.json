@@ -1,0 +1,65 @@
+{
+ "format": "short",
+ "look": "fx",
+ "scenes": [
+  {
+   "text": "Thanksgiving dinner for ten. 2022 versus this year. Which costs more?",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cart_pov.mp4"
+    }
+   ]
+  },
+  {
+   "text": "In 2022, the record: sixty-four dollars and five cents.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cart_empty.mp4"
+    }
+   ]
+  },
+  {
+   "text": "This year: fifty-eight sixty-three.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4"
+    }
+   ]
+  },
+  {
+   "text": "It's five dollars cheaper than the record!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4"
+    }
+   ]
+  },
+  {
+   "text": "But the turkey alone went up. Twenty-one fifty last year, twenty-three sixty-eight now.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/coffee_pour.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Five eighty-six a person. Tell me what your dinner costs.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cart_pov.mp4"
+    }
+   ]
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "EpTFo_wkNwA physical scale 3.3M",
+  "siIMLJRNM0c how long until broke 3.7M",
+  "e6XktxbqN00 receipt 1.7M",
+  "R2qQD6IcN2w guess the price 216x",
+  "mofrqidM4Mo ranking table 192x"
+ ],
+ "title": "Thanksgiving Dinner Got CHEAPER Than 2022"
+}

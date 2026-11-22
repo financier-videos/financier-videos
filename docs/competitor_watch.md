@@ -32,6 +32,24 @@ Shohjahon (2026-11-22): "Eng asosiysi har safar yangi va portlatadigan videolar 
 | 2026-11-22 | `2IFK69bB4CE` | Zovi — 491K, 239x (3D, AI-labeled) | Rocco | firibgarlik = ertak (pump&dump shishalar) | narx sikli $20→$50→$300 montaj 0.8 s; raqamdan oldin mikro-pauza; oxirida 4-devorni buzish "Remember the stock market? Same story."; tun/bo'sh ko'cha + faqat shamol sukunati |
 | 2026-11-22 | `DfC5DUuTroA` | IG @apextoon_usa14 — 50.2M, 178x (3D) | Rocco | kichkina-yoqimli vs ulkan-xavfli slapstick | 0-soniyada harakat boshlangan; masshtab kontrasti; ~28 kesim/46 s; makro DoF; ovozsiz ham tushunarli |
 | 2026-11-22 | `pipandrue` (TikTok 7699859376038743304) | 6.7M, 14x (3D skit) | Rocco | 3 qahramon dialog, ikki burilish + tag | birinchi so'z 0.65 s; zarba setupdan 100–150 ms keyin; dahshatli satrdan oldin 0.4 s pauza; past rakurs + ECU mikro-zum; 'She's not dead.' tag |
+| 2026-11-22 | `N09VNM2BOD8` | 5.0M, 21x | Rocco | harflab aytilgan tuzoq qo'ng'iroq | qurbon ma'lumotni harfma-harf aytadi → yozilgani haqorat; trubka tovushi + loop |
+| 2026-11-22 | `Dcy3hSMxYop` | IG 2.2M, 174x | Rocco | SCAM LIKELY qo'ng'iroq, tekis personaj realistik xonada | '***PHONE'S RINGING***' caption 0-s |
+| 2026-11-22 | `DdGowjqMDqS` | IG 13.4M, 412x | Rocco | 14 s ovozsiz karma allegoriyasi | tepada 3 qatorli she'r; 14 s; sukut + SFX |
+| 2026-11-22 | `jUF_JPKXTWc` | 7.5M | Rocco | 2 tasi scam, 1 tasi real | har 12–15 s yangi holat; qizil strelka; yashil flesh |
+| 2026-11-22 | `DeZc6g0uaBv` | IG 2.1M, 7.5x | Rocco | ovozsiz soxta o'yin, 2 marta fosh | foley; ALL OR NOTHING |
+| 2026-11-22 | `SS_6KU9qpr0` | 20.3M, 9.9x | Rocco | RED FLAG or GREEN FLAG panel | 02:00 taymer; har 8 s savol |
+| 2026-11-22 | `PibMox6nk4c` | 66.8K, 17x | Rocco | yechilmagan sir — izohlar yechadi | 'only a real detective can solve this' |
+| 2026-11-22 | `Df331TOAaAO` | IG 2.1M, 9x | Rocco | POV fishing click-through | so'nggi sahifa masxara |
+| 2026-11-22 | `DfSbqCJPpE8` | IG 1.1M, 54.8x | Rocco | yashirin shaxs status flip | sahna o'rtasidan boshlanadi |
+| 2026-11-22 | `DflN4MGBPX5` | IG 168.9K, 93x | Rocco | 'did you order this?' ikki kishilik | QR karta; 'Well… free shirt' |
+| 2026-11-22 | `4ILxskhpnpo` | 602K, 481x | Rocco | 'This just happened to…' ogohlantirish | qizil ramka sarlavha + skrinshot + 3 qoida |
+| 2026-11-22 | `EpTFo_wkNwA` | 3.3M, 39x | Buck | jismoniy ko'lam (kichik taxlam → devor) | 'This little stack is…' keng ochilish |
+| 2026-11-22 | `siIMLJRNM0c` | 3.7M, 56x | Buck | 'qancha vaqtda bankrot bo'ladi?' | imkonsiz javob (ming yillar) |
+| 2026-11-22 | `e6XktxbqN00` | 1.7M, 15x | Buck | eski chek vs bugungi narx | item-by-item stikerlar + total |
+| 2026-11-22 | `8yUm4dyVXuE` | 1.5M, 41x | Buck | 10 mamlakatda bir xil narsa | raqamli kartalar, izohga savol |
+| 2026-11-22 | `R2qQD6IcN2w` | 155.8K, 216x | Buck | narxni top | 11–17 s, slayder |
+| 2026-11-22 | `YmPcakD7FcI` | 7.7M, 36x | Buck | yasash narxi | taxmin → tannarx kartasi |
+| 2026-11-22 | `mofrqidM4Mo` | 408K, 192x | Buck | jonli to'ladigan reyting jadvali | har 2–3 s qator; oxiri ??? |
 
 ## Keyingi video g'oyalari (yangi formatlar — hali ishlatilmagan)
 - **Rocco "Penny plays dumb"** (vcPnUMJNdkw formati): Slick "bank xodimi" bo'lib qo'ng'iroq qiladi; Penny Rocco maslahati bilan ataylab so'zma-so'z javob beradi (kod? → "1, 2, 3, 4..."), Slick asabiylashadi, oxiri absurd ("I'm a piggy bank, I don't HAVE a card"). Yakunda Rocco: "Real banks never ask for your code."

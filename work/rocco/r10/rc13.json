@@ -1,0 +1,568 @@
+{
+ "id": "RC-13",
+ "title": "The Scammer Wrote Down Her Card Number",
+ "style": "rocco3d",
+ "tail": 1.6,
+ "speed": 1.06,
+ "amb": "lair",
+ "lines": [
+  [
+   "S",
+   "[smooth, fake official] Hello! Bank fraud department. Read me your card number, please."
+  ],
+  [
+   "P",
+   "[whispering, nervous] Rocco... the bank wants my card number."
+  ],
+  [
+   "R",
+   "[whispering, sly] Give him this one. Slowly."
+  ],
+  [
+   "P",
+   "[slow, careful] Okay... R."
+  ],
+  [
+   "S",
+   "[writing] R. Got it."
+  ],
+  [
+   "P",
+   "[slowly] E... D."
+  ],
+  [
+   "S",
+   "[writing, impatient] E, D. Go on, go on."
+  ],
+  [
+   "P",
+   "[trying not to laugh] F... L... A... G."
+  ],
+  [
+   "S",
+   "[proud] Perfect! R, E, D... F, L, A, G."
+  ],
+  [
+   "S",
+   "[realizing, horrified] ...Wait. RED FLAG?!"
+  ],
+  [
+   "R",
+   "[deadpan] Banks never ask for your card number on a call. Hang up."
+  ],
+  [
+   "S",
+   "[whiny] Not again!"
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "call",
+   "line": 0,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "bg2": "/home/user/financier-videos/assets/toon3d/slick_callcenter3d.jpg",
+   "s": "sly",
+   "s_pose": "point",
+   "p": "happy",
+   "r": "sly",
+   "r_whisper": true,
+   "caller": "CALLER: \"YOUR BANK\"",
+   "hook": "SCAM LIKELY "
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 0,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "cu_p",
+   "line": 1,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.2,
+    "push": 0.06,
+    "fy": 0.42
+   }
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 1,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "cu_r",
+   "line": 2,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "r": "sly",
+   "r_pose": "point",
+   "cam": {
+    "z": 1.3,
+    "push": 0.1,
+    "fy": 0.47
+   }
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "p": "happy",
+   "r": "sly",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 2,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "cu_p",
+   "line": 3,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "sly",
+   "r": "sly",
+   "cam": {
+    "z": 1.25,
+    "push": 0.05,
+    "fy": 0.42
+   }
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "sly",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 3,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "chalk",
+   "line": 4,
+   "from": 0,
+   "blur": 1,
+   "lines": [
+    {
+     "t": "SLICK'S NOTES:",
+     "c": "y",
+     "u": true,
+     "at": -1,
+     "size": 90
+    },
+    {
+     "t": "R",
+     "c": "w",
+     "at": 0.05,
+     "size": 260
+    }
+   ],
+   "cast": [
+    {
+     "who": "slick",
+     "x": 0.8,
+     "y": 0.99,
+     "h": 900,
+     "mood": "sly"
+    }
+   ]
+  },
+  {
+   "kind": "cu_p",
+   "line": 5,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "sly",
+   "r": "sly",
+   "cam": {
+    "z": 1.15,
+    "push": 0.05,
+    "fy": 0.42
+   }
+  },
+  {
+   "kind": "chalk",
+   "line": 6,
+   "from": 0,
+   "blur": 1,
+   "lines": [
+    {
+     "t": "SLICK'S NOTES:",
+     "c": "y",
+     "u": true,
+     "at": -1,
+     "size": 90
+    },
+    {
+     "t": "R E D",
+     "c": "w",
+     "at": -1,
+     "size": 260
+    }
+   ],
+   "cast": [
+    {
+     "who": "slick",
+     "x": 0.8,
+     "y": 0.99,
+     "h": 900,
+     "mood": "happy"
+    }
+   ]
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 6,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "cu_p",
+   "line": 7,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "happy",
+   "r": "sly",
+   "p_pose": "point",
+   "cam": {
+    "z": 1.3,
+    "push": 0.05,
+    "fy": 0.42
+   }
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 7,
+   "from": 0.33,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 7,
+   "from": 0.67,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "chalk",
+   "line": 8,
+   "from": 0,
+   "blur": 1,
+   "lines": [
+    {
+     "t": "SLICK'S NOTES:",
+     "c": "y",
+     "u": true,
+     "at": -1,
+     "size": 90
+    },
+    {
+     "t": "R E D",
+     "c": "w",
+     "at": -1,
+     "size": 260
+    },
+    {
+     "t": "F L A G",
+     "c": "r",
+     "at": 0.3,
+     "size": 260
+    }
+   ],
+   "cast": [
+    {
+     "who": "slick",
+     "x": 0.8,
+     "y": 0.99,
+     "h": 900,
+     "mood": "happy",
+     "pose": "arms_up"
+    }
+   ]
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 8,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "chalk",
+   "line": 8,
+   "from": 0.76,
+   "blur": 1,
+   "lines": [
+    {
+     "t": "SLICK'S NOTES:",
+     "c": "y",
+     "u": true,
+     "at": -1,
+     "size": 90
+    },
+    {
+     "t": "R E D",
+     "c": "w",
+     "at": -1,
+     "size": 260
+    },
+    {
+     "t": "F L A G",
+     "c": "r",
+     "at": 0.3,
+     "size": 260
+    }
+   ],
+   "cast": [
+    {
+     "who": "slick",
+     "x": 0.8,
+     "y": 0.99,
+     "h": 900,
+     "mood": "happy",
+     "pose": "arms_up"
+    }
+   ],
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "kinetic",
+   "line": 9,
+   "from": 0,
+   "blur": 1,
+   "words": [
+    {
+     "t": "RED",
+     "size": 300,
+     "c": [
+      235,
+      64,
+      52
+     ],
+     "font": "BlackOps"
+    },
+    {
+     "t": "FLAG",
+     "size": 300,
+     "c": [
+      235,
+      64,
+      52
+     ],
+     "font": "BlackOps"
+    }
+   ],
+   "cast": [
+    {
+     "who": "slick",
+     "x": 0.5,
+     "y": 1.02,
+     "h": 1000,
+     "mood": "shock",
+     "pose": "arms_up"
+    }
+   ],
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "dim": 150
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 9,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "store",
+   "line": 10,
+   "from": 0,
+   "blur": 3,
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "l1": "BANKS NEVER ASK FOR",
+   "l2": "YOUR CARD ON A CALL",
+   "r": "happy"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "p": "happy",
+   "r": "happy",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 10,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "lair",
+   "_auto": true
+  },
+  {
+   "kind": "store",
+   "line": 10,
+   "from": 0.78,
+   "blur": 3,
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "l1": "BANKS NEVER ASK FOR",
+   "l2": "YOUR CARD ON A CALL",
+   "r": "happy",
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "slick",
+   "line": 11,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_callcenter3d.jpg",
+   "s": "panic",
+   "s_pose": "shrug",
+   "msg": "NOT AGAIN!",
+   "msg_at": 0.2
+  },
+  {
+   "kind": "end",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "blur": 2,
+   "line": 11,
+   "from": 1.0,
+   "l1": "\"READ ME YOUR CARD NUMBER\"",
+   "l2": "= SCAM",
+   "l3": "Send this to someone who answers unknown numbers."
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "ding",
+   "gain": 0.3
+  },
+  {
+   "line": 4,
+   "frac": 0.1,
+   "name": "scratch",
+   "gain": 0.2
+  },
+  {
+   "line": 6,
+   "frac": 0.1,
+   "name": "scratch",
+   "gain": 0.2
+  },
+  {
+   "line": 8,
+   "frac": 0.3,
+   "name": "scratch",
+   "gain": 0.2
+  },
+  {
+   "line": 9,
+   "frac": 0.2,
+   "name": "subboom",
+   "gain": 0.4
+  },
+  {
+   "line": 11,
+   "frac": 0.6,
+   "name": "wahwah",
+   "gain": 0.35
+  }
+ ],
+ "hot": [
+  "RED",
+  "FLAG",
+  "CARD",
+  "BANK"
+ ],
+ "pause_before": {
+  "9": 0.5
+ }
+}

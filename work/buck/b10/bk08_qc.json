@@ -1,0 +1,67 @@
+{
+ "0_freshness": {
+  "status": "FAIL",
+  "note": "repo 3 commit(s) behind origin/media - git pull --rebase and re-render"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    49.6 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.6 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -14.5 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 12.6 Mbit/s, 32.9s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 0.986,\n \"rechecked_ok\": [],\n \"missing\": [],\n \"extra\": [\n  \"is\"\n ],\n \"heard\": \"Thanksgiving dinner for 10 2022 versus this year which costs more in 2022 the record $64.05 this year 58 63 it's $5 cheaper than the record But the turkey alone went up. 21.50 last year. 23.68 now. 5.86 is a person. Tell me what your dinner costs.\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "sgiving dinner for ten. 2022 versus this year. Which co\n 2   6.96s range=16.5 st  gap=0.39  ok  | In 2022, the record: sixty-four dollars and five cents.\n 3  12.74s range=17.8 st  gap=0.5  ok  | This year: fifty-eight sixty-three.\n 4  16.44s range=18.6 st  gap=0.26  ok  | It's five dollars cheaper than the record!\n 5  19.04s range=17.6 st  gap=0.72  ok  | But the turkey alone went up. Twenty-one fifty last year, tw\n 6  27.56s range=23.3 st  gap=0.54  ok  | Five eighty-six a person. Tell me what your dinner costs.\n 7  31.33s range=   - st  gap=-  ok  | \n{\"median_f0\": 208.9, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 98"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/buck/b10/bk08_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "WARN",
+  "note": "FAIL  0.71  (layout 0.91, palette 0.55, tone 0.54)  vs bk01.mp4\nFAIL  0.85  (layout 0.95, palette 0.77, tone 0.79)  vs bk02.mp4\nok  0.56  (layout 0.75, palette 0.24, tone 0.66)  vs bk03.mp4\nFAIL  0.79  (layout 0.83, palette 0.81, tone 0.65)  vs bk04.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "22 hard cuts (ffmpeg scene>0.22) in 32.9 s = 1.5 s/cut (need >= 16); engine planned 24"
+ },
+ "12_script": {
+  "status": "FAIL",
+  "note": "bk08_qcspec.json                   words  54 scenes  7 broll 6 look fx        line2 \"in\" end \"\"\nbk01_qcspec.json                   words  58 scenes  7 broll 6 look fx        line2 \"stack\" end \"\"\nbk02_qcspec.json                   words  72 scenes  8 broll 7 look fx        line2 \"first\" end \"\"\nbk03_qcspec.json                   words  63 scenes  8 broll 3 look fx        line2 \"you\" end \"\"\nbk04_qcspec.json                   words  68 scenes  8 broll 3 look fx        line2 \"black\" end \"\"\nFAIL: scene-kind sequence identical to ['bk01_qcspec.json']\nSCRIPT_CHECK: FAIL"
+ },
+ "14_empty_panel": {
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 17% of the frame (limit 20%)"
+ },
+ "15_competitors": {
+  "status": "PASS",
+  "note": "5 fresh benchmark(s) ['EpTFo_wkNwA', 'R2qQD6IcN2w', 'e6XktxbqN00', 'mofrqidM4Mo', 'siIMLJRNM0c'] (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: viral-cartoon-playbook, viral-video-decomposer, dataviz, color-expert, animation-direction; ishlatilmadi: blender-* (Buck 3D kutubxonasi tayyor)"
+ },
+ "verdict": "FAIL"
+}

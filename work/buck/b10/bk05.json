@@ -1,0 +1,571 @@
+{
+ "id": "BK-05",
+ "title": "Guess How Much America Spent Online in ONE Day",
+ "brand": [
+  "FINANCIER",
+  [
+   255,
+   205,
+   60
+  ]
+ ],
+ "props": {
+  "1": "A, B OR C?",
+  "3": "$14.25B",
+  "4": "$164,931/s"
+ },
+ "tail": 1.6,
+ "speed": 1.08,
+ "amb": "room",
+ "lines": [
+  [
+   "B",
+   "[challenging] Quick! How much did Americans spend online on Cyber Monday last year?"
+  ],
+  [
+   "B",
+   "[playful] A, one point four billion. B, fourteen billion. C, a hundred forty billion."
+  ],
+  [
+   "B",
+   "[drumroll] Three... two... one..."
+  ],
+  [
+   "B",
+   "[excited] B! Fourteen point two five billion dollars. In one day."
+  ],
+  [
+   "B",
+   "[shocked] That's a hundred sixty-four thousand dollars every second."
+  ],
+  [
+   "B",
+   "[teasing] Did you get it? Comment A, B or C. No lying."
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "kinetic",
+   "line": 0,
+   "from": 0,
+   "words": [
+    {
+     "t": "GUESS",
+     "size": 200,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "CYBER MONDAY",
+     "size": 120
+    },
+    {
+     "t": "IN ONE DAY",
+     "size": 120
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "sideeye"
+   },
+   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "line": 0,
+   "from": 0.247,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
+   "bg_start": 0.5,
+   "dim": 20
+  },
+  {
+   "kind": "kinetic",
+   "line": 0,
+   "from": 0.456,
+   "words": [
+    {
+     "t": "GUESS",
+     "size": 200,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "CYBER MONDAY",
+     "size": 120
+    },
+    {
+     "t": "IN ONE DAY",
+     "size": 120
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "sideeye"
+   },
+   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "bg_start": 1.0,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 0,
+   "from": 0.728,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg_start": 2.8,
+   "dim": 20
+  },
+  {
+   "kind": "quiz",
+   "line": 1,
+   "from": 0,
+   "q": "CYBER MONDAY 2025:\nU.S. ONLINE SPENDING?",
+   "options": [
+    "$1.4 BILLION",
+    "$14 BILLION",
+    "$140 BILLION"
+   ],
+   "answer": 1,
+   "reveal_at": 99,
+   "timer": false,
+   "buck": {
+    "x": 0.5,
+    "y": 1.0,
+    "h": 640,
+    "mood": "point"
+   },
+   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg_start": 2.7
+  },
+  {
+   "kind": "host",
+   "line": 1,
+   "from": 0.183,
+   "buck": {
+    "mood": "laugh",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
+   "bg_start": 5.1,
+   "dim": 20,
+   "prop": "A, B OR C?"
+  },
+  {
+   "kind": "quiz",
+   "line": 1,
+   "from": 0.338,
+   "q": "CYBER MONDAY 2025:\nU.S. ONLINE SPENDING?",
+   "options": [
+    "$1.4 BILLION",
+    "$14 BILLION",
+    "$140 BILLION"
+   ],
+   "answer": 1,
+   "reveal_at": 99,
+   "timer": false,
+   "buck": {
+    "x": 0.5,
+    "y": 1.0,
+    "h": 640,
+    "mood": "point"
+   },
+   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg_start": 2.7,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 1,
+   "from": 0.563,
+   "buck": {
+    "mood": "laugh",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "bg_start": 2.3999999999999995,
+   "dim": 20,
+   "prop": "A, B OR C?"
+  },
+  {
+   "kind": "quiz",
+   "line": 1,
+   "from": 0.717,
+   "q": "CYBER MONDAY 2025:\nU.S. ONLINE SPENDING?",
+   "options": [
+    "$1.4 BILLION",
+    "$14 BILLION",
+    "$140 BILLION"
+   ],
+   "answer": 1,
+   "reveal_at": 99,
+   "timer": false,
+   "buck": {
+    "x": 0.5,
+    "y": 1.0,
+    "h": 640,
+    "mood": "point"
+   },
+   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg_start": 2.7,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 1,
+   "from": 0.859,
+   "buck": {
+    "mood": "laugh",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg_start": 4.699999999999999,
+   "dim": 20,
+   "prop": "A, B OR C?"
+  },
+  {
+   "kind": "quiz",
+   "line": 2,
+   "from": 0,
+   "q": "CYBER MONDAY 2025:\nU.S. ONLINE SPENDING?",
+   "options": [
+    "$1.4 BILLION",
+    "$14 BILLION",
+    "$140 BILLION"
+   ],
+   "answer": 1,
+   "reveal_at": 2.2,
+   "intro": -2,
+   "buck": {
+    "x": 0.5,
+    "y": 1.0,
+    "h": 640,
+    "mood": "confused"
+   },
+   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
+   "bg_start": 4.4
+  },
+  {
+   "kind": "host",
+   "line": 2,
+   "from": 0.414,
+   "buck": {
+    "mood": "point",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
+   "bg_start": 2.0,
+   "dim": 20
+  },
+  {
+   "kind": "quiz",
+   "line": 3,
+   "from": 0,
+   "q": "CYBER MONDAY 2025:\nU.S. ONLINE SPENDING?",
+   "options": [
+    "$1.4 BILLION",
+    "$14 BILLION",
+    "$140 BILLION"
+   ],
+   "answer": 1,
+   "reveal_at": 0.0,
+   "intro": -2,
+   "reveal": "$14.25 BILLION (ADOBE)",
+   "buck": {
+    "x": 0.5,
+    "y": 1.0,
+    "h": 600,
+    "mood": "laugh"
+   },
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg_start": 2.0999999999999996
+  },
+  {
+   "kind": "host",
+   "line": 3,
+   "from": 0.247,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg_start": 4.299999999999999,
+   "dim": 20,
+   "prop": "$14.25B"
+  },
+  {
+   "kind": "quiz",
+   "line": 3,
+   "from": 0.456,
+   "q": "CYBER MONDAY 2025:\nU.S. ONLINE SPENDING?",
+   "options": [
+    "$1.4 BILLION",
+    "$14 BILLION",
+    "$140 BILLION"
+   ],
+   "answer": 1,
+   "reveal_at": 0.0,
+   "intro": -2,
+   "reveal": "$14.25 BILLION (ADOBE)",
+   "buck": {
+    "x": 0.5,
+    "y": 1.0,
+    "h": 600,
+    "mood": "laugh"
+   },
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg_start": 2.0999999999999996,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 3,
+   "from": 0.728,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
+   "bg_start": 1.5999999999999979,
+   "dim": 20,
+   "prop": "$14.25B"
+  },
+  {
+   "kind": "counter",
+   "line": 4,
+   "from": 0,
+   "to": 164931,
+   "label": "EVERY SECOND",
+   "dur": 2.0,
+   "ticker": "+$164,931",
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "shocked"
+   },
+   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
+   "bg_start": 3.8
+  },
+  {
+   "kind": "host",
+   "line": 4,
+   "from": 0.297,
+   "buck": {
+    "mood": "shocked",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "bg_start": 3.8999999999999986,
+   "dim": 20,
+   "prop": "$164,931/s"
+  },
+  {
+   "kind": "counter",
+   "line": 4,
+   "from": 0.549,
+   "to": 164931,
+   "label": "EVERY SECOND",
+   "dur": 2.0,
+   "ticker": "+$164,931",
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "shocked"
+   },
+   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
+   "bg_start": 3.8,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 4,
+   "from": 0.775,
+   "buck": {
+    "mood": "shocked",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg_start": 1.1999999999999993,
+   "dim": 20,
+   "prop": "$164,931/s"
+  },
+  {
+   "kind": "kinetic",
+   "line": 5,
+   "from": 0,
+   "words": [
+    {
+     "t": "A? B? C?",
+     "size": 190,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "COMMENT",
+     "size": 130
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "laugh"
+   },
+   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "bg_start": 1.5
+  },
+  {
+   "kind": "host",
+   "line": 5,
+   "from": 0.292,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
+   "bg_start": 3.5,
+   "dim": 20
+  },
+  {
+   "kind": "kinetic",
+   "line": 5,
+   "from": 0.539,
+   "words": [
+    {
+     "t": "A? B? C?",
+     "size": 190,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "COMMENT",
+     "size": 130
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "laugh"
+   },
+   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "bg_start": 1.5,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 5,
+   "from": 0.899,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg_start": 0.7999999999999972,
+   "dim": 20
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "ding",
+   "gain": 0.3
+  },
+  {
+   "line": 2,
+   "frac": 0.0,
+   "name": "tick",
+   "gain": 0.25,
+   "dur": 2.0
+  },
+  {
+   "line": 3,
+   "frac": 0.0,
+   "name": "ding",
+   "gain": 0.35
+  },
+  {
+   "line": 4,
+   "frac": 0.2,
+   "name": "cash",
+   "gain": 0.3
+  }
+ ],
+ "hot": [
+  "GUESS",
+  "BILLION",
+  "SECOND"
+ ],
+ "pause_before": {
+  "3": 0.4
+ },
+ "pool": [
+  "laptop_phone",
+  "online_card",
+  "typing_keys",
+  "cart_pov",
+  "phone_scroll"
+ ]
+}

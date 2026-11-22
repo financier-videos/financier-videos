@@ -1,0 +1,332 @@
+{
+ "id": "RC-19",
+ "title": "Fake IRS Agent Picked the Wrong Grandpa",
+ "style": "rocco3d",
+ "tail": 1.6,
+ "speed": 1.06,
+ "amb": "street",
+ "lines": [
+  [
+   "S",
+   "[fake official, bossy] IRS agent! You owe back taxes! Pay now in gift cards or you go to jail!"
+  ],
+  [
+   "R",
+   "[sleepy, old and slow] Oh dear... gift cards? Which ones, sonny?"
+  ],
+  [
+   "S",
+   "[greedy] Big ones! Five hundred dollars! Today!"
+  ],
+  [
+   "R",
+   "[slowly] Let me find my glasses... and my badge."
+  ],
+  [
+   "S",
+   "[confused] Your... badge?"
+  ],
+  [
+   "R",
+   "[sharp, normal voice] Detective Rocco. Fraud Unit."
+  ],
+  [
+   "S",
+   "[panicking] I... I was just leaving!"
+  ],
+  [
+   "R",
+   "[dry, to camera] The IRS doesn't take gift cards. And it doesn't call to threaten jail."
+  ],
+  [
+   "S",
+   "[whiny] Not again!"
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "slick",
+   "line": 0,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
+   "s": "sly",
+   "s_pose": "point",
+   "msg": "\"IRS AGENT\"",
+   "msg_at": 0.1,
+   "hook": "FAKE IRS AGENT",
+   "cam": {
+    "z": 1.1,
+    "push": 0.06,
+    "fy": 0.4
+   }
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 0,
+   "from": 0.33,
+   "blur": 1,
+   "amb": "street",
+   "_auto": true
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.3,
+    "push": 0.1,
+    "fy": 0.47
+   },
+   "line": 0,
+   "from": 0.67,
+   "blur": 1,
+   "amb": "street",
+   "_auto": true
+  },
+  {
+   "kind": "cu_r",
+   "line": 1,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
+   "r": "sad",
+   "cam": {
+    "z": 1.2,
+    "push": 0.05,
+    "fy": 0.47
+   }
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
+   "p": "happy",
+   "r": "sad",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 1,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "street",
+   "_auto": true
+  },
+  {
+   "kind": "slick",
+   "line": 2,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
+   "s": "happy",
+   "s_pose": "arms_up",
+   "msg": "$500 TODAY!",
+   "msg_at": 0.3
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 2,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "street",
+   "_auto": true
+  },
+  {
+   "kind": "cu_r",
+   "line": 3,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.35,
+    "push": 0.06,
+    "fy": 0.47
+   }
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 3,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "street",
+   "_auto": true
+  },
+  {
+   "kind": "slick",
+   "line": 4,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
+   "s": "shock",
+   "s_pose": "shrug",
+   "cam": {
+    "z": 1.4,
+    "push": 0.05,
+    "fy": 0.36
+   }
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 4,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "street",
+   "_auto": true
+  },
+  {
+   "kind": "loom_r",
+   "line": 5,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
+   "r": "angry",
+   "s": "shock"
+  },
+  {
+   "kind": "slick",
+   "line": 6,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
+   "s": "panic",
+   "s_pose": "arms_up",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.38
+   }
+  },
+  {
+   "kind": "store",
+   "line": 7,
+   "from": 0,
+   "blur": 3,
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "l1": "THE IRS NEVER ASKS",
+   "l2": "FOR GIFT CARDS",
+   "r": "happy"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
+   "p": "happy",
+   "r": "happy",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 7,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "street",
+   "_auto": true
+  },
+  {
+   "kind": "store",
+   "line": 7,
+   "from": 0.75,
+   "blur": 3,
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "l1": "THE IRS NEVER ASKS",
+   "l2": "FOR GIFT CARDS",
+   "r": "happy",
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "trio",
+   "line": 8,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
+   "s": "panic",
+   "p": "happy",
+   "r": "sly",
+   "rx": 0.82
+  },
+  {
+   "kind": "end",
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
+   "blur": 2,
+   "line": 8,
+   "from": 1.0,
+   "l1": "\"PAY THE IRS IN GIFT CARDS\"",
+   "l2": "= SCAM",
+   "l3": "Send this to someone's grandpa."
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "impact",
+   "gain": 0.3
+  },
+  {
+   "line": 3,
+   "word": "badge",
+   "name": "subboom",
+   "gain": 0.35
+  },
+  {
+   "line": 5,
+   "frac": 0.0,
+   "name": "impact",
+   "gain": 0.4
+  },
+  {
+   "line": 6,
+   "frac": 0.3,
+   "name": "slide_down",
+   "gain": 0.25
+  },
+  {
+   "line": 8,
+   "frac": 0.6,
+   "name": "wahwah",
+   "gain": 0.35
+  }
+ ],
+ "hot": [
+  "IRS",
+  "GIFT",
+  "BADGE",
+  "DETECTIVE"
+ ],
+ "pause_before": {
+  "5": 0.5
+ }
+}

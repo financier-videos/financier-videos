@@ -1,0 +1,204 @@
+{
+ "id": "RC-14",
+ "title": "He Promised to Double Her Coins",
+ "style": "rocco3d",
+ "tail": 2.0,
+ "speed": 1.06,
+ "amb": "room",
+ "lines": [
+  [
+   "R",
+   "[quiet, dry] Karma doesn't take crypto."
+  ]
+ ],
+ "shots": [
+  {
+   "t0": 0,
+   "t1": 2.2,
+   "blur": 1,
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_yacht3d.jpg",
+   "s": "sly",
+   "s_pose": "point",
+   "cap": false
+  },
+  {
+   "t0": 2.2,
+   "t1": 4.2,
+   "blur": 1,
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "p_pose": "arms_up",
+   "cap": false
+  },
+  {
+   "t0": 4.2,
+   "t1": 6.2,
+   "blur": 1,
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_yacht3d.jpg",
+   "s": "happy",
+   "s_pose": "arms_up",
+   "msg": "x2 GUARANTEED!",
+   "msg_at": 0.2,
+   "cap": false
+  },
+  {
+   "t0": 6.2,
+   "t1": 8.2,
+   "blur": 1,
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "sly",
+   "r": "sly",
+   "p_pose": "point",
+   "cap": false
+  },
+  {
+   "t0": 8.2,
+   "t1": 10.2,
+   "blur": 1,
+   "kind": "stamp",
+   "kicker": "SLICK'S PROOF:",
+   "claim": "\"TRUST ME\"",
+   "verdict": "MYTH",
+   "at": 0.6,
+   "cast": [
+    {
+     "who": "slick",
+     "x": 0.5,
+     "y": 1.02,
+     "h": 900,
+     "mood": "shock",
+     "pose": "shrug"
+    }
+   ],
+   "cap": false,
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_yacht3d.jpg",
+   "dim": 90
+  },
+  {
+   "t0": 10.2,
+   "t1": 12.2,
+   "blur": 1,
+   "kind": "kinetic",
+   "words": [
+    {
+     "t": "KARMA",
+     "size": 260,
+     "c": [
+      255,
+      205,
+      60
+     ],
+     "font": "Abril"
+    }
+   ],
+   "cast": [
+    {
+     "who": "slick",
+     "x": 0.5,
+     "y": 1.02,
+     "h": 1000,
+     "mood": "shock",
+     "pose": "arms_up"
+    }
+   ],
+   "cap": false,
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_yacht3d.jpg",
+   "dim": 150
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "line": 0,
+   "from": 0,
+   "r": "sly",
+   "cam": {
+    "z": 1.3,
+    "push": 0.1,
+    "fy": 0.47
+   }
+  },
+  {
+   "kind": "end",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "blur": 2,
+   "line": 0,
+   "from": 1.0,
+   "l1": "\"DOUBLE YOUR MONEY, GUARANTEED\"",
+   "l2": "= SCAM",
+   "l3": "Send this to someone who loves easy money."
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "dt": -12.0,
+   "name": "coin",
+   "gain": 0.3
+  },
+  {
+   "line": 0,
+   "frac": 0.0,
+   "dt": -9.8,
+   "name": "shimmer",
+   "gain": 0.25
+  },
+  {
+   "line": 0,
+   "frac": 0.0,
+   "dt": -7.8,
+   "name": "cash",
+   "gain": 0.3
+  },
+  {
+   "line": 0,
+   "frac": 0.0,
+   "dt": -5.8,
+   "name": "crickets",
+   "gain": 0.25
+  },
+  {
+   "line": 0,
+   "frac": 0.0,
+   "dt": -3.4,
+   "name": "buzzer",
+   "gain": 0.3
+  },
+  {
+   "line": 0,
+   "frac": 0.0,
+   "dt": -1.8,
+   "name": "subboom",
+   "gain": 0.4
+  },
+  {
+   "line": 0,
+   "frac": 0.0,
+   "dt": -1.6,
+   "name": "bonk",
+   "gain": 0.35
+  }
+ ],
+ "pause_before": {
+  "0": 12.2
+ },
+ "topline": [
+  {
+   "t": "He promised to double her coins.",
+   "at": 0.2
+  },
+  {
+   "t": "She only asked for proof.",
+   "at": 6.2
+  },
+  {
+   "t": "Karma checked his math.",
+   "at": 10.2
+  }
+ ]
+}

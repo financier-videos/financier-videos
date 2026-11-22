@@ -1,0 +1,826 @@
+{
+ "id": "BK-07",
+ "title": "Who Makes the Most Money Per Second?",
+ "brand": [
+  "FINANCIER",
+  [
+   255,
+   205,
+   60
+  ]
+ ],
+ "props": {
+  "1": "-$68B IN A MONTH",
+  "3": "$2.42T IN A YEAR",
+  "4": "$164,931/s"
+ },
+ "tail": 1.6,
+ "speed": 1.08,
+ "amb": "room",
+ "lines": [
+  [
+   "B",
+   "[energetic] Money per second. Who wins?"
+  ],
+  [
+   "B",
+   "[fast] Elon Musk's fortune dropped sixty-eight billion in one month. That's twenty-five thousand dollars a second."
+  ],
+  [
+   "B",
+   "[fast] GTA 6 on day one: forty-three thousand dollars every second."
+  ],
+  [
+   "B",
+   "[fast] The US debt in the last year: seventy-six thousand dollars a second."
+  ],
+  [
+   "B",
+   "[shocked] And the winner... Cyber Monday shoppers. A hundred sixty-four thousand dollars a second!"
+  ],
+  [
+   "B",
+   "[grinning] Shoppers beat billionaires. Follow for more money facts."
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "kinetic",
+   "line": 0,
+   "from": 0,
+   "words": [
+    {
+     "t": "$ PER",
+     "size": 200,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "SECOND",
+     "size": 200
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "point"
+   },
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "line": 0,
+   "from": 0.39,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg_start": 0.5,
+   "dim": 20
+  },
+  {
+   "kind": "kinetic",
+   "line": 0,
+   "from": 0.721,
+   "words": [
+    {
+     "t": "$ PER",
+     "size": 200,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "SECOND",
+     "size": 200
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "point"
+   },
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 1.0,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "counter",
+   "to": 25388,
+   "label": "MUSK'S OCTOBER DROP",
+   "sub": "PER SECOND (-$68B IN A MONTH)",
+   "dur": 1.5,
+   "color": [
+    235,
+    64,
+    52
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "sad"
+   },
+   "line": 1,
+   "from": 0,
+   "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
+   "bg_start": 2.7
+  },
+  {
+   "kind": "host",
+   "line": 1,
+   "from": 0.179,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg_start": 2.8,
+   "dim": 20,
+   "prop": "-$68B IN A MONTH"
+  },
+  {
+   "kind": "counter",
+   "to": 25388,
+   "label": "MUSK'S OCTOBER DROP",
+   "sub": "PER SECOND (-$68B IN A MONTH)",
+   "dur": 1.5,
+   "color": [
+    235,
+    64,
+    52
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "sad"
+   },
+   "line": 1,
+   "from": 0.331,
+   "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
+   "bg_start": 2.7,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 1,
+   "from": 0.551,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
+   "bg_start": 5.1,
+   "dim": 20,
+   "prop": "-$68B IN A MONTH"
+  },
+  {
+   "kind": "counter",
+   "to": 25388,
+   "label": "MUSK'S OCTOBER DROP",
+   "sub": "PER SECOND (-$68B IN A MONTH)",
+   "dur": 1.5,
+   "color": [
+    235,
+    64,
+    52
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "sad"
+   },
+   "line": 1,
+   "from": 0.702,
+   "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
+   "bg_start": 2.7,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 1,
+   "from": 0.851,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 2.3999999999999995,
+   "dim": 20,
+   "prop": "-$68B IN A MONTH"
+  },
+  {
+   "kind": "bars",
+   "line": 2,
+   "from": 0,
+   "title": "DOLLARS PER SECOND",
+   "items": [
+    [
+     "GTA 6 DAY ONE",
+     43866,
+     [
+      80,
+      160,
+      240
+     ]
+    ],
+    [
+     "MUSK'S OCT DROP",
+     25388,
+     [
+      120,
+      120,
+      140
+     ]
+    ]
+   ],
+   "new": 0,
+   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg_start": 4.4
+  },
+  {
+   "kind": "host",
+   "line": 2,
+   "from": 0.27,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
+   "bg_start": 4.699999999999999,
+   "dim": 20
+  },
+  {
+   "kind": "bars",
+   "line": 2,
+   "from": 0.498,
+   "title": "DOLLARS PER SECOND",
+   "items": [
+    [
+     "GTA 6 DAY ONE",
+     43866,
+     [
+      80,
+      160,
+      240
+     ]
+    ],
+    [
+     "MUSK'S OCT DROP",
+     25388,
+     [
+      120,
+      120,
+      140
+     ]
+    ]
+   ],
+   "new": 0,
+   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg_start": 4.4,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 2,
+   "from": 0.749,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg_start": 2.0,
+   "dim": 20
+  },
+  {
+   "kind": "bars",
+   "line": 3,
+   "from": 0,
+   "title": "DOLLARS PER SECOND",
+   "items": [
+    [
+     "US DEBT GROWTH",
+     76738,
+     [
+      220,
+      70,
+      60
+     ]
+    ],
+    [
+     "GTA 6 DAY ONE",
+     43866,
+     [
+      80,
+      160,
+      240
+     ]
+    ],
+    [
+     "MUSK'S OCT DROP",
+     25388,
+     [
+      120,
+      120,
+      140
+     ]
+    ]
+   ],
+   "new": 0,
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg_start": 2.0999999999999996
+  },
+  {
+   "kind": "host",
+   "line": 3,
+   "from": 0.225,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg_start": 4.299999999999999,
+   "dim": 20,
+   "prop": "$2.42T IN A YEAR"
+  },
+  {
+   "kind": "bars",
+   "line": 3,
+   "from": 0.415,
+   "title": "DOLLARS PER SECOND",
+   "items": [
+    [
+     "US DEBT GROWTH",
+     76738,
+     [
+      220,
+      70,
+      60
+     ]
+    ],
+    [
+     "GTA 6 DAY ONE",
+     43866,
+     [
+      80,
+      160,
+      240
+     ]
+    ],
+    [
+     "MUSK'S OCT DROP",
+     25388,
+     [
+      120,
+      120,
+      140
+     ]
+    ]
+   ],
+   "new": 0,
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg_start": 2.0999999999999996,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 3,
+   "from": 0.692,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
+   "bg_start": 1.5999999999999979,
+   "dim": 20,
+   "prop": "$2.42T IN A YEAR"
+  },
+  {
+   "kind": "bars",
+   "line": 4,
+   "from": 0,
+   "title": "DOLLARS PER SECOND",
+   "items": [
+    [
+     "CYBER MONDAY",
+     164931,
+     [
+      46,
+      204,
+      113
+     ]
+    ],
+    [
+     "US DEBT GROWTH",
+     76738,
+     [
+      220,
+      70,
+      60
+     ]
+    ],
+    [
+     "GTA 6 DAY ONE",
+     43866,
+     [
+      80,
+      160,
+      240
+     ]
+    ],
+    [
+     "MUSK'S OCT DROP",
+     25388,
+     [
+      120,
+      120,
+      140
+     ]
+    ]
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "shocked"
+   },
+   "new": 0,
+   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
+   "bg_start": 3.8
+  },
+  {
+   "kind": "host",
+   "line": 4,
+   "from": 0.157,
+   "buck": {
+    "mood": "shocked",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 3.8999999999999986,
+   "dim": 20,
+   "prop": "$164,931/s"
+  },
+  {
+   "kind": "bars",
+   "line": 4,
+   "from": 0.29,
+   "title": "DOLLARS PER SECOND",
+   "items": [
+    [
+     "CYBER MONDAY",
+     164931,
+     [
+      46,
+      204,
+      113
+     ]
+    ],
+    [
+     "US DEBT GROWTH",
+     76738,
+     [
+      220,
+      70,
+      60
+     ]
+    ],
+    [
+     "GTA 6 DAY ONE",
+     43866,
+     [
+      80,
+      160,
+      240
+     ]
+    ],
+    [
+     "MUSK'S OCT DROP",
+     25388,
+     [
+      120,
+      120,
+      140
+     ]
+    ]
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "shocked"
+   },
+   "new": 0,
+   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
+   "bg_start": 3.8,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 4,
+   "from": 0.483,
+   "buck": {
+    "mood": "shocked",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
+   "bg_start": 1.1999999999999993,
+   "dim": 20,
+   "prop": "$164,931/s"
+  },
+  {
+   "kind": "bars",
+   "line": 4,
+   "from": 0.615,
+   "title": "DOLLARS PER SECOND",
+   "items": [
+    [
+     "CYBER MONDAY",
+     164931,
+     [
+      46,
+      204,
+      113
+     ]
+    ],
+    [
+     "US DEBT GROWTH",
+     76738,
+     [
+      220,
+      70,
+      60
+     ]
+    ],
+    [
+     "GTA 6 DAY ONE",
+     43866,
+     [
+      80,
+      160,
+      240
+     ]
+    ],
+    [
+     "MUSK'S OCT DROP",
+     25388,
+     [
+      120,
+      120,
+      140
+     ]
+    ]
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "shocked"
+   },
+   "new": 0,
+   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
+   "bg_start": 3.8,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 4,
+   "from": 0.808,
+   "buck": {
+    "mood": "shocked",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg_start": 3.5,
+   "dim": 20,
+   "prop": "$164,931/s"
+  },
+  {
+   "kind": "kinetic",
+   "line": 5,
+   "from": 0,
+   "words": [
+    {
+     "t": "SHOPPERS",
+     "size": 170,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "BEAT",
+     "size": 150
+    },
+    {
+     "t": "BILLIONAIRES",
+     "size": 140
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "laugh"
+   },
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 1.5
+  },
+  {
+   "kind": "host",
+   "line": 5,
+   "from": 0.231,
+   "buck": {
+    "mood": "laugh",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg_start": 0.7999999999999972,
+   "dim": 20
+  },
+  {
+   "kind": "kinetic",
+   "line": 5,
+   "from": 0.426,
+   "words": [
+    {
+     "t": "SHOPPERS",
+     "size": 170,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "BEAT",
+     "size": 150
+    },
+    {
+     "t": "BILLIONAIRES",
+     "size": 140
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "laugh"
+   },
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 1.5,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 5,
+   "from": 0.71,
+   "buck": {
+    "mood": "laugh",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
+   "bg_start": 3.099999999999998,
+   "dim": 20
+  },
+  {
+   "kind": "kinetic",
+   "line": 5,
+   "from": 0.906,
+   "words": [
+    {
+     "t": "SHOPPERS",
+     "size": 170,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "BEAT",
+     "size": 150
+    },
+    {
+     "t": "BILLIONAIRES",
+     "size": 140
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "laugh"
+   },
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 1.5,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "whoosh",
+   "gain": 0.3
+  },
+  {
+   "line": 1,
+   "frac": 0.0,
+   "name": "slide_up",
+   "gain": 0.2
+  },
+  {
+   "line": 2,
+   "frac": 0.0,
+   "name": "slide_up",
+   "gain": 0.2
+  },
+  {
+   "line": 3,
+   "frac": 0.0,
+   "name": "slide_up",
+   "gain": 0.2
+  },
+  {
+   "line": 4,
+   "frac": 0.4,
+   "name": "impact",
+   "gain": 0.35
+  },
+  {
+   "line": 5,
+   "frac": 0.0,
+   "name": "ding",
+   "gain": 0.3
+  }
+ ],
+ "hot": [
+  "SECOND",
+  "WINNER",
+  "BILLIONAIRES"
+ ],
+ "pool": [
+  "cash_count",
+  "gamepad_hands",
+  "online_card",
+  "cart_pov",
+  "pay_terminal"
+ ]
+}

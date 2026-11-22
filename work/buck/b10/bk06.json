@@ -1,0 +1,606 @@
+{
+ "id": "BK-06",
+ "title": "$1,000 on a Credit Card Costs You $833 Extra",
+ "brand": [
+  "FINANCIER",
+  [
+   255,
+   205,
+   60
+  ]
+ ],
+ "props": {
+  "1": "22.15%",
+  "3": "6 YEARS",
+  "5": "+$833"
+ },
+ "tail": 1.6,
+ "speed": 1.08,
+ "amb": "room",
+ "lines": [
+  [
+   "B",
+   "[teacher voice] Class is in session. You put one thousand dollars on a credit card."
+  ],
+  [
+   "B",
+   "[explaining] The average card that charges interest: twenty-two percent a year. That's the Fed's number."
+  ],
+  [
+   "B",
+   "[calm] You pay twenty-five dollars a month. Sounds responsible."
+  ],
+  [
+   "B",
+   "[building] It takes seventy-three months. Six years."
+  ],
+  [
+   "B",
+   "[shocked] You pay back one thousand eight hundred thirty-three dollars."
+  ],
+  [
+   "B",
+   "[serious] Eight hundred thirty-three dollars... just for waiting. Pay more than the minimum."
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "kinetic",
+   "words": [
+    {
+     "t": "LESSON:",
+     "size": 130,
+     "font": "Hand"
+    },
+    {
+     "t": "$1,000",
+     "size": 230,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "ON A CARD",
+     "size": 150
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 600,
+    "mood": "point"
+   },
+   "line": 0,
+   "from": 0,
+   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "line": 0,
+   "from": 0.262,
+   "buck": {
+    "mood": "point",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bg_start": 0.5,
+   "dim": 20
+  },
+  {
+   "kind": "kinetic",
+   "words": [
+    {
+     "t": "LESSON:",
+     "size": 130,
+     "font": "Hand"
+    },
+    {
+     "t": "$1,000",
+     "size": 230,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "ON A CARD",
+     "size": 150
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 600,
+    "mood": "point"
+   },
+   "line": 0,
+   "from": 0.484,
+   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg_start": 1.0,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 0,
+   "from": 0.742,
+   "buck": {
+    "mood": "point",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/atm_use.mp4",
+   "bg_start": 2.8,
+   "dim": 20
+  },
+  {
+   "kind": "chalk",
+   "line": 1,
+   "from": 0,
+   "lines": [
+    {
+     "t": "LESSON: $1,000 ON A CARD",
+     "c": "y",
+     "u": true,
+     "at": 0.0
+    },
+    {
+     "t": "APR = 22.15%",
+     "c": "w",
+     "at": 0.4,
+     "size": 120
+    },
+    {
+     "t": "(Fed G.19, May 2026)",
+     "c": "w",
+     "at": 1.2,
+     "size": 56
+    }
+   ]
+  },
+  {
+   "kind": "host",
+   "line": 1,
+   "from": 0.234,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg_start": 5.1,
+   "dim": 20,
+   "prop": "22.15%"
+  },
+  {
+   "kind": "chalk",
+   "line": 1,
+   "from": 0.432,
+   "lines": [
+    {
+     "t": "LESSON: $1,000 ON A CARD",
+     "c": "y",
+     "u": true,
+     "at": 0.0
+    },
+    {
+     "t": "APR = 22.15%",
+     "c": "w",
+     "at": 0.4,
+     "size": 120
+    },
+    {
+     "t": "(Fed G.19, May 2026)",
+     "c": "w",
+     "at": 1.2,
+     "size": 56
+    }
+   ],
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 1,
+   "from": 0.716,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
+   "bg_start": 2.3999999999999995,
+   "dim": 20,
+   "prop": "22.15%"
+  },
+  {
+   "kind": "counter",
+   "to": 25,
+   "label": "YOU PAY EACH MONTH",
+   "dur": 0.8,
+   "sub": "SOUNDS RESPONSIBLE...",
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "happy"
+   },
+   "line": 2,
+   "from": 0,
+   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
+   "bg_start": 2.7
+  },
+  {
+   "kind": "host",
+   "line": 2,
+   "from": 0.288,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bg_start": 4.699999999999999,
+   "dim": 20
+  },
+  {
+   "kind": "counter",
+   "to": 25,
+   "label": "YOU PAY EACH MONTH",
+   "dur": 0.8,
+   "sub": "SOUNDS RESPONSIBLE...",
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "happy"
+   },
+   "line": 2,
+   "from": 0.531,
+   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
+   "bg_start": 2.7,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 2,
+   "from": 0.765,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/atm_use.mp4",
+   "bg_start": 2.0,
+   "dim": 20
+  },
+  {
+   "kind": "chalk",
+   "line": 3,
+   "from": 0,
+   "lines": [
+    {
+     "t": "PAY $25 / MONTH",
+     "c": "w",
+     "at": 0.0,
+     "size": 110
+    },
+    {
+     "t": "= 73 MONTHS",
+     "c": "y",
+     "at": 0.3,
+     "size": 140
+    },
+    {
+     "t": "(6 YEARS)",
+     "c": "w",
+     "at": 1.0,
+     "size": 90
+    }
+   ]
+  },
+  {
+   "kind": "host",
+   "line": 3,
+   "from": 0.314,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg_start": 4.299999999999999,
+   "dim": 20,
+   "prop": "6 YEARS"
+  },
+  {
+   "kind": "chalk",
+   "line": 3,
+   "from": 0.58,
+   "lines": [
+    {
+     "t": "PAY $25 / MONTH",
+     "c": "w",
+     "at": 0.0,
+     "size": 110
+    },
+    {
+     "t": "= 73 MONTHS",
+     "c": "y",
+     "at": 0.3,
+     "size": 140
+    },
+    {
+     "t": "(6 YEARS)",
+     "c": "w",
+     "at": 1.0,
+     "size": 90
+    }
+   ],
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "counter",
+   "to": 1833,
+   "label": "YOU PAY BACK",
+   "dur": 1.4,
+   "color": [
+    235,
+    64,
+    52
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 600,
+    "mood": "shocked"
+   },
+   "line": 4,
+   "from": 0,
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bg_start": 4.4
+  },
+  {
+   "kind": "host",
+   "line": 4,
+   "from": 0.26,
+   "buck": {
+    "mood": "shocked",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
+   "bg_start": 1.5999999999999979,
+   "dim": 20
+  },
+  {
+   "kind": "counter",
+   "to": 1833,
+   "label": "YOU PAY BACK",
+   "dur": 1.4,
+   "color": [
+    235,
+    64,
+    52
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 600,
+    "mood": "shocked"
+   },
+   "line": 4,
+   "from": 0.48,
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bg_start": 4.4,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 4,
+   "from": 0.74,
+   "buck": {
+    "mood": "shocked",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bg_start": 3.8999999999999986,
+   "dim": 20
+  },
+  {
+   "kind": "chalk",
+   "line": 5,
+   "from": 0,
+   "lines": [
+    {
+     "t": "$833 = INTEREST",
+     "c": "r",
+     "at": 0.1,
+     "size": 130,
+     "u": true
+    },
+    {
+     "t": "PAY MORE THAN",
+     "c": "y",
+     "at": 1.2,
+     "size": 110
+    },
+    {
+     "t": "THE MINIMUM",
+     "c": "y",
+     "at": 1.6,
+     "size": 110
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "sideeye"
+   }
+  },
+  {
+   "kind": "host",
+   "line": 5,
+   "from": 0.195,
+   "buck": {
+    "mood": "point",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/atm_use.mp4",
+   "bg_start": 1.1999999999999993,
+   "dim": 20,
+   "prop": "+$833"
+  },
+  {
+   "kind": "chalk",
+   "line": 5,
+   "from": 0.36,
+   "lines": [
+    {
+     "t": "$833 = INTEREST",
+     "c": "r",
+     "at": 0.1,
+     "size": 130,
+     "u": true
+    },
+    {
+     "t": "PAY MORE THAN",
+     "c": "y",
+     "at": 1.2,
+     "size": 110
+    },
+    {
+     "t": "THE MINIMUM",
+     "c": "y",
+     "at": 1.6,
+     "size": 110
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "sideeye"
+   },
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 5,
+   "from": 0.601,
+   "buck": {
+    "mood": "point",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg_start": 3.5,
+   "dim": 20,
+   "prop": "+$833"
+  },
+  {
+   "kind": "chalk",
+   "line": 5,
+   "from": 0.766,
+   "lines": [
+    {
+     "t": "$833 = INTEREST",
+     "c": "r",
+     "at": 0.1,
+     "size": 130,
+     "u": true
+    },
+    {
+     "t": "PAY MORE THAN",
+     "c": "y",
+     "at": 1.2,
+     "size": 110
+    },
+    {
+     "t": "THE MINIMUM",
+     "c": "y",
+     "at": 1.6,
+     "size": 110
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "sideeye"
+   },
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "scratch",
+   "gain": 0.2
+  },
+  {
+   "line": 3,
+   "frac": 0.2,
+   "name": "scratch",
+   "gain": 0.2
+  },
+  {
+   "line": 4,
+   "frac": 0.5,
+   "name": "subboom",
+   "gain": 0.35
+  },
+  {
+   "line": 5,
+   "frac": 0.0,
+   "name": "impact",
+   "gain": 0.3
+  }
+ ],
+ "hot": [
+  "INTEREST",
+  "PERCENT",
+  "MINIMUM"
+ ],
+ "pause_before": {
+  "4": 0.4
+ },
+ "pool": [
+  "online_card",
+  "pay_terminal",
+  "wallet_empty",
+  "atm_use"
+ ]
+}

@@ -1,0 +1,664 @@
+{
+ "id": "BK-01",
+ "title": "$40 Trillion in $100 Bills Reaches Past the Satellites",
+ "brand": [
+  "FINANCIER",
+  [
+   255,
+   205,
+   60
+  ]
+ ],
+ "props": {
+  "1": "PAST THE CLOUDS",
+  "2": "43,688 KM",
+  "4": "107x",
+  "5": "+$76,738/s"
+ },
+ "tail": 1.6,
+ "speed": 1.08,
+ "amb": "room",
+ "lines": [
+  [
+   "B",
+   "[excited] This is forty trillion dollars. America's debt. In hundred-dollar bills."
+  ],
+  [
+   "B",
+   "[building suspense] Stack them up. Past the clouds. Past the space station..."
+  ],
+  [
+   "B",
+   "[shocked] ...past the satellites! Forty-three thousand kilometers tall!"
+  ],
+  [
+   "B",
+   "[deadpan] The space station? Only four hundred kilometers up."
+  ],
+  [
+   "B",
+   "[playful] So this stack is a hundred and seven times taller."
+  ],
+  [
+   "B",
+   "[serious] And it grows every single day. Follow, and I'll show you how fast."
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "kinetic",
+   "line": 0,
+   "from": 0,
+   "words": [
+    {
+     "t": "$40,000,000,000,000",
+     "size": 110,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "IN $100 BILLS",
+     "size": 120
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "shocked"
+   },
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "line": 0,
+   "from": 0.191,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/atm_use.mp4",
+   "bg_start": 0.5,
+   "dim": 20
+  },
+  {
+   "kind": "scale",
+   "line": 0,
+   "from": 0.45,
+   "stack_m": 43688,
+   "unit": "km",
+   "stack_label": "$40T IN $100s",
+   "marks": [
+    [
+     10,
+     "CLOUDS 10 KM"
+    ],
+    [
+     100,
+     "SPACE 100 KM"
+    ],
+    [
+     408,
+     "SPACE STATION 408 KM"
+    ],
+    [
+     35786,
+     "SATELLITES 35,786 KM"
+    ]
+   ],
+   "lo": 0.1,
+   "dur": 9.0,
+   "at": 0.0,
+   "title": "HOW TALL IS $40 TRILLION?"
+  },
+  {
+   "kind": "host",
+   "line": 0,
+   "from": 0.641,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/coins_hand.mp4",
+   "bg_start": 2.8,
+   "dim": 20
+  },
+  {
+   "kind": "scale",
+   "line": 0,
+   "from": 0.802,
+   "stack_m": 43688,
+   "unit": "km",
+   "stack_label": "$40T IN $100s",
+   "marks": [
+    [
+     10,
+     "CLOUDS 10 KM"
+    ],
+    [
+     100,
+     "SPACE 100 KM"
+    ],
+    [
+     408,
+     "SPACE STATION 408 KM"
+    ],
+    [
+     35786,
+     "SATELLITES 35,786 KM"
+    ]
+   ],
+   "lo": 0.1,
+   "dur": 9.0,
+   "at": 0.0,
+   "title": "HOW TALL IS $40 TRILLION?",
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "scale",
+   "line": 1,
+   "from": 0,
+   "set": "sky",
+   "ref_m": 408,
+   "stack_m": 43688,
+   "unit": "km",
+   "ref_label": "SPACE STATION",
+   "stack_label": "$40T IN $100s",
+   "at": 0.0,
+   "dur": 9.0,
+   "title": "HOW TALL IS $40 TRILLION?",
+   "cap": true,
+   "cont": true,
+   "marks": [
+    [
+     10,
+     "CLOUDS 10 KM"
+    ],
+    [
+     100,
+     "SPACE 100 KM"
+    ],
+    [
+     408,
+     "SPACE STATION 408 KM"
+    ],
+    [
+     35786,
+     "SATELLITES 35,786 KM"
+    ]
+   ],
+   "lo": 0.1
+  },
+  {
+   "kind": "host",
+   "line": 1,
+   "from": 0.258,
+   "buck": {
+    "mood": "point",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bg_start": 5.1,
+   "dim": 20,
+   "prop": "PAST THE CLOUDS"
+  },
+  {
+   "kind": "scale",
+   "line": 1,
+   "from": 0.476,
+   "set": "sky",
+   "ref_m": 408,
+   "stack_m": 43688,
+   "unit": "km",
+   "ref_label": "SPACE STATION",
+   "stack_label": "$40T IN $100s",
+   "at": 0.0,
+   "dur": 9.0,
+   "title": "HOW TALL IS $40 TRILLION?",
+   "cap": true,
+   "cont": true,
+   "marks": [
+    [
+     10,
+     "CLOUDS 10 KM"
+    ],
+    [
+     100,
+     "SPACE 100 KM"
+    ],
+    [
+     408,
+     "SPACE STATION 408 KM"
+    ],
+    [
+     35786,
+     "SATELLITES 35,786 KM"
+    ]
+   ],
+   "lo": 0.1,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 1,
+   "from": 0.738,
+   "buck": {
+    "mood": "point",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 2.3999999999999995,
+   "dim": 20,
+   "prop": "PAST THE CLOUDS"
+  },
+  {
+   "kind": "counter",
+   "line": 2,
+   "from": 0,
+   "to": 43688,
+   "prefix": "",
+   "suffix": " KM",
+   "label": "STACK HEIGHT",
+   "dur": 1.6,
+   "sub": "PAST THE SATELLITES",
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "shocked"
+   },
+   "bg": "/tmp/fin/bg/bank/cash_stacks.mp4",
+   "bg_start": 8.7
+  },
+  {
+   "kind": "host",
+   "line": 2,
+   "from": 0.214,
+   "buck": {
+    "mood": "shocked",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cash_stacks.mp4",
+   "bg_start": 11.2,
+   "dim": 20,
+   "prop": "43,688 KM"
+  },
+  {
+   "kind": "counter",
+   "line": 2,
+   "from": 0.395,
+   "to": 43688,
+   "prefix": "",
+   "suffix": " KM",
+   "label": "STACK HEIGHT",
+   "dur": 1.6,
+   "sub": "PAST THE SATELLITES",
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "shocked"
+   },
+   "bg": "/tmp/fin/bg/bank/cash_stacks.mp4",
+   "bg_start": 8.7,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 2,
+   "from": 0.658,
+   "buck": {
+    "mood": "shocked",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/atm_use.mp4",
+   "bg_start": 2.0,
+   "dim": 20,
+   "prop": "43,688 KM"
+  },
+  {
+   "kind": "counter",
+   "line": 2,
+   "from": 0.839,
+   "to": 43688,
+   "prefix": "",
+   "suffix": " KM",
+   "label": "STACK HEIGHT",
+   "dur": 1.6,
+   "sub": "PAST THE SATELLITES",
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "shocked"
+   },
+   "bg": "/tmp/fin/bg/bank/cash_stacks.mp4",
+   "bg_start": 8.7,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "versus",
+   "line": 3,
+   "from": 0,
+   "left": {
+    "label": "SPACE STATION",
+    "value": 408,
+    "fmt": "{:,.0f} KM",
+    "c": [
+     40,
+     110,
+     220
+    ]
+   },
+   "right": {
+    "label": "DEBT STACK",
+    "value": 43688,
+    "fmt": "{:,.0f} KM",
+    "c": [
+     220,
+     60,
+     60
+    ]
+   },
+   "win": 1,
+   "win_at": 1.6,
+   "win_label": "107x",
+   "bg": "/tmp/fin/bg/bank/atm_use.mp4",
+   "bg_start": 4.4
+  },
+  {
+   "kind": "host",
+   "line": 3,
+   "from": 0.382,
+   "buck": {
+    "mood": "sideeye",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/coins_hand.mp4",
+   "bg_start": 4.299999999999999,
+   "dim": 20
+  },
+  {
+   "kind": "versus",
+   "line": 3,
+   "from": 0.706,
+   "left": {
+    "label": "SPACE STATION",
+    "value": 408,
+    "fmt": "{:,.0f} KM",
+    "c": [
+     40,
+     110,
+     220
+    ]
+   },
+   "right": {
+    "label": "DEBT STACK",
+    "value": 43688,
+    "fmt": "{:,.0f} KM",
+    "c": [
+     220,
+     60,
+     60
+    ]
+   },
+   "win": 1,
+   "win_at": 1.6,
+   "win_label": "107x",
+   "bg": "/tmp/fin/bg/bank/atm_use.mp4",
+   "bg_start": 4.4,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "kinetic",
+   "line": 4,
+   "from": 0,
+   "words": [
+    {
+     "t": "107x",
+     "size": 300,
+     "c": [
+      255,
+      205,
+      60
+     ],
+     "font": "Anton"
+    },
+    {
+     "t": "TALLER",
+     "size": 140
+    }
+   ],
+   "bg": "/tmp/fin/bg/bank/coins_hand.mp4",
+   "bg_start": 2.0999999999999996
+  },
+  {
+   "kind": "host",
+   "line": 4,
+   "from": 0.35,
+   "buck": {
+    "mood": "laugh",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bg_start": 1.5999999999999979,
+   "dim": 20,
+   "prop": "107x"
+  },
+  {
+   "kind": "kinetic",
+   "line": 4,
+   "from": 0.647,
+   "words": [
+    {
+     "t": "107x",
+     "size": 300,
+     "c": [
+      255,
+      205,
+      60
+     ],
+     "font": "Anton"
+    },
+    {
+     "t": "TALLER",
+     "size": 140
+    }
+   ],
+   "bg": "/tmp/fin/bg/bank/coins_hand.mp4",
+   "bg_start": 2.0999999999999996,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "counter",
+   "line": 5,
+   "from": 0,
+   "to": 40171825101340,
+   "dec": 0,
+   "label": "US DEBT (SEPT 30, 2026)",
+   "size": 92,
+   "dur": 2.5,
+   "ticker": "+$76,738/s",
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "sideeye"
+   },
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bg_start": 3.8
+  },
+  {
+   "kind": "host",
+   "line": 5,
+   "from": 0.181,
+   "buck": {
+    "mood": "point",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 3.8999999999999986,
+   "dim": 20,
+   "prop": "+$76,738/s"
+  },
+  {
+   "kind": "counter",
+   "line": 5,
+   "from": 0.334,
+   "to": 40171825101340,
+   "dec": 0,
+   "label": "US DEBT (SEPT 30, 2026)",
+   "size": 92,
+   "dur": 2.5,
+   "ticker": "+$76,738/s",
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "sideeye"
+   },
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bg_start": 3.8,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 5,
+   "from": 0.557,
+   "buck": {
+    "mood": "point",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cash_stacks.mp4",
+   "bg_start": 7.699999999999999,
+   "dim": 20,
+   "prop": "+$76,738/s"
+  },
+  {
+   "kind": "counter",
+   "line": 5,
+   "from": 0.71,
+   "to": 40171825101340,
+   "dec": 0,
+   "label": "US DEBT (SEPT 30, 2026)",
+   "size": 92,
+   "dur": 2.5,
+   "ticker": "+$76,738/s",
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "sideeye"
+   },
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bg_start": 3.8,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 5,
+   "from": 0.933,
+   "buck": {
+    "mood": "point",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/atm_use.mp4",
+   "bg_start": 3.5,
+   "dim": 20,
+   "prop": "+$76,738/s"
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "impact",
+   "gain": 0.35
+  },
+  {
+   "line": 1,
+   "frac": 0.0,
+   "name": "riser",
+   "gain": 0.25
+  },
+  {
+   "line": 2,
+   "frac": 0.0,
+   "name": "subboom",
+   "gain": 0.4
+  },
+  {
+   "line": 3,
+   "frac": 0.2,
+   "name": "boing",
+   "gain": 0.25
+  },
+  {
+   "line": 4,
+   "frac": 0.0,
+   "name": "impact",
+   "gain": 0.35
+  },
+  {
+   "line": 5,
+   "frac": 0.3,
+   "name": "tick",
+   "gain": 0.2,
+   "dur": 1.5
+  }
+ ],
+ "hot": [
+  "TRILLION",
+  "DEBT",
+  "SATELLITES",
+  "TALLER"
+ ],
+ "pool": [
+  "cash_count",
+  "cash_stacks",
+  "atm_use",
+  "coins_hand",
+  "wallet_empty"
+ ]
+}

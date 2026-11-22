@@ -1,0 +1,277 @@
+{
+ "id": "BK-08",
+ "title": "Thanksgiving Dinner Got CHEAPER Than 2022",
+ "brand": [
+  "FINANCIER",
+  [
+   255,
+   205,
+   60
+  ]
+ ],
+ "props": {
+  "0": "WHICH COSTS MORE?",
+  "3": "-$5.42",
+  "4": "$23.68"
+ },
+ "tail": 1.6,
+ "speed": 1.08,
+ "amb": "room",
+ "lines": [
+  [
+   "B",
+   "[curious] Thanksgiving dinner for ten. 2022 versus this year. Which costs more?"
+  ],
+  [
+   "B",
+   "[announcer] In 2022, the record: sixty-four dollars and five cents."
+  ],
+  [
+   "B",
+   "[announcer] This year: fifty-eight sixty-three."
+  ],
+  [
+   "B",
+   "[surprised] It's five dollars cheaper than the record!"
+  ],
+  [
+   "B",
+   "[sly] But the turkey alone went up. Twenty-one fifty last year, twenty-three sixty-eight now."
+  ],
+  [
+   "B",
+   "[cheerful] Five eighty-six a person. Tell me what your dinner costs."
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "kinetic",
+   "line": 0,
+   "from": 0,
+   "words": [
+    {
+     "t": "2022",
+     "size": 200,
+     "c": [
+      40,
+      110,
+      220
+     ]
+    },
+    {
+     "t": "VS",
+     "size": 130,
+     "font": "BlackOps"
+    },
+    {
+     "t": "2026",
+     "size": 200,
+     "c": [
+      235,
+      120,
+      40
+     ]
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "confused"
+   },
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "versus",
+   "line": 1,
+   "from": 0,
+   "left": {
+    "label": "2022 (RECORD)",
+    "value": 64.05,
+    "fmt": "${:,.2f}",
+    "c": [
+     40,
+     110,
+     220
+    ]
+   },
+   "right": {
+    "label": "2026",
+    "value": 0.0,
+    "fmt": "$?",
+    "c": [
+     235,
+     120,
+     40
+    ],
+    "at": 99
+   },
+   "bg": "/tmp/fin/bg/bank/cart_empty.mp4",
+   "bg_start": 2.7
+  },
+  {
+   "kind": "versus",
+   "line": 2,
+   "from": 0,
+   "left": {
+    "label": "2022 (RECORD)",
+    "value": 64.05,
+    "fmt": "${:,.2f}",
+    "c": [
+     40,
+     110,
+     220
+    ],
+    "at": -2
+   },
+   "right": {
+    "label": "2026",
+    "value": 58.63,
+    "fmt": "${:,.2f}",
+    "c": [
+     235,
+     120,
+     40
+    ]
+   },
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "happy"
+   },
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 4.4
+  },
+  {
+   "kind": "versus",
+   "line": 3,
+   "from": 0,
+   "left": {
+    "label": "2022 (RECORD)",
+    "value": 64.05,
+    "fmt": "${:,.2f}",
+    "c": [
+     40,
+     110,
+     220
+    ],
+    "at": -2
+   },
+   "right": {
+    "label": "2026",
+    "value": 58.63,
+    "fmt": "${:,.2f}",
+    "c": [
+     235,
+     120,
+     40
+    ],
+    "at": -2
+   },
+   "win": 1,
+   "win_at": 0.3,
+   "win_label": "-$5.42",
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bg_start": 2.0999999999999996
+  },
+  {
+   "kind": "versus",
+   "line": 4,
+   "from": 0,
+   "left": {
+    "label": "TURKEY 2025",
+    "value": 21.5,
+    "fmt": "${:,.2f}",
+    "c": [
+     120,
+     80,
+     40
+    ]
+   },
+   "right": {
+    "label": "TURKEY 2026",
+    "value": 23.68,
+    "fmt": "${:,.2f}",
+    "c": [
+     200,
+     60,
+     40
+    ]
+   },
+   "win": 1,
+   "win_at": 2.0,
+   "win_label": "+10%",
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "sideeye"
+   },
+   "bg": "/tmp/fin/bg/bank/coffee_pour.mp4",
+   "bg_start": 3.8
+  },
+  {
+   "kind": "counter",
+   "line": 5,
+   "from": 0,
+   "to": 5.86,
+   "dec": 2,
+   "label": "PER PERSON (AFBF 2026)",
+   "dur": 1.2,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "thumbsup"
+   },
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg_start": 1.5
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "whoosh",
+   "gain": 0.3
+  },
+  {
+   "line": 1,
+   "frac": 0.5,
+   "name": "ding",
+   "gain": 0.25
+  },
+  {
+   "line": 2,
+   "frac": 0.5,
+   "name": "ding",
+   "gain": 0.25
+  },
+  {
+   "line": 3,
+   "frac": 0.1,
+   "name": "impact",
+   "gain": 0.3
+  },
+  {
+   "line": 4,
+   "word": "twenty-three",
+   "name": "boing",
+   "gain": 0.25
+  }
+ ],
+ "hot": [
+  "CHEAPER",
+  "RECORD",
+  "TURKEY"
+ ],
+ "pool": [
+  "cart_pov",
+  "cart_empty",
+  "cash_count",
+  "wallet_empty",
+  "coffee_pour"
+ ]
+}

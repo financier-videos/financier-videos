@@ -1,0 +1,67 @@
+{
+ "0_freshness": {
+  "status": "FAIL",
+  "note": "repo 3 commit(s) behind origin/media - git pull --rebase and re-render"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    32.2 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -15.2 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.3 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -15.3 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 8.3 Mbit/s, 32.4s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 1.0,\n \"rechecked_ok\": [],\n \"missing\": [],\n \"extra\": [],\n \"heard\": \"Class is in session. You put $1,000 on a credit card. The average card that charges interest 22% a year. That's the Fed's number. You pay $25 a month. Sounds responsible. It takes 73 months, six years. You pay back $1,833, $833 just for waiting. Pay more than the minimum.\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "thousand dollars on a credi\n 2   4.96s range=17.4 st  gap=0.33  ok  | The average card that charges interest: twenty-two percent a\n 3  10.52s range=19.5 st  gap=0.7  ok  | You pay twenty-five dollars a month. Sounds responsible.\n 4  15.04s range=16.9 st  gap=0.39  ok  | It takes seventy-three months. Six years.\n 5  19.18s range=12.5 st  gap=0.63  ok  | You pay back one thousand eight hundred thirty-three dollars\n 6  24.18s range=19.8 st  gap=1.27  ok  | Eight hundred thirty-three dollars... just for waiting. Pay \n 7  30.84s range=   - st  gap=-  ok  | \n{\"median_f0\": 195.7, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 94"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/buck/b10/bk06_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "WARN",
+  "note": "ok  0.64  (layout 0.91, palette 0.32, tone 0.62)  vs bk01.mp4\nFAIL  0.85  (layout 0.93, palette 0.80, tone 0.78)  vs bk02.mp4\nok  0.57  (layout 0.72, palette 0.26, tone 0.78)  vs bk03.mp4\nFAIL  0.82  (layout 0.81, palette 0.87, tone 0.74)  vs bk04.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "24 hard cuts (ffmpeg scene>0.22) in 32.4 s = 1.4 s/cut (need >= 16); engine planned 24"
+ },
+ "12_script": {
+  "status": "PASS",
+  "note": "bk06_qcspec.json                   words  62 scenes  7 broll 3 look fx        line2 \"the\" end \"\"\nbk01_qcspec.json                   words  58 scenes  7 broll 6 look fx        line2 \"stack\" end \"\"\nbk02_qcspec.json                   words  72 scenes  8 broll 7 look fx        line2 \"first\" end \"\"\nbk03_qcspec.json                   words  63 scenes  8 broll 3 look fx        line2 \"you\" end \"\"\nbk04_qcspec.json                   words  68 scenes  8 broll 3 look fx        line2 \"black\" end \"\"\nSCRIPT_CHECK: PASS"
+ },
+ "14_empty_panel": {
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 18% of the frame (limit 20%)"
+ },
+ "15_competitors": {
+  "status": "PASS",
+  "note": "5 fresh benchmark(s) ['EpTFo_wkNwA', 'R2qQD6IcN2w', 'e6XktxbqN00', 'mofrqidM4Mo', 'siIMLJRNM0c'] (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: viral-cartoon-playbook, viral-video-decomposer, dataviz, color-expert, animation-direction; ishlatilmadi: blender-* (Buck 3D kutubxonasi tayyor)"
+ },
+ "verdict": "FAIL"
+}

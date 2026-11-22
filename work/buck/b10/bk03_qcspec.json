@@ -1,0 +1,57 @@
+{
+ "format": "short",
+ "look": "fx",
+ "scenes": [
+  {
+   "text": "New game! Pay off America's forty trillion dollar debt.",
+   "stat": "bk03-0"
+  },
+  {
+   "text": "You get one million dollars. Every. Single. Day.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Day one, one million. Day one hundred, a hundred million.",
+   "stat": "bk03-2"
+  },
+  {
+   "text": "Keep going for your whole life. Eighty years.",
+   "stat": "bk03-3"
+  },
+  {
+   "text": "Twenty-nine billion paid. Debt left? Still basically forty trillion.",
+   "stat": "bk03-4"
+  },
+  {
+   "text": "You'd need about a hundred and nine thousand years.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4"
+    }
+   ]
+  },
+  {
+   "text": "The pyramids aren't even five thousand years old. Game over.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4"
+    }
+   ]
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "EpTFo_wkNwA physical scale 3.3M",
+  "siIMLJRNM0c how long until broke 3.7M",
+  "e6XktxbqN00 receipt 1.7M",
+  "R2qQD6IcN2w guess the price 216x",
+  "mofrqidM4Mo ranking table 192x"
+ ],
+ "title": "Paying Off the US Debt at $1 Million a Day"
+}

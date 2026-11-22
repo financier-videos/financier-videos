@@ -1,0 +1,685 @@
+{
+ "id": "RC-15",
+ "title": "Two of These Texts Are Scams. One Is Real.",
+ "style": "rocco3d",
+ "tail": 1.6,
+ "speed": 1.06,
+ "amb": "room",
+ "lines": [
+  [
+   "R",
+   "[confident] Three texts. Two are scams. One is real. Watch."
+  ],
+  [
+   "P",
+   "[reading] One. USPS: your package is on hold. Pay a one dollar thirty redelivery fee."
+  ],
+  [
+   "R",
+   "[flat] Scam. USPS won't text you a link to pay a fee."
+  ],
+  [
+   "P",
+   "[reading] Two. Bank alert: verify your login here, or your account closes today."
+  ],
+  [
+   "R",
+   "[flat] Scam. A link plus a deadline. Classic."
+  ],
+  [
+   "P",
+   "[reading, smiling] Three. Mom: are you coming for Thanksgiving? Bring pie."
+  ],
+  [
+   "R",
+   "[warm] Real. No link. No money. Just pie."
+  ],
+  [
+   "P",
+   "[relieved] So the only thing I have to worry about is... pie?"
+  ],
+  [
+   "R",
+   "[deadpan] Bring two."
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "kinetic",
+   "line": 0,
+   "from": 0,
+   "blur": 1,
+   "words": [
+    {
+     "t": "2 SCAMS",
+     "size": 200,
+     "c": [
+      235,
+      64,
+      52
+     ]
+    },
+    {
+     "t": "1 REAL",
+     "size": 200,
+     "c": [
+      46,
+      204,
+      113
+     ]
+    }
+   ],
+   "cast": [
+    {
+     "who": "rocco",
+     "x": 0.5,
+     "y": 1.02,
+     "h": 1000,
+     "mood": "sly",
+     "pose": "point"
+    }
+   ],
+   "hook": "CAN YOU SPOT THEM?",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "dim": 150
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "p": "happy",
+   "r": "sly",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 0,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "kinetic",
+   "line": 0,
+   "from": 0.82,
+   "blur": 1,
+   "words": [
+    {
+     "t": "2 SCAMS",
+     "size": 200,
+     "c": [
+      235,
+      64,
+      52
+     ]
+    },
+    {
+     "t": "1 REAL",
+     "size": 200,
+     "c": [
+      46,
+      204,
+      113
+     ]
+    }
+   ],
+   "cast": [
+    {
+     "who": "rocco",
+     "x": 0.5,
+     "y": 1.02,
+     "h": 1000,
+     "mood": "sly",
+     "pose": "point"
+    }
+   ],
+   "hook": null,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "dim": 150,
+   "cont": true,
+   "_auto": true
+  },
+  {
+   "kind": "phone",
+   "line": 1,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "happy",
+   "sender": "USPS?",
+   "msgs": [
+    {
+     "t": "Your package is on hold.\nPay $1.30 redelivery fee:\nusps-redeliver.co",
+     "at": 0.05,
+     "col": [
+      52,
+      120,
+      246
+     ],
+     "size": 76
+    }
+   ]
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 1,
+   "from": 0.33,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "phone",
+   "line": 1,
+   "from": 0.51,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "happy",
+   "sender": "USPS?",
+   "msgs": [
+    {
+     "t": "Your package is on hold.\nPay $1.30 redelivery fee:\nusps-redeliver.co",
+     "at": 0.05,
+     "col": [
+      52,
+      120,
+      246
+     ],
+     "size": 76
+    }
+   ],
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 1,
+   "from": 0.67,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "phone",
+   "line": 1,
+   "from": 0.84,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "happy",
+   "sender": "USPS?",
+   "msgs": [
+    {
+     "t": "Your package is on hold.\nPay $1.30 redelivery fee:\nusps-redeliver.co",
+     "at": 0.05,
+     "col": [
+      52,
+      120,
+      246
+     ],
+     "size": 76
+    }
+   ],
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "stamp",
+   "line": 2,
+   "from": 0,
+   "blur": 1,
+   "kicker": "TEXT #1:",
+   "claim": "USPS: PAY $1.30\nREDELIVERY FEE",
+   "verdict": "SCAM",
+   "at": 0.5,
+   "cast": [
+    {
+     "who": "rocco",
+     "x": 0.82,
+     "y": 1.0,
+     "h": 760,
+     "mood": "sideeye",
+     "pose": "point"
+    }
+   ],
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "dim": 90
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "p": "happy",
+   "r": "sly",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 2,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "stamp",
+   "line": 2,
+   "from": 0.81,
+   "blur": 1,
+   "kicker": "TEXT #1:",
+   "claim": "USPS: PAY $1.30\nREDELIVERY FEE",
+   "verdict": "SCAM",
+   "at": 0.5,
+   "cast": [
+    {
+     "who": "rocco",
+     "x": 0.82,
+     "y": 1.0,
+     "h": 760,
+     "mood": "sideeye",
+     "pose": "point"
+    }
+   ],
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "dim": 90,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "phone",
+   "line": 3,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "shock",
+   "sender": "B4nk Alert",
+   "msgs": [
+    {
+     "t": "Verify your login now or\nyour account closes TODAY:\nsecure-bank-login.net",
+     "at": 0.05,
+     "col": [
+      220,
+      60,
+      60
+     ],
+     "size": 76
+    }
+   ]
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 3,
+   "from": 0.33,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "phone",
+   "line": 3,
+   "from": 0.54,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "shock",
+   "sender": "B4nk Alert",
+   "msgs": [
+    {
+     "t": "Verify your login now or\nyour account closes TODAY:\nsecure-bank-login.net",
+     "at": 0.05,
+     "col": [
+      220,
+      60,
+      60
+     ],
+     "size": 76
+    }
+   ],
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 3,
+   "from": 0.67,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "phone",
+   "line": 3,
+   "from": 0.87,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "shock",
+   "sender": "B4nk Alert",
+   "msgs": [
+    {
+     "t": "Verify your login now or\nyour account closes TODAY:\nsecure-bank-login.net",
+     "at": 0.05,
+     "col": [
+      220,
+      60,
+      60
+     ],
+     "size": 76
+    }
+   ],
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "stamp",
+   "line": 4,
+   "from": 0,
+   "blur": 1,
+   "kicker": "TEXT #2:",
+   "claim": "VERIFY LOGIN\nOR ACCOUNT CLOSES",
+   "verdict": "SCAM",
+   "at": 0.4,
+   "cast": [
+    {
+     "who": "rocco",
+     "x": 0.82,
+     "y": 1.0,
+     "h": 760,
+     "mood": "sideeye"
+    }
+   ],
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "dim": 90
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "p": "happy",
+   "r": "sly",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 4,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "stamp",
+   "line": 4,
+   "from": 0.82,
+   "blur": 1,
+   "kicker": "TEXT #2:",
+   "claim": "VERIFY LOGIN\nOR ACCOUNT CLOSES",
+   "verdict": "SCAM",
+   "at": 0.4,
+   "cast": [
+    {
+     "who": "rocco",
+     "x": 0.82,
+     "y": 1.0,
+     "h": 760,
+     "mood": "sideeye"
+    }
+   ],
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "dim": 90,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "phone",
+   "line": 5,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "happy",
+   "sender": "Mom",
+   "msgs": [
+    {
+     "t": "Are you coming for\nThanksgiving? Bring pie",
+     "at": 0.05,
+     "col": [
+      52,
+      199,
+      89
+     ],
+     "size": 76
+    }
+   ]
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 5,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "phone",
+   "line": 5,
+   "from": 0.77,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "happy",
+   "sender": "Mom",
+   "msgs": [
+    {
+     "t": "Are you coming for\nThanksgiving? Bring pie",
+     "at": 0.05,
+     "col": [
+      52,
+      199,
+      89
+     ],
+     "size": 76
+    }
+   ],
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "stamp",
+   "line": 6,
+   "from": 0,
+   "blur": 1,
+   "kicker": "TEXT #3:",
+   "claim": "MOM: BRING PIE",
+   "verdict": "REAL",
+   "at": 0.4,
+   "cast": [
+    {
+     "who": "rocco",
+     "x": 0.82,
+     "y": 1.0,
+     "h": 760,
+     "mood": "happy",
+     "pose": "arms_up"
+    }
+   ],
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "dim": 90
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "p": "happy",
+   "r": "sly",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 6,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "stamp",
+   "line": 6,
+   "from": 0.83,
+   "blur": 1,
+   "kicker": "TEXT #3:",
+   "claim": "MOM: BRING PIE",
+   "verdict": "REAL",
+   "at": 0.4,
+   "cast": [
+    {
+     "who": "rocco",
+     "x": 0.82,
+     "y": 1.0,
+     "h": 760,
+     "mood": "happy",
+     "pose": "arms_up"
+    }
+   ],
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "dim": 90,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "two",
+   "line": 7,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "happy",
+   "r": "sly"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 7,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "cu_r",
+   "line": 8,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "r": "sly",
+   "cam": {
+    "z": 1.35,
+    "push": 0.1,
+    "fy": 0.47
+   }
+  },
+  {
+   "kind": "end",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "blur": 2,
+   "line": 8,
+   "from": 1.0,
+   "l1": "LINK + MONEY OR DEADLINE",
+   "l2": "= SCAM",
+   "l3": "Send this to someone who gets 'package on hold' texts."
+  }
+ ],
+ "sfx": [
+  {
+   "line": 1,
+   "frac": 0.0,
+   "name": "ding",
+   "gain": 0.3
+  },
+  {
+   "line": 2,
+   "frac": 0.3,
+   "name": "buzzer",
+   "gain": 0.28
+  },
+  {
+   "line": 3,
+   "frac": 0.0,
+   "name": "ding",
+   "gain": 0.3
+  },
+  {
+   "line": 4,
+   "frac": 0.3,
+   "name": "buzzer",
+   "gain": 0.28
+  },
+  {
+   "line": 5,
+   "frac": 0.0,
+   "name": "ding",
+   "gain": 0.3
+  },
+  {
+   "line": 6,
+   "frac": 0.2,
+   "name": "shimmer",
+   "gain": 0.3
+  },
+  {
+   "line": 8,
+   "frac": 0.2,
+   "name": "bonk",
+   "gain": 0.3
+  }
+ ],
+ "hot": [
+  "SCAM",
+  "REAL",
+  "LINK",
+  "FEE"
+ ],
+ "pause_before": {
+  "8": 0.45
+ }
+}

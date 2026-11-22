@@ -1,0 +1,57 @@
+{
+ "format": "short",
+ "look": "fx",
+ "scenes": [
+  {
+   "text": "Here's America's receipt for Cyber Week, last year.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/online_card.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Black Friday, online: eleven point eight billion.",
+   "stat": "bk04-1"
+  },
+  {
+   "text": "Cyber Monday: fourteen point two five billion. The biggest online shopping day ever.",
+   "stat": "bk04-2"
+  },
+  {
+   "text": "The other three days: eighteen billion more.",
+   "stat": "bk04-3"
+  },
+  {
+   "text": "Total? Forty-four point two billion dollars. In five days.",
+   "stat": "bk04-4"
+  },
+  {
+   "text": "And over one billion of Cyber Monday was buy now, pay later.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/laptop_phone.mp4"
+    }
+   ]
+  },
+  {
+   "text": "This year's receipt prints next week. Guess the total in the comments.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cart_pov.mp4"
+    }
+   ]
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "EpTFo_wkNwA physical scale 3.3M",
+  "siIMLJRNM0c how long until broke 3.7M",
+  "e6XktxbqN00 receipt 1.7M",
+  "R2qQD6IcN2w guess the price 216x",
+  "mofrqidM4Mo ranking table 192x"
+ ],
+ "title": "America's Cyber Week Receipt: $44.2 Billion"
+}

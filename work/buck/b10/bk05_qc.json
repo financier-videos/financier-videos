@@ -1,0 +1,67 @@
+{
+ "0_freshness": {
+  "status": "FAIL",
+  "note": "repo 3 commit(s) behind origin/media - git pull --rebase and re-render"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    44.6 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.6 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.4 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -14.6 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 12.0 Mbit/s, 31.2s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 1.0,\n \"rechecked_ok\": [],\n \"missing\": [],\n \"extra\": [],\n \"heard\": \"Quick, how much did Americans spend online on Cyber Monday last year? A. 1.4 billion B. 14 billion C. 140 billion 3. 2. 1. B $14.25 billion in one day. That's $164,000 every second. Did you get it? Comment A, B or C. No lying.\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "  | Quick! How much did Americans spend online on Cyber Monday l\n 2   5.26s range=18.3 st  gap=0.42  ok  | A, one point four billion. B, fourteen billion. C, a hundred\n 3  12.37s range= 6.1 st  gap=0.01  ok  | Three... two... one...\n 4  15.51s range=16.0 st  gap=0.43  ok  | B! Fourteen point two five billion dollars. In one day.\n 5  20.77s range=13.1 st  gap=0.42  ok  | That's a hundred sixty-four thousand dollars every second.\n 6  25.14s range=13.0 st  gap=0.41  ok  | Did you get it? Comment A, B or C. No lying.\n 7  29.59s range=   - st  gap=-  ok  | \n{\"median_f0\": 230.2, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 80"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/buck/b10/bk05_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "FAIL",
+  "note": "ok  0.67  (layout 0.89, palette 0.45, tone 0.57)  vs bk01.mp4\nFAIL  0.91  (layout 0.96, palette 0.89, tone 0.83)  vs bk02.mp4\nok  0.56  (layout 0.72, palette 0.27, tone 0.72)  vs bk03.mp4\nFAIL  0.87  (layout 0.86, palette 0.95, tone 0.73)  vs bk04.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "26 hard cuts (ffmpeg scene>0.22) in 31.2 s = 1.2 s/cut (need >= 15); engine planned 24"
+ },
+ "12_script": {
+  "status": "FAIL",
+  "note": "bk05_qcspec.json                   words  57 scenes  7 broll 6 look fx        line2 \"a\" end \"\"\nbk01_qcspec.json                   words  58 scenes  7 broll 6 look fx        line2 \"stack\" end \"\"\nbk02_qcspec.json                   words  72 scenes  8 broll 7 look fx        line2 \"first\" end \"\"\nbk03_qcspec.json                   words  63 scenes  8 broll 3 look fx        line2 \"you\" end \"\"\nbk04_qcspec.json                   words  68 scenes  8 broll 3 look fx        line2 \"black\" end \"\"\nFAIL: scene-kind sequence identical to ['bk01_qcspec.json']\nSCRIPT_CHECK: FAIL"
+ },
+ "14_empty_panel": {
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 10% of the frame (limit 20%)"
+ },
+ "15_competitors": {
+  "status": "PASS",
+  "note": "5 fresh benchmark(s) ['EpTFo_wkNwA', 'R2qQD6IcN2w', 'e6XktxbqN00', 'mofrqidM4Mo', 'siIMLJRNM0c'] (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: viral-cartoon-playbook, viral-video-decomposer, dataviz, color-expert, animation-direction; ishlatilmadi: blender-* (Buck 3D kutubxonasi tayyor)"
+ },
+ "verdict": "FAIL"
+}

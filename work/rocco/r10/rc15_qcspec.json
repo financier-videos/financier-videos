@@ -1,0 +1,89 @@
+{
+ "format": "short",
+ "look": "rocco2",
+ "scenes": [
+  {
+   "text": "Three texts. Two are scams. One is real. Watch.",
+   "sticker": "rc15-0"
+  },
+  {
+   "text": "One. USPS: your package is on hold. Pay a one dollar thirty redelivery fee.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Scam. USPS won't text you a link to pay a fee.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Two. Bank alert: verify your login here, or your account closes today.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Scam. A link plus a deadline. Classic.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Three. Mom: are you coming for Thanksgiving? Bring pie.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Real. No link. No money. Just pie.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "So the only thing I have to worry about is... pie?",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Bring two.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "N09VNM2BOD8 spelled trap call 5M",
+  "DdGowjqMDqS karma allegory 13.4M",
+  "jUF_JPKXTWc two scams one real 7.5M",
+  "SS_6KU9qpr0 red flag green flag 20.3M",
+  "PibMox6nk4c whodunit 17x",
+  "Df331TOAaAO POV phishing",
+  "DfSbqCJPpE8 status flip",
+  "DflN4MGBPX5 did you order this",
+  "4ILxskhpnpo this just happened 481x"
+ ],
+ "title": "Two of These Texts Are Scams. One Is Real."
+}

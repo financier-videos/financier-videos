@@ -1,0 +1,67 @@
+{
+ "0_freshness": {
+  "status": "FAIL",
+  "note": "repo 3 commit(s) behind origin/media - git pull --rebase and re-render"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    44.1 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.1 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.4 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -14.0 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 12.0 Mbit/s, 30.9s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 1.0,\n \"rechecked_ok\": [],\n \"missing\": [],\n \"extra\": [],\n \"heard\": \"32.5 million copies of GTA 6 were sold before it even came out. That's about everyone in Texas paying for a game they hadn't played. Then day one, 3.79. billion dollars in sales. Biggest entertainment launch ever. Bigger than any movie opening. Did you pre-order? Be honest.\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "1   0.00s range=17.6 st  gap=0.55  ok  | Thirty-two point five million copies of GTA 6 were sold... b\n 2   7.19s range=17.5 st  gap=0.77  ok  | That's about everyone in Texas. Paying for a game they hadn'\n 3  13.48s range=17.1 st  gap=0.5  ok  | Then day one: three point seven nine billion dollars in sale\n 4  20.07s range=19.9 st  gap=0.5  ok  | Biggest entertainment launch ever. Bigger than any movie ope\n 5  25.70s range=11.5 st  gap=0.51  ok  | Did you pre-order? Be honest.\n 6  29.33s range=   - st  gap=-  ok  | \n{\"median_f0\": 174.4, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 98"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/buck/b10/bk10_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "WARN",
+  "note": "dark/dull frames - brighten bg or less b-roll dimming"
+ },
+ "10_look": {
+  "status": "FAIL",
+  "note": "ok  0.70  (layout 0.88, palette 0.42, tone 0.79)  vs bk01.mp4\nFAIL  0.93  (layout 0.90, palette 0.98, tone 0.91)  vs bk02.mp4\nok  0.58  (layout 0.71, palette 0.26, tone 0.82)  vs bk03.mp4\nFAIL  0.79  (layout 0.75, palette 0.88, tone 0.75)  vs bk04.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "18 hard cuts (ffmpeg scene>0.22) in 30.9 s = 1.7 s/cut (need >= 15); engine planned 18"
+ },
+ "12_script": {
+  "status": "PASS",
+  "note": "bk10_qcspec.json                   words  52 scenes  6 broll 5 look fx        line2 \"that's\" end \"\"\nbk01_qcspec.json                   words  58 scenes  7 broll 6 look fx        line2 \"stack\" end \"\"\nbk02_qcspec.json                   words  72 scenes  8 broll 7 look fx        line2 \"first\" end \"\"\nbk03_qcspec.json                   words  63 scenes  8 broll 3 look fx        line2 \"you\" end \"\"\nbk04_qcspec.json                   words  68 scenes  8 broll 3 look fx        line2 \"black\" end \"\"\nSCRIPT_CHECK: PASS"
+ },
+ "14_empty_panel": {
+  "status": "FAIL",
+  "note": "FAIL: largest one-colour flat area 25% of the frame (limit 20%); 1 frame(s) over: 21.9s=25%"
+ },
+ "15_competitors": {
+  "status": "PASS",
+  "note": "5 fresh benchmark(s) ['EpTFo_wkNwA', 'R2qQD6IcN2w', 'e6XktxbqN00', 'mofrqidM4Mo', 'siIMLJRNM0c'] (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: viral-cartoon-playbook, viral-video-decomposer, dataviz, color-expert, animation-direction; ishlatilmadi: blender-* (Buck 3D kutubxonasi tayyor)"
+ },
+ "verdict": "FAIL"
+}

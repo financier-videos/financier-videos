@@ -1,0 +1,81 @@
+{
+ "format": "short",
+ "look": "rocco2",
+ "scenes": [
+  {
+   "text": "Rocco, did you order socks?",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/porch3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "No. Why?",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/porch3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "A package came for me. Socks. And a card with a QR code.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/porch3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "That's a brushing scam.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/porch3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Sellers mail stuff to real addresses so they can post fake reviews in your name.",
+   "chart": "rc20-4"
+  },
+  {
+   "text": "And that QR code can send you to a site that steals your info. Don't scan it.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/porch3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "...So I keep the socks?",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/porch3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Keep the socks. Toss the QR code.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/porch3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "N09VNM2BOD8 spelled trap call 5M",
+  "DdGowjqMDqS karma allegory 13.4M",
+  "jUF_JPKXTWc two scams one real 7.5M",
+  "SS_6KU9qpr0 red flag green flag 20.3M",
+  "PibMox6nk4c whodunit 17x",
+  "Df331TOAaAO POV phishing",
+  "DfSbqCJPpE8 status flip",
+  "DflN4MGBPX5 did you order this",
+  "4ILxskhpnpo this just happened 481x"
+ ],
+ "title": "Free Socks and a Very Bad QR Code"
+}

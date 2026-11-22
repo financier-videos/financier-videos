@@ -1,0 +1,430 @@
+{
+ "id": "RC-18",
+ "title": "POV: You Just Won a PS6",
+ "style": "rocco3d",
+ "tail": 1.6,
+ "speed": 1.06,
+ "amb": "room",
+ "lines": [
+  [
+   "P",
+   "[squealing] POV: I just won a PS6!"
+  ],
+  [
+   "P",
+   "[excited] Step one: answer three easy questions. Done!"
+  ],
+  [
+   "P",
+   "[happy] Step two: my name and address. Sure!"
+  ],
+  [
+   "P",
+   "[slower] Step three: shipping fee, two ninety-nine... card number..."
+  ],
+  [
+   "R",
+   "[sharp] STOP."
+  ],
+  [
+   "P",
+   "[whining] But it's FREE!"
+  ],
+  [
+   "R",
+   "[deadpan] Free prizes don't need your card number. Look who made this page."
+  ],
+  [
+   "S",
+   "[annoyed, caught] So close! Not again!"
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "phone",
+   "line": 0,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "happy",
+   "p_pose": "arms_up",
+   "sender": "PRIZE CENTER",
+   "msgs": [
+    {
+     "t": "CONGRATULATIONS!\nYou won a PS6!\nClaim in 10:00",
+     "at": 0.05,
+     "col": [
+      214,
+      80,
+      160
+     ],
+     "size": 76
+    }
+   ],
+   "hook": "POV: YOU WON A PS6"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 0,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "phone",
+   "line": 1,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "happy",
+   "sender": "PRIZE CENTER",
+   "msgs": [
+    {
+     "t": "Step 1 of 3:\nAnswer 3 questions \u2713",
+     "at": 0.05,
+     "col": [
+      52,
+      120,
+      246
+     ],
+     "size": 76
+    }
+   ]
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 1,
+   "from": 0.33,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "phone",
+   "line": 1,
+   "from": 0.57,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "happy",
+   "sender": "PRIZE CENTER",
+   "msgs": [
+    {
+     "t": "Step 1 of 3:\nAnswer 3 questions \u2713",
+     "at": 0.05,
+     "col": [
+      52,
+      120,
+      246
+     ],
+     "size": 76
+    }
+   ],
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 1,
+   "from": 0.67,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "phone",
+   "line": 2,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "happy",
+   "p_pose": "point",
+   "sender": "PRIZE CENTER",
+   "msgs": [
+    {
+     "t": "Step 2 of 3:\nName + address \u2713",
+     "at": 0.05,
+     "col": [
+      52,
+      120,
+      246
+     ],
+     "size": 76
+    }
+   ]
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 2,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "phone",
+   "line": 3,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "sad",
+   "sender": "PRIZE CENTER",
+   "msgs": [
+    {
+     "t": "Step 3 of 3:\nShipping $2.99\nCARD NUMBER: ____",
+     "at": 0.05,
+     "col": [
+      220,
+      60,
+      60
+     ],
+     "size": 76
+    }
+   ]
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "sad",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 3,
+   "from": 0.33,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "phone",
+   "line": 3,
+   "from": 0.53,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "sad",
+   "sender": "PRIZE CENTER",
+   "msgs": [
+    {
+     "t": "Step 3 of 3:\nShipping $2.99\nCARD NUMBER: ____",
+     "at": 0.05,
+     "col": [
+      220,
+      60,
+      60
+     ],
+     "size": 76
+    }
+   ],
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "sad",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 3,
+   "from": 0.67,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "phone",
+   "line": 3,
+   "from": 0.87,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "sad",
+   "sender": "PRIZE CENTER",
+   "msgs": [
+    {
+     "t": "Step 3 of 3:\nShipping $2.99\nCARD NUMBER: ____",
+     "at": 0.05,
+     "col": [
+      220,
+      60,
+      60
+     ],
+     "size": 76
+    }
+   ],
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "loom_r",
+   "line": 4,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "r": "angry",
+   "s": "shock"
+  },
+  {
+   "kind": "cu_p",
+   "line": 5,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "sad",
+   "r": "sideeye",
+   "p_pose": "shrug",
+   "cam": {
+    "z": 1.25,
+    "push": 0.05,
+    "fy": 0.42
+   }
+  },
+  {
+   "kind": "cu_r",
+   "line": 6,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "r": "sly",
+   "r_pose": "point",
+   "cam": {
+    "z": 1.2,
+    "push": 0.08,
+    "fy": 0.47
+   }
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "p": "happy",
+   "r": "sly",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 6,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "slick",
+   "line": 7,
+   "from": 0,
+   "blur": 1,
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_callcenter3d.jpg",
+   "s": "panic",
+   "s_pose": "arms_up",
+   "msg": "PAGE OWNER: SLICK",
+   "msg_at": 0.0
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 7,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "end",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_night3d.jpg",
+   "blur": 2,
+   "line": 7,
+   "from": 1.0,
+   "l1": "\"FREE\" PRIZE + CARD NUMBER",
+   "l2": "= SCAM",
+   "l3": "Send this to someone who clicks every prize."
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "shimmer",
+   "gain": 0.3
+  },
+  {
+   "line": 1,
+   "frac": 0.6,
+   "name": "pop",
+   "gain": 0.3
+  },
+  {
+   "line": 2,
+   "frac": 0.6,
+   "name": "pop",
+   "gain": 0.3
+  },
+  {
+   "line": 4,
+   "frac": 0.0,
+   "name": "scratch",
+   "gain": 0.35
+  },
+  {
+   "line": 4,
+   "frac": 0.0,
+   "name": "impact",
+   "gain": 0.35
+  },
+  {
+   "line": 7,
+   "frac": 0.6,
+   "name": "wahwah",
+   "gain": 0.35
+  }
+ ],
+ "hot": [
+  "PS6",
+  "FREE",
+  "CARD",
+  "STOP"
+ ],
+ "pause_before": {
+  "4": 0.4
+ }
+}
