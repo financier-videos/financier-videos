@@ -47,6 +47,10 @@ if opt["gpu"]:
                 sc.cycles.device = "GPU"; dev = kind + ":" + gd[0].name; break
         except Exception as e: print("no", kind, e)
 print("RENDER_DEVICE", dev, flush=True)
+sc.render.use_persistent_data = True   # keep 4K textures + BVH on the GPU between frames (was re-uploaded every frame: ~15 s/frame)
+if dev != "CPU":
+    try: sc.cycles.denoiser = "OPTIX"
+    except Exception as e: print("denoiser", e)
 if opt["gpu"] and dev == "CPU": sys.exit("RENDER_DEVICE error: --gpu asked but no GPU found (not rendering on CPU)")
 rw, rh = (int(x) for x in opt["res"].split("x"))
 sc.render.resolution_x, sc.render.resolution_y = rw, rh; sc.render.film_transparent = True
@@ -165,6 +169,7 @@ for f in frames:
     if f in frames_out and (f % every == 0):
         fp = f"{out}/{char}/{f:05d}.png"
         if not os.path.exists(fp):
-            sc.render.filepath = fp; bpy.ops.render.render(write_still=True); n += 1
+            tr = time.time(); sc.render.filepath = fp; bpy.ops.render.render(write_still=True); n += 1
+            if n <= 5: print(f"{char} timing frame {f}: render {time.time() - tr:.2f}s", flush=True)
             if n % 20 == 0: print(f"{char} frame {f} rendered {n} {round(time.time() - t_start)}s", flush=True)
 print("PERF_DONE", char, n, round(time.time() - t_start), "s", flush=True)

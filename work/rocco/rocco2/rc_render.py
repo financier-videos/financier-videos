@@ -536,7 +536,6 @@ def compose(shot, lt, t, talkR, talkP, extra, talkS=0.0, fimg=None, fimg2=None):
         d = ImageDraw.Draw(im); f_ = F(34); tw = d.textlength(shot["src"], font=f_)
         d.rounded_rectangle([W / 2 - tw / 2 - 20, H * 0.785 - 28, W / 2 + tw / 2 + 20, H * 0.785 + 28], 16, fill=(0, 0, 0, 150))
         d.text((W / 2, H * 0.785), shot["src"], font=f_, fill=(232, 232, 234), anchor="mm")
-    txt(im, (W - 50, 70), "RED FLAG ROCCO", 44, (255, 59, 59), sw=6, anchor="rm")
     return im
 
 
@@ -710,6 +709,7 @@ def main():
         ch = next((c for c in chunks if c[0][1] - 0.05 <= t < (c[-1][2] + 0.25)), None)
         if ch and sh["kind"] != "end":
             act = max([j for j, w in enumerate(ch) if w[1] <= t] or [0]); caption(im, ch, act)
+        if t >= 2.0: txt(im, (W - 50, 70), "RED FLAG ROCCO", 44, (255, 59, 59), sw=6, anchor="rm")  # after the zoom (never cropped); hidden in the 2 s hook (engine v6.17 rule)
         if sh.get("hook") and lt < 2.2: txt(im, (W / 2, H * 0.08), sh["hook"], 104, (255, 255, 255), sw=12)
         enc.stdin.write(im.convert("RGB").tobytes())
     enc.stdin.close(); enc.wait()

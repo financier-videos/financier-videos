@@ -57,7 +57,7 @@
  "shots": [
   {
    "kind": "trio",
-   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
    "line": 0,
    "from": 0,
    "blur": 1,
@@ -74,7 +74,7 @@
   },
   {
    "kind": "slick",
-   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
    "line": 0,
    "from": 0.55,
    "blur": 1,
@@ -88,7 +88,7 @@
   },
   {
    "kind": "cu_p",
-   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
    "line": 1,
    "from": 0,
    "blur": 1,
@@ -102,7 +102,7 @@
   },
   {
    "kind": "loom_r",
-   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
    "line": 1,
    "from": 0.62,
    "blur": 1,
@@ -111,7 +111,7 @@
   },
   {
    "kind": "slick",
-   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
    "line": 2,
    "from": 0,
    "blur": 1,
@@ -125,7 +125,7 @@
   },
   {
    "kind": "loom_r",
-   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
    "line": 3,
    "from": 0,
    "blur": 1,
@@ -138,7 +138,7 @@
   },
   {
    "kind": "slick",
-   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
    "line": 4,
    "from": 0,
    "blur": 1,
@@ -152,7 +152,7 @@
   },
   {
    "kind": "cu_r",
-   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
    "line": 5,
    "from": 0,
    "blur": 1,
@@ -165,7 +165,7 @@
   },
   {
    "kind": "slick",
-   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
    "line": 6,
    "from": 0,
    "blur": 1,
@@ -179,7 +179,7 @@
   },
   {
    "kind": "loom_r",
-   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
    "line": 7,
    "from": 0,
    "blur": 1,
@@ -189,7 +189,7 @@
   },
   {
    "kind": "trio",
-   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
    "line": 7,
    "from": 0.6,
    "blur": 1,
@@ -201,7 +201,7 @@
   },
   {
    "kind": "cu_p",
-   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
    "line": 8,
    "from": 0,
    "blur": 1,
@@ -215,7 +215,7 @@
   },
   {
    "kind": "cu_r",
-   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
    "line": 9,
    "from": 0,
    "blur": 1,
@@ -228,7 +228,7 @@
   },
   {
    "kind": "end",
-   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "bg": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg",
    "blur": 3,
    "line": 9,
    "from": 1.0,

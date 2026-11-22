@@ -1,0 +1,90 @@
+{
+ "format": "short",
+ "look": "rocco2",
+ "scenes": [
+  {
+   "text": "Hey! Back off! I'm her BANK! She owes me a fee!",
+   "sticker": "HE PICKED THE WRONG PIGGY BANK"
+  },
+  {
+   "text": "Slick, meet my friend. Detective Rocco.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "D-d-detective? But you're a RACCOON!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Takes one to catch one.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "So... fifty-fifty?",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "You're under arrest.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "So I get a FREE ride!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Ha ha HA! I like this one!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "You're still arresting him.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Oh, absolutely.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "2IFK69bB4CE - Zovi 239x: scammer as theatrical villain, micro-pause before numbers",
+  "DfC5DUuTroA - 50M: tiny-vs-huge scale contrast, action in frame 1",
+  "pipandrue TikTok 6.7M: this episode copies its beat structure, timing and 5-shot pattern 1:1 (own characters, own jokes)"
+ ]
+}
