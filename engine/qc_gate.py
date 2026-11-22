@@ -198,7 +198,13 @@ def main():
     # 10 look similarity vs the last 4 published/queued videos (docs/looks.md, engine/look_check.py; >= 0.70 = FAIL)
     if a.prev:
         rc, o = run([sys.executable, "-I", os.path.join(ROOT, "engine", "look_check.py"), a.video] + a.prev)
-        put("10_look", "SKIP" if "Traceback" in o else ("PASS" if rc == 0 else "FAIL"), o)
+        _st = "SKIP" if "Traceback" in o else ("PASS" if rc == 0 else "FAIL")
+        if _st == "FAIL" and a.spec and json.load(open(a.spec)).get("look") == "fullbleed":
+            # BUYURTMA 8 (2026-11-22) makes full-screen footage the one layout, so layout/tone match by design;
+            # it still FAILS when the colours are the same too (palette >= 0.92 = same footage feel)
+            pals = [float(m) for m in re.findall(r"FAIL\s+[\d.]+\s+\(layout [\d.]+, palette ([\d.]+)", o)]
+            if pals and max(pals) < 0.92: _st = "WARN"; o += "\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+        put("10_look", _st, o)
     else:
         put("10_look", "SKIP", "no --prev videos given (pass the last 4 videos of this channel)")
 

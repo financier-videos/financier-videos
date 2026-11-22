@@ -1957,7 +1957,7 @@ def render(spec, wav, total, out, workdir):
     # cinematic vignette (pro look), precomputed once
     yy, xx = np.mgrid[0:H, 0:W]
     rr = np.sqrt(((xx - W / 2) / (W / 2)) ** 2 + ((yy - H / 2) / (H / 2)) ** 2)
-    vig = Image.fromarray(np.clip((rr - 0.75) * 200, 0, 140).astype(np.uint8), "L")
+    vig = Image.fromarray(np.clip((rr - 0.75) * (100 if FB else 200), 0, 70 if FB else 140).astype(np.uint8), "L")  # v6.16: Ko'rik 3 #4
     vignette = Image.new("RGBA", (W, H), (0, 0, 0, 255)); vignette.putalpha(vig)
     del yy, xx, rr
     trans_cycle = ["punch", "flash", "slide"]
@@ -1994,9 +1994,12 @@ def render(spec, wav, total, out, workdir):
                 if a1 - a0 > AUTOSHOT * 1.25:
                     _k = int(math.ceil((a1 - a0) / AUTOSHOT))
                     _cur = sh.get("broll") or sc.get("broll")
+                    _own = [x.get("broll") for x in sc.get("shots", []) if x.get("broll")]; _own = list(dict.fromkeys(_own))
                     for q in range(1, _k):  # v6.14b: another clip from this video's footage, not a re-frame
                         _ex.append({"at": round(a0 + q * (a1 - a0) / _k, 2), "zoom": [1.0, 1.2][(q + j) % 2], "kb": ["left", "out", "right"][(q + j) % 3],
-                                    "broll": _pool_next(_cur, si + q + j), "start": round((si * 1.9 + q * 2.1) % 5, 2)})
+                                    "broll": (_own[(_own.index(_cur) + q) % len(_own)] if (len(_own) >= 2 and _cur in _own) else _pool_next(_cur, si + q + j)),
+                                    "start": (float(next((x.get("start", 0) for x in sc["shots"] if x.get("broll") == _own[(_own.index(_cur) + q) % len(_own)]), 0)) + 0.4 * q
+                                              if (len(_own) >= 2 and _cur in _own and any("start" in x for x in sc["shots"])) else round((si * 1.9 + q * 2.1) % 5, 2))})
             _sl = _ex
         if _sl:
             _path, _st = sc.get("broll"), float(sc.get("broll_start", 0))
@@ -2052,13 +2055,17 @@ def render(spec, wav, total, out, workdir):
             coins = [(crng.uniform(0.05, 0.95) * W, crng.uniform(-0.6, 0) * H, crng.uniform(0.5, 1.0) * H, crng.uniform(0.025, 0.05) * S, crng.uniform(3, 8)) for _ in range(18)]
         arrow = next((a for a in sc.get("fx", []) if a in ("arrow_up", "arrow_down")), None)
         # ---- v3 humor pack: mascot, bubble, sticker ----
+        if FB and not long and not sc.get("mascot") and not sc.get("vs") and spec.get("buck_every_scene", True):  # v6.16 Ko'rik 3: Buck in every scene
+            sc["mascot"] = {"mood": ["smug", "sideeye", "happy", "point", "thumbsup"][si % 5], "pos": "corner"}
         masc = sc.get("mascot"); bub = None
         if masc:
             mood = masc.get("mood", "happy") if masc.get("mood", "happy") in MOODS else "happy"
             mpos = masc.get("pos") or ("corner" if (sc.get("stat") or sc.get("chart") or sc.get("vs") or clip or sc.get("phone")) else "center")
             m_at = float(masc.get("at", 0))
             if FB and not long and mpos != "center":  # v6.14 fullbleed: half-body in the lower-right corner, bigger
-                mR = W * 0.16; mx, my = W * 0.27, H * 0.875  # v6.16 (BUYURTMA 8): Buck >= 1/4 of the frame, lower left
+                _pl = [(0.17, 0.27, 0.875), (0.17, 0.73, 0.875), (0.15, 0.27, 0.885)][(si // 2) % 3]  # v6.16 Ko'rik 3 #1: place/size change every 2 scenes
+                if masc.get("act"): _pl = (0.205, _pl[1], 0.85)  # reaction = 1/3 of the frame
+                mR = W * _pl[0]; mx, my = W * _pl[1], H * _pl[2]
             elif PAPER and not long:  # v6.14 paper: big, lower right (>= 1/3 of the frame height with the hat)
                 mR = W * 0.145; mx, my = W * 0.80, H * 0.92
             elif SPLIT and not long and mpos != "center":  # v6.14 split: on the divider, reacting to both halves
@@ -2241,7 +2248,7 @@ def render(spec, wav, total, out, workdir):
                 p_in = (lt - 0.15) / 0.45
                 if p_in > 0:
                     sc_k = 0.6 + 0.4 * ease_back(p_in)
-                    cnt = ease_out((lt - 0.15) / 0.7)
+                    cnt = ease_out((lt - 0.15) / max(0.15, min(0.7, sc.get("dur", 2.0) - 0.95)))  # v6.16: final number held >= 0.8 s
                     txt = count_text(sc["stat"], cnt) if cnt < 0.999 else sc["stat"]
                     fs = ImageFont.truetype(STATF, max(10, int(stat_sz * sc_k)))
                     tw = fd.textlength(txt, font=fs)
@@ -2254,6 +2261,8 @@ def render(spec, wav, total, out, workdir):
                         _num, _unit = (txt.split("/", 1) + [""])[:2] if "/" in txt else (txt, sc.get("stat_unit", ""))
                         _unit = {"MO": "EVERY MONTH", "DAY": "EVERY DAY", "YR": "A YEAR", "YEAR": "A YEAR", "S": "EVERY SECOND", "SEC": "EVERY SECOND"}.get(_unit.upper(), _unit.upper())
                         tw = fd.textlength(_num, font=fs); fu = ImageFont.truetype(fun_font("ArchivoBlack-Regular.ttf"), int(S * 0.04))
+                        while tw + 2 * S * 0.04 > W * 0.80 and fs.size > 20:  # v6.16 Ko'rik 3: card <= 80 % of the width, >= 60 px from the edges
+                            fs = ImageFont.truetype(STATF, int(fs.size * 0.92)); tw = fd.textlength(_num, font=fs)
                         bb = fd.textbbox(((W - tw) / 2, sy), _num, font=fs); px_, py_ = S * 0.04, S * 0.025
                         ub = (S * 0.055) if _unit else 0
                         box = [min(bb[0], W / 2 - fd.textlength(_unit, font=fu) / 2) - px_, bb[1] - py_, max(bb[2], W / 2 + fd.textlength(_unit, font=fu) / 2) + px_, bb[3] + py_ + ub]
@@ -2454,7 +2463,10 @@ def render(spec, wav, total, out, workdir):
                 fs_ = f_src; tw = ud.textlength(src_txt, font=fs_)
                 if tw > W * 0.92:   # v6.4: shrink a long source line to fit instead of running off the frame
                     fs_ = ImageFont.truetype(INTER_SB, max(int(S * 0.020), int(S * 0.030 * W * 0.92 / tw))); tw = ud.textlength(src_txt, font=fs_)
-                ud.text(((W - tw) / 2, H * (0.93 if long else (0.915 if ROC else 0.775))), src_txt, font=fs_, fill=(196, 204, 220, 255),
+                _sy = H * (0.93 if long else (0.915 if ROC else (0.955 if FB else 0.775)))
+                if FB and not long:  # v6.16 Ko'rik 3 #3: small dark plate at the bottom, under Buck's feet, not over his head
+                    _fh = fs_.size; ud.rounded_rectangle([(W - tw) / 2 - 18, _sy - _fh * 0.35, (W + tw) / 2 + 18, _sy + _fh * 1.35], 14, fill=(0, 0, 0, 150))
+                ud.text(((W - tw) / 2, _sy), src_txt, font=fs_, fill=(196, 204, 220, 255),
                         stroke_width=max(1, int(S * 0.002)), stroke_fill=(0, 0, 0, 200))
             ud.rectangle([0, 0, int(W * t / total), int(S * 0.009)], fill=ACC + (255,))
             ud.text(((W * 0.96 - ud.textlength(spec.get("brand", ""), font=f_brand)) if ROC else W * 0.04, (H - S * 0.07) if long else S * 0.03), spec.get("brand", "FINANCIER"), font=f_brand, fill=(hex2rgb(spec["brand_color"]) if spec.get("brand_color") else GOLD) + (150,))

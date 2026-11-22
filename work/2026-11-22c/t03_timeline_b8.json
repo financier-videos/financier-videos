@@ -1,0 +1,185 @@
+{
+ "format": "short",
+ "sfx": true,
+ "look": "fullbleed",
+ "captions": "words",
+ "headline": "hook",
+ "auto_shots": 1.8,
+ "structure": "timeline",
+ "source": "Sources: Take-Two Interactive (Sep 2013; Nov 20, 2026)",
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
+ },
+ "scenes": [
+  {
+   "text": "2013. GTA 5 makes $800 million. In one day.",
+   "say": "Twenty thirteen. G T A Five makes eight hundred million dollars. In one day.",
+   "head": "13 YEARS. 4.7X BIGGER.",
+   "stat": "$800M",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_stacks.mp4",
+     "at": 1.6,
+     "start": 0
+    }
+   ],
+   "show_source": "Take-Two Interactive (Sep 2013)",
+   "mascot": {
+    "mood": "smug",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "The biggest launch anyone had ever seen.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/city_fireworks.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_stacks.mp4",
+     "at": 1.5,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "jawdrop",
+    "act_at": 0.6
+   }
+  },
+  {
+   "text": "Then... thirteen years of waiting.",
+   "beat": 0.2,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 1.5,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "I aged. And I'm a coin.",
+   "land": 0.4,
+   "mascot": {
+    "mood": "sad",
+    "pos": "corner",
+    "act": "sigh"
+   },
+   "sfx": [
+    "wahwah@0.8"
+   ],
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/coins_hand.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
+     "at": 1.2,
+     "start": 0
+    }
+   ]
+  },
+  {
+   "text": "2026. Day one: $3.79 billion.",
+   "say": "Twenty twenty-six. Day one: three point seven nine billion dollars.",
+   "chart": {
+    "labels": [
+     "2013",
+     "2026"
+    ],
+    "values": [
+     0.8,
+     3.79
+    ],
+    "texts": [
+     "$800M",
+     "$3.79B"
+    ],
+    "at": [
+     0.2,
+     1.4
+    ]
+   },
+   "show_source": "Take-Two Interactive (Nov 20, 2026), retail sales estimate",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_desk.mp4",
+     "at": 0,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Plus 32.5 million copies sold before it even came out.",
+   "say": "Plus thirty-two and a half million copies sold before it even came out.",
+   "stat": "32.5M",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/gamepad_hands.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/online_card.mp4",
+     "at": 1.6,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "happy",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Almost five times bigger. Same series.",
+   "stat": "4.7X",
+   "land": 0.4,
+   "sfx": [
+    "impact@0.2"
+   ],
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_stacks.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 1.2,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   }
+  }
+ ]
+}

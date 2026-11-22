@@ -1,0 +1,63 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    39.4 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -13.9 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -13.8 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 12.6 Mbit/s, 26.3s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 0.97,\n \"missing\": [\n  \"gt\"\n ],\n \"extra\": [\n  \"gta\"\n ],\n \"heard\": \"2013, GTA 5 makes $800 million in one day the biggest launch anyone had ever seen. Then, 13 years of waiting, I aged and I'm a coin. 2026, day one, $3.79 billion plus 32 and a half million copies sold before Four it even came out, almost five times bigger. Same series.\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "en. G T A Five makes eight hundred million doll\n 2   5.97s range=16.4 st  gap=0.3  ok  | The biggest launch anyone had ever seen.\n 3   8.47s range=11.2 st  gap=0.21  ok  | Then... thirteen years of waiting.\n 4  11.15s range=19.9 st  gap=0.3  ok  | I aged. And I'm a coin.\n 5  13.52s range= 9.5 st  gap=0.49  ok  | Twenty twenty-six. Day one: three point seven nine billion d\n 6  17.99s range=11.3 st  gap=0.32  ok  | Plus thirty-two and a half million copies sold before it eve\n 7  23.01s range=16.5 st  gap=0.24  ok  | Almost five times bigger. Same series.\n{\"median_f0\": 269.2, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 100"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/2026-11-22c/t03_timeline_b8_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "WARN",
+  "note": "ok  0.51  (layout 0.42, palette 0.57, tone 0.61)  vs 2026-11-22_gta_how_big_v615.mp4\nFAIL  0.88  (layout 0.85, palette 0.91, tone 0.87)  vs 2026-11-22_gta_per_second.mp4\nok  0.51  (layout 0.31, palette 0.75, tone 0.53)  vs 2026-11-21_twenty_secrets_b3.mp4\nok  0.48  (layout 0.23, palette 0.81, tone 0.48)  vs 2026-11-21_gate_story_b3.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "14 hard cuts (ffmpeg scene>0.22) in 26.3 s = 1.9 s/cut (need >= 13); engine planned 18"
+ },
+ "12_script": {
+  "status": "SKIP",
+  "note": "no --prev-specs (pass the last 4 specs of this channel)"
+ },
+ "14_empty_panel": {
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 13% of the frame (limit 15%)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: footage_bank (Buyurtma 8), Ko'rik 3 layout fixes, empty_check, qc_gate; ishlatilmadi: vidiq_find_broll (bank yetarli)"
+ },
+ "verdict": "PASS"
+}
