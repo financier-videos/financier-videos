@@ -1,0 +1,583 @@
+{
+ "id": "RC-05",
+ "title": "Penny Plays Dumb With a Scammer",
+ "structure": "call skit: victim plays dumb (NEW format)",
+ "tail": 2.2,
+ "hot": [
+  "CODE",
+  "DUMB",
+  "POLICE",
+  "ANYONE",
+  "SIX"
+ ],
+ "lines": [
+  [
+   "S",
+   "[fast] [fake serious] This is your bank's fraud department! Your account is in DANGER!"
+  ],
+  [
+   "P",
+   "[gasps] Oh no! Which bank?"
+  ],
+  [
+   "S",
+   "[pause] [nervous] ...Your... bank!"
+  ],
+  [
+   "R",
+   "[whispering] Psst. Play dumb."
+  ],
+  [
+   "S",
+   "[sly] We just texted you a six-digit code. Read it to me."
+  ],
+  [
+   "P",
+   "[confident] Six!"
+  ],
+  [
+   "S",
+   "[confused] ...What?"
+  ],
+  [
+   "P",
+   "[cheerful] It has six digits! You said so!"
+  ],
+  [
+   "S",
+   "[frustrated] The NUMBERS! Read me the numbers!"
+  ],
+  [
+   "P",
+   "[fast] [proud] One, two, three, four, five, six!"
+  ],
+  [
+   "S",
+   "[angry] Not COUNTING! The code on your screen!"
+  ],
+  [
+   "P",
+   "[reading] It says: do not share this code with anyone. [pause] Are you... anyone?"
+  ],
+  [
+   "S",
+   "[stammering] I'm... I'm the BANK!"
+  ],
+  [
+   "P",
+   "[innocent] The bank sent this text. So the bank says: don't tell YOU."
+  ],
+  [
+   "R",
+   "[whispering] [impressed] ...She's good."
+  ],
+  [
+   "S",
+   "[furious] That's it! I'm calling the police!"
+  ],
+  [
+   "P",
+   "[cheerful] Great! Tell them your name!"
+  ],
+  [
+   "S",
+   "[panicked] Uh... wrong number!"
+  ],
+  [
+   "R",
+   "[warmly] Real banks never ask for your code. Hang up and call the number on your card."
+  ]
+ ],
+ "shots": [
+  {
+   "line": 0,
+   "from": 0,
+   "kind": "call",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg2": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bright2": 1.35,
+   "hook": "PENNY PLAYS DUMB WITH A SCAMMER",
+   "s": "sly",
+   "p": "happy"
+  },
+  {
+   "line": 0,
+   "from": 0.55,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bright": 1.35,
+   "r_peek": true,
+   "s": "sly",
+   "r": "sideeye",
+   "msg": "\"FRAUD DEPARTMENT!!\"",
+   "msg_at": 0.1
+  },
+  {
+   "line": 1,
+   "from": 0,
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "blur": 1,
+   "p": "shock",
+   "r": "sideeye"
+  },
+  {
+   "line": 2,
+   "from": 0,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bright": 1.35,
+   "r_peek": true,
+   "s": "panic",
+   "r": "smug",
+   "msg": "...YOUR BANK!",
+   "msg_at": 0.5
+  },
+  {
+   "line": 3,
+   "from": 0,
+   "kind": "cu_r",
+   "bg": "/tmp/fin/bg/rc3/fireplace.mp4",
+   "blur": 1,
+   "r": "sideeye",
+   "act": "deadpan_sideeye",
+   "act_at": 0.0,
+   "act_len": 0.9
+  },
+  {
+   "line": 4,
+   "from": 0,
+   "kind": "call",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg2": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bright2": 1.35,
+   "s": "sly",
+   "p": "nervous",
+   "r_whisper": true,
+   "r": "sideeye"
+  },
+  {
+   "line": 4,
+   "from": 0.55,
+   "kind": "phone",
+   "bg": "/tmp/fin/bg/rc3/fireplace.mp4",
+   "blur": 4,
+   "p": "nervous",
+   "msgs": [
+    {
+     "t": "Your code:\n482 913",
+     "at": 0.05,
+     "col": [
+      52,
+      120,
+      246
+     ],
+     "size": 120
+    },
+    {
+     "t": "Do NOT share this\ncode with anyone.",
+     "at": 0.35,
+     "col": [
+      52,
+      120,
+      246
+     ],
+     "size": 96
+    }
+   ],
+   "sender": "Your Bank"
+  },
+  {
+   "line": 5,
+   "from": 0,
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "blur": 1,
+   "bg_start": 2,
+   "p": "happy",
+   "r": "smug"
+  },
+  {
+   "line": 6,
+   "from": 0,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bright": 1.35,
+   "r_peek": true,
+   "s": "sly",
+   "r": "smug",
+   "msg": "WHAT?",
+   "msg_at": 0.1
+  },
+  {
+   "line": 7,
+   "from": 0,
+   "kind": "call",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg2": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bright2": 1.35,
+   "p": "happy",
+   "s": "sly",
+   "r_whisper": true,
+   "r": "smug"
+  },
+  {
+   "line": 7,
+   "from": 0.55,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bright": 1.35,
+   "r_peek": true,
+   "s": "panic",
+   "r": "smug"
+  },
+  {
+   "line": 8,
+   "from": 0,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bright": 1.35,
+   "r_peek": true,
+   "s": "panic",
+   "r": "sideeye",
+   "msg": "THE NUMBERS!!",
+   "msg_word": "numbers"
+  },
+  {
+   "line": 9,
+   "from": 0,
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "blur": 1,
+   "bg_start": 4,
+   "p": "happy",
+   "r": "smug"
+  },
+  {
+   "line": 9,
+   "from": 0.5,
+   "kind": "call",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg2": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bright2": 1.35,
+   "s": "panic",
+   "p": "happy",
+   "r_whisper": true,
+   "r": "smug"
+  },
+  {
+   "line": 10,
+   "from": 0,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bright": 1.35,
+   "r_peek": true,
+   "s": "panic",
+   "r": "smug",
+   "msg": "NOT COUNTING!!",
+   "msg_word": "counting"
+  },
+  {
+   "line": 11,
+   "from": 0.0,
+   "kind": "phone",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "blur": 4,
+   "p": "hope",
+   "rocco": true,
+   "r": "smug",
+   "msgs": [
+    {
+     "t": "Your code:\n482 913",
+     "at": 0.0,
+     "col": [
+      52,
+      120,
+      246
+     ],
+     "size": 120
+    },
+    {
+     "t": "Do NOT share this\ncode with ANYONE.",
+     "at": 0.05,
+     "col": [
+      220,
+      50,
+      50
+     ],
+     "size": 96
+    }
+   ],
+   "sender": "Your Bank"
+  },
+  {
+   "line": 11,
+   "from": 0.6,
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "blur": 1,
+   "bg_start": 6,
+   "p": "hope",
+   "r": "smug"
+  },
+  {
+   "line": 12,
+   "from": 0,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bright": 1.35,
+   "r_peek": true,
+   "s": "panic",
+   "r": "sideeye",
+   "msg": "\"I'M THE BANK!\"",
+   "msg_at": 0.3
+  },
+  {
+   "line": 13,
+   "from": 0,
+   "kind": "call",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg2": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bright2": 1.35,
+   "p": "happy",
+   "s": "panic",
+   "r_whisper": true,
+   "r": "smug"
+  },
+  {
+   "line": 13,
+   "from": 0.55,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bright": 1.35,
+   "r_peek": true,
+   "s": "panic",
+   "r": "smug",
+   "msg": "...",
+   "msg_at": 0.1
+  },
+  {
+   "line": 14,
+   "from": 0,
+   "kind": "cu_r",
+   "bg": "/tmp/fin/bg/rc3/fireplace.mp4",
+   "blur": 1,
+   "bg_start": 3,
+   "r": "smug",
+   "act": "deadpan_sideeye",
+   "act_at": 0.2,
+   "act_len": 0.9
+  },
+  {
+   "line": 15,
+   "from": 0,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bright": 1.35,
+   "r_peek": true,
+   "s": "panic",
+   "r": "smug",
+   "msg": "POLICE!!",
+   "msg_word": "police"
+  },
+  {
+   "line": 16,
+   "from": 0,
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "blur": 1,
+   "bg_start": 8,
+   "p": "happy",
+   "r": "smug"
+  },
+  {
+   "line": 16,
+   "from": 0.5,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bright": 1.35,
+   "r_peek": true,
+   "s": "panic",
+   "r": "smug"
+  },
+  {
+   "line": 17,
+   "from": 0,
+   "kind": "call",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg2": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bright2": 1.35,
+   "s": "panic",
+   "p": "happy",
+   "msg": "*CLICK*",
+   "msg_at": 0.7,
+   "caller": "CALL ENDED"
+  },
+  {
+   "line": 18,
+   "from": 0.0,
+   "kind": "store",
+   "bg": "/tmp/fin/bg/rc3/fireplace.mp4",
+   "blur": 5,
+   "l1": "REAL BANKS NEVER",
+   "l2": "ASK FOR CODES",
+   "r": "point"
+  },
+  {
+   "line": 18,
+   "from": 0.5,
+   "kind": "insert",
+   "bg": "/tmp/fin/bg/rc3/phone.mp4",
+   "bright": 1.2,
+   "circle": [
+    0.62,
+    0.42,
+    0.2
+   ],
+   "label": "CALL # ON YOUR CARD",
+   "who": "r",
+   "rx": 0.25,
+   "r": "happy"
+  },
+  {
+   "line": 18,
+   "from": 1.0,
+   "kind": "end",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "blur": 3,
+   "l1": "\"READ ME YOUR CODE\"",
+   "l2": "= SCAM",
+   "l3": "Send this to someone who'd read it out loud."
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "ding",
+   "gain": 0.3
+  },
+  {
+   "line": 0,
+   "word": "danger",
+   "name": "impact",
+   "gain": 0.3
+  },
+  {
+   "line": 2,
+   "frac": 0.0,
+   "name": "crickets",
+   "gain": 0.25
+  },
+  {
+   "line": 4,
+   "frac": 0.55,
+   "name": "ding",
+   "gain": 0.3
+  },
+  {
+   "line": 6,
+   "frac": 0.0,
+   "name": "scratch",
+   "gain": 0.25
+  },
+  {
+   "line": 8,
+   "word": "numbers",
+   "name": "buzzer",
+   "gain": 0.2
+  },
+  {
+   "line": 9,
+   "word": "one",
+   "name": "pop",
+   "gain": 0.3
+  },
+  {
+   "line": 9,
+   "word": "two",
+   "name": "pop",
+   "gain": 0.3
+  },
+  {
+   "line": 9,
+   "word": "three",
+   "name": "pop",
+   "gain": 0.3
+  },
+  {
+   "line": 9,
+   "word": "four",
+   "name": "pop",
+   "gain": 0.3
+  },
+  {
+   "line": 9,
+   "word": "five",
+   "name": "pop",
+   "gain": 0.3
+  },
+  {
+   "line": 9,
+   "word": "six",
+   "name": "pop",
+   "gain": 0.3
+  },
+  {
+   "line": 10,
+   "frac": 0.0,
+   "name": "whip",
+   "gain": 0.3
+  },
+  {
+   "line": 11,
+   "word": "anyone",
+   "name": "boing",
+   "gain": 0.3
+  },
+  {
+   "line": 12,
+   "frac": 0.0,
+   "name": "impact",
+   "gain": 0.3
+  },
+  {
+   "line": 13,
+   "word": "you",
+   "name": "bonk",
+   "gain": 0.4
+  },
+  {
+   "line": 15,
+   "word": "police",
+   "name": "buzzer",
+   "gain": 0.2
+  },
+  {
+   "line": 17,
+   "frac": 0.0,
+   "name": "crickets",
+   "gain": 0.3
+  },
+  {
+   "line": 17,
+   "frac": 0.8,
+   "name": "wahwah",
+   "gain": 0.35
+  },
+  {
+   "line": 18,
+   "frac": 0.1,
+   "name": "ding",
+   "gain": 0.25
+  }
+ ],
+ "sources": "FTC consumer advice: never share a verification code; banks say they never call to ask for one-time passcodes",
+ "footage": "Pixabay: Shayea_Kim, JoelFazhari, u_gm5v89x1on, Coverr-Free-Footage",
+ "benchmarks": [
+  "vcPnUMJNdkw \u2014 YANGI: qurbon ataylab so'zma-so'z javob beradi (\"16\", 1-2-3 sanash), har ~8 s zarba, absurd yakun",
+  "uaV36whB6H8 \u2014 mutaxassis + oddiy odam; 'tekin/kod' \u2192 xavf; 1.5\u20132.5 s kesim",
+  "6agufKA2ZQY \u2014 Rocco shivirlab boshqaradi (bashorat o'rniga murabbiy), aniq qoida + ulashish CTA",
+  "N09VNM2BOD8 \u2014 firibgar o'z ismini aytolmaydi + trubka tashlaydi (2 zarbali yakun)"
+ ]
+}

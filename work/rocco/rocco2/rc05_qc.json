@@ -1,0 +1,67 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    35.0 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.7 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.3 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -14.7 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 5.5 Mbit/s, 53.3s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "raud department. Your account is in danger. Oh no, which bank? Your bank. Pssst, play dumb. We just texted you a six digit code. Read it to me. Six. What? It has six digits. You said so. The numbers. Read me the numbers. One, two. 3, 4, 5, 6! Not counting the code on your screen! It says, \\\"Do not share this code with anyone!\\\" Are you\u2026anyone? I'm\u2026I'm the bank! The bank sent this text, so the bank says, \\\"Don't tell you\u2026\\\" She's good. That's it. I'm calling the police. Great. Tell them your name. Uh, wrong number. Real banks never ask for your code. Hang up and call the number on your card.\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "nge= 7.6 st  gap=0.48  ok  | I'm... I'm the BANK!\n14  35.36s range= 9.5 st  gap=0.61  ok  | The bank sent this text. So the bank says: don't tell YOU.\n15  39.60s range= 7.9 st  gap=0.44  ok  | ...She's good.\n16  40.96s range=17.2 st  gap=0.44  ok  | That's it! I'm calling the police!\n17  43.20s range= 5.2 st  gap=0.4  ok  | Great! Tell them your name!\n18  45.04s range=12.2 st  gap=0.27  ok  | Uh... wrong number!\n19  46.88s range=12.1 st  gap=0.32  ok  | Real banks never ask for your code. Hang up and call the num\n20  51.12s range=   - st  gap=-  ok  | \n{\"median_f0\": 284.8, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 90"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/rocco/rocco2/rc05_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "WARN",
+  "note": "FAIL  0.75  (layout 0.94, palette 0.44, tone 0.87)  vs rocco_rc02_wrong_person.mp4\nok  0.69  (layout 0.88, palette 0.41, tone 0.79)  vs rocco_rc04c_free_gta_pc.mp4\nok  0.43  (layout 0.25, palette 0.48, tone 0.73)  vs rocco_2026-11-22_r01v2b_brushing.mp4\nok  0.46  (layout 0.41, palette 0.42, tone 0.66)  vs rocco_2026-11-23_t05_free_key.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "27 hard cuts (ffmpeg scene>0.22) in 53.3 s = 2.0 s/cut (need >= 26); engine planned 28"
+ },
+ "12_script": {
+  "status": "PASS",
+  "note": "rc05_qcspec.json                   words 119 scenes 20 broll 19 look rocco2    line2 \"oh\" end \"\"\nrc02_qcspec.json                   words 137 scenes 21 broll 19 look rocco2    line2 \"don't\" end \"\"\nrc04c_qcspec.json                  words  97 scenes 17 broll 0 look rocco2    line2 \"rocco\" end \"\"\nSCRIPT_CHECK: PASS"
+ },
+ "14_empty_panel": {
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 7% of the frame (limit 15%)"
+ },
+ "15_competitors": {
+  "status": "PASS",
+  "note": "4 fresh benchmark(s) ['6agufKA2ZQY', 'N09VNM2BOD8', 'uaV36whB6H8', 'vcPnUMJNdkw'] (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: competitor_watch (vcPnUMJNdkw, uaV36whB6H8 yangi tahlil), rocco_winner_moments, rocco_preflight, ElevenLabs text-to-dialogue eleven_v3, yangi call-skit sahnasi, empty_check, qc_gate; ishlatilmadi: vidiq_find_broll (lavhalar yetarli)"
+ },
+ "verdict": "PASS"
+}

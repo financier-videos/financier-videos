@@ -1,0 +1,167 @@
+{
+ "format": "short",
+ "look": "rocco2",
+ "scenes": [
+  {
+   "text": "This is your bank's fraud department! Your account is in DANGER!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc3/rainroom.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Oh no! Which bank?",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc3/rainroom.mp4"
+    }
+   ]
+  },
+  {
+   "text": "...Your... bank!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc3/animeoffice.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Psst. Play dumb.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc3/fireplace.mp4"
+    }
+   ]
+  },
+  {
+   "text": "We just texted you a six-digit code. Read it to me.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc3/rainroom.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Six!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc3/rainroom.mp4"
+    }
+   ]
+  },
+  {
+   "text": "...What?",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc3/animeoffice.mp4"
+    }
+   ]
+  },
+  {
+   "text": "It has six digits! You said so!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc3/rainroom.mp4"
+    }
+   ]
+  },
+  {
+   "text": "The NUMBERS! Read me the numbers!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc3/animeoffice.mp4"
+    }
+   ]
+  },
+  {
+   "text": "One, two, three, four, five, six!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc3/rainroom.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Not COUNTING! The code on your screen!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc3/animeoffice.mp4"
+    }
+   ]
+  },
+  {
+   "text": "It says: do not share this code with anyone. Are you... anyone?",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc3/rainroom.mp4"
+    }
+   ]
+  },
+  {
+   "text": "I'm... I'm the BANK!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc3/animeoffice.mp4"
+    }
+   ]
+  },
+  {
+   "text": "The bank sent this text. So the bank says: don't tell YOU.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc3/rainroom.mp4"
+    }
+   ]
+  },
+  {
+   "text": "...She's good.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc3/fireplace.mp4"
+    }
+   ]
+  },
+  {
+   "text": "That's it! I'm calling the police!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc3/animeoffice.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Great! Tell them your name!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc3/rainroom.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Uh... wrong number!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc3/rainroom.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Real banks never ask for your code. Hang up and call the number on your card.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc3/fireplace.mp4"
+    }
+   ]
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "vcPnUMJNdkw \u2014 YANGI: qurbon ataylab so'zma-so'z javob beradi (\"16\", 1-2-3 sanash), har ~8 s zarba, absurd yakun",
+  "uaV36whB6H8 \u2014 mutaxassis + oddiy odam; 'tekin/kod' \u2192 xavf; 1.5\u20132.5 s kesim",
+  "6agufKA2ZQY \u2014 Rocco shivirlab boshqaradi (bashorat o'rniga murabbiy), aniq qoida + ulashish CTA",
+  "N09VNM2BOD8 \u2014 firibgar o'z ismini aytolmaydi + trubka tashlaydi (2 zarbali yakun)"
+ ]
+}

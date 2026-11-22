@@ -194,7 +194,9 @@ def phone(im, x, y, w, h, msgs, lt, sender="Slick"):
     d.rounded_rectangle([x + 14, y + 18, x + w + 14, y + h + 18], 70, fill=(0, 0, 0, 60))
     d.rounded_rectangle([x, y, x + w, y + h], 70, fill=INK); d.rounded_rectangle([x + 20, y + 20, x + w - 20, y + h - 20], 54, fill=(226, 230, 236))
     d.rounded_rectangle([x + 20, y + 20, x + w - 20, y + 150], 54, fill=(230, 234, 242)); d.rectangle([x + 20, y + 100, x + w - 20, y + 150], fill=(230, 234, 242))
-    fox_avatar(im, x + 100, y + 86, 42); d.text((x + 160, y + 86), sender, font=F(52), fill=INK, anchor="lm")
+    if sender == "Slick": fox_avatar(im, x + 100, y + 86, 42)
+    else: d.ellipse([x + 58, y + 44, x + 142, y + 128], fill=(52, 120, 246)); d.text((x + 100, y + 86), "$", font=F(56), fill=(255, 255, 255), anchor="mm")
+    d.text((x + 160, y + 86), sender, font=F(52), fill=INK, anchor="lm")
     yy = y + 190
     for m in msgs:
         at = m.get("at", 0)
@@ -346,6 +348,19 @@ def compose(shot, lt, t, talkR, talkP, extra, talkS=0.0, fimg=None, fimg2=None):
         penny(im, W * 0.30, H * 0.80, 400, moodP, talkP, t)
         c = shot.get("circle")
         if c: callout(im, c[0] * W, c[1] * H, c[2] * W, lt, shot.get("label"), shot.get("circle_at", 0.15))
+    elif k == "call":  # phone-call skit (vcPnUMJNdkw format): top = scammer's place, bottom = victim's place, live call bar + timer
+        top = (fimg2 if fimg2 is not None else setbg("sky")).crop((0, int(H * 0.15), W, int(H * 0.65))).resize((W, H // 2))
+        im.alpha_composite(top.convert("RGBA"), (0, 0))
+        slick(im, W * 0.5, H * 0.27, 440, shot.get("s", "sly"), talkS, t)
+        penny(im, W * (0.36 if shot.get("r_whisper") else 0.5), H * 0.76, 470, moodP, talkP, t)
+        if shot.get("r_whisper"):  # Rocco coaching Penny from the side
+            rocco(im, W * 0.80, H * 1.0, 760, moodR, talkR, t, act, act_t)
+            if talkR > 0.05: txt(im, (W * 0.80, H * 0.60), "psst...", 54, (255, 226, 60), sw=8, ang=6)
+        d = ImageDraw.Draw(im); by = H // 2
+        d.rounded_rectangle([40, by - 58, W - 40, by + 58], 58, fill=(20, 22, 28, 235))
+        d.ellipse([70, by - 30, 130, by + 30], fill=(52, 199, 89)); d.text((160, by), shot.get("caller", 'CALLER: "YOUR BANK"'), font=F(46), fill=(232, 232, 234), anchor="lm")
+        secs = int(t - shot.get("_call_t0", 0)); d.text((W - 80, by), f"{secs // 60:02d}:{secs % 60:02d}", font=F(46), fill=(232, 232, 234), anchor="rm")
+        if shot.get("msg") and lt >= shot.get("msg_at", 0): txt(im, (W * 0.5, H * 0.08), shot["msg"], 84, (255, 226, 60), sw=12, ang=-4)
     elif k == "two":
         penny(im, W * 0.30, H * 0.60, 440, moodP, talkP, t)
         rocco(im, W * 0.70, H * 0.76, 700, moodR, talkR, t, act, act_t)
@@ -355,7 +370,7 @@ def compose(shot, lt, t, talkR, talkP, extra, talkS=0.0, fimg=None, fimg2=None):
         penny(im, W * 0.42, H * 0.52, 760, moodP, talkP, t)
         rocco(im, W * 0.88, H * 0.99, 700, moodR, talkR, t, act, act_t)
     elif k == "phone":
-        phone(im, 120, 200, 840, 1000, shot["msgs"], lt)
+        phone(im, 120, 200, 840, 1000, shot["msgs"], lt, shot.get("sender", "Slick"))
         penny(im, W * 0.25, H * 0.80, 470, moodP, talkP, t)
         if shot.get("rocco"): rocco(im, W * 0.80, H * 0.99, 560, moodR, talkR, t, act, act_t)
     elif k == "flags":
@@ -479,6 +494,8 @@ def main():
             sh[key[:-5] + "_at"] = word_t(_ln, _w) - t0
         shots.append(sh)
     for j in range(len(shots) - 1): shots[j]["_t1"] = shots[j + 1]["_t0"]  # no gaps
+    _c0 = next((x["_t0"] for x in shots if x["kind"] == "call"), 0.0)
+    for x in shots: x["_call_t0"] = _c0
     shots[0]["_t0"] = 0.0; shots[-1]["_t1"] = total
     # ---- captions: 1-3 word chunks ----
     chunks = []; cur = []
