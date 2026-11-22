@@ -96,7 +96,12 @@
    "hook": "SHE PAID $500 TO PROVE A POINT",
    "p_pose": "arms_up",
    "line": 0,
-   "from": 0
+   "from": 0,
+   "cam": {
+    "z": 1.15,
+    "push": 0.08,
+    "fy": 0.42
+   }
   },
   {
    "kind": "slick",
@@ -107,7 +112,8 @@
    "msg_at": 0.0,
    "s_pose": "point",
    "line": 1,
-   "from": 0
+   "from": 0,
+   "amb": "lair"
   },
   {
    "kind": "split",
@@ -126,7 +132,13 @@
    "msg": "\"NOT FOR PIGGY BANKS\"",
    "msg_at": 0.4,
    "line": 2,
-   "from": 0
+   "from": 0,
+   "amb": "lair",
+   "cam": {
+    "z": 1.08,
+    "push": 0.22,
+    "fy": 0.4
+   }
   },
   {
    "kind": "cu_p",
@@ -135,7 +147,12 @@
    "r": "sideeye",
    "p_pose": "arms_up",
    "line": 3,
-   "from": 0
+   "from": 0,
+   "cam": {
+    "z": 1.45,
+    "push": 0.05,
+    "fy": 0.42
+   }
   },
   {
    "kind": "slick",
@@ -143,7 +160,8 @@
    "s": "sly",
    "s_pose": "point",
    "line": 4,
-   "from": 0
+   "from": 0,
+   "amb": "lair"
   },
   {
    "kind": "cu_p",
@@ -161,7 +179,8 @@
    "msg": "$500 IN GIFT CARDS",
    "msg_word": "gift",
    "line": 6,
-   "from": 0
+   "from": 0,
+   "amb": "lair"
   },
   {
    "kind": "cu_p",
@@ -178,7 +197,12 @@
    "r": "sideeye",
    "r_pose": "point",
    "line": 8,
-   "from": 0
+   "from": 0,
+   "cam": {
+    "z": 1.0,
+    "push": 0.14,
+    "fy": 0.4
+   }
   },
   {
    "kind": "two",
@@ -212,7 +236,8 @@
    "msg_at": 0.3,
    "s_pose": "arms_up",
    "line": 11,
-   "from": 0
+   "from": 0,
+   "amb": "lair"
   },
   {
    "kind": "flags",
@@ -233,7 +258,12 @@
    "r": "smug",
    "p_pose": "arms_up",
    "line": 13,
-   "from": 0
+   "from": 0,
+   "cam": {
+    "z": 1.3,
+    "push": 0.06,
+    "fy": 0.42
+   }
   },
   {
    "kind": "store",
@@ -261,7 +291,8 @@
    "msg_word": "four",
    "s_pose": "arms_up",
    "line": 15,
-   "from": 0
+   "from": 0,
+   "amb": "lair"
   },
   {
    "kind": "two",
@@ -269,7 +300,12 @@
    "p": "happy",
    "r": "thumbsup",
    "line": 16,
-   "from": 0
+   "from": 0,
+   "cam": {
+    "z": 1.0,
+    "push": 0.18,
+    "fy": 0.45
+   }
   },
   {
    "kind": "slick",
@@ -279,7 +315,8 @@
    "msg_at": 0.2,
    "s_pose": "shrug",
    "line": 17,
-   "from": 0
+   "from": 0,
+   "amb": "lair"
   },
   {
    "kind": "end",
@@ -364,6 +401,19 @@
    "frac": 0.6,
    "name": "wahwah",
    "gain": 0.35
+  },
+  {
+   "line": 2,
+   "word": "piggy",
+   "name": "subboom",
+   "gain": 0.3
+  },
+  {
+   "line": 16,
+   "frac": 0.0,
+   "dt": -0.45,
+   "name": "riser",
+   "gain": 0.18
   }
  ],
  "sources": "FTC investment-scam guidance: guaranteed returns, pressure to act now, payment by gift card are red flags",
@@ -372,5 +422,12 @@
   "s-nyFs1118A \u2014 YANGI: ego trap \u2014 firibgar kamsitadi, qurbon g'ururi uchun to'laydi (2M, 1509x)",
   "oiMsxtYm5SI \u2014 firibgar skripti to'liq, burilish, absurd chekinish (634K, 543x)",
   "vcPnUMJNdkw \u2014 cold open: eng kuchli lahza 1-soniyada"
- ]
+ ],
+ "pause_before": {
+  "2": 0.35,
+  "8": 0.45,
+  "13": 0.3,
+  "16": 0.55
+ },
+ "amb": "room"
 }

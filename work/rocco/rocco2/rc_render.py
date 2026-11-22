@@ -532,15 +532,28 @@ def main():
     lines = [tuple(x) for x in spec["lines"]]
     LINE_SPK[:] = [a for a, _ in lines]; HOT.update(w.upper() for w in spec.get("hot", []))
     d, mp3 = dialogue(lines, cache)
-    segs = sorted(d["voice_segments"], key=lambda s: s["start_time_seconds"])
-    lt_ = {s["dialogue_input_index"]: (s["start_time_seconds"], s["end_time_seconds"]) for s in segs}
+    segs = sorted([dict(x) for x in d["voice_segments"]], key=lambda s: s["start_time_seconds"])
     words = words_from(d, lines)
-    voice_end = max(e for _, e in lt_.values()); total = voice_end + spec.get("tail", 3.0)
     # ---- audio: dialogue + effects ----
     work = tempfile.mkdtemp(prefix="rc_"); wav = os.path.join(work, "v.wav")
     subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", mp3, "-ar", "48000", "-ac", "1", wav], check=True)
     import soundfile as sf, make_video as mv
-    y, sr = sf.read(wav, dtype="float32"); y = np.concatenate([y, np.zeros(int((total - len(y) / sr) * sr) + sr, np.float32)])
+    y, sr = sf.read(wav, dtype="float32")
+    # dramatic pauses (viral benchmark Pip&Rue: ~0.4 s silence before the shock line, 0.1 s snap after it): {"line": seconds}
+    pb = {int(k): float(v) for k, v in spec.get("pause_before", {}).items()}
+    if pb:
+        st0 = {sg["dialogue_input_index"]: sg["start_time_seconds"] for sg in segs}; pieces = []; prev = 0; shift_at = []
+        for li in sorted(pb):
+            if li not in st0: continue
+            cut = int(st0[li] * sr) - int(0.03 * sr); pieces += [y[prev:cut], np.zeros(int(pb[li] * sr), np.float32)]; prev = cut; shift_at.append((st0[li] - 0.03, pb[li]))
+        y = np.concatenate(pieces + [y[prev:]])
+        def _sh(tt): return tt + sum(dur for at, dur in shift_at if tt >= at)
+        for sg in segs: sg["start_time_seconds"], sg["end_time_seconds"] = _sh(sg["start_time_seconds"]), _sh(sg["end_time_seconds"])
+        words = [(w, _sh(a), _sh(b), i) for w, a, b, i in words]
+        sf.write(wav, y, sr)
+    lt_ = {s["dialogue_input_index"]: (s["start_time_seconds"], s["end_time_seconds"]) for s in segs}
+    voice_end = max(e for _, e in lt_.values()); total = voice_end + spec.get("tail", 3.0)
+    y = np.concatenate([y, np.zeros(int((total - len(y) / sr) * sr) + sr, np.float32)])
     rng = np.random.default_rng(3); fx = np.zeros_like(y)
     def at_line(i, frac): a, b = lt_[i]; return a + (b - a) * frac
 
@@ -553,7 +566,20 @@ def main():
         clip = getattr(mv, "sfx_" + e["name"])(sr, rng); i0 = int(t0 * sr)
         if clip.ndim > 1: clip = clip.mean(axis=1)
         fx[i0:i0 + len(clip)] += clip[:max(0, len(fx) - i0)] * e.get("gain", 0.35)
-    mix = y + fx; mix = mix / max(1.0, np.abs(mix).max() / 0.95)
+    # ambience bed under every shot (viral benchmarks: constant room/street tone, never dead digital silence)
+    amb = np.zeros_like(y)
+    for _sh_ in spec["shots"]:
+        kind_ = _sh_.get("amb", spec.get("amb"))
+        if not kind_ or "line" not in _sh_: continue
+        a_ = int(at_line(_sh_["line"], _sh_.get("from", 0)) * sr); b_ = len(y) if _sh_ is spec["shots"][-1] else int(at_line(_sh_["line"], _sh_.get("to", 1)) * sr) + sr
+        n_ = max(0, min(len(y), b_) - a_)
+        if not n_: continue
+        br = np.cumsum(rng.standard_normal(n_).astype(np.float32)); br -= np.convolve(br, np.ones(4801, np.float32) / 4801, "same")
+        br /= (np.abs(br).max() + 1e-6)
+        if kind_ == "street": br += 0.25 * np.sin(2 * np.pi * 55 * np.arange(n_) / sr).astype(np.float32) * (0.5 + 0.5 * np.sin(np.arange(n_) / sr * 0.7))
+        g_ = {"room": 0.018, "street": 0.03, "lair": 0.025}.get(kind_, 0.02)
+        amb[a_:a_ + n_] = np.maximum(amb[a_:a_ + n_], 0) + br * g_
+    mix = y + fx + amb; mix = mix / max(1.0, np.abs(mix).max() / 0.95)
     sf.write(os.path.join(work, "mix.wav"), mix.astype(np.float32), sr)
     env, who = env_track(wav, segs)
     # ---- shot timeline ----
@@ -605,9 +631,12 @@ def main():
         fimg2 = footage_img(*sh["_bg2"][:2], kk, sh["_bg2"][2], "in", sh.get("bright2", 1.2), 0) if sh.get("_bg2") else None
         POSE_NOW.clear(); POSE_NOW.update({k[0]: sh[k] for k in ("r_pose", "p_pose", "s_pose") if sh.get(k)})
         im = compose(sh, lt, t, e if w_ == "R" else 0.0, e if w_ == "P" else 0.0, None, e if w_ == "S" else 0.0, fimg, fimg2)
-        z = 1.0 + 0.035 * min(1.0, lt / max(0.5, sh["_t1"] - sh["_t0"])) + (0.06 * max(0.0, 1 - lt / 0.12))  # slow push + punch on the cut
+        cam = sh.get("cam", {})  # per-shot framing (benchmarks: wide -> low/OTS -> MCU -> ECU micro-zoom on the shock line)
+        z = cam.get("z", 1.0) + cam.get("push", 0.035) * min(1.0, lt / max(0.5, sh["_t1"] - sh["_t0"])) + (0.06 * max(0.0, 1 - lt / 0.12))  # slow push + punch on the cut
         if z > 1.001:
-            bw, bh = int(W * z), int(H * z); im = im.resize((bw, bh), Image.BILINEAR).crop(((bw - W) // 2, (bh - H) // 2, (bw - W) // 2 + W, (bh - H) // 2 + H))
+            bw, bh = int(W * z), int(H * z); fx_, fy_ = cam.get("fx", 0.5), cam.get("fy", 0.5)
+            x0 = int(min(bw - W, max(0, fx_ * bw - W / 2))); y0 = int(min(bh - H, max(0, fy_ * bh - H / 2)))
+            im = im.resize((bw, bh), Image.LANCZOS if z > 1.2 else Image.BILINEAR).crop((x0, y0, x0 + W, y0 + H))
         ch = next((c for c in chunks if c[0][1] - 0.05 <= t < (c[-1][2] + 0.25)), None)
         if ch and sh["kind"] != "end":
             act = max([j for j, w in enumerate(ch) if w[1] <= t] or [0]); caption(im, ch, act)
