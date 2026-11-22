@@ -27,9 +27,29 @@
  },
  "benchmarks": [
   "vcPnUMJNdkw \u2014 YANGI: absurd kuchayish (please \u2192 50% \u2192 'we kept charging' \u2192 faks), har ~3 s zarba",
-  "N09VNM2BOD8 \u2014 quruq javobchi + ikki zarbali yakun ('The friend is me.')"
+  "N09VNM2BOD8 \u2014 quruq javobchi + ikki zarbali yakun ('The friend is me.')",
+  "vcPnUMJNdkw \u2014 YANGI (YT analitika 2026-11-22: ~70% 1-soniyada surib o'tadi): eng kuchli lahza ochilishda (cold open), 1-kadrda katta yuz"
  ],
  "scenes": [
+  {
+   "text": "I tried to cancel a subscription. It BEGGED.",
+   "say": "[exasperated] I tried to cancel a subscription. It BEGGED.",
+   "head": "I TRIED TO CANCEL. IT BEGGED.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/laptop_phone.mp4",
+     "at": 0,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner"
+   },
+   "sfx": [
+    "impact@0.0"
+   ]
+  },
   {
    "text": "Cancel.",
    "say": "[firm] Cancel.",
@@ -45,7 +65,6 @@
      "start": 0
     }
    ],
-   "head": "I TRIED TO CANCEL A SUBSCRIPTION",
    "mascot": {
     "mood": "point",
     "pos": "corner"

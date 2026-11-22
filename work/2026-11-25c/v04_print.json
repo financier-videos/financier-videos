@@ -17,13 +17,13 @@
  },
  "benchmarks": [
   "ftA18KGBrwM \u2014 YANGI: bitta 'ishonib bo'lmaydigan' raqam, 3\u20136 s, kutilmagan taqqoslash izoh uyg'otadi",
-  "8Sp2jBDdTDM \u2014 paradoks hook ('$100 deyarli tekin chiqadi') va quruq hazil yakuni"
+  "8Sp2jBDdTDM \u2014 paradoks hook ('$100 deyarli tekin chiqadi') va quruq hazil yakuni",
+  "vcPnUMJNdkw \u2014 YANGI (YT analitika 2026-11-22: ~70% 1-soniyada surib o'tadi): eng kuchli lahza ochilishda (cold open), 1-kadrda katta yuz"
  ],
  "scenes": [
   {
-   "text": "It costs 11.3 cents to print a $100 bill.",
-   "say": "[amazed] It costs eleven point three cents... to print a hundred-dollar bill.",
-   "head": "$100 COSTS 11.3\u00a2 TO PRINT",
+   "text": "A $100 bill costs about 11 cents to make.",
+   "say": "[shocked] A hundred-dollar bill costs about eleven cents to make.",
    "stat": "11.3\u00a2/PER $100 BILL",
    "shots": [
     {
@@ -41,9 +41,13 @@
     "mood": "shocked",
     "pos": "corner",
     "act": "jawdrop",
-    "act_at": 0.6
+    "act_at": 0.5
    },
-   "show_source": true
+   "show_source": true,
+   "head": "A $100 BILL COSTS 11\u00a2 TO MAKE",
+   "sfx": [
+    "impact@0.0"
+   ]
   },
   {
    "text": "A $1 bill? 4.1 cents.",

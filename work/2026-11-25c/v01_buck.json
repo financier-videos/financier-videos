@@ -27,9 +27,29 @@
  },
  "benchmarks": [
   "8Sp2jBDdTDM \u2014 YANGI: savol-paradoks hook + hikoya (tarixiy sahna), javob oxirida, quruq hazil yakun",
-  "ftA18KGBrwM \u2014 har 3\u20136 s yangi fakt/kadr, raqam kartochkada"
+  "ftA18KGBrwM \u2014 har 3\u20136 s yangi fakt/kadr, raqam kartochkada",
+  "vcPnUMJNdkw \u2014 YANGI (YT analitika 2026-11-22: ~70% 1-soniyada surib o'tadi): eng kuchli lahza ochilishda (cold open), 1-kadrda katta yuz"
  ],
  "scenes": [
+  {
+   "text": "Your dollar is named after a deer.",
+   "say": "[amused] Your dollar is named after a deer.",
+   "head": "YOUR DOLLAR IS NAMED AFTER A DEER",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/v01/deer.mp4",
+     "at": 0,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "laugh",
+    "pos": "corner"
+   },
+   "sfx": [
+    "impact@0.0"
+   ]
+  },
   {
    "text": "1748. A trader slides a barrel across the counter.",
    "say": "[storytelling] Seventeen forty-eight. A trader slides a barrel across the counter.",
@@ -45,7 +65,6 @@
      "start": 0
     }
    ],
-   "head": "WHY IS A DOLLAR CALLED A \"BUCK\"?",
    "mascot": {
     "mood": "smug",
     "pos": "corner"

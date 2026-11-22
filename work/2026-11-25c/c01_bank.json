@@ -27,9 +27,29 @@
  },
  "benchmarks": [
   "vcPnUMJNdkw \u2014 YANGI: takroriy bir so'zli zarba ('Fee.') kuchayib boradi, har ~3 s kulgi",
-  "N09VNM2BOD8 \u2014 quruq javobchi + oxirgi ikki zarbali yakun ('...There is now.')"
+  "N09VNM2BOD8 \u2014 quruq javobchi + oxirgi ikki zarbali yakun ('...There is now.')",
+  "vcPnUMJNdkw \u2014 YANGI (YT analitika 2026-11-22: ~70% 1-soniyada surib o'tadi): eng kuchli lahza ochilishda (cold open), 1-kadrda katta yuz"
  ],
  "scenes": [
+  {
+   "text": "My bank charged me money... to take out my OWN money!",
+   "say": "[outraged] My bank charged me money... to take out my OWN money!",
+   "head": "MY BANK CHARGED ME TO TAKE MY OWN MONEY",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/atm_use.mp4",
+     "at": 0,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "angry",
+    "pos": "corner"
+   },
+   "sfx": [
+    "impact@0.0"
+   ]
+  },
   {
    "text": "Hi. I'd like twenty dollars. Of MY money.",
    "say": "[cheerful] Hi! I'd like twenty dollars. Of MY money.",
@@ -44,8 +64,7 @@
      "at": 1.4,
      "start": 0
     }
-   ],
-   "head": "BUCK VS. THE BANK"
+   ]
   },
   {
    "text": "That'll be $4.86.",

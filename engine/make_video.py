@@ -961,7 +961,7 @@ def caption_chunks_timed(text, words, maxn=4):
     return out
 
 
-ENGINE_VERSION = "6.16"  # bump on every engine change and add a line to docs/changes.md
+ENGINE_VERSION = "6.17"  # bump on every engine change and add a line to docs/changes.md
 
 THEMES = {  # v6.1: per-video look so videos don't all share one background. Spec "theme": name | "auto" (default: from the first line).
     "vault": ([((9, 14, 28), (19, 30, 54)), ((12, 10, 30), (32, 20, 58)), ((6, 20, 24), (14, 42, 48))], "grid"),
@@ -2075,6 +2075,7 @@ def render(spec, wav, total, out, workdir):
             m_at = float(masc.get("at", 0))
             if FB and not long and mpos != "center":  # v6.14 fullbleed: half-body in the lower-right corner, bigger
                 _pl = [(0.17, 0.27, 0.875), (0.17, 0.73, 0.875), (0.15, 0.27, 0.885)][(si // 2) % 3]  # v6.16 Ko'rik 3 #1: place/size change every 2 scenes
+                if si == 0 and spec.get("hook_face", True): _pl = (0.23, 0.5, 0.86)  # v6.17: frame 1 = a big face in the middle (faces stop the scroll)
                 if masc.get("act"): _pl = (0.205, _pl[1], 0.85)  # reaction = 1/3 of the frame
                 mR = W * _pl[0]; mx, my = W * _pl[1], H * _pl[2]
             elif PAPER and not long:  # v6.14 paper: big, lower right (>= 1/3 of the frame height with the hat)
@@ -2480,7 +2481,8 @@ def render(spec, wav, total, out, workdir):
                 ud.text(((W - tw) / 2, _sy), src_txt, font=fs_, fill=(196, 204, 220, 255),
                         stroke_width=max(1, int(S * 0.002)), stroke_fill=(0, 0, 0, 200))
             ud.rectangle([0, 0, int(W * t / total), int(S * 0.009)], fill=ACC + (255,))
-            ud.text(((W * 0.96 - ud.textlength(spec.get("brand", ""), font=f_brand)) if ROC else W * 0.04, (H - S * 0.07) if long else S * 0.03), spec.get("brand", "FINANCIER"), font=f_brand, fill=(hex2rgb(spec["brand_color"]) if spec.get("brand_color") else GOLD) + (150,))
+            if long or t >= 2.0:  # v6.17 (YT analytics 2026-11-22: ~70% swipe in the first second): no brand tag in the first 2 s - it reads like an ad
+                ud.text(((W * 0.96 - ud.textlength(spec.get("brand", ""), font=f_brand)) if ROC else W * 0.04, (H - S * 0.07) if long else S * 0.03), spec.get("brand", "FINANCIER"), font=f_brand, fill=(hex2rgb(spec["brand_color"]) if spec.get("brand_color") else GOLD) + (150,))
             if cinema:  # v6: parallax — background 0.55x, content 1x, near bokeh 1.6x of the camera move
                 cz, cpx, cpy = cam_at(cam_keys, lt) if cam_keys else (1.0, 0.0, 0.0)
                 im = cam_xform(im, 1 + (cz - 1) * 0.55, cpx * 0.55, cpy * 0.55)

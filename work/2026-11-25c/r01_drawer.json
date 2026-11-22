@@ -17,9 +17,29 @@
  },
  "benchmarks": [
   "8Sp2jBDdTDM \u2014 YANGI: kundalik voqea bilan ochiladi (tortmadan $40), sir \u2192 katta miqyos ($27B) \u2192 kulgili xulosa",
-  "ftA18KGBrwM \u2014 kichikdan kattaga miqyos (1 tortma \u2192 mamlakat), izoh so'rovchi CTA ('tell me what you found')"
+  "ftA18KGBrwM \u2014 kichikdan kattaga miqyos (1 tortma \u2192 mamlakat), izoh so'rovchi CTA ('tell me what you found')",
+  "vcPnUMJNdkw \u2014 YANGI (YT analitika 2026-11-22: ~70% 1-soniyada surib o'tadi): eng kuchli lahza ochilishda (cold open), 1-kadrda katta yuz"
  ],
  "scenes": [
+  {
+   "text": "There's probably money hiding in your kitchen. Right now.",
+   "say": "[whispering] There's probably money hiding in your kitchen. Right now.",
+   "head": "THERE'S MONEY HIDING IN YOUR KITCHEN",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r01/drawer.mp4",
+     "at": 0,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner"
+   },
+   "sfx": [
+    "impact@0.0"
+   ]
+  },
   {
    "text": "She opens the junk drawer looking for tape... and finds $40.",
    "say": "[curious] She opens the junk drawer looking for tape... and finds forty dollars.",
@@ -35,7 +55,6 @@
      "start": 0
     }
    ],
-   "head": "THE DRAWER WORTH $27 BILLION",
    "mascot": {
     "mood": "shocked",
     "pos": "corner",
