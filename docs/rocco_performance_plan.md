@@ -34,3 +34,18 @@ Skriptlar: buck-private/rocco_cast_v1/scripts/skit.py (+ skit_lines.json).
 5. Yakuniy ko'rinish: GPU render, yorug'lik, soya, fon to'plamlari (xona, ko'cha, do'kon).
 6. Birinchi to'liq epizod (RC-04) → etalon kartasi bilan solishtirish → Shohjahon tasdig'i → chiqarish.
 Har bosqich oxirida previz/kadr varag'i ko'rsatiladi; tasdiqlanmagan bosqichdan keyingisiga o'tilmaydi.
+
+## 12. TASHQI KO'RINISH QULFI (Shohjahon, 2026-11-22 16:33) — MAJBURIY
+Tasdiqlangan 3D modellar va ularning ko'rinishi — yagona manba. Vazifa: animatsiya, joziba va xarakterni yaxshilash; ko'rinishni QAYTA CHIZMASLIK.
+1. Tur, yuz tuzilishi, tana nisbati, ranglar, kiyim va belgi-aksessuarlar o'zgartirilmaydi.
+2. Bir personaj boshqasiga o'xshab qolmaydi.
+3. Tasdiqlangan 3D aktivlar ruxsatsiz almashtirilmaydi va qayta talqin qilinmaydi.
+4. Ifodalar faqat rig, shape key va nazoratli deformatsiya orqali — personaj o'zligini o'zgartirmasdan.
+5. Harakat shaklni bo'rttirishi mumkin, lekin asl siluet tanilib turadi.
+6. Har sahna, burchak va animatsiyada uchalasi tasdiqlangan modelga aynan o'xshaydi.
+7. Animatsiya uchun vizual o'zgarish zarur bo'lsa — avval Shohjahondan ruxsat so'raladi.
+Ustuvorlik: o'zlikni saqlash > effektlar va qayta dizayn.
+Tavsif (matn): Rocco — kulrang yenot, qora niqob, krem tumshuq/qorin, jigarrang ko'z yarim yumuq qovoq, qizil lentali jigarrang shlyapa, bej plashch, qizil galstuk, halqali dum.
+Penny — pushti shar kopilka, orqada tanga tirqishi, sariq-tilla bantik, 4 kalta oyoq, burama dum. Slick — ozg'in baland tulki, tor sariq ko'z, qiyshiq iljayish + bitta tish,
+binafsha keng kostyum, oq ko'ylak, qiyshiq qizil galstuk, tilla to'g'nag'ich, peshonada taralgan tutam, to'q jigarrang panjalar.
+OCHIQ SAVOL (chat → Shohjahon): matn tavsifi bilan yuklangan modellar Penny va Slick'da mos emas; chat qilgan o'zgarishlar (Penny qizil→firuza, big_eye, bosh 1.12, qo'l 1.2) ruxsatsiz — qarori kutilmoqda.
