@@ -45,3 +45,14 @@ Sprite feet sit at 91.6 % of the sprite height. rc_render: `FIN_ROCCO3D=/tmp/roc
 - Backgrounds must match the 3D look: soft 3D-render style sets (vidiq_image_generate "3D animated film style", same light direction), never flat 2D cartoons next to 3D characters.
 - Story first (docs/rocco_series_bible.md, cartoon-3d-short beat formula), then storyboard with a pose per line (point on the reveal, arms_up on the shock, shrug on the excuse).
 - Before posting: qc_gate 0–15 + 10-frame sheet in docs/looks_samples/.
+
+## Animated episodes (2026-11-22, replaces static sprites for posting)
+1. Spec + draft with library sprites: `FIN_ROCCO3D=/tmp/rocco3d_lib python3 work/rocco/rocco2/rc_render.py spec.json draft.mp4 > r.json`
+2. Cut-ins: `python3 work/rocco/rocco2/add_reactions.py spec.json r.json [--redo]` (speaker stays on screen; a new picture every <= 2.3 s).
+   Consecutive shots on the same set with similar framing are NOT detected as cuts by qc_gate (scene > 0.22): alternate sets (scammer lair / Rocco office / victim home).
+3. Plan: `FIN_ROCCO3D=/tmp/rocco3d_lib FIN_PERF_PLAN=plan.json python3 work/rocco/rocco2/rc_render.py spec.json /dev/null`
+4. GPU: bundle = perform.py + face_fix.py + plans/ + models/*_rigged.glb + run.sh → `python3 engine/gpu_job.py --bundle job.tar --out dir --expect N`
+   - RTX 4090: 0.6 s/frame per worker; **at most 6 workers** (9 ran out of the 24 GB GPU memory). ~$0.89/h, a 3-episode batch ≈ 25 min.
+   - perform.py must call `refresh_devices()` (Blender 5.x) and keep `use_persistent_data` (else 4K textures re-upload: 15 s/frame).
+   - The client always terminates the pod; check "leftover fin-job pods: 0".
+5. Final: `FIN_ROCCO3D=/tmp/rocco3d_lib FIN_ROCCO3D_ANIM=dir/<ep> python3 work/rocco/rocco2/rc_render.py spec.json out.mp4`, then cartoon_metrics + qc_gate.
