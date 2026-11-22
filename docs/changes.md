@@ -96,3 +96,11 @@ Ishlab chiqaruvchi (vazifa/chat): HAR render va HAR post oldidan `git pull --reb
 - engine/gpu_job.py + gpu_job_server.py: generic Runpod job. Lessons: Blender 5.x needs refresh_devices() for the GPU; use_persistent_data + OptiX denoiser took 15 s → 0.6 s/frame; 6 workers on one 4090: 3,777 frames in 11 min, total 21 min ≈ $0.35. Pods terminated, 0 left.
 - RC-12 "He Tried to Scam the Wrong Piggy Bank" (25.1 s, 14 shots, street set street_door3d.jpg): Pip&Rue 6.7M beat structure 1:1 (own characters/jokes). qc_gate PASS, metrics PASS (ASL 1.8 s). Instagram https://www.instagram.com/reel/DgDAs8SnEQm/ ; YouTube Buffer 6b02f969d5eabfb8ccb3b64d (23-noy 14:30Z; today's YouTube limit of 2 was used).
 - RC-08 v2 (animated) replaced the static post: Buffer 6b02f93acc364169c15ce11f (25-noy 14:30Z). Moved: RC-02 → 25-noy 22:30Z (6b02f968024796909256a211), RC-03 → 26-noy 14:30Z (6b02f958c72676f5e934c6e9); backups in work/rocco/deleted_posts/.
+
+## 2026-11-22 (tun, 2) — "qolganlariga ham animatsiya": RC-09, RC-10, RC-11 + RC-08 v2 Instagram
+- 4 new 3D-film sets (vidIQ, 88 credits): slick_callcenter3d, penny_night3d, slick_yacht3d, porch3d.
+- work/rocco/rocco2/add_reactions.py: reaction cut-ins (speaker stays on screen). Lesson: same set + similar framing back-to-back is not a detected cut → alternate sets.
+- GPU: 9 workers ran out of 4090 memory (5 crashed) → re-run with 5; rule: at most 6 workers. RC-11 line "Only up?" FLAT_Q → "It only goes UP!" (re-voiced, re-rendered), title 76 → "Her Crypto Boyfriend Has a Broken Camera" (90).
+- QC PASS + metrics PASS: RC-09 rocco_rc09_fraud_unit_3d.mp4 (42.7 s), RC-10 rocco_rc10_free_tv_3d.mp4 (39.6 s), RC-11 rocco_rc11_romance_coin_3d.mp4 (38.0 s).
+- Instagram: RC-08 v2 https://www.instagram.com/reel/DgDHo3eiKfq/ , RC-09 https://www.instagram.com/reel/DgDOS3SDXeP/ , RC-10 https://www.instagram.com/reel/DgDObRCnA6f/ , RC-11 (publishing).
+- YouTube (Buffer, UTC): 23 14:30 RC-12 · 23 22:30 RC-10 · 24 14:30 RC-07 · 24 22:30 RC-06 (Black Friday, kept before 27-noy) · 25 14:30 RC-08 v2 · 25 22:30 RC-11 · 26 14:30 RC-09 (spaced from RC-05, same OTP topic) · 27 14:30 RC-02 · 27 22:30 RC-03 · 28 14:30 RC-01 (spaced from RC-09, same premise).
