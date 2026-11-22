@@ -1014,7 +1014,7 @@ def make_bg(W, H, seed, theme="vault"):
 
 GRADES = {  # v6.16: per-video colour grade of the footage (spec "grade") so full-screen videos in a row don't look alike
     "": "", "warm": "colorbalance=rs=0.08:gs=0.02:bs=-0.08:rm=0.05:bm=-0.05,",
-    "cool": "colorbalance=rs=-0.08:bs=0.10:rm=-0.06:bm=0.08,eq=saturation=1.1,",
+    "cool": "colorbalance=rs=-0.16:bs=0.18:rm=-0.12:bm=0.14:rh=-0.06:bh=0.08,eq=saturation=1.1,",
     "teal": "colorbalance=rs=-0.10:gs=0.04:bs=0.08:rh=0.08:bh=-0.06,eq=saturation=1.2,",
     "vivid": "eq=saturation=1.45:contrast=1.06,",
     "rose": "colorbalance=rs=0.10:bs=0.06:gm=-0.05,eq=saturation=1.15,",
