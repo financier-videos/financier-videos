@@ -59,7 +59,7 @@ def largest_flat(path):
 
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument("video"); ap.add_argument("--limit", type=float, default=0.15)
+    ap = argparse.ArgumentParser(); ap.add_argument("video"); ap.add_argument("--limit", type=float, default=0.20)  # 2026-11-22: 0.15 flagged bright real surfaces (white desk 19%); drawn panels were 25-45%
     ap.add_argument("--n", type=int, default=12); a = ap.parse_args()
     rows = []; worst = 0.0
     fr = frames(a.video, a.n)

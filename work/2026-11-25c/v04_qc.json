@@ -1,0 +1,67 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    24.9 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -13.8 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -2.2 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -13.8 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 12.7 Mbit/s, 16.5s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 0.971,\n \"missing\": [],\n \"extra\": [\n  \"buzzer\"\n ],\n \"heard\": \"It costs 11.3 cents to print a hundred dollar bill. A $1 bill? 4.1. So the hundred is the better deal. I'll take a thousand of the hundreds. (buzzer)\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "1   0.00s range=13.7 st  gap=1.08  ok  | [amazed] It costs eleven point three cents... to print a hun\n 2   6.72s range=23.6 st  gap=0.35  ok  | [curious] A one-dollar bill? Four point one.\n 3   9.54s range=11.7 st  gap=1.07  ok  | [thinking] So the hundred is... the better deal.\n 4  13.84s range= 6.8 st  gap=0.19  ok  | [deadpan] I'll take a thousand. Of the hundreds.\n{\"median_f0\": 163.1, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 100"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/2026-11-25c/v04_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "WARN",
+  "note": "FAIL  0.87  (layout 0.94, palette 0.81, tone 0.82)  vs 2026-11-25_cancel_c02.mp4\nFAIL  0.85  (layout 0.93, palette 0.75, tone 0.87)  vs 2026-11-24_subs_r03_b8.mp4\nFAIL  0.74  (layout 0.91, palette 0.44, tone 0.85)  vs 2026-11-24_noseat_r02_b8.mp4\nFAIL  0.85  (layout 0.89, palette 0.76, tone 0.91)  vs 2026-11-23_fees_r08_b8.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "8 hard cuts (ffmpeg scene>0.22) in 16.5 s = 2.1 s/cut (need >= 8); engine planned 12"
+ },
+ "12_script": {
+  "status": "SKIP",
+  "note": "no --prev-specs (pass the last 4 specs of this channel)"
+ },
+ "14_empty_panel": {
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 11% of the frame (limit 20%)"
+ },
+ "15_competitors": {
+  "status": "PASS",
+  "note": "2 fresh benchmark(s) ['8Sp2jBDdTDM', 'ftA18KGBrwM'] (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: competitor_watch, eleven_v3 his teglari, footage_bank, WebSearch (Fed FAQ tekshiruvi), empty_check, qc_gate; ishlatilmadi: vidiq_find_broll (bank yetarli)"
+ },
+ "verdict": "PASS"
+}

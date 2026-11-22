@@ -1,0 +1,67 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    67.4 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.0 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -13.9 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 12.4 Mbit/s, 45.6s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": " it\"\n ],\n \"missing\": [\n  \"trader\"\n ],\n \"extra\": [\n  \"traitor\"\n ],\n \"heard\": \"1748. A traitor slides a barrel across the counter. Not coins, not paper, deer skins. Out here, nobody had money. But everybody had deer. One good skin bought you a knife, five bought you a barrel. Then a man writes in his journal that he was robbed. of 300 bucks. Not dollars. The US dollar didn't exist yet. It showed up 44 years later, in 1792. By then, people already had a word for one unit of stuff you trade. So that's probably why your dollar is a buck. Historians still argue about it. Me? I just like the name.\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "ap=0.5  ok  | [dramatic] Then a man writes in his journal that he was robb\n 7  25.31s range=12.8 st  gap=0.49  ok  | [whispers] Not dollars. The U.S. dollar didn't exist yet.\n 8  28.81s range=10.8 st  gap=0.33  ok  | It showed up forty-four years later. In seventeen ninety-two\n 9  33.78s range=17.4 st  gap=0.19  ok  | By then, people already had a word for 'one unit of stuff yo\n10  38.48s range=20.2 st  gap=0.31  ok  | [thoughtful] So that's probably why your dollar is a buck. H\n11  43.50s range=25.4 st  gap=0.16  ok  | [smug] Me? I just like the name.\n{\"median_f0\": 169.8, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 100"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/2026-11-25c/v01_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "WARN",
+  "note": "FAIL  0.87  (layout 0.94, palette 0.76, tone 0.91)  vs 2026-11-25_print_v04.mp4\nFAIL  0.85  (layout 0.94, palette 0.78, tone 0.77)  vs 2026-11-25_cancel_c02.mp4\nFAIL  0.84  (layout 0.94, palette 0.73, tone 0.81)  vs 2026-11-25_bank_c01.mp4\nFAIL  0.84  (layout 0.93, palette 0.73, tone 0.81)  vs 2026-11-24_subs_r03_b8.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "29 hard cuts (ffmpeg scene>0.22) in 45.6 s = 1.6 s/cut (need >= 22); engine planned 31"
+ },
+ "12_script": {
+  "status": "SKIP",
+  "note": "no --prev-specs (pass the last 4 specs of this channel)"
+ },
+ "14_empty_panel": {
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 15% of the frame (limit 20%)"
+ },
+ "15_competitors": {
+  "status": "PASS",
+  "note": "2 fresh benchmark(s) ['8Sp2jBDdTDM', 'ftA18KGBrwM'] (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: competitor_watch, eleven_v3 his teglari (Buck + savdogar), Pixabay lavha, empty_check, qc_gate; ishlatilmadi: vidiq_find_broll (Pixabay yetarli)"
+ },
+ "verdict": "PASS"
+}

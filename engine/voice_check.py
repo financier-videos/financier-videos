@@ -37,7 +37,7 @@ def norm(t):
 def spoken(spec):
     out = []
     for s in spec["scenes"]:
-        b = s.get("buck"); line = s.get("say", s.get("text", ""))
+        b = s.get("buck"); line = re.sub(r"\[[^\]]*\]", " ", s.get("say", s.get("text", "")))  # eleven_v3 emotion tags are not spoken
         m = (s.get("mascot") or {}).get("say")
         parts = ([line, b] if s.get("buck_after") else [b, line])
         out += [p for p in parts if p]
@@ -67,6 +67,7 @@ def transcribe(video, model):
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("video"); ap.add_argument("spec")
     ap.add_argument("--model", default="/tmp/asr/sherpa-onnx-whisper-base.en"); ap.add_argument("--min", type=float, default=0.86)
+    ap.add_argument("--rendered", default=None)  # 2026-11-22: with scene timings, a phrase missing from the long transcript is re-checked on its own scene
     a = ap.parse_args()
     try:
         heard = transcribe(a.video, a.model)
@@ -78,8 +79,24 @@ def main():
     for tag, i1, i2, j1, j2 in sm.get_opcodes():
         if tag in ("delete", "replace"): missing.append(" ".join(exp[i1:i2]))
         if tag in ("insert", "replace"): extra.append(" ".join(got[j1:j2]))
-    ratio = round(sm.ratio(), 3); bad = ratio < a.min or any(len(m.split()) >= 3 for m in missing)
-    print(json.dumps({"rc": int(bad), "match": ratio, "missing": missing, "extra": extra, "heard": heard}, ensure_ascii=False, indent=1))
+    rechecked = []
+    if a.rendered and os.path.exists(a.rendered) and any(len(m.split()) >= 3 for m in missing):
+        # Whisper drops short lines inside long audio (a gruff 2-s line between two narrators); listen to that scene alone
+        tim = json.load(open(a.rendered)).get("timings") or []; scs = json.load(open(a.spec))["scenes"]
+        for m in [m for m in missing if len(m.split()) >= 3]:
+            mw = m.split()
+            for i, sc in enumerate(scs[:len(tim)]):
+                sw = norm(spoken({"scenes": [sc]}))
+                if sw and all(w in sw for w in mw):
+                    seg = tempfile.mktemp(suffix=".mp4"); t0, d = tim[i]
+                    subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{max(0, t0 - 0.15):.2f}", "-t", f"{d + 0.4:.2f}", "-i", a.video, "-vn", "-c:a", "aac", seg])
+                    try: h = norm(transcribe(seg, a.model))
+                    finally: os.path.exists(seg) and os.remove(seg)
+                    if difflib.SequenceMatcher(None, sw, h, autojunk=False).ratio() >= 0.8:
+                        rechecked.append(m); missing.remove(m)
+                    break
+    ratio = round(sm.ratio(), 3); bad = (ratio < a.min and not rechecked) or any(len(m.split()) >= 3 for m in missing)
+    print(json.dumps({"rc": int(bad), "match": ratio, "rechecked_ok": rechecked, "missing": missing, "extra": extra, "heard": heard}, ensure_ascii=False, indent=1))
     sys.exit(int(bad))
 
 

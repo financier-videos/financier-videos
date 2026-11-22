@@ -1,0 +1,110 @@
+{
+ "format": "short",
+ "sfx": true,
+ "look": "fullbleed",
+ "grade": "warm",
+ "captions": "words",
+ "headline": "hook",
+ "auto_shots": 1.6,
+ "structure": "one_number",
+ "source": "Source: Federal Reserve, 2025 currency budget (variable printing cost per note)",
+ "buck_voice": {
+  "variant": "D",
+  "model": "eleven_v3",
+  "settings": {
+   "speed": 1.08
+  }
+ },
+ "benchmarks": [
+  "ftA18KGBrwM \u2014 YANGI: bitta 'ishonib bo'lmaydigan' raqam, 3\u20136 s, kutilmagan taqqoslash izoh uyg'otadi",
+  "8Sp2jBDdTDM \u2014 paradoks hook ('$100 deyarli tekin chiqadi') va quruq hazil yakuni"
+ ],
+ "scenes": [
+  {
+   "text": "It costs 11.3 cents to print a $100 bill.",
+   "say": "[amazed] It costs eleven point three cents... to print a hundred-dollar bill.",
+   "head": "$100 COSTS 11.3\u00a2 TO PRINT",
+   "stat": "11.3\u00a2/PER $100 BILL",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_stacks.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 1.3,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "jawdrop",
+    "act_at": 0.6
+   },
+   "show_source": true
+  },
+  {
+   "text": "A $1 bill? 4.1 cents.",
+   "say": "[curious] A one-dollar bill? Four point one.",
+   "stat": "4.1\u00a2/PER $1 BILL",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/coins_hand.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 1.3,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "So the hundred is the better deal.",
+   "say": "[thinking] So the hundred is... the better deal.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "smug",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "I'll take a thousand. Of the hundreds.",
+   "say": "[deadpan] I'll take a thousand. Of the hundreds.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_stacks.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_desk.mp4",
+     "at": 1.3,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner",
+    "act": "deadpan",
+    "act_at": 0.3
+   },
+   "sfx": [
+    "cash@0.4"
+   ]
+  }
+ ]
+}

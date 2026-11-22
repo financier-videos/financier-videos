@@ -128,7 +128,7 @@ def main():
 
     # 5 voice check
     if a.spec:
-        rc, o = run([sys.executable, "-I", os.path.join(ROOT, "engine", "voice_check.py"), a.video, a.spec])
+        rc, o = run([sys.executable, "-I", os.path.join(ROOT, "engine", "voice_check.py"), a.video, a.spec] + (["--rendered", a.rendered] if a.rendered else []))
         put("5_voice_check", "SKIP" if "Traceback" in o else {0: "PASS", 1: "FAIL"}.get(rc, "SKIP"), o)
     else:
         put("5_voice_check", "SKIP", "no --spec")
@@ -227,7 +227,7 @@ def main():
         put("12_script", "SKIP" if "Traceback" in o else ("PASS" if rc == 0 else "FAIL"), o)
     else:
         put("12_script", "SKIP", "no --prev-specs (pass the last 4 specs of this channel)")
-    # 14 empty panel (night_order BUYURTMA 8 #2): one flat colour/stripe area > 15 % of any of 12 frames = FAIL
+    # 14 empty panel (night_order BUYURTMA 8 #2): one flat colour/stripe area > 20 % of any of 12 frames = FAIL (calibrated 2026-11-22)
     if dur > 0:
         rc, o = run([sys.executable, "-I", os.path.join(ROOT, "engine", "empty_check.py"), a.video])
         put("14_empty_panel", "SKIP" if (rc == 2 or "Traceback" in o) else ("PASS" if rc == 0 else "FAIL"), o.strip().splitlines()[-1] if o.strip() else o)

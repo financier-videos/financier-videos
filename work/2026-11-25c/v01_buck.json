@@ -1,0 +1,247 @@
+{
+ "format": "short",
+ "sfx": true,
+ "look": "fullbleed",
+ "grade": "warm",
+ "captions": "words",
+ "headline": "hook",
+ "auto_shots": 1.8,
+ "structure": "why_story",
+ "source": "Most likely origin: Conrad Weiser's journal (1748) via Merriam-Webster / Britannica; Coinage Act (1792)",
+ "buck_voice": {
+  "variant": "D",
+  "model": "eleven_v3",
+  "settings": {
+   "speed": 1.05
+  }
+ },
+ "voices": {
+  "guest": {
+   "voice_id": "N2lVS1w4EtoT3dr4eOWO",
+   "label": "Trader (Callum, ElevenLabs premade)",
+   "model": "eleven_v3",
+   "settings": {
+    "speed": 1.0
+   }
+  }
+ },
+ "benchmarks": [
+  "8Sp2jBDdTDM \u2014 YANGI: savol-paradoks hook + hikoya (tarixiy sahna), javob oxirida, quruq hazil yakun",
+  "ftA18KGBrwM \u2014 har 3\u20136 s yangi fakt/kadr, raqam kartochkada"
+ ],
+ "scenes": [
+  {
+   "text": "1748. A trader slides a barrel across the counter.",
+   "say": "[storytelling] Seventeen forty-eight. A trader slides a barrel across the counter.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/v01/barrel.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/v01/lamp.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "head": "WHY IS A DOLLAR CALLED A \"BUCK\"?",
+   "mascot": {
+    "mood": "smug",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Five skins. Take it or leave it.",
+   "say": "[gruff] Five skins. Take it or leave it.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/v01/lamp.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/v01/barrel.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "stat": "5 SKINS",
+   "voice": "guest"
+  },
+  {
+   "text": "Not coins. Not paper. Deer skins.",
+   "say": "[amused] Not coins. Not paper. Deer skins.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/v01/deer.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/v01/oldbook.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "doubletake",
+    "act_at": 0.4
+   }
+  },
+  {
+   "text": "Out here, nobody had money. But everybody had deer.",
+   "say": "Out here, nobody had money. But everybody had deer.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/v01/deer2.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/v01/deer.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ]
+  },
+  {
+   "text": "One good skin bought you a knife. Five bought you a barrel.",
+   "say": "[matter-of-fact] One good skin bought you a knife. Five bought you a barrel.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/v01/barrel.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/coins_hand.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ]
+  },
+  {
+   "text": "Then a man writes in his journal that he was robbed... of 300 bucks.",
+   "say": "[dramatic] Then a man writes in his journal that he was robbed... of three hundred bucks.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/v01/notepad.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/v01/oldbook.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "stat": "300 BUCKS",
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "jawdrop",
+    "act_at": 1.6
+   }
+  },
+  {
+   "text": "Not dollars. The U.S. dollar didn't exist yet.",
+   "say": "[whispers] Not dollars. The U.S. dollar didn't exist yet.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/v01/oldbook.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "It showed up 44 years later. In 1792.",
+   "say": "It showed up forty-four years later. In seventeen ninety-two.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/coins_hand.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "stat": "1792",
+   "show_source": "Coinage Act of 1792 created the U.S. dollar"
+  },
+  {
+   "text": "By then, people already had a word for 'one unit of stuff you trade.'",
+   "say": "By then, people already had a word for 'one unit of stuff you trade.'",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/v01/deer.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ]
+  },
+  {
+   "text": "So that's probably why your dollar is a buck. Historians still argue about it.",
+   "say": "[thoughtful] So that's probably why your dollar is a buck. Historians still argue about it.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/v01/oldbook.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_stacks.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "show_source": true,
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Me? I just like the name.",
+   "say": "[smug] Me? I just like the name.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_stacks.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/v01/deer.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "proud",
+    "pos": "corner",
+    "act": "deadpan",
+    "act_at": 0.3
+   }
+  }
+ ]
+}

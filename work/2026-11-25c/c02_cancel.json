@@ -1,0 +1,269 @@
+{
+ "format": "short",
+ "sfx": true,
+ "look": "fullbleed",
+ "grade": "rose",
+ "captions": "words",
+ "headline": "hook",
+ "auto_shots": 1.8,
+ "structure": "comedy_skit",
+ "source": "Source: CNET subscription survey (July 2026): $21/month on unused subscriptions",
+ "buck_voice": {
+  "variant": "D",
+  "model": "eleven_v3",
+  "settings": {
+   "speed": 1.1
+  }
+ },
+ "voices": {
+  "guest": {
+   "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+   "label": "Subscription app (Laura, ElevenLabs premade)",
+   "model": "eleven_v3",
+   "settings": {
+    "speed": 1.05
+   }
+  }
+ },
+ "benchmarks": [
+  "vcPnUMJNdkw \u2014 YANGI: absurd kuchayish (please \u2192 50% \u2192 'we kept charging' \u2192 faks), har ~3 s zarba",
+  "N09VNM2BOD8 \u2014 quruq javobchi + ikki zarbali yakun ('The friend is me.')"
+ ],
+ "scenes": [
+  {
+   "text": "Cancel.",
+   "say": "[firm] Cancel.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/laptop_phone.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/phone_scroll.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "head": "I TRIED TO CANCEL A SUBSCRIPTION",
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Are you sure?",
+   "say": "[sweet, clingy] Are you sure?",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/phone_scroll.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ],
+   "voice": "guest"
+  },
+  {
+   "text": "Yes.",
+   "say": "[flat] Yes.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/laptop_phone.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ]
+  },
+  {
+   "text": "Are you REALLY sure?",
+   "say": "[desperate] Are you REALLY sure?",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/phone_scroll.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ],
+   "sfx": [
+    "boing@0.2"
+   ],
+   "voice": "guest"
+  },
+  {
+   "text": "YES!",
+   "say": "[annoyed] YES!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/tv_remote.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "angry",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "What if we said... please?",
+   "say": "[pleading] What if we said... please?",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/laptop_phone.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ],
+   "voice": "guest"
+  },
+  {
+   "text": "No.",
+   "say": "[deadpan] No.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/phone_scroll.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner",
+    "act": "deadpan",
+    "act_at": 0.0
+   }
+  },
+  {
+   "text": "Here's 50% off!",
+   "say": "[excited] Here's fifty percent off!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/online_card.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ],
+   "stat": "-50%",
+   "voice": "guest"
+  },
+  {
+   "text": "I haven't opened you since March.",
+   "say": "[dryly] I haven't opened you since March.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/tv_remote.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ]
+  },
+  {
+   "text": "We noticed! We kept charging.",
+   "say": "[cheerful] We noticed! We kept charging.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/coins_hand.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "sfx": [
+    "cash@0.6"
+   ],
+   "voice": "guest"
+  },
+  {
+   "text": "CANCEL!",
+   "say": "[shouting] CANCEL!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/laptop_phone.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "jawdrop",
+    "act_at": 0.0
+   }
+  },
+  {
+   "text": "Okay! To cancel, call us. Between 2:00 and 2:05. By fax.",
+   "say": "[sweetly] Okay! To cancel, call us. Between two and two-oh-five. By fax.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/online_card.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "sfx": [
+    "wahwah@1.4"
+   ],
+   "voice": "guest"
+  },
+  {
+   "text": "Americans pay about $21 a month for subscriptions they never use.",
+   "say": "[sighs] Americans pay about twenty-one dollars a month for subscriptions they never use.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "stat": "$21/MO",
+   "show_source": true,
+   "mascot": {
+    "mood": "sad",
+    "pos": "corner",
+    "act": "sigh",
+    "act_at": 0.0
+   }
+  },
+  {
+   "text": "Asking for a friend. The friend is me.",
+   "say": "[pause] [deadpan] Asking for a friend. The friend is me.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/tv_remote.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/laptop_phone.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner",
+    "act": "deadpan",
+    "act_at": 0.4
+   }
+  }
+ ]
+}

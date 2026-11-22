@@ -1,0 +1,339 @@
+{
+ "format": "short",
+ "sfx": true,
+ "look": "fullbleed",
+ "grade": "vivid",
+ "captions": "words",
+ "headline": "hook",
+ "auto_shots": 1.8,
+ "structure": "comedy_skit",
+ "source": "Source: Bankrate Checking Account and ATM Fee Study (Sep 2025)",
+ "buck_voice": {
+  "variant": "D",
+  "model": "eleven_v3",
+  "settings": {
+   "speed": 1.1
+  }
+ },
+ "voices": {
+  "guest": {
+   "voice_id": "XrExE9yKIg1WjnnlVkGX",
+   "label": "Bank teller (Matilda, ElevenLabs premade)",
+   "model": "eleven_v3",
+   "settings": {
+    "speed": 1.0
+   }
+  }
+ },
+ "benchmarks": [
+  "vcPnUMJNdkw \u2014 YANGI: takroriy bir so'zli zarba ('Fee.') kuchayib boradi, har ~3 s kulgi",
+  "N09VNM2BOD8 \u2014 quruq javobchi + oxirgi ikki zarbali yakun ('...There is now.')"
+ ],
+ "scenes": [
+  {
+   "text": "Hi. I'd like twenty dollars. Of MY money.",
+   "say": "[cheerful] Hi! I'd like twenty dollars. Of MY money.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/atm_use.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "head": "BUCK VS. THE BANK"
+  },
+  {
+   "text": "That'll be $4.86.",
+   "say": "[bored, flat] That'll be four eighty-six.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/atm_use.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ],
+   "stat": "$4.86",
+   "voice": "guest"
+  },
+  {
+   "text": "For what?",
+   "say": "[confused] For what?",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "doubletake",
+    "act_at": 0.1
+   }
+  },
+  {
+   "text": "Fee.",
+   "say": "[deadpan] Fee.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ],
+   "sfx": [
+    "bonk@0.1"
+   ],
+   "voice": "guest"
+  },
+  {
+   "text": "It's MY money!",
+   "say": "[annoyed] It's MY money!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ]
+  },
+  {
+   "text": "Not our ATM.",
+   "say": "[flat] Not our ATM.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/atm_use.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ],
+   "voice": "guest"
+  },
+  {
+   "text": "It's in YOUR lobby!",
+   "say": "[outraged] It's in YOUR lobby!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/airport_hall.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ]
+  },
+  {
+   "text": "...Fee.",
+   "say": "[pause] [deadpan] ...Fee.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ],
+   "sfx": [
+    "bonk@0.3"
+   ],
+   "voice": "guest"
+  },
+  {
+   "text": "Fine. What's my balance?",
+   "say": "[sighs] Fine. What's my balance?",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/phone_scroll.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "sad",
+    "pos": "corner",
+    "act": "sigh",
+    "act_at": 0.0
+   }
+  },
+  {
+   "text": "Minus seven.",
+   "say": "[flat] Minus seven.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/phone_scroll.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ],
+   "stat": "-$7",
+   "voice": "guest"
+  },
+  {
+   "text": "MINUS?!",
+   "say": "[shocked] MINUS?!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "jawdrop",
+    "act_at": 0.0
+   },
+   "sfx": [
+    "boing@0.0"
+   ]
+  },
+  {
+   "text": "Overdraft. $27.",
+   "say": "[bored] Overdraft. Twenty-seven dollars.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/atm_use.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "stat": "$27",
+   "voice": "guest"
+  },
+  {
+   "text": "For being BROKE?!",
+   "say": "[outraged] For being BROKE?!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/coins_hand.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ]
+  },
+  {
+   "text": "Fee.",
+   "say": "[deadpan] Fee.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ],
+   "sfx": [
+    "bonk@0.1"
+   ],
+   "voice": "guest"
+  },
+  {
+   "text": "I'm closing my account.",
+   "say": "[determined] I'm closing my account.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/airport_walk.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "$15.65.",
+   "say": "[flat] Fifteen sixty-five.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/online_card.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ],
+   "stat": "$15.65/MO",
+   "voice": "guest"
+  },
+  {
+   "text": "To LEAVE?!",
+   "say": "[shocked] To LEAVE?!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "jawdrop",
+    "act_at": 0.0
+   }
+  },
+  {
+   "text": "No. That's just for having it. Monthly.",
+   "say": "[bored] No. That's just for having it. Monthly.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/online_card.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "voice": "guest"
+  },
+  {
+   "text": "Is there a fee for asking questions?",
+   "say": "[deadpan] Is there a fee for asking questions?",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner",
+    "act": "deadpan",
+    "act_at": 0.3
+   }
+  },
+  {
+   "text": "...There is now.",
+   "say": "[pause] [smug] ...There is now.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/atm_use.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "show_source": "Real averages: ATM $4.86 \u00b7 overdraft ~$27 \u00b7 monthly fee $15.65 (Bankrate, Sep 2025)",
+   "sfx": [
+    "wahwah@0.6"
+   ],
+   "voice": "guest"
+  }
+ ]
+}

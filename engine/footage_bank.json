@@ -19,7 +19,8 @@
   "shows": "Oq fonda qo'lda telefon",
   "use_for": "obuna, bildirishnoma, 'sezmay to'laysan'",
   "route": 1,
-  "ok": true
+  "ok": true,
+  "note": "2026-11-22: white wall fills ~25-30% of the frame (empty_check fail) - avoid full-screen"
  },
  {
   "key": "tv_remote",
