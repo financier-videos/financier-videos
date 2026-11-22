@@ -5,11 +5,11 @@
  },
  "1_platform_check": {
   "status": "PASS",
-  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    24.2 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -15.1 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.4 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    26.5 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -15.5 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.4 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
  },
  "2_loudness": {
   "status": "PASS",
-  "note": "I = -15.1 LUFS (target -14)"
+  "note": "I = -15.5 LUFS (target -14)"
  },
  "3_blackdetect": {
   "status": "PASS",
@@ -17,15 +17,15 @@
  },
  "4_export": {
   "status": "PASS",
-  "note": "h264 High, 8.6 Mbit/s, 23.6s, stereo"
+  "note": "h264 High, 8.7 Mbit/s, 25.6s, stereo"
  },
  "5_voice_check": {
   "status": "PASS",
-  "note": "{\n \"rc\": 0,\n \"match\": 0.976,\n \"rechecked_ok\": [],\n \"missing\": [\n  \"for\"\n ],\n \"extra\": [\n  \"from\",\n  \"the\"\n ],\n \"heard\": \"Rocco, did you order socks? No, why? A package came from me! Socks! And the card with a QR code! That's a brushing scam! Sellers mail stuff to real addresses so they can post fake reviews in your name! And that QR code can send you to a site that steals your info. Don't scan it! So I keep the socks? Keep the socks! Toss the QR code!\"\n}"
+  "note": "{\n \"rc\": 0,\n \"match\": 0.977,\n \"rechecked_ok\": [],\n \"missing\": [\n  \"socks\"\n ],\n \"extra\": [\n  \"sucks the\"\n ],\n \"heard\": \"Rocco! I got a mystery package! I didn't order anything for you. Me neither. Just sucks. And the card with a QR code. That's a brushing scam. Sellers mail stuff to real addresses so they can post fake reviews in your name. And that QR code can send you to a site that steals your info. Don't scan it. So... I'm keeping the socks. Keep the socks. Toss the QR code.\"\n}"
  },
  "6_prosody": {
-  "status": "FAIL",
-  "note": "?\n 3   2.77s range= 9.6 st  gap=0.52  ok  | A package came for me. Socks. And a card with a QR code.\n 4   7.77s range=20.2 st  gap=0.14  ok  | That's a brushing scam.\n 5   9.51s range=14.8 st  gap=0.19  ok  | Sellers mail stuff to real addresses so they can post fake r\n 6  13.21s range=15.9 st  gap=0.48  ok  | And that QR code can send you to a site that steals your inf\n 7  17.73s range= 5.4 st  gap=0.09  FLAT_Q  | ...So I keep the socks?\n 8  19.54s range=17.5 st  gap=0.11  ok  | Keep the socks. Toss the QR code.\n 9  22.03s range=   - st  gap=-  ok  | \n{\"median_f0\": 298.0, \"flagged_scenes\": 1}"
+  "status": "PASS",
+  "note": " you.\n 3   4.38s range=11.5 st  gap=0.71  ok  | Me neither. Just socks. And a card with a QR code.\n 4   9.36s range=14.1 st  gap=0.16  ok  | That's a brushing scam.\n 5  10.87s range=11.6 st  gap=0.18  ok  | Sellers mail stuff to real addresses so they can post fake r\n 6  14.57s range=13.2 st  gap=0.44  ok  | And that QR code can send you to a site that steals your inf\n 7  19.02s range= 8.8 st  gap=0.34  ok  | ...So. I'm keeping the socks.\n 8  21.66s range=15.4 st  gap=0.11  ok  | Keep the socks. Toss the QR code.\n 9  24.00s range=   - st  gap=-  ok  | \n{\"median_f0\": 268.8, \"flagged_scenes\": 0}"
  },
  "7_title": {
   "status": "PASS",
@@ -41,19 +41,19 @@
  },
  "10_look": {
   "status": "WARN",
-  "note": "FAIL  0.81  (layout 0.91, palette 0.64, tone 0.89)  vs rocco_rc12_wrong_piggy_3d.mp4\nFAIL  0.72  (layout 0.90, palette 0.42, tone 0.83)  vs rocco_rc11_romance_coin_3d.mp4\nFAIL  0.82  (layout 0.97, palette 0.62, tone 0.82)  vs rocco_rc10_free_tv_3d.mp4\nFAIL  0.73  (layout 0.89, palette 0.56, tone 0.65)  vs rocco_rc09_fraud_unit_3d.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+  "note": "FAIL  0.83  (layout 0.91, palette 0.68, tone 0.92)  vs rocco_rc12_wrong_piggy_3d.mp4\nFAIL  0.72  (layout 0.91, palette 0.42, tone 0.81)  vs rocco_rc11_romance_coin_3d.mp4\nFAIL  0.82  (layout 0.96, palette 0.62, tone 0.84)  vs rocco_rc10_free_tv_3d.mp4\nFAIL  0.74  (layout 0.90, palette 0.56, tone 0.67)  vs rocco_rc09_fraud_unit_3d.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
  },
  "11_pacing": {
   "status": "PASS",
-  "note": "19 hard cuts (ffmpeg scene>0.22) in 23.6 s = 1.2 s/cut (need >= 11); engine planned 20"
+  "note": "17 hard cuts (ffmpeg scene>0.22) in 25.6 s = 1.5 s/cut (need >= 12); engine planned 21"
  },
  "12_script": {
   "status": "PASS",
-  "note": "rc20_qcspec.json                   words  68 scenes  9 broll 7 look rocco2    line2 \"no\" end \"\"\nrc12_qcspec.json                   words  51 scenes 11 broll 9 look rocco2    line2 \"slick\" end \"\"\nrc11_qcspec.json                   words  82 scenes 15 broll 8 look rocco2    line2 \"darling\" end \"\"\nrc10_qcspec.json                   words  82 scenes 14 broll 8 look rocco2    line2 \"in\" end \"\"\nrc09_qcspec.json                   words  81 scenes 13 broll 8 look rocco2    line2 \"good\" end \"\"\nSCRIPT_CHECK: PASS"
+  "note": "rc20_qcspec.json                   words  71 scenes  9 broll 7 look rocco2    line2 \"i\" end \"\"\nrc12_qcspec.json                   words  51 scenes 11 broll 9 look rocco2    line2 \"slick\" end \"\"\nrc11_qcspec.json                   words  82 scenes 15 broll 8 look rocco2    line2 \"darling\" end \"\"\nrc10_qcspec.json                   words  82 scenes 14 broll 8 look rocco2    line2 \"in\" end \"\"\nrc09_qcspec.json                   words  81 scenes 13 broll 8 look rocco2    line2 \"good\" end \"\"\nSCRIPT_CHECK: PASS"
  },
  "14_empty_panel": {
   "status": "PASS",
-  "note": "PASS: largest one-colour flat area 6% of the frame (limit 20%)"
+  "note": "PASS: largest one-colour flat area 8% of the frame (limit 20%)"
  },
  "15_competitors": {
   "status": "PASS",
@@ -63,5 +63,5 @@
   "status": "PASS",
   "note": "Skillar: rocco-3d-cast, viral-cartoon-playbook, animation-direction, disney-animator-traditional, viral-video-decomposer, blender-core, blender-rendering; ishlatilmadi: analyzing-video (YouTube bloklangan)"
  },
- "verdict": "FAIL"
+ "verdict": "PASS"
 }
