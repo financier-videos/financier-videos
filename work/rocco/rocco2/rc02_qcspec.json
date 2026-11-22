@@ -1,0 +1,165 @@
+{
+ "format": "short",
+ "look": "rocco2",
+ "scenes": [
+  {
+   "text": "Rocco! Someone just sent me a THOUSAND dollars!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc2/park.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Don't touch it.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc2/coffee.mp4"
+    }
+   ]
+  },
+  {
+   "text": "...Why not?! It's mine now!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc2/park.mp4"
+    }
+   ]
+  },
+  {
+   "text": "In five seconds, you'll get a text. Oops, wrong person! Please send it back!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc2/coffee.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Oopsie! Wrong person! Please send it back!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc2/park.mp4"
+    }
+   ]
+  },
+  {
+   "text": "HOW did you know that?!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc2/park.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Detective.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc2/coffee.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Quick, quick! It's for my grandma's... rent! Her... surgery! Her rent surgery!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc2/cash.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Red flag. He paid you with a stolen card.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc2/coffee.mp4"
+    }
+   ]
+  },
+  {
+   "text": "The real owner reports it... and the bank takes the thousand back.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc2/scroll.mp4"
+    }
+   ]
+  },
+  {
+   "text": "So if I send him a thousand too...",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc2/park.mp4"
+    }
+   ]
+  },
+  {
+   "text": "You're down a thousand. He keeps it.",
+   "shots": []
+  },
+  {
+   "text": "DOWN?! I was rich for five minutes!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc2/park.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Your move: send nothing. Report it in your payment app, and let the app send it back.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/phone_bed.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Hey, mister. What's your name, anyway?",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc2/park.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Uh... Honest... Steve?",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc2/cash.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Two red flags.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc2/coffee.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Wait, wait! I'll send you TWO thousand!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc2/cash.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Blocked.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc2/park.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Not again!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc2/cash.mp4"
+    }
+   ]
+  },
+  {
+   "text": ""
+  }
+ ]
+}

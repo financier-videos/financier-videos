@@ -13,7 +13,7 @@ Flags (HYPOTHESES - thresholds are ours, tune them against retention in growth_l
   NO_LAND    - scene has "land" (punchline pause) but the longest unvoiced gap after the last voiced word < land*0.6
 Exit 0 = no MONOTONE/FLAT_Q flags, 1 = flags found, 2 = could not run. Music-free mix is assumed (we have none).
 """
-import sys, json, os, subprocess, tempfile, argparse
+import re, sys, json, os, subprocess, tempfile, argparse
 import numpy as np
 
 
@@ -71,7 +71,7 @@ def main():
         q = txt.rstrip().rsplit(".", 1)[-1].lower().split("...")[-1].strip()
         _w = [x.strip("¿.…,!") for x in q.lower().split()]
         while _w and _w[0] in ("so", "and", "but", "wait", "okay", "ok", "um", "uh", "well", "then", "") and len(_w) > 1: _w = _w[1:]  # 2026-11-22: "...So what am I...?" is a wh-question
-        yn = q.endswith("?") and " or " not in q and _w[0] not in WH if _w else False
+        yn = q.endswith("?") and " or " not in q and re.split(r"['’]", _w[0])[0] not in WH if _w else False  # "what's"/"how's" are wh-questions too
         if yn:  # yes/no question only: "A or B?" and wh-questions normally FALL in English
             e = s_[vt >= last - 0.35]; b_ = s_[(vt < last - 0.35) & (vt >= last - 0.7)]
             if len(e) > 3 and len(b_) > 3:

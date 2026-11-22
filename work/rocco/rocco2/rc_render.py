@@ -492,16 +492,20 @@ def main():
                             "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-ar", "48000", "-ac", "2", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", out],
                            stdin=subprocess.PIPE)
     import make_video as mv2
-    for sh in shots:  # decode the shot's real footage once (bg = main picture, bg2 = top half of a split)
+    def load(sh):  # decode one shot's real footage when it starts (bg = main picture, bg2 = top half of a split)
         n_ = int((sh["_t1"] - sh["_t0"]) * FPS) + 2
         for key in ("bg", "bg2"):
             if sh.get(key) and os.path.exists(sh[key]):
                 fr_, fsz_ = mv2.broll_frames(sh[key], W, H, n_, sh.get(key + "_start", 0))
                 sh["_" + key] = (fr_, fsz_, n_) if fr_ else None
+    _cur = None
     nfr = int(total * FPS); cuts = []
     for fi in range(nfr):
         t = fi / FPS
         sh = next((s for s in shots if s["_t0"] <= t < s["_t1"]), shots[-1])
+        if sh is not _cur:  # free the previous shot's frames (a 60 s video no longer holds every clip in memory)
+            if _cur is not None: _cur.pop("_bg", None); _cur.pop("_bg2", None)
+            load(sh); _cur = sh
         if not cuts or cuts[-1] != round(sh["_t0"], 2): cuts.append(round(sh["_t0"], 2))
         lt = t - sh["_t0"]
         e = float(env[min(fi, len(env) - 1)]); w_ = who[min(fi, len(who) - 1)]

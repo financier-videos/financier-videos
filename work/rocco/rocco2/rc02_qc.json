@@ -1,0 +1,63 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    51.0 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -15.2 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.4 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -15.1 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 7.3 Mbit/s, 58.3s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "se send it back! Oopsie! Wrong person! Please send it back! How did you know that? Detective... Quick, quick! It's for my grandma's rent! Her surgery! Her rent surgery! Red flag! He paid you with a stolen card. The real owner reports it. And the bank takes the thousand back. So if I send him a thousand too? You're down a thousand. He keeps it. Down! I was rich for five minutes! Your move. Send nothing. Report it in your payment app and let the app send it back. Hey, mister. What's your name anyway? Uh, honest. Steve? Two red flags. Wait, wait. I'll send you two thousand. Blocked. Not again.\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": " was rich for five minutes!\n14  38.96s range=17.0 st  gap=0.36  ok  | Your move: send nothing. Report it in your payment app, and \n15  43.52s range=11.3 st  gap=0.33  ok  | Hey, mister. What's your name, anyway?\n16  46.32s range=17.3 st  gap=0.52  ok  | Uh... Honest... Steve?\n17  48.80s range=19.7 st  gap=0.24  ok  | Two red flags.\n18  50.00s range=16.6 st  gap=0.31  ok  | Wait, wait! I'll send you TWO thousand!\n19  52.80s range=20.5 st  gap=0.3  ok  | Blocked.\n20  53.92s range=12.8 st  gap=0.07  ok  | Not again!\n21  55.28s range=   - st  gap=-  ok  | \n{\"median_f0\": 271.7, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 100"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/rocco/rocco2/rc02_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "WARN",
+  "note": "FAIL  0.80  (layout 0.93, palette 0.58, tone 0.88)  vs rocco_rc04c_free_gta_pc.mp4\nok  0.43  (layout 0.30, palette 0.42, tone 0.72)  vs rocco_2026-11-22_r01v2b_brushing.mp4\nok  0.40  (layout 0.48, palette 0.14, tone 0.66)  vs rocco_2026-11-23_t05_free_key.mp4\nok  0.29  (layout 0.15, palette 0.32, tone 0.56)  vs rocco_2026-11-22_t04b_gta_pc_trap.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "29 hard cuts (ffmpeg scene>0.22) in 58.3 s = 2.0 s/cut (need >= 29); engine planned 31"
+ },
+ "12_script": {
+  "status": "PASS",
+  "note": "rc02_qcspec.json                   words 137 scenes 21 broll 19 look rocco2    line2 \"don't\" end \"\"\nrc04c_qcspec.json                  words  97 scenes 17 broll 0 look rocco2    line2 \"rocco\" end \"\"\nSCRIPT_CHECK: PASS"
+ },
+ "14_empty_panel": {
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 12% of the frame (limit 15%)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: rocco_winner_moments (11 lahza), rocco_preflight (13 band), vidIQ kadrma-kadr tahlil (6agufKA2ZQY, N09VNM2BOD8), ElevenLabs text-to-dialogue eleven_v3, footage (Pixabay+Pexels bank), empty_check, qc_gate; ishlatilmadi: vidiq_find_broll (lavhalar yetarli)"
+ },
+ "verdict": "PASS"
+}

@@ -138,6 +138,22 @@
    "r": "sideeye"
   },
   {
+   "line": 2,
+   "from": 0.5,
+   "kind": "insert",
+   "bg": "/tmp/fin/bg/rc2/phonehand.mp4",
+   "bg_start": 4,
+   "bright": 1.35,
+   "circle": [
+    0.52,
+    0.38,
+    0.2
+   ],
+   "label": "IT'S MINE NOW?!",
+   "who": "p",
+   "p": "hope"
+  },
+  {
    "line": 3,
    "from": 0.0,
    "kind": "cu_r",
@@ -213,7 +229,18 @@
    "r_peek": true,
    "r": "sideeye",
    "msg": "GRANDMA'S RENT SURGERY?!",
-   "msg_word": "rent"
+   "msg_word": "rent",
+   "bg_start": 0
+  },
+  {
+   "line": 7,
+   "from": 0.6,
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc2/park.mp4",
+   "bg_start": 1,
+   "blur": 1,
+   "p": "nervous",
+   "r": "sideeye"
   },
   {
    "line": 8,
@@ -247,32 +274,32 @@
    "line": 9,
    "from": 0.0,
    "kind": "insert",
-   "bg": "/tmp/fin/bg/rc2/mobank.mp4",
-   "bright": 1.3,
+   "bg": "/tmp/fin/bg/rc2/scroll.mp4",
+   "bright": 1.2,
    "circle": [
-    0.5,
-    0.34,
+    0.7,
+    0.48,
     0.2
    ],
    "label": "OWNER REPORTS IT",
    "who": "r",
-   "rx": 0.76,
+   "rx": 0.25,
    "r": "point"
   },
   {
    "line": 9,
    "from": 0.55,
    "kind": "insert",
-   "bg": "/tmp/fin/bg/rc2/online.mp4",
-   "bright": 1.0,
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bright": 1.15,
    "circle": [
-    0.45,
     0.4,
-    0.22
+    0.58,
+    0.2
    ],
-   "label": "BANK TAKES IT BACK",
+   "label": "$1,000: GONE",
    "who": "r",
-   "rx": 0.76,
+   "rx": 0.78,
    "r": "sad"
   },
   {
@@ -299,12 +326,12 @@
      true
     ],
     [
-     "Bank takes it back",
+     "Bank reverses",
      "-$1,000",
      false
     ],
     [
-     "Penny sends it back",
+     "Penny sends",
      "-$1,000",
      false
     ]
@@ -327,6 +354,19 @@
    "blur": 1,
    "p": "shock",
    "r": "sad"
+  },
+  {
+   "line": 12,
+   "from": 0.5,
+   "kind": "two",
+   "bg": "/tmp/fin/bg/rc2/park.mp4",
+   "bg_start": 9,
+   "blur": 1,
+   "p": "sad",
+   "r": "sad",
+   "act": "sigh_sad",
+   "act_at": 0.0,
+   "act_len": 1.1
   },
   {
    "line": 13,
@@ -365,6 +405,17 @@
    "r": "sideeye"
   },
   {
+   "line": 14,
+   "from": 0.55,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc2/cash.mp4",
+   "bg_start": 0.5,
+   "bright": 1.0,
+   "s": "sly",
+   "r_peek": true,
+   "r": "sideeye"
+  },
+  {
    "line": 15,
    "from": 0.0,
    "kind": "slick",
@@ -376,6 +427,18 @@
    "r": "sideeye",
    "msg": "\"HONEST STEVE\"",
    "msg_word": "steve"
+  },
+  {
+   "line": 15,
+   "from": 0.62,
+   "kind": "cu_r",
+   "bg": "/tmp/fin/bg/rc2/coffee.mp4",
+   "bg_start": 8,
+   "blur": 2,
+   "r": "sideeye",
+   "act": "deadpan_sideeye",
+   "act_at": 0.0,
+   "act_len": 0.9
   },
   {
    "line": 16,
@@ -394,7 +457,7 @@
    "from": 0.0,
    "kind": "slick",
    "bg": "/tmp/fin/bg/rc2/cash.mp4",
-   "bg_start": 6,
+   "bg_start": 0.5,
    "bright": 1.0,
    "s": "panic",
    "r_peek": true,
@@ -417,7 +480,7 @@
    "from": 0.0,
    "kind": "slick",
    "bg": "/tmp/fin/bg/rc2/cash.mp4",
-   "bg_start": 8,
+   "bg_start": 0.5,
    "bright": 1.0,
    "s": "panic",
    "r_peek": true,
@@ -542,7 +605,7 @@
   }
  ],
  "sources": "FTC consumer alert on overpayment/accidental payment scams; Cash App, Zelle and bank guidance: don't send money back yourself \u2014 contact the app or bank and let them reverse it",
- "footage": "Pixabay: loswin23, Alanchevereau, 34168960, Mohamed_hassan, flutie8211, Natures_Embrace; Pexels: kaboompics",
+ "footage": "Pixabay: loswin23, Alanchevereau, 34168960, flutie8211, Natures_Embrace; Pexels: kaboompics, Coverr-Free-Footage, Pexels: Anete Lusina",
  "benchmarks": [
   "#1 1-second event hook",
   "#2 prediction then instant validation (ding)",

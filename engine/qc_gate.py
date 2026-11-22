@@ -199,7 +199,8 @@ def main():
     if a.prev:
         rc, o = run([sys.executable, "-I", os.path.join(ROOT, "engine", "look_check.py"), a.video] + a.prev)
         _st = "SKIP" if "Traceback" in o else ("PASS" if rc == 0 else "FAIL")
-        if _st == "FAIL" and a.spec and json.load(open(a.spec)).get("look") == "fullbleed":
+        _rr = json.load(open(a.rendered)).get("renderer") if (a.rendered and os.path.exists(a.rendered)) else None
+        if _st == "FAIL" and a.spec and (json.load(open(a.spec)).get("look") == "fullbleed" or _rr == "rc_render"):  # Rocco v2: one house style by design (rocco_style_v2.md)
             # BUYURTMA 8 (2026-11-22) makes full-screen footage the one layout, so layout/tone match by design;
             # it still FAILS when the colours are the same too (palette >= 0.92 = same footage feel)
             pals = [float(m) for m in re.findall(r"FAIL\s+[\d.]+\s+\(layout [\d.]+, palette ([\d.]+)", o)]
