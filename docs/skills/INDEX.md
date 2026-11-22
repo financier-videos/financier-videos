@@ -98,3 +98,4 @@ QOIDA (har chat, har vazifa sessiyasi, Financier ham, Rocco ham):
 | Hazil, gag, aktyorlik harakatlari | `docs/comedy.md` | HAR ssenariy: gag va reaksiya ustuni; skit — comedy_skit |
 | Lavha tanlash (b-roll) | `docs/footage_bank.md`, `engine/footage_bank.json`; yangi qidiruv: vidIQ `find_broll` (1 kredit), prevyu ko'rib | repo |
 | Rocco personajlari (surat/3D TZ) | `docs/rocco_characters_tz.md` | repo |
+| Rocco 3D personajlari (rig, shape key, kutubxona) | `docs/rocco_3d_cast.md`; modellar yopiq repoda `buck-private/rocco_cast_v1` | repo |

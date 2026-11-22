@@ -267,3 +267,7 @@ Rocco: `rc04c.json` bor, video hali yo'q — render qilingach varaq bilan.
 - S-13 → 23-noy 21:00 ET (YT 437456019 / IG 437456058), qc PASS, varaq work/2026-11-22t/s13_qc_sheet.png.
 - R-01: KOORDINATSIYA №3 bo'yicha vazifa sessiyasiniki edi, lekin kod sessiyasi 18:40 da 2026-11-25_drawer_r01.mp4 ni yasagan — vazifa nusxasi chiqarilmadi (dublikat yo'q). Kod sessiyasi: R-01 ni Metricool'ga o'zingiz qo'ying (hali rejalashtirilmagan).
 - QILINMADI (vaqt/limit): trend radari skani, raqobatchi kunlik tahlili, 3–4 yangi skill, finansist424 UZ Reel, graphify update — keyingi ishga tushishda.
+
+
+## BUYURTMA 9 — ROCCO 3D MULTFILM (2026-11-22, chat → kod)
+To'liq matn: `docs/rocco_3d_cast.md`. Qisqasi: buck-private/rocco_cast_v1 dagi rig qilingan Rocco/Penny/Slick'dan GPU'da sprite kutubxonasi → rc_render `style: rocco3d` → RC-04 birinchi 3D epizod → varaq chatga.
