@@ -16,3 +16,5 @@ Manba: vidIQ kadrma-kadr tahlillar 2026-11-22 (docs/rocco_research_2026-11-22.md
 | 11 | OVOZ EFFEKTI har 1.5–2.5 s: qo'ng'iroq/ding, kassa (pul), thud (ochilish), trubka beep | ikkalasi | spec "sfx" |
 | 12 | YAKUN: aniq 1–2 qadam + ulashish ("Send this to someone who needs to hear this") | 6agufKA2ZQY | yakun kartasi |
 | 13 | UZUNLIK: 55–66 s hikoya yoki 13–20 s mikro (30–45 s — o'lik zona) | claude-youtube shorts skill + g'oliblar | RC hikoyalari 50–60 s |
+| 14 | ATAYLAB AHMOQ BO'LISH: qurbon firibgar savoliga so'zma-so'z javob beradi, firibgar asabiylashadi | vcPnUMJNdkw (2.1M, 1 kunda) | Penny Rocco ko'rsatmasi bilan Slickni chalg'itadi; har 8–10 s bir zarba; absurd yakun |
+| 15 | "TEKIN" → 0 BALANS: zararsiz harakat (barmoq izi/QR/kod) darhol qizil SMS "Balance: $0.00" ga ulanadi | uaV36whB6H8 (1.3M, 18x) | mexanizm sahnasida telefon SMS kartasi |

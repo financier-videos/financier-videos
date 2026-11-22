@@ -60,6 +60,7 @@ def main():
     ap.add_argument("video"); ap.add_argument("--spec"); ap.add_argument("--rendered"); ap.add_argument("--title")
     ap.add_argument("--thumb"); ap.add_argument("--platform", default="shorts"); ap.add_argument("--out"); ap.add_argument("--prev", nargs="*", default=[])
     ap.add_argument("--prev-specs", nargs="*", default=[], dest="prev_specs")  # v6.14: last 4 specs of the channel -> script_check
+    ap.add_argument("--benchmarks", nargs="*", default=None)  # 2026-11-22: competitor video IDs this video learned from (else spec "benchmarks")
     ap.add_argument("--skills", default="")  # v6.14: the "Skillar: ...; ishlatilmadi: ..." line (docs/skills/INDEX.md rule 2)
     a = ap.parse_args()
     out = a.out or os.path.splitext(a.video)[0] + "_qc.json"
@@ -232,6 +233,22 @@ def main():
         put("14_empty_panel", "SKIP" if (rc == 2 or "Traceback" in o) else ("PASS" if rc == 0 else "FAIL"), o.strip().splitlines()[-1] if o.strip() else o)
     else:
         put("14_empty_panel", "SKIP", "no duration")
+    # 15 competitor study (Shohjahon 2026-11-22: "har safar yangi va portlatadigan video; konkurentlarni o'rganib turish kerak"):
+    #    >= 2 benchmark video IDs that were analysed in docs/competitor_watch.md within the last 7 days
+    bm = a.benchmarks
+    if bm is None and a.spec and os.path.exists(a.spec):
+        _sp = json.load(open(a.spec)); bm = _sp.get("benchmarks", [])
+    bm_ids = set(re.findall(r"[A-Za-z0-9_-]{11}", " ".join(bm or [])))
+    cw = os.path.join(ROOT, "docs", "competitor_watch.md"); fresh = set()
+    if os.path.exists(cw):
+        import datetime as _dt
+        today = _dt.date.today()
+        for l in open(cw).read().splitlines():
+            m = re.match(r"\|\s*(\d{4}-\d{2}-\d{2})\s*\|\s*`?([A-Za-z0-9_-]{11})`?", l)
+            if m and (today - _dt.date.fromisoformat(m.group(1))).days <= 7: fresh.add(m.group(2))
+    hit = bm_ids & fresh
+    put("15_competitors", "PASS" if len(hit) >= 2 else "FAIL",
+        f"{len(hit)} fresh benchmark(s) {sorted(hit)} (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)")
     # 13 skills line (docs/skills/INDEX.md: missing = FAIL)
     put("13_skills_line", "PASS" if re.search(r"Skillar:.+;\s*ishlatilmadi:", a.skills) else "FAIL",
         a.skills or 'no --skills "Skillar: ...; ishlatilmadi: ... (sababi)"')

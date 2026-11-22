@@ -14,3 +14,4 @@
 | 11 | Yuzi yaqin odam jabrlanuvchi rolida (r01v2) | lavhalarda yaqin yuz yo'q |
 | 12 | Rocco kadrda kam (RC-04b: Slick sahnalarida yo'q) | Rocco kadrlarning ≥60% ida |
 | 13 | Faktni tekshirmasdan | render oldidan manbani qayta ochish, tavsifda manba |
+| 14 | Raqobatchilar o'rganilmasdan video (Shohjahon 2026-11-22) | docs/competitor_watch.md jurnalida ≤7 kunlik ≥2 benchmark + 1 ta YANGI usul; qc_gate 15_competitors PASS |

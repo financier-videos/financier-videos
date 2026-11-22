@@ -1,4 +1,5 @@
 # SHU YERDAN BOSHLA — kod chati / vazifa uchun yagona tartib (chat Trade, 2026-11-21 22:10 Toshkent)
+> **2026-11-22: HAR VIDEO YANGI VA PORTLATADIGAN** — avval `docs/competitor_watch.md` (≤7 kunlik raqobatchi tahlili, spec "benchmarks" ≥2 ID + 1 YANGI usul; qc_gate 15_competitors). Har kuni avtomatik skan (rejalashtirilgan vazifa).
 > **2026-11-22: LAVHA + MAKET** — lavha faqat `docs/footage_bank.md` dan; bo'sh panel taqiq; Buck ≥ 1/4 kadr. Buyurtma 8 (`docs/night_order.md`).
 Shohjahon: "hammasi tayyor bo'lsa kodni ishga tushiraman". Bu fayl boshqa hamma hujjatdan OLDIN o'qiladi; ziddiyat bo'lsa — bu fayl va unda ko'rsatilgan yangi hujjatlar ustun (producer_task va sprint_10d dagi eski andoza bandlaridan).
 
