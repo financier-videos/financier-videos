@@ -1,0 +1,63 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    54.9 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -13.9 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -13.9 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 12.5 Mbit/s, 36.9s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 0.955,\n \"missing\": [\n  \"hmm\",\n  \"okay\",\n  \"cost\"\n ],\n \"extra\": [\n  \"ok\",\n  \"costs\"\n ],\n \"heard\": \"A nickel, five cents. Guess what it costs to make? Two cents, tops. Almost 14, 13.78 cents. OK, a dime? Easy, 20 cents. Under six, 5.76, the one coin that's a bargain. A quarter, nearly 15. 14.68 and the penny costs 3.69 cents. So in 2025, they stopped making it. Wait, the nickel loses more than the penny did? About 9 cents a coin. So should the nickel go next? Because right now, the worst deal in your pocket is...\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "=0.34  ok  | Under six. Five point seven six. The one coin that's a barga\n 7  16.53s range=17.7 st  gap=0.23  ok  | A quarter? Nearly fifteen. Fourteen point six eight.\n 8  20.05s range=12.3 st  gap=0.36  ok  | And the penny cost three point six nine cents. So in twenty \n 9  25.91s range= 6.6 st  gap=1.14  ok  | Wait. The nickel loses more than the penny did?\n10  29.02s range=11.4 st  gap=0.32  ok  | About nine cents a coin. So... should the nickel go next?\n11  33.44s range=17.9 st  gap=0.24  ok  | Because right now, the worst deal in your pocket is...\n{\"median_f0\": 246.1, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 100"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/2026-11-23v/v02_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "WARN",
+  "note": "ok  0.46  (layout 0.67, palette 0.13, tone 0.59)  vs 2026-11-23_pink_r07_v615.mp4\nFAIL  0.88  (layout 0.94, palette 0.78, tone 0.91)  vs 2026-11-23_cart_r06_b8.mp4\nok  0.61  (layout 0.73, palette 0.58, tone 0.43)  vs 2026-11-23_fees_r08.mp4\nFAIL  0.86  (layout 0.93, palette 0.74, tone 0.94)  vs 2026-11-24_subs_r03_b8.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "24 hard cuts (ffmpeg scene>0.22) in 36.9 s = 1.5 s/cut (need >= 18); engine planned 23"
+ },
+ "12_script": {
+  "status": "PASS",
+  "note": "v02_coins.json                     words  94 scenes 11 broll 11 look fullbleed line2 \"hmm\" end \"is\"\nr07_pink_b8.json                   words  73 scenes  7 broll 7 look fullbleed line2 \"blue\" end \"one\"\nr08_fees_b8.json                   words  94 scenes  8 broll 8 look fullbleed line2 \"checked\" end \"you\"\nr02_noseat_b8.json                 words  56 scenes  9 broll 9 look fullbleed line2 \"legally\" end \"seat\"\nr03_subs_b8.json                   words  74 scenes  8 broll 8 look fullbleed line2 \"pfft\" end \"miss\"\nSCRIPT_CHECK: PASS"
+ },
+ "14_empty_panel": {
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 8% of the frame (limit 15%)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: script_bank V-02, script_rules v2.2 (guess_reveal), script_check, hookscore (62.6), title.py (100), footage_bank (Buyurtma 8), comedy.md (doubletake/jawdrop/shrug/deadpan), voice_check, prosody, empty_check, qc_gate; ishlatilmadi: vidiq_find_broll (bank yetarli), pixabay_bg (bank qoidasi ustun), uslubli insert (vaqt)"
+ },
+ "verdict": "PASS"
+}

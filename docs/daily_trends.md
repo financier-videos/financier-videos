@@ -1,5 +1,10 @@
 # KUNLIK TOP TAHLIL (producer_task 1.9) — yangisi tepada, 7 kundan eskisi o'chiriladi
 
+## 2026-11-22 09:30 (A, Financier — vazifa sessiyasi)
+- Bepul skan (WebSearch, vidIQ ishlatilmadi — kredit tejaldi): bu hafta moliya-fakt nishasida yangi breakout topilmadi; manbalar asosan vendor qo'llanmalari (kuchsiz dalil). Umumiy format signali: "you're wrong about this" / afsona-ag'darish va taxmin-javob.
+- Xulosa: GTA 6 trendi navbatda yopilgan (T-01…T-03 joylangan). Bugungi yangi video — V-02 "tanga narxi" (guess_reveal, savat 1: pul tarixi/tanga), qidiruvda CoinNews 2026-11-21 "penny ishlab chiqarishni tugatuvchi qonun imzolandi" sarlavhasi ko'rindi — sayt muhitda ochilmadi, TEKSHIRILMAGAN, videoda ishlatilmadi.
+- Skillar: WebSearch — QO'LLANDI; vidiq_trending_videos, yt-viral swipe.py — QO'LLANMADI (Financier vidIQ kreditini tejash; kecha C da skan qilingan, 24 soat o'tmagan).
+
 ## 2026-11-21 23:45 (C, Financier nishasi — birinchi)
 - vidIQ trending (short, "money", ≤200K, 7 kun): top — hissiy/motivatsion kliplar (Hindiston, 3K obunachi → 558K), "How Empty shop Launders Money" 175K, "The Problem With American Money" (AQSh, 47K → 11.7K, izoh ko'p).
 - Xulosa: moliya-fakt formatida bu hafta yangi breakout yo'q; GTA 6 raqamlari — yagona kuchli trend (kod sessiyasi bajaryapti).
