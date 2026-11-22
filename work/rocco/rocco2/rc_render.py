@@ -126,8 +126,43 @@ def sprite(name, size):
     return _SPR[key]
 
 
+# ---------------- 3D cast (BUYURTMA 9): sprites rendered by work/rocco/rocco3d/build_lib.py ----------------
+LIB3D = os.environ.get("FIN_ROCCO3D", "")  # e.g. /tmp/rocco3d_lib -> rocco/penny/slick drawn from 3D renders
+MAP3D = {"rocco": {"happy": "happy", "sideeye": "sly", "smug": "sly", "sad": "sad", "point": "happy", "thumbsup": "happy",
+                   "shocked": "shock", "shock": "shock", "angry": "angry"},
+         "penny": {"happy": "happy", "shock": "shock", "sad": "sad", "hope": "relieved", "nervous": "sad"},
+         "slick": {"sly": "neutral", "panic": "shock", "laugh": "happy"}}
+_S3D = {}
+
+
+def char3d(im, who, cx, feet_y, height, mood, talk, t, flip=False):
+    """Paste a 3D-rendered character: feet at feet_y, sprite height `height` px (sprite feet are at 91.6 % of its height)."""
+    m = MAP3D[who].get(mood, "neutral")
+    if talk < 0.12: mouth = "closed"
+    elif talk < 0.4: mouth = "half"
+    elif talk < 0.7: mouth = ("e", "o")[int(t * 8) % 2]
+    else: mouth = "open"
+    seed = {"rocco": 0.0, "penny": 1.1, "slick": 2.3}[who]
+    eyes = "closed" if ((t + seed) % 3.3) < 0.11 else "open"
+    key = (who, m, mouth, eyes, int(height), flip)
+    if key not in _S3D:
+        f = os.path.join(LIB3D, who, f"{m}_{mouth}_{eyes}.png")
+        if not os.path.exists(f): f = os.path.join(LIB3D, who, f"{m}_closed_open.png")
+        if not os.path.exists(f): f = os.path.join(LIB3D, who, "neutral_closed_open.png")
+        sp = Image.open(f).convert("RGBA"); sp = sp.resize((int(height * sp.width / sp.height), int(height)), Image.LANCZOS)
+        if flip: sp = sp.transpose(Image.FLIP_LEFT_RIGHT)
+        _S3D[key] = sp
+    sp = _S3D[key]; h = sp.height * (1 + 0.02 * talk)
+    sh = Image.new("RGBA", im.size, (0, 0, 0, 0))
+    ImageDraw.Draw(sh).ellipse([cx - height * 0.2, feet_y - height * 0.02, cx + height * 0.2, feet_y + height * 0.025], fill=(0, 0, 0, 70)); im.alpha_composite(sh)
+    im.alpha_composite(sp, (int(cx - sp.width / 2), int(feet_y - sp.height * 0.916 - (h - sp.height))))
+
+
 def rocco(im, cx, base_y, size, mood="happy", talk=0.0, t=0.0, act=None, act_t=0.0, flip=False):
     """Rocco standing on base_y (feet), centred on cx. talk 0..1 -> mouth sprite t1..t3. act = clip name played once."""
+    if LIB3D:
+        m3 = {"deadpan_sideeye": "sideeye", "sigh_sad": "sad", "shrug_confused": "shocked"}.get(act, mood) if act else mood
+        return char3d(im, "rocco", cx, base_y, size * 0.95, m3, talk, t, flip)
     fi = int(t * 15) % 15
     if act:
         n = len([f for f in os.listdir(LIB) if f.startswith(act + "_")]) or 1
@@ -146,6 +181,7 @@ def rocco(im, cx, base_y, size, mood="happy", talk=0.0, t=0.0, act=None, act_t=0
 
 def penny(im, cx, cy, s, mood="happy", talk=0.0, t=0.0):
     """Penny the piggy bank (pink), drawn. mood: happy|shock|sad|hope|nervous. talk 0..1 opens the mouth."""
+    if LIB3D: return char3d(im, "penny", cx, cy + 0.41 * s, s * 1.25, mood, talk, t)
     d = ImageDraw.Draw(im, "RGBA"); P = (255, 143, 171); PD = (232, 104, 140); u = s / 400
     cy = cy - abs(math.sin(t * 9)) * 14 * u * talk  # excited hop while talking
     d.ellipse([cx - 150 * u, cy + 150 * u, cx + 150 * u, cy + 178 * u], fill=(0, 0, 0, 60))
@@ -254,6 +290,7 @@ def mousetrap(im, cx, cy, s, snapped, label="FREE GTA 6"):
 
 def slick(im, cx, cy, s, mood="sly", talk=0.0, t=0.0):
     """Slick the scammer fox (always the butt of the joke). mood: sly|panic|laugh. Holds a phone."""
+    if LIB3D: return char3d(im, "slick", cx + (math.sin(t * 40) * 5 if mood == "panic" else 0), cy + 0.86 * s, s * 1.6, mood, talk, t)
     d = ImageDraw.Draw(im, "RGBA"); u = s / 400; O = (255, 132, 50); OD = (214, 96, 30); CREAM = (250, 236, 214); SUIT = (118, 70, 170)
     cy = cy + (math.sin(t * 40) * 6 * u if mood == "panic" else 0)
     d.ellipse([cx - 170 * u, cy + 330 * u, cx + 170 * u, cy + 360 * u], fill=(0, 0, 0, 60))
