@@ -110,3 +110,9 @@ KECHA vs BUGUN (2026-11-21 C): bugun chiqqan 2 Short (twenty_secrets b3, giftcar
 
 ### 2026-11-22 10:05 Toshkent — A ishi (vazifa sessiyasi)
 O'RGANILDI: mehmon ovozining "taxmin?" savollari ElevenLabs'da tekis intonatsiya bilan chiqadi (prosody FLAT_Q 2 sahna). O'ZGARTIRILDI: taxminlar ishonchli noto'g'ri gap qilib yozildi ("Hmm... two cents. Tops." / "Easy. Twenty cents.") — prosody 0 flag, hazil kuchaydi (ishonch + xato). O'LCHOV: coins_v02 (23-noy 07:00 ET) 24/72 soatlik ko'rishni pink_r07 (savolli taxmin) bilan results.md da solishtirish.
+
+### 2026-11-22 23:30 Toshkent — C ishi (vazifa sessiyasi)
+O'RGANILDI: 24 soatda kanal 1,878 → 6,369 (+4,491). Yangi v6.14+ uslub (fullbleed/shots, 1–3 so'zli subtitr) + "$X Billion" sarlavha: 3 ta video 960–1,274; eski uslub 24–81 da qoldi. IG retention: mikro 14 s — 71%, 52 s masshtab — 22%, 26–31 s — 33–51%. Metricool bepul limiti 22-noy 13:00 ET da tugadi (post ERROR) — bu sprintning eng katta to'sig'i.
+O'ZGARTIRILDI: script_bank — 4 ta IKKI BARAVAR davomi (G-1, H-1, H-2; G-2 Rocco'ga) va 2 SHOSHILINCH (Farm Bureau $58.63; Rocco bot-izohlar); backlog — Metricool limiti zaxira yo'li (vidIQ social_post yoki Buffer 3-kanal) bandi.
+O'LCHOV: 23-noy C — G-1/H-1 davomlari 24 soatda ≥1,000 mi; Metricool post ERROR soni (maqsad 0).
+KECHA vs BUGUN: kecha eng yaxshi kunlik start 146 (3.5 soat), bugun 964 (6 soat, GTA 4.7x) — ~6x. Kadr tempi kecha 3–7 s/kesim, bugungi videolarda 1.5–1.9 s. Yomonlashgan: 1 video chiqmadi (Metricool limit).

@@ -1,6 +1,15 @@
 # SSENARIYLAR BANKI (Shohjahon yuborgan, Claude tekshirib moslagan)
 Vazifa: A/B ishlarida avval shu yerdagi [TAYYOR] ssenariylarni ishlat (har biri bir marta; chiqqach [CHIQDI sana] deb belgilab qo'y). Render oldidan raqamlarni manbadan yana bir bor tekshir. Buck — variant D.
 
+## [IKKI BARAVAR 2026-11-22 C] sprint §3 — 24 soatda ≥1,000 olganlarning davomi (har biri boshqa burchak, nusxa emas; raqamni render oldidan manbadan qayta tekshir)
+- G-1 (Gift Cards $27B → 1,274): "Your Gift Card Can't Expire for 5 Years" — federal CARD Act 2009: sovg'a kartasi kamida 5 yil amal qiladi, 12 oy ishlatilmasa ham faoliyatsizlik to'lovi yo'q (CFPB / Regulation E). Tuzilma: myth_flip. Savat 7.
+- G-2 (Gift Cards): "Gift Card Scams: $217 Million Lost" — RAQAMNI FTC Consumer Sentinel'dan aniq olish shart (yo'q bo'lsa mavzu Rocco'ga). Rocco formatida — Financier emas.
+- H-1 (How Big Is $3.79B → 1,109): "How Big Is $1 Trillion in $100 Bills?" — masshtab narvoni (taxlam balandligi, futbol maydoni, yuk mashinalari); hisob "our math", BEP banknot o'lchami/og'irligi (1 g). Savat 6.
+- H-2 (How Big): "How Long to Spend $1 Billion at $1,000 a Day?" — ~2,740 yil (our math). Mikro 10–12 s (IG'da mikro 71% ko'rish). Savat 6.
+## [SHOSHILINCH 2026-11-22 C]
+- S-T1 "Thanksgiving for 10: $58.63" — American Farm Bureau 2026 so'rovi: 10 kishilik dasturxon +6% ($58.63), 2022 dan beri birinchi o'sish; 16 lb kurka $23.68 (o'tgan yil $21.50). Siyosiy sabablar (urush, tarif) ssenariyga KIRMAYDI. Muddat: 27-noy (bayram) gacha. Manba: AFBF press-relizi (2026-11-18 atrofi; render oldidan sanani tekshir).
+- S-T2 (Rocco): "Bot comments are scams" — vidIQ comment_insights (22-noy): moliya kanallaridagi izohlarda "nothing but bots / all comments here are SCAMS" (5 thread, 68 like). Himoya: izohdagi "menga yozing, men maslahatchi" — har doim firibgar. Manba: FTC investment scam ogohlantirishi.
+
 ## [CHIQDI 2026-11-21 19:00 ET] S-01 "You Pay $1,332 a Year for Subscriptions" (2026-11-20)
 Manba: CNET yillik obuna so'rovi, 2026-07 (WFSB 2026-07-16; Scripps News): $111/oy = $1,332/yil, o'tgan yildan +23% ($90/oy edi); ishlatilmaydigan obunalarga $21/oy = $252/yil (o'tgan yili $204).
 Olib tashlandi (manbasiz): "$1,200", "7 clicks to cancel a $9.99 yoga app", "free trials = $200".
