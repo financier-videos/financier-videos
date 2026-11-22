@@ -52,12 +52,12 @@
   "note": "no --prev-specs (pass the last 4 specs of this channel)"
  },
  "14_empty_panel": {
-  "status": "FAIL",
-  "note": "FAIL: largest one-colour flat area 20% of the frame (limit 15%); 1 frame(s) over: 22.0s=20%"
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 13% of the frame (limit 15%)"
  },
  "13_skills_line": {
   "status": "PASS",
   "note": "Skillar: footage_bank (Buyurtma 8), Ko'rik 3 layout fixes, empty_check, qc_gate; ishlatilmadi: vidiq_find_broll (bank yetarli)"
  },
- "verdict": "FAIL"
+ "verdict": "PASS"
 }

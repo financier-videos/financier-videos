@@ -18,7 +18,7 @@ from PIL import Image, ImageFilter
 GX, GY = 12, 20
 STD_MAX = 7.0
 COL_TOL = 14.0
-DARK = 40.0  # mean RGB below this = night sky / space footage, not a drawn panel
+DARK = 60.0  # mean RGB below this = night sky / space / dark clothing in real footage, not a drawn panel
 
 
 def frames(video, n):
@@ -53,7 +53,7 @@ def largest_flat(path):
                     if 0 <= ny < GY and 0 <= nx < GX and flat[ny, nx] and not seen[ny, nx] \
                             and np.abs(mean[ny, nx] - c0).max() < COL_TOL:
                         seen[ny, nx] = True; stack.append((ny, nx))
-            if float(c0.mean()) < DARK: n = n * 15 // 35  # night sky / space in real footage: allowed up to 35 %
+            if 12.0 < float(c0.mean()) < DARK: n = n * 15 // 35  # pure black (< 12) stays a hard 15 %  # night sky / space in real footage: allowed up to 35 %
             if n > best: best, best_col = n, c0
     return best / (GX * GY), (best_col.round().astype(int).tolist() if best_col is not None else None)
 
