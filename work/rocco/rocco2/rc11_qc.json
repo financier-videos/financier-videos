@@ -1,0 +1,67 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    38.0 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -15.0 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.3 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -15.1 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 8.4 Mbit/s, 38.0s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 0.974,\n \"rechecked_ok\": [],\n \"missing\": [\n  \"he\",\n  \"asks\"\n ],\n \"extra\": [\n  \"she\",\n  \"asked\"\n ],\n \"heard\": \"She said I'm the smartest pig he's ever met! Darling, put your savings in my special app. It only goes up! It only goes up! Red flag! But he's so sweet! Red flag! Hurry, my love! Before the app closes forever! 3. Okay, let's video call! My camera is... broken since 2019. You're on a yacht with a ring light. It's a very small yacht. If someone you've never met asked you to invest, it's a scam every single time. Not again.\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "p... closes forever!\n 8  18.94s range=13.1 st  gap=0.53  ok  | Three.\n 9  19.84s range=10.5 st  gap=0.28  ok  | Okay! Let's video call!\n10  21.88s range= 9.0 st  gap=0.43  ok  | My camera is... broken. Since 2019.\n11  26.56s range=10.3 st  gap=0.11  ok  | You're on a yacht with a ring light.\n12  28.52s range= 5.4 st  gap=0.18  ok  | ...It's a very small yacht.\n13  30.48s range=13.3 st  gap=0.29  ok  | If someone you've never met asks you to invest, it's a scam.\n14  34.78s range= 7.4 st  gap=0.27  ok  | Not again!\n15  36.22s range=   - st  gap=-  ok  | \n{\"median_f0\": 277.5, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 90"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/rocco/rocco2/rc11_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "WARN",
+  "note": "FAIL  0.79  (layout 0.92, palette 0.57, tone 0.86)  vs rocco_rc12_wrong_piggy_3d.mp4\nFAIL  0.80  (layout 0.92, palette 0.67, tone 0.78)  vs rocco_rc08_vip_3d_v2.mp4\nFAIL  0.78  (layout 0.95, palette 0.64, tone 0.64)  vs rocco_rc09_fraud_unit_3d.mp4\nFAIL  0.74  (layout 0.90, palette 0.50, tone 0.81)  vs rocco_rc10_free_tv_3d.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "21 hard cuts (ffmpeg scene>0.22) in 38.0 s = 1.8 s/cut (need >= 19); engine planned 23"
+ },
+ "12_script": {
+  "status": "PASS",
+  "note": "rc11_qcspec.json                   words  82 scenes 15 broll 8 look rocco2    line2 \"darling\" end \"\"\nrc12_qcspec.json                   words  51 scenes 11 broll 9 look rocco2    line2 \"slick\" end \"\"\nrc08_qcspec.json                   words 119 scenes 19 broll 10 look rocco2    line2 \"psst\" end \"\"\nrc09_qcspec.json                   words  81 scenes 13 broll 8 look rocco2    line2 \"good\" end \"\"\nrc10_qcspec.json                   words  82 scenes 14 broll 8 look rocco2    line2 \"in\" end \"\"\nSCRIPT_CHECK: PASS"
+ },
+ "14_empty_panel": {
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 5% of the frame (limit 20%)"
+ },
+ "15_competitors": {
+  "status": "PASS",
+  "note": "2 fresh benchmark(s) ['2IFK69bB4CE', 'DfC5DUuTroA'] (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: rocco-3d-cast, viral-cartoon-playbook, animation-direction, disney-animator-traditional, disney-timing-calibration, viral-video-decomposer, blender-core, blender-rendering; ishlatilmadi: analyzing-video (YouTube bloklangan)"
+ },
+ "verdict": "PASS"
+}
