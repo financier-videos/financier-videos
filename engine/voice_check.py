@@ -17,13 +17,17 @@ NUMW = set("zero one two three four five six seven eight nine ten eleven twelve 
            "percent dollar dollars cents cent point oh half and a".split())
 
 
+FILLERS = {"ooh", "oh", "shh", "sh", "uh", "um", "aww", "aw", "mm", "hm", "hmm", "psst", "ah", "pfft", "huh"}
+
+
 def norm(t):
     t = t.lower().replace("-", " ").replace("’", "'")
     w = re.findall(r"[a-z']+|\d[\d,.]*", t)
     w = [x.strip("'") for x in w if not x[0].isdigit() and x.strip("'") not in NUMW and x.strip("'")]
+    w = [x for x in w if x not in FILLERS]  # 2026-11-22: ASR drops interjections ("ooh", "shh", "aww", "mm-hm")
     out, run = [], False  # 2026-11-21: "F T C" / "Q R" spelled for TTS == "FTC" / "QR" from ASR -> join runs of single letters
     for x in w:
-        single = len(x) == 1 and x not in ("a", "i")
+        single = len(x) == 1 and (x not in ("a", "i") or run)  # inside a spelled run "a" is a letter (F-L-A-G)
         if single and run: out[-1] += x
         else: out.append(x)
         run = single or (run and single)

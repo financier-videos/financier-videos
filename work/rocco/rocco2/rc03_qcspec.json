@@ -1,0 +1,46 @@
+{
+ "format": "short",
+ "look": "rocco2",
+ "scenes": [
+  {
+   "text": "A box you never ordered. Inside? Just a QR code.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc4/sunset.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Ooh! A free prize?",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc4/sunset.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Don't scan it.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc4/sunset.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Keep the box. Change your shopping passwords.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc4/sunset.mp4"
+    }
+   ]
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "uaV36whB6H8 \u2014 'tekin narsa' \u2192 bitta zararsiz harakat (skan) xavf; 'Free?!' reaksiyasi",
+  "6agufKA2ZQY \u2014 mutaxassis darhol to'xtatadi ('Don't...'), 2 qadamli himoya",
+  "ftA18KGBrwM \u2014 YANGI: 13\u201320 s mikro, oxiri boshiga ulanadi (loop)"
+ ]
+}

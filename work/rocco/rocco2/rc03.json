@@ -1,0 +1,143 @@
+{
+ "id": "RC-03",
+ "title": "A QR Code in a Box You Never Ordered?",
+ "structure": "micro 'if you see this' (13-20 s), loop",
+ "tail": 1.2,
+ "hot": [
+  "QR",
+  "SCAN",
+  "BOX",
+  "PASSWORDS"
+ ],
+ "lines": [
+  [
+   "R",
+   "[deadpan] A box you never ordered. Inside? Just a QR code."
+  ],
+  [
+   "P",
+   "[excited] Ooh! A free prize?"
+  ],
+  [
+   "R",
+   "[firm] Don't scan it."
+  ],
+  [
+   "R",
+   "[calm] Keep the box. Change your shopping passwords."
+  ]
+ ],
+ "shots": [
+  {
+   "line": 0,
+   "from": 0,
+   "kind": "box",
+   "bg": "/tmp/fin/bg/rc4/sunset.mp4",
+   "bright": 1.2,
+   "blur": 2,
+   "hook": "A BOX YOU NEVER ORDERED?",
+   "open_word": "inside",
+   "qr_word": "qr",
+   "r": "sideeye",
+   "label": "TO: YOU"
+  },
+  {
+   "line": 1,
+   "from": 0,
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc4/sunset.mp4",
+   "bg_start": 3,
+   "bright": 1.2,
+   "blur": 1,
+   "p": "happy",
+   "r": "sideeye"
+  },
+  {
+   "line": 2,
+   "from": 0,
+   "kind": "box",
+   "bg": "/tmp/fin/bg/rc4/sunset.mp4",
+   "bg_start": 5,
+   "bright": 1.2,
+   "blur": 2,
+   "open_at": -1,
+   "qr_at": -1,
+   "block_at": 0.15,
+   "penny": true,
+   "p": "nervous",
+   "r": "point",
+   "act": "deadpan_sideeye",
+   "act_at": 0.0,
+   "act_len": 0.9
+  },
+  {
+   "line": 3,
+   "from": 0,
+   "kind": "store",
+   "bg": "/tmp/fin/bg/rc4/sunset.mp4",
+   "bg_start": 7,
+   "bright": 1.2,
+   "blur": 5,
+   "l1": "KEEP THE BOX.",
+   "l2": "CHANGE PASSWORDS",
+   "r": "thumbsup"
+  },
+  {
+   "line": 3,
+   "from": 1.0,
+   "kind": "box",
+   "bg": "/tmp/fin/bg/rc4/sunset.mp4",
+   "bright": 1.2,
+   "blur": 2,
+   "open_at": 0.3,
+   "qr_at": 0.6,
+   "r": "sideeye",
+   "label": "TO: YOU"
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "impact",
+   "gain": 0.25
+  },
+  {
+   "line": 0,
+   "word": "inside",
+   "name": "whoosh",
+   "gain": 0.3
+  },
+  {
+   "line": 0,
+   "word": "qr",
+   "name": "pop",
+   "gain": 0.35
+  },
+  {
+   "line": 1,
+   "frac": 0.0,
+   "name": "ding",
+   "gain": 0.2
+  },
+  {
+   "line": 2,
+   "frac": 0.1,
+   "name": "buzzer",
+   "gain": 0.25
+  },
+  {
+   "line": 3,
+   "frac": 0.1,
+   "name": "ding",
+   "gain": 0.2
+  }
+ ],
+ "sources": "FTC consumer alert on unordered packages with QR codes (brushing scams)",
+ "footage": "Pixabay: Shayea_Kim",
+ "benchmarks": [
+  "uaV36whB6H8 \u2014 'tekin narsa' \u2192 bitta zararsiz harakat (skan) xavf; 'Free?!' reaksiyasi",
+  "6agufKA2ZQY \u2014 mutaxassis darhol to'xtatadi ('Don't...'), 2 qadamli himoya",
+  "ftA18KGBrwM \u2014 YANGI: 13\u201320 s mikro, oxiri boshiga ulanadi (loop)"
+ ]
+}

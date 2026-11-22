@@ -1,0 +1,489 @@
+{
+ "id": "RC-01",
+ "title": "Scammer Calls a Detective. Big Mistake.",
+ "structure": "scam-bait call: detective spells a trap",
+ "tail": 2.4,
+ "hot": [
+  "BRENDA",
+  "SECURE",
+  "STEAL",
+  "SAFE",
+  "FLAG",
+  "BANK"
+ ],
+ "lines": [
+  [
+   "S",
+   "[sweet] [fast] Hello! This is Brenda. From your bank."
+  ],
+  [
+   "R",
+   "[deadpan] Which bank?"
+  ],
+  [
+   "S",
+   "[pause] ...Yours."
+  ],
+  [
+   "R",
+   "[deadpan] Name it."
+  ],
+  [
+   "S",
+   "[nervous] The... big one. With the... money."
+  ],
+  [
+   "P",
+   "[whispering] [excited] Ooh! I have that one!"
+  ],
+  [
+   "R",
+   "[whispering] Shh."
+  ],
+  [
+   "S",
+   "[fast] Sir, there's fraud on your account! I can steal... I mean, SECURE your money. Just move it to a safe account!"
+  ],
+  [
+   "R",
+   "[calm] Sure. Write down my account number."
+  ],
+  [
+   "S",
+   "[greedy] Ready!"
+  ],
+  [
+   "R",
+   "[slowly] R... E... D..."
+  ],
+  [
+   "S",
+   "[eager] Mm-hm!"
+  ],
+  [
+   "R",
+   "[slowly] F... L... A... G."
+  ],
+  [
+   "S",
+   "[confused] Red... flag. Wait, WHAT?!"
+  ],
+  [
+   "R",
+   "[deadpan] Read it again. Slowly."
+  ],
+  [
+   "S",
+   "[panicked] Uh... bad connection!"
+  ],
+  [
+   "P",
+   "[sad] Aww. I liked Brenda."
+  ],
+  [
+   "R",
+   "[deadpan] Real banks never ask you to move your money. Hang up. Call the number on your card."
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "call",
+   "bottom": "r",
+   "bg": "/tmp/fin/bg/rc5/laptoptable.mp4",
+   "bg2": "/tmp/fin/bg/rc5/boxroom.mp4",
+   "bright": 1.1,
+   "bright2": 1.25,
+   "caller": "CALLER: \"BRENDA\"",
+   "line": 0,
+   "from": 0,
+   "hook": "SCAMMER CALLS A DETECTIVE",
+   "s": "sly",
+   "r": "sideeye",
+   "bg2_start": 0
+  },
+  {
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc5/boxroom.mp4",
+   "bright": 1.25,
+   "r_peek": true,
+   "line": 0,
+   "from": 0.55,
+   "s": "sly",
+   "r": "sideeye",
+   "msg": "\"BRENDA\"",
+   "msg_at": 0.1,
+   "bg_start": 0
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/tmp/fin/bg/rc5/laptoptable.mp4",
+   "bright": 1.1,
+   "blur": 1,
+   "line": 1,
+   "from": 0,
+   "r": "sideeye"
+  },
+  {
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc5/boxroom.mp4",
+   "bright": 1.25,
+   "r_peek": true,
+   "line": 2,
+   "from": 0,
+   "s": "sly",
+   "r": "smug",
+   "msg": "...YOURS.",
+   "msg_at": 0.3,
+   "bg_start": 0.4
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/tmp/fin/bg/rc5/laptoptable.mp4",
+   "bright": 1.1,
+   "blur": 1,
+   "line": 3,
+   "from": 0,
+   "bg_start": 3,
+   "r": "smug",
+   "act": "deadpan_sideeye",
+   "act_at": 0.0,
+   "act_len": 0.9
+  },
+  {
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc5/boxroom.mp4",
+   "bright": 1.25,
+   "r_peek": true,
+   "line": 4,
+   "from": 0,
+   "s": "panic",
+   "r": "smug",
+   "msg": "THE BIG ONE?!",
+   "msg_word": "big",
+   "bg_start": 0.8
+  },
+  {
+   "kind": "two",
+   "bg": "/tmp/fin/bg/rc5/laptoptable.mp4",
+   "bg_start": 5,
+   "bright": 1.1,
+   "blur": 1,
+   "p": "happy",
+   "r": "sideeye",
+   "line": 5,
+   "from": 0
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/tmp/fin/bg/rc5/laptoptable.mp4",
+   "bright": 1.1,
+   "blur": 1,
+   "line": 6,
+   "from": 0,
+   "bg_start": 6,
+   "r": "sideeye",
+   "act": "deadpan_sideeye",
+   "act_at": 0.0,
+   "act_len": 0.8
+  },
+  {
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc5/boxroom.mp4",
+   "bright": 1.25,
+   "r_peek": true,
+   "line": 7,
+   "from": 0,
+   "s": "sly",
+   "r": "sideeye",
+   "bg_start": 0
+  },
+  {
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc5/boxroom.mp4",
+   "bright": 1.25,
+   "r_peek": true,
+   "line": 7,
+   "from": 0.45,
+   "s": "panic",
+   "r": "smug",
+   "msg": "STEAL... SECURE!",
+   "msg_at": 0.0,
+   "bg_start": 0.4
+  },
+  {
+   "kind": "call",
+   "bottom": "r",
+   "bg": "/tmp/fin/bg/rc5/laptoptable.mp4",
+   "bg2": "/tmp/fin/bg/rc5/boxroom.mp4",
+   "bright": 1.1,
+   "bright2": 1.25,
+   "caller": "CALLER: \"BRENDA\"",
+   "line": 7,
+   "from": 0.75,
+   "s": "sly",
+   "r": "smug",
+   "p_whisper": true,
+   "p": "nervous",
+   "bg2_start": 0
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/tmp/fin/bg/rc5/laptoptable.mp4",
+   "bright": 1.1,
+   "blur": 1,
+   "line": 8,
+   "from": 0,
+   "bg_start": 8,
+   "r": "smug"
+  },
+  {
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc5/boxroom.mp4",
+   "bright": 1.25,
+   "r_peek": true,
+   "line": 9,
+   "from": 0,
+   "s": "sly",
+   "r": "smug",
+   "msg": "READY!",
+   "msg_at": 0.1,
+   "bg_start": 0.8
+  },
+  {
+   "kind": "insert",
+   "bg": "/tmp/fin/bg/rc5/notepad.mp4",
+   "bright": 1.15,
+   "card": "R... E... D...",
+   "who": "r",
+   "rx": 0.76,
+   "r": "smug",
+   "line": 10,
+   "from": 0
+  },
+  {
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc5/boxroom.mp4",
+   "bright": 1.25,
+   "r_peek": true,
+   "line": 11,
+   "from": 0,
+   "s": "sly",
+   "r": "smug",
+   "bg_start": 0
+  },
+  {
+   "kind": "insert",
+   "bg": "/tmp/fin/bg/rc5/notepad.mp4",
+   "bg_start": 5,
+   "bright": 1.15,
+   "card": "R-E-D  F-L-A-G",
+   "who": "r",
+   "rx": 0.76,
+   "r": "smug",
+   "line": 12,
+   "from": 0
+  },
+  {
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc5/boxroom.mp4",
+   "bright": 1.25,
+   "r_peek": true,
+   "line": 13,
+   "from": 0,
+   "s": "panic",
+   "r": "smug",
+   "msg": "RED FLAG?!",
+   "msg_word": "flag",
+   "bg_start": 0.4
+  },
+  {
+   "kind": "flags",
+   "bg": "/tmp/fin/bg/rc5/laptoptable.mp4",
+   "bright": 1.1,
+   "blur": 2,
+   "r": "smug",
+   "n": 1,
+   "n_prev": 0,
+   "pop_at": 0.0,
+   "line": 13,
+   "from": 0.6
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/tmp/fin/bg/rc5/laptoptable.mp4",
+   "bright": 1.1,
+   "blur": 1,
+   "line": 14,
+   "from": 0,
+   "bg_start": 2,
+   "r": "smug",
+   "act": "deadpan_sideeye",
+   "act_at": 0.2,
+   "act_len": 0.9
+  },
+  {
+   "kind": "call",
+   "bottom": "r",
+   "bg": "/tmp/fin/bg/rc5/laptoptable.mp4",
+   "bg2": "/tmp/fin/bg/rc5/boxroom.mp4",
+   "bright": 1.1,
+   "bright2": 1.25,
+   "caller": "CALL ENDED",
+   "line": 15,
+   "from": 0,
+   "s": "panic",
+   "r": "smug",
+   "msg": "*CLICK*",
+   "msg_at": 0.6,
+   "bg2_start": 0
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc5/laptoptable.mp4",
+   "bg_start": 4,
+   "bright": 1.1,
+   "blur": 1,
+   "p": "sad",
+   "r": "sideeye",
+   "line": 16,
+   "from": 0
+  },
+  {
+   "kind": "store",
+   "bg": "/tmp/fin/bg/rc5/laptoptable.mp4",
+   "bright": 1.1,
+   "blur": 5,
+   "l1": "REAL BANKS NEVER SAY",
+   "l2": "MOVE YOUR MONEY",
+   "r": "point",
+   "line": 17,
+   "from": 0
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/tmp/fin/bg/rc5/laptoptable.mp4",
+   "bright": 1.1,
+   "blur": 1,
+   "line": 17,
+   "from": 0.55,
+   "bg_start": 7,
+   "r": "thumbsup"
+  },
+  {
+   "kind": "end",
+   "bg": "/tmp/fin/bg/rc5/laptoptable.mp4",
+   "bright": 1.1,
+   "blur": 3,
+   "l1": "\"MOVE IT TO A SAFE ACCOUNT\"",
+   "l2": "= SCAM",
+   "l3": "Send this to someone who answers every call.",
+   "line": 17,
+   "from": 1.0
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "ding",
+   "gain": 0.3
+  },
+  {
+   "line": 2,
+   "frac": 0.0,
+   "name": "crickets",
+   "gain": 0.25
+  },
+  {
+   "line": 4,
+   "word": "money",
+   "name": "boing",
+   "gain": 0.3
+  },
+  {
+   "line": 6,
+   "frac": 0.0,
+   "name": "scratch",
+   "gain": 0.2
+  },
+  {
+   "line": 7,
+   "word": "secure",
+   "name": "whip",
+   "gain": 0.3
+  },
+  {
+   "line": 9,
+   "frac": 0.0,
+   "name": "cash",
+   "gain": 0.25
+  },
+  {
+   "line": 10,
+   "word": "r",
+   "name": "pop",
+   "gain": 0.3
+  },
+  {
+   "line": 10,
+   "word": "e",
+   "name": "pop",
+   "gain": 0.3
+  },
+  {
+   "line": 10,
+   "word": "d",
+   "name": "pop",
+   "gain": 0.3
+  },
+  {
+   "line": 12,
+   "word": "f",
+   "name": "pop",
+   "gain": 0.3
+  },
+  {
+   "line": 12,
+   "word": "l",
+   "name": "pop",
+   "gain": 0.3
+  },
+  {
+   "line": 12,
+   "word": "a",
+   "name": "pop",
+   "gain": 0.3
+  },
+  {
+   "line": 12,
+   "word": "g",
+   "name": "pop",
+   "gain": 0.3
+  },
+  {
+   "line": 13,
+   "word": "flag",
+   "name": "buzzer",
+   "gain": 0.25
+  },
+  {
+   "line": 15,
+   "frac": 0.7,
+   "name": "wahwah",
+   "gain": 0.35
+  },
+  {
+   "line": 17,
+   "frac": 0.1,
+   "name": "ding",
+   "gain": 0.25
+  }
+ ],
+ "sources": "FTC impostor-scam guidance: banks never tell you to move money to a 'safe account'; hang up and call the number on your card",
+ "footage": "Pexels: KATRIN BOLOVTSOVA, cottonbro studio, Santiago Pena Bossano",
+ "benchmarks": [
+  "N09VNM2BOD8 \u2014 YANGI: harflab aytish tuzog'i \u2014 firibgar o'z haqoratini o'qiydi (R-E-D F-L-A-G)",
+  "vcPnUMJNdkw \u2014 qo'ng'iroq skiti, har ~8 s zarba, firibgar asabiylashib trubka tashlaydi",
+  "JMI-iIpHdt8 \u2014 firibgar noto'g'ri odamga (detektivga) qo'ng'iroq qiladi; firibgar kulgi obyekti"
+ ]
+}

@@ -1,0 +1,67 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    49.9 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.9 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.4 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -14.9 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 9.5 Mbit/s, 44.2s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 1.0,\n \"missing\": [],\n \"extra\": [],\n \"heard\": \"Hello, this is Brenda from your bank. Which bank? Yours? Name it. The big one with the money. Ooh, I have that one! Sir, there's fraud on your account. I can steal. I mean, secure your money. Just move it to a safe account. Sure, write down my account number. Ready! R E D Mm-hmm F L A G Red Flag Wait what? Read it again Slowly A bad connection I liked Brenda Real banks never ask you to move your money Hang up, call the number on your card\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "60s range=14.3 st  gap=0.55  ok  | R... E... D...\n12  24.72s range=14.0 st  gap=0.01  ok  | Mm-hm!\n13  25.28s range= 9.7 st  gap=0.5  ok  | F... L... A... G.\n14  28.88s range=21.2 st  gap=0.4  ok  | Red... flag. Wait, WHAT?!\n15  31.52s range=18.1 st  gap=0.38  ok  | Read it again. Slowly.\n16  33.36s range= 9.5 st  gap=0.21  ok  | Uh... bad connection!\n17  35.20s range=28.2 st  gap=0.25  ok  | Aww. I liked Brenda.\n18  37.28s range=14.0 st  gap=0.4  ok  | Real banks never ask you to move your money. Hang up. Call t\n19  41.84s range=   - st  gap=-  ok  | \n{\"median_f0\": 250.1, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 90"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/rocco/rocco2/rc01_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "WARN",
+  "note": "FAIL  0.78  (layout 0.81, palette 0.77, tone 0.75)  vs rocco_rc03_qr_box.mp4\nFAIL  0.72  (layout 0.88, palette 0.49, tone 0.79)  vs rocco_rc05_plays_dumb.mp4\nFAIL  0.79  (layout 0.92, palette 0.58, tone 0.84)  vs rocco_rc02_wrong_person.mp4\nFAIL  0.86  (layout 0.92, palette 0.78, tone 0.87)  vs rocco_rc04c_free_gta_pc.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "24 hard cuts (ffmpeg scene>0.22) in 44.2 s = 1.8 s/cut (need >= 22); engine planned 24"
+ },
+ "12_script": {
+  "status": "PASS",
+  "note": "rc01_qcspec.json                   words  92 scenes 19 broll 18 look rocco2    line2 \"which\" end \"\"\nrc03_qcspec.json                   words  24 scenes  5 broll 4 look rocco2    line2 \"ooh\" end \"\"\nrc05_qcspec.json                   words 119 scenes 20 broll 19 look rocco2    line2 \"oh\" end \"\"\nrc02_qcspec.json                   words 137 scenes 21 broll 19 look rocco2    line2 \"don't\" end \"\"\nSCRIPT_CHECK: PASS"
+ },
+ "14_empty_panel": {
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 14% of the frame (limit 15%)"
+ },
+ "15_competitors": {
+  "status": "PASS",
+  "note": "3 fresh benchmark(s) ['JMI-iIpHdt8', 'N09VNM2BOD8', 'vcPnUMJNdkw'] (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: competitor_watch, rocco_winner_moments, rocco_preflight, vidiq_find_broll (Pexels 3 klip), ElevenLabs text-to-dialogue, empty_check, qc_gate; ishlatilmadi: footage_bank (mos joy yo'q edi)"
+ },
+ "verdict": "PASS"
+}

@@ -1,0 +1,158 @@
+{
+ "format": "short",
+ "look": "rocco2",
+ "scenes": [
+  {
+   "text": "Hello! This is Brenda. From your bank.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc5/laptoptable.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Which bank?",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc5/laptoptable.mp4"
+    }
+   ]
+  },
+  {
+   "text": "...Yours.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc5/boxroom.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Name it.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc5/laptoptable.mp4"
+    }
+   ]
+  },
+  {
+   "text": "The... big one. With the... money.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc5/boxroom.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Ooh! I have that one!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc5/laptoptable.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Shh.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc5/laptoptable.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Sir, there's fraud on your account! I can steal... I mean, SECURE your money. Just move it to a safe account!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc5/boxroom.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Sure. Write down my account number.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc5/laptoptable.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Ready!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc5/boxroom.mp4"
+    }
+   ]
+  },
+  {
+   "text": "R... E... D...",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc5/notepad.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Mm-hm!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc5/boxroom.mp4"
+    }
+   ]
+  },
+  {
+   "text": "F... L... A... G.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc5/notepad.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Red... flag. Wait, WHAT?!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc5/boxroom.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Read it again. Slowly.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc5/laptoptable.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Uh... bad connection!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc5/laptoptable.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Aww. I liked Brenda.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc5/laptoptable.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Real banks never ask you to move your money. Hang up. Call the number on your card.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/rc5/laptoptable.mp4"
+    }
+   ]
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "N09VNM2BOD8 \u2014 YANGI: harflab aytish tuzog'i \u2014 firibgar o'z haqoratini o'qiydi (R-E-D F-L-A-G)",
+  "vcPnUMJNdkw \u2014 qo'ng'iroq skiti, har ~8 s zarba, firibgar asabiylashib trubka tashlaydi",
+  "JMI-iIpHdt8 \u2014 firibgar noto'g'ri odamga (detektivga) qo'ng'iroq qiladi; firibgar kulgi obyekti"
+ ]
+}

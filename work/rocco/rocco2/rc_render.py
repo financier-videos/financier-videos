@@ -352,8 +352,11 @@ def compose(shot, lt, t, talkR, talkP, extra, talkS=0.0, fimg=None, fimg2=None):
         top = (fimg2 if fimg2 is not None else setbg("sky")).crop((0, int(H * 0.15), W, int(H * 0.65))).resize((W, H // 2))
         im.alpha_composite(top.convert("RGBA"), (0, 0))
         slick(im, W * 0.5, H * 0.27, 440, shot.get("s", "sly"), talkS, t)
-        penny(im, W * (0.36 if shot.get("r_whisper") else 0.5), H * 0.76, 470, moodP, talkP, t)
-        if shot.get("r_whisper"):  # Rocco coaching Penny from the side
+        if shot.get("bottom") == "r":  # the detective is the one being called (RC-01)
+            rocco(im, W * 0.58, H * 1.0, 900, moodR, talkR, t, act, act_t)
+            if shot.get("p_whisper"): penny(im, W * 0.18, H * 0.84, 300, moodP, talkP, t)
+        else: penny(im, W * (0.36 if shot.get("r_whisper") else 0.5), H * 0.76, 470, moodP, talkP, t)
+        if shot.get("r_whisper") and shot.get("bottom") != "r":  # Rocco coaching Penny from the side
             rocco(im, W * 0.80, H * 1.0, 760, moodR, talkR, t, act, act_t)
             if talkR > 0.05: txt(im, (W * 0.80, H * 0.60), "psst...", 54, (255, 226, 60), sw=8, ang=6)
         d = ImageDraw.Draw(im); by = H // 2
@@ -361,6 +364,33 @@ def compose(shot, lt, t, talkR, talkP, extra, talkS=0.0, fimg=None, fimg2=None):
         d.ellipse([70, by - 30, 130, by + 30], fill=(52, 199, 89)); d.text((160, by), shot.get("caller", 'CALLER: "YOUR BANK"'), font=F(46), fill=(232, 232, 234), anchor="lm")
         secs = int(t - shot.get("_call_t0", 0)); d.text((W - 80, by), f"{secs // 60:02d}:{secs % 60:02d}", font=F(46), fill=(232, 232, 234), anchor="rm")
         if shot.get("msg") and lt >= shot.get("msg_at", 0): txt(im, (W * 0.5, H * 0.08), shot["msg"], 84, (255, 226, 60), sw=12, ang=-4)
+    elif k == "box":  # our own prop: an unordered parcel opens, a QR code pops out (RC-03, brushing scam)
+        d = ImageDraw.Draw(im); cx, by = W * 0.5, H * 0.66; bw, bh = 520, 330
+        op = min(1.0, max(0.0, (lt - shot.get("open_at", 99)) / 0.35))
+        d.ellipse([cx - bw * 0.62, by - 30, cx + bw * 0.62, by + 40], fill=(0, 0, 0, 70))
+        if op > 0.3 and lt >= shot.get("qr_at", 99):  # QR rises out of the box
+            q = min(1.0, (lt - shot["qr_at"]) / 0.3); qs = 300; qx, qy = cx - qs / 2, by - bh - 40 - qs * q
+            d.rectangle([qx - 16, qy - 16, qx + qs + 16, qy + qs + 16], fill=(236, 236, 236), outline=INK, width=6)
+            import random as _r; rr = _r.Random(7); cell = qs / 21
+            for gy in range(21):
+                for gx in range(21):
+                    fin = any(0 <= gx - ox < 7 and 0 <= gy - oy < 7 for ox, oy in ((0, 0), (14, 0), (0, 14)))
+                    if fin:
+                        lx, ly = [(gx - ox, gy - oy) for ox, oy in ((0, 0), (14, 0), (0, 14)) if 0 <= gx - ox < 7 and 0 <= gy - oy < 7][0]
+                        on = lx in (0, 6) or ly in (0, 6) or (2 <= lx <= 4 and 2 <= ly <= 4)
+                    else: on = rr.random() < 0.5
+                    if on: d.rectangle([qx + gx * cell, qy + gy * cell, qx + (gx + 1) * cell, qy + (gy + 1) * cell], fill=INK)
+            if lt >= shot.get("block_at", 99):  # Rocco says no: red ban sign over the code
+                d.ellipse([qx - 40, qy - 40, qx + qs + 40, qy + qs + 40], outline=(230, 40, 40), width=26)
+                d.line([(qx - 10, qy + qs + 10), (qx + qs + 10, qy - 10)], fill=(230, 40, 40), width=26)
+        d.rectangle([cx - bw / 2, by - bh, cx + bw / 2, by], fill=(196, 146, 92), outline=INK, width=8)  # box body
+        d.rectangle([cx - 40, by - bh, cx + 40, by], fill=(214, 186, 140))  # tape
+        fl = 140 * (1 - op) + 10
+        d.polygon([(cx - bw / 2, by - bh), (cx, by - bh), (cx - bw * 0.1 * op, by - bh - fl - 120 * op), (cx - bw / 2 - 90 * op, by - bh - fl * 0.2 - 60 * op)], fill=(178, 128, 76), outline=INK)
+        d.polygon([(cx + bw / 2, by - bh), (cx, by - bh), (cx + bw * 0.1 * op, by - bh - fl - 120 * op), (cx + bw / 2 + 90 * op, by - bh - fl * 0.2 - 60 * op)], fill=(178, 128, 76), outline=INK)
+        txt(im, (cx, by - bh * 0.45), shot.get("label", "TO: YOU"), 54, INK, sw=0)
+        if shot.get("penny"): penny(im, W * 0.20, H * 0.82, 330, moodP, talkP, t)
+        rocco(im, W * 0.82, H * 1.0, 760, moodR, talkR, t, act, act_t)
     elif k == "two":
         penny(im, W * 0.30, H * 0.60, 440, moodP, talkP, t)
         rocco(im, W * 0.70, H * 0.76, 700, moodR, talkR, t, act, act_t)
@@ -504,7 +534,7 @@ def main():
         if len(cur) == 3 or re.search(r"[.,!?…]$", w[0]) or (len(cur) and w is words[-1]): chunks.append(cur); cur = []
     if cur: chunks.append(cur)
     enc = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
-                            "-i", os.path.join(work, "mix.wav"), "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-maxrate", "12M", "-bufsize", "24M",
+                            "-i", os.path.join(work, "mix.wav"), "-c:v", "libx264", "-preset", "medium", "-crf", "14", "-maxrate", "14M", "-bufsize", "24M",
                             "-pix_fmt", "yuv420p", "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
                             "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-ar", "48000", "-ac", "2", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", out],
                            stdin=subprocess.PIPE)
