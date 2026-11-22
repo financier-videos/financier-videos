@@ -29,6 +29,9 @@ Shohjahon (2026-11-22): "Eng asosiysi har safar yangi va portlatadigan videolar 
 
 | 2026-11-22 | `oiMsxtYm5SI` | explicable TV — 634K, 543x | Rocco (3D) | animatsion "wrong number trap" | dramatik ironiya: tomoshabin 1-kadrdan firibgar politsiyaga qo'ng'iroq qilayotganini biladi; firibgar skriptini to'liq o'qiydi (OTP, 30 s, "jim gapiring"); burilish 1:00 da; firibgar "tarmoq yomon" → absurd chekinish ("Jesus loves you") — eng ko'p ulashilgan lahza |
 | 2026-11-22 | `s-nyFs1118A` | NAVYA — 2M, 1509x | Rocco (3D) | animatsion "ego trap" | firibgar qurbonni kamsitadi ("bu sen uchun emas") → qurbon g'ururi uchun 20x qimmatga sotib oladi; har savdolashuvga yangi kamsitish; 0 kesim, faqat aktyorlik; yakun — firibgarlar kuladi |
+| 2026-11-22 | `2IFK69bB4CE` | Zovi — 491K, 239x (3D, AI-labeled) | Rocco | firibgarlik = ertak (pump&dump shishalar) | narx sikli $20→$50→$300 montaj 0.8 s; raqamdan oldin mikro-pauza; oxirida 4-devorni buzish "Remember the stock market? Same story."; tun/bo'sh ko'cha + faqat shamol sukunati |
+| 2026-11-22 | `DfC5DUuTroA` | IG @apextoon_usa14 — 50.2M, 178x (3D) | Rocco | kichkina-yoqimli vs ulkan-xavfli slapstick | 0-soniyada harakat boshlangan; masshtab kontrasti; ~28 kesim/46 s; makro DoF; ovozsiz ham tushunarli |
+| 2026-11-22 | `pipandrue` (TikTok 7699859376038743304) | 6.7M, 14x (3D skit) | Rocco | 3 qahramon dialog, ikki burilish + tag | birinchi so'z 0.65 s; zarba setupdan 100–150 ms keyin; dahshatli satrdan oldin 0.4 s pauza; past rakurs + ECU mikro-zum; 'She's not dead.' tag |
 
 ## Keyingi video g'oyalari (yangi formatlar — hali ishlatilmagan)
 - **Rocco "Penny plays dumb"** (vcPnUMJNdkw formati): Slick "bank xodimi" bo'lib qo'ng'iroq qiladi; Penny Rocco maslahati bilan ataylab so'zma-so'z javob beradi (kod? → "1, 2, 3, 4..."), Slick asabiylashadi, oxiri absurd ("I'm a piggy bank, I don't HAVE a card"). Yakunda Rocco: "Real banks never ask for your code."

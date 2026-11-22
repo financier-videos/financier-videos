@@ -2,7 +2,7 @@
  "id": "RC-08",
  "title": "\"It's Not for Piggy Banks\" - The VIP Scam",
  "structure": "ego trap (3D CAST, first episode)",
- "tail": 2.6,
+ "tail": 1.8,
  "style": "rocco3d",
  "hot": [
   "VIP",
@@ -67,7 +67,7 @@
   ],
   [
    "P",
-   "[realizing] Wait... he insulted me... to sell me?"
+   "[gasps] Wait... he insulted me... to SELL me?!"
   ],
   [
    "R",
@@ -91,7 +91,7 @@
    "kind": "cu_p",
    "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
    "blur": 1,
-   "p": "nervous",
+   "p": "angry",
    "r": "shocked",
    "hook": "SHE PAID $500 TO PROVE A POINT",
    "p_pose": "arms_up",
@@ -114,6 +114,20 @@
    "line": 1,
    "from": 0,
    "amb": "lair"
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_vip3d.jpg",
+   "s": "sly",
+   "s_pose": "shrug",
+   "amb": "lair",
+   "cam": {
+    "z": 1.3,
+    "push": 0.1,
+    "fy": 0.38
+   },
+   "line": 1,
+   "from": 0.3
   },
   {
    "kind": "split",
@@ -145,6 +159,20 @@
    "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
    "p": "shock",
    "r": "sideeye",
+   "amb": "room",
+   "line": 2,
+   "from": 0.78,
+   "cam": {
+    "z": 1.3,
+    "push": 0.05,
+    "fy": 0.42
+   }
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
    "p_pose": "arms_up",
    "line": 3,
    "from": 0,
@@ -166,7 +194,22 @@
   {
    "kind": "cu_p",
    "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
-   "p": "shock",
+   "p": "angry",
+   "r": "sideeye",
+   "p_pose": "arms_up",
+   "line": 4,
+   "from": 0.55,
+   "amb": "room",
+   "cam": {
+    "z": 1.2,
+    "push": 0.1,
+    "fy": 0.42
+   }
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "angry",
    "r": "sideeye",
    "line": 5,
    "from": 0
@@ -185,11 +228,33 @@
   {
    "kind": "cu_p",
    "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
-   "p": "nervous",
+   "p": "shock",
+   "r": "sideeye",
+   "line": 6,
+   "from": 0.72,
+   "amb": "room",
+   "cam": {
+    "z": 1.35,
+    "push": 0.06,
+    "fy": 0.42
+   }
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "angry",
    "r": "sideeye",
    "p_pose": "point",
    "line": 7,
    "from": 0
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "r": "sideeye",
+   "amb": "room",
+   "line": 7,
+   "from": 0.62
   },
   {
    "kind": "cu_r",
@@ -216,6 +281,14 @@
   {
    "kind": "cu_r",
    "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "r": "sideeye",
+   "amb": "room",
+   "line": 9,
+   "from": 0.6
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
    "r": "smug",
    "line": 10,
    "from": 0
@@ -229,6 +302,20 @@
    "from": 0.55
   },
   {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "r": "smug",
+   "r_pose": "point",
+   "amb": "room",
+   "cam": {
+    "z": 1.25,
+    "push": 0.08,
+    "fy": 0.4
+   },
+   "line": 10,
+   "from": 0.82
+  },
+  {
    "kind": "slick",
    "bg": "/home/user/financier-videos/assets/toon3d/slick_vip3d.jpg",
    "s": "panic",
@@ -238,6 +325,20 @@
    "line": 11,
    "from": 0,
    "amb": "lair"
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "angry",
+   "r": "sideeye",
+   "amb": "room",
+   "cam": {
+    "z": 1.25,
+    "push": 0.08,
+    "fy": 0.42
+   },
+   "line": 11,
+   "from": 0.6
   },
   {
    "kind": "flags",
@@ -264,6 +365,15 @@
     "push": 0.06,
     "fy": 0.42
    }
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "r": "smug",
+   "r_pose": "point",
+   "amb": "room",
+   "line": 13,
+   "from": 0.72
   },
   {
    "kind": "store",
@@ -295,9 +405,23 @@
    "amb": "lair"
   },
   {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "sly",
+   "r": "smug",
+   "amb": "room",
+   "cam": {
+    "z": 1.3,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 15,
+   "from": 0.62
+  },
+  {
    "kind": "two",
    "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
-   "p": "happy",
+   "p": "sly",
    "r": "thumbsup",
    "line": 16,
    "from": 0,

@@ -130,8 +130,9 @@ def sprite(name, size):
 LIB3D = os.environ.get("FIN_ROCCO3D", "")  # e.g. /tmp/rocco3d_lib -> rocco/penny/slick drawn from 3D renders
 MAP3D = {"rocco": {"happy": "happy", "sideeye": "sly", "smug": "sly", "sad": "sad", "point": "happy", "thumbsup": "happy",
                    "shocked": "shock", "shock": "shock", "angry": "angry"},
-         "penny": {"happy": "happy", "shock": "shock", "sad": "sad", "hope": "relieved", "nervous": "sad"},
-         "slick": {"sly": "neutral", "panic": "shock", "laugh": "happy"}}
+         "penny": {"happy": "happy", "shock": "shock", "sad": "sad", "hope": "relieved", "nervous": "sad", "angry": "angry", "sly": "sly",
+                   "relieved": "relieved"},
+         "slick": {"sly": "sly", "panic": "shock", "laugh": "happy", "angry": "angry", "sad": "sad", "neutral": "neutral"}}
 _S3D = {}
 POSE_NOW = {}  # per-shot body poses: spec shot keys r_pose / p_pose / s_pose
 

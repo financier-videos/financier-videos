@@ -1,0 +1,126 @@
+{
+ "format": "short",
+ "look": "rocco2",
+ "scenes": [
+  {
+   "text": "FINE! Five hundred dollars! TAKE IT!",
+   "sticker": "SHE PAID $500 TO PROVE A POINT"
+  },
+  {
+   "text": "Psst. Exclusive investment club. Double your money in one week.",
+   "sticker": "30 SECONDS EARLIER..."
+  },
+  {
+   "text": "Oh, wait... it's not for piggy banks.",
+   "sticker": "\"NOT FOR PIGGY BANKS\""
+  },
+  {
+   "text": "EXCUSE me?!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "It's for SERIOUS investors. You could never afford the entry fee.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/slick_vip3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "How much?!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Five hundred. In gift cards. Today only.",
+   "sticker": "$500 IN GIFT CARDS"
+  },
+  {
+   "text": "I have five hundred dollars! I'll show you!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Penny. Red flag.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "He said I can't afford it!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "That's the trick. He insulted you so you'd want to prove him wrong.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Uh... the club closes in ten seconds!",
+   "sticker": "10... 9... 8..."
+  },
+  {
+   "text": "Guaranteed money. Gift cards. A countdown. Three red flags.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Wait... he insulted me... to SELL me?!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Exactly. Real investments never rush you, and never ask for gift cards.",
+   "sticker": "REAL INVESTMENTS"
+  },
+  {
+   "text": "Okay, okay! VIP discount! Four ninety-nine!",
+   "sticker": "$499?!"
+  },
+  {
+   "text": "Blocked.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Not again!",
+   "sticker": "NOT AGAIN!"
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "2IFK69bB4CE - Zovi 239x: scam as a fable, micro-pause before numbers, 4th-wall moral",
+  "DfC5DUuTroA - 50M 3D: scale contrast small vs big, action in frame 1, ~1.6 s/shot",
+  "pipandrue TikTok 6.7M: double twist + tag, 0.4 s pause before the shock line, ECU micro-zoom"
+ ]
+}
