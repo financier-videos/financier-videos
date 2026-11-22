@@ -105,3 +105,12 @@ Ishlab chiqaruvchi (vazifa/chat): HAR render va HAR post oldidan `git pull --reb
 - Instagram: RC-08 v2 https://www.instagram.com/reel/DgDHo3eiKfq/ , RC-09 https://www.instagram.com/reel/DgDOS3SDXeP/ , RC-10 https://www.instagram.com/reel/DgDObRCnA6f/ , RC-11 (publishing).
 - YouTube (Buffer, UTC): 23 14:30 RC-12 · 23 22:30 RC-10 · 24 14:30 RC-07 · 24 22:30 RC-06 (Black Friday, kept before 27-noy) · 25 14:30 RC-08 v2 · 25 22:30 RC-11 · 26 14:30 RC-09 (spaced from RC-05, same OTP topic) · 27 14:30 RC-02 · 27 22:30 RC-03 · 28 14:30 RC-01 (spaced from RC-09, same premise).
 | 2026-11-22 18:35 | vazifa sessiyasi (C) | Metricool limiti tugadi: 22-noy 13:00 ET BF vs CM (YT 437309502 / IG 437309531) ERROR "account limit"; keyingi postlar ham to'xtashi mumkin — Shohjahonga xabar yuborildi. results.md 22-noy (6,369), script_bank IKKI BARAVAR G-1/H-1/H-2 + SHOSHILINCH | QAYTA RENDER: YO'Q |
+
+## 2026-11-22 (tun, 3) — 10 Buck + 10 Rocco yangi formatlar (buyurtma: "10 xil still, 2 kunda YouTube")
+- Audit + competitor study: docs/audit_2026-11-22b.md, docs/formats_20_2026-11-22.md, docs/competitor_watch.md (+18 benchmarks).
+- fx_kinds.py: 15 graphic kinds (counter, scale, bars, line, quiz, receipt, grid, stamp, spend, chalk, kinetic, host, versus, pixel, flagvote); rc_render grades/brand/topline/cont.
+- Buck BK-01..10 (work/buck/b10): all qc_gate PASS. vidIQ YouTube drafts for 9 (work/buck/b10/vidiq_drafts.json); BK-02 draft creation denied by the permission classifier — not retried.
+- Rocco RC-13..22 (work/rocco/r10): RC-13..19, 21, 22 qc_gate PASS; RC-20 GPU re-render. vidIQ YouTube drafts for 9 (work/rocco/r10/vidiq_drafts.json).
+- Drafts are NOT published: vidIQ needs Shohjahon's explicit approval before vidiq_social_post_publish.
+- Blockers: Metricool brand 8198538 "account limit" (posts ERROR); Buffer Rocco YouTube 2/day + 10 queued (full).
+- 3-day results check: scheduled task trig_01CHbLDF445HyRJXjsK1DapK (25-noy 22:00 Toshkent).
