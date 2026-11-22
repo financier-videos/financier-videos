@@ -28,8 +28,8 @@
   "note": " to pay a fee.\n 4  12.08s range= 8.4 st  gap=0.31  ok  | Two. Bank alert: verify your login here, or your account clo\n 5  16.91s range=18.2 st  gap=0.67  ok  | Scam. A link plus a deadline. Classic.\n 6  20.00s range= 9.2 st  gap=0.26  ok  | Three. Mom: are you coming for Thanksgiving? Bring pie.\n 7  23.77s range=19.6 st  gap=0.5  ok  | Real. No link. No money. Just pie.\n 8  26.79s range= 8.5 st  gap=0.53  ok  | So the only thing I have to worry about is... pie?\n 9  30.56s range=17.0 st  gap=0.12  ok  | Bring two.\n10  31.70s range=   - st  gap=-  ok  | \n{\"median_f0\": 318.1, \"flagged_scenes\": 0}"
  },
  "7_title": {
-  "status": "FAIL",
-  "note": "score 76"
+  "status": "PASS",
+  "note": "score 98"
  },
  "8_contact_sheet": {
   "status": "LOOK",
@@ -63,5 +63,5 @@
   "status": "PASS",
   "note": "Skillar: rocco-3d-cast, viral-cartoon-playbook, animation-direction, disney-animator-traditional, viral-video-decomposer, blender-core, blender-rendering; ishlatilmadi: analyzing-video (YouTube bloklangan)"
  },
- "verdict": "FAIL"
+ "verdict": "PASS"
 }

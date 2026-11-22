@@ -192,7 +192,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
+   "bg": "/tmp/fin/bg/bank/calendar_flip.mp4",
    "bg_start": 2.3999999999999995,
    "dim": 20
   },
@@ -258,7 +258,7 @@
    },
    "line": 4,
    "from": 0,
-   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
+   "bg": "/tmp/fin/bg/bank/calendar_flip.mp4",
    "bg_start": 2.7
   },
   {
@@ -291,7 +291,7 @@
    },
    "line": 4,
    "from": 0.444,
-   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
+   "bg": "/tmp/fin/bg/bank/calendar_flip.mp4",
    "bg_start": 2.7,
    "cont": true,
    "_auto": true,
@@ -345,7 +345,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
+   "bg": "/tmp/fin/bg/bank/calendar_flip.mp4",
    "bg_start": 1.5999999999999979,
    "dim": 20,
    "prop": "109,514 YRS"

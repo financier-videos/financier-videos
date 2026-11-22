@@ -5,7 +5,7 @@
  },
  "1_platform_check": {
   "status": "PASS",
-  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    32.0 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -15.1 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -3.8 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    32.9 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -15.2 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.4 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
  },
  "2_loudness": {
   "status": "PASS",
@@ -17,15 +17,15 @@
  },
  "4_export": {
   "status": "PASS",
-  "note": "h264 High, 9.1 Mbit/s, 29.6s, stereo"
+  "note": "h264 High, 9.0 Mbit/s, 30.6s, stereo"
  },
  "5_voice_check": {
-  "status": "FAIL",
-  "note": "{\n \"rc\": 1,\n \"match\": 0.946,\n \"rechecked_ok\": [],\n \"missing\": [\n  \"pay now in\",\n  \"i\"\n ],\n \"extra\": [\n  \"pain owing\"\n ],\n \"heard\": \"IRS agent, you owe back taxes. Pain-owing gift cards or you go to jail. Oh dear, gift cards? Which ones, Sonny? Big ones! $500! Today! Let me find my glasses and my badge. Wait, a badge. Detective Rocco, fraud unit. I was just leaving. The IRS doesn't take gift cards, and it doesn't call to threaten jail. Not again.\"\n}"
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 1.0,\n \"rechecked_ok\": [],\n \"missing\": [],\n \"extra\": [],\n \"heard\": \"IRS agent! You owe back taxes! Pay now! In gift cards! Or you go to jail! Oh dear! Gift cards! I have some somewhere, Sonny. Big ones! $500! Today! Let me find my glasses... and my badge. Wait! A badge. Detective Rocco, fraud unit. I was just leaving. The IRS doesn't take gift cards, and it doesn't call to threaten jail. Not again.\"\n}"
  },
  "6_prosody": {
-  "status": "FAIL",
-  "note": "y?\n 3   8.75s range= 9.4 st  gap=0.46  ok  | Big ones! Five hundred dollars! Today!\n 4  12.00s range=19.4 st  gap=0.74  ok  | Let me find my glasses... and my badge.\n 5  15.47s range= 8.3 st  gap=0.42  ok  | Wait. A... badge.\n 6  18.69s range=14.6 st  gap=0.27  ok  | Detective Rocco. Fraud Unit.\n 7  20.95s range=13.1 st  gap=0.12  ok  | I... I was just leaving!\n 8  22.46s range=12.5 st  gap=0.4  ok  | The IRS doesn't take gift cards. And it doesn't call to thre\n 9  26.24s range= 6.5 st  gap=0.01  ok  | Not again!\n10  28.05s range=   - st  gap=-  ok  | \n{\"median_f0\": 251.5, \"flagged_scenes\": 1}"
+  "status": "PASS",
+  "note": " sonny.\n 3  11.25s range= 7.8 st  gap=0.51  ok  | Big ones! Five hundred dollars! Today!\n 4  14.41s range=19.1 st  gap=0.63  ok  | Let me find my glasses... and my badge.\n 5  17.74s range=14.7 st  gap=0.47  ok  | Wait. A... badge.\n 6  20.42s range=16.6 st  gap=0.3  ok  | Detective Rocco. Fraud Unit.\n 7  22.61s range= 7.1 st  gap=0.05  ok  | I was just leaving!\n 8  23.52s range=13.7 st  gap=0.39  ok  | The IRS doesn't take gift cards. And it doesn't call to thre\n 9  27.29s range= 7.1 st  gap=0.04  ok  | Not again!\n10  29.03s range=   - st  gap=-  ok  | \n{\"median_f0\": 255.4, \"flagged_scenes\": 0}"
  },
  "7_title": {
   "status": "PASS",
@@ -41,19 +41,19 @@
  },
  "10_look": {
   "status": "WARN",
-  "note": "FAIL  0.93  (layout 0.98, palette 0.88, tone 0.89)  vs rocco_rc12_wrong_piggy_3d.mp4\nFAIL  0.77  (layout 0.94, palette 0.53, tone 0.81)  vs rocco_rc11_romance_coin_3d.mp4\nFAIL  0.82  (layout 0.93, palette 0.64, tone 0.92)  vs rocco_rc10_free_tv_3d.mp4\nFAIL  0.79  (layout 0.92, palette 0.69, tone 0.67)  vs rocco_rc09_fraud_unit_3d.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+  "note": "FAIL  0.92  (layout 0.97, palette 0.88, tone 0.87)  vs rocco_rc12_wrong_piggy_3d.mp4\nFAIL  0.76  (layout 0.94, palette 0.53, tone 0.79)  vs rocco_rc11_romance_coin_3d.mp4\nFAIL  0.82  (layout 0.93, palette 0.64, tone 0.91)  vs rocco_rc10_free_tv_3d.mp4\nFAIL  0.79  (layout 0.93, palette 0.69, tone 0.67)  vs rocco_rc09_fraud_unit_3d.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
  },
  "11_pacing": {
   "status": "PASS",
-  "note": "18 hard cuts (ffmpeg scene>0.22) in 29.6 s = 1.6 s/cut (need >= 14); engine planned 18"
+  "note": "18 hard cuts (ffmpeg scene>0.22) in 30.6 s = 1.7 s/cut (need >= 15); engine planned 18"
  },
  "12_script": {
   "status": "PASS",
-  "note": "rc19_qcspec.json                   words  64 scenes 10 broll 9 look rocco2    line2 \"oh\" end \"\"\nrc12_qcspec.json                   words  51 scenes 11 broll 9 look rocco2    line2 \"slick\" end \"\"\nrc11_qcspec.json                   words  82 scenes 15 broll 8 look rocco2    line2 \"darling\" end \"\"\nrc10_qcspec.json                   words  82 scenes 14 broll 8 look rocco2    line2 \"in\" end \"\"\nrc09_qcspec.json                   words  81 scenes 13 broll 8 look rocco2    line2 \"good\" end \"\"\nSCRIPT_CHECK: PASS"
+  "note": "rc19_qcspec.json                   words  65 scenes 10 broll 9 look rocco2    line2 \"oh\" end \"\"\nrc12_qcspec.json                   words  51 scenes 11 broll 9 look rocco2    line2 \"slick\" end \"\"\nrc11_qcspec.json                   words  82 scenes 15 broll 8 look rocco2    line2 \"darling\" end \"\"\nrc10_qcspec.json                   words  82 scenes 14 broll 8 look rocco2    line2 \"in\" end \"\"\nrc09_qcspec.json                   words  81 scenes 13 broll 8 look rocco2    line2 \"good\" end \"\"\nSCRIPT_CHECK: PASS"
  },
  "14_empty_panel": {
   "status": "PASS",
-  "note": "PASS: largest one-colour flat area 4% of the frame (limit 20%)"
+  "note": "PASS: largest one-colour flat area 5% of the frame (limit 20%)"
  },
  "15_competitors": {
   "status": "PASS",
@@ -63,5 +63,5 @@
   "status": "PASS",
   "note": "Skillar: rocco-3d-cast, viral-cartoon-playbook, animation-direction, disney-animator-traditional, viral-video-decomposer, blender-core, blender-rendering; ishlatilmadi: analyzing-video (YouTube bloklangan)"
  },
- "verdict": "FAIL"
+ "verdict": "PASS"
 }
