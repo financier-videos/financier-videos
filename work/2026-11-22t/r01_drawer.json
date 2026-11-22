@@ -1,0 +1,282 @@
+{
+ "format": "short",
+ "sfx": true,
+ "look": "fullbleed",
+ "grade": "rose",
+ "captions": "words",
+ "headline": "hook",
+ "auto_shots": 1.8,
+ "structure": "why_story",
+ "topic": 2,
+ "source": "Bankrate gift card survey (YouGov, Aug 19-21, 2024; 2,373 U.S. adults; published Sep 2024)",
+ "buck_voice": {
+  "variant": "D",
+  "model": "eleven_v3",
+  "settings": {
+   "speed": 1.05
+  }
+ },
+ "voices": {
+  "guest": {
+   "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+   "label": "Gift card (Laura, ElevenLabs premade)",
+   "model": "eleven_v3",
+   "settings": {
+    "speed": 1.05
+   }
+  }
+ },
+ "benchmarks": [
+  "8Sp2jBDdTDM \u2014 paradoks/hikoya hook, javob oxirida, quruq hazil yakun",
+  "ftA18KGBrwM \u2014 har 3\u20136 s yangi fakt, raqam kartochkada, kichikdan \u2192 milliy miqyosga",
+  "YANGI: unutilgan buyumning o'zi gapiradi (sovg'a kartasi \u2014 ikkinchi personaj, yig'loqi)"
+ ],
+ "scenes": [
+  {
+   "text": "Somewhere in your house, there's a drawer.",
+   "say": "[storytelling] Somewhere in your house... there's a drawer.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r01/houses2.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r01/giftbox.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "head": "THE DRAWER WORTH $27 BILLION",
+   "mascot": {
+    "mood": "smug",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Hello? Anyone? It's been two years!",
+   "say": "[whiny] Hello? Anyone?! It's been two YEARS!",
+   "voice": "guest",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r01/giftbox2.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r01/cardshuffle.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "doubletake",
+    "act_at": 0.3
+   }
+  },
+  {
+   "text": "That's a gift card. Unused. And it is not alone.",
+   "say": "[deadpan] That's a gift card. Unused. And it is not alone.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r01/cardshuffle.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/online_card.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ]
+  },
+  {
+   "text": "A 2024 Bankrate survey: 43% of U.S. adults have at least one.",
+   "say": "A twenty twenty-four Bankrate survey: forty-three percent of U.S. adults have at least one.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r01/houses.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r01/houses2.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "stat": "43%",
+   "show_source": "Bankrate / YouGov survey, Aug 2024 (2,373 U.S. adults)",
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Their average stash? $244.",
+   "say": "[surprised] Their average stash? Two hundred forty-four bucks.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "stat": "$244",
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "jawdrop",
+    "act_at": 1.0
+   }
+  },
+  {
+   "text": "Two hundred forty-four dollars of ME! Just sitting here!",
+   "say": "[sobbing] Two hundred forty-four dollars of ME! Just... sitting here!",
+   "voice": "guest",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r01/giftbox.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r01/cardhand.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner",
+    "act": "sigh",
+    "act_at": 0.5
+   }
+  },
+  {
+   "text": "Now add up every drawer in America.",
+   "say": "Now... add up every drawer in America.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r01/houses.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/earth_night.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ]
+  },
+  {
+   "text": "About $27 billion. That's Bankrate's estimate.",
+   "say": "[amazed] About twenty-seven billion dollars. That's Bankrate's estimate.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_stacks.mp4",
+     "at": 0.0,
+     "start": 7
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_desk.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "stat": "$27B",
+   "show_source": true,
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "And 1 in 5 adults let a card expire before using it.",
+   "say": "And one in five adults let a card expire before using it.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r01/hourglass2.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r01/hourglass.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "stat": "1 IN 5",
+   "mascot": {
+    "mood": "confused",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Wait, how long have I been in here?",
+   "say": "[nervous] Wait... how long have I been in here?",
+   "voice": "guest",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r01/hourglass2.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ]
+  },
+  {
+   "text": "So which card is hiding in YOUR drawer?",
+   "say": "[curious] So... which card is hiding in YOUR drawer?",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r01/giftbox2.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Go check. It's been waiting.",
+   "say": "[smug] Go check. It's been waiting.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r01/cardhand.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r01/houses2.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "proud",
+    "pos": "corner",
+    "act": "deadpan",
+    "act_at": 0.3
+   }
+  }
+ ]
+}
