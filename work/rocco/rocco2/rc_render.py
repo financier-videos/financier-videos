@@ -133,9 +133,10 @@ MAP3D = {"rocco": {"happy": "happy", "sideeye": "sly", "smug": "sly", "sad": "sa
          "penny": {"happy": "happy", "shock": "shock", "sad": "sad", "hope": "relieved", "nervous": "sad"},
          "slick": {"sly": "neutral", "panic": "shock", "laugh": "happy"}}
 _S3D = {}
+POSE_NOW = {}  # per-shot body poses: spec shot keys r_pose / p_pose / s_pose
 
 
-def char3d(im, who, cx, feet_y, height, mood, talk, t, flip=False):
+def char3d(im, who, cx, feet_y, height, mood, talk, t, flip=False, pose=None):
     """Paste a 3D-rendered character: feet at feet_y, sprite height `height` px (sprite feet are at 91.6 % of its height)."""
     m = MAP3D[who].get(mood, "neutral")
     if talk < 0.12: mouth = "closed"
@@ -144,9 +145,15 @@ def char3d(im, who, cx, feet_y, height, mood, talk, t, flip=False):
     else: mouth = "open"
     seed = {"rocco": 0.0, "penny": 1.1, "slick": 2.3}[who]
     eyes = "closed" if ((t + seed) % 3.3) < 0.11 else "open"
-    key = (who, m, mouth, eyes, int(height), flip)
+    POSE_OK = {"point": ["happy", "sly", "angry", "shock", "sad"], "arms_up": ["happy", "shock", "angry", "sad", "sly"],
+               "shrug": ["happy", "sly", "sad", "shock", "neutral"]}
+    if pose in POSE_OK:  # body acting: the pose frames have open eyes only
+        mp = m if m in POSE_OK[pose] else POSE_OK[pose][0]
+        key = (who, pose, mp, mouth, int(height), flip); fname = f"{pose}_{mp}_{mouth}_open.png"
+    else:
+        key = (who, m, mouth, eyes, int(height), flip); fname = f"{m}_{mouth}_{eyes}.png"
     if key not in _S3D:
-        f = os.path.join(LIB3D, who, f"{m}_{mouth}_{eyes}.png")
+        f = os.path.join(LIB3D, who, fname)
         if not os.path.exists(f): f = os.path.join(LIB3D, who, f"{m}_closed_open.png")
         if not os.path.exists(f): f = os.path.join(LIB3D, who, "neutral_closed_open.png")
         sp = Image.open(f).convert("RGBA"); sp = sp.resize((int(height * sp.width / sp.height), int(height)), Image.LANCZOS)
@@ -162,7 +169,7 @@ def rocco(im, cx, base_y, size, mood="happy", talk=0.0, t=0.0, act=None, act_t=0
     """Rocco standing on base_y (feet), centred on cx. talk 0..1 -> mouth sprite t1..t3. act = clip name played once."""
     if LIB3D:
         m3 = {"deadpan_sideeye": "sideeye", "sigh_sad": "sad", "shrug_confused": "shocked"}.get(act, mood) if act else mood
-        return char3d(im, "rocco", cx, base_y, size * 0.95, m3, talk, t, flip)
+        return char3d(im, "rocco", cx, base_y, size * 0.95, m3, talk, t, flip, POSE_NOW.get("r"))
     fi = int(t * 15) % 15
     if act:
         n = len([f for f in os.listdir(LIB) if f.startswith(act + "_")]) or 1
@@ -181,7 +188,7 @@ def rocco(im, cx, base_y, size, mood="happy", talk=0.0, t=0.0, act=None, act_t=0
 
 def penny(im, cx, cy, s, mood="happy", talk=0.0, t=0.0):
     """Penny the piggy bank (pink), drawn. mood: happy|shock|sad|hope|nervous. talk 0..1 opens the mouth."""
-    if LIB3D: return char3d(im, "penny", cx, cy + 0.41 * s, s * 1.25, mood, talk, t)
+    if LIB3D: return char3d(im, "penny", cx, cy + 0.41 * s, s * 1.25, mood, talk, t, False, POSE_NOW.get("p"))
     d = ImageDraw.Draw(im, "RGBA"); P = (255, 143, 171); PD = (232, 104, 140); u = s / 400
     cy = cy - abs(math.sin(t * 9)) * 14 * u * talk  # excited hop while talking
     d.ellipse([cx - 150 * u, cy + 150 * u, cx + 150 * u, cy + 178 * u], fill=(0, 0, 0, 60))
@@ -290,7 +297,7 @@ def mousetrap(im, cx, cy, s, snapped, label="FREE GTA 6"):
 
 def slick(im, cx, cy, s, mood="sly", talk=0.0, t=0.0):
     """Slick the scammer fox (always the butt of the joke). mood: sly|panic|laugh. Holds a phone."""
-    if LIB3D: return char3d(im, "slick", cx + (math.sin(t * 40) * 5 if mood == "panic" else 0), cy + 0.86 * s, s * 1.6, mood, talk, t)
+    if LIB3D: return char3d(im, "slick", cx + (math.sin(t * 40) * 5 if mood == "panic" else 0), cy + 0.86 * s, s * 1.6, mood, talk, t, False, POSE_NOW.get("s"))
     d = ImageDraw.Draw(im, "RGBA"); u = s / 400; O = (255, 132, 50); OD = (214, 96, 30); CREAM = (250, 236, 214); SUIT = (118, 70, 170)
     cy = cy + (math.sin(t * 40) * 6 * u if mood == "panic" else 0)
     d.ellipse([cx - 170 * u, cy + 330 * u, cx + 170 * u, cy + 360 * u], fill=(0, 0, 0, 60))
@@ -596,6 +603,7 @@ def main():
         kk = int(lt * FPS)
         fimg = footage_img(*sh["_bg"][:2], kk, sh["_bg"][2], sh.get("kb", "in"), sh.get("bright", 1.1), sh.get("blur", 0)) if sh.get("_bg") else None
         fimg2 = footage_img(*sh["_bg2"][:2], kk, sh["_bg2"][2], "in", sh.get("bright2", 1.2), 0) if sh.get("_bg2") else None
+        POSE_NOW.clear(); POSE_NOW.update({k[0]: sh[k] for k in ("r_pose", "p_pose", "s_pose") if sh.get(k)})
         im = compose(sh, lt, t, e if w_ == "R" else 0.0, e if w_ == "P" else 0.0, None, e if w_ == "S" else 0.0, fimg, fimg2)
         z = 1.0 + 0.035 * min(1.0, lt / max(0.5, sh["_t1"] - sh["_t0"])) + (0.06 * max(0.0, 1 - lt / 0.12))  # slow push + punch on the cut
         if z > 1.001:

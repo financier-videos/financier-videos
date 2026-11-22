@@ -27,6 +27,9 @@ Shohjahon (2026-11-22): "Eng asosiysi har safar yangi va portlatadigan videolar 
 | 2026-11-22 | `8Sp2jBDdTDM` | McDonald Ed — 494K, 26x | Financier | "X ishlamaydi, nega boy?" paradoks hikoyasi | paradoks hook 0–3 s; 3 ustun: aktiv daromad → XARAJAT NOL (eng kuchli lahza) → boshqaruvchi; so'z-so'z yashil ajratish |
 | 2026-11-22 | `ftA18KGBrwM` | hxsain — 3.2M, 4.5x | Financier | "Sound fake but 100% real" ro'yxat | 7 fakt, har biri 3–6 s, kichikdan → kosmik miqyosga; xarita/miqyos taqqoslash izoh uyg'otadi; "Part 2" CTA |
 
+| 2026-11-22 | `oiMsxtYm5SI` | explicable TV — 634K, 543x | Rocco (3D) | animatsion "wrong number trap" | dramatik ironiya: tomoshabin 1-kadrdan firibgar politsiyaga qo'ng'iroq qilayotganini biladi; firibgar skriptini to'liq o'qiydi (OTP, 30 s, "jim gapiring"); burilish 1:00 da; firibgar "tarmoq yomon" → absurd chekinish ("Jesus loves you") — eng ko'p ulashilgan lahza |
+| 2026-11-22 | `s-nyFs1118A` | NAVYA — 2M, 1509x | Rocco (3D) | animatsion "ego trap" | firibgar qurbonni kamsitadi ("bu sen uchun emas") → qurbon g'ururi uchun 20x qimmatga sotib oladi; har savdolashuvga yangi kamsitish; 0 kesim, faqat aktyorlik; yakun — firibgarlar kuladi |
+
 ## Keyingi video g'oyalari (yangi formatlar — hali ishlatilmagan)
 - **Rocco "Penny plays dumb"** (vcPnUMJNdkw formati): Slick "bank xodimi" bo'lib qo'ng'iroq qiladi; Penny Rocco maslahati bilan ataylab so'zma-so'z javob beradi (kod? → "1, 2, 3, 4..."), Slick asabiylashadi, oxiri absurd ("I'm a piggy bank, I don't HAVE a card"). Yakunda Rocco: "Real banks never ask for your code."
 - **Rocco "Free gift at the door"** (uaV36whB6H8): "tekin sovg'a" kuryeri → QR/"kodni ayting" → balans 0 SMS. Mavzu: tekin sovg'a/sovg'a kartasi firibgarligi (Black Friday mavsumi).

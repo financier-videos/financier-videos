@@ -1,0 +1,376 @@
+{
+ "id": "RC-08",
+ "title": "\"It's Not for Piggy Banks\" - The VIP Scam",
+ "structure": "ego trap (3D CAST, first episode)",
+ "tail": 2.6,
+ "style": "rocco3d",
+ "hot": [
+  "VIP",
+  "GIFT",
+  "CARDS",
+  "FLAGS",
+  "SCAM",
+  "INSULTED"
+ ],
+ "lines": [
+  [
+   "P",
+   "[furious] FINE! Five hundred dollars! TAKE IT!"
+  ],
+  [
+   "S",
+   "[smug] [whispering] Psst. Exclusive investment club. Double your money in one week."
+  ],
+  [
+   "S",
+   "[fake pity] Oh, wait... it's not for piggy banks."
+  ],
+  [
+   "P",
+   "[offended] EXCUSE me?!"
+  ],
+  [
+   "S",
+   "[sly] It's for SERIOUS investors. You could never afford the entry fee."
+  ],
+  [
+   "P",
+   "[indignant] How much?!"
+  ],
+  [
+   "S",
+   "[casual] Five hundred. In gift cards. Today only."
+  ],
+  [
+   "P",
+   "[furious] I have five hundred dollars! I'll show you!"
+  ],
+  [
+   "R",
+   "[deadpan] Penny. Red flag."
+  ],
+  [
+   "P",
+   "[huffy] He said I can't afford it!"
+  ],
+  [
+   "R",
+   "[calm] That's the trick. He insulted you so you'd want to prove him wrong."
+  ],
+  [
+   "S",
+   "[nervous] Uh... the club closes in ten seconds!"
+  ],
+  [
+   "R",
+   "[deadpan] Guaranteed money. Gift cards. A countdown. Three red flags."
+  ],
+  [
+   "P",
+   "[realizing] Wait... he insulted me... to sell me?"
+  ],
+  [
+   "R",
+   "[warmly] Exactly. Real investments never rush you, and never ask for gift cards."
+  ],
+  [
+   "S",
+   "[panicked] Okay, okay! VIP discount! Four ninety-nine!"
+  ],
+  [
+   "P",
+   "[deadpan] Blocked."
+  ],
+  [
+   "S",
+   "[whiny] Not again!"
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "blur": 1,
+   "p": "nervous",
+   "r": "shocked",
+   "hook": "SHE PAID $500 TO PROVE A POINT",
+   "p_pose": "arms_up",
+   "line": 0,
+   "from": 0
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_vip3d.jpg",
+   "s": "sly",
+   "r_peek": false,
+   "msg": "30 SECONDS EARLIER...",
+   "msg_at": 0.0,
+   "s_pose": "point",
+   "line": 1,
+   "from": 0
+  },
+  {
+   "kind": "split",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "bg2": "/home/user/financier-videos/assets/toon3d/slick_vip3d.jpg",
+   "p": "happy",
+   "s": "sly",
+   "line": 1,
+   "from": 0.55
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_vip3d.jpg",
+   "s": "sly",
+   "s_pose": "shrug",
+   "msg": "\"NOT FOR PIGGY BANKS\"",
+   "msg_at": 0.4,
+   "line": 2,
+   "from": 0
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "p_pose": "arms_up",
+   "line": 3,
+   "from": 0
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_vip3d.jpg",
+   "s": "sly",
+   "s_pose": "point",
+   "line": 4,
+   "from": 0
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "line": 5,
+   "from": 0
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_vip3d.jpg",
+   "s": "sly",
+   "s_pose": "shrug",
+   "msg": "$500 IN GIFT CARDS",
+   "msg_word": "gift",
+   "line": 6,
+   "from": 0
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "nervous",
+   "r": "sideeye",
+   "p_pose": "point",
+   "line": 7,
+   "from": 0
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "r": "sideeye",
+   "r_pose": "point",
+   "line": 8,
+   "from": 0
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "sad",
+   "r": "sideeye",
+   "p_pose": "shrug",
+   "line": 9,
+   "from": 0
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "r": "smug",
+   "line": 10,
+   "from": 0
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "nervous",
+   "r": "sideeye",
+   "line": 10,
+   "from": 0.55
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_vip3d.jpg",
+   "s": "panic",
+   "msg": "10... 9... 8...",
+   "msg_at": 0.3,
+   "s_pose": "arms_up",
+   "line": 11,
+   "from": 0
+  },
+  {
+   "kind": "flags",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "blur": 1,
+   "r": "smug",
+   "n": 3,
+   "n_prev": 0,
+   "pop_word": "three",
+   "r_pose": "point",
+   "line": 12,
+   "from": 0
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "shock",
+   "r": "smug",
+   "p_pose": "arms_up",
+   "line": 13,
+   "from": 0
+  },
+  {
+   "kind": "store",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "blur": 3,
+   "l1": "REAL INVESTMENTS",
+   "l2": "NEVER RUSH YOU",
+   "r": "happy",
+   "line": 14,
+   "from": 0
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon3d/rocco_office3d.jpg",
+   "r": "happy",
+   "r_pose": "point",
+   "line": 14,
+   "from": 0.55
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_vip3d.jpg",
+   "s": "panic",
+   "msg": "$499?!",
+   "msg_word": "four",
+   "s_pose": "arms_up",
+   "line": 15,
+   "from": 0
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "p": "happy",
+   "r": "thumbsup",
+   "line": 16,
+   "from": 0
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon3d/slick_vip3d.jpg",
+   "s": "panic",
+   "msg": "NOT AGAIN!",
+   "msg_at": 0.2,
+   "s_pose": "shrug",
+   "line": 17,
+   "from": 0
+  },
+  {
+   "kind": "end",
+   "bg": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg",
+   "blur": 2,
+   "l1": "\"NOT FOR PEOPLE LIKE YOU\"",
+   "l2": "= SCAM",
+   "l3": "Send this to someone who loves a challenge.",
+   "line": 17,
+   "from": 1.0
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "impact",
+   "gain": 0.35
+  },
+  {
+   "line": 1,
+   "frac": 0.0,
+   "name": "whoosh",
+   "gain": 0.3
+  },
+  {
+   "line": 2,
+   "word": "piggy",
+   "name": "scratch",
+   "gain": 0.25
+  },
+  {
+   "line": 3,
+   "frac": 0.0,
+   "name": "boing",
+   "gain": 0.3
+  },
+  {
+   "line": 6,
+   "word": "gift",
+   "name": "cash",
+   "gain": 0.25
+  },
+  {
+   "line": 8,
+   "word": "flag",
+   "name": "buzzer",
+   "gain": 0.22
+  },
+  {
+   "line": 11,
+   "frac": 0.3,
+   "name": "drumroll",
+   "gain": 0.2
+  },
+  {
+   "line": 12,
+   "word": "three",
+   "name": "buzzer",
+   "gain": 0.25
+  },
+  {
+   "line": 13,
+   "frac": 0.6,
+   "name": "ding",
+   "gain": 0.25
+  },
+  {
+   "line": 15,
+   "word": "four",
+   "name": "bonk",
+   "gain": 0.35
+  },
+  {
+   "line": 16,
+   "word": "blocked",
+   "name": "impact",
+   "gain": 0.35
+  },
+  {
+   "line": 17,
+   "frac": 0.6,
+   "name": "wahwah",
+   "gain": 0.35
+  }
+ ],
+ "sources": "FTC investment-scam guidance: guaranteed returns, pressure to act now, payment by gift card are red flags",
+ "footage": "none \u2014 original 3D-style sets (AI-generated, vidIQ image tool); characters: our own rigged 3D cast",
+ "benchmarks": [
+  "s-nyFs1118A \u2014 YANGI: ego trap \u2014 firibgar kamsitadi, qurbon g'ururi uchun to'laydi (2M, 1509x)",
+  "oiMsxtYm5SI \u2014 firibgar skripti to'liq, burilish, absurd chekinish (634K, 543x)",
+  "vcPnUMJNdkw \u2014 cold open: eng kuchli lahza 1-soniyada"
+ ]
+}
