@@ -25,3 +25,13 @@ harakat sinovi: `rocco_cast_rig_test.mp4` (4 s: gapirish, ko'z qisish, qo'l hara
 3. Birinchi 3D epizod: RC-04 (Free GTA 6 for PC) — qayta render, 10 kadrlik varaq → chat ko'radi → keyin chiqadi.
 4. Ma'lum kamchiliklar (v1): qo'ltiq/plashch etagida mayda uchburchaklar (haddan tashqari qo'l pozasida) — pozalarni 60° gacha cheklang
    yoki chatga yozing; barmoqlar alohida qimirlamaydi; til/tish yo'q; Penny to'liq ko'z yumishi qo'pol (≤0.6 yoki 2 kadr).
+
+## v1.1 — MULTFILM KO'RINISHI (Shohjahon: "mult ko'rinishda, yoqimtoy va hazilkash bo'lsin")
+Namuna: `docs/looks_samples/rocco_cast3d_toon_2026-11-22.jpg` (har personaj 4 ifodada). Yopiq repo: buck-private ade8295.
+MAJBURIY standartlar (har render):
+- Katta ko'z: shape key `big_eye` = 1.0 (Penny 0.7); bosh suyagi o'lchami 1.12; qo'l (hand) 1.2.
+- Rocco tinch holatda `wide` 0.45 (ko'zi ochiqroq, yoqimli); deadpan = blink 0.25 + brow_down 0.6 + look_l.
+- Ko'rinish: tekis yorqin rang + ~40% yumshoq soya, to'q kontur, to'yinganlik +25%, yorug' bir rangli/yorqin fon (Rocco sariq, Penny firuza, Slick och yashil urg'u).
+- Har personajning "kulgili" to'plami: Rocco — smug, deadpan, laugh, surprised; Penny — happy, aww, panic, giggle; Slick — sly, fake smile, caught, nervous.
+  Har epizodda har personaj kamida 3 xil ifoda ko'rsatadi; gap o'zgarganda ifoda ham o'zgaradi (qotib turmaydi).
+- Slick quloq suyaklari aylantirilmaydi (o'q xatosi); qo'l pozalari ≤ 60°.
