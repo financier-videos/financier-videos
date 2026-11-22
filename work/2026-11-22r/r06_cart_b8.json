@@ -20,15 +20,18 @@
    "shots": [
     {
      "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
-     "at": 0
+     "at": 0,
+     "start": 0
     },
     {
-     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
-     "at": 1.7
+     "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
+     "at": 1.6,
+     "start": 0
     },
     {
-     "broll": "/tmp/fin/bg/bank/cart_empty.mp4",
-     "at": 3.2
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 3.2,
+     "start": 0
     }
    ],
    "mascot": {
@@ -47,8 +50,9 @@
    },
    "shots": [
     {
-     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
-     "at": 0
+     "broll": "/tmp/fin/bg/bank/cart_empty.mp4",
+     "at": 0,
+     "start": 0
     }
    ]
   },
@@ -61,11 +65,17 @@
     {
      "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
      "at": 0,
-     "start": 4
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 1.6,
+     "start": 0
     },
     {
      "broll": "/tmp/fin/bg/bank/cart_empty.mp4",
-     "at": 2.0
+     "at": 3.2,
+     "start": 0
     }
    ],
    "mascot": {
@@ -79,8 +89,14 @@
    "sticker_at": 0.5,
    "shots": [
     {
+     "broll": "/tmp/fin/bg/bank/online_card.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
      "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
-     "at": 0
+     "at": 1.4,
+     "start": 0
     }
    ],
    "mascot": {
@@ -101,7 +117,13 @@
    "shots": [
     {
      "broll": "/tmp/fin/bg/bank/cart_empty.mp4",
-     "at": 0
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/coins_hand.mp4",
+     "at": 1.6,
+     "start": 0
     }
    ]
   },
@@ -109,14 +131,14 @@
    "text": "Same store. Same milk. Bigger cart, bigger bill.",
    "shots": [
     {
-     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
+     "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
      "at": 0,
-     "start": 4
+     "start": 0
     },
     {
-     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
-     "at": 1.6,
-     "start": 6
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 1.4,
+     "start": 0
     }
    ],
    "mascot": {
@@ -136,8 +158,19 @@
    ],
    "shots": [
     {
-     "broll": "/tmp/fin/bg/bank/cart_empty.mp4",
-     "at": 0
+     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/coins_hand.mp4",
+     "at": 1.5,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 3.0,
+     "start": 0
     }
    ]
   }

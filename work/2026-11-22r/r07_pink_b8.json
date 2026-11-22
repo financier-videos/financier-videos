@@ -28,12 +28,14 @@
    "head": "SAME RAZOR. DIFFERENT PRICE.",
    "shots": [
     {
-     "broll": "/tmp/fin/bg/bank/coins_hand.mp4",
-     "at": 0
+     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
+     "at": 0,
+     "start": 0
     },
     {
-     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
-     "at": 1.8
+     "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
+     "at": 1.6,
+     "start": 0
     }
    ],
    "mascot": {
@@ -47,7 +49,13 @@
    "shots": [
     {
      "broll": "/tmp/fin/bg/bank/cart_empty.mp4",
-     "at": 0
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 1.0,
+     "start": 0
     }
    ],
    "mascot": {
@@ -62,8 +70,14 @@
    "show_source": true,
    "shots": [
     {
+     "broll": "/tmp/fin/bg/bank/online_card.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
      "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
-     "at": 0
+     "at": 1.5,
+     "start": 0
     }
    ],
    "mascot": {
@@ -93,7 +107,12 @@
     {
      "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
      "at": 0,
-     "start": 3
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 1.8,
+     "start": 0
     }
    ]
   },
@@ -108,8 +127,14 @@
    },
    "shots": [
     {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
      "broll": "/tmp/fin/bg/bank/coins_hand.mp4",
-     "at": 0
+     "at": 1.2,
+     "start": 0
     }
    ]
   },
@@ -120,8 +145,19 @@
    "show_source": "NYC stores, 2015",
    "shots": [
     {
+     "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
      "broll": "/tmp/fin/bg/bank/coins_hand.mp4",
-     "at": 0
+     "at": 1.6,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 3.2,
+     "start": 0
     }
    ],
    "mascot": {
@@ -134,9 +170,19 @@
    "land": 0.3,
    "shots": [
     {
-     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
+     "broll": "/tmp/fin/bg/bank/cart_empty.mp4",
      "at": 0,
-     "start": 5
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 1.6,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
+     "at": 3.2,
+     "start": 0
     }
    ],
    "mascot": {

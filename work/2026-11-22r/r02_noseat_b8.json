@@ -32,11 +32,13 @@
    "shots": [
     {
      "broll": "/tmp/fin/bg/bank/cabin_empty.mp4",
-     "at": 0
+     "at": 0,
+     "start": 0
     },
     {
      "broll": "/tmp/fin/bg/bank/airport_walk.mp4",
-     "at": 1.2
+     "at": 1.2,
+     "start": 0
     }
    ],
    "sfx": [
@@ -70,7 +72,8 @@
    "shots": [
     {
      "broll": "/tmp/fin/bg/bank/airport_hall.mp4",
-     "at": 0
+     "at": 0,
+     "start": 0
     }
    ],
    "sfx": [
@@ -92,7 +95,8 @@
     },
     {
      "broll": "/tmp/fin/bg/bank/plane_wing.mp4",
-     "at": 1.8
+     "at": 1.8,
+     "start": 0
     }
    ],
    "mascot": {
@@ -143,7 +147,8 @@
    "shots": [
     {
      "broll": "/tmp/fin/bg/bank/cabin_yellow.mp4",
-     "at": 0
+     "at": 0,
+     "start": 0
     }
    ],
    "mascot": {

@@ -28,15 +28,18 @@
    "shots": [
     {
      "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
-     "at": 0
+     "at": 0,
+     "start": 0
     },
     {
      "broll": "/tmp/fin/bg/bank/online_card.mp4",
-     "at": 1.7
+     "at": 1.7,
+     "start": 0
     },
     {
-     "broll": "/tmp/fin/bg/bank/cash_desk.mp4",
-     "at": 3.2
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 3.2,
+     "start": 0
     }
    ],
    "mascot": {
@@ -49,7 +52,7 @@
    "voice": "guest",
    "shots": [
     {
-     "broll": "/tmp/fin/bg/bank/cash_desk.mp4",
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
      "at": 0,
      "start": 4
     }
@@ -78,7 +81,8 @@
    "shots": [
     {
      "broll": "/tmp/fin/bg/bank/laptop_phone.mp4",
-     "at": 0
+     "at": 0,
+     "start": 0
     }
    ]
   },
@@ -126,8 +130,9 @@
    ],
    "shots": [
     {
-     "broll": "/tmp/fin/bg/bank/cash_desk.mp4",
-     "at": 0
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 0,
+     "start": 0
     }
    ]
   },
@@ -141,7 +146,8 @@
     },
     {
      "broll": "/tmp/fin/bg/bank/online_card.mp4",
-     "at": 1.8
+     "at": 1.8,
+     "start": 0
     }
    ],
    "mascot": {
@@ -156,7 +162,8 @@
    "shots": [
     {
      "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
-     "at": 0
+     "at": 0,
+     "start": 0
     }
    ],
    "mascot": {
@@ -181,7 +188,8 @@
    "shots": [
     {
      "broll": "/tmp/fin/bg/bank/laptop_phone.mp4",
-     "at": 0
+     "at": 0,
+     "start": 0
     }
    ]
   },
@@ -191,7 +199,7 @@
    "sticker_at": 0.2,
    "shots": [
     {
-     "broll": "/tmp/fin/bg/bank/cash_desk.mp4",
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
      "at": 0,
      "start": 6
     }

@@ -32,11 +32,13 @@
    "shots": [
     {
      "broll": "/tmp/fin/bg/bank/phone_scroll.mp4",
-     "at": 0
+     "at": 0,
+     "start": 0
     },
     {
      "broll": "/tmp/fin/bg/bank/tv_remote.mp4",
-     "at": 1.8
+     "at": 1.8,
+     "start": 0
     }
    ],
    "mascot": {
@@ -50,7 +52,8 @@
    "shots": [
     {
      "broll": "/tmp/fin/bg/bank/tv_remote.mp4",
-     "at": 0
+     "at": 0,
+     "start": 0
     }
    ],
    "beat": 0.15,
@@ -69,11 +72,13 @@
    "shots": [
     {
      "broll": "/tmp/fin/bg/bank/coffee_pour.mp4",
-     "at": 0
+     "at": 0,
+     "start": 0
     },
     {
      "broll": "/tmp/fin/bg/bank/coffee_glass.mp4",
-     "at": 1.6
+     "at": 1.6,
+     "start": 0
     }
    ],
    "mascot": {
@@ -89,7 +94,8 @@
    "shots": [
     {
      "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
-     "at": 0
+     "at": 0,
+     "start": 0
     }
    ],
    "mascot": {
@@ -107,11 +113,13 @@
    "shots": [
     {
      "broll": "/tmp/fin/bg/bank/cash_count.mp4",
-     "at": 0
+     "at": 0,
+     "start": 0
     },
     {
      "broll": "/tmp/fin/bg/bank/car_lot_top.mp4",
-     "at": 3.15
+     "at": 3.15,
+     "start": 0
     }
    ],
    "mascot": {
@@ -128,7 +136,8 @@
    "shots": [
     {
      "broll": "/tmp/fin/bg/bank/car_lot_top.mp4",
-     "at": 0
+     "at": 0,
+     "start": 0
     }
    ],
    "mascot": {
@@ -144,11 +153,13 @@
    "shots": [
     {
      "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
-     "at": 0
+     "at": 0,
+     "start": 0
     },
     {
      "broll": "/tmp/fin/bg/bank/online_card.mp4",
-     "at": 1.8
+     "at": 1.8,
+     "start": 0
     }
    ],
    "mascot": {
@@ -165,7 +176,8 @@
    "shots": [
     {
      "broll": "/tmp/fin/bg/bank/phone_bed.mp4",
-     "at": 0
+     "at": 0,
+     "start": 0
     }
    ],
    "mascot": {

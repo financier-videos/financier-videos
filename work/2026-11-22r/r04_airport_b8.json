@@ -20,15 +20,18 @@
    "shots": [
     {
      "broll": "/tmp/fin/bg/bank/airport_hall.mp4",
-     "at": 0
+     "at": 0,
+     "start": 0
     },
     {
-     "broll": "/tmp/fin/bg/bank/airport_hall.mp4",
-     "at": 1.6
+     "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
+     "at": 1.5,
+     "start": 0
     },
     {
      "broll": "/tmp/fin/bg/bank/airport_walk.mp4",
-     "at": 3.0
+     "at": 3.0,
+     "start": 0
     }
    ],
    "mascot": {
@@ -51,8 +54,14 @@
    ],
    "shots": [
     {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
      "broll": "/tmp/fin/bg/bank/airport_hall.mp4",
-     "at": 0
+     "at": 1.2,
+     "start": 0
     }
    ]
   },
@@ -63,14 +72,19 @@
    "show_source": true,
    "shots": [
     {
-     "broll": "/tmp/fin/bg/bank/airport_hall.mp4",
+     "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
      "at": 0,
-     "start": 4
+     "start": 0
     },
     {
-     "broll": "/tmp/fin/bg/bank/airport_hall.mp4",
-     "at": 2.0,
-     "start": 5
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 1.6,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/airport_walk.mp4",
+     "at": 3.2,
+     "start": 0
     }
    ],
    "mascot": {
@@ -97,8 +111,14 @@
    "show_source": "Our math: $3.00 + 15%",
    "shots": [
     {
-     "broll": "/tmp/fin/bg/bank/airport_walk.mp4",
-     "at": 0
+     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/airport_hall.mp4",
+     "at": 1.8,
+     "start": 0
     }
    ]
   },
@@ -117,8 +137,19 @@
    ],
    "shots": [
     {
-     "broll": "/tmp/fin/bg/bank/airport_hall.mp4",
-     "at": 0
+     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cabin_yellow.mp4",
+     "at": 1.6,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/coins_hand.mp4",
+     "at": 3.2,
+     "start": 0
     }
    ]
   },
@@ -126,9 +157,14 @@
    "text": "Worst airport price you ever paid?",
    "shots": [
     {
-     "broll": "/tmp/fin/bg/bank/airport_walk.mp4",
+     "broll": "/tmp/fin/bg/bank/plane_wing.mp4",
      "at": 0,
-     "start": 5
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/airport_walk.mp4",
+     "at": 1.4,
+     "start": 0
     }
    ],
    "mascot": {

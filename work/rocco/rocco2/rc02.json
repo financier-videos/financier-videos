@@ -1,0 +1,559 @@
+{
+ "id": "RC-02",
+ "title": "Someone Sent You $1,000 by Mistake?",
+ "structure": "scam-in-action + prediction + damage math + dialogue",
+ "tail": 3.0,
+ "hot": [
+  "DETECTIVE",
+  "BLOCKED",
+  "STEVE",
+  "REPORT",
+  "APP"
+ ],
+ "lines": [
+  [
+   "P",
+   "[gasps] [excited] Rocco! Someone just sent me a THOUSAND dollars!"
+  ],
+  [
+   "R",
+   "[deadpan] Don't touch it."
+  ],
+  [
+   "P",
+   "[confused] ...Why not?! It's mine now!"
+  ],
+  [
+   "R",
+   "[calm] In five seconds, you'll get a text. [pause] Oops, wrong person! Please send it back!"
+  ],
+  [
+   "S",
+   "[sweet] [fake innocent] Oopsie! Wrong person! Please send it back!"
+  ],
+  [
+   "P",
+   "[gasps] HOW did you know that?!"
+  ],
+  [
+   "R",
+   "[deadpan] Detective."
+  ],
+  [
+   "S",
+   "[pushy] [fast] Quick, quick! It's for my grandma's... rent! Her... surgery! Her rent surgery!"
+  ],
+  [
+   "R",
+   "[dryly] Red flag. He paid you with a stolen card."
+  ],
+  [
+   "R",
+   "The real owner reports it... [pause] and the bank takes the thousand back."
+  ],
+  [
+   "P",
+   "[nervous] So if I send him a thousand too..."
+  ],
+  [
+   "R",
+   "[deadpan] You're down a thousand. He keeps it."
+  ],
+  [
+   "P",
+   "[panicked] [whiny] DOWN?! I was rich for five minutes!"
+  ],
+  [
+   "R",
+   "[warmly] Your move: send nothing. Report it in your payment app, and let the app send it back."
+  ],
+  [
+   "P",
+   "[suspicious] Hey, mister. What's your name, anyway?"
+  ],
+  [
+   "S",
+   "[nervous] Uh... Honest... Steve?"
+  ],
+  [
+   "R",
+   "[deadpan] Two red flags."
+  ],
+  [
+   "S",
+   "[panicked] Wait, wait! I'll send you TWO thousand!"
+  ],
+  [
+   "P",
+   "[deadpan] Blocked."
+  ],
+  [
+   "S",
+   "[whiny] Not again!"
+  ]
+ ],
+ "shots": [
+  {
+   "line": 0,
+   "from": 0.0,
+   "kind": "split",
+   "bg": "/tmp/fin/bg/rc2/park.mp4",
+   "bg2": "/tmp/fin/bg/rc2/cash.mp4",
+   "bright2": 1.0,
+   "p": "happy",
+   "s": "sly",
+   "hook": "SOMEONE SENT ME $1,000?!"
+  },
+  {
+   "line": 0,
+   "from": 0.55,
+   "kind": "insert",
+   "bg": "/tmp/fin/bg/rc2/phonehand.mp4",
+   "bright": 1.35,
+   "circle": [
+    0.52,
+    0.38,
+    0.2
+   ],
+   "label": "+$1,000 RECEIVED",
+   "who": "p",
+   "p": "happy"
+  },
+  {
+   "line": 1,
+   "from": 0.0,
+   "kind": "cu_r",
+   "bg": "/tmp/fin/bg/rc2/coffee.mp4",
+   "blur": 2,
+   "r": "sideeye"
+  },
+  {
+   "line": 2,
+   "from": 0.0,
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc2/park.mp4",
+   "bg_start": 3,
+   "blur": 1,
+   "p": "hope",
+   "r": "sideeye"
+  },
+  {
+   "line": 3,
+   "from": 0.0,
+   "kind": "cu_r",
+   "bg": "/tmp/fin/bg/rc2/coffee.mp4",
+   "bg_start": 4,
+   "blur": 2,
+   "r": "smug",
+   "act": "deadpan_sideeye",
+   "act_at": 0.2,
+   "act_len": 1.0
+  },
+  {
+   "line": 3,
+   "from": 0.5,
+   "kind": "two",
+   "bg": "/tmp/fin/bg/rc2/park.mp4",
+   "bg_start": 5,
+   "blur": 1,
+   "p": "nervous",
+   "r": "sideeye"
+  },
+  {
+   "line": 4,
+   "from": 0.0,
+   "kind": "phone",
+   "bg": "/tmp/fin/bg/rc2/park.mp4",
+   "bg_start": 6,
+   "blur": 3,
+   "msgs": [
+    {
+     "t": "Oopsie! Wrong person!\nPlease send it back!",
+     "at": 0.1,
+     "col": [
+      52,
+      120,
+      246
+     ]
+    }
+   ],
+   "p": "shock",
+   "rocco": true,
+   "r": "smug"
+  },
+  {
+   "line": 5,
+   "from": 0.0,
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc2/park.mp4",
+   "bg_start": 7,
+   "blur": 1,
+   "p": "shock",
+   "r": "smug"
+  },
+  {
+   "line": 6,
+   "from": 0.0,
+   "kind": "cu_r",
+   "bg": "/tmp/fin/bg/rc2/coffee.mp4",
+   "bg_start": 6,
+   "blur": 2,
+   "r": "smug",
+   "act": "deadpan_sideeye",
+   "act_at": 0.0,
+   "act_len": 0.9
+  },
+  {
+   "line": 7,
+   "from": 0.0,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc2/cash.mp4",
+   "bright": 1.0,
+   "s": "sly",
+   "r_peek": true,
+   "r": "sideeye",
+   "msg": "GRANDMA'S RENT SURGERY?!",
+   "msg_word": "rent"
+  },
+  {
+   "line": 8,
+   "from": 0.0,
+   "kind": "flags",
+   "bg": "/tmp/fin/bg/rc2/coffee.mp4",
+   "bg_start": 2,
+   "blur": 2,
+   "r": "sideeye",
+   "n": 1,
+   "n_prev": 0,
+   "pop_word": "flag"
+  },
+  {
+   "line": 8,
+   "from": 0.4,
+   "kind": "insert",
+   "bg": "/tmp/fin/bg/rc2/card.mp4",
+   "bright": 1.1,
+   "circle": [
+    0.42,
+    0.4,
+    0.24
+   ],
+   "label": "STOLEN CARD",
+   "who": "r",
+   "rx": 0.76,
+   "r": "point"
+  },
+  {
+   "line": 9,
+   "from": 0.0,
+   "kind": "insert",
+   "bg": "/tmp/fin/bg/rc2/mobank.mp4",
+   "bright": 1.3,
+   "circle": [
+    0.5,
+    0.34,
+    0.2
+   ],
+   "label": "OWNER REPORTS IT",
+   "who": "r",
+   "rx": 0.76,
+   "r": "point"
+  },
+  {
+   "line": 9,
+   "from": 0.55,
+   "kind": "insert",
+   "bg": "/tmp/fin/bg/rc2/online.mp4",
+   "bright": 1.0,
+   "circle": [
+    0.45,
+    0.4,
+    0.22
+   ],
+   "label": "BANK TAKES IT BACK",
+   "who": "r",
+   "rx": 0.76,
+   "r": "sad"
+  },
+  {
+   "line": 10,
+   "from": 0.0,
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc2/park.mp4",
+   "bg_start": 8,
+   "blur": 1,
+   "p": "nervous",
+   "r": "sideeye"
+  },
+  {
+   "line": 10,
+   "from": 0.35,
+   "kind": "math",
+   "bg": "/tmp/fin/bg/rc2/coffee.mp4",
+   "blur": 5,
+   "title": "PENNY'S \"FREE\" MONEY",
+   "rows": [
+    [
+     "Mystery gift",
+     "+$1,000",
+     true
+    ],
+    [
+     "Bank takes it back",
+     "-$1,000",
+     false
+    ],
+    [
+     "Penny sends it back",
+     "-$1,000",
+     false
+    ]
+   ],
+   "r2_word": "11:down",
+   "total": "PENNY: -$1,000",
+   "total_word": "11:keeps",
+   "r": "sad",
+   "penny": true,
+   "p": "nervous",
+   "r0_at": 0.05,
+   "r1_at": 0.55
+  },
+  {
+   "line": 12,
+   "from": 0.0,
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc2/park.mp4",
+   "bg_start": 2,
+   "blur": 1,
+   "p": "shock",
+   "r": "sad"
+  },
+  {
+   "line": 13,
+   "from": 0.0,
+   "kind": "insert",
+   "bg": "/tmp/fin/bg/bank/phone_bed.mp4",
+   "bright": 1.0,
+   "circle": [
+    0.55,
+    0.3,
+    0.2
+   ],
+   "label": "REPORT IN THE APP",
+   "who": "r",
+   "rx": 0.25,
+   "r": "happy"
+  },
+  {
+   "line": 13,
+   "from": 0.5,
+   "kind": "store",
+   "bg": "/tmp/fin/bg/rc2/coffee.mp4",
+   "blur": 5,
+   "l1": "SEND NOTHING BACK.",
+   "l2": "REPORT IN THE APP",
+   "r": "thumbsup"
+  },
+  {
+   "line": 14,
+   "from": 0.0,
+   "kind": "two",
+   "bg": "/tmp/fin/bg/rc2/park.mp4",
+   "bg_start": 4,
+   "blur": 1,
+   "p": "nervous",
+   "r": "sideeye"
+  },
+  {
+   "line": 15,
+   "from": 0.0,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc2/cash.mp4",
+   "bg_start": 3,
+   "bright": 1.0,
+   "s": "sly",
+   "r_peek": true,
+   "r": "sideeye",
+   "msg": "\"HONEST STEVE\"",
+   "msg_word": "steve"
+  },
+  {
+   "line": 16,
+   "from": 0.0,
+   "kind": "flags",
+   "bg": "/tmp/fin/bg/rc2/coffee.mp4",
+   "bg_start": 5,
+   "blur": 2,
+   "r": "smug",
+   "n": 2,
+   "n_prev": 1,
+   "pop_word": "flags"
+  },
+  {
+   "line": 17,
+   "from": 0.0,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc2/cash.mp4",
+   "bg_start": 6,
+   "bright": 1.0,
+   "s": "panic",
+   "r_peek": true,
+   "r": "smug",
+   "msg": "$2,000?!",
+   "msg_word": "two"
+  },
+  {
+   "line": 18,
+   "from": 0.0,
+   "kind": "two",
+   "bg": "/tmp/fin/bg/rc2/park.mp4",
+   "bg_start": 6,
+   "blur": 1,
+   "p": "happy",
+   "r": "thumbsup"
+  },
+  {
+   "line": 19,
+   "from": 0.0,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc2/cash.mp4",
+   "bg_start": 8,
+   "bright": 1.0,
+   "s": "panic",
+   "r_peek": true,
+   "r": "smug",
+   "msg": "NOT AGAIN!",
+   "msg_at": 0.2
+  },
+  {
+   "line": 19,
+   "from": 1.0,
+   "kind": "end",
+   "bg": "/tmp/fin/bg/rc2/park.mp4",
+   "blur": 3,
+   "l1": "\"WRONG PERSON, SEND IT BACK\"",
+   "l2": "= SCAM",
+   "l3": "Send this to the nicest person you know."
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "word": "thousand",
+   "name": "cash",
+   "gain": 0.3
+  },
+  {
+   "line": 0,
+   "frac": 0.55,
+   "name": "pop",
+   "gain": 0.3
+  },
+  {
+   "line": 1,
+   "frac": 0.0,
+   "name": "scratch",
+   "gain": 0.25
+  },
+  {
+   "line": 4,
+   "frac": 0.0,
+   "name": "ding",
+   "gain": 0.35
+  },
+  {
+   "line": 6,
+   "frac": 0.0,
+   "name": "impact",
+   "gain": 0.3
+  },
+  {
+   "line": 7,
+   "word": "surgery",
+   "name": "boing",
+   "gain": 0.3
+  },
+  {
+   "line": 8,
+   "word": "flag",
+   "name": "buzzer",
+   "gain": 0.22
+  },
+  {
+   "line": 8,
+   "word": "stolen",
+   "name": "whip",
+   "gain": 0.3
+  },
+  {
+   "line": 9,
+   "frac": 0.55,
+   "name": "slide_down",
+   "gain": 0.3
+  },
+  {
+   "line": 11,
+   "word": "keeps",
+   "name": "bonk",
+   "gain": 0.45
+  },
+  {
+   "line": 12,
+   "frac": 0.0,
+   "name": "boing",
+   "gain": 0.25
+  },
+  {
+   "line": 13,
+   "frac": 0.5,
+   "name": "ding",
+   "gain": 0.25
+  },
+  {
+   "line": 15,
+   "word": "steve",
+   "name": "crickets",
+   "gain": 0.3
+  },
+  {
+   "line": 16,
+   "word": "flags",
+   "name": "buzzer",
+   "gain": 0.22
+  },
+  {
+   "line": 16,
+   "word": "flags",
+   "dt": 0.25,
+   "name": "buzzer",
+   "gain": 0.18
+  },
+  {
+   "line": 18,
+   "word": "blocked",
+   "name": "impact",
+   "gain": 0.35
+  },
+  {
+   "line": 19,
+   "frac": 0.6,
+   "name": "wahwah",
+   "gain": 0.35
+  }
+ ],
+ "sources": "FTC consumer alert on overpayment/accidental payment scams; Cash App, Zelle and bank guidance: don't send money back yourself \u2014 contact the app or bank and let them reverse it",
+ "footage": "Pixabay: loswin23, Alanchevereau, 34168960, Mohamed_hassan, flutie8211, Natures_Embrace; Pexels: kaboompics",
+ "benchmarks": [
+  "#1 1-second event hook",
+  "#2 prediction then instant validation (ding)",
+  "#3 damage math card",
+  "#5 deadpan straight man (Detective / Two red flags)",
+  "#6 scammer demoted sly->panic + two-beat tag",
+  "#7 two locations intercut",
+  "#8 footage + red circle callouts x5",
+  "#10 caption colours per speaker, money green, danger red",
+  "#11 sfx every 1.5-2.5 s",
+  "#12 share CTA",
+  "#13 55-60 s"
+ ]
+}

@@ -96,7 +96,8 @@
   "shows": "Stol ustida pul sanash",
   "use_for": "hisob-kitob, byudjet",
   "route": 1,
-  "ok": true
+  "ok": true,
+  "note": "2026-11-22: upper 40% is a blank pale wall (empty_check fail) - only under a chart/card or cropped"
  },
  {
   "key": "cash_stacks",
@@ -107,7 +108,8 @@
   "shows": "Bog'lam-bog'lam 100 dollarliklar",
   "use_for": "millionlar, rekord tushum (GTA 6), bank",
   "route": 2,
-  "ok": true
+  "ok": true,
+  "note": "2026-11-22: 3-6 s is dark (hand covers the lens) - use start 0 or 7+"
  },
  {
   "key": "wallet_empty",
@@ -140,7 +142,8 @@
   "shows": "Oq fonda tushayotgan tangalar",
   "use_for": "tanga narxi (V-02), mayda pul, 'sekundiga'",
   "route": 1,
-  "ok": true
+  "ok": true,
+  "note": "2026-11-22: pure white background (luma 250) - empty frame between coins; avoid full-screen"
  },
  {
   "key": "coins_hand",

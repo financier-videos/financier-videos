@@ -328,7 +328,8 @@ def compose(shot, lt, t, talkR, talkP, extra, talkS=0.0, fimg=None, fimg2=None):
     act = shot.get("act"); act_t = lt - shot.get("act_at", 0)
     if act and not (0 <= act_t < shot.get("act_len", 1.0)): act = None
     if k == "slick":  # the scammer in his lair
-        slick(im, W * 0.5, H * 0.50, 760, shot.get("s", "sly"), talkS, t)
+        slick(im, W * (0.40 if shot.get("r_peek") else 0.5), H * 0.50, 760, shot.get("s", "sly"), talkS, t)
+        if shot.get("r_peek"): rocco(im, W * 0.84, H * 1.0, 820, moodR, talkR, t, act, act_t)  # Rocco stays on screen (preflight #12)
         if shot.get("msg") and lt >= shot.get("msg_at", 0): txt(im, (W * 0.5, H * 0.17), shot["msg"], 96, (255, 226, 60), sw=12, ang=-5)
     elif k == "insert":  # real footage + red circle callout (+ reacting character); the callout is drawn ON TOP of the character
         who = shot.get("who")
@@ -474,7 +475,8 @@ def main():
         if sh.get("until_end"): t1 = total
         sh = dict(sh, _t0=t0, _t1=t1)
         for key in [k_ for k_ in sh if k_.endswith("_word")]:  # e.g. "snap_word": "mousetrap" -> "snap_at" (s after the shot starts)
-            sh[key[:-5] + "_at"] = word_t(sh["line"], sh[key]) - t0
+            _ln, _w = (int(sh[key].split(":")[0]), sh[key].split(":")[1]) if ":" in sh[key] else (sh["line"], sh[key])  # "11:keeps" = a word of another line
+            sh[key[:-5] + "_at"] = word_t(_ln, _w) - t0
         shots.append(sh)
     for j in range(len(shots) - 1): shots[j]["_t1"] = shots[j + 1]["_t0"]  # no gaps
     shots[0]["_t0"] = 0.0; shots[-1]["_t1"] = total
