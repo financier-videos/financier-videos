@@ -1,3 +1,4 @@
 r08_fees VERDICT: PASS  -> work/2026-11-22r/r08_fees_b8_qc.json
 r03_subs VERDICT: PASS  -> work/2026-11-22r/r03_subs_b8_qc.json
 r08_fees VERDICT: FAIL  -> work/2026-11-22r/r08_fees_b8_qc.json
+r03_subs VERDICT: PASS  -> work/2026-11-22r/r03_subs_b8_qc.json

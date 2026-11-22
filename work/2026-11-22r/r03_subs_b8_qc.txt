@@ -1,0 +1,16 @@
+[PASS] 0_freshness: up to date
+[PASS] 1_platform_check:   12 checks, 0 failed, 1 warnings
+[PASS] 2_loudness: I = -14.1 LUFS (target -14)
+[PASS] 3_blackdetect: 0 black segments
+[PASS] 4_export: h264 High, 12.5 Mbit/s, 31.1s, stereo
+[PASS] 5_voice_check: }
+[PASS] 6_prosody: {"median_f0": 263.1, "flagged_scenes": 0}
+[PASS] 7_title: score 100
+[LOOK] 8_contact_sheet: work/2026-11-22r/r03_subs_b8_qc_sheet.png - Read it before posting
+[PASS] 9_color: exposure and colour OK
+[WARN] 10_look: WARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)
+[PASS] 11_pacing: 20 hard cuts (ffmpeg scene>0.22) in 31.1 s = 1.6 s/cut (need >= 15); engine planned 21
+[SKIP] 12_script: no --prev-specs (pass the last 4 specs of this channel)
+[PASS] 14_empty_panel: PASS: largest one-colour flat area 10% of the frame (limit 15%)
+[PASS] 13_skills_line: Skillar: footage_bank (Buyurtma 8), Ko'rik 3 layout fixes, empty_check, qc_gate; ishlatilmadi: vidiq_find_broll (bank yetarli)
+VERDICT: PASS  -> work/2026-11-22r/r03_subs_b8_qc.json

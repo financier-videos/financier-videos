@@ -1,11 +1,15 @@
 {
+ "0_note": {
+  "status": "INFO",
+  "note": "engine changed since render, no re-render-required change"
+ },
  "0_freshness": {
   "status": "PASS",
   "note": "up to date"
  },
  "1_platform_check": {
   "status": "PASS",
-  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    46.0 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.1 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.4 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    46.2 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.1 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.4 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
  },
  "2_loudness": {
   "status": "PASS",
@@ -17,7 +21,7 @@
  },
  "4_export": {
   "status": "PASS",
-  "note": "h264 High, 12.4 Mbit/s, 31.1s, stereo"
+  "note": "h264 High, 12.5 Mbit/s, 31.1s, stereo"
  },
  "5_voice_check": {
   "status": "PASS",
@@ -41,11 +45,11 @@
  },
  "10_look": {
   "status": "WARN",
-  "note": "FAIL  0.74  (layout 0.88, palette 0.45, tone 0.94)  vs 2026-11-24_noseat_r02_b8.mp4\nFAIL  0.85  (layout 0.96, palette 0.69, tone 0.88)  vs 2026-11-23_fees_r08_b8.mp4\nFAIL  0.87  (layout 0.91, palette 0.80, tone 0.93)  vs 2026-11-23_pink_r07_b8.mp4\nFAIL  0.84  (layout 0.89, palette 0.73, tone 0.93)  vs 2026-11-23_cart_r06_b8.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+  "note": "FAIL  0.73  (layout 0.88, palette 0.44, tone 0.92)  vs 2026-11-24_noseat_r02_b8.mp4\nFAIL  0.86  (layout 0.97, palette 0.75, tone 0.83)  vs 2026-11-23_fees_r08_b8.mp4\nFAIL  0.85  (layout 0.89, palette 0.77, tone 0.93)  vs 2026-11-23_pink_r07_b8.mp4\nFAIL  0.82  (layout 0.88, palette 0.70, tone 0.92)  vs 2026-11-23_cart_r06_b8.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
  },
  "11_pacing": {
   "status": "PASS",
-  "note": "17 hard cuts (ffmpeg scene>0.22) in 31.1 s = 1.8 s/cut (need >= 15); engine planned 19"
+  "note": "20 hard cuts (ffmpeg scene>0.22) in 31.1 s = 1.6 s/cut (need >= 15); engine planned 21"
  },
  "12_script": {
   "status": "SKIP",
