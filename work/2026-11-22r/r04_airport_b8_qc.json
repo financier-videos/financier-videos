@@ -5,7 +5,7 @@
  },
  "1_platform_check": {
   "status": "PASS",
-  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    39.6 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.0 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    39.5 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.0 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
  },
  "2_loudness": {
   "status": "PASS",
@@ -41,11 +41,11 @@
  },
  "10_look": {
   "status": "WARN",
-  "note": "FAIL  0.80  (layout 0.88, palette 0.66, tone 0.86)  vs 2026-11-22_gta_timeline_b8.mp4\nok  0.58  (layout 0.30, palette 0.89, tone 0.68)  vs 2026-11-22_gta_how_big_v615.mp4\nFAIL  0.81  (layout 0.89, palette 0.68, tone 0.85)  vs 2026-11-22_gta_per_second.mp4\nok  0.61  (layout 0.46, palette 0.81, tone 0.57)  vs 2026-11-21_twenty_secrets_b3.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+  "note": "FAIL  0.85  (layout 0.88, palette 0.76, tone 0.93)  vs 2026-11-22_gta_timeline_b8.mp4\nok  0.43  (layout 0.30, palette 0.47, tone 0.66)  vs 2026-11-22_gta_how_big_v615.mp4\nFAIL  0.83  (layout 0.89, palette 0.73, tone 0.86)  vs 2026-11-22_gta_per_second.mp4\nok  0.55  (layout 0.47, palette 0.66, tone 0.54)  vs 2026-11-21_twenty_secrets_b3.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
  },
  "11_pacing": {
-  "status": "FAIL",
-  "note": "12 hard cuts (ffmpeg scene>0.22) in 26.5 s = 2.2 s/cut (need >= 13); engine planned 18"
+  "status": "PASS",
+  "note": "18 hard cuts (ffmpeg scene>0.22) in 26.5 s = 1.5 s/cut (need >= 13); engine planned 19"
  },
  "12_script": {
   "status": "SKIP",
@@ -53,11 +53,11 @@
  },
  "14_empty_panel": {
   "status": "PASS",
-  "note": "PASS: largest one-colour flat area 6% of the frame (limit 15%)"
+  "note": "PASS: largest one-colour flat area 8% of the frame (limit 15%)"
  },
  "13_skills_line": {
   "status": "PASS",
   "note": "Skillar: footage_bank (Buyurtma 8), Ko'rik 3 layout fixes, empty_check, qc_gate; ishlatilmadi: vidiq_find_broll (bank yetarli)"
  },
- "verdict": "FAIL"
+ "verdict": "PASS"
 }

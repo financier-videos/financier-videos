@@ -1,0 +1,9 @@
+r04_airport VERDICT: FAIL  -> work/2026-11-22r/r04_airport_b8_qc.json
+r05_bfcm VERDICT: FAIL  -> work/2026-11-22r/r05_bfcm_b8_qc.json
+r06_cart VERDICT: FAIL  -> work/2026-11-22r/r06_cart_b8_qc.json
+r07_pink VERDICT: PASS  -> work/2026-11-22r/r07_pink_b8_qc.json
+r08_fees VERDICT: FAIL  -> work/2026-11-22r/r08_fees_b8_qc.json
+r02_noseat VERDICT: PASS  -> work/2026-11-22r/r02_noseat_b8_qc.json
+r03_subs VERDICT: FAIL  -> work/2026-11-22r/r03_subs_b8_qc.json
+r04_airport VERDICT: PASS  -> work/2026-11-22r/r04_airport_b8_qc.json
+r05_bfcm VERDICT: PASS  -> work/2026-11-22r/r05_bfcm_b8_qc.json

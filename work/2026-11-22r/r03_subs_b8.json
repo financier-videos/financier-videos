@@ -175,9 +175,14 @@
    "stat": "+23%",
    "shots": [
     {
-     "broll": "/tmp/fin/bg/bank/phone_bed.mp4",
+     "broll": "/tmp/fin/bg/bank/phone_scroll.mp4",
      "at": 0,
      "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/tv_remote.mp4",
+     "at": 1.6,
+     "start": 2
     }
    ],
    "mascot": {
@@ -185,5 +190,6 @@
     "pos": "corner"
    }
   }
- ]
+ ],
+ "grade": "teal"
 }

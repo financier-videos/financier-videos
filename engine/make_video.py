@@ -1012,13 +1012,23 @@ def make_bg(W, H, seed, theme="vault"):
     return Image.alpha_composite(im.convert("RGBA"), ov)
 
 
+GRADES = {  # v6.16: per-video colour grade of the footage (spec "grade") so full-screen videos in a row don't look alike
+    "": "", "warm": "colorbalance=rs=0.08:gs=0.02:bs=-0.08:rm=0.05:bm=-0.05,",
+    "cool": "colorbalance=rs=-0.08:bs=0.10:rm=-0.06:bm=0.08,eq=saturation=1.1,",
+    "teal": "colorbalance=rs=-0.10:gs=0.04:bs=0.08:rh=0.08:bh=-0.06,eq=saturation=1.2,",
+    "vivid": "eq=saturation=1.45:contrast=1.06,",
+    "rose": "colorbalance=rs=0.10:bs=0.06:gm=-0.05,eq=saturation=1.15,",
+}
+GRADE = ""
+
+
 def broll_frames(path, W, H, n, start=0.0):
     # decode slightly larger than the frame so a slow Ken Burns zoom never shows edges
     BW, BH = int(W * 1.1) // 2 * 2, int(H * 1.1) // 2 * 2
     img = path.lower().endswith((".jpg", ".jpeg", ".png", ".webp"))  # v6.14: a photo works as a shot too
     pre = ["-loop", "1"] if img else ["-stream_loop", "-1", "-ss", f"{start}"]  # v6.14: short clips loop instead of freezing
     cmd = ["ffmpeg", "-loglevel", "error"] + pre + ["-i", path, "-vf",
-           f"scale={BW}:{BH}:force_original_aspect_ratio=increase,crop={BW}:{BH},lutyuv=y='min(val\\,208)',fps={FPS}",  # v6.16: white backgrounds never burn (qc 9)
+           f"scale={BW}:{BH}:force_original_aspect_ratio=increase,crop={BW}:{BH},{GRADES.get(GRADE, '')}lutyuv=y='min(val\\,208)',fps={FPS}",  # v6.16: white backgrounds never burn (qc 9)
            "-frames:v", str(n), "-f", "rawvideo", "-pix_fmt", "rgb24", "-"]
     p = subprocess.run(cmd, capture_output=True)
     raw = p.stdout; fs = BW * BH * 3
@@ -1892,6 +1902,7 @@ def render(spec, wav, total, out, workdir):
     ROC = spec.get("style") == "rocco"  # v6.12: Red Flag Rocco look - case-file tabs, typewriter, red stamps, label captions, phone SMS
     LOOK = spec.get("look", "vault")  # v6.14: "fullbleed" (bright full-screen footage, text in the lower third); docs/looks.md
     FB = LOOK == "fullbleed"
+    global GRADE; GRADE = spec.get("grade", "")  # v6.16 footage colour grade
     PAPER = LOOK == "paper" and not ROC; SPLIT = LOOK == "split" and not ROC  # v6.14 (docs/looks.md)
     INK = (34, 30, 26); PAPER_RED = (196, 38, 38); HILITE = (255, 226, 70)
     SPL_A = hex2rgb(spec.get("split_colors", ["#1F6FEB", "#FF8A00"])[0]); SPL_B = hex2rgb(spec.get("split_colors", ["#1F6FEB", "#FF8A00"])[1])
