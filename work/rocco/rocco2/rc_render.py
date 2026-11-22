@@ -330,14 +330,14 @@ def compose(shot, lt, t, talkR, talkP, extra, talkS=0.0, fimg=None, fimg2=None):
     if k == "slick":  # the scammer in his lair
         slick(im, W * 0.5, H * 0.50, 760, shot.get("s", "sly"), talkS, t)
         if shot.get("msg") and lt >= shot.get("msg_at", 0): txt(im, (W * 0.5, H * 0.17), shot["msg"], 96, (255, 226, 60), sw=12, ang=-5)
-    elif k == "insert":  # real footage + red circle callout (+ small reacting character)
-        c = shot.get("circle")
-        if c: callout(im, c[0] * W, c[1] * H, c[2] * W, lt, shot.get("label"), shot.get("circle_at", 0.15))
-        if shot.get("card"): txt(im, (W * 0.5, H * 0.16), shot["card"], 104, (255, 226, 60), sw=14, ang=-4)
+    elif k == "insert":  # real footage + red circle callout (+ reacting character); the callout is drawn ON TOP of the character
         who = shot.get("who")
         if who == "r": rocco(im, W * shot.get("rx", 0.76), H * 1.0, 1000, moodR, talkR, t, act, act_t, flip=shot.get("rx", 0.76) < 0.5)
         elif who == "p": penny(im, W * 0.80, H * 0.86, 330, moodP, talkP, t)
         elif who == "s": slick(im, W * 0.78, H * 0.80, 330, shot.get("s", "sly"), talkS, t)
+        c = shot.get("circle")
+        if c: callout(im, c[0] * W, c[1] * H, c[2] * W, lt, shot.get("label"), shot.get("circle_at", 0.15))
+        if shot.get("card"): txt(im, (W * 0.5, H * 0.16), shot["card"], 104, (255, 226, 60), sw=14, ang=-4)
     elif k == "split":  # two places at once: top = fimg2 (e.g. the scammer), bottom = fimg (the victim)
         top = (fimg2 if fimg2 is not None else setbg("sky")).crop((0, int(H * 0.2), W, int(H * 0.7))).resize((W, H // 2))
         im.alpha_composite(top.convert("RGBA"), (0, 0)); dd = ImageDraw.Draw(im); dd.rectangle([0, H // 2 - 6, W, H // 2 + 6], fill=(232, 232, 234))
