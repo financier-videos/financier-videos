@@ -190,12 +190,12 @@ Ssenariy (Buck hikoya qiladi, 2-ovoz — savdogar, 1 luqma):
 Kadrlar (≥28): bochka sirpanadi → qo'l → 5 teri taxlami → bo'sh hamyon → o'rmon, kiyiklar uzoqdan (lavha, yo'l 1) → pichoq = 1 teri → viski = 5 teri → kundalik sahifasi yozilyapti (o'z grafika) → "300 Bucks" siyoh → taqvim 1748 → 1792 varaqlanadi (44) → birinchi kumush dollar (stilizatsiya) → olomon og'zidan "buck" pufakchalari → zamonaviy $1 (SPECIMEN) → savol belgisi, ikki tarixchi bahsi (siluet) → Buck o'z ismiga ishora qiladi. Yakun: 1-kadrga qaytish (bochka).
 Buck: faqat oxirgi 2 kadrda to'liq; qolganida ovoz.
 
-### [TAYYOR] V-02 guess_reveal · look split · ~40 s · "Guess What Each Coin Costs to Make"
+### [CHIQDI 2026-11-23 07:00 ET — "A Nickel Costs 13.78 Cents to Make", work/2026-11-23v/v02_coins.json; FY2024 raqamlari (FY2025 manbasi ochilmadi)] V-02 guess_reveal · look split · ~40 s · "Guess What Each Coin Costs to Make"
 MANBA: U.S. Mint 2024 Annual Report (FY2024): penny 3.69¢, nickel 13.78¢, dime 5.76¢, quarter 14.68¢. Penny zarbi 2025-yil noyabrda to'xtagan (St. Louis Fed). RENDER OLDIDAN: Mint FY2025 hisobotini tekshir — yangiroq raqam bo'lsa o'shani ol va sanasini yoz.
 Tuzilma: Buck so'raydi, 2-ovoz ("mehmon") taxmin qiladi. | "A nickel. Five cents. Guess what it costs to make?" — "Uh... two cents?" — "Almost fourteen." | "A dime?" — "Twenty?" — "Under six. It's the bargain." | "A quarter?" — "Ten?" — "Nearly fifteen." | "And the penny cost almost four cents. That's why they stopped making it." | "So the cheapest coin to make... is not the smallest one." Yakun: bitta raqam "13.78¢" + nickel.
 Kadrlar (≥20): har tanga makro (lavha, yo'l 1) → taxmin raqami qalam bilan → haqiqiy raqam muhr bilan → zarbxona pressi (lavha) → tarozi: 5¢ vs 13.78¢ → oxirida 4 tanga qatori narx yorliqlari bilan.
 
-### [TAYYOR] V-03 guess_reveal/ranking · look fullbleed · ~35 s · "Which Bill Dies First?"
+### [CHIQDI 2026-11-23 13:00 ET — "The $10 Bill Dies First: 5.7 Years", work/2026-11-23v/v03_bills.json] V-03 guess_reveal/ranking · look fullbleed · ~35 s · "Which Bill Dies First?"
 MANBA: Federal Reserve FAQ "How long is the lifespan of U.S. paper money?" (2025-yil may holati): $1 — 7.2 yil, $5 — 5.8, $10 — 5.7, $20 — 11.1, $50 — 14.9, $100 — 24.0. Qog'oz: 75% paxta, 25% zig'ir (BEP).
 "Six bills. One of them wears out first. Guess which. | The one-dollar? Seven point two years. Not even close to last... but not first. | The hundred? Twenty-four years. It mostly sits in a drawer. | The loser is the ten. Five point seven years. | Why? It gets passed around... and nobody saves it. | It's not even paper. Three-quarters cotton. | So the bill that lives longest is the one you spend the least."
 Kadrlar (≥18): 6 kupyura poyga chizig'ida (o'z grafika, SPECIMEN) → hamyondan-hamyonga qo'llar (lavha) → kir yuvish mashinasi (3 metafora) → seyf/tortma → paxta dalasi (lavha, 2 masshtab) → poyga finishi: $10 birinchi "yiqiladi".

@@ -1,0 +1,258 @@
+{
+ "format": "short",
+ "sfx": true,
+ "look": "fullbleed",
+ "captions": "words",
+ "headline": "hook",
+ "auto_shots": 1.8,
+ "structure": "guess_reveal",
+ "topic": 1,
+ "source": "Source: U.S. Mint 2024 Annual Report (fiscal 2024 unit costs)",
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
+ },
+ "voices": {
+  "guest": {
+   "voice_id": "cgSgspJ2msm6clMCkdW9",
+   "label": "Guest (Jessica, ElevenLabs premade)",
+   "settings": {
+    "speed": 1.05
+   }
+  }
+ },
+ "scenes": [
+  {
+   "text": "A nickel. Five cents. Guess what it costs to make.",
+   "head": "GUESS WHAT A NICKEL COSTS TO MAKE",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/coins_hand.mp4",
+     "at": 0,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "smug",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Hmm... two cents. Tops.",
+   "voice": "guest",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 0,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Almost fourteen. 13.78 cents.",
+   "say": "Almost fourteen. Thirteen point seven eight cents.",
+   "stat": "13.78\u00a2",
+   "show_source": true,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_desk.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
+     "at": 1.5,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "doubletake",
+    "act_at": 0.3
+   }
+  },
+  {
+   "text": "Okay. A dime?",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/atm_use.mp4",
+     "at": 0,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "happy",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Easy. Twenty cents.",
+   "voice": "guest",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/online_card.mp4",
+     "at": 0,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Under six. 5.76. The one coin that's a bargain.",
+   "say": "Under six. Five point seven six. The one coin that's a bargain.",
+   "stat": "5.76\u00a2",
+   "show_source": "U.S. Mint, fiscal 2024",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/coins_hand.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 1.6,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "thumbsup",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "A quarter? Nearly fifteen. 14.68.",
+   "say": "A quarter? Nearly fifteen. Fourteen point six eight.",
+   "vs": {
+    "left": "25\u00a2",
+    "left_label": "Face value",
+    "right": "14.68\u00a2",
+    "right_label": "Cost to make",
+    "win": "left",
+    "at": [
+     0.3,
+     2.0
+    ],
+    "vs_at": 1.2,
+    "left_color": "#FFFFFF",
+    "right_color": "#FFFFFF"
+   },
+   "show_source": true,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_stacks.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
+     "at": 1.8,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "happy",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "And the penny cost 3.69 cents. So in 2025, they stopped making it.",
+   "say": "And the penny cost three point six nine cents. So in twenty twenty-five, they stopped making it.",
+   "stat": "3.69\u00a2",
+   "show_source": "Last circulating penny: Nov 12, 2025 (St. Louis Fed)",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 2.2,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "jawdrop",
+    "act_at": 2.6
+   }
+  },
+  {
+   "text": "Wait. The nickel loses more than the penny did?",
+   "voice": "guest",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/online_card.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "smug",
+    "pos": "corner",
+    "act": "shrug",
+    "act_at": 0.4
+   }
+  },
+  {
+   "text": "About nine cents a coin. So... should the nickel go next?",
+   "say": "About nine cents a coin. So... should the nickel go next?",
+   "show_source": "Our math: 13.78 \u2212 5",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/atm_use.mp4",
+     "at": 1.6,
+     "start": 0
+    }
+   ],
+   "land": 0.3,
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner",
+    "act": "deadpan",
+    "act_at": 1.4
+   }
+  },
+  {
+   "text": "Because right now, the worst deal in your pocket is...",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_stacks.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
+     "at": 1.6,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "smug",
+    "pos": "corner"
+   }
+  }
+ ],
+ "loop": true
+}

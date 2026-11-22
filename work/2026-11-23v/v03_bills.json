@@ -1,0 +1,197 @@
+{
+ "format": "short",
+ "sfx": true,
+ "look": "fullbleed",
+ "headline": "hook",
+ "auto_shots": 1.8,
+ "structure": "guess_reveal",
+ "topic": 1,
+ "source": "Source: Federal Reserve lifespan estimates (via St. Louis Fed, SF Fed)",
+ "buck_voice": {
+  "variant": "D",
+  "settings": {
+   "speed": 1.1
+  }
+ },
+ "scenes": [
+  {
+   "text": "Six bills. One wears out first. Guess which.",
+   "head": "WHICH BILL DIES FIRST?",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_stacks.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/city_night.mp4",
+     "at": 1.5,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "The $1? 7.2 years. Not first.",
+   "say": "The one-dollar bill? Seven point two years. Not first.",
+   "stat": "$1: 7.2 YRS",
+   "show_source": true,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/coffee_pour.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/atm_use.mp4",
+     "at": 1.6,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "smug",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "The $100? 24 years. It mostly sits in a drawer.",
+   "say": "The hundred-dollar bill? Twenty-four years. It mostly sits in a drawer.",
+   "stat": "$100: 24 YRS",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_stacks.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 1.8,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "proud",
+    "pos": "corner",
+    "act": "shrug",
+    "act_at": 1.6
+   }
+  },
+  {
+   "text": "The loser? The ten. 5.7 years.",
+   "say": "The loser? The ten. Five point seven years.",
+   "stat": "$10: 5.7 YRS",
+   "show_source": true,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "beat": 0.2,
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "jawdrop",
+    "act_at": 0.6
+   }
+  },
+  {
+   "text": "Poor guy gets passed around all day... and nobody ever saves him.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cart_empty.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/coffee_pour.mp4",
+     "at": 1.7,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "sad",
+    "pos": "corner",
+    "act": "sigh",
+    "act_at": 1.8
+   }
+  },
+  {
+   "text": "And it's not even paper. It's 75% cotton.",
+   "say": "And it's not even paper. It's seventy-five percent cotton.",
+   "stat": "75% COTTON",
+   "show_source": "Bureau of Engraving and Printing: 75% cotton, 25% linen",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_desk.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 1.6,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "confused",
+    "pos": "corner",
+    "act": "doubletake",
+    "act_at": 0.4
+   }
+  },
+  {
+   "text": "So which bill do you hold onto longest?",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/laptop_phone.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "happy",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Because the bill you spend the most dies first. Out of...",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cart_empty.mp4",
+     "at": 0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/laptop_phone.mp4",
+     "at": 1.6,
+     "start": 0
+    }
+   ],
+   "land": 0.2,
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner",
+    "act": "deadpan",
+    "act_at": 1.6
+   }
+  }
+ ],
+ "loop": true,
+ "captions": "words",
+ "bg_bright": 1.3
+}
