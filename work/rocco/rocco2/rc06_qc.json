@@ -1,0 +1,67 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    50.5 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -15.0 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.4 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -15.0 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 9.5 Mbit/s, 44.6s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": ",\n \"missing\": [\n  \"rocco\",\n  \"dot\"\n ],\n \"extra\": [\n  \"rockle\",\n  \"dutch\"\n ],\n \"heard\": \"Rockle! Black Friday! Sneakers 90% off! Show me! The store is called Best deals real not fake, Dutch shop! Red flag number one. Hurry! Only two left! Ten minutes! Two! A fake countdown clock! And it only takes gift cards? Three. Real stores take credit cards. Uh, we also take more gift cards! But it's 90% off! If the price is unreal, the store probably is too. Pay with a credit card and type the store's address yourself. So, no sneakers. Sneakers yes, scam no. Can a real store do 90% off? Sure, on socks.\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "21.68s range=13.3 st  gap=0.29  ok  | Uh... we also take... MORE gift cards!\n10  25.04s range= 3.2 st  gap=0.14  ok  | But it's NINETY percent off!\n11  27.20s range=13.2 st  gap=0.43  ok  | If the price is unreal, the store probably is too. Pay with \n12  33.52s range= 8.0 st  gap=0.28  ok  | So... no sneakers.\n13  35.52s range= 8.3 st  gap=0.57  ok  | Sneakers, yes. Scam, no.\n14  37.84s range=11.2 st  gap=0.34  ok  | Can a REAL store do ninety percent off?\n15  40.32s range=19.3 st  gap=0.29  ok  | Sure. On socks.\n16  42.00s range=   - st  gap=-  ok  | \n{\"median_f0\": 297.0, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 94"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/rocco/rocco2/rc06_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "WARN",
+  "note": "FAIL  0.80  (layout 0.89, palette 0.70, tone 0.77)  vs rocco_rc01_detective_call.mp4\nok  0.70  (layout 0.88, palette 0.44, tone 0.74)  vs rocco_rc05_plays_dumb.mp4\nFAIL  0.72  (layout 0.76, palette 0.67, tone 0.72)  vs rocco_rc03_qr_box.mp4\nFAIL  0.75  (layout 0.93, palette 0.47, tone 0.80)  vs rocco_rc02_wrong_person.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "22 hard cuts (ffmpeg scene>0.22) in 44.6 s = 2.0 s/cut (need >= 22); engine planned 24"
+ },
+ "12_script": {
+  "status": "PASS",
+  "note": "rc06_qcspec.json                   words  98 scenes 16 broll 15 look rocco2    line2 \"show\" end \"\"\nrc01_qcspec.json                   words  92 scenes 19 broll 18 look rocco2    line2 \"which\" end \"\"\nrc05_qcspec.json                   words 119 scenes 20 broll 19 look rocco2    line2 \"oh\" end \"\"\nrc03_qcspec.json                   words  24 scenes  5 broll 4 look rocco2    line2 \"ooh\" end \"\"\nSCRIPT_CHECK: PASS"
+ },
+ "14_empty_panel": {
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 16% of the frame (limit 20%)"
+ },
+ "15_competitors": {
+  "status": "PASS",
+  "note": "3 fresh benchmark(s) ['JMI-iIpHdt8', 'ftA18KGBrwM', 'uaV36whB6H8'] (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: competitor_watch, rocco_winner_moments, vidiq_image_generate (multfilm fonlar), ElevenLabs text-to-dialogue, empty_check, qc_gate; ishlatilmadi: footage_bank (multfilm tajribasi \u2014 real lavha ataylab yo'q)"
+ },
+ "verdict": "PASS"
+}

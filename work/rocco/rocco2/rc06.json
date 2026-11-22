@@ -1,0 +1,435 @@
+{
+ "id": "RC-06",
+ "title": "90% Off on Black Friday? 3 Red Flags",
+ "structure": "3 red flags countdown (FULL CARTOON \u2014 animation experiment)",
+ "tail": 2.6,
+ "style": "toon",
+ "hot": [
+  "FLAG",
+  "GIFT",
+  "CARDS",
+  "CREDIT",
+  "FAKE"
+ ],
+ "lines": [
+  [
+   "P",
+   "[excited] Rocco! Black Friday! Sneakers, ninety percent off!"
+  ],
+  [
+   "R",
+   "[deadpan] Show me."
+  ],
+  [
+   "P",
+   "[proud] The store is called... best deals, real, not fake, dot shop."
+  ],
+  [
+   "R",
+   "[dryly] Red flag number one."
+  ],
+  [
+   "S",
+   "[fast] [pushy] Hurry! Only two left! Ten minutes!"
+  ],
+  [
+   "R",
+   "[deadpan] Two. A fake countdown clock."
+  ],
+  [
+   "P",
+   "[confused] And it only takes... gift cards?"
+  ],
+  [
+   "R",
+   "[sighs] Three. Real stores take credit cards."
+  ],
+  [
+   "S",
+   "[panicked] Uh... we also take... MORE gift cards!"
+  ],
+  [
+   "P",
+   "[whiny] But it's NINETY percent off!"
+  ],
+  [
+   "R",
+   "[warmly] If the price is unreal, the store probably is too. Pay with a credit card, and type the store's address yourself."
+  ],
+  [
+   "P",
+   "[sad] So... no sneakers."
+  ],
+  [
+   "R",
+   "[deadpan] Sneakers, yes. Scam, no."
+  ],
+  [
+   "P",
+   "[hopeful] Can a REAL store do ninety percent off?"
+  ],
+  [
+   "R",
+   "[deadpan] Sure. On socks."
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "split",
+   "bg": "/home/user/financier-videos/assets/toon/penny_livingroom.jpg",
+   "bg2": "/home/user/financier-videos/assets/toon/slick_hideout.jpg",
+   "bright2": 1.0,
+   "p": "happy",
+   "s": "sly",
+   "hook": "90% OFF ON BLACK FRIDAY?!",
+   "line": 0,
+   "from": 0
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon/penny_livingroom.jpg",
+   "blur": 0,
+   "p": "happy",
+   "r": "sideeye",
+   "line": 0,
+   "from": 0.5
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon/rocco_office.jpg",
+   "r": "sideeye",
+   "line": 0,
+   "from": 0.8
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon/rocco_office.jpg",
+   "blur": 0,
+   "r": "sideeye",
+   "act": "deadpan_sideeye",
+   "act_at": 0.0,
+   "act_len": 0.8,
+   "line": 1,
+   "from": 0
+  },
+  {
+   "kind": "phone",
+   "bg": "/home/user/financier-videos/assets/toon/penny_livingroom.jpg",
+   "blur": 2,
+   "p": "happy",
+   "sender": "Browser",
+   "msgs": [
+    {
+     "t": "best-deals-real-\nnot-fake.shop",
+     "at": 0.3,
+     "col": [
+      52,
+      120,
+      246
+     ],
+     "size": 100
+    },
+    {
+     "t": "90% OFF\nEVERYTHING!!!",
+     "at": 0.7,
+     "col": [
+      220,
+      50,
+      50
+     ],
+     "size": 120
+    }
+   ],
+   "line": 2,
+   "from": 0
+  },
+  {
+   "kind": "flags",
+   "bg": "/home/user/financier-videos/assets/toon/rocco_office.jpg",
+   "blur": 1,
+   "r": "smug",
+   "n": 1,
+   "n_prev": 0,
+   "pop_word": "one",
+   "line": 3,
+   "from": 0
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon/slick_hideout.jpg",
+   "s": "sly",
+   "r_peek": true,
+   "r": "sideeye",
+   "msg": "ONLY 2 LEFT! 10:00",
+   "msg_at": 0.1,
+   "line": 4,
+   "from": 0
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon/penny_livingroom.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "line": 4,
+   "from": 0.55
+  },
+  {
+   "kind": "flags",
+   "bg": "/home/user/financier-videos/assets/toon/rocco_office.jpg",
+   "blur": 1,
+   "r": "smug",
+   "n": 2,
+   "n_prev": 1,
+   "pop_word": "two",
+   "line": 5,
+   "from": 0
+  },
+  {
+   "line": 5,
+   "from": 0.6,
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon/slick_hideout.jpg",
+   "s": "sly",
+   "r_peek": true,
+   "r": "smug",
+   "msg": "09:59... 09:58...",
+   "msg_at": 0.0
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon/penny_livingroom.jpg",
+   "blur": 0,
+   "p": "nervous",
+   "r": "sideeye",
+   "line": 6,
+   "from": 0
+  },
+  {
+   "kind": "phone",
+   "bg": "/home/user/financier-videos/assets/toon/penny_livingroom.jpg",
+   "blur": 2,
+   "p": "nervous",
+   "rocco": true,
+   "r": "sideeye",
+   "sender": "Checkout",
+   "msgs": [
+    {
+     "t": "Payment:\nGIFT CARDS ONLY",
+     "at": 0.05,
+     "col": [
+      220,
+      50,
+      50
+     ],
+     "size": 100
+    },
+    {
+     "t": "No refunds.\nNo questions.",
+     "at": 0.4,
+     "col": [
+      90,
+      90,
+      100
+     ],
+     "size": 96
+    }
+   ],
+   "line": 6,
+   "from": 0.5
+  },
+  {
+   "kind": "flags",
+   "bg": "/home/user/financier-videos/assets/toon/rocco_office.jpg",
+   "blur": 1,
+   "r": "sad",
+   "n": 3,
+   "n_prev": 2,
+   "pop_word": "three",
+   "act": "sigh_sad",
+   "act_at": 0.0,
+   "act_len": 1.1,
+   "line": 7,
+   "from": 0
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon/slick_hideout.jpg",
+   "s": "panic",
+   "r_peek": true,
+   "r": "smug",
+   "msg": "MORE GIFT CARDS!",
+   "msg_word": "more",
+   "line": 8,
+   "from": 0
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon/penny_livingroom.jpg",
+   "blur": 0,
+   "p": "sad",
+   "r": "sideeye",
+   "line": 9,
+   "from": 0
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon/slick_hideout.jpg",
+   "s": "sly",
+   "r_peek": true,
+   "r": "sideeye",
+   "msg": "90% OFF!!",
+   "msg_at": 0.1,
+   "line": 9,
+   "from": 0.5
+  },
+  {
+   "kind": "store",
+   "bg": "/home/user/financier-videos/assets/toon/rocco_office.jpg",
+   "blur": 3,
+   "l1": "PAY WITH A",
+   "l2": "CREDIT CARD",
+   "r": "point",
+   "line": 10,
+   "from": 0
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon/rocco_office.jpg",
+   "blur": 0,
+   "r": "happy",
+   "line": 10,
+   "from": 0.55
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon/penny_livingroom.jpg",
+   "blur": 0,
+   "p": "sad",
+   "r": "sideeye",
+   "line": 11,
+   "from": 0
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon/rocco_office.jpg",
+   "blur": 0,
+   "r": "smug",
+   "act": "deadpan_sideeye",
+   "act_at": 0.3,
+   "act_len": 0.9,
+   "line": 12,
+   "from": 0
+  },
+  {
+   "line": 12,
+   "from": 0.5,
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon/penny_livingroom.jpg",
+   "p": "happy",
+   "r": "smug"
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon/penny_livingroom.jpg",
+   "p": "hope",
+   "r": "sideeye",
+   "line": 13,
+   "from": 0
+  },
+  {
+   "kind": "trap",
+   "bg": "/home/user/financier-videos/assets/toon/rocco_office.jpg",
+   "blur": 2,
+   "r": "smug",
+   "label": "90% OFF SOCKS",
+   "line": 14,
+   "from": 0,
+   "snap_word": "socks"
+  },
+  {
+   "kind": "end",
+   "bg": "/home/user/financier-videos/assets/toon/penny_livingroom.jpg",
+   "blur": 2,
+   "l1": "\"90% OFF + GIFT CARDS ONLY\"",
+   "l2": "= SCAM",
+   "l3": "Send this to your Black Friday buddy.",
+   "line": 14,
+   "from": 1.0
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "ding",
+   "gain": 0.3
+  },
+  {
+   "line": 1,
+   "frac": 0.0,
+   "name": "scratch",
+   "gain": 0.2
+  },
+  {
+   "line": 3,
+   "word": "one",
+   "name": "buzzer",
+   "gain": 0.22
+  },
+  {
+   "line": 4,
+   "frac": 0.0,
+   "name": "whip",
+   "gain": 0.3
+  },
+  {
+   "line": 5,
+   "word": "two",
+   "name": "buzzer",
+   "gain": 0.22
+  },
+  {
+   "line": 6,
+   "word": "gift",
+   "name": "boing",
+   "gain": 0.3
+  },
+  {
+   "line": 7,
+   "word": "three",
+   "name": "buzzer",
+   "gain": 0.25
+  },
+  {
+   "line": 8,
+   "frac": 0.6,
+   "name": "bonk",
+   "gain": 0.4
+  },
+  {
+   "line": 10,
+   "frac": 0.1,
+   "name": "ding",
+   "gain": 0.25
+  },
+  {
+   "line": 14,
+   "frac": 0.7,
+   "name": "impact",
+   "gain": 0.25
+  },
+  {
+   "line": 14,
+   "word": "socks",
+   "name": "bonk",
+   "gain": 0.4
+  }
+ ],
+ "sources": "FTC and BBB guidance on fake online stores: unrealistic prices, pressure timers, gift-card-only payment; pay with a credit card",
+ "footage": "none \u2014 original cartoon backgrounds (AI-generated, vidIQ image tool)",
+ "benchmarks": [
+  "ftA18KGBrwM \u2014 YANGI: sanab boriladigan ro'yxat (1-2-3 qizil bayroq), har biri 3\u20135 s",
+  "uaV36whB6H8 \u2014 'tekin/arzon' tuzoq \u2192 to'lov usuli xavf; 'Free?!' reaksiyasi",
+  "JMI-iIpHdt8 \u2014 to'liq animatsion kanal (27x) \u2014 multfilm uslubi tajribasi"
+ ]
+}

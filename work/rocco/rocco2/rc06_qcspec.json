@@ -1,0 +1,134 @@
+{
+ "format": "short",
+ "look": "rocco2",
+ "scenes": [
+  {
+   "text": "Rocco! Black Friday! Sneakers, ninety percent off!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/penny_livingroom.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Show me.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/rocco_office.jpg"
+    }
+   ]
+  },
+  {
+   "text": "The store is called... best deals, real, not fake, dot shop.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/penny_livingroom.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Red flag number one.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/rocco_office.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Hurry! Only two left! Ten minutes!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/slick_hideout.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Two. A fake countdown clock.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/rocco_office.jpg"
+    }
+   ]
+  },
+  {
+   "text": "And it only takes... gift cards?",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/penny_livingroom.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Three. Real stores take credit cards.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/rocco_office.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Uh... we also take... MORE gift cards!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/slick_hideout.jpg"
+    }
+   ]
+  },
+  {
+   "text": "But it's NINETY percent off!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/penny_livingroom.jpg"
+    }
+   ]
+  },
+  {
+   "text": "If the price is unreal, the store probably is too. Pay with a credit card, and type the store's address yourself.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/rocco_office.jpg"
+    }
+   ]
+  },
+  {
+   "text": "So... no sneakers.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/penny_livingroom.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Sneakers, yes. Scam, no.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/rocco_office.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Can a REAL store do ninety percent off?",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/penny_livingroom.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Sure. On socks.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/rocco_office.jpg"
+    }
+   ]
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "ftA18KGBrwM \u2014 YANGI: sanab boriladigan ro'yxat (1-2-3 qizil bayroq), har biri 3\u20135 s",
+  "uaV36whB6H8 \u2014 'tekin/arzon' tuzoq \u2192 to'lov usuli xavf; 'Free?!' reaksiyasi",
+  "JMI-iIpHdt8 \u2014 to'liq animatsion kanal (27x) \u2014 multfilm uslubi tajribasi"
+ ]
+}

@@ -1,0 +1,214 @@
+{
+ "format": "short",
+ "sfx": true,
+ "look": "fullbleed",
+ "grade": "cool",
+ "captions": "words",
+ "headline": "hook",
+ "auto_shots": 1.8,
+ "structure": "why_story",
+ "source": "Source: Bankrate gift card survey (Aug 2024; 2,373 U.S. adults)",
+ "buck_voice": {
+  "variant": "D",
+  "model": "eleven_v3",
+  "settings": {
+   "speed": 1.05
+  }
+ },
+ "benchmarks": [
+  "8Sp2jBDdTDM \u2014 YANGI: kundalik voqea bilan ochiladi (tortmadan $40), sir \u2192 katta miqyos ($27B) \u2192 kulgili xulosa",
+  "ftA18KGBrwM \u2014 kichikdan kattaga miqyos (1 tortma \u2192 mamlakat), izoh so'rovchi CTA ('tell me what you found')"
+ ],
+ "scenes": [
+  {
+   "text": "She opens the junk drawer looking for tape... and finds $40.",
+   "say": "[curious] She opens the junk drawer looking for tape... and finds forty dollars.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r01/drawer.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r01/drawer2.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "head": "THE DRAWER WORTH $27 BILLION",
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "doubletake",
+    "act_at": 2.0
+   }
+  },
+  {
+   "text": "A gift card. From two birthdays ago.",
+   "say": "[amused] A gift card. From two birthdays ago.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r01/giftsign.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/online_card.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "laugh",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "And it's not just her drawer.",
+   "say": "[conspiratorial] And it's not just her drawer.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r01/suburb.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "43% of American adults have at least one unused gift card or store credit.",
+   "say": "Forty-three percent of American adults have at least one unused gift card or store credit.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r01/suburb.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r01/giftsign.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "stat": "43%",
+   "show_source": true
+  },
+  {
+   "text": "The average? $244 each.",
+   "say": "[impressed] The average? Two hundred forty-four dollars each.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r01/drawer2.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "stat": "$244/EACH"
+  },
+  {
+   "text": "Now add up every drawer in the country...",
+   "say": "[building up] Now add up every drawer in the country...",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r01/suburb.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r01/drawer.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "About $27 billion. Just sitting there.",
+   "say": "[amazed] About twenty-seven billion dollars. Just sitting there.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_stacks.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r01/drawer2.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "stat": "$27B",
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "jawdrop",
+    "act_at": 0.6
+   },
+   "show_source": true
+  },
+  {
+   "text": "Gift cards. The only money that hides from you.",
+   "say": "[deadpan] Gift cards. The only money that hides from you.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 0.0,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner",
+    "act": "deadpan",
+    "act_at": 0.4
+   }
+  },
+  {
+   "text": "Some expire. Some stores close. Some just get... forgotten.",
+   "say": "Some expire. Some stores close. Some just get... forgotten.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r01/drawer.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ]
+  },
+  {
+   "text": "So go check your drawer. Then tell me what you found.",
+   "say": "[smug] So go check your drawer. Then tell me what you found.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/r01/drawer.mp4",
+     "at": 0.0,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/r01/drawer2.mp4",
+     "at": 1.4,
+     "start": 0
+    }
+   ],
+   "mascot": {
+    "mood": "thumbsup",
+    "pos": "corner"
+   }
+  }
+ ]
+}
