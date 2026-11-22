@@ -1,0 +1,67 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    52.6 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.7 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.3 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -14.8 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 10.2 Mbit/s, 43.1s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 0.993,\n \"rechecked_ok\": [],\n \"missing\": [],\n \"extra\": [\n  \"uhh\"\n ],\n \"heard\": \"Hi Mom! Lost my phone. This is my new number! I'm a piggy bank. I don't have kids. And yet, a brand new child. Mom, it's me! Your favorite! I need $300. Fast! Okay, sweetie. What's my name? Mom! Classic. And what's our dog's name? Uhh... Doggo? We have a cat. It's a... Dog shaped cat. If your kid texts from a new number asking for money, call their OLD number first. Don't send a cent until you hear their voice. Penny, one. Scammer, zero. Mom, please.\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "8s range=19.7 st  gap=0.17  ok  | Classic.\n 8  20.32s range=21.7 st  gap=0.64  ok  | And what's our dog's name?\n 9  22.08s range=18.0 st  gap=0.55  ok  | Uh... Doggo?\n10  24.40s range=16.0 st  gap=0.29  ok  | We have a cat.\n11  25.92s range=12.5 st  gap=0.69  ok  | It's a... dog-shaped cat!\n12  28.48s range=14.0 st  gap=0.58  ok  | If your kid texts from a new number asking for money, call t\n13  35.84s range=18.0 st  gap=0.52  ok  | Penny, one. Scammer, zero.\n14  38.64s range=10.6 st  gap=0.39  ok  | Mom, please!\n15  40.56s range=   - st  gap=-  ok  | \n{\"median_f0\": 275.4, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 100"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/rocco/rocco2/rc07_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "WARN",
+  "note": "FAIL  0.86  (layout 0.97, palette 0.74, tone 0.84)  vs rocco_rc06_black_friday_toon.mp4\nFAIL  0.78  (layout 0.89, palette 0.56, tone 0.89)  vs rocco_rc01_detective_call.mp4\nFAIL  0.74  (layout 0.87, palette 0.55, tone 0.79)  vs rocco_rc05_plays_dumb.mp4\nok  0.68  (layout 0.77, palette 0.51, tone 0.78)  vs rocco_rc03_qr_box.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "21 hard cuts (ffmpeg scene>0.22) in 43.1 s = 2.1 s/cut (need >= 21); engine planned 23"
+ },
+ "12_script": {
+  "status": "PASS",
+  "note": "rc07_qcspec.json                   words  88 scenes 15 broll 14 look rocco2    line2 \"i'm\" end \"\"\nrc06_qcspec.json                   words  98 scenes 16 broll 15 look rocco2    line2 \"show\" end \"\"\nrc01_qcspec.json                   words  92 scenes 19 broll 18 look rocco2    line2 \"which\" end \"\"\nrc05_qcspec.json                   words 119 scenes 20 broll 19 look rocco2    line2 \"oh\" end \"\"\nSCRIPT_CHECK: PASS"
+ },
+ "14_empty_panel": {
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 20% of the frame (limit 20%)"
+ },
+ "15_competitors": {
+  "status": "PASS",
+  "note": "3 fresh benchmark(s) ['JMI-iIpHdt8', 'N09VNM2BOD8', 'vcPnUMJNdkw'] (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: competitor_watch, rocco_winner_moments, vidiq_image_generate (yangi multfilm fonlar), ElevenLabs text-to-dialogue, empty_check, qc_gate; ishlatilmadi: footage_bank (multfilm tajribasi)"
+ },
+ "verdict": "PASS"
+}

@@ -1,0 +1,126 @@
+{
+ "format": "short",
+ "look": "rocco2",
+ "scenes": [
+  {
+   "text": "Hi Mom! Lost my phone. This is my new number.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/penny_livingroom.jpg"
+    }
+   ]
+  },
+  {
+   "text": "...I'm a piggy bank. I don't have kids.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/penny_livingroom.jpg"
+    }
+   ]
+  },
+  {
+   "text": "And yet. A brand new child.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/rocco_office.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Mom, it's me! Your favorite! I need three hundred dollars, fast!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/slick_hideout.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Okay, sweetie. What's my name?",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/penny_livingroom.jpg"
+    }
+   ]
+  },
+  {
+   "text": "...Mom!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/slick_hideout.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Classic.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/rocco_office.jpg"
+    }
+   ]
+  },
+  {
+   "text": "And what's our dog's name?",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/penny_livingroom.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Uh... Doggo?",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/slick_hideout.jpg"
+    }
+   ]
+  },
+  {
+   "text": "We have a cat.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/penny_livingroom.jpg"
+    }
+   ]
+  },
+  {
+   "text": "It's a... dog-shaped cat!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/slick_hideout.jpg"
+    }
+   ]
+  },
+  {
+   "text": "If your kid texts from a new number asking for money, call their OLD number first. Don't send a cent until you hear their voice.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/rocco_office.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Penny, one. Scammer, zero.",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/penny_livingroom.jpg"
+    }
+   ]
+  },
+  {
+   "text": "Mom, please!",
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon/slick_hideout.jpg"
+    }
+   ]
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "vcPnUMJNdkw \u2014 YANGI: qurbon firibgarni savol bilan sinaydi (ism? it nomi?), firibgar absurd javob beradi",
+  "N09VNM2BOD8 \u2014 firibgar o'zini fosh qiladi + ikki zarbali yakun ('Mom, please!')",
+  "JMI-iIpHdt8 \u2014 to'liq animatsion skit (27x) \u2014 multfilm tajribasi 2-nuqta"
+ ]
+}

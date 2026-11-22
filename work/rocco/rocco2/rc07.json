@@ -1,0 +1,386 @@
+{
+ "id": "RC-07",
+ "title": "\"Hi Mom, This Is My New Number\"",
+ "structure": "text-scam skit, victim tests the scammer (FULL CARTOON \u2014 experiment point 2)",
+ "tail": 2.6,
+ "style": "toon",
+ "hot": [
+  "MOM",
+  "NUMBER",
+  "CAT",
+  "OLD",
+  "SCAMMER"
+ ],
+ "lines": [
+  [
+   "P",
+   "[reading] Hi Mom! Lost my phone. This is my new number."
+  ],
+  [
+   "P",
+   "[confused] ...I'm a piggy bank. I don't have kids."
+  ],
+  [
+   "R",
+   "[deadpan] And yet. A brand new child."
+  ],
+  [
+   "S",
+   "[sweet] [fake] Mom, it's me! Your favorite! I need three hundred dollars, fast!"
+  ],
+  [
+   "P",
+   "[suspicious] Okay, sweetie. What's my name?"
+  ],
+  [
+   "S",
+   "[pause] [nervous] ...Mom!"
+  ],
+  [
+   "R",
+   "[deadpan] Classic."
+  ],
+  [
+   "P",
+   "[sly] And what's our dog's name?"
+  ],
+  [
+   "S",
+   "[panicked] Uh... Doggo?"
+  ],
+  [
+   "P",
+   "[deadpan] We have a cat."
+  ],
+  [
+   "S",
+   "[panicked] It's a... dog-shaped cat!"
+  ],
+  [
+   "R",
+   "[warmly] If your kid texts from a new number asking for money, call their OLD number first. Don't send a cent until you hear their voice."
+  ],
+  [
+   "P",
+   "[proud] Penny, one. Scammer, zero."
+  ],
+  [
+   "S",
+   "[whiny] Mom, please!"
+  ]
+ ],
+ "shots": [
+  {
+   "kind": "phone",
+   "bg": "/home/user/financier-videos/assets/toon/penny_kitchen.jpg",
+   "blur": 2,
+   "p": "happy",
+   "sender": "New number",
+   "hook": "\"HI MOM, THIS IS MY NEW NUMBER\"",
+   "msgs": [
+    {
+     "t": "Hi Mom! Lost my phone.\nThis is my new number",
+     "at": 0.1,
+     "col": [
+      52,
+      120,
+      246
+     ],
+     "size": 96
+    }
+   ],
+   "line": 0,
+   "from": 0
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon/penny_kitchen.jpg",
+   "p": "nervous",
+   "r": "sideeye",
+   "line": 1,
+   "from": 0
+  },
+  {
+   "line": 1,
+   "from": 0.55,
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon/penny_kitchen.jpg",
+   "p": "nervous",
+   "r": "sideeye"
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon/rocco_office.jpg",
+   "r": "sideeye",
+   "act": "deadpan_sideeye",
+   "act_at": 0.0,
+   "act_len": 0.9,
+   "line": 2,
+   "from": 0
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon/slick_van.jpg",
+   "s": "sly",
+   "r_peek": true,
+   "r": "sideeye",
+   "msg": "\"YOUR FAVORITE!\"",
+   "msg_at": 0.2,
+   "line": 3,
+   "from": 0
+  },
+  {
+   "kind": "phone",
+   "bg": "/home/user/financier-videos/assets/toon/penny_kitchen.jpg",
+   "blur": 2,
+   "p": "nervous",
+   "rocco": true,
+   "r": "sideeye",
+   "sender": "New number",
+   "msgs": [
+    {
+     "t": "Mom it's me!!",
+     "at": 0.0,
+     "col": [
+      52,
+      120,
+      246
+     ],
+     "size": 100
+    },
+    {
+     "t": "Need $300 FAST",
+     "at": 0.3,
+     "col": [
+      220,
+      50,
+      50
+     ],
+     "size": 110
+    }
+   ],
+   "line": 3,
+   "from": 0.55
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon/penny_kitchen.jpg",
+   "p": "hope",
+   "r": "smug",
+   "line": 4,
+   "from": 0
+  },
+  {
+   "line": 4,
+   "from": 0.55,
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon/slick_van.jpg",
+   "s": "sly",
+   "r_peek": true,
+   "r": "smug"
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon/slick_van.jpg",
+   "s": "panic",
+   "r_peek": true,
+   "r": "smug",
+   "msg": "...MOM!",
+   "msg_at": 0.4,
+   "line": 5,
+   "from": 0
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon/rocco_office.jpg",
+   "r": "smug",
+   "act": "deadpan_sideeye",
+   "act_at": 0.0,
+   "act_len": 0.8,
+   "line": 6,
+   "from": 0
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon/penny_kitchen.jpg",
+   "p": "happy",
+   "r": "smug",
+   "line": 7,
+   "from": 0
+  },
+  {
+   "line": 7,
+   "from": 0.5,
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon/slick_van.jpg",
+   "s": "sly",
+   "r_peek": true,
+   "r": "smug"
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon/slick_van.jpg",
+   "s": "panic",
+   "r_peek": true,
+   "r": "smug",
+   "msg": "DOGGO?",
+   "msg_word": "doggo",
+   "line": 8,
+   "from": 0
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon/penny_kitchen.jpg",
+   "p": "happy",
+   "r": "smug",
+   "line": 9,
+   "from": 0
+  },
+  {
+   "line": 9,
+   "from": 0.45,
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon/rocco_office.jpg",
+   "r": "smug"
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon/slick_van.jpg",
+   "s": "panic",
+   "r_peek": true,
+   "r": "smug",
+   "msg": "DOG-SHAPED CAT!",
+   "msg_at": 0.5,
+   "line": 10,
+   "from": 0
+  },
+  {
+   "kind": "flags",
+   "bg": "/home/user/financier-videos/assets/toon/rocco_office.jpg",
+   "blur": 1,
+   "r": "smug",
+   "n": 1,
+   "n_prev": 0,
+   "pop_at": 0.0,
+   "line": 10,
+   "from": 0.85
+  },
+  {
+   "kind": "store",
+   "bg": "/home/user/financier-videos/assets/toon/rocco_office.jpg",
+   "blur": 3,
+   "l1": "CALL THEIR",
+   "l2": "OLD NUMBER FIRST",
+   "r": "point",
+   "line": 11,
+   "from": 0
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon/rocco_office.jpg",
+   "r": "happy",
+   "line": 11,
+   "from": 0.6
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon/penny_kitchen.jpg",
+   "p": "happy",
+   "r": "thumbsup",
+   "line": 12,
+   "from": 0
+  },
+  {
+   "line": 12,
+   "from": 0.5,
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon/penny_kitchen.jpg",
+   "p": "happy",
+   "r": "thumbsup"
+  },
+  {
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon/slick_van.jpg",
+   "s": "panic",
+   "r_peek": true,
+   "r": "smug",
+   "msg": "MOM, PLEASE!",
+   "msg_at": 0.2,
+   "line": 13,
+   "from": 0
+  },
+  {
+   "kind": "end",
+   "bg": "/home/user/financier-videos/assets/toon/penny_kitchen.jpg",
+   "blur": 2,
+   "l1": "\"HI MOM, NEW NUMBER\"",
+   "l2": "= CALL THE OLD ONE",
+   "l3": "Send this to your mom. Really.",
+   "line": 13,
+   "from": 1.0
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "ding",
+   "gain": 0.3
+  },
+  {
+   "line": 1,
+   "frac": 0.3,
+   "name": "crickets",
+   "gain": 0.2
+  },
+  {
+   "line": 3,
+   "frac": 0.55,
+   "name": "ding",
+   "gain": 0.25
+  },
+  {
+   "line": 5,
+   "frac": 0.0,
+   "name": "scratch",
+   "gain": 0.2
+  },
+  {
+   "line": 8,
+   "word": "doggo",
+   "name": "boing",
+   "gain": 0.3
+  },
+  {
+   "line": 9,
+   "word": "cat",
+   "name": "bonk",
+   "gain": 0.4
+  },
+  {
+   "line": 10,
+   "frac": 0.85,
+   "name": "buzzer",
+   "gain": 0.22
+  },
+  {
+   "line": 11,
+   "frac": 0.1,
+   "name": "ding",
+   "gain": 0.25
+  },
+  {
+   "line": 13,
+   "frac": 0.6,
+   "name": "wahwah",
+   "gain": 0.35
+  }
+ ],
+ "sources": "FTC consumer advice on family emergency and 'new number' impersonation texts: verify by calling the person's known number",
+ "footage": "none \u2014 original cartoon backgrounds",
+ "benchmarks": [
+  "vcPnUMJNdkw \u2014 YANGI: qurbon firibgarni savol bilan sinaydi (ism? it nomi?), firibgar absurd javob beradi",
+  "N09VNM2BOD8 \u2014 firibgar o'zini fosh qiladi + ikki zarbali yakun ('Mom, please!')",
+  "JMI-iIpHdt8 \u2014 to'liq animatsion skit (27x) \u2014 multfilm tajribasi 2-nuqta"
+ ]
+}
