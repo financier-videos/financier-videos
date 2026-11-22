@@ -654,6 +654,7 @@
   "SATELLITES",
   "TALLER"
  ],
+ "grade": "cool",
  "pool": [
   "cash_count",
   "cash_stacks",

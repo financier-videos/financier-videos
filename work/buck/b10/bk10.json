@@ -54,6 +54,23 @@
    "dim": 30
   },
   {
+   "kind": "host",
+   "line": 0,
+   "from": 0.181,
+   "buck": {
+    "mood": "shocked",
+    "h": 1100,
+    "x": 0.35
+   },
+   "prop": "32,500,000",
+   "prop_at": 0.2,
+   "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
+   "bg_start": 1.0,
+   "dim": 30,
+   "set": "peach",
+   "_auto": true
+  },
+  {
    "kind": "counter",
    "line": 0,
    "from": 0.5,
@@ -67,6 +84,35 @@
   },
   {
    "kind": "host",
+   "line": 0,
+   "from": 0.681,
+   "buck": {
+    "mood": "shocked",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "bg_start": 2.8,
+   "dim": 20
+  },
+  {
+   "kind": "counter",
+   "line": 0,
+   "from": 0.834,
+   "to": 32500000.0,
+   "prefix": "",
+   "label": "COPIES SOLD BEFORE LAUNCH",
+   "dur": 1.5,
+   "size": 150,
+   "bg": "/tmp/fin/bg/bank/tv_remote.mp4",
+   "bg_start": 2.7,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
    "line": 1,
    "from": 0,
    "buck": {
@@ -77,6 +123,22 @@
    "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
    "bg_start": 4.4,
    "dim": 30
+  },
+  {
+   "kind": "host",
+   "line": 1,
+   "from": 0.207,
+   "buck": {
+    "mood": "laugh",
+    "h": 1100,
+    "x": 0.35
+   },
+   "bubble": "\"ABOUT EVERYONE IN TEXAS\"",
+   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
+   "bg_start": 4.4,
+   "dim": 30,
+   "set": "yellow",
+   "_auto": true
   },
   {
    "kind": "counter",
@@ -94,6 +156,76 @@
    },
    "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
    "bg_start": 2.0999999999999996
+  },
+  {
+   "kind": "host",
+   "line": 2,
+   "from": 0.197,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
+   "bg_start": 2.3999999999999995,
+   "dim": 20,
+   "prop": "$3.79B"
+  },
+  {
+   "kind": "counter",
+   "line": 2,
+   "from": 0.364,
+   "to": 3790000000.0,
+   "label": "DAY ONE SALES (TAKE-TWO)",
+   "dur": 1.6,
+   "size": 130,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "proud"
+   },
+   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "bg_start": 2.0999999999999996,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 2,
+   "from": 0.607,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/tv_remote.mp4",
+   "bg_start": 4.699999999999999,
+   "dim": 20,
+   "prop": "$3.79B"
+  },
+  {
+   "kind": "counter",
+   "line": 2,
+   "from": 0.774,
+   "to": 3790000000.0,
+   "label": "DAY ONE SALES (TAKE-TWO)",
+   "dur": 1.6,
+   "size": 130,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "proud"
+   },
+   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "bg_start": 2.0999999999999996,
+   "cont": true,
+   "_auto": true,
+   "hook": null
   },
   {
    "kind": "kinetic",
@@ -123,6 +255,65 @@
   },
   {
    "kind": "host",
+   "line": 3,
+   "from": 0.231,
+   "buck": {
+    "mood": "smug",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
+   "bg_start": 2.0,
+   "dim": 20,
+   "prop": "#1 EVER"
+  },
+  {
+   "kind": "kinetic",
+   "line": 3,
+   "from": 0.426,
+   "words": [
+    {
+     "t": "BIGGEST",
+     "size": 180,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "ENTERTAINMENT",
+     "size": 120
+    },
+    {
+     "t": "LAUNCH EVER",
+     "size": 140
+    }
+   ],
+   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
+   "bg_start": 3.8,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 3,
+   "from": 0.71,
+   "buck": {
+    "mood": "smug",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "bg_start": 4.299999999999999,
+   "dim": 20,
+   "prop": "#1 EVER"
+  },
+  {
+   "kind": "host",
    "line": 4,
    "from": 0,
    "buck": {
@@ -133,6 +324,22 @@
    "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
    "bg_start": 1.5,
    "dim": 30
+  },
+  {
+   "kind": "host",
+   "line": 4,
+   "from": 0.358,
+   "buck": {
+    "mood": "happy",
+    "h": 1100,
+    "x": 0.35
+   },
+   "bubble": "DID YOU PRE-ORDER?",
+   "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
+   "bg_start": 1.5,
+   "dim": 30,
+   "set": "green",
+   "_auto": true
   }
  ],
  "sfx": [
@@ -166,6 +373,7 @@
   "BILLION",
   "EVER"
  ],
+ "grade": "violet",
  "pool": [
   "gamepad_hands",
   "tv_remote",

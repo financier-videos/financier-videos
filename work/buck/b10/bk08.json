@@ -83,6 +83,133 @@
    "bg_start": 1.0
   },
   {
+   "kind": "host",
+   "line": 0,
+   "from": 0.187,
+   "buck": {
+    "mood": "confused",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 0.5,
+   "dim": 20,
+   "prop": "WHICH COSTS MORE?"
+  },
+  {
+   "kind": "kinetic",
+   "line": 0,
+   "from": 0.345,
+   "words": [
+    {
+     "t": "2022",
+     "size": 200,
+     "c": [
+      40,
+      110,
+      220
+     ]
+    },
+    {
+     "t": "VS",
+     "size": 130,
+     "font": "BlackOps"
+    },
+    {
+     "t": "2026",
+     "size": 200,
+     "c": [
+      235,
+      120,
+      40
+     ]
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "confused"
+   },
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg_start": 1.0,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 0,
+   "from": 0.575,
+   "buck": {
+    "mood": "confused",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bg_start": 2.8,
+   "dim": 20,
+   "prop": "WHICH COSTS MORE?"
+  },
+  {
+   "kind": "kinetic",
+   "line": 0,
+   "from": 0.733,
+   "words": [
+    {
+     "t": "2022",
+     "size": 200,
+     "c": [
+      40,
+      110,
+      220
+     ]
+    },
+    {
+     "t": "VS",
+     "size": 130,
+     "font": "BlackOps"
+    },
+    {
+     "t": "2026",
+     "size": 200,
+     "c": [
+      235,
+      120,
+      40
+     ]
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "confused"
+   },
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg_start": 1.0,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 0,
+   "from": 0.866,
+   "buck": {
+    "mood": "confused",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/coffee_pour.mp4",
+   "bg_start": 5.1,
+   "dim": 20,
+   "prop": "WHICH COSTS MORE?"
+  },
+  {
    "kind": "versus",
    "line": 1,
    "from": 0,
@@ -109,6 +236,65 @@
    },
    "bg": "/tmp/fin/bg/bank/cart_empty.mp4",
    "bg_start": 2.7
+  },
+  {
+   "kind": "host",
+   "line": 1,
+   "from": 0.225,
+   "buck": {
+    "mood": "proud",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg_start": 2.3999999999999995,
+   "dim": 20
+  },
+  {
+   "kind": "versus",
+   "line": 1,
+   "from": 0.415,
+   "left": {
+    "label": "2022 (RECORD)",
+    "value": 64.05,
+    "fmt": "${:,.2f}",
+    "c": [
+     40,
+     110,
+     220
+    ]
+   },
+   "right": {
+    "label": "2026",
+    "value": 0.0,
+    "fmt": "$?",
+    "c": [
+     235,
+     120,
+     40
+    ],
+    "at": 99
+   },
+   "bg": "/tmp/fin/bg/bank/cart_empty.mp4",
+   "bg_start": 2.7,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 1,
+   "from": 0.692,
+   "buck": {
+    "mood": "proud",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cart_empty.mp4",
+   "bg_start": 4.699999999999999,
+   "dim": 20
   },
   {
    "kind": "versus",
@@ -145,6 +331,57 @@
    "bg_start": 4.4
   },
   {
+   "kind": "host",
+   "line": 2,
+   "from": 0.351,
+   "buck": {
+    "mood": "proud",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 2.0,
+   "dim": 20
+  },
+  {
+   "kind": "versus",
+   "line": 2,
+   "from": 0.649,
+   "left": {
+    "label": "2022 (RECORD)",
+    "value": 64.05,
+    "fmt": "${:,.2f}",
+    "c": [
+     40,
+     110,
+     220
+    ],
+    "at": -2
+   },
+   "right": {
+    "label": "2026",
+    "value": 58.63,
+    "fmt": "${:,.2f}",
+    "c": [
+     235,
+     120,
+     40
+    ]
+   },
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "happy"
+   },
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 4.4,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
    "kind": "versus",
    "line": 3,
    "from": 0,
@@ -175,6 +412,21 @@
    "win_label": "-$5.42",
    "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
    "bg_start": 2.0999999999999996
+  },
+  {
+   "kind": "host",
+   "line": 3,
+   "from": 0.45,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bg_start": 4.299999999999999,
+   "dim": 20,
+   "prop": "-$5.42"
   },
   {
    "kind": "versus",
@@ -213,6 +465,129 @@
    "bg_start": 3.8
   },
   {
+   "kind": "host",
+   "line": 4,
+   "from": 0.153,
+   "buck": {
+    "mood": "smug",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/coffee_pour.mp4",
+   "bg_start": 1.5999999999999979,
+   "dim": 20,
+   "prop": "$23.68"
+  },
+  {
+   "kind": "versus",
+   "line": 4,
+   "from": 0.282,
+   "left": {
+    "label": "TURKEY 2025",
+    "value": 21.5,
+    "fmt": "${:,.2f}",
+    "c": [
+     120,
+     80,
+     40
+    ]
+   },
+   "right": {
+    "label": "TURKEY 2026",
+    "value": 23.68,
+    "fmt": "${:,.2f}",
+    "c": [
+     200,
+     60,
+     40
+    ]
+   },
+   "win": 1,
+   "win_at": 2.0,
+   "win_label": "+10%",
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "sideeye"
+   },
+   "bg": "/tmp/fin/bg/bank/coffee_pour.mp4",
+   "bg_start": 3.8,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 4,
+   "from": 0.469,
+   "buck": {
+    "mood": "smug",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg_start": 3.8999999999999986,
+   "dim": 20,
+   "prop": "$23.68"
+  },
+  {
+   "kind": "versus",
+   "line": 4,
+   "from": 0.599,
+   "left": {
+    "label": "TURKEY 2025",
+    "value": 21.5,
+    "fmt": "${:,.2f}",
+    "c": [
+     120,
+     80,
+     40
+    ]
+   },
+   "right": {
+    "label": "TURKEY 2026",
+    "value": 23.68,
+    "fmt": "${:,.2f}",
+    "c": [
+     200,
+     60,
+     40
+    ]
+   },
+   "win": 1,
+   "win_at": 2.0,
+   "win_label": "+10%",
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "sideeye"
+   },
+   "bg": "/tmp/fin/bg/bank/coffee_pour.mp4",
+   "bg_start": 3.8,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 4,
+   "from": 0.786,
+   "buck": {
+    "mood": "smug",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cart_empty.mp4",
+   "bg_start": 1.1999999999999993,
+   "dim": 20,
+   "prop": "$23.68"
+  },
+  {
    "kind": "counter",
    "line": 5,
    "from": 0,
@@ -228,6 +603,40 @@
    },
    "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
    "bg_start": 1.5
+  },
+  {
+   "kind": "host",
+   "line": 5,
+   "from": 0.345,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 3.5,
+   "dim": 20
+  },
+  {
+   "kind": "counter",
+   "line": 5,
+   "from": 0.637,
+   "to": 5.86,
+   "dec": 2,
+   "label": "PER PERSON (AFBF 2026)",
+   "dur": 1.2,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "thumbsup"
+   },
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg_start": 1.5,
+   "cont": true,
+   "_auto": true,
+   "hook": null
   }
  ],
  "sfx": [
@@ -267,6 +676,7 @@
   "RECORD",
   "TURKEY"
  ],
+ "grade": "rose",
  "pool": [
   "cart_pov",
   "cart_empty",

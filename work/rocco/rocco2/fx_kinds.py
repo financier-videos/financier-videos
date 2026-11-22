@@ -138,6 +138,14 @@ def k_scale(im, sh, lt, t, talk, R):
         d = ImageDraw.Draw(im); rnd = random.Random(3)
         for _ in range(int(160 * sky)): x, y = rnd.randrange(W), rnd.randrange(int(H * 0.7)); d.point((x, y), fill=(232, 232, 236, 200))
     d.line([(W * 0.62, yt), (W * 0.62, yb)], fill=(210, 210, 214, 255), width=4)
+    lay = Image.new("RGBA", im.size, (0, 0, 0, 0)); dl = ImageDraw.Draw(lay); dec = 10 ** math.floor(math.log10(lo))
+    while dec <= hi:  # log-scale grid: one line per decade (0.1, 1, 10, 100 ... km)
+        y = Y(dec)
+        if yt <= y <= yb:
+            for xx in range(30, W - 30, 36): dl.line([(xx, y), (xx + 20, y)], fill=(255, 255, 255, 70), width=3)
+            text(lay, (40, y - 22), f"{dec:,.0f} KM" if dec >= 1 else f"{dec} KM", "Bebas", 34, (255, 255, 255, 150), sw=0, anchor="lm")
+        dec *= 10
+    im.alpha_composite(lay)
     for v, lab in marks:
         y = Y(v); d.line([(W * 0.6, y), (W * 0.66, y)], fill=WHITE, width=5)
         text(im, (W * 0.68, y), lab, fnt, 50, WHITE if cur >= v else (200, 200, 210, 200), sw=5, anchor="lm", maxw=W * 0.31)
@@ -304,10 +312,10 @@ _CHALK = {}
 def chalk_bg():
     if "bg" not in _CHALK:
         bg = Image.new("RGBA", (W, H), (34, 62, 48, 255)); rnd = random.Random(7)
-        for _ in range(140):  # old erased chalk smudges (own layer: ImageDraw would overwrite alpha, not blend)
+        for _ in range(420):  # old erased chalk smudges (own layer: ImageDraw would overwrite alpha, not blend)
             lay = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(lay)
             x, y = rnd.randrange(-200, W), rnd.randrange(0, int(H * 0.9)); w_ = rnd.randrange(200, 600)
-            d.ellipse([x, y, x + w_, y + rnd.randrange(30, 90)], fill=(255, 255, 255, rnd.randrange(6, 16))); bg.alpha_composite(lay)
+            d.ellipse([x, y, x + w_, y + rnd.randrange(30, 90)], fill=(255, 255, 255, rnd.randrange(8, 24))); bg.alpha_composite(lay)
         lay = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(lay)
         for _ in range(2500): x, y = rnd.randrange(W), rnd.randrange(H); d.point((x, y), fill=(255, 255, 255, rnd.randrange(15, 50)))
         bg.alpha_composite(lay); bg = bg.filter(ImageFilter.GaussianBlur(2)).convert("RGB").convert("RGBA"); d = ImageDraw.Draw(bg)

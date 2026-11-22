@@ -8,11 +8,11 @@
  "lines": [
   [
    "S",
-   "[fake official, bossy] IRS agent! You owe back taxes! Pay now in gift cards or you go to jail!"
+   "[fake official, bossy, clear] IRS agent! You owe back taxes. Pay now, in gift cards, or you go to jail!"
   ],
   [
    "R",
-   "[sleepy, old and slow] Oh dear... gift cards? Which ones, sonny?"
+   "[sleepy, old and slow] Oh dear... gift cards. I have some somewhere, sonny."
   ],
   [
    "S",
@@ -24,7 +24,7 @@
   ],
   [
    "S",
-   "[confused] Your... badge?"
+   "[confused, slowing down] Wait. A... badge."
   ],
   [
    "R",
@@ -32,7 +32,7 @@
   ],
   [
    "S",
-   "[panicking] I... I was just leaving!"
+   "[panicking] I was just leaving!"
   ],
   [
    "R",
@@ -328,5 +328,6 @@
  ],
  "pause_before": {
   "5": 0.5
- }
+ },
+ "grade": "teal"
 }

@@ -578,6 +578,19 @@ DANGER = {"STOLEN", "SCAM", "SCAMMER", "MINUS", "NEVER", "DON'T", "DONT", "BLOCK
 SPK_COL = {"P": (255, 226, 60), "S": (120, 220, 255), "R": (232, 232, 234)}  # victim yellow, scammer cyan, Rocco white
 
 
+GRADES = {"warm": [[1.10, 0.04, 0.0], [0.02, 1.0, 0.0], [0.0, 0.0, 0.82]], "cool": [[0.85, 0.0, 0.05], [0.0, 0.98, 0.06], [0.0, 0.08, 1.15]],
+          "teal": [[0.80, 0.12, 0.12], [0.0, 1.02, 0.08], [0.0, 0.14, 1.02]], "rose": [[1.12, 0.0, 0.08], [0.0, 0.90, 0.05], [0.06, 0.0, 1.0]],
+          "gold": [[1.12, 0.10, 0.0], [0.04, 1.02, 0.0], [0.0, 0.0, 0.70]], "violet": [[0.98, 0.0, 0.14], [0.0, 0.86, 0.06], [0.10, 0.0, 1.12]],
+          "lime": [[0.90, 0.08, 0.0], [0.04, 1.10, 0.0], [0.0, 0.06, 0.86]], "mono_red": [[1.0, 0.0, 0.0], [0.30, 0.55, 0.15], [0.30, 0.55, 0.15]]}
+
+
+def grade(im, name):
+    m = GRADES.get(name)
+    if not m: return im
+    a = np.asarray(im.convert("RGB"), np.float32) @ np.array(m, np.float32).T
+    return Image.fromarray(np.clip(a, 0, 232).astype(np.uint8), "RGB").convert("RGBA")
+
+
 CAP_Y = [0.885]
 
 
@@ -754,6 +767,7 @@ def main():
         ch = next((c for c in chunks if c[0][1] - 0.05 <= t < (c[-1][2] + 0.25)), None)
         if ch and sh["kind"] != "end" and sh.get("cap", True):
             act = max([j for j, w in enumerate(ch) if w[1] <= t] or [0]); caption(im, ch, act)
+        if spec.get("grade"): im = grade(im, spec["grade"])  # per-video colour grade (look_check: consecutive uploads must not share a palette)
         for _tl in spec.get("topline", []):  # fixed poem/caption lines at the top (silent karma format)
             if t >= _tl.get("at", 0): txt(im, (W / 2, H * (0.07 + 0.055 * spec["topline"].index(_tl))), _tl["t"], 58, (255, 255, 255), sw=8)
         if t >= 2.0 and BRAND[0]: txt(im, (W - 50, 70), BRAND[0], 44, BRAND[1], sw=6, anchor="rm")  # after the zoom (never cropped); hidden in the 2 s hook (engine v6.17 rule)

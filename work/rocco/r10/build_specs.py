@@ -65,12 +65,12 @@ out("RC-14", "He Promised to Double Her Coins", [["R", "[quiet, dry] Karma doesn
     [{"line": 0, "frac": 0.0, "dt": -12.0, "name": "coin", "gain": 0.3}, {"line": 0, "frac": 0.0, "dt": -9.8, "name": "shimmer", "gain": 0.25}, {"line": 0, "frac": 0.0, "dt": -7.8, "name": "cash", "gain": 0.3},
      {"line": 0, "frac": 0.0, "dt": -5.8, "name": "crickets", "gain": 0.25}, {"line": 0, "frac": 0.0, "dt": -3.4, "name": "buzzer", "gain": 0.3}, {"line": 0, "frac": 0.0, "dt": -1.8, "name": "subboom", "gain": 0.4},
      {"line": 0, "frac": 0.0, "dt": -1.6, "name": "bonk", "gain": 0.35}],
-    pause_before={"0": 12.2}, tail=2.0, amb="room",
+    pause_before={"0": 12.2}, tail=2.0, amb="room", grade="violet",
     topline=[{"t": "He promised to double her coins.", "at": 0.2}, {"t": "She only asked for proof.", "at": 6.2}, {"t": "Karma checked his math.", "at": 10.2}])
 
 # RC-15 two are scams, one is real (jUF_JPKXTWc 7.5M)
 M = lambda txt, c=(52, 120, 246): [{"t": txt, "at": 0.05, "col": list(c), "size": 76}]
-out("RC-15", "Two of These Texts Are Scams. One Is Real.", [
+out("RC-15", "2 Texts Are Scams, 1 Is Real. Can You Tell?", [
     ["R", "[confident] Three texts. Two are scams. One is real. Watch."],
     ["P", "[reading] One. USPS: your package is on hold. Pay a one dollar thirty redelivery fee."],
     ["R", "[flat] Scam. USPS won't text you a link to pay a fee."],
@@ -96,10 +96,10 @@ out("RC-15", "Two of These Texts Are Scams. One Is Real.", [
 
 # RC-16 red flag or green flag panel (SS_6KU9qpr0 20.3M)
 FV = lambda line, q, v, **k: s("flagvote", line, 0, GS, q=q, verdict=v, reveal_at=k.pop("reveal_at", 0.8), cast=k.pop("cast", [{"who": "penny", "x": 0.2, "y": 0.98, "h": 650, "mood": "sly"}, {"who": "rocco", "x": 0.8, "y": 1.0, "h": 800, "mood": "sideeye"}]), **k)
-out("RC-16", "Red Flag or Green Flag: The Dating App Fox", [
+out("RC-16", "3 Red Flags in One Dating App Match", [
     ["R", "[game show host, big] Red flag or green flag! Tonight's date: a fox from a dating app!"],
     ["S", "[charming, smooth] Hi! I'm a crypto millionaire. I live on a yacht."],
-    ["P", "[suspicious] Can we video call?"],
+    ["P", "[suspicious, firm] Then video call me. Right now."],
     ["S", "[too fast] My camera is broken."],
     ["R", "[host] Judges?"],
     ["S", "[sweet] I'll fly you to my yacht! I just need a small fee for... customs."],
@@ -176,13 +176,13 @@ out("RC-18", "POV: You Just Won a PS6", [
 
 # RC-19 hidden identity status flip (DfSbqCJPpE8 1.1M)
 out("RC-19", "Fake IRS Agent Picked the Wrong Grandpa", [
-    ["S", "[fake official, bossy] IRS agent! You owe back taxes! Pay now in gift cards or you go to jail!"],
-    ["R", "[sleepy, old and slow] Oh dear... gift cards? Which ones, sonny?"],
+    ["S", "[fake official, bossy, clear] IRS agent! You owe back taxes. Pay now, in gift cards, or you go to jail!"],
+    ["R", "[sleepy, old and slow] Oh dear... gift cards. I have some somewhere, sonny."],
     ["S", "[greedy] Big ones! Five hundred dollars! Today!"],
     ["R", "[slowly] Let me find my glasses... and my badge."],
-    ["S", "[confused] Your... badge?"],
+    ["S", "[confused, slowing down] Wait. A... badge."],
     ["R", "[sharp, normal voice] Detective Rocco. Fraud Unit."],
-    ["S", "[panicking] I... I was just leaving!"],
+    ["S", "[panicking] I was just leaving!"],
     ["R", "[dry, to camera] The IRS doesn't take gift cards. And it doesn't call to threaten jail."],
     ["S", "[whiny] Not again!"]],
     [s("slick", 0, 0, ST, s="sly", s_pose="point", msg='"IRS AGENT"', msg_at=0.1, hook="FAKE IRS AGENT", cam={"z": 1.1, "push": 0.06, "fy": 0.4}),
@@ -207,7 +207,7 @@ out("RC-20", "Free Socks and a Very Bad QR Code", [
     ["R", "[knowing] That's a brushing scam."],
     ["R", "[explaining] Sellers mail stuff to real addresses so they can post fake reviews in your name."],
     ["R", "[serious] And that QR code can send you to a site that steals your info. Don't scan it."],
-    ["P", "[pause, hopeful] ...So I keep the socks?"],
+    ["P", "[pause, then hopeful] ...So. I'm keeping the socks."],
     ["R", "[dry] Keep the socks. Toss the QR code."]],
     [s("two", 0, 0, PO, p="happy", r="sideeye", hook="A PACKAGE YOU NEVER ORDERED"),
      s("cu_r", 1, 0, PO, r="sideeye", cam={"z": 1.25, "push": 0.06, "fy": 0.47}),

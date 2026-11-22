@@ -77,7 +77,7 @@
    },
    "line": 0,
    "from": 0,
-   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
    "bg_start": 1.0
   },
   {
@@ -90,7 +90,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
    "bg_start": 0.5,
    "dim": 20
   },
@@ -123,26 +123,29 @@
    },
    "line": 0,
    "from": 0.721,
-   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
    "bg_start": 1.0,
    "cont": true,
    "_auto": true,
    "hook": null
   },
   {
-   "kind": "receipt",
+   "kind": "counter",
+   "to": 11.8,
+   "dec": 1,
+   "suffix": "B",
+   "label": "BLACK FRIDAY, ONLINE",
+   "dur": 1.2,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "happy"
+   },
    "line": 1,
    "from": 0,
-   "title": "CYBER WEEK 2025",
-   "sub": "U.S. ONLINE SALES - ADOBE",
-   "rows": [
-    [
-     "BLACK FRIDAY",
-     "$11.80B"
-    ]
-   ],
-   "total": "...",
-   "step": 0.01
+   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "bg_start": 2.7
   },
   {
    "kind": "host",
@@ -154,24 +157,27 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
+   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
    "bg_start": 2.8,
    "dim": 20
   },
   {
-   "kind": "receipt",
+   "kind": "counter",
+   "to": 11.8,
+   "dec": 1,
+   "suffix": "B",
+   "label": "BLACK FRIDAY, ONLINE",
+   "dur": 1.2,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "happy"
+   },
    "line": 1,
    "from": 0.573,
-   "title": "CYBER WEEK 2025",
-   "sub": "U.S. ONLINE SALES - ADOBE",
-   "rows": [
-    [
-     "BLACK FRIDAY",
-     "$11.80B"
-    ]
-   ],
-   "total": "...",
-   "step": 0.01,
+   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "bg_start": 2.7,
    "cont": true,
    "_auto": true,
    "hook": null
@@ -205,7 +211,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
+   "bg": "/tmp/fin/bg/bank/cart_empty.mp4",
    "bg_start": 5.1,
    "dim": 20,
    "prop": "$14.25B IN 1 DAY"
@@ -242,7 +248,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
    "bg_start": 2.3999999999999995,
    "dim": 20,
    "prop": "$14.25B IN 1 DAY"
@@ -366,7 +372,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
    "bg_start": 2.0,
    "dim": 20,
    "prop": "$44.2B"
@@ -408,7 +414,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
+   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
    "bg_start": 4.299999999999999,
    "dim": 20,
    "prop": "$44.2B"
@@ -454,8 +460,8 @@
     "h": 560,
     "mood": "sideeye"
    },
-   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
-   "bg_start": 2.7
+   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
+   "bg_start": 4.4
   },
   {
    "kind": "host",
@@ -467,7 +473,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
+   "bg": "/tmp/fin/bg/bank/cart_empty.mp4",
    "bg_start": 1.5999999999999979,
    "dim": 20
   },
@@ -485,8 +491,8 @@
     "h": 560,
     "mood": "sideeye"
    },
-   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
-   "bg_start": 2.7,
+   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
+   "bg_start": 4.4,
    "cont": true,
    "_auto": true,
    "hook": null
@@ -501,7 +507,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
    "bg_start": 3.8999999999999986,
    "dim": 20
   },
@@ -532,8 +538,8 @@
     "h": 560,
     "mood": "point"
    },
-   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
-   "bg_start": 4.4
+   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
+   "bg_start": 2.0999999999999996
   },
   {
    "kind": "host",
@@ -577,8 +583,8 @@
     "h": 560,
     "mood": "point"
    },
-   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
-   "bg_start": 4.4,
+   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
+   "bg_start": 2.0999999999999996,
    "cont": true,
    "_auto": true,
    "hook": null
@@ -593,7 +599,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
    "bg_start": 3.5,
    "dim": 20,
    "prop": "???"
@@ -645,11 +651,12 @@
   "TOTAL",
   "LATER"
  ],
+ "grade": "warm",
  "pool": [
-  "online_card",
-  "laptop_phone",
   "cart_pov",
+  "laptop_phone",
   "pay_terminal",
-  "phone_scroll"
+  "phone_scroll",
+  "cart_empty"
  ]
 }

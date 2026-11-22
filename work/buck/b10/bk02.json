@@ -796,6 +796,7 @@
   "BILLION",
   "DEBT"
  ],
+ "grade": "gold",
  "pool": [
   "cash_count",
   "gamepad_hands",

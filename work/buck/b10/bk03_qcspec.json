@@ -24,13 +24,17 @@
   },
   {
    "text": "Twenty-nine billion paid. Debt left? Still basically forty trillion.",
-   "stat": "bk03-4"
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/typing_keys.mp4"
+    }
+   ]
   },
   {
    "text": "You'd need about a hundred and nine thousand years.",
    "shots": [
     {
-     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4"
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4"
     }
    ]
   },
@@ -38,7 +42,7 @@
    "text": "The pyramids aren't even five thousand years old. Game over.",
    "shots": [
     {
-     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4"
+     "broll": "/tmp/fin/bg/bank/atm_use.mp4"
     }
    ]
   },

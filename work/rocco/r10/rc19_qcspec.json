@@ -3,7 +3,7 @@
  "look": "rocco2",
  "scenes": [
   {
-   "text": "IRS agent! You owe back taxes! Pay now in gift cards or you go to jail!",
+   "text": "IRS agent! You owe back taxes. Pay now, in gift cards, or you go to jail!",
    "shots": [
     {
      "broll": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg"
@@ -11,7 +11,7 @@
    ]
   },
   {
-   "text": "Oh dear... gift cards? Which ones, sonny?",
+   "text": "Oh dear... gift cards. I have some somewhere, sonny.",
    "shots": [
     {
      "broll": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg"
@@ -35,7 +35,7 @@
    ]
   },
   {
-   "text": "Your... badge?",
+   "text": "Wait. A... badge.",
    "shots": [
     {
      "broll": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg"
@@ -51,7 +51,7 @@
    ]
   },
   {
-   "text": "I... I was just leaving!",
+   "text": "I was just leaving!",
    "shots": [
     {
      "broll": "/home/user/financier-videos/assets/toon3d/street_door3d.jpg"

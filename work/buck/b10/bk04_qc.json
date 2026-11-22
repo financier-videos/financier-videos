@@ -1,11 +1,11 @@
 {
  "0_freshness": {
-  "status": "FAIL",
-  "note": "repo 3 commit(s) behind origin/media - git pull --rebase and re-render"
+  "status": "PASS",
+  "note": "up to date"
  },
  "1_platform_check": {
   "status": "PASS",
-  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    36.0 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.7 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.4 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    40.6 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.7 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.4 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
  },
  "2_loudness": {
   "status": "PASS",
@@ -17,15 +17,15 @@
  },
  "4_export": {
   "status": "PASS",
-  "note": "h264 High, 8.9 Mbit/s, 34.1s, stereo"
+  "note": "h264 High, 10.0 Mbit/s, 34.1s, stereo"
  },
  "5_voice_check": {
   "status": "PASS",
-  "note": "{\n \"rc\": 0,\n \"match\": 0.979,\n \"rechecked_ok\": [],\n \"missing\": [\n  \"buy\"\n ],\n \"extra\": [\n  \"by\"\n ],\n \"heard\": \"Here's America's receipt for Cyber Week last year. Black Friday Online 11.8 billion Cyber Monday 14.25 billion The biggest online shopping day ever. The other three days 18 billion more Total 44.2 billion dollars in five days And over one billion of Cyber Monday was by now, pay later. This year's receipt prints next week. Guess the total in the comments.\"\n}"
+  "note": "{\n \"rc\": 0,\n \"match\": 0.979,\n \"rechecked_ok\": [],\n \"missing\": [\n  \"buy\"\n ],\n \"extra\": [\n  \"by\"\n ],\n \"heard\": \"Here's America's receipt for Cyber Week last year. Black Friday Online 11.8 billion Cyber Monday 14.25 billion The biggest online shopping day ever. The other three days 18 billion more total 44. $2 billion in five days, and over one billion of Cyber Monday was by now pay later. This year's receipt prints next week. Guess the total in the comments.\"\n}"
  },
  "6_prosody": {
   "status": "PASS",
-  "note": " point eight billion.\n 3   7.52s range=18.4 st  gap=0.48  ok  | Cyber Monday: fourteen point two five billion. The biggest o\n 4  14.15s range=14.5 st  gap=0.14  ok  | The other three days: eighteen billion more.\n 5  17.63s range=19.7 st  gap=0.46  ok  | Total? Forty-four point two billion dollars. In five days.\n 6  23.55s range=14.9 st  gap=0.12  ok  | And over one billion of Cyber Monday was buy now, pay later.\n 7  28.15s range=15.6 st  gap=0.52  ok  | This year's receipt prints next week. Guess the total in the\n 8  32.52s range=   - st  gap=-  ok  | \n{\"median_f0\": 191.3, \"flagged_scenes\": 0}"
+  "note": " point eight billion.\n 3   7.52s range=18.0 st  gap=0.48  ok  | Cyber Monday: fourteen point two five billion. The biggest o\n 4  14.15s range=14.5 st  gap=0.14  ok  | The other three days: eighteen billion more.\n 5  17.63s range=19.7 st  gap=0.46  ok  | Total? Forty-four point two billion dollars. In five days.\n 6  23.55s range=14.8 st  gap=0.12  ok  | And over one billion of Cyber Monday was buy now, pay later.\n 7  28.15s range=15.7 st  gap=0.52  ok  | This year's receipt prints next week. Guess the total in the\n 8  32.52s range=   - st  gap=-  ok  | \n{\"median_f0\": 192.3, \"flagged_scenes\": 0}"
  },
  "7_title": {
   "status": "PASS",
@@ -40,20 +40,20 @@
   "note": "exposure and colour OK"
  },
  "10_look": {
-  "status": "FAIL",
-  "note": "ok  0.62  (layout 0.75, palette 0.44, tone 0.64)  vs bk01.mp4\nFAIL  0.84  (layout 0.83, palette 0.87, tone 0.79)  vs bk02.mp4\nok  0.49  (layout 0.57, palette 0.26, tone 0.69)  vs bk03.mp4\nFAIL  0.87  (layout 0.86, palette 0.95, tone 0.73)  vs bk05.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)"
+  "status": "WARN",
+  "note": "FAIL  0.84  (layout 0.91, palette 0.77, tone 0.83)  vs bk02.mp4\nok  0.59  (layout 0.87, palette 0.11, tone 0.81)  vs bk01.mp4\nFAIL  0.71  (layout 0.91, palette 0.37, tone 0.83)  vs bk07.mp4\nFAIL  0.79  (layout 0.88, palette 0.68, tone 0.79)  vs bk05.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
  },
  "11_pacing": {
   "status": "PASS",
-  "note": "28 hard cuts (ffmpeg scene>0.22) in 34.1 s = 1.2 s/cut (need >= 17); engine planned 27"
+  "note": "31 hard cuts (ffmpeg scene>0.22) in 34.1 s = 1.1 s/cut (need >= 17); engine planned 27"
  },
  "12_script": {
-  "status": "FAIL",
-  "note": "bk04_qcspec.json                   words  68 scenes  8 broll 3 look fx        line2 \"black\" end \"\"\nbk01_qcspec.json                   words  58 scenes  7 broll 6 look fx        line2 \"stack\" end \"\"\nbk02_qcspec.json                   words  72 scenes  8 broll 7 look fx        line2 \"first\" end \"\"\nbk03_qcspec.json                   words  63 scenes  8 broll 3 look fx        line2 \"you\" end \"\"\nbk05_qcspec.json                   words  57 scenes  7 broll 6 look fx        line2 \"a\" end \"\"\nFAIL: full-screen footage in 3/8 scenes (<40%)\nSCRIPT_CHECK: FAIL"
+  "status": "PASS",
+  "note": "bk04_qcspec.json                   words  68 scenes  8 broll 4 look fx        line2 \"black\" end \"\"\nbk02_qcspec.json                   words  72 scenes  8 broll 4 look fx        line2 \"first\" end \"\"\nbk01_qcspec.json                   words  58 scenes  7 broll 5 look fx        line2 \"stack\" end \"\"\nbk07_qcspec.json                   words  63 scenes  7 broll 3 look fx        line2 \"elon\" end \"\"\nbk05_qcspec.json                   words  57 scenes  7 broll 3 look fx        line2 \"a\" end \"\"\nSCRIPT_CHECK: PASS"
  },
  "14_empty_panel": {
   "status": "PASS",
-  "note": "PASS: largest one-colour flat area 15% of the frame (limit 20%)"
+  "note": "PASS: largest one-colour flat area 12% of the frame (limit 20%)"
  },
  "15_competitors": {
   "status": "PASS",
@@ -63,5 +63,5 @@
   "status": "PASS",
   "note": "Skillar: viral-cartoon-playbook, viral-video-decomposer, dataviz, color-expert, animation-direction; ishlatilmadi: blender-* (Buck 3D kutubxonasi tayyor)"
  },
- "verdict": "FAIL"
+ "verdict": "PASS"
 }

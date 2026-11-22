@@ -1,11 +1,11 @@
 {
  "0_freshness": {
-  "status": "FAIL",
-  "note": "repo 3 commit(s) behind origin/media - git pull --rebase and re-render"
+  "status": "PASS",
+  "note": "up to date"
  },
  "1_platform_check": {
   "status": "PASS",
-  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    48.4 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -15.1 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.3 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    53.8 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -15.1 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.4 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
  },
  "2_loudness": {
   "status": "PASS",
@@ -17,7 +17,7 @@
  },
  "4_export": {
   "status": "PASS",
-  "note": "h264 High, 11.1 Mbit/s, 36.7s, stereo"
+  "note": "h264 High, 12.3 Mbit/s, 36.7s, stereo"
  },
  "5_voice_check": {
   "status": "PASS",
@@ -25,7 +25,7 @@
  },
  "6_prosody": {
   "status": "PASS",
-  "note": "o wins?\n 2   3.33s range=16.7 st  gap=0.52  ok  | Elon Musk's fortune dropped sixty-eight billion in one month\n 3  10.59s range=15.6 st  gap=0.55  ok  | GTA 6 on day one: forty-three thousand dollars every second.\n 4  15.41s range=20.7 st  gap=0.53  ok  | The US debt in the last year: seventy-six thousand dollars a\n 5  21.19s range=12.9 st  gap=1.04  ok  | And the winner... Cyber Monday shoppers. A hundred sixty-fou\n 6  29.48s range=25.4 st  gap=0.75  ok  | Shoppers beat billionaires. Follow for more money facts.\n 7  35.11s range=   - st  gap=-  ok  | \n{\"median_f0\": 233.6, \"flagged_scenes\": 0}"
+  "note": "o wins?\n 2   3.33s range=16.9 st  gap=0.45  ok  | Elon Musk's fortune dropped sixty-eight billion in one month\n 3  10.59s range=15.6 st  gap=0.55  ok  | GTA 6 on day one: forty-three thousand dollars every second.\n 4  15.41s range=20.7 st  gap=0.53  ok  | The US debt in the last year: seventy-six thousand dollars a\n 5  21.19s range=12.9 st  gap=1.04  ok  | And the winner... Cyber Monday shoppers. A hundred sixty-fou\n 6  29.48s range=25.6 st  gap=0.75  ok  | Shoppers beat billionaires. Follow for more money facts.\n 7  35.11s range=   - st  gap=-  ok  | \n{\"median_f0\": 233.3, \"flagged_scenes\": 0}"
  },
  "7_title": {
   "status": "PASS",
@@ -41,19 +41,19 @@
  },
  "10_look": {
   "status": "WARN",
-  "note": "ok  0.69  (layout 0.89, palette 0.38, tone 0.76)  vs bk01.mp4\nFAIL  0.92  (layout 0.96, palette 0.87, tone 0.91)  vs bk02.mp4\nok  0.57  (layout 0.71, palette 0.28, tone 0.75)  vs bk03.mp4\nFAIL  0.79  (layout 0.83, palette 0.74, tone 0.79)  vs bk04.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+  "note": "FAIL  0.71  (layout 0.54, palette 0.81, tone 0.89)  vs 2026-11-22_gta_timeline_b8.mp4\nFAIL  0.71  (layout 0.63, palette 0.71, tone 0.88)  vs 2026-11-22_airport_r04_b8.mp4\nFAIL  0.84  (layout 0.96, palette 0.63, tone 0.92)  vs bk02.mp4\nok  0.64  (layout 0.91, palette 0.17, tone 0.87)  vs bk01.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
  },
  "11_pacing": {
   "status": "PASS",
   "note": "28 hard cuts (ffmpeg scene>0.22) in 36.7 s = 1.3 s/cut (need >= 18); engine planned 28"
  },
  "12_script": {
-  "status": "FAIL",
-  "note": "bk07_qcspec.json                   words  63 scenes  7 broll 6 look fx        line2 \"elon\" end \"\"\nbk01_qcspec.json                   words  58 scenes  7 broll 6 look fx        line2 \"stack\" end \"\"\nbk02_qcspec.json                   words  72 scenes  8 broll 7 look fx        line2 \"first\" end \"\"\nbk03_qcspec.json                   words  63 scenes  8 broll 3 look fx        line2 \"you\" end \"\"\nbk04_qcspec.json                   words  68 scenes  8 broll 3 look fx        line2 \"black\" end \"\"\nFAIL: scene-kind sequence identical to ['bk01_qcspec.json']\nSCRIPT_CHECK: FAIL"
+  "status": "PASS",
+  "note": "bk07_qcspec.json                   words  63 scenes  7 broll 3 look fx        line2 \"elon\" end \"\"\nr04_airport_b8.json                words  67 scenes  6 broll 6 look fullbleed line2 \"in\" end \"paid\"\nWARN: word count within 10% of all previous - vary the length\nSCRIPT_CHECK: PASS"
  },
  "14_empty_panel": {
-  "status": "FAIL",
-  "note": "FAIL: largest one-colour flat area 25% of the frame (limit 20%); 4 frame(s) over: 7.6s=25%, 22.9s=23%, 32.1s=23%, 35.2s=24%"
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 10% of the frame (limit 20%)"
  },
  "15_competitors": {
   "status": "PASS",
@@ -63,5 +63,5 @@
   "status": "PASS",
   "note": "Skillar: viral-cartoon-playbook, viral-video-decomposer, dataviz, color-expert, animation-direction; ishlatilmadi: blender-* (Buck 3D kutubxonasi tayyor)"
  },
- "verdict": "FAIL"
+ "verdict": "PASS"
 }

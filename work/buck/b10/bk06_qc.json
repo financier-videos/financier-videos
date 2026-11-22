@@ -1,11 +1,11 @@
 {
  "0_freshness": {
-  "status": "FAIL",
-  "note": "repo 3 commit(s) behind origin/media - git pull --rebase and re-render"
+  "status": "PASS",
+  "note": "up to date"
  },
  "1_platform_check": {
   "status": "PASS",
-  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    32.2 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -15.2 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.3 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    34.6 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -15.2 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.3 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
  },
  "2_loudness": {
   "status": "PASS",
@@ -17,7 +17,7 @@
  },
  "4_export": {
   "status": "PASS",
-  "note": "h264 High, 8.3 Mbit/s, 32.4s, stereo"
+  "note": "h264 High, 8.9 Mbit/s, 32.4s, stereo"
  },
  "5_voice_check": {
   "status": "PASS",
@@ -41,7 +41,7 @@
  },
  "10_look": {
   "status": "WARN",
-  "note": "ok  0.64  (layout 0.91, palette 0.32, tone 0.62)  vs bk01.mp4\nFAIL  0.85  (layout 0.93, palette 0.80, tone 0.78)  vs bk02.mp4\nok  0.57  (layout 0.72, palette 0.26, tone 0.78)  vs bk03.mp4\nFAIL  0.82  (layout 0.81, palette 0.87, tone 0.74)  vs bk04.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+  "note": "ok  0.70  (layout 0.87, palette 0.37, tone 0.90)  vs bk04.mp4\nFAIL  0.72  (layout 0.88, palette 0.43, tone 0.86)  vs bk10.mp4\nFAIL  0.73  (layout 0.95, palette 0.41, tone 0.78)  vs bk08.mp4\nok  0.66  (layout 0.75, palette 0.46, tone 0.83)  vs bk03.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
  },
  "11_pacing": {
   "status": "PASS",
@@ -49,11 +49,11 @@
  },
  "12_script": {
   "status": "PASS",
-  "note": "bk06_qcspec.json                   words  62 scenes  7 broll 3 look fx        line2 \"the\" end \"\"\nbk01_qcspec.json                   words  58 scenes  7 broll 6 look fx        line2 \"stack\" end \"\"\nbk02_qcspec.json                   words  72 scenes  8 broll 7 look fx        line2 \"first\" end \"\"\nbk03_qcspec.json                   words  63 scenes  8 broll 3 look fx        line2 \"you\" end \"\"\nbk04_qcspec.json                   words  68 scenes  8 broll 3 look fx        line2 \"black\" end \"\"\nSCRIPT_CHECK: PASS"
+  "note": "bk06_qcspec.json                   words  62 scenes  7 broll 3 look fx        line2 \"the\" end \"\"\nbk04_qcspec.json                   words  68 scenes  8 broll 4 look fx        line2 \"black\" end \"\"\nbk10_qcspec.json                   words  52 scenes  6 broll 5 look fx        line2 \"that's\" end \"\"\nbk08_qcspec.json                   words  54 scenes  7 broll 6 look fx        line2 \"in\" end \"\"\nbk03_qcspec.json                   words  63 scenes  8 broll 4 look fx        line2 \"you\" end \"\"\nSCRIPT_CHECK: PASS"
  },
  "14_empty_panel": {
   "status": "PASS",
-  "note": "PASS: largest one-colour flat area 18% of the frame (limit 20%)"
+  "note": "PASS: largest one-colour flat area 16% of the frame (limit 20%)"
  },
  "15_competitors": {
   "status": "PASS",
@@ -63,5 +63,5 @@
   "status": "PASS",
   "note": "Skillar: viral-cartoon-playbook, viral-video-decomposer, dataviz, color-expert, animation-direction; ishlatilmadi: blender-* (Buck 3D kutubxonasi tayyor)"
  },
- "verdict": "FAIL"
+ "verdict": "PASS"
 }

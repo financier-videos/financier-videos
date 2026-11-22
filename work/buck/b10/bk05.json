@@ -73,7 +73,7 @@
     "h": 560,
     "mood": "sideeye"
    },
-   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
    "bg_start": 1.0
   },
   {
@@ -86,7 +86,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
+   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
    "bg_start": 0.5,
    "dim": 20
   },
@@ -119,7 +119,7 @@
     "h": 560,
     "mood": "sideeye"
    },
-   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
    "bg_start": 1.0,
    "cont": true,
    "_auto": true,
@@ -135,7 +135,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg": "/tmp/fin/bg/bank/coffee_glass.mp4",
    "bg_start": 2.8,
    "dim": 20
   },
@@ -158,7 +158,7 @@
     "h": 640,
     "mood": "point"
    },
-   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
    "bg_start": 2.7
   },
   {
@@ -171,7 +171,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
+   "bg": "/tmp/fin/bg/bank/tv_remote.mp4",
    "bg_start": 5.1,
    "dim": 20,
    "prop": "A, B OR C?"
@@ -195,7 +195,7 @@
     "h": 640,
     "mood": "point"
    },
-   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
    "bg_start": 2.7,
    "cont": true,
    "_auto": true,
@@ -211,7 +211,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
    "bg_start": 2.3999999999999995,
    "dim": 20,
    "prop": "A, B OR C?"
@@ -235,7 +235,7 @@
     "h": 640,
     "mood": "point"
    },
-   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
    "bg_start": 2.7,
    "cont": true,
    "_auto": true,
@@ -251,7 +251,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
    "bg_start": 4.699999999999999,
    "dim": 20,
    "prop": "A, B OR C?"
@@ -275,7 +275,7 @@
     "h": 640,
     "mood": "confused"
    },
-   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
+   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
    "bg_start": 4.4
   },
   {
@@ -288,7 +288,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
+   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
    "bg_start": 2.0,
    "dim": 20
   },
@@ -312,7 +312,7 @@
     "h": 600,
     "mood": "laugh"
    },
-   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg": "/tmp/fin/bg/bank/coffee_glass.mp4",
    "bg_start": 2.0999999999999996
   },
   {
@@ -325,7 +325,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg": "/tmp/fin/bg/bank/coffee_glass.mp4",
    "bg_start": 4.299999999999999,
    "dim": 20,
    "prop": "$14.25B"
@@ -350,7 +350,7 @@
     "h": 600,
     "mood": "laugh"
    },
-   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg": "/tmp/fin/bg/bank/coffee_glass.mp4",
    "bg_start": 2.0999999999999996,
    "cont": true,
    "_auto": true,
@@ -366,7 +366,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
+   "bg": "/tmp/fin/bg/bank/tv_remote.mp4",
    "bg_start": 1.5999999999999979,
    "dim": 20,
    "prop": "$14.25B"
@@ -385,7 +385,7 @@
     "h": 560,
     "mood": "shocked"
    },
-   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
+   "bg": "/tmp/fin/bg/bank/tv_remote.mp4",
    "bg_start": 3.8
   },
   {
@@ -398,7 +398,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
    "bg_start": 3.8999999999999986,
    "dim": 20,
    "prop": "$164,931/s"
@@ -417,7 +417,7 @@
     "h": 560,
     "mood": "shocked"
    },
-   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
+   "bg": "/tmp/fin/bg/bank/tv_remote.mp4",
    "bg_start": 3.8,
    "cont": true,
    "_auto": true,
@@ -433,7 +433,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg": "/tmp/fin/bg/bank/phone_scroll.mp4",
    "bg_start": 1.1999999999999993,
    "dim": 20,
    "prop": "$164,931/s"
@@ -463,7 +463,7 @@
     "h": 560,
     "mood": "laugh"
    },
-   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
    "bg_start": 1.5
   },
   {
@@ -476,7 +476,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
+   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
    "bg_start": 3.5,
    "dim": 20
   },
@@ -505,7 +505,7 @@
     "h": 560,
     "mood": "laugh"
    },
-   "bg": "/tmp/fin/bg/bank/laptop_phone.mp4",
+   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
    "bg_start": 1.5,
    "cont": true,
    "_auto": true,
@@ -521,7 +521,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg": "/tmp/fin/bg/bank/coffee_glass.mp4",
    "bg_start": 0.7999999999999972,
    "dim": 20
   }
@@ -561,11 +561,12 @@
  "pause_before": {
   "3": 0.4
  },
+ "grade": "violet",
  "pool": [
-  "laptop_phone",
-  "online_card",
   "typing_keys",
-  "cart_pov",
-  "phone_scroll"
+  "phone_scroll",
+  "laptop_phone",
+  "coffee_glass",
+  "tv_remote"
  ]
 }

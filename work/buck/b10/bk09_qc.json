@@ -1,11 +1,11 @@
 {
  "0_freshness": {
-  "status": "FAIL",
-  "note": "repo 3 commit(s) behind origin/media - git pull --rebase and re-render"
+  "status": "PASS",
+  "note": "up to date"
  },
  "1_platform_check": {
   "status": "PASS",
-  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    20.1 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.8 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    22.0 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.8 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
  },
  "2_loudness": {
   "status": "PASS",
@@ -17,7 +17,7 @@
  },
  "4_export": {
   "status": "PASS",
-  "note": "h264 High, 10.9 Mbit/s, 15.5s, stereo"
+  "note": "h264 High, 11.9 Mbit/s, 15.5s, stereo"
  },
  "5_voice_check": {
   "status": "PASS",
@@ -36,12 +36,12 @@
   "note": "work/buck/b10/bk09_qc_sheet.png - Read it before posting"
  },
  "9_color": {
-  "status": "WARN",
-  "note": "dark/dull frames - brighten bg or less b-roll dimming"
+  "status": "PASS",
+  "note": "exposure and colour OK"
  },
  "10_look": {
-  "status": "FAIL",
-  "note": "ok  0.64  (layout 0.87, palette 0.36, tone 0.59)  vs bk01.mp4\nFAIL  0.89  (layout 0.90, palette 0.94, tone 0.79)  vs bk02.mp4\nok  0.52  (layout 0.60, palette 0.26, tone 0.82)  vs bk03.mp4\nFAIL  0.77  (layout 0.76, palette 0.84, tone 0.67)  vs bk04.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)"
+  "status": "WARN",
+  "note": "FAIL  0.77  (layout 0.78, palette 0.71, tone 0.84)  vs bk10.mp4\nFAIL  0.72  (layout 0.84, palette 0.47, tone 0.86)  vs bk08.mp4\nok  0.61  (layout 0.63, palette 0.45, tone 0.83)  vs bk03.mp4\nFAIL  0.70  (layout 0.82, palette 0.44, tone 0.89)  vs bk06.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
  },
  "11_pacing": {
   "status": "PASS",
@@ -49,11 +49,11 @@
  },
  "12_script": {
   "status": "PASS",
-  "note": "bk09_qcspec.json                   words  24 scenes  3 broll 2 look fx        line2 \"worth\" end \"\"\nbk01_qcspec.json                   words  58 scenes  7 broll 6 look fx        line2 \"stack\" end \"\"\nbk02_qcspec.json                   words  72 scenes  8 broll 7 look fx        line2 \"first\" end \"\"\nbk03_qcspec.json                   words  63 scenes  8 broll 3 look fx        line2 \"you\" end \"\"\nbk04_qcspec.json                   words  68 scenes  8 broll 3 look fx        line2 \"black\" end \"\"\nSCRIPT_CHECK: PASS"
+  "note": "bk09_qcspec.json                   words  24 scenes  3 broll 2 look fx        line2 \"worth\" end \"\"\nbk10_qcspec.json                   words  52 scenes  6 broll 5 look fx        line2 \"that's\" end \"\"\nbk08_qcspec.json                   words  54 scenes  7 broll 6 look fx        line2 \"in\" end \"\"\nbk03_qcspec.json                   words  63 scenes  8 broll 4 look fx        line2 \"you\" end \"\"\nbk06_qcspec.json                   words  62 scenes  7 broll 3 look fx        line2 \"the\" end \"\"\nSCRIPT_CHECK: PASS"
  },
  "14_empty_panel": {
-  "status": "FAIL",
-  "note": "FAIL: largest one-colour flat area 25% of the frame (limit 20%); 2 frame(s) over: 0.6s=25%, 12.2s=20%"
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 20% of the frame (limit 20%)"
  },
  "15_competitors": {
   "status": "PASS",
@@ -63,5 +63,5 @@
   "status": "PASS",
   "note": "Skillar: viral-cartoon-playbook, viral-video-decomposer, dataviz, color-expert, animation-direction; ishlatilmadi: blender-* (Buck 3D kutubxonasi tayyor)"
  },
- "verdict": "FAIL"
+ "verdict": "PASS"
 }

@@ -69,7 +69,7 @@
     "h": 560,
     "mood": "point"
    },
-   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
    "bg_start": 1.0
   },
   {
@@ -82,7 +82,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
    "bg_start": 0.5,
    "dim": 20
   },
@@ -111,7 +111,7 @@
     "h": 560,
     "mood": "point"
    },
-   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
    "bg_start": 1.0,
    "cont": true,
    "_auto": true,
@@ -136,7 +136,7 @@
    },
    "line": 1,
    "from": 0,
-   "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
+   "bg": "/tmp/fin/bg/bank/car_lot_top.mp4",
    "bg_start": 2.7
   },
   {
@@ -149,7 +149,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
    "bg_start": 2.8,
    "dim": 20,
    "prop": "-$68B IN A MONTH"
@@ -173,7 +173,7 @@
    },
    "line": 1,
    "from": 0.331,
-   "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
+   "bg": "/tmp/fin/bg/bank/car_lot_top.mp4",
    "bg_start": 2.7,
    "cont": true,
    "_auto": true,
@@ -189,7 +189,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
+   "bg": "/tmp/fin/bg/bank/coffee_pour.mp4",
    "bg_start": 5.1,
    "dim": 20,
    "prop": "-$68B IN A MONTH"
@@ -213,7 +213,7 @@
    },
    "line": 1,
    "from": 0.702,
-   "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
+   "bg": "/tmp/fin/bg/bank/car_lot_top.mp4",
    "bg_start": 2.7,
    "cont": true,
    "_auto": true,
@@ -229,7 +229,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
    "bg_start": 2.3999999999999995,
    "dim": 20,
    "prop": "-$68B IN A MONTH"
@@ -260,7 +260,7 @@
     ]
    ],
    "new": 0,
-   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
    "bg_start": 4.4
   },
   {
@@ -273,7 +273,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
+   "bg": "/tmp/fin/bg/bank/car_lot_top.mp4",
    "bg_start": 4.699999999999999,
    "dim": 20
   },
@@ -303,7 +303,7 @@
     ]
    ],
    "new": 0,
-   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
    "bg_start": 4.4,
    "cont": true,
    "_auto": true,
@@ -319,7 +319,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
    "bg_start": 2.0,
    "dim": 20
   },
@@ -358,7 +358,7 @@
     ]
    ],
    "new": 0,
-   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
    "bg_start": 2.0999999999999996
   },
   {
@@ -371,7 +371,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
    "bg_start": 4.299999999999999,
    "dim": 20,
    "prop": "$2.42T IN A YEAR"
@@ -411,7 +411,7 @@
     ]
    ],
    "new": 0,
-   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
    "bg_start": 2.0999999999999996,
    "cont": true,
    "_auto": true,
@@ -427,7 +427,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
+   "bg": "/tmp/fin/bg/bank/coffee_pour.mp4",
    "bg_start": 1.5999999999999979,
    "dim": 20,
    "prop": "$2.42T IN A YEAR"
@@ -482,7 +482,7 @@
     "mood": "shocked"
    },
    "new": 0,
-   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
+   "bg": "/tmp/fin/bg/bank/coffee_pour.mp4",
    "bg_start": 3.8
   },
   {
@@ -495,7 +495,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
    "bg_start": 3.8999999999999986,
    "dim": 20,
    "prop": "$164,931/s"
@@ -550,7 +550,7 @@
     "mood": "shocked"
    },
    "new": 0,
-   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
+   "bg": "/tmp/fin/bg/bank/coffee_pour.mp4",
    "bg_start": 3.8,
    "cont": true,
    "_auto": true,
@@ -566,7 +566,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
+   "bg": "/tmp/fin/bg/bank/car_lot_top.mp4",
    "bg_start": 1.1999999999999993,
    "dim": 20,
    "prop": "$164,931/s"
@@ -621,7 +621,7 @@
     "mood": "shocked"
    },
    "new": 0,
-   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
+   "bg": "/tmp/fin/bg/bank/coffee_pour.mp4",
    "bg_start": 3.8,
    "cont": true,
    "_auto": true,
@@ -637,7 +637,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/online_card.mp4",
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
    "bg_start": 3.5,
    "dim": 20,
    "prop": "$164,931/s"
@@ -671,7 +671,7 @@
     "h": 560,
     "mood": "laugh"
    },
-   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
    "bg_start": 1.5
   },
   {
@@ -684,7 +684,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/cart_pov.mp4",
+   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
    "bg_start": 0.7999999999999972,
    "dim": 20
   },
@@ -717,7 +717,7 @@
     "h": 560,
     "mood": "laugh"
    },
-   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
    "bg_start": 1.5,
    "cont": true,
    "_auto": true,
@@ -733,7 +733,7 @@
     "y": 1.04
    },
    "_auto": true,
-   "bg": "/tmp/fin/bg/bank/pay_terminal.mp4",
+   "bg": "/tmp/fin/bg/bank/coffee_pour.mp4",
    "bg_start": 3.099999999999998,
    "dim": 20
   },
@@ -766,7 +766,7 @@
     "h": 560,
     "mood": "laugh"
    },
-   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg": "/tmp/fin/bg/bank/gamepad_hands.mp4",
    "bg_start": 1.5,
    "cont": true,
    "_auto": true,
@@ -816,11 +816,12 @@
   "WINNER",
   "BILLIONAIRES"
  ],
+ "grade": "lime",
  "pool": [
-  "cash_count",
   "gamepad_hands",
-  "online_card",
-  "cart_pov",
-  "pay_terminal"
+  "car_lot_top",
+  "cash_count",
+  "calendar_flip",
+  "coffee_pour"
  ]
 }

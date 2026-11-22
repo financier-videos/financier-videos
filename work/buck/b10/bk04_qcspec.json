@@ -6,13 +6,17 @@
    "text": "Here's America's receipt for Cyber Week, last year.",
    "shots": [
     {
-     "broll": "/tmp/fin/bg/bank/online_card.mp4"
+     "broll": "/tmp/fin/bg/bank/cart_pov.mp4"
     }
    ]
   },
   {
    "text": "Black Friday, online: eleven point eight billion.",
-   "stat": "bk04-1"
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/laptop_phone.mp4"
+    }
+   ]
   },
   {
    "text": "Cyber Monday: fourteen point two five billion. The biggest online shopping day ever.",
@@ -30,7 +34,7 @@
    "text": "And over one billion of Cyber Monday was buy now, pay later.",
    "shots": [
     {
-     "broll": "/tmp/fin/bg/bank/laptop_phone.mp4"
+     "broll": "/tmp/fin/bg/bank/pay_terminal.mp4"
     }
    ]
   },
@@ -38,7 +42,7 @@
    "text": "This year's receipt prints next week. Guess the total in the comments.",
    "shots": [
     {
-     "broll": "/tmp/fin/bg/bank/cart_pov.mp4"
+     "broll": "/tmp/fin/bg/bank/phone_scroll.mp4"
     }
    ]
   },

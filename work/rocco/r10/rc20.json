@@ -32,7 +32,7 @@
   ],
   [
    "P",
-   "[pause, hopeful] ...So I keep the socks?"
+   "[pause, then hopeful] ...So. I'm keeping the socks."
   ],
   [
    "R",
@@ -408,5 +408,6 @@
  ],
  "pause_before": {
   "6": 0.45
- }
+ },
+ "grade": "gold"
 }

@@ -52,8 +52,71 @@
     "h": 560,
     "mood": "shocked"
    },
+   "dim": 60,
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 2.0
+  },
+  {
+   "kind": "host",
+   "line": 0,
+   "from": 0.127,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bg_start": 0.5,
+   "dim": 20,
+   "prop": "3.69\u00a2"
+  },
+  {
+   "kind": "kinetic",
+   "line": 0,
+   "from": 0.235,
+   "words": [
+    {
+     "t": "1\u00a2 COIN",
+     "size": 170
+    },
+    {
+     "t": "COST 3.69\u00a2",
+     "size": 170,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    }
+   ],
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "shocked"
+   },
+   "dim": 60,
    "bg": "/tmp/fin/bg/bank/coins_hand.mp4",
-   "bg_start": 1.0
+   "bg_start": 1.0,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 0,
+   "from": 0.342,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/coins_hand.mp4",
+   "bg_start": 2.8,
+   "dim": 20,
+   "prop": "3.69\u00a2"
   },
   {
    "kind": "kinetic",
@@ -77,8 +140,68 @@
     }
    ],
    "cap": true,
+   "dim": 60,
    "bg": "/tmp/fin/bg/bank/cash_count.mp4",
    "bg_start": 2.7
+  },
+  {
+   "kind": "host",
+   "line": 0,
+   "from": 0.577,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 5.1,
+   "dim": 20,
+   "prop": "3.69\u00a2"
+  },
+  {
+   "kind": "kinetic",
+   "line": 0,
+   "from": 0.685,
+   "words": [
+    {
+     "t": "LAST ONE:",
+     "size": 140,
+     "font": "Abril"
+    },
+    {
+     "t": "NOV 12, 2025",
+     "size": 150,
+     "c": [
+      255,
+      205,
+      60
+     ],
+     "font": "Abril"
+    }
+   ],
+   "cap": true,
+   "dim": 60,
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 2.7,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 0,
+   "from": 0.841,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bg_start": 2.3999999999999995,
+   "dim": 20,
+   "prop": "3.69\u00a2"
   },
   {
    "kind": "stamp",
@@ -96,6 +219,56 @@
    },
    "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
    "bg_start": 4.4
+  },
+  {
+   "kind": "host",
+   "line": 1,
+   "from": 0.278,
+   "buck": {
+    "mood": "sideeye",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/coins_hand.mp4",
+   "bg_start": 4.699999999999999,
+   "dim": 20,
+   "prop": "1\u00a2"
+  },
+  {
+   "kind": "stamp",
+   "line": 1,
+   "from": 0.514,
+   "kicker": "THE PENNY:",
+   "claim": "WORTH 1\u00a2\nCOST 3.69\u00a2",
+   "verdict": "LOSS",
+   "at": 0.5,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "sideeye"
+   },
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bg_start": 4.4,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 1,
+   "from": 0.821,
+   "buck": {
+    "mood": "sideeye",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/cash_count.mp4",
+   "bg_start": 2.0,
+   "dim": 20,
+   "prop": "1\u00a2"
   }
  ],
  "sfx": [
@@ -122,6 +295,7 @@
   "PENNY",
   "CENTS"
  ],
+ "grade": "warm",
  "pool": [
   "coins_hand",
   "cash_count",

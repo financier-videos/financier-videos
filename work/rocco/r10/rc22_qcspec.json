@@ -52,7 +52,11 @@
   },
   {
    "text": "Boss defeated! Level complete!",
-   "sticker": "rc22-8"
+   "shots": [
+    {
+     "broll": "/home/user/financier-videos/assets/toon3d/penny_room3d.jpg"
+    }
+   ]
   },
   {
    "text": "Not again!",

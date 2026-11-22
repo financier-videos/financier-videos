@@ -243,11 +243,22 @@ swap("bk06", 0, {"kind": "kinetic", "words": [{"t": "LESSON:", "size": 130, "fon
 swap("bk06", 2, {"kind": "counter", "to": 25, "label": "YOU PAY EACH MONTH", "dur": 0.8, "sub": "SOUNDS RESPONSIBLE...", "buck": {"x": 0.82, "y": 0.99, "h": 560, "mood": "happy"}})
 swap("bk06", 4, {"kind": "counter", "to": 1833, "label": "YOU PAY BACK", "dur": 1.4, "color": [235, 64, 52], "buck": {"x": 0.82, "y": 0.99, "h": 600, "mood": "shocked"}})
 swap("bk07", 1, {"kind": "counter", "to": 25388, "label": "MUSK'S OCTOBER DROP", "sub": "PER SECOND (-$68B IN A MONTH)", "dur": 1.5, "color": [235, 64, 52], "buck": {"x": 0.82, "y": 0.99, "h": 560, "mood": "sad"}})
+swap("bk03", 4, {"kind": "counter", "start": 40e12, "to": 39.97e12, "dur": 1.5, "label": "DEBT LEFT AFTER 80 YEARS", "sub": "STILL ~$40 TRILLION", "size": 92, "buck": {"x": 0.82, "y": 0.99, "h": 560, "mood": "confused"}})
+swap("bk04", 1, {"kind": "counter", "to": 11.8, "dec": 1, "suffix": "B", "label": "BLACK FRIDAY, ONLINE", "dur": 1.2, "buck": {"x": 0.82, "y": 0.99, "h": 560, "mood": "happy"}})
+GR = {"bk01": "cool", "bk02": "gold", "bk03": None, "bk04": "warm", "bk05": "violet", "bk06": "teal", "bk07": "lime", "bk08": "rose", "bk09": "warm", "bk10": "violet"}
+for k, g in GR.items():
+    d = P(k)
+    if g: d["grade"] = g
+    W_(k, d)
+d = P("bk09")
+for s in d["shots"]:
+    if s["kind"] == "kinetic": s["dim"] = 60
+W_("bk09", d)
 # real footage behind the graphics (script_check: >= 40 % full-screen footage; empty_check: no flat panels)
 POOL = {"bk01": ["cash_count", "cash_stacks", "atm_use", "coins_hand", "wallet_empty"], "bk02": ["cash_count", "gamepad_hands", "online_card", "cart_pov", "atm_use"],
-        "bk03": ["cash_count", "calendar_flip", "wallet_empty", "atm_use"], "bk04": ["online_card", "laptop_phone", "cart_pov", "pay_terminal", "phone_scroll"],
-        "bk05": ["laptop_phone", "online_card", "typing_keys", "cart_pov", "phone_scroll"], "bk06": ["online_card", "pay_terminal", "wallet_empty", "atm_use"],
-        "bk07": ["cash_count", "gamepad_hands", "online_card", "cart_pov", "pay_terminal"], "bk08": ["cart_pov", "cart_empty", "cash_count", "wallet_empty", "coffee_pour"],
+        "bk03": ["cash_count", "typing_keys", "wallet_empty", "atm_use"], "bk04": ["cart_pov", "laptop_phone", "pay_terminal", "phone_scroll", "cart_empty"],
+        "bk05": ["typing_keys", "phone_scroll", "laptop_phone", "coffee_glass", "tv_remote"], "bk06": ["online_card", "pay_terminal", "wallet_empty", "atm_use"],
+        "bk07": ["gamepad_hands", "car_lot_top", "cash_count", "typing_keys", "coffee_pour"], "bk08": ["cart_pov", "cart_empty", "cash_count", "wallet_empty", "coffee_pour"],
         "bk09": ["coins_hand", "cash_count", "wallet_empty"], "bk10": ["gamepad_hands", "tv_remote", "typing_keys", "laptop_phone", "phone_scroll"]}
 for k, pool in POOL.items():
     d = P(k); d["pool"] = pool; i = 0

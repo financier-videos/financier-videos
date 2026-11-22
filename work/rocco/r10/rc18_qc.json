@@ -1,0 +1,67 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    23.7 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.9 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.3 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -15.0 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 7.9 Mbit/s, 25.2s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "{\n \"rc\": 0,\n \"match\": 0.975,\n \"rechecked_ok\": [],\n \"missing\": [\n  \"won\"\n ],\n \"extra\": [\n  \"want\"\n ],\n \"heard\": \"POV! I just want a PS6! Step 1. Answer 3 easy questions. Done! Step 2. My name and address. Sure! Step 3. Shipping fee. 2.99. Card number. Stop! But it's free! Free prizes don't need your card number. Look who made this page. So close, not again.\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "5 st  gap=0.31  ok  | Step one: answer three easy questions. Done!\n 3   6.87s range= 9.6 st  gap=0.48  ok  | Step two: my name and address. Sure!\n 4   9.74s range=10.2 st  gap=0.84  ok  | Step three: shipping fee, two ninety-nine... card number...\n 5  14.74s range=10.9 st  gap=0.11  ok  | STOP.\n 6  15.42s range= 5.5 st  gap=0.23  ok  | But it's FREE!\n 7  16.93s range=16.5 st  gap=0.53  ok  | Free prizes don't need your card number. Look who made this \n 8  20.70s range= 7.8 st  gap=0.36  ok  | So close! Not again!\n 9  23.57s range=   - st  gap=-  ok  | \n{\"median_f0\": 302.4, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 100"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/rocco/r10/rc18_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "WARN",
+  "note": "FAIL  0.72  (layout 0.91, palette 0.40, tone 0.84)  vs rocco_rc12_wrong_piggy_3d.mp4\nFAIL  0.88  (layout 0.94, palette 0.80, tone 0.90)  vs rocco_rc11_romance_coin_3d.mp4\nok  0.69  (layout 0.90, palette 0.33, tone 0.83)  vs rocco_rc10_free_tv_3d.mp4\nFAIL  0.73  (layout 0.91, palette 0.53, tone 0.67)  vs rocco_rc09_fraud_unit_3d.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "20 hard cuts (ffmpeg scene>0.22) in 25.2 s = 1.3 s/cut (need >= 12); engine planned 20"
+ },
+ "12_script": {
+  "status": "PASS",
+  "note": "rc18_qcspec.json                   words  48 scenes  9 broll 8 look rocco2    line2 \"step\" end \"\"\nrc12_qcspec.json                   words  51 scenes 11 broll 9 look rocco2    line2 \"slick\" end \"\"\nrc11_qcspec.json                   words  82 scenes 15 broll 8 look rocco2    line2 \"darling\" end \"\"\nrc10_qcspec.json                   words  82 scenes 14 broll 8 look rocco2    line2 \"in\" end \"\"\nrc09_qcspec.json                   words  81 scenes 13 broll 8 look rocco2    line2 \"good\" end \"\"\nSCRIPT_CHECK: PASS"
+ },
+ "14_empty_panel": {
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 18% of the frame (limit 20%)"
+ },
+ "15_competitors": {
+  "status": "PASS",
+  "note": "9 fresh benchmark(s) ['4ILxskhpnpo', 'DdGowjqMDqS', 'Df331TOAaAO', 'DfSbqCJPpE8', 'DflN4MGBPX5', 'N09VNM2BOD8', 'PibMox6nk4c', 'SS_6KU9qpr0', 'jUF_JPKXTWc'] (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: rocco-3d-cast, viral-cartoon-playbook, animation-direction, disney-animator-traditional, viral-video-decomposer, blender-core, blender-rendering; ishlatilmadi: analyzing-video (YouTube bloklangan)"
+ },
+ "verdict": "PASS"
+}
