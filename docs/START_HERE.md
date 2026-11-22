@@ -4,7 +4,7 @@ Shohjahon: "hammasi tayyor bo'lsa kodni ishga tushiraman". Bu fayl boshqa hamma 
 
 ## 0. Har ishga tushishda
 **Avval `docs/run_checklist.md` (2026-11-22) — boshida va oxirida, bandma-band.**
-`git pull --rebase origin media` → docs/changes.md oxirgi 20 qator → docs/night_order.md (BUYURTMA 6, 7 va ularning tuzatishlari) → docs/skills/INDEX.md.
+`git pull --rebase origin media` → `bash engine/setup_env.sh` (yangi konteyner uchun render muhiti) → docs/changes.md oxirgi 20 qator → docs/night_order.md (BUYURTMA 6, 7 va ularning tuzatishlari) → docs/skills/INDEX.md.
 
 ## 0.5 ROCCO: eski uslub TO'XTATILDI — docs/rocco_style_v2.md (yorug' fon, Rocco + Penny suhbati, hazil, yangi ovoz tanlovi). Ovoz tanlanguncha yangi Rocco videosi chiqmaydi; birinchi ish — rocco_voice_test.mp4.
 
