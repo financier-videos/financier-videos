@@ -1,4 +1,5 @@
 # INSTAGRAM (Shohjahon 2026-11-20 19:42)
+> **2026-11-23 (Shohjahon): Metricool ishlatilmaydi.** financier424 Reel'lari `vidiq_instagram_publish_reel` (platformAccountId 29750328041225331, isAiGenerated true) bilan chiqariladi. Pastdagi Metricool bandlari — arxiv.
 Ikki profil: **financier424** — inglizcha, ingliz tilida so'zlashuvchi davlatlar uchun; **finansist424** — o'zbekcha, o'zbek tilida so'zlashuvchilar uchun. Instagramda Buck'ning ismi — o'zbek profilida "Finansist" (Shohjahon 2026-11-20 19:53 da tasdiqladi). O'zbekcha videolarda Buck o'zini "Finansist" deb ataydi; inglizchada — Buck.
 TALAB: YouTube'ga qaysi Short qo'yilsa, Instagram'ga ham qo'yiladi (Reel). Faqat BUNDAN KEYINGI videolar (eskilari emas), eng yaxshilari. financier424 ga — o'sha inglizcha fayl; finansist424 ga — Buck O'ZBEK TILIDA gapiradigan versiya. Profil professional ko'rinsin.
 

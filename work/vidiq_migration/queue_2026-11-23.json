@@ -1,0 +1,84 @@
+{
+ "note": "Metricool -> vidIQ (2026-11-23). YT: vidiq_social_post_publish(postId, publicationIds) after daily upload limit resets. IG: vidiq_instagram_publish_reel(platformAccountId, videoUrl = vidiq_video_upload(uploadId).videoUrl, caption=ig_caption, isAiGenerated true) near slot time. Mark status fields when done.",
+ "ig_account": "29750328041225331",
+ "youtube_channel": "UC3URYtuy-f6c1fTNhesFkGA",
+ "posts": [
+  {
+   "slot_et": "2026-11-23T07:00-05:00",
+   "name": "nickel",
+   "vidiq_uploadId": "1fda7d80-abcd-4bdf-bdb0-4638bbd235d6",
+   "yt_postId": "af1640a1-721c-43da-bd58-41d0e822885c",
+   "yt_publicationId": "5dff7d62-8172-4f28-a77b-6aaaffb019cc",
+   "yt_status": "failed once: uploadLimitExceeded",
+   "ig_caption": "Should the nickel go next?\n\nA nickel costs 13.78 cents to make. A dime 5.76. A quarter 14.68. The penny cost 3.69, and the last circulating one was struck in Nov 2025.\n\nSource: U.S. Mint 2024 Annual Report (fiscal 2024); St. Louis Fed.\nFootage: Pexels. Not financial advice. Buck is our original character.\n\nSend this to the friend who still saves pennies.\n\n#moneyfacts #coins #penny #didyouknow #money",
+   "ig_status": "todo",
+   "old_metricool_ig_id": 437269599
+  },
+  {
+   "slot_et": "2026-11-23T13:00-05:00",
+   "name": "ten_bill",
+   "vidiq_uploadId": "52e3b3f7-d00e-405f-a5e5-d421182a372c",
+   "yt_postId": "d6ad3635-85c5-421b-8873-266b5bc4c432",
+   "yt_publicationId": "d358b6aa-2f38-4cb4-94ec-c29f3aa8ea74",
+   "yt_status": "draft (not yet published)",
+   "ig_caption": "Which bill do you hold onto longest?\n\nThe $10 wears out first: about 5.7 years. The $1 lasts about 7.2 years. The $100 about 24, because it mostly sits in drawers. And it's not paper: 75% cotton, 25% linen.\n\nSource: Federal Reserve lifespan estimates; Bureau of Engraving and Printing.\nFootage: Pexels. Not financial advice. Buck is our original character.\n\nSend this to someone who still keeps cash in a drawer.\n\n#moneyfacts #dollar #cash #didyouknow #money",
+   "ig_status": "todo",
+   "old_metricool_ig_id": 437285230
+  },
+  {
+   "slot_et": "2026-11-24T07:00-05:00",
+   "name": "bank_fees",
+   "vidiq_uploadId": "55e81edb-96ce-4d57-8734-9a2cd62d2c0e",
+   "yt_postId": "945db7c1-aa71-4b9c-ae7c-f6dece740f5b",
+   "yt_publicationId": "f429ef7b-77fb-415e-b028-cfb7c1f6bf2e",
+   "yt_status": "draft (not yet published)",
+   "ig_caption": "Which fee got you last? 😅\n\nThe bank is made up. The numbers are real U.S. averages: ATM $4.86 · overdraft ~$27 · monthly fee $15.65.\n\nSource: Bankrate Checking Account and ATM Fee Study (Sep 2025).\nFootage: Pexels. Not financial advice. Buck is our original character.\n\nSend this to someone who just paid an ATM fee.\n\n#bankfees #moneyfacts #funny #money #comedy",
+   "ig_status": "todo",
+   "old_metricool_ig_id": 437506000
+  },
+  {
+   "slot_et": "2026-11-24T10:00-05:00",
+   "name": "print_100",
+   "vidiq_uploadId": "2ee738b4-ef14-4f63-a5d7-f3914de7f742",
+   "yt_postId": "f075a22f-0d5d-43a1-8865-ea4ae41eac0e",
+   "yt_publicationId": "aa719985-fdd6-455e-bb9b-b762e00a97e0",
+   "yt_status": "draft (not yet published)",
+   "ig_caption": "A $100 bill costs 11.3¢ to print. A $1 bill? 4.1¢. 💵\n\nSource: Federal Reserve (2025 currency budget, variable cost per note).\nFootage: Pexels. Not financial advice. Buck is our original character.\n\nSend this to the friend who still pays in cash.\n\n#moneyfacts #dollar #didyouknow #money",
+   "ig_status": "todo",
+   "old_metricool_ig_id": 437506147
+  },
+  {
+   "slot_et": "2026-11-24T13:00-05:00",
+   "name": "buck_1748",
+   "vidiq_uploadId": "2cfc2826-7325-4ea1-9a55-8f786ce51a15",
+   "yt_postId": "5d2ea26c-315b-4f37-bb38-5f796363fc17",
+   "yt_publicationId": "b1c7e693-9c7b-4cf7-bb91-708226ed577b",
+   "yt_status": "draft (not yet published)",
+   "ig_caption": "Why is a dollar called a buck? 🦌 Probably because of deerskins.\n\nIn 1748 a frontier trader wrote that he was robbed of \"300 bucks\" — 44 years before the U.S. dollar existed (1792). Historians still argue about it.\n\nSources: Merriam-Webster, Britannica; Coinage Act of 1792.\nFootage: Pixabay, Pexels. Not financial advice. Buck is our original character.\n\nSend this to someone who says \"bucks\" every day.\n\n#moneyfacts #history #dollar #didyouknow",
+   "ig_status": "todo",
+   "old_metricool_ig_id": 437506458
+  },
+  {
+   "slot_et": "2026-11-25T07:00-05:00",
+   "name": "cancel_sub",
+   "vidiq_uploadId": "333ac73c-e590-43de-a526-3a5dbf2add35",
+   "yt_postId": "1869da50-fb52-4b27-a1ae-cb5df2197fe8",
+   "yt_publicationId": "7d743d2a-8c46-4b7a-8291-68bfc2cda246",
+   "yt_status": "draft (not yet published)",
+   "ig_caption": "\"Are you sure?\" \"Are you REALLY sure?\" 🙃\n\nThe app is made up. The number is real: about $21 a month goes to subscriptions people never use.\n\nSource: CNET subscription survey (July 2026).\nFootage: Pexels. Not financial advice. Buck is our original character.\n\nSend this to someone with 9 streaming apps.\n\n#subscriptions #moneyfacts #funny #money #comedy",
+   "ig_status": "todo",
+   "old_metricool_ig_id": 437506620
+  },
+  {
+   "slot_et": "2026-11-25T10:00-05:00",
+   "name": "junk_drawer",
+   "vidiq_uploadId": "1fbe4483-3871-4b86-82aa-50f5f165ad2f",
+   "yt_postId": "b32ab8ad-3c8c-4a16-8542-085e3b46e644",
+   "yt_publicationId": "342a17a7-2e52-4944-bb9d-d19ddf2cff27",
+   "yt_status": "draft (not yet published)",
+   "ig_caption": "Go check your junk drawer. 🎁\n\n43% of U.S. adults have an unused gift card or store credit — about $244 each, ~$27 billion in total.\n\nSource: Bankrate gift card survey (2024).\nFootage: Pexels, Pixabay. Not financial advice. Buck is our original character.\n\nTell me what you found 👇\n\n#giftcards #moneyfacts #holidays #money #didyouknow",
+   "ig_status": "todo",
+   "old_metricool_ig_id": 437506792
+  }
+ ]
+}
