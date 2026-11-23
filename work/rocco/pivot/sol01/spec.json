@@ -1,0 +1,10 @@
+{"title":"SCAM OR LEGIT?","sub":"3 texts. Only 1 is real.","end_sub":"How many did you get?","brand":"RED FLAG ROCCO",
+ "hook":"hook","end":"end",
+ "rounds":[
+  {"q":"r1q","a":"r1a","sender":"+1 (844) 555-0136","verdict":"scam","tell":"parcel-redeliver-help.co",
+   "msgs":["DELIVERY NOTICE: Your package is on hold due to an incomplete address. Update within 24h: parcel-redeliver-help.co"]},
+  {"q":"r2q","a":"r2a","sender":"48291","verdict":"real","tell":"never call you",
+   "msgs":["Your verification code is 604718. We will never call you to ask for this code. Don't share it."]},
+  {"q":"r3q","a":"r3a","sender":"+1 (310) 555-0172","verdict":"scam","tell":"send $400",
+   "msgs":["Hi Mom it's me!! dropped my phone in the toilet, this is my new number","can you send $400 for a new one? can't talk rn, I'll pay you back"]}
+ ]}

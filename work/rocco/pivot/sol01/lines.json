@@ -1,0 +1,10 @@
+[
+ ["hook","Three texts. Only ONE is real. Can you spot it?"],
+ ["r1q","Text number one."],
+ ["r1a","Scam! A delivery company won't text you a random link to fix your address. Don't tap it."],
+ ["r2q","Number two."],
+ ["r2a","Real. Just a code you asked for. But if anyone CALLS you asking for that code... that's the scam."],
+ ["r3q","And number three. From a new number."],
+ ["r3a","Scam. New phone, send money? Call your kid's OLD number first."],
+ ["end","So... how many did you get? Be honest. Comment your score."]
+]
