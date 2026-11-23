@@ -52,3 +52,19 @@ Jami (videolar yig'indisi): **6,369** (+4,491 kechagi 1,878 dan). Obunachi: 5 (+
 Rocco YouTube: "Penny Plays Dumb With a Scammer" 941 (8 soat, 22 like, 3 izoh), "Free GTA 6 for PC? Free Cheese." 715 (4 soat) — jami 1,656, 5 obunachi.
 Instagram (16–22-noy): financier424 — 43 follower, 1,753 views, reach 1,388; redfrocco — 12 follower, 2,819 views, reach 2,132; finansist424 — vidIQ'ga ulanmagan, ma'lumot yo'q.
 XULOSA: (1) 24 soatda ≥1,000: Gift Cards $27B, How Big $3.79B → sprint §3: ertaga har biriga 2 davom (script_bank [IKKI BARAVAR]). (2) GTA trend 3 videosi o'rtacha 939 — trend ishlaydi. (3) Raqamli sarlavha 11/11 ichida eng yaxshi 5 ta; raqamsiz airport 3 soatda 196 — hali erta. (4) Mikro 14 s: YT 745 (odatiydan ~1.5x kam), IG ko'rish 71% (eng yuqori) — mikro IG'da kuchli, YT'da ustun emas → nisbat o'zgarmaydi.
+
+## 2026-11-23 23:25 Toshkent (18:25 UTC) — C ishi, vidiq_user_videos (Financier 5 + Rocco 5 kredit; balans 1,506)
+| chiqqan (UTC) | video | ko'rish 22-noy 18:25 | ko'rish 23-noy 18:25 | farq |
+|---|---|---|---|---|
+| 11-21 18:07 | $27 Billion in Gift Cards Sitting Unused | 1,274 | 1,279 | +5 (to'xtagan) |
+| 11-21 21:04 | $43,866 Every Second: GTA 6 Day One | 745 | 772 | +27 |
+| 11-22 00:06 | How Big Is $3.79 Billion in ONE Day? | 1,109 | 1,124 | +15 |
+| 11-22 12:04 | 13 Years Later, GTA Made 4.7x More | 964 | **1,297** | +333 |
+| 11-22 15:06 | Airport Prices Have a Legal Limit (raqamsiz) | 196 | 381 | +185 |
+| 11-23 11:00 | I Tried to Spend Elon Musk's $869 Billion (BK) | — | 160 (7.5 soat) | yangi |
+| 11-23 14:00 | $40 Trillion in $100 Bills Reaches Past the Satellites (BK) | — | 79 (4.5 soat) | yangi |
+| 11-23 17:00 | Who Makes the Most Money Per Second? (BK) | — | 41 (1.5 soat) | yangi |
+Qolganlar o'zgarmagan/minimal (+0..+43). Jami (videolar yig'indisi): **7,263** (+894 kechagi 6,369 dan). Obunachi: 4 (kecha 5 deb yozilgan — −1). vidiq_user_channels viewCount 1,818 (kechikadi).
+Rocco YouTube: Penny Plays Dumb 1,109 (+168), Free GTA 6 1,167 (+452); bugungi 3 (01:17 UTC burst bilan yuklangan, 12:30/14:31/15:30 UTC chiqqan) — 4 / 1 / 1 ko'rish (!). Jami 2,282; obunachi 6 (+1).
+Instagram (16–23-noy, 7 kun): financier424 — 38 follower (kecha 43, −5), 2,299 views, reach 1,837; redfrocco — 12 follower, 2,949 views, reach 2,184. finansist424 — ulanmagan.
+XULOSA: (1) Bugungi 3 Financier BK Short sekin start (160/79/41) — kechagi trend videolar 6 soatda ~960 edi; Rocco bugungi 3 Short deyarli 0. Umumiy omil: hammasi 23-noy 01:17 UTC da 10+9 ketma-ket yuklangan (burst) va keyin kanal uploadLimitExceeded. Gipoteza (isbot emas): burst yuklash tavsiyani susaytirdi. Metricool 2026 ma'lumoti: haftasiga >7 post oylik ko'rishni pasaytiradi (metricool.com/youtube-trends). (2) GTA 4.7x 24 soatdan keyin ham o'smoqda (+333) — trend+raqam ishlaydi. (3) Raqamsiz Airport 381 — raqamlilardan past, gipoteza saqlanadi.
