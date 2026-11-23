@@ -6,6 +6,10 @@ Vazifa: A/B ishlarida avval shu yerdagi [TAYYOR] ssenariylarni ishlat (har biri 
 - G-2 (Gift Cards): "Gift Card Scams: $217 Million Lost" — RAQAMNI FTC Consumer Sentinel'dan aniq olish shart (yo'q bo'lsa mavzu Rocco'ga). Rocco formatida — Financier emas.
 - H-1 (How Big Is $3.79B → 1,109): "How Big Is $1 Trillion in $100 Bills?" — masshtab narvoni (taxlam balandligi, futbol maydoni, yuk mashinalari); hisob "our math", BEP banknot o'lchami/og'irligi (1 g). Savat 6.
 - H-2 (How Big): "How Long to Spend $1 Billion at $1,000 a Day?" — ~2,740 yil (our math). Mikro 10–12 s (IG'da mikro 71% ko'rish). Savat 6.
+## [SHOSHILINCH 2026-11-23 C]
+- U-1 (Financier, mikro/raqam): "44% of Americans struggled to pay for a basic need this year" — Pew Research Center, short read 2026-10-14 (pewresearch.org). Bayram haftasi konteksti; sarlavha raqamli ("44% Couldn't Afford One Basic Bill"). Faqat fakt, maslahat yo'q.
+- U-2 (Financier, kontrast): "Only 14% feel in control of their money" — The Penny Hoarder 2026 Financial Anxiety Barometer (aprel 2026; o'z so'rovi — "a survey by The Penny Hoarder" deb ayt).
+
 ## [SHOSHILINCH 2026-11-22 C]
 - S-T1 "Thanksgiving for 10: $58.63" — American Farm Bureau 2026 so'rovi: 10 kishilik dasturxon +6% ($58.63), 2022 dan beri birinchi o'sish; 16 lb kurka $23.68 (o'tgan yil $21.50). Siyosiy sabablar (urush, tarif) ssenariyga KIRMAYDI. Muddat: 27-noy (bayram) gacha. Manba: AFBF press-relizi (2026-11-18 atrofi; render oldidan sanani tekshir).
 - S-T2 (Rocco): "Bot comments are scams" — vidIQ comment_insights (22-noy): moliya kanallaridagi izohlarda "nothing but bots / all comments here are SCAMS" (5 thread, 68 like). Himoya: izohdagi "menga yozing, men maslahatchi" — har doim firibgar. Manba: FTC investment scam ogohlantirishi.
