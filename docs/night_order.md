@@ -271,3 +271,9 @@ Rocco: `rc04c.json` bor, video hali yo'q — render qilingach varaq bilan.
 
 ## BUYURTMA 9 — ROCCO 3D MULTFILM (2026-11-22, chat → kod)
 To'liq matn: `docs/rocco_3d_cast.md`. Qisqasi: buck-private/rocco_cast_v1 dagi rig qilingan Rocco/Penny/Slick'dan GPU'da sprite kutubxonasi → rc_render `style: rocco3d` → RC-04 birinchi 3D epizod → varaq chatga.
+
+### JARAYON (vazifa sessiyasi, 2026-11-23 09:20–09:40 Toshkent, A ishi)
+- ElevenLabs 200 (38,040 / 131,000 belgi ishlatilgan). Metricool getScheduledPosts: 22-noy 13:00 ET BF vs CM (437309502/437309531) ERROR "account limit"; PENDING 12 post (23-noy 07:00 nickel, 13:00 $10 bill; 24-noy 07:00 bank fees, 10:00 $100 print, 13:00 buck 1748; 25-noy 07:00 subscription, 10:00 junk drawer — YT+IG). S-13 (23-noy 21:00 ET, 437456019) ro'yxatda yo'q.
+- Limit: Metricool Free — 20 chiqqan post/kalendar oy, 1-dekabrda yangilanadi → yuqoridagi 12 post ham ERROR bo'lishi kutiladi.
+- QILINMADI: yangi Financier Short (A ishi) — sabab: chiqarish yo'li yo'q; Shohjahon qarori (Metricool tarifi yoki vidIQ orqali YouTube) kelgach keyingi ishga tushishda. Trend: yangi kuchli mavzu yo'q (Black Friday 27-noy, Cyber Monday 30-noy — Adobe prognozi allaqachon bankda).
+

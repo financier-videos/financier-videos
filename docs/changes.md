@@ -114,3 +114,4 @@ Ishlab chiqaruvchi (vazifa/chat): HAR render va HAR post oldidan `git pull --reb
 - Drafts are NOT published: vidIQ needs Shohjahon's explicit approval before vidiq_social_post_publish.
 - Blockers: Metricool brand 8198538 "account limit" (posts ERROR); Buffer Rocco YouTube 2/day + 10 queued (full).
 - 3-day results check: scheduled task trig_01CHbLDF445HyRJXjsK1DapK (25-noy 22:00 Toshkent).
+| 2026-11-23 04:30 | vazifa sessiyasi (A) | Metricool limiti aniqlandi: Free = 20 chiqqan post/kalendar oy, 1-dekabrda yangilanadi; 23–25-noy navbatidagi 12 post ERROR bo'ladi. A ishida yangi Short YASALMADI (chiqarish yo'li yo'q, navbatda 12 + BK-01…10 tayyor). vidIQ orqali YT/IG canPublish true — Shohjahon qarori kutilmoqda (backlog tepasi) | QAYTA RENDER: YO'Q |
