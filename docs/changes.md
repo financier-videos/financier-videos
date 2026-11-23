@@ -114,3 +114,4 @@ Ishlab chiqaruvchi (vazifa/chat): HAR render va HAR post oldidan `git pull --reb
 - Drafts are NOT published: vidIQ needs Shohjahon's explicit approval before vidiq_social_post_publish.
 - Blockers: Metricool brand 8198538 "account limit" (posts ERROR); Buffer Rocco YouTube 2/day + 10 queued (full).
 - 3-day results check: scheduled task trig_01CHbLDF445HyRJXjsK1DapK (25-noy 22:00 Toshkent).
+| 2026-11-23 06:25 | vidIQ | Shohjahon tasdiqladi ("Ha hammasini e'lon qil") → 20 draft publish. 17 ta YouTube'ga yuklandi (publishAt gacha private); BK-09, RC-22, RC-20 — YouTube kunlik yuklash limiti (uploadLimitExceeded), limit tiklangach qayta urinish. URL'lar vidiq_drafts.json da | QAYTA RENDER: YO'Q |

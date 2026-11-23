@@ -1,65 +1,85 @@
 {
- "note": "vidIQ YouTube drafts (Financier UC3URYtuy-f6c1fTNhesFkGA). User approved publishing all 20 on 2026-11-23; waiting for YouTube verification (vidIQ MFA) before vidiq_social_post_publish.",
+ "note": "vidIQ YouTube drafts (Financier UC3URYtuy-f6c1fTNhesFkGA). User approved publishing all 20 on 2026-11-23; waiting for YouTube verification (vidIQ MFA) before vidiq_social_post_publish. | 2026-11-23 06:2x Tashkent: approved + published; 17 uploaded, 3 hit the upload limit.",
  "drafts": [
   {
    "id": "BK-02",
    "postId": "a0e53a95-788d-489c-9dbf-dba8ba513608",
    "revision": "8fd1da01",
-   "at": "2026-11-23T16:00:00+05:00"
+   "at": "2026-11-23T16:00:00+05:00",
+   "status": "uploaded (scheduled, private until publishAt)",
+   "url": "https://www.youtube.com/watch?v=rjBqjinZUco"
   },
   {
    "id": "BK-01",
    "postId": "a6882066-3079-446b-9cd6-2849fc4ed41a",
    "revision": "796d0d91",
-   "at": "2026-11-23T19:00:00+05:00"
+   "at": "2026-11-23T19:00:00+05:00",
+   "status": "uploaded (scheduled, private until publishAt)",
+   "url": "https://www.youtube.com/watch?v=P687EJoIc_w"
   },
   {
    "id": "BK-07",
    "postId": "66c304a4-7c8a-4050-bc71-650ed09b81cc",
    "revision": "796deabd",
-   "at": "2026-11-23T22:00:00+05:00"
+   "at": "2026-11-23T22:00:00+05:00",
+   "status": "uploaded (scheduled, private until publishAt)",
+   "url": "https://www.youtube.com/watch?v=4vG5YVJ6mFI"
   },
   {
    "id": "BK-05",
    "postId": "61549a5b-727b-4142-b943-7046268d954b",
    "revision": "35c58536",
-   "at": "2026-11-24T01:00:00+05:00"
+   "at": "2026-11-24T01:00:00+05:00",
+   "status": "uploaded (scheduled, private until publishAt)",
+   "url": "https://www.youtube.com/watch?v=oQq1qagbqeM"
   },
   {
    "id": "BK-04",
    "postId": "7bbd4536-3063-4c41-8b38-478746f1dab5",
    "revision": "b0ce400e",
-   "at": "2026-11-24T04:00:00+05:00"
+   "at": "2026-11-24T04:00:00+05:00",
+   "status": "uploaded (scheduled, private until publishAt)",
+   "url": "https://www.youtube.com/watch?v=UleNYG7ReeI"
   },
   {
    "id": "BK-10",
    "postId": "64e846fd-8882-4b42-9774-2d2de310a01f",
    "revision": "5981a23e",
-   "at": "2026-11-24T07:00:00+05:00"
+   "at": "2026-11-24T07:00:00+05:00",
+   "status": "uploaded (scheduled, private until publishAt)",
+   "url": "https://www.youtube.com/watch?v=A7IU99972F8"
   },
   {
    "id": "BK-08",
    "postId": "bdb3aff1-9f02-43a6-a87e-0e49d1aec7f3",
    "revision": "a83389bc",
-   "at": "2026-11-24T13:00:00+05:00"
+   "at": "2026-11-24T13:00:00+05:00",
+   "status": "uploaded (scheduled, private until publishAt)",
+   "url": "https://www.youtube.com/watch?v=ESGQiw7twmM"
   },
   {
    "id": "BK-03",
    "postId": "c7cba303-e0a4-4f61-96e2-990de5450e2c",
    "revision": "beec9a9a",
-   "at": "2026-11-24T16:00:00+05:00"
+   "at": "2026-11-24T16:00:00+05:00",
+   "status": "uploaded (scheduled, private until publishAt)",
+   "url": "https://www.youtube.com/watch?v=hpwXnECXOek"
   },
   {
    "id": "BK-06",
    "postId": "dc4944de-c67c-4060-a926-d6dbdcbddc01",
    "revision": "ad75bd27",
-   "at": "2026-11-24T19:00:00+05:00"
+   "at": "2026-11-24T19:00:00+05:00",
+   "status": "uploaded (scheduled, private until publishAt)",
+   "url": "https://www.youtube.com/watch?v=ECJq2p4AI3s"
   },
   {
    "id": "BK-09",
    "postId": "14d6721f-4399-4be2-85a4-98b259ccafdf",
    "revision": "04fd2da7",
-   "at": "2026-11-24T22:00:00+05:00"
+   "at": "2026-11-24T22:00:00+05:00",
+   "status": "failed: YouTube daily upload limit; retry with publicationId",
+   "publicationId": "a1baa623-a511-4121-a0bf-38036040000c"
   }
  ]
 }
