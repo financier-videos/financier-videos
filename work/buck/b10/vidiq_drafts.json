@@ -78,8 +78,9 @@
    "postId": "14d6721f-4399-4be2-85a4-98b259ccafdf",
    "revision": "04fd2da7",
    "at": "2026-11-24T22:00:00+05:00",
-   "status": "failed: YouTube daily upload limit; retry with publicationId",
-   "publicationId": "a1baa623-a511-4121-a0bf-38036040000c"
+   "status": "uploaded 2026-11-24 retry (scheduled, private until publishAt)",
+   "publicationId": "a1baa623-a511-4121-a0bf-38036040000c",
+   "url": "https://www.youtube.com/watch?v=hMkMna0dCr8"
   }
  ]
 }
