@@ -44,33 +44,30 @@
   {
    "id": "rc17",
    "postId": "e375f28b-08b6-450b-985d-92fa79bd6367",
-   "revision": "62ca59a1",
+   "revision": "650d25a3",
    "planned": "2026-11-24T08:30+05:00",
-   "status": "uploaded (scheduled, private until publishAt)",
-   "url": "https://www.youtube.com/watch?v=3FeX2FB_36g"
+   "status": "CANCELLED 2026-11-24 (Shohjahon: Rocco 3D natija 0) - private, no publish time"
   },
   {
    "id": "rc18",
    "postId": "9f6827d0-3582-477c-a2cf-f57a22dae72a",
-   "revision": "6f43682c",
+   "revision": "1b18db6d",
    "planned": "2026-11-24T14:30+05:00",
-   "status": "uploaded (scheduled, private until publishAt)",
-   "url": "https://www.youtube.com/watch?v=2AJPhURK0YI"
+   "status": "CANCELLED 2026-11-24 (Shohjahon: Rocco 3D natija 0) - private, no publish time"
   },
   {
    "id": "rc19",
    "postId": "37c77176-0429-415b-abb4-e5aac792808f",
-   "revision": "99692ee1",
+   "revision": "b9cf7ae5",
    "planned": "2026-11-24T17:30+05:00",
-   "status": "uploaded (scheduled, private until publishAt)",
-   "url": "https://www.youtube.com/watch?v=TGBJtK1KUQ8"
+   "status": "CANCELLED 2026-11-24 (Shohjahon: Rocco 3D natija 0) - private, no publish time"
   },
   {
    "id": "rc22",
    "postId": "756cb746-ea2d-4a07-9ec4-2b0166a5081a",
    "revision": "572c3fca",
    "planned": "2026-11-24T20:30+05:00",
-   "status": "failed: YouTube daily upload limit; retry with publicationId",
+   "status": "NOT PUBLISHED - held (Rocco pivot)",
    "publicationId": "94fdd315-4b15-4df6-a9ae-2bd18894f9ea"
   },
   {
@@ -78,7 +75,7 @@
    "postId": "a7945582-70a1-41a7-97c6-d7e6ac0fd0a8",
    "revision": "cb95e7e6",
    "planned": "2026-11-24T23:30+05:00",
-   "status": "failed: YouTube daily upload limit; retry with publicationId",
+   "status": "NOT PUBLISHED - held (Rocco pivot)",
    "publicationId": "9c228f78-eb11-4b8f-adae-1ae16695e804"
   }
  ],
