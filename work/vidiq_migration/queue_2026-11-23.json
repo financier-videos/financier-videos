@@ -8,8 +8,8 @@
    "name": "nickel",
    "vidiq_uploadId": "1fda7d80-abcd-4bdf-bdb0-4638bbd235d6",
    "yt_postId": "af1640a1-721c-43da-bd58-41d0e822885c",
-   "yt_publicationId": "5dff7d62-8172-4f28-a77b-6aaaffb019cc",
-   "yt_status": "failed x3: 04:35 UTC uploadLimitExceeded; 09:00 UTC cooldown; 10:20 UTC uploadLimitExceeded. Sabab: 23-noy 01:17-01:18 UTC da vidIQ orqali 10 ta Financier video ketma-ket yuklangan (9 completed) - 24 soatlik oyna ~24-noy 01:20 UTC da ochiladi; undan oldin urinma",
+   "yt_publicationId": "8deaf69e-1e93-4be5-98f2-4a3a00c2c1ee",
+   "yt_status": "SCHEDULED 2026-11-24 07:00 ET (uploaded 04:3x UTC 24-noy, new publicationId 8deaf69e-1e93-4be5-98f2-4a3a00c2c1ee) https://www.youtube.com/watch?v=jpwXC6-XGiM",
    "ig_caption": "Should the nickel go next?\n\nA nickel costs 13.78 cents to make. A dime 5.76. A quarter 14.68. The penny cost 3.69, and the last circulating one was struck in Nov 2025.\n\nSource: U.S. Mint 2024 Annual Report (fiscal 2024); St. Louis Fed.\nFootage: Pexels. Not financial advice. Buck is our original character.\n\nSend this to the friend who still saves pennies.\n\n#moneyfacts #coins #penny #didyouknow #money",
    "ig_status": "PUBLISHED 2026-11-23 10:27 UTC https://www.instagram.com/reel/DgFJuwHAOMh/ (mediaId 17969046824980158, isAiGenerated true)",
    "old_metricool_ig_id": 437269599
@@ -23,7 +23,8 @@
    "yt_status": "draft (not yet published)",
    "ig_caption": "Which bill do you hold onto longest?\n\nThe $10 wears out first: about 5.7 years. The $1 lasts about 7.2 years. The $100 about 24, because it mostly sits in drawers. And it's not paper: 75% cotton, 25% linen.\n\nSource: Federal Reserve lifespan estimates; Bureau of Engraving and Printing.\nFootage: Pexels. Not financial advice. Buck is our original character.\n\nSend this to someone who still keeps cash in a drawer.\n\n#moneyfacts #dollar #cash #didyouknow #money",
    "ig_status": "PUBLISHED 2026-11-23 18:33 UTC https://www.instagram.com/reel/DgGAzVeE_An/ (mediaId 17995044747100267, isAiGenerated true)",
-   "old_metricool_ig_id": 437285230
+   "old_metricool_ig_id": 437285230,
+   "plan": "upload >=06:40 UTC 24-noy, publishAt 24-noy 10:00 ET"
   },
   {
    "slot_et": "2026-11-24T07:00-05:00",
@@ -34,7 +35,8 @@
    "yt_status": "draft (not yet published)",
    "ig_caption": "Which fee got you last? 😅\n\nThe bank is made up. The numbers are real U.S. averages: ATM $4.86 · overdraft ~$27 · monthly fee $15.65.\n\nSource: Bankrate Checking Account and ATM Fee Study (Sep 2025).\nFootage: Pexels. Not financial advice. Buck is our original character.\n\nSend this to someone who just paid an ATM fee.\n\n#bankfees #moneyfacts #funny #money #comedy",
    "ig_status": "todo",
-   "old_metricool_ig_id": 437506000
+   "old_metricool_ig_id": 437506000,
+   "plan": "upload >=08:40 UTC 24-noy, publishAt 24-noy 13:00 ET (navbat 1 slot surildi: nickel/ten_bill avval)"
   },
   {
    "slot_et": "2026-11-24T10:00-05:00",
