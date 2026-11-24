@@ -68,3 +68,20 @@ Qolganlar o'zgarmagan/minimal (+0..+43). Jami (videolar yig'indisi): **7,263** (
 Rocco YouTube: Penny Plays Dumb 1,109 (+168), Free GTA 6 1,167 (+452); bugungi 3 (01:17 UTC burst bilan yuklangan, 12:30/14:31/15:30 UTC chiqqan) — 4 / 1 / 1 ko'rish (!). Jami 2,282; obunachi 6 (+1).
 Instagram (16–23-noy, 7 kun): financier424 — 38 follower (kecha 43, −5), 2,299 views, reach 1,837; redfrocco — 12 follower, 2,949 views, reach 2,184. finansist424 — ulanmagan.
 XULOSA: (1) Bugungi 3 Financier BK Short sekin start (160/79/41) — kechagi trend videolar 6 soatda ~960 edi; Rocco bugungi 3 Short deyarli 0. Umumiy omil: hammasi 23-noy 01:17 UTC da 10+9 ketma-ket yuklangan (burst) va keyin kanal uploadLimitExceeded. Gipoteza (isbot emas): burst yuklash tavsiyani susaytirdi. Metricool 2026 ma'lumoti: haftasiga >7 post oylik ko'rishni pasaytiradi (metricool.com/youtube-trends). (2) GTA 4.7x 24 soatdan keyin ham o'smoqda (+333) — trend+raqam ishlaydi. (3) Raqamsiz Airport 381 — raqamlilardan past, gipoteza saqlanadi.
+
+## 2026-11-24 23:30 Toshkent (18:30 UTC) — C ishi, vidiq_user_videos (Financier 5 + Rocco 5 kredit)
+| chiqqan (UTC) | video | ko'rish 23-noy 18:25 | ko'rish 24-noy 18:20 | farq |
+|---|---|---|---|---|
+| 11-22 12:04 | 13 Years Later, GTA Made 4.7x More | 1,297 | 1,300 | +3 (to'xtagan) |
+| 11-22 15:06 | Airport Prices Have a Legal Limit | 381 | 387 | +6 |
+| 11-23 11:00 | I Tried to Spend Elon Musk's $869 Billion (BK, burst) | 160 | **295** (31 soat) | +135 |
+| 11-23 14:00 | $40 Trillion in $100 Bills… (BK, burst) | 79 | 124 (28 soat) | +45 |
+| 11-23 17:00 | Who Makes the Most Money Per Second? (BK, burst) | 41 | 157 (25 soat) | +116 |
+| 11-24 12:00 | A Nickel Costs 13.78 Cents to Make (vidIQ, oraliqli) | — | 31 (6 soat) | yangi |
+| 11-24 15:00 | The $10 Bill Dies First: 5.7 Years | — | 88 (3 soat) | yangi |
+| 11-24 17:00 | The Last Penny Cost 3.69 Cents (BK-09) | — | 24 (1 soat) | yangi |
+| 11-24 18:00 | The Bank Charged Me $4.86… (bank_fees) | — | 7 (20 daq) | yangi |
+Qolganlar +0..+31. Jami (videolar yig'indisi): **7,728** (+465 kechagi 7,263 dan). Obunachi: 4 (0). vidiq_user_channels viewCount 7,732 (bugun mos).
+Rocco YouTube: "Hi Mom" Text Scam 834 (4 soat!), Scam or Legit? P1#1 50 (1.3 soat), Free GTA 6 1,313 (+146), Penny Plays Dumb 1,285 (+176); 23-noy burst 3 tasi 5/1/1 (o'smadi), "She Won a Free TV" 0. Jami 2,579 (+297); obunachi 12 (+6).
+Instagram (17–24-noy, 7 kun): financier424 — 40 follower (+2), 2,582 views, reach 2,009; redfrocco — 12 follower, 3,102 views, reach 2,213. finansist424 — ulanmagan. IG bank_fees Reel chiqdi: https://www.instagram.com/reel/DgIlW-Aicj_/ (vidIQ, AI belgisi).
+XULOSA: (1) Burst gipotezasi QISMAN tasdiqlandi: 23-noy burst videolari 24 soatda 124–295 (22-noy trend videolari ~960–1,300); Rocco burst 3 tasi 24 soatda ham 1–5 — burst bilan yuklangan Rocco videolari "o'lik". Bugungi oraliqli Rocco "Hi Mom" 4 soatda 834 → oraliq qoidasi ishlaydi. (2) Financier bugungi 4 video (tanga/pul qog'oz mavzulari, trendsiz) sekin: 6 soatda 31 — mavzu trendsiz va raqam kichik ("13.78 cents"). Trend+katta raqam ($ billion/trillion) 22-noy 1,100–1,300 bilan solishtirganda 10x past → ertaga navbatdagi qoralamalar oldidan 1 trend Short (Thanksgiving: AAA 81.5M, aviachipta $800) birinchi.

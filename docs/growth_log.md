@@ -122,3 +122,9 @@ O'RGANILDI: kunlik o'sish +894 (kecha +4,491). Bugun chiqqan 6 video (Financier 
 O'ZGARTIRILDI: backlog tepasi — burst taqiq qoidasi (kanalga kuniga ≤3–4, oraliq ≥2 soat, ikki kanal bir paytda emas) va 24-noy o'lchovi. IG ten_bill Reel slotida chiqarildi.
 O'LCHOV: 24-noy C — 6 "burst" videoning 24 soatlik ko'rishi vs 22-noy videolari; vidIQ YT navbatidan ≥2 soat oraliq bilan chiqqanlar (nickel, ten_bill) 24 soatda ≥300 mi.
 KECHA vs BUGUN: kecha 3 video 6 soatda 960–1,274 edi, bugun eng yaxshisi 7.5 soatda 160 — YOMONLASHDI. Sabab taxmini yuqorida; ertangi tuzatish: navbat oraliq bilan, Financier trend mavzusi (raqamli sarlavha) birinchi.
+
+### 2026-11-24 23:35 Toshkent — C ishi (vazifa sessiyasi)
+O'RGANILDI: kunlik o'sish +465 (kecha +894). 23-noy burst videolari 24+ soatda: Financier 295/124/157, Rocco 5/1/1 (o'smadi). Bugun oraliq bilan yuklangan Rocco "Hi Mom" 4 soatda 834 — burst gipotezasi Rocco'da kuchli tasdiqlandi. Financier bugungi 4 video (nickel 31/6 soat, $10 bill 88/3 soat, penny 24, bank_fees 7) — trendsiz, kichik raqamli mavzular: 22-noy trend+milliard videolaridan ~10x sekin.
+O'ZGARTIRILDI: script_bank SHOSHILINCH U-3 (AAA 81.5M Thanksgiving, aviachipta $800) va U-4 (benzin rekordi — faqat tasdiqlansa); backlog — "kunda kamida 1 trend/katta raqam Short navbat boshida" bandi. IG Reel'ni YouTube havolasidan chiqarish (vidiq_video_upload'siz) ishladi.
+O'LCHOV: 25-noy C — print_100/buck_1748/cancel_sub (trendsiz) vs U-3 (trend) 24 soatlik ko'rish; Rocco "Hi Mom" 24 soatda ≥1,000 mi.
+KECHA vs BUGUN: kecha eng yaxshi yangi video 7.5 soatda 160, bugun Financier eng yaxshisi 3 soatda 88 (taxminan teng temp), Rocco 4 soatda 834 (kechagi 1–4 dan ~200x) — Rocco YAXSHILANDI, Financier o'zgarmadi. Sabab: Financier navbatida trend mavzu yo'q; tuzatish — U-3 navbat boshiga.
