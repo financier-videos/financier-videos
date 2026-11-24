@@ -271,3 +271,28 @@ Rocco: `rc04c.json` bor, video hali yo'q — render qilingach varaq bilan.
 
 ## BUYURTMA 9 — ROCCO 3D MULTFILM (2026-11-22, chat → kod)
 To'liq matn: `docs/rocco_3d_cast.md`. Qisqasi: buck-private/rocco_cast_v1 dagi rig qilingan Rocco/Penny/Slick'dan GPU'da sprite kutubxonasi → rc_render `style: rocco3d` → RC-04 birinchi 3D epizod → varaq chatga.
+
+### JARAYON (vazifa sessiyasi, 2026-11-23 09:20–09:40 Toshkent, A ishi)
+- ElevenLabs 200 (38,040 / 131,000 belgi ishlatilgan). Metricool getScheduledPosts: 22-noy 13:00 ET BF vs CM (437309502/437309531) ERROR "account limit"; PENDING 12 post (23-noy 07:00 nickel, 13:00 $10 bill; 24-noy 07:00 bank fees, 10:00 $100 print, 13:00 buck 1748; 25-noy 07:00 subscription, 10:00 junk drawer — YT+IG). S-13 (23-noy 21:00 ET, 437456019) ro'yxatda yo'q.
+- Limit: Metricool Free — 20 chiqqan post/kalendar oy, 1-dekabrda yangilanadi → yuqoridagi 12 post ham ERROR bo'lishi kutiladi.
+- QILINMADI: yangi Financier Short (A ishi) — sabab: chiqarish yo'li yo'q; Shohjahon qarori (Metricool tarifi yoki vidIQ orqali YouTube) kelgach keyingi ishga tushishda. Trend: yangi kuchli mavzu yo'q (Black Friday 27-noy, Cyber Monday 30-noy — Adobe prognozi allaqachon bankda).
+
+## BUYURTMA 10 — YOUTUBE vidIQ ORQALI (Shohjahon 2026-11-23 ~09:45 Toshkent: "vidIQ orqali chiqarishga ruxsat beraman") — HOLAT: OCHIQ
+Sabab: Metricool Free limiti (20 chiqqan post/oy) tugagan, 1-dekabrgacha Metricool orqali hech narsa chiqmaydi. Financier YouTube endi vidIQ (vidiq_social_post_*; kanal UC3URYtuy-f6c1fTNhesFkGA, canPublish true) orqali.
+Metricool'dagi 7 ta PENDING YT posti vidIQ qoralamasiga ko'chirildi (o'sha video — Metricool static URL'dan vidiq_video_upload; o'sha sarlavha, matn, teglar, vaqt; public):
+| slot ET | video | vidIQ postId | publicationId |
+|---|---|---|---|
+| 23-noy 07:00 | A Nickel Costs 13.78 Cents | af1640a1-721c-43da-bd58-41d0e822885c | 5dff7d62-8172-4f28-a77b-6aaaffb019cc (1-urinish FAILED: uploadLimitExceeded) |
+| 23-noy 13:00 | The $10 Bill Dies First | d6ad3635-85c5-421b-8873-266b5bc4c432 (rev 2ed44b4a) | d358b6aa-2f38-4cb4-94ec-c29f3aa8ea74 |
+| 24-noy 07:00 | Bank Charged Me $4.86 | 945db7c1-aa71-4b9c-ae7c-f6dece740f5b (rev a4d7050a) | f429ef7b-77fb-415e-b028-cfb7c1f6bf2e |
+| 24-noy 10:00 | 11.3 Cents to Print a $100 | f075a22f-0d5d-43a1-8865-ea4ae41eac0e (rev 1c453622) | aa719985-fdd6-455e-bb9b-b762e00a97e0 |
+| 24-noy 13:00 | 1748: Why Dollar Is a Buck | 5d2ea26c-315b-4f37-bb38-5f796363fc17 (rev 7cbc1955) | b1c7e693-9c7b-4cf7-bb91-708226ed577b |
+| 25-noy 07:00 | Cancel a $21 Subscription | 1869da50-fb52-4b27-a1ae-cb5df2197fe8 (rev 17eb49f5) | 7d743d2a-8c46-4b7a-8291-68bfc2cda246 |
+| 25-noy 10:00 | $27 Billion in Junk Drawers | b32ab8ad-3c8c-4a16-8542-085e3b46e644 (rev 374c1770) | 342a17a7-2e52-4944-bb9d-d19ddf2cff27 |
+MUAMMO: 1-publish "YouTube's daily upload limit for this channel was reached (uploadLimitExceeded)" — YouTube API kunlik yuklash limiti (taxminan Tinch okeani vaqti yarim tunida, ~08:00 UTC yangilanadi). Rejalashtirilgan video ham YUKLANGAN paytda limitni sarflaydi.
+KEYINGI ISHGA TUSHISHDA (≥08:00 UTC): vidiq_social_post_publish — avval nickel (postId af1640a1…, publicationIds [5dff7d62…], 07:00 ET slot o'tib ketgan bo'lsa draft_update bilan eng yaqin bo'sh vaqtga), keyin 23-noy 13:00, so'ng qolganlari vaqt tartibida; har biridan keyin vidiq_social_post_status. Limitga yana ursa — to'xta, qolganini keyingi kunga. Kuniga ko'pi bilan ~3–4 yuklash deb reja qil.
+INSTAGRAM financier424: vidiq_social_post IG uchun AI belgisi yo'q → IG Reel'lar vidiq_instagram_publish_reel (isAiGenerated true) bilan slot vaqtida qo'lda chiqariladi (Metricool IG postlari ham ERROR bo'ladi).
+Metricool'dagi eski 12 PENDING post o'chirilmadi (oy limiti tufayli baribir ERROR bo'ladi, 1-dekabrdan oldingi sanalar).
+- 2026-11-23 ~09:55 Toshkent, Shohjahon: "Metricool'dagi hammasini vidIQ ga o'tkazib, vidIQ da ishla bundan keyin". 7 ta YT qoralamasi + 7 ta IG captioni (Metricool'dagi IG matnlari) `work/vidiq_migration/queue_2026-11-23.json` da — har ishga tushishda shu navbatni bajar va yt_status/ig_status ni yangilab push qil. producer_task, run_checklist, START_HERE, instagram.md ga "POST FAQAT vidIQ ORQALI" qo'shildi. Metricool'dagi eski PENDING postlar o'chirilmadi (oy limiti tufayli ERROR bo'ladi; Metricool MCP'da o'chirish vositasi yo'q).
+
+- 2026-11-23 10:20 UTC (vazifa): nickel YT 3-urinish yana uploadLimitExceeded. SABAB ANIQLANDI: vidiq_social_post_list — 23-noy 01:17–01:18 UTC da Financier kanaliga vidIQ orqali 10 ta video ketma-ket yuklangan (9 completed, 1 failed "final penny"); YouTube limiti shu yuklashlar bilan to'lgan va oyna 24 soatlik bo'lsa ~24-noy 01:20 UTC (06:20 Toshkent) da ochiladi. KEYINGI URINISH: ≥24-noy 01:30 UTC, avval nickel, keyin ten_bill; kuniga ko'pi bilan 3–4; bir vaqtda ketma-ket 10 ta YUKLAMA. IG nickel chiqdi: https://www.instagram.com/reel/DgFJuwHAOMh/

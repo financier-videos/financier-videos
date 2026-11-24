@@ -116,3 +116,9 @@ O'RGANILDI: 24 soatda kanal 1,878 → 6,369 (+4,491). Yangi v6.14+ uslub (fullbl
 O'ZGARTIRILDI: script_bank — 4 ta IKKI BARAVAR davomi (G-1, H-1, H-2; G-2 Rocco'ga) va 2 SHOSHILINCH (Farm Bureau $58.63; Rocco bot-izohlar); backlog — Metricool limiti zaxira yo'li (vidIQ social_post yoki Buffer 3-kanal) bandi.
 O'LCHOV: 23-noy C — G-1/H-1 davomlari 24 soatda ≥1,000 mi; Metricool post ERROR soni (maqsad 0).
 KECHA vs BUGUN: kecha eng yaxshi kunlik start 146 (3.5 soat), bugun 964 (6 soat, GTA 4.7x) — ~6x. Kadr tempi kecha 3–7 s/kesim, bugungi videolarda 1.5–1.9 s. Yomonlashgan: 1 video chiqmadi (Metricool limit).
+
+### 2026-11-23 23:40 Toshkent — C ishi (vazifa sessiyasi)
+O'RGANILDI: kunlik o'sish +894 (kecha +4,491). Bugun chiqqan 6 video (Financier BK 3: 160/79/41; Rocco 3: 4/1/1) — hammasi 23-noy 01:17 UTC dagi 19 ta ketma-ket vidIQ yuklashdan. Kechagi trend+raqam videolari o'sishda davom etdi (GTA 4.7x +333 → 1,297). Gipoteza: burst yuklash + uploadLimitExceeded tavsiyani susaytirdi (isbot emas; Metricool 2026: haftasiga >7 post oylik ko'rishni pasaytiradi).
+O'ZGARTIRILDI: backlog tepasi — burst taqiq qoidasi (kanalga kuniga ≤3–4, oraliq ≥2 soat, ikki kanal bir paytda emas) va 24-noy o'lchovi. IG ten_bill Reel slotida chiqarildi.
+O'LCHOV: 24-noy C — 6 "burst" videoning 24 soatlik ko'rishi vs 22-noy videolari; vidIQ YT navbatidan ≥2 soat oraliq bilan chiqqanlar (nickel, ten_bill) 24 soatda ≥300 mi.
+KECHA vs BUGUN: kecha 3 video 6 soatda 960–1,274 edi, bugun eng yaxshisi 7.5 soatda 160 — YOMONLASHDI. Sabab taxmini yuqorida; ertangi tuzatish: navbat oraliq bilan, Financier trend mavzusi (raqamli sarlavha) birinchi.
