@@ -1,0 +1,10 @@
+{"title":"SCAM OR LEGIT?","sub":"3 texts. Only 1 is real.","end_sub":"Did you get #2?","brand":"RED FLAG ROCCO",
+ "hook":"hook","end":"end",
+ "rounds":[
+  {"q":"r1q","a":"r1a","sender":"+1 (727) 555-0119","verdict":"scam","tell":"tollpay-center-us.com",
+   "msgs":["FINAL NOTICE: You have an unpaid toll balance of $6.99. Pay by 11:59 PM to avoid a $50 late fee: tollpay-center-us.com"]},
+  {"q":"r2q","a":"r2a","sender":"+1 (646) 555-0183","verdict":"scam","tell":"Hi Jessica",
+   "msgs":["Hi Jessica, are we still on for golf this Saturday?"]},
+  {"q":"r3q","a":"r3a","sender":"Pharmacy","verdict":"real","tell":"ready for pickup",
+   "msgs":["Your prescription is ready for pickup. Questions? Call the pharmacy. Reply STOP to opt out."]}
+ ]}

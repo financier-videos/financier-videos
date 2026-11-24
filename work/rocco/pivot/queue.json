@@ -1,9 +1,65 @@
-{"note":"Rocco pivot posting queue (vidIQ). YouTube: vidiq_social_post_publish(postId, revision) only after the channel upload limit reopens (>= 2026-11-24 01:20 UTC); if publishAt passed, draft_update to next free time. IG: vidiq_instagram_publish_reel(platformAccountId 29264618826539059, videoUrl from vidiq_video_upload(uploadId), isAiGenerated true), >=4 h after previous Rocco post. Update status + push.",
- "items":[
-  {"name":"P1 scam_or_legit_01","file":"rocco_p1_scam_or_legit_01.mp4","uploadId":"8472db84-53fd-4509-935e-fdd0452cbbb6",
-   "ig":"PUBLISHED 2026-11-23 ~21:55 UTC https://www.instagram.com/reel/DgGVfjCmKUT/",
-   "yt":{"postId":"fa28a9a6-51b4-4b0b-8c44-24ed9abad1db","revision":"4e67bb8c","publishAt":"2026-11-24T17:00:00Z","status":"draft"}},
-  {"name":"B1 poyais_fake_country","file":"rocco_b1_poyais_fake_country.mp4","uploadId":"0a868995-b3c7-4ea6-8d7b-4e64a0ed9a91",
-   "ig":"todo (caption: hook line + 'AI-generated illustrations' + sources, see yt text)",
-   "yt":{"postId":"c1141742-61dc-4ab9-b296-4c3110215b3a","revision":"bb81d181","publishAt":"2026-11-24T23:00:00Z","status":"draft"}}
- ]}
+{
+ "note": "Rocco pivot posting queue (vidIQ). YouTube: vidiq_social_post_publish(postId, revision) only after the channel upload limit reopens (>= 2026-11-24 01:20 UTC); if publishAt passed, draft_update to next free time. IG: vidiq_instagram_publish_reel(platformAccountId 29264618826539059, videoUrl from vidiq_video_upload(uploadId), isAiGenerated true), >=4 h after previous Rocco post. Update status + push.",
+ "items": [
+  {
+   "name": "P1 scam_or_legit_01",
+   "file": "rocco_p1_scam_or_legit_01.mp4",
+   "uploadId": "8472db84-53fd-4509-935e-fdd0452cbbb6",
+   "ig": "PUBLISHED 2026-11-23 ~21:55 UTC https://www.instagram.com/reel/DgGVfjCmKUT/",
+   "yt": {
+    "postId": "fa28a9a6-51b4-4b0b-8c44-24ed9abad1db",
+    "revision": "4e67bb8c",
+    "publishAt": "2026-11-24T17:00:00Z",
+    "status": "draft"
+   }
+  },
+  {
+   "name": "B1 poyais_fake_country",
+   "file": "rocco_b1_poyais_fake_country.mp4",
+   "uploadId": "0a868995-b3c7-4ea6-8d7b-4e64a0ed9a91",
+   "ig": "todo (caption: hook line + 'AI-generated illustrations' + sources, see yt text)",
+   "yt": {
+    "postId": "c1141742-61dc-4ab9-b296-4c3110215b3a",
+    "revision": "bb81d181",
+    "publishAt": "2026-11-24T23:00:00Z",
+    "status": "draft"
+   }
+  },
+  {
+   "name": "D1 package_text_confession",
+   "file": "rocco_d1_package_text_confession.mp4",
+   "uploadId": "8c568131-e10e-41aa-93af-9a3369ccf537",
+   "by": "session 01MWGZtb7",
+   "yt": {
+    "postId": "50a90e1a-cb74-4e2b-8e60-7811bf1f3870",
+    "revision": "4a39aeb7",
+    "publishAt": "2026-11-24T12:30:00Z",
+    "status": "draft (awaiting Shohjahon approval)"
+   }
+  },
+  {
+   "name": "A1 gift_card_rack",
+   "file": "rocco_a1_gift_card_rack.mp4",
+   "uploadId": "05e76fbe-2ff6-40f7-a26d-837a8119609d",
+   "by": "session 01MWGZtb7",
+   "yt": {
+    "postId": "51db1e26-97a4-40f0-9a99-1e47150045d3",
+    "revision": "6ae6356c",
+    "publishAt": "2026-11-25T08:00:00Z",
+    "status": "draft (awaiting Shohjahon approval)"
+   }
+  },
+  {
+   "name": "P1 scam_or_legit_02",
+   "file": "rocco_p1_scam_or_legit_02.mp4",
+   "uploadId": "b81b4804-f643-4bf6-9279-125a70ae922a",
+   "by": "session 01MWGZtb7",
+   "yt": {
+    "postId": "3357a630-86fa-4f8b-b46b-ccdd6f50993d",
+    "revision": "3a8aceb4",
+    "publishAt": "2026-11-26T08:00:00Z",
+    "status": "draft (awaiting Shohjahon approval)"
+   }
+  }
+ ]
+}
