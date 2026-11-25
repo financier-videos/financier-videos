@@ -1,12 +1,11 @@
 {
  "BK-11": {
   "file": "buck_bk11_billion_min_wage.mp4",
-  "uploadId": "53a807f6-df77-476d-85e0-aab8c46e1c91",
+  "uploadId": "7cf62007-6a12-4734-a9c2-d3cf5bb6ca16",
   "postId": "af1141d9-63c9-490a-9f15-acc2dea8e39f",
-  "revision": "73f5e3c4",
+  "revision": "60240a0d",
   "publishAt": "2026-11-28T14:00:00Z",
-  "status": "uploaded, public at 28-noy 19:00 Tashkent",
-  "template": "Time Ladder (growth_research_2026-11-25)",
-  "url": "https://www.youtube.com/watch?v=Mj7LU_swigY"
+  "status": "re-rendered with varied footage; old upload Mj7LU_swigY cancelled (private); re-publish 26-noy 04:00Z (send_later)",
+  "template": "Time Ladder (growth_research_2026-11-25)"
  }
 }

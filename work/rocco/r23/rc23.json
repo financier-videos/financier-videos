@@ -147,12 +147,12 @@
    "line": 0,
    "from": 0,
    "kind": "call",
-   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "bright": 1.35,
    "r_peek": true,
    "s": "sly",
    "r": "smug",
-   "bg2": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bg2": "/home/user/financier-videos/assets/toon2d/slick_van.jpg",
    "bright2": 1.35,
    "hook": "PENNY PLAYS DUMB: PART 2",
    "caller": "CALLER: \"DELIVERY CO.\"",
@@ -160,7 +160,7 @@
   },
   {
    "kind": "cu_p",
-   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "p": "shock",
    "r": "sideeye",
    "cam": {
@@ -178,7 +178,7 @@
    "line": 0,
    "from": 0.55,
    "kind": "slick",
-   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/slick_van.jpg",
    "bright": 1.35,
    "r_peek": true,
    "s": "sly",
@@ -190,14 +190,14 @@
    "line": 1,
    "from": 0,
    "kind": "cu_p",
-   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "blur": 1,
    "p": "shock",
    "r": "sideeye"
   },
   {
    "kind": "two",
-   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "p": "shock",
    "r": "sideeye",
    "cam": {
@@ -214,7 +214,7 @@
    "line": 2,
    "from": 0,
    "kind": "slick",
-   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/slick_van.jpg",
    "bright": 1.35,
    "r_peek": true,
    "s": "angry",
@@ -222,7 +222,7 @@
   },
   {
    "kind": "cu_p",
-   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "p": "shock",
    "r": "sideeye",
    "cam": {
@@ -240,7 +240,7 @@
    "line": 3,
    "from": 0,
    "kind": "cu_r",
-   "bg": "/tmp/fin/bg/rc3/fireplace.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/hallway_package.jpg",
    "blur": 1,
    "r": "sideeye"
   },
@@ -248,7 +248,7 @@
    "line": 4,
    "from": 0,
    "kind": "slick",
-   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/slick_van.jpg",
    "bright": 1.35,
    "r_peek": true,
    "s": "panic",
@@ -256,7 +256,7 @@
   },
   {
    "kind": "cu_p",
-   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "p": "shock",
    "r": "sideeye",
    "cam": {
@@ -272,7 +272,7 @@
   },
   {
    "kind": "cu_r",
-   "bg": "/tmp/fin/bg/rc3/fireplace.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/hallway_package.jpg",
    "r": "sideeye",
    "cam": {
     "z": 1.3,
@@ -289,14 +289,14 @@
    "line": 5,
    "from": 0,
    "kind": "cu_p",
-   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "blur": 1,
    "p": "happy",
    "r": "sideeye"
   },
   {
    "kind": "two",
-   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "p": "happy",
    "r": "sideeye",
    "cam": {
@@ -311,7 +311,7 @@
   },
   {
    "kind": "two",
-   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "p": "happy",
    "r": "sideeye",
    "cam": {
@@ -328,7 +328,7 @@
    "line": 6,
    "from": 0,
    "kind": "slick",
-   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/slick_van.jpg",
    "bright": 1.35,
    "r_peek": true,
    "s": "sly",
@@ -338,14 +338,14 @@
    "line": 7,
    "from": 0,
    "kind": "cu_p",
-   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "blur": 1,
    "p": "shock",
    "r": "sideeye"
   },
   {
    "kind": "two",
-   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "p": "shock",
    "r": "sideeye",
    "cam": {
@@ -362,7 +362,7 @@
    "line": 8,
    "from": 0,
    "kind": "slick",
-   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/slick_van.jpg",
    "bright": 1.35,
    "r_peek": true,
    "s": "angry",
@@ -370,7 +370,7 @@
   },
   {
    "kind": "cu_p",
-   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "p": "shock",
    "r": "sideeye",
    "cam": {
@@ -388,14 +388,14 @@
    "line": 9,
    "from": 0,
    "kind": "cu_p",
-   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "blur": 1,
    "p": "happy",
    "r": "sideeye"
   },
   {
    "kind": "two",
-   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "p": "happy",
    "r": "sideeye",
    "cam": {
@@ -410,7 +410,7 @@
   },
   {
    "kind": "two",
-   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "p": "happy",
    "r": "sideeye",
    "cam": {
@@ -425,7 +425,7 @@
   },
   {
    "kind": "two",
-   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "p": "happy",
    "r": "sideeye",
    "cam": {
@@ -442,7 +442,7 @@
    "line": 10,
    "from": 0,
    "kind": "slick",
-   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/slick_van.jpg",
    "bright": 1.35,
    "r_peek": true,
    "s": "panic",
@@ -450,7 +450,7 @@
   },
   {
    "kind": "cu_p",
-   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "p": "shock",
    "r": "sideeye",
    "cam": {
@@ -468,14 +468,14 @@
    "line": 11,
    "from": 0,
    "kind": "cu_p",
-   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "blur": 1,
    "p": "happy",
    "r": "sideeye"
   },
   {
    "kind": "two",
-   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "p": "happy",
    "r": "sideeye",
    "cam": {
@@ -492,13 +492,13 @@
    "line": 12,
    "from": 0,
    "kind": "cu_r",
-   "bg": "/tmp/fin/bg/rc3/fireplace.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/hallway_package.jpg",
    "blur": 1,
    "r": "sideeye"
   },
   {
    "kind": "two",
-   "bg": "/tmp/fin/bg/rc3/fireplace.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/hallway_package.jpg",
    "p": "happy",
    "r": "sideeye",
    "cam": {
@@ -515,7 +515,7 @@
    "line": 13,
    "from": 0,
    "kind": "slick",
-   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/slick_van.jpg",
    "bright": 1.35,
    "r_peek": true,
    "s": "panic",
@@ -523,7 +523,7 @@
   },
   {
    "kind": "cu_p",
-   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "p": "shock",
    "r": "sideeye",
    "cam": {
@@ -541,14 +541,14 @@
    "line": 14,
    "from": 0,
    "kind": "cu_p",
-   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "blur": 1,
    "p": "happy",
    "r": "sideeye"
   },
   {
    "kind": "two",
-   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "p": "happy",
    "r": "sideeye",
    "cam": {
@@ -565,7 +565,7 @@
    "line": 15,
    "from": 0,
    "kind": "slick",
-   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/slick_van.jpg",
    "bright": 1.35,
    "r_peek": true,
    "s": "sly",
@@ -575,13 +575,13 @@
    "line": 16,
    "from": 0,
    "kind": "cu_r",
-   "bg": "/tmp/fin/bg/rc3/fireplace.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/hallway_package.jpg",
    "blur": 1,
    "r": "sideeye"
   },
   {
    "kind": "two",
-   "bg": "/tmp/fin/bg/rc3/fireplace.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/hallway_package.jpg",
    "p": "happy",
    "r": "sideeye",
    "cam": {
@@ -596,7 +596,7 @@
   },
   {
    "kind": "cu_p",
-   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "p": "shock",
    "r": "sly",
    "cam": {
@@ -612,7 +612,7 @@
   },
   {
    "kind": "two",
-   "bg": "/tmp/fin/bg/rc3/fireplace.mp4",
+   "bg": "/home/user/financier-videos/assets/toon2d/hallway_package.jpg",
    "p": "happy",
    "r": "sideeye",
    "cam": {
