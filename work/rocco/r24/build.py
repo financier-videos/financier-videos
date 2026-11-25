@@ -1,5 +1,7 @@
 import json
 B="/tmp/fin/bg/rc3/"
+A="/home/user/financier-videos/assets/toon2d/"
+SET={'P':A+'penny_kitchen.jpg','S':A+'slick_refunds.jpg','R':A+'rocco_study.jpg'}
 lines=[
  ["S","[sly] [fake friendly] Hi! You were overcharged. I'm refunding you two hundred dollars!"],
  ["P","[happy] Ooh, yay!"],
@@ -19,13 +21,13 @@ shots=[]
 mood={"S":["sly","panic","angry","sly"],"P":["happy","shock","happy","happy"],"R":["sideeye","smug"]}
 for i,(w,t) in enumerate(lines):
     if w=="S":
-        shots.append(S(line=i,**{"from":0},kind="slick",bg=B+"animeoffice.mp4",bright=1.35,r_peek=True,s=["sly","panic","angry"][i%3],r="smug"))
+        shots.append(S(line=i,**{"from":0},kind="slick",bg=SET['S'],bright=1.35,r_peek=True,s=["sly","panic","angry"][i%3],r="smug"))
     elif w=="P":
-        shots.append(S(line=i,**{"from":0},kind="cu_p",bg=B+"rainroom.mp4",blur=1,p=["happy","shock","happy"][i%3],r="sideeye"))
+        shots.append(S(line=i,**{"from":0},kind="cu_p",bg=SET['P'],blur=1,p=["happy","shock","happy"][i%3],r="sideeye"))
     else:
-        shots.append(S(line=i,**{"from":0},kind="cu_r",bg=B+"fireplace.mp4",blur=1,r="sideeye"))
-shots[0].update(kind="call",bg=B+"rainroom.mp4",bg2=B+"animeoffice.mp4",bright2=1.35,hook="POV: A SCAMMER TRIES THE REFUND TRICK",caller="CALLER: \"REFUND DEPT.\"",s="sly",p="happy")
-shots.insert(1,S(line=0,**{"from":0.55},kind="slick",bg=B+"animeoffice.mp4",bright=1.35,r_peek=True,s="sly",r="sideeye",msg="\"REFUND: $200!\"",msg_at=0.1))
+        shots.append(S(line=i,**{"from":0},kind="cu_r",bg=SET['R'],blur=1,r="sideeye"))
+shots[0].update(kind="call",bg=SET['P'],bg2=SET['S'],bright2=1.35,hook="POV: A SCAMMER TRIES THE REFUND TRICK",caller="CALLER: \"REFUND DEPT.\"",s="sly",p="happy")
+shots.insert(1,S(line=0,**{"from":0.55},kind="slick",bg=SET['S'],bright=1.35,r_peek=True,s="sly",r="sideeye",msg="\"REFUND: $200!\"",msg_at=0.1))
 spec={"id":"RC-24","title":"The Scammer Tried the Refund Trick on Penny","tail":2.2,"hot":["REFUND","THOUSAND","ZERO","PENDING","CARD"],
  "lines":lines,
  "sfx":[{"line":0,"frac":0.0,"name":"ding","gain":0.3},{"line":2,"word":"thousand","name":"impact","gain":0.3},{"line":4,"word":"zero","name":"crickets","gain":0.3},{"line":5,"word":"pending","name":"boing","gain":0.3},{"line":8,"word":"number","name":"bonk","gain":0.35},{"line":9,"frac":0.0,"name":"scratch","gain":0.3},{"line":11,"frac":0.6,"name":"wahwah","gain":0.35},{"line":12,"frac":0.1,"name":"ding","gain":0.25}],

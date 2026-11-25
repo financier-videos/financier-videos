@@ -1,5 +1,7 @@
 import json
 B="/tmp/fin/bg/rc3/"
+A="/home/user/financier-videos/assets/toon2d/"
+SET={'P':A+'porch_boxes.jpg','S':A+'slick_van.jpg','R':A+'hallway_package.jpg'}
 lines=[
  ["S","[fast] [fake friendly] Hi! Delivery company! Your Black Friday package is STUCK!"],
  ["P","[gasps] Oh no! Which package?"],
@@ -23,13 +25,13 @@ shots=[]
 mood={"S":["sly","panic","angry","sly"],"P":["happy","shock","happy","happy"],"R":["sideeye","smug"]}
 for i,(w,t) in enumerate(lines):
     if w=="S":
-        shots.append(S(line=i,**{"from":0},kind="slick",bg=B+"animeoffice.mp4",bright=1.35,r_peek=True,s=["sly","panic","angry"][i%3],r="smug"))
+        shots.append(S(line=i,**{"from":0},kind="slick",bg=SET['S'],bright=1.35,r_peek=True,s=["sly","panic","angry"][i%3],r="smug"))
     elif w=="P":
-        shots.append(S(line=i,**{"from":0},kind="cu_p",bg=B+"rainroom.mp4",blur=1,p=["happy","shock","happy"][i%3],r="sideeye"))
+        shots.append(S(line=i,**{"from":0},kind="cu_p",bg=SET['P'],blur=1,p=["happy","shock","happy"][i%3],r="sideeye"))
     else:
-        shots.append(S(line=i,**{"from":0},kind="cu_r",bg=B+"fireplace.mp4",blur=1,r="sideeye"))
-shots[0].update(kind="call",bg=B+"rainroom.mp4",bg2=B+"animeoffice.mp4",bright2=1.35,hook="PENNY PLAYS DUMB: PART 2",caller="CALLER: \"DELIVERY CO.\"",s="sly",p="happy")
-shots.insert(1,S(line=0,**{"from":0.55},kind="slick",bg=B+"animeoffice.mp4",bright=1.35,r_peek=True,s="sly",r="sideeye",msg="\"YOUR PACKAGE IS STUCK!\"",msg_at=0.1))
+        shots.append(S(line=i,**{"from":0},kind="cu_r",bg=SET['R'],blur=1,r="sideeye"))
+shots[0].update(kind="call",bg=SET['P'],bg2=SET['S'],bright2=1.35,hook="PENNY PLAYS DUMB: PART 2",caller="CALLER: \"DELIVERY CO.\"",s="sly",p="happy")
+shots.insert(1,S(line=0,**{"from":0.55},kind="slick",bg=SET['S'],bright=1.35,r_peek=True,s="sly",r="sideeye",msg="\"YOUR PACKAGE IS STUCK!\"",msg_at=0.1))
 spec={"id":"RC-23","title":"Penny Plays Dumb With a Scammer: Part 2","tail":2.2,"hot":["PIE","CARD","FOXES","TAIL","CANCELLED"],
  "lines":lines,
  "sfx":[{"line":0,"frac":0.0,"name":"ding","gain":0.3},{"line":2,"frac":0.0,"name":"crickets","gain":0.25},{"line":6,"frac":0.0,"name":"scratch","gain":0.25},
