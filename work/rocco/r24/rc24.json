@@ -1,0 +1,441 @@
+{
+ "id": "RC-24",
+ "title": "The Scammer Tried the Refund Trick on Penny",
+ "tail": 2.2,
+ "hot": [
+  "REFUND",
+  "THOUSAND",
+  "ZERO",
+  "PENDING",
+  "CARD"
+ ],
+ "lines": [
+  [
+   "S",
+   "[sly] [fake friendly] Hi! You were overcharged. I'm refunding you two hundred dollars!"
+  ],
+  [
+   "P",
+   "[happy] Ooh, yay!"
+  ],
+  [
+   "S",
+   "[fast] Oops! My finger slipped! I sent you two THOUSAND! Send back eighteen hundred in gift cards, please!"
+  ],
+  [
+   "R",
+   "[whispering] Psst. Open your real bank app."
+  ],
+  [
+   "P",
+   "[reading] My bank app says... zero new dollars."
+  ],
+  [
+   "S",
+   "[nervous] It's... pending! Very, very pending!"
+  ],
+  [
+   "P",
+   "[innocent] Okay! I'll send it back the same way you sent it."
+  ],
+  [
+   "S",
+   "[confused] ...How?"
+  ],
+  [
+   "P",
+   "[cheerful] Refunds go back to the card they came from! So... what's YOUR card number?"
+  ],
+  [
+   "S",
+   "[panicked] What? No!"
+  ],
+  [
+   "P",
+   "[sweetly] But it's for your refund!"
+  ],
+  [
+   "S",
+   "[furious] I'm hanging up!"
+  ],
+  [
+   "R",
+   "[warmly] A real refund never comes with 'send the extra back.' Check your bank app yourself. Never the screen they show you."
+  ]
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "ding",
+   "gain": 0.3
+  },
+  {
+   "line": 2,
+   "word": "thousand",
+   "name": "impact",
+   "gain": 0.3
+  },
+  {
+   "line": 4,
+   "word": "zero",
+   "name": "crickets",
+   "gain": 0.3
+  },
+  {
+   "line": 5,
+   "word": "pending",
+   "name": "boing",
+   "gain": 0.3
+  },
+  {
+   "line": 8,
+   "word": "number",
+   "name": "bonk",
+   "gain": 0.35
+  },
+  {
+   "line": 9,
+   "frac": 0.0,
+   "name": "scratch",
+   "gain": 0.3
+  },
+  {
+   "line": 11,
+   "frac": 0.6,
+   "name": "wahwah",
+   "gain": 0.35
+  },
+  {
+   "line": 12,
+   "frac": 0.1,
+   "name": "ding",
+   "gain": 0.25
+  }
+ ],
+ "sources": "FTC consumer advice on refund and overpayment scams",
+ "shots": [
+  {
+   "line": 0,
+   "from": 0,
+   "kind": "call",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "bright": 1.35,
+   "r_peek": true,
+   "s": "sly",
+   "r": "smug",
+   "bg2": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bright2": 1.35,
+   "hook": "POV: A SCAMMER TRIES THE REFUND TRICK",
+   "caller": "CALLER: \"REFUND DEPT.\"",
+   "p": "happy"
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 0,
+   "from": 0.28,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "line": 0,
+   "from": 0.55,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bright": 1.35,
+   "r_peek": true,
+   "s": "sly",
+   "r": "sideeye",
+   "msg": "\"REFUND: $200!\"",
+   "msg_at": 0.1
+  },
+  {
+   "line": 1,
+   "from": 0,
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "blur": 1,
+   "p": "shock",
+   "r": "sideeye"
+  },
+  {
+   "line": 2,
+   "from": 0,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bright": 1.35,
+   "r_peek": true,
+   "s": "angry",
+   "r": "smug"
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 2,
+   "from": 0.33,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "cu_r",
+   "bg": "/tmp/fin/bg/rc3/fireplace.mp4",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.3,
+    "push": 0.1,
+    "fy": 0.47
+   },
+   "line": 2,
+   "from": 0.67,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "line": 3,
+   "from": 0,
+   "kind": "cu_r",
+   "bg": "/tmp/fin/bg/rc3/fireplace.mp4",
+   "blur": 1,
+   "r": "sideeye"
+  },
+  {
+   "kind": "two",
+   "bg": "/tmp/fin/bg/rc3/fireplace.mp4",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 3,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "line": 4,
+   "from": 0,
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "blur": 1,
+   "p": "shock",
+   "r": "sideeye"
+  },
+  {
+   "kind": "two",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 4,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "line": 5,
+   "from": 0,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bright": 1.35,
+   "r_peek": true,
+   "s": "angry",
+   "r": "smug"
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 5,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "line": 6,
+   "from": 0,
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "blur": 1,
+   "p": "happy",
+   "r": "sideeye"
+  },
+  {
+   "kind": "two",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 6,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "line": 7,
+   "from": 0,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bright": 1.35,
+   "r_peek": true,
+   "s": "panic",
+   "r": "smug"
+  },
+  {
+   "line": 8,
+   "from": 0,
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "blur": 1,
+   "p": "happy",
+   "r": "sideeye"
+  },
+  {
+   "kind": "two",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 8,
+   "from": 0.33,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "two",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 8,
+   "from": 0.67,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "line": 9,
+   "from": 0,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bright": 1.35,
+   "r_peek": true,
+   "s": "sly",
+   "r": "smug"
+  },
+  {
+   "line": 10,
+   "from": 0,
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "blur": 1,
+   "p": "shock",
+   "r": "sideeye"
+  },
+  {
+   "line": 11,
+   "from": 0,
+   "kind": "slick",
+   "bg": "/tmp/fin/bg/rc3/animeoffice.mp4",
+   "bright": 1.35,
+   "r_peek": true,
+   "s": "angry",
+   "r": "smug"
+  },
+  {
+   "line": 12,
+   "from": 0,
+   "kind": "cu_r",
+   "bg": "/tmp/fin/bg/rc3/fireplace.mp4",
+   "blur": 1,
+   "r": "sideeye"
+  },
+  {
+   "kind": "two",
+   "bg": "/tmp/fin/bg/rc3/fireplace.mp4",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 12,
+   "from": 0.26,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/tmp/fin/bg/rc3/rainroom.mp4",
+   "p": "shock",
+   "r": "sly",
+   "cam": {
+    "z": 1.2,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 12,
+   "from": 0.53,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "two",
+   "bg": "/tmp/fin/bg/rc3/fireplace.mp4",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.05,
+    "push": 0.06
+   },
+   "line": 12,
+   "from": 0.79,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  }
+ ]
+}

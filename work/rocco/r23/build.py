@@ -28,7 +28,7 @@ for i,(w,t) in enumerate(lines):
         shots.append(S(line=i,**{"from":0},kind="cu_p",bg=B+"rainroom.mp4",blur=1,p=["happy","shock","happy"][i%3],r="sideeye"))
     else:
         shots.append(S(line=i,**{"from":0},kind="cu_r",bg=B+"fireplace.mp4",blur=1,r="sideeye"))
-shots[0].update(kind="call",bg=B+"rainroom.mp4",bg2=B+"animeoffice.mp4",bright2=1.35,hook="PENNY PLAYS DUMB: PART 2",s="sly",p="happy")
+shots[0].update(kind="call",bg=B+"rainroom.mp4",bg2=B+"animeoffice.mp4",bright2=1.35,hook="PENNY PLAYS DUMB: PART 2",caller="CALLER: \"DELIVERY CO.\"",s="sly",p="happy")
 shots.insert(1,S(line=0,**{"from":0.55},kind="slick",bg=B+"animeoffice.mp4",bright=1.35,r_peek=True,s="sly",r="sideeye",msg="\"YOUR PACKAGE IS STUCK!\"",msg_at=0.1))
 spec={"id":"RC-23","title":"Penny Plays Dumb With a Scammer: Part 2","tail":2.2,"hot":["PIE","CARD","FOXES","TAIL","CANCELLED"],
  "lines":lines,
