@@ -138,3 +138,8 @@ O'LCHOV: 26-noy C — U-3 24 soatlik ko'rish vs print_100/buck_1748 (trendsiz). 
 O'RGANILDI: vidIQ trending — 201 obunachili kanalning "Fake 50% Off Black Friday tag" mexanizm Shorti 2 kunda 1.05M (22.7K vph). Kichik kanal + mexanizm ("qanday yasaladi") + bayram = eng kuchli signal.
 O'ZGARTIRILDI: (1) U-5 [TREND] bankka (FTC 16 CFR 233.1, WalletHub 2025 36%/24%, Oxylabs 2024 75%) — 26-noy 07:00 ET 1-yuklash; (2) dvigatel v6.18 sahna "pool" + auto_pool "scene" (U-3 dagi begona klip xatosi).
 O'LCHOV: v6.18 — keyingi Short qc_gate 14_empty_panel PASS va kontakt-varaqda begona klip yo'qligi; U-5 — 24 soatlik ko'rish vs print_100/buck_1748.
+
+## 2026-11-25 B (15:20 Toshkent)
+O'RGANILDI: (1) YouTube Shorts okt-2026 "originality" yangilanishi — qayta yuklangan/minimal tahrirli Shortlar tarqatilishi kesildi (Android Headlines, MediaPost; YouTube rasmiy bloglarida tasdiqni tekshirish kerak). (2) YPP "inauthentic content" (2026-07-16): moliya kabi sezgir mavzuda AI persona — demonetizatsiya xavfi (TechRepublic, Android Headlines 2026-07). Buck ekspert emas, maslahat bermaydi — qoida saqlanadi; har videoda o'z tadqiqot + manba.
+O'ZGARTIRILDI: U-5 da birinchi marta `auto_pool: "scene"` (dvigatel v6.18) — avto-kesimlar faqat o'z sahna klipidan; how_made "Step 1/2/3" mexanizm + kostyum gag'i; FTC qoidasi + shtat soni (28/90) — huquqiy fakt videoda birinchi marta.
+O'LCHOV: 26-noy C — U-5 24 soatlik ko'rish vs U-3 (trend) va print_100 (trendsiz); auto_pool kontakt-varaqda "sahnaga mos bo'lmagan kadr" soni (U-3 da 1 ta edi).

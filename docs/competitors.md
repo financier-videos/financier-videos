@@ -31,3 +31,8 @@ ERTAGA SINAYMIZ: "MIKRO" format — 8–12 s, BITTA fakt, birinchi kadrda raqam,
 ## 2026-11-21 15:51 UTC — outlier tahlili №2 (to'liq: docs/audit_2026-11-21.md)
 Kuzatiladigan yangi kanallar: Canonically (2.9K; "Why Prices End In 99 Cents" 1.1M, 60 s, chizilgan hikoya), Begofox (19.7K; "How Big Is a Trillion?" 2.6M, 85 s, masshtab narvoni), DuskFrame (15.6K; "How Fast Companies Make $1 Million" 550K, 47 s), Business Tactic (44.5K; 930K, 52 s), Why We Do It (11.2K; 9 s mikro 798K).
 Saboq: bizning ikki mavzu (99 sent, trillion) ularda 1–2.6M — farq ijroda: bitta savol, har 8–10 s yangi tasvir, yorqin sahna, 45–90 s.
+
+## 2026-11-25 (B) — Hypothetically (201 obunachi): "How a Fake '50% Off' Black Friday Tag Is Built" — 1.05M / 2 kun, 22.7K vph, 56 s (manba: vidIQ trending, daily_trends 25-noy; video ID topilmadi — WebSearch indekslamagan)
+KUCHLI: sarlavha = "qanday yasaladi" + aniq raqam ("50% Off"); mexanizm bosqichma-bosqich (narx ko'tariladi → chegirma); mavzu bayram haftasiga aniq tushadi; mikro kanal + katta ko'rish = algoritm mavzuni o'zi tortgan.
+KUCHSIZ: manba yo'q (tavsifda rasmiy qoida/statistika ko'rinmaydi) — bizning ustunligimiz: FTC 16 CFR 233.1 + Massachusetts 28/90 + WalletHub 36%.
+ERTAGA SINAYMIZ: U-5 (work/2026-11-25b/u05_fake50.json, how_made, "Step one/two/three" + "narx sport zaliga boradi / kostyum" gag'i) — 26-noy 07:00 ET; 72 soatda U-3 (scale_ladder trend) bilan solishtirish.
