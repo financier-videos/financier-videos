@@ -44,6 +44,7 @@ spec.json:
   "captions": "words"   # v6.14: 1-3 word captions synced to the voice, one line, big (auto with look fullbleed)
   "headline": "hook"    # v6.14: no permanent headline: scene 0 "head" shows ~2 s (full hook on frame 1); scene "chapter": true shows its head 1.5 s
   "auto_shots": 1.8     # v6.14: a new picture every <= N s: footage scenes are re-framed (zoom/pan cuts), graphic scenes get a punch-in cut.
+  "auto_pool": "scene"  # v6.18: auto cuts never borrow another scene's clip; scene "pool": ["b.mp4", ...] = extra on-topic clips for that scene's auto cuts.
                         #   Scene "shots": [{"broll": "a.mp4"|"b.jpg", "at": 0.0, "start": 2.0, "zoom": 1.0, "kb": "in|out|left|right"}, ...]
                         #   (an item without "broll" re-frames the previous footage). Result JSON "cuts" -> qc_gate step 11 (30 s >= 15).
   "voices": {"guest": {"voice_id": "cgSgspJ2msm6clMCkdW9", "label": "Guest (Jessica, ElevenLabs premade)"}}   # v6.14 second voice:
@@ -961,7 +962,7 @@ def caption_chunks_timed(text, words, maxn=4):
     return out
 
 
-ENGINE_VERSION = "6.17"  # bump on every engine change and add a line to docs/changes.md
+ENGINE_VERSION = "6.18"  # bump on every engine change and add a line to docs/changes.md
 
 THEMES = {  # v6.1: per-video look so videos don't all share one background. Spec "theme": name | "auto" (default: from the first line).
     "vault": ([((9, 14, 28), (19, 30, 54)), ((12, 10, 30), (32, 20, 58)), ((6, 20, 24), (14, 42, 48))], "grid"),
@@ -1919,7 +1920,17 @@ def render(spec, wav, total, out, workdir):
     for _p in ([spec["bg"]] if isinstance(spec.get("bg"), str) else (spec.get("bg") or [])):
         if isinstance(_p, str) and os.path.exists(_p) and _p not in POOL: POOL.append(_p)
 
-    def _pool_next(cur, j):
+    def _pool_next(cur, j, sc=None):
+        # v6.18 (backlog EMPTY_PANEL, U-3: a turkey scene got an Earth clip): scene "pool": [clips] = on-topic
+        # footage for this scene's automatic cuts; spec "auto_pool": "scene" = never borrow another scene's clip
+        # (no own pool -> the same clip at another moment). Default (no keys) = old whole-video POOL behaviour.
+        if sc is not None:
+            _own = [x for x in ([sc.get("broll")] + list(sc.get("pool") or [])) if isinstance(x, str) and os.path.exists(x)]
+            _own = list(dict.fromkeys(_own))
+            if len(_own) >= 2:
+                i0 = _own.index(cur) if cur in _own else -1
+                return _own[(i0 + 1 + j) % len(_own)] if _own[(i0 + 1 + j) % len(_own)] != cur else _own[(i0 + 2 + j) % len(_own)]
+            if spec.get("auto_pool") == "scene": return cur
         if not POOL: return cur
         i0 = POOL.index(cur) if cur in POOL else -1
         for d in range(1, len(POOL) + 1):
@@ -1995,7 +2006,7 @@ def render(spec, wav, total, out, workdir):
             _sl = [{"at": round(j * sc["dur"] / _k, 2), "zoom": _zs[j % 2], "kb": _kbs[j % 4]} for j in range(_k)]
             _sl[0]["broll"] = sc["broll"]; _sl[0]["start"] = sc.get("broll_start", 0)
             for j in range(1, _k):  # v6.14b: a different clip on every auto cut
-                _sl[j]["broll"] = sc["broll"] if j % 2 == 0 else _pool_next(sc["broll"], si + j); _sl[j]["start"] = round((si * 2.3 + j * 1.7) % 5, 2)
+                _sl[j]["broll"] = sc["broll"] if j % 2 == 0 else _pool_next(sc["broll"], si + j, sc); _sl[j]["start"] = round((si * 2.3 + j * 1.7) % 5, 2) + (2.5 if _sl[j]["broll"] == sc["broll"] else 0)
             clip, csz = None, None
         if _sl and AUTOSHOT:  # v6.14: an explicit shot longer than auto_shots*1.25 gets re-framed cuts inside it too
             _ex = []
@@ -2008,7 +2019,7 @@ def render(spec, wav, total, out, workdir):
                     _own = [x.get("broll") for x in sc.get("shots", []) if x.get("broll")]; _own = list(dict.fromkeys(_own))
                     for q in range(1, _k):  # v6.14b: another clip from this video's footage, not a re-frame
                         _ex.append({"at": round(a0 + q * (a1 - a0) / _k, 2), "zoom": [1.0, 1.2][(q + j) % 2], "kb": ["left", "out", "right"][(q + j) % 3],
-                                    "broll": (_own[(_own.index(_cur) + q) % len(_own)] if (len(_own) >= 2 and _cur in _own) else _pool_next(_cur, si + q + j)),
+                                    "broll": (_own[(_own.index(_cur) + q) % len(_own)] if (len(_own) >= 2 and _cur in _own) else _pool_next(_cur, si + q + j, sc)),
                                     "start": (float(next((x.get("start", 0) for x in sc["shots"] if x.get("broll") == _own[(_own.index(_cur) + q) % len(_own)]), 0)) + 0.4 * q
                                               if (len(_own) >= 2 and _cur in _own and any("start" in x for x in sc["shots"])) else round((si * 1.9 + q * 2.1) % 5, 2))})
             _sl = _ex
