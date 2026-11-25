@@ -12,27 +12,23 @@
  "lines": [
   [
    "S",
-   "[sly] [fake friendly] Hi! You were overcharged. I'm refunding you two hundred dollars!"
+   "[sly] [fast] Oops! I refunded you two THOUSAND instead of two hundred! Send back eighteen hundred in gift cards, please!"
   ],
   [
    "P",
-   "[happy] Ooh, yay!"
-  ],
-  [
-   "S",
-   "[fast] Oops! My finger slipped! I sent you two THOUSAND! Send back eighteen hundred in gift cards, please!"
-  ],
-  [
-   "R",
-   "[whispering] Psst. Open your real bank app."
+   "[happy] Ooh! Let me check my bank app!"
   ],
   [
    "P",
-   "[reading] My bank app says... zero new dollars."
+   "[reading] It says... zero new dollars."
   ],
   [
    "S",
    "[nervous] It's... pending! Very, very pending!"
+  ],
+  [
+   "R",
+   "[whispering] Psst. She's onto him."
   ],
   [
    "P",
@@ -59,56 +55,50 @@
    "[furious] I'm hanging up!"
   ],
   [
-   "R",
-   "[warmly] A real refund never comes with 'send the extra back.' Check your bank app yourself. Never the screen they show you."
+   "P",
+   "[innocent] ...Was it something I said?"
   ]
  ],
  "sfx": [
   {
    "line": 0,
-   "frac": 0.0,
-   "name": "ding",
-   "gain": 0.3
-  },
-  {
-   "line": 2,
    "word": "thousand",
    "name": "impact",
    "gain": 0.3
   },
   {
-   "line": 4,
+   "line": 2,
    "word": "zero",
    "name": "crickets",
    "gain": 0.3
   },
   {
-   "line": 5,
+   "line": 3,
    "word": "pending",
    "name": "boing",
    "gain": 0.3
   },
   {
-   "line": 8,
+   "line": 7,
    "word": "number",
    "name": "bonk",
    "gain": 0.35
   },
   {
-   "line": 9,
+   "line": 8,
    "frac": 0.0,
    "name": "scratch",
    "gain": 0.3
   },
   {
-   "line": 11,
+   "line": 10,
    "frac": 0.6,
    "name": "wahwah",
    "gain": 0.35
   },
   {
-   "line": 12,
-   "frac": 0.1,
+   "line": 11,
+   "frac": 0.2,
    "name": "ding",
    "gain": 0.25
   }
@@ -159,6 +149,22 @@
    "msg_at": 0.1
   },
   {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_kitchen.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 0,
+   "from": 0.78,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
    "line": 1,
    "from": 0,
    "kind": "cu_p",
@@ -168,194 +174,46 @@
    "r": "sideeye"
   },
   {
-   "line": 2,
-   "from": 0,
-   "kind": "slick",
-   "bg": "/home/user/financier-videos/assets/toon2d/slick_refunds.jpg",
-   "bright": 1.35,
-   "r_peek": true,
-   "s": "angry",
-   "r": "smug"
-  },
-  {
-   "kind": "cu_p",
+   "kind": "two",
    "bg": "/home/user/financier-videos/assets/toon2d/penny_kitchen.jpg",
    "p": "shock",
    "r": "sideeye",
    "cam": {
-    "z": 1.25,
-    "push": 0.06,
-    "fy": 0.42
+    "z": 1.0,
+    "push": 0.06
    },
-   "line": 2,
-   "from": 0.33,
+   "line": 1,
+   "from": 0.5,
    "blur": 1,
    "amb": "room",
    "_auto": true
   },
   {
-   "kind": "cu_r",
-   "bg": "/home/user/financier-videos/assets/toon2d/rocco_study.jpg",
+   "line": 2,
+   "from": 0,
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_kitchen.jpg",
+   "blur": 1,
+   "p": "happy",
+   "r": "sideeye"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_kitchen.jpg",
+   "p": "happy",
    "r": "sideeye",
    "cam": {
-    "z": 1.3,
-    "push": 0.1,
-    "fy": 0.47
+    "z": 1.0,
+    "push": 0.06
    },
    "line": 2,
-   "from": 0.67,
+   "from": 0.5,
    "blur": 1,
    "amb": "room",
    "_auto": true
   },
   {
    "line": 3,
-   "from": 0,
-   "kind": "cu_r",
-   "bg": "/home/user/financier-videos/assets/toon2d/rocco_study.jpg",
-   "blur": 1,
-   "r": "sideeye"
-  },
-  {
-   "kind": "two",
-   "bg": "/home/user/financier-videos/assets/toon2d/rocco_study.jpg",
-   "p": "happy",
-   "r": "sideeye",
-   "cam": {
-    "z": 1.05,
-    "push": 0.06
-   },
-   "line": 3,
-   "from": 0.5,
-   "blur": 1,
-   "amb": "room",
-   "_auto": true
-  },
-  {
-   "line": 4,
-   "from": 0,
-   "kind": "cu_p",
-   "bg": "/home/user/financier-videos/assets/toon2d/penny_kitchen.jpg",
-   "blur": 1,
-   "p": "shock",
-   "r": "sideeye"
-  },
-  {
-   "kind": "two",
-   "bg": "/home/user/financier-videos/assets/toon2d/penny_kitchen.jpg",
-   "p": "shock",
-   "r": "sideeye",
-   "cam": {
-    "z": 1.0,
-    "push": 0.06
-   },
-   "line": 4,
-   "from": 0.5,
-   "blur": 1,
-   "amb": "room",
-   "_auto": true
-  },
-  {
-   "line": 5,
-   "from": 0,
-   "kind": "slick",
-   "bg": "/home/user/financier-videos/assets/toon2d/slick_refunds.jpg",
-   "bright": 1.35,
-   "r_peek": true,
-   "s": "angry",
-   "r": "smug"
-  },
-  {
-   "kind": "cu_p",
-   "bg": "/home/user/financier-videos/assets/toon2d/penny_kitchen.jpg",
-   "p": "shock",
-   "r": "sideeye",
-   "cam": {
-    "z": 1.25,
-    "push": 0.06,
-    "fy": 0.42
-   },
-   "line": 5,
-   "from": 0.5,
-   "blur": 1,
-   "amb": "room",
-   "_auto": true
-  },
-  {
-   "line": 6,
-   "from": 0,
-   "kind": "cu_p",
-   "bg": "/home/user/financier-videos/assets/toon2d/penny_kitchen.jpg",
-   "blur": 1,
-   "p": "happy",
-   "r": "sideeye"
-  },
-  {
-   "kind": "two",
-   "bg": "/home/user/financier-videos/assets/toon2d/penny_kitchen.jpg",
-   "p": "happy",
-   "r": "sideeye",
-   "cam": {
-    "z": 1.0,
-    "push": 0.06
-   },
-   "line": 6,
-   "from": 0.5,
-   "blur": 1,
-   "amb": "room",
-   "_auto": true
-  },
-  {
-   "line": 7,
-   "from": 0,
-   "kind": "slick",
-   "bg": "/home/user/financier-videos/assets/toon2d/slick_refunds.jpg",
-   "bright": 1.35,
-   "r_peek": true,
-   "s": "panic",
-   "r": "smug"
-  },
-  {
-   "line": 8,
-   "from": 0,
-   "kind": "cu_p",
-   "bg": "/home/user/financier-videos/assets/toon2d/penny_kitchen.jpg",
-   "blur": 1,
-   "p": "happy",
-   "r": "sideeye"
-  },
-  {
-   "kind": "two",
-   "bg": "/home/user/financier-videos/assets/toon2d/penny_kitchen.jpg",
-   "p": "happy",
-   "r": "sideeye",
-   "cam": {
-    "z": 1.0,
-    "push": 0.06
-   },
-   "line": 8,
-   "from": 0.33,
-   "blur": 1,
-   "amb": "room",
-   "_auto": true
-  },
-  {
-   "kind": "two",
-   "bg": "/home/user/financier-videos/assets/toon2d/penny_kitchen.jpg",
-   "p": "happy",
-   "r": "sideeye",
-   "cam": {
-    "z": 1.0,
-    "push": 0.06
-   },
-   "line": 8,
-   "from": 0.67,
-   "blur": 1,
-   "amb": "room",
-   "_auto": true
-  },
-  {
-   "line": 9,
    "from": 0,
    "kind": "slick",
    "bg": "/home/user/financier-videos/assets/toon2d/slick_refunds.jpg",
@@ -365,7 +223,65 @@
    "r": "smug"
   },
   {
-   "line": 10,
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_kitchen.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 3,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "line": 4,
+   "from": 0,
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon2d/rocco_study.jpg",
+   "blur": 1,
+   "r": "sideeye"
+  },
+  {
+   "line": 5,
+   "from": 0,
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_kitchen.jpg",
+   "blur": 1,
+   "p": "happy",
+   "r": "sideeye"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_kitchen.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 5,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "line": 6,
+   "from": 0,
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon2d/slick_refunds.jpg",
+   "bright": 1.35,
+   "r_peek": true,
+   "s": "sly",
+   "r": "smug"
+  },
+  {
+   "line": 7,
    "from": 0,
    "kind": "cu_p",
    "bg": "/home/user/financier-videos/assets/toon2d/penny_kitchen.jpg",
@@ -374,7 +290,37 @@
    "r": "sideeye"
   },
   {
-   "line": 11,
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_kitchen.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 7,
+   "from": 0.33,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_kitchen.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 7,
+   "from": 0.67,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "line": 8,
    "from": 0,
    "kind": "slick",
    "bg": "/home/user/financier-videos/assets/toon2d/slick_refunds.jpg",
@@ -384,58 +330,32 @@
    "r": "smug"
   },
   {
-   "line": 12,
+   "line": 9,
    "from": 0,
-   "kind": "cu_r",
-   "bg": "/home/user/financier-videos/assets/toon2d/rocco_study.jpg",
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_kitchen.jpg",
    "blur": 1,
+   "p": "happy",
    "r": "sideeye"
   },
   {
-   "kind": "two",
-   "bg": "/home/user/financier-videos/assets/toon2d/rocco_study.jpg",
-   "p": "happy",
-   "r": "sideeye",
-   "cam": {
-    "z": 1.05,
-    "push": 0.06
-   },
-   "line": 12,
-   "from": 0.26,
-   "blur": 1,
-   "amb": "room",
-   "_auto": true
+   "line": 10,
+   "from": 0,
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon2d/slick_refunds.jpg",
+   "bright": 1.35,
+   "r_peek": true,
+   "s": "panic",
+   "r": "smug"
   },
   {
+   "line": 11,
+   "from": 0,
    "kind": "cu_p",
    "bg": "/home/user/financier-videos/assets/toon2d/penny_kitchen.jpg",
-   "p": "shock",
-   "r": "sly",
-   "cam": {
-    "z": 1.2,
-    "push": 0.06,
-    "fy": 0.42
-   },
-   "line": 12,
-   "from": 0.53,
    "blur": 1,
-   "amb": "room",
-   "_auto": true
-  },
-  {
-   "kind": "two",
-   "bg": "/home/user/financier-videos/assets/toon2d/rocco_study.jpg",
    "p": "happy",
-   "r": "sideeye",
-   "cam": {
-    "z": 1.05,
-    "push": 0.06
-   },
-   "line": 12,
-   "from": 0.79,
-   "blur": 1,
-   "amb": "room",
-   "_auto": true
+   "r": "sideeye"
   }
  ]
 }
