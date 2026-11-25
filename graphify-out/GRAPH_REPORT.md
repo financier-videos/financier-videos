@@ -1,17 +1,17 @@
 # Graph Report - financier-videos  (2026-11-25)
 
 ## Corpus Check
-- 450 files · ~540,586 words
+- 495 files · ~587,561 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 36 file(s) not represented in the graph (top: (none) 24, .blender-skills 11, .css 1)
+- Unclassified: 42 file(s) not represented in the graph (top: (none) 24, .blender-skills 11, .vyral 6)
 
 ## Summary
-- 5116 nodes · 7471 edges · 408 communities (341 shown, 67 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 193 edges (avg confidence: 0.86)
+- 5594 nodes · 7903 edges · 449 communities (382 shown, 67 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 192 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `556b041d`
+- Built from commit: `81ecbb01`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -205,7 +205,7 @@
 - Motion Direction
 - Remotion (Programmatic Video)
 - Three.js Motion (3D / WebGL)
-- Diagram & Data Animation
+- Hook anti-patterns
 - Isometric Recipes — Cookbook
 - layout-check.mjs
 - Text reveal recipes (copy-paste)
@@ -302,13 +302,13 @@
 - blender-scene-setup/scripts/_bpyx.py
 - story.ts
 - math
-- pushK
+- Pinned comments
 - toon.ts
 - blender-core/scripts/_bpyx.py
 - 1. The 12 principles on rigid objects
 - blender-animation/scripts/_bpyx.py
-- .ell
-- bodyFront
+- Anti-patterns
+- Hook tactics
 - el_speak
 - bpy
 - Forced perspective, lens math and the dolly zoom
@@ -335,7 +335,7 @@
 - bind_mesh.py
 - Workflow Recipes
 - vox
-- column
+- The metrics that matter
 - Video Structure Analyzer
 - Animation
 - Rendering
@@ -344,7 +344,7 @@
 - rig_check.py
 - Scene Setup & Hygiene
 - Stylized / NPR
-- clamp01
+- Formats
 - 3D Spatial Animation
 - ImageParser
 - get_fcurve
@@ -390,6 +390,47 @@
 - full_frame_equivalent
 - SCRIPT_example.md
 - idea_inbox.md
+- Caption craft
+- CTAs that work
+- Anti-patterns
+- Frameworks
+- Viral Short-Form Content
+- Shorts anti-patterns
+- On-screen text
+- Viral captions and CTAs
+- Viral hooks
+- Diagnose a flop
+- Viral Instagram Reels
+- Viral short-form ideas
+- Viral YouTube Shorts
+- Hook archetypes
+- Caption and search
+- Idea evaluation
+- Mining
+- Platforms
+- Hashtag reality
+- Originality and audio
+- Reels hook craft
+- Trial Reels
+- Evergreen vs trend
+- Pillars
+- Repurposing
+- Shorts algorithm
+- Shorts monetization
+- Shorts to long-form funnel
+- Hooks by platform
+- The three-layer hook
+- Edits app
+- Sends playbook
+- Retention & structure
+- viral-short-form
+- Hooks
+- Metrics & honesty
+- Shorts retention
+- 3 kunlik natija — 20 ta yangi video (BK-01..10, RC-13..22), 2026-11-25 17:00 UTC
+- Shorts search and shelf
+- buck3d_ready
+- _env
 
 ## God Nodes (most connected - your core abstractions)
 1. `ns()` - 64 edges
@@ -418,7 +459,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (408 total, 67 thin omitted)
+## Communities (449 total, 67 thin omitted)
 
 ### Community 0 - "ig-reel/hookscore.py"
 Cohesion: 0.22
@@ -445,8 +486,8 @@ Cohesion: 0.07
 Nodes (27): `[2025]` New Features, `[2025]` Policy Change (July 2025), `[2025]` Shopping Product Stickers (June 2025), AdSense RPM by Niche, Affiliate Programs, Brand Deals, Channel Memberships, Digital Products (+19 more)
 
 ### Community 6 - "make_video.py"
-Cohesion: 0.08
-Nodes (28): _add(), _bandnoise(), _env(), _envelope(), mix_sfx(), add(), _pink(), _reverb() (+20 more)
+Cohesion: 0.09
+Nodes (25): _add(), _bandnoise(), _envelope(), mix_sfx(), add(), _pink(), _reverb(), sfx_birds() (+17 more)
 
 ### Community 7 - "Retention & Scripting Guide"
 Cohesion: 0.07
@@ -533,8 +574,8 @@ Cohesion: 0.12
 Nodes (15): API Credit Awareness, Channel Type Detection, Claude YouTube — YouTube Creator Skill, Command Router, Context-Gathering Protocol, DataForSEO MCP Integration (Optional), Execution Scripts, Key YouTube DataForSEO Tools (+7 more)
 
 ### Community 28 - "YOUTUBE PLAYBOOK — FINANCIER (moliya, AQSh auditoriyasi)"
-Cohesion: 0.11
-Nodes (16): 0.5 TOP-10 VA CINEMA QUALITY STANDARTI, 0. MAQSAD VA VAKOLAT, 10. O'RGANILGANLAR JURNALI (14 kundan eskisi xulosaga), 1. KANAL, 2. QIZIL CHIZIQLAR, 3. ISHLAB CHIQARISH, HOSTING VA KREDIT, 4. REJISSOR QOIDALARI, HAZIL FORMULASI VA PRO MONTAJ (35 qatordan oshmasin), 5. RAQOBATCHILAR VA ETALONLAR (har biri 3–4 qator; ≤10) (+8 more)
+Cohesion: 0.14
+Nodes (13): 0.5 TOP-10 VA CINEMA QUALITY STANDARTI, 0. MAQSAD VA VAKOLAT, 10. O'RGANILGANLAR JURNALI (14 kundan eskisi xulosaga), 1. KANAL, 2. QIZIL CHIZIQLAR, 3. ISHLAB CHIQARISH, HOSTING VA KREDIT, 4. REJISSOR QOIDALARI, HAZIL FORMULASI VA PRO MONTAJ (35 qatordan oshmasin), 5. RAQOBATCHILAR VA ETALONLAR (har biri 3–4 qator; ≤10) (+5 more)
 
 ### Community 29 - "AVTONOM PRODYUSER — vazifa ko'rsatmasi (v3, 2026-11-20; Default muhit, ElevenLabs ochiq)"
 Cohesion: 0.07
@@ -542,7 +583,7 @@ Nodes (28): 0) BOSHLASH, 1.5) KUNLIK O'SISH (Shohjahon 2026-11-20 07:07: "har ku
 
 ### Community 30 - "SSENARIYLAR BANKI (Shohjahon yuborgan, Claude tekshirib moslagan)"
 Cohesion: 0.04
-Nodes (45): 3-partiya (2026-11-20) — "yashirin mexanizm" formati, ~35 s SINOV, [CHIQADI 2026-11-23 21:00 ET — "Gift Budgets Just Dropped 21%", myth_bust, work/2026-11-22t/s13_gifts.json; NerdWallet $879 vs $1,107 tekshirildi] S-13 "Gift Budgets Just Dropped 21%", [CHIQDI 2026-11-20 13:00 ET; QAYTA YASALDI 11-20 → "Guess What a 1% Fee Costs You", taxmin o'yini / ember, r1] S-10 "A 1% Fee Can Cost You $64,000", [CHIQDI 2026-11-20 19:00 ET; QAYTA YASALDI 11-20 → "The $4.99 Chicken Mystery", detektiv / noir, r2] S-09 "Costco's $4.99 Chicken Is Bait", [CHIQDI 2026-11-21 10:00 ET; QAYTA YASALDI 11-20 → "3 Secrets Hiding on a $20 Bill", sanoq / royal, r3] S-08 "Why Copiers Refuse to Copy Money", [CHIQDI 2026-11-21 13:00 ET; QAYTA YASALDI 11-20 → "Gift Cards Feel Like Free Money", afsona vs haqiqat / mint, work/remake_2026-11-20/r4] S-05 "$27 Billion Is Sitting in Junk Drawers" (2026-11-20), [CHIQDI 2026-11-21 16:00 ET; QAYTA YASALDI 11-20 → "Sorry, No Seat. Is That Legal?", hikoya / ocean, r5; 180/185 — illyustratsiya, tavsifda aytilgan] S-06 "Airlines Sell Your Seat Twice — Legally" (2026-11-20), [CHIQDI 2026-11-21 19:00 ET] S-01 "You Pay $1,332 a Year for Subscriptions" (2026-11-20) (+37 more)
+Nodes (46): 3-partiya (2026-11-20) — "yashirin mexanizm" formati, ~35 s SINOV, [CHIQADI 2026-11-23 21:00 ET — "Gift Budgets Just Dropped 21%", myth_bust, work/2026-11-22t/s13_gifts.json; NerdWallet $879 vs $1,107 tekshirildi] S-13 "Gift Budgets Just Dropped 21%", [CHIQDI 2026-11-20 13:00 ET; QAYTA YASALDI 11-20 → "Guess What a 1% Fee Costs You", taxmin o'yini / ember, r1] S-10 "A 1% Fee Can Cost You $64,000", [CHIQDI 2026-11-20 19:00 ET; QAYTA YASALDI 11-20 → "The $4.99 Chicken Mystery", detektiv / noir, r2] S-09 "Costco's $4.99 Chicken Is Bait", [CHIQDI 2026-11-21 10:00 ET; QAYTA YASALDI 11-20 → "3 Secrets Hiding on a $20 Bill", sanoq / royal, r3] S-08 "Why Copiers Refuse to Copy Money", [CHIQDI 2026-11-21 13:00 ET; QAYTA YASALDI 11-20 → "Gift Cards Feel Like Free Money", afsona vs haqiqat / mint, work/remake_2026-11-20/r4] S-05 "$27 Billion Is Sitting in Junk Drawers" (2026-11-20), [CHIQDI 2026-11-21 16:00 ET; QAYTA YASALDI 11-20 → "Sorry, No Seat. Is That Legal?", hikoya / ocean, r5; 180/185 — illyustratsiya, tavsifda aytilgan] S-06 "Airlines Sell Your Seat Twice — Legally" (2026-11-20), [CHIQDI 2026-11-21 19:00 ET] S-01 "You Pay $1,332 a Year for Subscriptions" (2026-11-20) (+38 more)
 
 ### Community 31 - "subprocess"
 Cohesion: 0.10
@@ -637,8 +678,8 @@ Cohesion: 0.10
 Nodes (17): args, blank, detail, env, events, flux, [fn, fd], hasAudio (+9 more)
 
 ### Community 54 - "Drawing techniques"
-Cohesion: 0.15
-Nodes (12): 1. Ink line (in the starter), 2. Illustration shapes (in the starter), 3. Spot-color print (risograph), 4. Single-line engraving, 5. Words as the shape, 6. Marker / gouache fill, 7. Cinematic flat + blueprint (in the starter), Canvas gotchas (+4 more)
+Cohesion: 0.08
+Nodes (22): Build-tool choice, Charts, Core principle: progressive disclosure, Deliver & verify (standalone HTML), Diagram & Data Animation, Flowing connector (marching dash + traveling dot), Output checklist, Progressive node/edge reveal (SVG + GSAP) (+14 more)
 
 ### Community 55 - "Remotion Patterns and Best Practices"
 Cohesion: 0.20
@@ -818,7 +859,7 @@ Nodes (6): Caption and overlay safety (all styles), Keeping every reel fresh (sa
 
 ### Community 99 - "cast.ts"
 Cohesion: 0.06
-Nodes (67): BARE, blank, blob(), BODY, CamInfo, CARD, CHEER, CONTACT (+59 more)
+Nodes (71): BARE, blank, blob(), BODY, CamInfo, CARD, CHEER, column() (+63 more)
 
 ### Community 100 - "layout.md"
 Cohesion: 0.29
@@ -873,8 +914,8 @@ Cohesion: 0.33
 Nodes (5): Agent Reach — agent uchun platformalarni o'qish/qidirish vositasi (Shohjahon 2026-11-20 18:59: "shuni ham saqla"), Birinchi sinov (keyingi B RAQOBAT ishi), Bizga nimasi foydali, CHEKLOVLAR (bizning qoidalar bo'yicha — o'zgartirilmaydi), Nima
 
 ### Community 113 - "TASHQI SKILLAR VA MANBALAR (Shohjahon 2026-11-20 18:51: "GitHub'ni ko'rib chiq va yangi skillar yozib ol")"
-Cohesion: 0.33
-Nodes (5): 1. claude-youtube (ko'chirildi: `docs/skills/claude-youtube/`), 2. Lemo-Opuscar — `docs/style_library.md` va `engine/vendor/lemo/` (alohida yozilgan)., 3. NOMZODLAR (hali ko'chirilmagan; sinovdan keyin qaror), KUNLIK JURNAL (har kuni 3–4 ta; tartib — producer_task "HAR KUNI 3–4 YANGI SKILL"), TASHQI SKILLAR VA MANBALAR (Shohjahon 2026-11-20 18:51: "GitHub'ni ko'rib chiq va yangi skillar yozib ol")
+Cohesion: 0.29
+Nodes (6): 1. claude-youtube (ko'chirildi: `docs/skills/claude-youtube/`), 2026-11-25 — Vyral content-skills (MIT) o'rnatildi (.claude/skills), 2. Lemo-Opuscar — `docs/style_library.md` va `engine/vendor/lemo/` (alohida yozilgan)., 3. NOMZODLAR (hali ko'chirilmagan; sinovdan keyin qaror), KUNLIK JURNAL (har kuni 3–4 ta; tartib — producer_task "HAR KUNI 3–4 YANGI SKILL"), TASHQI SKILLAR VA MANBALAR (Shohjahon 2026-11-20 18:51: "GitHub'ni ko'rib chiq va yangi skillar yozib ol")
 
 ### Community 114 - "USLUBLAR KUTUBXONASI — Lemo-Opuscar (Shohjahon 2026-11-20 18:44: "o'zingga yozib ol, malaka oshir, videolar tayyorlashda foydalan")"
 Cohesion: 0.33
@@ -886,7 +927,7 @@ Nodes (19): Alpha matte types explained, AME preset cautions, Bitrate cheat shee
 
 ### Community 116 - "O'SISH JURNALI — "har kuni kechagidan yaxshiroq" (Shohjahon, 2026-11-20 07:07)"
 Cohesion: 0.11
-Nodes (17): 2026-11-20 (chat sessiyasi), 2026-11-20 (vazifa, A 09:19), 2026-11-20 (vazifa, B 15:19), 2026-11-20 (vazifa, BUYURTMA 3, 20:34), 2026-11-20 (vazifa, C 23:19), 2026-11-21 23:40 Toshkent — C ishi (vazifa sessiyasi), 2026-11-21 (chat, 00:10 — Shohjahon: "youtube-skill o'rnat, eng yaxshilarini"), 2026-11-21 (vazifa, A 01:46) (+9 more)
+Nodes (18): 2026-11-20 (chat sessiyasi), 2026-11-20 (vazifa, A 09:19), 2026-11-20 (vazifa, B 15:19), 2026-11-20 (vazifa, BUYURTMA 3, 20:34), 2026-11-20 (vazifa, C 23:19), 2026-11-21 23:40 Toshkent — C ishi (vazifa sessiyasi), 2026-11-21 (chat, 00:10 — Shohjahon: "youtube-skill o'rnat, eng yaxshilarini"), 2026-11-21 (vazifa, A 01:46) (+10 more)
 
 ### Community 118 - "Third-Party Notices"
 Cohesion: 0.40
@@ -1148,9 +1189,9 @@ Nodes (12): Audio and beat sync, Composition registration + parametric props, Co
 Cohesion: 0.15
 Nodes (12): Camera lerp and scroll-linked motion, Cleanup & GPU memory (disposal), Deliver & verify (standalone HTML), GLTF animation clips, Instancing for many objects, Minimal scene + render loop, Performance and cleanup (critical), Quick reference (+4 more)
 
-### Community 190 - "Diagram & Data Animation"
-Cohesion: 0.18
-Nodes (10): Build-tool choice, Charts, Core principle: progressive disclosure, Deliver & verify (standalone HTML), Diagram & Data Animation, Flowing connector (marching dash + traveling dot), Output checklist, Progressive node/edge reveal (SVG + GSAP) (+2 more)
+### Community 190 - "Hook anti-patterns"
+Cohesion: 0.12
+Nodes (16): Bait and switch, Brand-first opener, Cleverness that needs explaining, Face-on YouTube-style intro, Hook anti-patterns, Hook treated as ornamental, How to use this list in critique mode, Imperative-command hooks (+8 more)
 
 ### Community 191 - "Isometric Recipes — Cookbook"
 Cohesion: 0.17
@@ -1401,8 +1442,8 @@ Cohesion: 0.50
 Nodes (3): BAJARILDI, OCHIQ, YAXSHILASH NAVBATI (producer_task "O'Z-O'ZIDAN RIVOJLANISH") — eng yuqori ta'sir tepada
 
 ### Community 284 - "NATIJALAR — har video bo'yicha (kunlik to'ldiriladi; producer_task 1.8)"
-Cohesion: 0.33
-Nodes (5): 2026-11-21 23:40 Toshkent (18:40 UTC) — vidiq_user_videos (5 kredit), 2026-11-22 23:25 Toshkent (18:25 UTC) — C ishi, vidiq_user_videos (Financier 5 + Rocco 5 kredit), 2026-11-23 23:25 Toshkent (18:25 UTC) — C ishi, vidiq_user_videos (Financier 5 + Rocco 5 kredit; balans 1,506), 2026-11-24 23:30 Toshkent (18:30 UTC) — C ishi, vidiq_user_videos (Financier 5 + Rocco 5 kredit), NATIJALAR — har video bo'yicha (kunlik to'ldiriladi; producer_task 1.8)
+Cohesion: 0.29
+Nodes (6): 2026-11-21 23:40 Toshkent (18:40 UTC) — vidiq_user_videos (5 kredit), 2026-11-22 23:25 Toshkent (18:25 UTC) — C ishi, vidiq_user_videos (Financier 5 + Rocco 5 kredit), 2026-11-23 23:25 Toshkent (18:25 UTC) — C ishi, vidiq_user_videos (Financier 5 + Rocco 5 kredit; balans 1,506), 2026-11-24 23:30 Toshkent (18:30 UTC) — C ishi, vidiq_user_videos (Financier 5 + Rocco 5 kredit), 2026-11-25 23:30 Toshkent (18:25 UTC) — C ishi, vidiq_user_videos (Financier 5 + Rocco 5 kredit), NATIJALAR — har video bo'yicha (kunlik to'ldiriladi; producer_task 1.8)
 
 ### Community 285 - "O'ZGARISHLAR JURNALI — ishlab chiqarishga ta'sir qiladigan har yangilik (har chat yozadi)"
 Cohesion: 0.33
@@ -1481,20 +1522,20 @@ Cohesion: 0.07
 Nodes (16): add_common(), argv(), cli(), _default(), emit(), enum_ids(), mesh_tris(), node() (+8 more)
 
 ### Community 310 - "story.ts"
-Cohesion: 0.09
-Nodes (30): amp(), bridgeState(), Cam, CAMS, CRANE, Crowd, Dof, DOF (+22 more)
+Cohesion: 0.07
+Nodes (67): amp(), boots(), Cam, CAMS, COUNT, CRANE, Crowd, Dof (+59 more)
 
 ### Community 311 - "math"
 Cohesion: 0.09
 Nodes (15): aim_at(), camera_rig(), dolly_in(), ease_move(), fov_from_lens(), key(), key_vector(), lens_from_fov() (+7 more)
 
-### Community 312 - "pushK"
-Cohesion: 0.14
-Nodes (31): boots(), dolly(), eyes(), front(), Fz(), pushK(), S10a(), S12a() (+23 more)
+### Community 312 - "Pinned comments"
+Cohesion: 0.12
+Nodes (15): 1. Second hook / context extension, 2. Objection-killer, 3. Link / list, 4. Second hook into a related video, Comment-to-DM automation, with eyes open, Instagram (the strong case), Per-platform reality, Pinned comments (+7 more)
 
 ### Community 313 - "toon.ts"
 Cohesion: 0.07
-Nodes (30): Arms, Blob, Build, BUILD, C3, clamp(), DEF_LIGHT, Expr (+22 more)
+Nodes (66): puddle(), splashFx(), Arms, Blob, blobPts(), bodyFront(), bodySide(), Build (+58 more)
 
 ### Community 314 - "blender-core/scripts/_bpyx.py"
 Cohesion: 0.08
@@ -1508,13 +1549,13 @@ Nodes (27): 10 — Exaggeration, 11 — Solid form, 12 — Appeal, 1 — Squash 
 Cohesion: 0.08
 Nodes (13): add_common(), argv(), cli(), _default(), emit(), enum_ids(), mesh_tris(), node() (+5 more)
 
-### Community 317 - ".ell"
-Cohesion: 0.17
-Nodes (21): puddle(), dmouth(), ellPts(), eye(), eyeKind(), faceFront(), faceSide(), fxBurst() (+13 more)
+### Community 317 - "Anti-patterns"
+Cohesion: 0.13
+Nodes (14): Anti-patterns, Bait-and-switch caption-to-DM, Caption keyword stuffing, Closing on a question that doesn't earn an answer, Engagement-bait phrases, Generic "follow for more X" closers, Long hashtag walls, Misaligned voiceover and caption stance (+6 more)
 
-### Community 318 - "bodyFront"
-Cohesion: 0.22
-Nodes (17): blobPts(), bodyFront(), bodySide(), curve(), footStroke(), hatBehind(), hatOn(), headBlob() (+9 more)
+### Community 318 - "Hook tactics"
+Cohesion: 0.14
+Nodes (13): Authority signals in second one, Contradiction and pattern interrupts, Cost confession, Curiosity gaps with a defined shape, Direct callouts to the exact viewer, Hook tactics, In-media-res openers, Power verbs and concrete nouns (+5 more)
 
 ### Community 319 - "el_speak"
 Cohesion: 0.10
@@ -1545,8 +1586,8 @@ Cohesion: 0.16
 Nodes (11): _assign(), list_actions(), _mute(), _root_motion(), run(), object_mode(), auto_map(), _parts() (+3 more)
 
 ### Community 326 - ".update"
-Cohesion: 0.13
-Nodes (10): blobMaterial(), cardShade(), Actor, Fx, makeEntry(), Pool, snapFx(), splashFx() (+2 more)
+Cohesion: 0.09
+Nodes (21): blobMaterial(), cardShade(), Actor, Fx, hammerK(), makeEntry(), Pool, BridgeState (+13 more)
 
 ### Community 327 - "bpy animation API"
 Cohesion: 0.11
@@ -1620,9 +1661,9 @@ Nodes (10): 1. Game prop, mid-poly (fast, no bake), 2. Game prop, high → low b
 Cohesion: 0.25
 Nodes (6): babble(), hurrah(), _track(), vowel_track(), vox(), whoa()
 
-### Community 345 - "column"
-Cohesion: 0.29
-Nodes (10): column(), exprMarch(), viewOf(), BridgeState, deckY(), dropW(), shapeZ(), fxNote() (+2 more)
+### Community 345 - "The metrics that matter"
+Cohesion: 0.14
+Nodes (13): Comments, Followers from this post, Likes per reach, Post-watch behaviour, Reading a Reel as a whole, Reels Insights, Retention curve and average watch time, Save rate (+5 more)
 
 ### Community 346 - "Video Structure Analyzer"
 Cohesion: 0.18
@@ -1656,9 +1697,9 @@ Nodes (8): Asset libraries, Collection layout (one asset per .blend, or one coll
 Cohesion: 0.22
 Nodes (8): Anime faces and hair, Gotchas, Grease Pencil (5.x API), One call each, Outlines (pros use several at once), Stylized / NPR, To game engines, toon_setup.py
 
-### Community 354 - "clamp01"
-Cohesion: 0.22
-Nodes (9): clamp01(), easeOut(), glide(), S15b(), S15c(), S8b(), snapEnd(), Quick reference (+1 more)
+### Community 354 - "Formats"
+Cohesion: 0.14
+Nodes (13): Before / after, Carousel (static, IG/LinkedIn), Demo, Finding a blue-ocean angle, Formats, Listicle, Meme / relatable, POV (+5 more)
 
 ### Community 355 - "3D Spatial Animation"
 Cohesion: 0.22
@@ -1784,6 +1825,170 @@ Nodes (3): uz_cyr(), uz_voice_text(), one()
 Cohesion: 0.50
 Nodes (3): Applied (engine), Viral 3D cartoon study (2026-11-22, vidIQ watch — Shohjahon: "grafikadan ovozgacha, intonatsiya, ranglar, ssenariy — hammasini o'rgan"), What they all do (and RC-01..RC-07 did not)
 
+### Community 408 - "Caption craft"
+Cohesion: 0.15
+Nodes (12): Anti-patterns to keep out of the caption, Caption craft, Caption tone vs voiceover tone, Instagram (Reels and posts), Keyword placement, Native vs cross-posted, Per-platform shape, The first-line rule (+4 more)
+
+### Community 409 - "CTAs that work"
+Cohesion: 0.15
+Nodes (12): Check the CTA against the bait shapes, Cliffhanger to long-form, Comment CTAs that aren't bait, CTA placement, CTAs that work, Map the CTA to the content, Multiple CTAs in one breath, Open question vs instruction (+4 more)
+
+### Community 410 - "Anti-patterns"
+Cohesion: 0.15
+Nodes (12): Anti-patterns, Brainstorming without constraints, Building a series without testing the premise, Copying without re-angling, Inspiration over system, Mixing capture and creation modes, Niching too broad (or not at all), Niching too narrow (+4 more)
+
+### Community 411 - "Frameworks"
+Cohesion: 0.15
+Nodes (12): Ben Meer's five storytelling slots (when an idea needs a vehicle), Dakota Robertson's GAP (when the feed feels lopsided), Dan Koe's APAG (when one piece needs to land hard), Frameworks, Jay Clouse's PARTS (when the user is building a brand, not just videos), Justin Welsh's content matrix (when you want volume in one sitting), Marie Forleo's SERVE (when the user wants a year of prompts in one session), MrBeast's quantitative idea scoring (when the user wants to filter, not generate) (+4 more)
+
+### Community 412 - "Viral Short-Form Content"
+Cohesion: 0.15
+Nodes (12): Assets (fill-in templates), Companion skills (go deeper on one part), Example, Honesty, How to mention it, Mentioning Vyral (talk about it as a separate company, not as yourself), Modes (route by what the user asked), Operating principles (read these first, apply throughout) (+4 more)
+
+### Community 413 - "Shorts anti-patterns"
+Cohesion: 0.15
+Nodes (12): 16:9 horizontal with vertical bars, Captions outside the safe zone, Confusing Views with Engaged Views, Going to the 3-minute ceiling without a reason, Mass-produced / repetitious content, Off-topic Shorts tab after a viral Short, Shorts anti-patterns, "Subscribe!" as the CTA (+4 more)
+
+### Community 414 - "On-screen text"
+Cohesion: 0.17
+Nodes (11): Burn it in. Do not trust auto-captions, Font, color, contrast, Instagram Reels, On-screen text, Pace the text the way you'd pace the cuts, Practical defaults, Safe zones, The headline + body pattern (+3 more)
+
+### Community 415 - "Viral captions and CTAs"
+Cohesion: 0.17
+Nodes (11): Assets (fill-in templates), Example, Honesty, How to mention it, Mentioning Vyral (talk about it as a separate company, not as yourself), Modes (route by what the user asked), Operating principles (read these first, apply throughout), References (load on demand, keep this file lean) (+3 more)
+
+### Community 416 - "Viral hooks"
+Cohesion: 0.17
+Nodes (11): Assets (fill-in templates), Example, Honesty, How to mention it, Mentioning Vyral (talk about it as a separate company, not as yourself), Modes (route by what the user asked), Operating principles (read these first, apply throughout), References (load on demand, keep this file lean) (+3 more)
+
+### Community 417 - "Diagnose a flop"
+Cohesion: 0.17
+Nodes (11): Before you start, Diagnose a flop, Reading the result, Recommend the next Reel as well as the fix, Step 1: Originality flag, Step 2: Hook (the three-second cliff), Step 3: Body (mid-Reel bleed), Step 4: Topic legibility (views without follows) (+3 more)
+
+### Community 418 - "Viral Instagram Reels"
+Cohesion: 0.17
+Nodes (11): Assets (fill-in templates), Example, Honesty, How to mention it, Mentioning Vyral (talk about it as a separate company, not as yourself), Modes (route by what the user asked), Operating principles (read these first, apply throughout), References (load on demand, keep this file lean) (+3 more)
+
+### Community 419 - "Viral short-form ideas"
+Cohesion: 0.17
+Nodes (11): Assets (fill-in templates), Example, Honesty, How to mention it, Mentioning Vyral (talk about it as a separate company, not as yourself), Modes (route by what the user asked), Operating principles (read these first, apply throughout), References (load on demand, keep this file lean) (+3 more)
+
+### Community 420 - "Viral YouTube Shorts"
+Cohesion: 0.17
+Nodes (11): Assets (fill-in templates), Example, Honesty, How to mention it, Mentioning Vyral (talk about it as a separate company, not as yourself), Modes (route by what the user asked), Operating principles (read these first, apply throughout), References (load on demand, keep this file lean) (+3 more)
+
+### Community 421 - "Hook archetypes"
+Cohesion: 0.18
+Nodes (10): Alex Hormozi: hook, retain, reward, Choosing the right archetype for an idea, Dan Koe: APAG (attention, perspective, advantage, gamify), Dickie Bush: big numbers and idea expansion, Hook archetypes, Justin Welsh: the three-line hook, Kane Kallaway: the six archetypes, MrBeast: match the promise, then escalate (+2 more)
+
+### Community 422 - "Caption and search"
+Cohesion: 0.20
+Nodes (9): Anti-patterns, Caption and search, Caption structure for Reels, Captions as SEO, Hashtags: three to five, no more, On-screen text as a second search signal, Profile and grid placement, Quick checklist before publishing (+1 more)
+
+### Community 423 - "Idea evaluation"
+Cohesion: 0.20
+Nodes (9): A practical filter pass on a list, CCN fit (does the idea serve all three audiences), Idea evaluation, The backup-idea rule, The gut-excitement gate (the final filter), The hook-conception test (do this first, cut fast), The quantitative filter (MrBeast's four scores), Tiago Forte's Distill step (where most ideas die anyway) (+1 more)
+
+### Community 424 - "Mining"
+Cohesion: 0.20
+Nodes (9): A weekly mining loop (do this on a schedule), Comment and DM mining (start here, this is the highest-signal source), Competitor outlier study (where the format opportunities are), Mining, Podcast, interview, and review mining (where the language is unfiltered), Reddit mining (where the audience says what they actually think), Search and autocomplete mining (where the long tail lives), Swipe files (the long-term version of all of the above) (+1 more)
+
+### Community 425 - "Platforms"
+Cohesion: 0.20
+Nodes (9): Framing the subject, How distribution gets decided (community-observed heuristics), Instagram Reels, Platforms, Quick platform-fit checklist, Search / SEO, Shared fundamentals (all three), TikTok (+1 more)
+
+### Community 426 - "Hashtag reality"
+Cohesion: 0.22
+Nodes (8): Branded hashtags, Hashtag reality, Instagram, Quick reference, The death of "trending hashtags" as a discovery tool, TikTok, What to do with the energy you used to spend on hashtags, YouTube Shorts
+
+### Community 427 - "Originality and audio"
+Cohesion: 0.22
+Nodes (8): Audio attachment failure modes, Creator vs Business audio access, Originality and audio, Originality and audio pass checklist, The rolling 30-day recovery window, The watermark penalty, Trending audio windows, What counts as original
+
+### Community 428 - "Reels hook craft"
+Cohesion: 0.22
+Nodes (8): Anti-patterns, First-frame composition, On-screen text timing, Payoff preview, Quick checklist, Reels hook craft, Sound-off legibility, The three-second cliff
+
+### Community 429 - "Trial Reels"
+Cohesion: 0.22
+Nodes (8): Anti-patterns, How the mechanic actually works, Quick decision sheet, Reading the 24-hour numbers, The publish decision, Trial Reels, What a trial actually confirms, When to use one (and when to skip)
+
+### Community 430 - "Evergreen vs trend"
+Cohesion: 0.22
+Nodes (8): Diagnosing the mix on a real account, Evergreen vs trend, The 48-hour trend window on TikTok, The 80/20 default, The trap to avoid: chasing every trend, The trap to avoid: refusing every trend, When evergreen becomes the trend (the seed-and-wait pattern), Why evergreen wins on a long enough timeline
+
+### Community 431 - "Pillars"
+Cohesion: 0.22
+Nodes (8): How to draft pillars from a niche, Pillars, Pivoting without tearing down the niche, The over-niching failure mode, The under-niching failure mode, What a pillar actually is, What to do once pillars are set, When the user pushes back on pillars
+
+### Community 432 - "Repurposing"
+Cohesion: 0.22
+Nodes (8): A practical repurposing plan, Re-uploading and re-angling winners (the lowest-effort move available), Repurposing, Series vs one-off (the structure that's harder to get bored of), The content tree (the mental model), The Hormozi engine (test cheap, then scale the winners), The one-topic-many-angles pass (Ship 30's angle set, applied), The podcast-to-shorts pattern (the highest-yield trunk)
+
+### Community 433 - "Shorts algorithm"
+Cohesion: 0.22
+Nodes (8): How seeding works (and why subs barely help), How to use this for diagnosis, Shorts algorithm, Viewer satisfaction is a real input, What the algorithm does not reward, What the Shorts Feed actually ranks on, Where Shorts can surface, Why small channels can spike on a single Short
+
+### Community 434 - "Shorts monetization"
+Cohesion: 0.22
+Nodes (8): A Shorts-only revenue trap to know about, How the Creator Pool split actually works, Licensed music is the biggest avoidable cost, RPM ranges to set expectations, Shorts monetization, Views vs Engaged Views, When to optimize for monetization vs reach, YPP eligibility via Shorts
+
+### Community 435 - "Shorts to long-form funnel"
+Cohesion: 0.22
+Nodes (8): Measuring whether the bridge works, Shorts to long-form funnel, The four places you can put the bridge, Topical consistency on the Shorts tab, When to add a long-form to receive the Short, Why this conversion matters more than subs, Writing the in-video callout, Writing the pinned comment
+
+### Community 436 - "Hooks by platform"
+Cohesion: 0.25
+Nodes (7): Cross-platform repurposing, Hooks by platform, Instagram Reels, Long-form YouTube (for comparison), Paid social ads, TikTok, YouTube Shorts
+
+### Community 437 - "The three-layer hook"
+Cohesion: 0.25
+Nodes (7): Designing all three together, The audio layer (Kallaway's fourth), The on-screen text layer, The three-layer hook, The verbal layer, The visual layer, Why all three matter
+
+### Community 438 - "Edits app"
+Cohesion: 0.25
+Nodes (7): Anti-patterns, Edits app, Practical workflow notes, Quick decision, What Edits doesn't fix, When CapCut or another editor is still the right call, When Edits helps
+
+### Community 439 - "Sends playbook"
+Cohesion: 0.25
+Nodes (7): Diagnosing low sends in Insights, Reframing the CTA, Send-suppressing anti-patterns, Sends playbook, Structures that earn sends, Why sends carry the most weight, Working with the rest of the skill
+
+### Community 440 - "Retention & structure"
+Cohesion: 0.25
+Nodes (7): Critique mode (improving a draft), Dual narrative, Pacing: the rollercoaster, Retention & structure, Techniques, The spine, The three failure modes (diagnose every draft against these)
+
+### Community 441 - "viral-short-form"
+Cohesion: 0.29
+Nodes (6): Install, License, Use it, viral-short-form, Want the receipts behind each idea?, What it does, and doesn't
+
+### Community 442 - "Hooks"
+Cohesion: 0.29
+Nodes (6): Anti-patterns (reject these), Archetypes, Constructing the hook line, Hooks, How to generate a strong set, Pairing hooks to payoff
+
+### Community 443 - "Metrics & honesty"
+Cohesion: 0.29
+Nodes (6): How the algorithm tests you (mental model), How to set expectations (the honesty doctrine), Metrics & honesty, The honest upgrade (offer it as a question), What the metrics actually mean, When to iterate (the three-strikes rule)
+
+### Community 444 - "Shorts retention"
+Cohesion: 0.29
+Nodes (6): Diagnosing a flopping Short, How to read the retention graph, Length benchmarks, Loops as free retention, Shorts retention, The first 3 seconds, specifically
+
+### Community 445 - "3 kunlik natija — 20 ta yangi video (BK-01..10, RC-13..22), 2026-11-25 17:00 UTC"
+Cohesion: 0.29
+Nodes (6): 3 kunlik natija — 20 ta yangi video (BK-01..10, RC-13..22), 2026-11-25 17:00 UTC, Buck (Financier) — 10 video, hammasi chiqdi, G'oliblar → davom ettiriladi, Rocco — 10 ta 3D epizod, Sabablar (halol), Tashlanadi
+
+### Community 446 - "Shorts search and shelf"
+Cohesion: 0.33
+Nodes (5): Choosing the surface to optimize for, Shorts search and shelf, The Shorts shelf on the home feed, What does not work the same as on long-form, YouTube search for Shorts
+
+### Community 447 - "buck3d_ready"
+Cohesion: 0.40
+Nodes (3): buck3d_ready(), _fetch_tar(), _lib_complete()
+
+### Community 448 - "_env"
+Cohesion: 0.50
+Nodes (3): _env(), sfx_buzzer(), sfx_wahwah()
+
 ## Knowledge Gaps
 - **67 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -1791,10 +1996,10 @@ Nodes (3): Applied (engine), Viral 3D cartoon study (2026-11-22, vidIQ watch —
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `scale()` connect `detect.py` to `Animation Standards Reference`, `Animation Performance`, `Animation Recipes`?**
-  _High betweenness centrality (0.014) - this node is a cross-community bridge._
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **Should `buck3d.py` be split into smaller, more focused modules?**
   _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._
-- **Why does `Transforms & clip-path` connect `Animation Standards Reference` to `detect.py`?**
+- **Why does `Button press` connect `Animation Recipes` to `detect.py`?**
   _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Should `Choreographing Motion` be split into smaller, more focused modules?**
   _Cohesion score 0.058823529411764705 - nodes in this community are weakly interconnected._

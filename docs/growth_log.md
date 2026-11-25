@@ -143,3 +143,9 @@ O'LCHOV: v6.18 — keyingi Short qc_gate 14_empty_panel PASS va kontakt-varaqda 
 O'RGANILDI: (1) YouTube Shorts okt-2026 "originality" yangilanishi — qayta yuklangan/minimal tahrirli Shortlar tarqatilishi kesildi (Android Headlines, MediaPost; YouTube rasmiy bloglarida tasdiqni tekshirish kerak). (2) YPP "inauthentic content" (2026-07-16): moliya kabi sezgir mavzuda AI persona — demonetizatsiya xavfi (TechRepublic, Android Headlines 2026-07). Buck ekspert emas, maslahat bermaydi — qoida saqlanadi; har videoda o'z tadqiqot + manba.
 O'ZGARTIRILDI: U-5 da birinchi marta `auto_pool: "scene"` (dvigatel v6.18) — avto-kesimlar faqat o'z sahna klipidan; how_made "Step 1/2/3" mexanizm + kostyum gag'i; FTC qoidasi + shtat soni (28/90) — huquqiy fakt videoda birinchi marta.
 O'LCHOV: 26-noy C — U-5 24 soatlik ko'rish vs U-3 (trend) va print_100 (trendsiz); auto_pool kontakt-varaqda "sahnaga mos bo'lmagan kadr" soni (U-3 da 1 ta edi).
+
+## 2026-11-25 C (23:30 Toshkent)
+KECHA vs BUGUN: bugungi 2 Financier Short (U-3 trend 5 ko'rish, print_100 0 — 6 soatda) kechagidan YOMON (kecha nickel 6 soatda 31, ten_bill 3 soatda 88). Sabab (dalil bilan): ikkalasi YouTube'da bir paytda ochilgan (12:00:05 va 12:00:29 UTC) — print_100 publishAt navbat surilganda yangilanmagan. Trend gipotezasi (U-3 ≥3x) hali YUTQAZDI, lekin sinov toza emas (burst-2).
+O'RGANILDI: BK-03 "Paying Off the US Debt at $1M a Day" 887 — gipotetik katta raqam 3-kun ham №1; bank_fees skit 24 soatda 6 → kichik raqamli skit TO'XTAT.
+O'ZGARTIRILDI: backlog tepasiga publishAt tekshiruvi (har YT yuklashdan oldin draft_update + keyin publishedAt tekshiruvi, ≥3 soat oraliq). script_bank SHOSHILINCH: ICSC $124B (kamaydi), Adobe BF $12.9B.
+O'LCHOV: 26-noy C — U-5 (yolg'iz, oraliqli) 24 soatlik ko'rish vs U-3/print_100; publishedAt slotga mosmi.

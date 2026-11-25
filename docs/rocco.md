@@ -73,6 +73,7 @@ Rocco ovozini yaratish (ElevenLabs voice design, bir marta) → yangi theme + te
 | sana (Toshkent) | obunachi | video | ko'rish | izoh |
 |---|---|---|---|---|
 | 2026-11-21 23:50 | 0 | 0 | 0 | hali video chiqmagan; r01 v2 Buffer 22:00 UTC (6b01e0a5…). Rocco vidIQ balansi 95/150 |
+| 2026-11-25 23:30 | 13 | 12 public | 4,187 (+1,608) | 'Hi Mom' 1,210, Scam or Legit #1 345, '90% Off Red Flags' 6 (20 soat); P1 #2 bugun 17:40 UTC (m_AhaCKd97s). Eng yaxshi hook: matn-firibgarlik + o'yin → ertaga 2x |
 
 
 ## OVOZ v2 (2026-11-22, Shohjahon tanladi)

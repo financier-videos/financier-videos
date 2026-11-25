@@ -85,3 +85,23 @@ Qolganlar +0..+31. Jami (videolar yig'indisi): **7,728** (+465 kechagi 7,263 dan
 Rocco YouTube: "Hi Mom" Text Scam 834 (4 soat!), Scam or Legit? P1#1 50 (1.3 soat), Free GTA 6 1,313 (+146), Penny Plays Dumb 1,285 (+176); 23-noy burst 3 tasi 5/1/1 (o'smadi), "She Won a Free TV" 0. Jami 2,579 (+297); obunachi 12 (+6).
 Instagram (17–24-noy, 7 kun): financier424 — 40 follower (+2), 2,582 views, reach 2,009; redfrocco — 12 follower, 3,102 views, reach 2,213. finansist424 — ulanmagan. IG bank_fees Reel chiqdi: https://www.instagram.com/reel/DgIlW-Aicj_/ (vidIQ, AI belgisi).
 XULOSA: (1) Burst gipotezasi QISMAN tasdiqlandi: 23-noy burst videolari 24 soatda 124–295 (22-noy trend videolari ~960–1,300); Rocco burst 3 tasi 24 soatda ham 1–5 — burst bilan yuklangan Rocco videolari "o'lik". Bugungi oraliqli Rocco "Hi Mom" 4 soatda 834 → oraliq qoidasi ishlaydi. (2) Financier bugungi 4 video (tanga/pul qog'oz mavzulari, trendsiz) sekin: 6 soatda 31 — mavzu trendsiz va raqam kichik ("13.78 cents"). Trend+katta raqam ($ billion/trillion) 22-noy 1,100–1,300 bilan solishtirganda 10x past → ertaga navbatdagi qoralamalar oldidan 1 trend Short (Thanksgiving: AAA 81.5M, aviachipta $800) birinchi.
+
+## 2026-11-25 23:30 Toshkent (18:25 UTC) — C ishi, vidiq_user_videos (Financier 5 + Rocco 5 kredit)
+| chiqqan (UTC) | video | ko'rish 24-noy 18:20 | ko'rish 25-noy 18:20 | farq |
+|---|---|---|---|---|
+| 11-24 11:00 | Paying Off the US Debt at $1 Million a Day (BK-03) | — | **887** | eng yaxshi (gipotetik katta raqam) |
+| 11-23 11:00 | I Tried to Spend Elon Musk's $869 Billion | 295 | 453 | +158 |
+| 11-23 17:00 | Who Makes the Most Money Per Second? | 157 | 188 | +31 |
+| 11-24 02:00 | 32.5 Million People Paid Before GTA 6 Existed | — | 178 | |
+| 11-24 15:00 | The $10 Bill Dies First: 5.7 Years | 88 | 128 | +40 |
+| 11-24 12:00 | A Nickel Costs 13.78 Cents to Make | 31 | 43 (30 soat) | +12 |
+| 11-24 17:00 | The Last Penny Cost 3.69 Cents (BK-09) | 24 | 52 | +28 |
+| 11-24 18:00 | The Bank Charged Me $4.86 (bank_fees) | 7 | **6** (24 soat) | o'lik |
+| 11-25 12:00 | 81.5 Million Americans. One Holiday. (U-3, TREND) | — | **5** (6 soat) | yangi — juda past |
+| 11-25 12:00 | It Costs 11.3 Cents to Print a $100 Bill (print_100) | — | **0** (6 soat) | yangi — juda past |
+| 11-25 18:00 | 1748: Why Dollar Is a Buck (buck_1748) | — | ro'yxatda hali yo'q | yangi |
+Jami (videolar yig'indisi, 30 ta public): **9,357** (+1,629 kechagi 7,728 dan; o'sishning katta qismi BK-03 887). Obunachi: 4 (0). vidiq_user_channels viewCount 9,335.
+Rocco YouTube: "Hi Mom" 1,210, Scam or Legit #1 345, Free GTA 6 1,315, Penny Plays Dumb 1,295; "90% Off… Red Flags" 6 (20 soat); P1 #2 bugun 17:40 UTC chiqdi (m_AhaCKd97s). Jami 4,187 (+1,608); obunachi 13 (+1).
+Instagram financier424 (18–25-noy, 7 kun): 43 follower (+3), 2,771 views, reach 2,164. finansist424 — ulanmagan. IG U-3 Reel — shu ishda (YouTube havolasidan, AI belgisi).
+vidIQ balansi: 858 (808 renewable + 50), yangilanish 21-dek — 26 kunga kuniga ≤33 kredit (sprint byudjeti 60 dan past!).
+XULOSA: (1) U-3 TREND gipotezasi (trend + katta raqam ≥3x) hozircha YUTQAZDI: 6 soatda 5 ko'rish; print_100 — 0. Ikkalasi ham 12:00 UTC da 25 soniya farq bilan chiqdi (publishAt ikkalasida 07:00/10:00 ET bo'lishi kerak edi — print_100 publishedAt 12:00:29 UTC = 07:00 ET!). Ya'ni ikki video bir paytda ochildi → bir-birini bo'ldi (burst 2). (2) bank_fees 24 soatda 6 — "skit + kichik raqam" o'lik. (3) G'olib yana gipotetik katta raqam (BK-03 887, BK-02 453). (4) Ertaga: U-5 (fake 50% off, trend mexanizm) 07:00 ET, keyin ≥3 soat oraliq; publishAt'larni yuklashdan oldin tekshirish.
