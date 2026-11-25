@@ -1,0 +1,10 @@
+{"title":"SCAM OR LEGIT?","sub":"3 texts. Only 1 is real.","end_sub":"Did #1 get you?","brand":"RED FLAG ROCCO",
+ "hook":"hook","end":"end",
+ "rounds":[
+  {"q":"r1q","a":"r1a","sender":"+1 (888) 555-0147","verdict":"scam","tell":"call 1-888-555-0147",
+   "msgs":["FRAUD ALERT: A purchase of $1,299.00 was attempted on your card. If this was NOT you, call 1-888-555-0147 immediately."]},
+  {"q":"r2q","a":"r2a","sender":"+1 (213) 555-0164","verdict":"scam","tell":"$300/day",
+   "msgs":["Hi! We're hiring remote staff. Earn $300/day just liking videos. 30 min a day. Reply YES to start."]},
+  {"q":"r3q","a":"r3a","sender":"Smile Dental","verdict":"real","tell":"Reply C to confirm",
+   "msgs":["Reminder: your cleaning is Thursday at 3:30 PM. Reply C to confirm or call the office to reschedule."]}
+ ]}
