@@ -1,0 +1,338 @@
+{
+ "format": "short",
+ "sfx": true,
+ "look": "fullbleed",
+ "grade": "cool",
+ "captions": "words",
+ "headline": "hook",
+ "auto_shots": 1.8,
+ "auto_pool": "scene",
+ "structure": "how_made",
+ "topic": 3,
+ "source": "Sources: FTC 16 CFR 233.1; Massachusetts 940 CMR 6.05; WalletHub Black Friday study (Nov 2025)",
+ "buck_voice": {
+  "variant": "D",
+  "model": "eleven_v3",
+  "settings": {
+   "speed": 1.1
+  }
+ },
+ "benchmarks": [
+  "8Sp2jBDdTDM \u2014 paradoks hook 0\u20133 s (tag 'tug'ildi' \u2014 narx uch hafta oldin yasalgan), mexanizm 3 qadamda",
+  "ftA18KGBrwM \u2014 har qadamga o'z tasviri va raqami, oxirida izoh uyg'otadigan savol",
+  "YANGI: Hypothetically 'Fake 50% Off tag' trendi (201 obunachi \u2192 1.05M, daily_trends 25-noy) mexanikasi \u2014 Step one/two/three sanog'i + narxning 'kostyum' gag'i, oxirgi 5 videoda yo'q (matn/kadr ko'chirilmadi)"
+ ],
+ "scenes": [
+  {
+   "text": "This '50% OFF' tag was born three weeks ago.",
+   "say": "[conspiratorial] This fifty-percent-off tag... was born three weeks ago.",
+   "head": "HOW A FAKE '50% OFF' TAG IS BORN",
+   "stat": "50% OFF",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/u5/mall_bf.mp4",
+     "at": 0,
+     "start": 0,
+     "kb": "in"
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
+     "at": 1.5,
+     "start": 4
+    },
+    {
+     "broll": "/tmp/fin/bg/u5/mall_bf.mp4",
+     "at": 3.0,
+     "start": 5
+    }
+   ],
+   "sfx": [
+    "impact@0.0"
+   ]
+  },
+  {
+   "text": "Step one. October: the price is $50.",
+   "say": "Step one. October. The price is fifty bucks.",
+   "stat": "$50",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
+     "at": 0,
+     "start": 10,
+     "kb": "in"
+    },
+    {
+     "broll": "/tmp/fin/bg/u5/cal.mp4",
+     "at": 1.5,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cart_pov.mp4",
+     "at": 3.0,
+     "start": 16
+    }
+   ],
+   "mascot": {
+    "mood": "smug",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Step two. Early November, the price hits the gym. $100.",
+   "say": "Step two. Early November... the price hits the gym. A hundred dollars.",
+   "stat": "$100",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/u5/cal.mp4",
+     "at": 0,
+     "start": 4,
+     "kb": "in"
+    },
+    {
+     "broll": "/tmp/fin/bg/u5/escalator.mp4",
+     "at": 1.5,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/u5/cal.mp4",
+     "at": 3.0,
+     "start": 7
+    }
+   ],
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner",
+    "act": "doubletake",
+    "act_at": 1.4
+   },
+   "sfx": [
+    "boing@1.6"
+   ]
+  },
+  {
+   "text": "Step three. Black Friday: 'Was $100. Now $50!'",
+   "say": "Step three. Black Friday! Was a hundred... NOW fifty!",
+   "vs": {
+    "left": "$100",
+    "left_label": "WAS",
+    "left_sub": "for about 3 weeks",
+    "right": "$50",
+    "right_label": "NOW",
+    "right_sub": "Half off!",
+    "win": "right",
+    "at": [
+     0.6,
+     2.2
+    ]
+   }
+  },
+  {
+   "text": "Same fifty bucks. Just wearing a costume.",
+   "say": "[deadpan] Same fifty bucks. Just wearing a costume.",
+   "land": 0.4,
+   "chart": {
+    "labels": [
+     "OCT",
+     "EARLY NOV",
+     "BLACK FRI"
+    ],
+    "values": [
+     50,
+     100,
+     50
+    ],
+    "texts": [
+     "$50",
+     "$100",
+     "$50"
+    ],
+    "at": [
+     0.2,
+     0.7,
+     1.2
+    ],
+    "hi": 2
+   },
+   "mascot": {
+    "mood": "laugh",
+    "pos": "corner",
+    "act": "deadpan",
+    "act_at": 0.3
+   }
+  },
+  {
+   "text": "Is that allowed? The FTC's pricing guide says the 'was' price must be real.",
+   "say": "Is that even allowed? The F.T.C.'s pricing guide says the 'was' price has to be real.",
+   "show_source": "FTC Guides Against Deceptive Pricing, 16 CFR 233.1",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/u5/magnify.mp4",
+     "at": 0,
+     "start": 0,
+     "kb": "in"
+    },
+    {
+     "broll": "/tmp/fin/bg/u5/magnify.mp4",
+     "at": 1.5,
+     "start": 4
+    },
+    {
+     "broll": "/tmp/fin/bg/u5/magnify.mp4",
+     "at": 3.0,
+     "start": 7
+    }
+   ],
+   "mascot": {
+    "mood": "confused",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Offered openly, for a 'reasonably substantial period.' Not a weekend.",
+   "say": "Offered openly... for a reasonably substantial period. Not one weekend.",
+   "stat": "NOT 1 WEEKEND",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
+     "at": 0,
+     "start": 0,
+     "kb": "in"
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/pay_terminal.mp4",
+     "at": 1.5,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
+     "at": 3.0,
+     "start": 3.5
+    }
+   ],
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "Massachusetts even counts: 28 days out of the last 90.",
+   "say": "Massachusetts even counts the days. Twenty-eight out of the last ninety.",
+   "stat": "28 / 90 DAYS",
+   "show_source": "Massachusetts 940 CMR 6.05",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/u5/cal.mp4",
+     "at": 0,
+     "start": 2,
+     "kb": "in"
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
+     "at": 1.5,
+     "start": 2
+    },
+    {
+     "broll": "/tmp/fin/bg/u5/cal.mp4",
+     "at": 3.0,
+     "start": 8
+    }
+   ],
+   "sfx": [
+    "tick@0.4",
+    "tick@0.9",
+    "tick@1.4"
+   ]
+  },
+  {
+   "text": "Last Black Friday, WalletHub tracked 3,100 deals.",
+   "say": "Last Black Friday, WalletHub tracked thirty-one hundred deals.",
+   "stat": "3,100",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/u5/escalator.mp4",
+     "at": 0,
+     "start": 3,
+     "kb": "in"
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/online_card.mp4",
+     "at": 1.5,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/u5/escalator.mp4",
+     "at": 3.0,
+     "start": 7
+    }
+   ],
+   "mascot": {
+    "mood": "happy",
+    "pos": "corner"
+   }
+  },
+  {
+   "text": "36% weren't cheaper than in early November. Some cost MORE.",
+   "say": "Thirty-six percent... weren't cheaper than in early November. Some cost MORE.",
+   "beat": 0.3,
+   "stat": "36%",
+   "show_source": "WalletHub Black Friday study, Nov 2025: 3,100 items vs Oct 27\u2013Nov 17 prices",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/u5/iceberg2.mp4",
+     "at": 0,
+     "start": 0,
+     "kb": "in"
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 1.5,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/u5/iceberg2.mp4",
+     "at": 3.0,
+     "start": 5
+    }
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "bonk",
+    "act_at": 1.6
+   },
+   "sfx": [
+    "impact@0.3"
+   ]
+  },
+  {
+   "text": "So... ever checked the price a month before?",
+   "say": "So... ever checked the price a month before?",
+   "land": 0.3,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/phone_scroll.mp4",
+     "at": 0,
+     "start": 0,
+     "kb": "in"
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/online_card.mp4",
+     "at": 1.5,
+     "start": 5
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/phone_scroll.mp4",
+     "at": 3.0,
+     "start": 3.5
+    }
+   ],
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   },
+   "sfx": [
+    "ding@1.2"
+   ]
+  }
+ ]
+}
