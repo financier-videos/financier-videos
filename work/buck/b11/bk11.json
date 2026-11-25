@@ -10,21 +10,23 @@
   ]
  ],
  "tail": 0.6,
- "speed": 1.06,
+ "speed": 1.15,
  "amb": "room",
  "grade": "gold",
+ "topline": [
+  {
+   "t": "$1 BILLION AT $7.25/HOUR",
+   "at": 2.5
+  }
+ ],
  "lines": [
   [
    "B",
-   "[game announcer] New game! Earn one billion dollars... at minimum wage."
+   "[game announcer] [fast] New game: earn a billion dollars at minimum wage. Spoiler: the answer has five digits. In years."
   ],
   [
    "B",
-   "[excited] Seven dollars and twenty-five cents an hour. Let's go!"
-  ],
-  [
-   "B",
-   "[fast] One day: fifty-eight bucks. One year: fifteen thousand."
+   "[fast] Seven twenty-five an hour. One day: fifty-eight bucks. One year: fifteen thousand."
   ],
   [
    "B",
@@ -32,7 +34,7 @@
   ],
   [
    "B",
-   "[nervous] That's... not even a tenth of one percent of a billion."
+   "[nervous] That's not even a tenth of one percent of a billion."
   ],
   [
    "B",
@@ -40,22 +42,23 @@
   ],
   [
    "B",
-   "[deadpan] Stonehenge is only about five thousand years old. You'd have to clock in before humans invented farming."
+   "[deadpan] Stonehenge is only about five thousand years old. You'd clock in before humans invented farming."
   ],
   [
    "B",
-   "[sneaky] So how does anyone get a billion? Not by trading hours for dollars..."
+   "[deadpan] Your retirement party? Sixty-six thousand years late. Bring a cake."
   ],
   [
    "B",
-   "[whisper] ...so, new game. Earn one billion dollars... at minimum wage."
+   "[whisper] ...so, new game. Earn a billion dollars... at minimum wage."
   ]
  ],
  "hot": [
   "BILLION",
   "MINIMUM",
   "YEARS",
-  "FARMING"
+  "FARMING",
+  "CAKE"
  ],
  "cap_y": 0.93,
  "pool": [
@@ -76,31 +79,37 @@
    "gain": 0.3
   },
   {
-   "line": 2,
-   "frac": 0.3,
+   "line": 1,
+   "frac": 0.35,
    "name": "coin",
    "gain": 0.3
   },
   {
-   "line": 3,
+   "line": 1,
+   "frac": 0.65,
+   "name": "coin",
+   "gain": 0.3
+  },
+  {
+   "line": 2,
    "frac": 0.6,
    "name": "coin",
    "gain": 0.3
   },
   {
-   "line": 5,
+   "line": 4,
    "frac": 0.0,
    "name": "subboom",
    "gain": 0.35
   },
   {
-   "line": 6,
+   "line": 5,
    "word": "farming",
    "name": "boing",
    "gain": 0.3
   }
  ],
- "sources": "Federal minimum wage $7.25/h (US DOL); 2,080 h/year full time; $1B/$7.25 = 137.9M h = 66,313 years; Stonehenge ~5,000 years (English Heritage); farming ~12,000 years ago",
+ "sources": "Federal minimum wage $7.25/h (US DOL); 2,080 h/year; $1B/$7.25 = 137.9M h = 66,313 years; Stonehenge ~5,000 years (English Heritage); farming ~12,000 years ago",
  "shots": [
   {
    "kind": "counter",
@@ -108,7 +117,7 @@
    "from": 0,
    "start": 1000000000.0,
    "to": 1000000000.0,
-   "dur": 1.2,
+   "dur": 1.0,
    "label": "EARN $1,000,000,000",
    "size": 110,
    "buck": {
@@ -122,32 +131,28 @@
    "hook": "$1 BILLION AT MINIMUM WAGE?"
   },
   {
-   "kind": "host",
-   "line": 0,
-   "from": 0.248,
-   "buck": {
-    "mood": "proud",
-    "h": 1300,
-    "y": 1.04
-   },
-   "_auto": true,
-   "bg": "/tmp/fin/bg/bank/city_night.mp4",
-   "bg_start": 0.5,
-   "dim": 20
-  },
-  {
-   "kind": "host",
+   "kind": "kinetic",
    "line": 0,
    "from": 0.55,
-   "buck": {
-    "mood": "proud",
-    "h": 1300,
-    "y": 1.04
-   },
-   "bg": "/tmp/fin/bg/gta/clock.mp4",
-   "bg_start": 0.5,
-   "dim": 20,
-   "prop": "$7.25/HR"
+   "words": [
+    {
+     "t": "??,???",
+     "size": 150,
+     "c": [
+      255,
+      205,
+      60
+     ],
+     "font": "Pixel"
+    },
+    {
+     "t": "YEARS",
+     "size": 110,
+     "font": "Pixel"
+    }
+   ],
+   "bg": "/tmp/fin/bg/bank/coins_fall.mp4",
+   "bg_start": 1.0
   },
   {
    "kind": "counter",
@@ -155,10 +160,9 @@
    "from": 0,
    "start": 0,
    "to": 7.25,
-   "dur": 1.2,
+   "dur": 0.8,
    "label": "PER HOUR",
-   "ticker": "+$7.25",
-   "rate": 1.5,
+   "size": 110,
    "buck": {
     "x": 0.82,
     "y": 0.99,
@@ -166,43 +170,16 @@
     "mood": "happy"
    },
    "bg": "/tmp/fin/bg/bank/coins_fall.mp4",
-   "bg_start": 1.0
-  },
-  {
-   "kind": "host",
-   "line": 1,
-   "from": 0.27,
-   "buck": {
-    "mood": "happy",
-    "h": 1300,
-    "y": 1.04
-   },
-   "_auto": true,
-   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
-   "bg_start": 2.8,
-   "dim": 20
-  },
-  {
-   "kind": "host",
-   "line": 1,
-   "from": 0.6,
-   "buck": {
-    "mood": "happy",
-    "h": 1300,
-    "y": 1.04
-   },
-   "bg": "/tmp/fin/bg/bank/coffee_pour.mp4",
-   "bg_start": 2.0,
-   "dim": 20
+   "bg_start": 3.0
   },
   {
    "kind": "counter",
-   "line": 2,
-   "from": 0,
+   "line": 1,
+   "from": 0.35,
    "start": 0,
    "to": 58,
-   "dur": 1.2,
-   "label": "ONE DAY \u00b7 DAY 1",
+   "dur": 0.8,
+   "label": "ONE DAY",
    "size": 110,
    "buck": {
     "x": 0.82,
@@ -210,31 +187,17 @@
     "h": 560,
     "mood": "proud"
    },
-   "bg": "/tmp/fin/bg/bank/coins_fall.mp4",
+   "bg": "/tmp/fin/bg/bank/coffee_pour.mp4",
    "bg_start": 2.0
   },
   {
-   "kind": "host",
-   "line": 2,
-   "from": 0.225,
-   "buck": {
-    "mood": "happy",
-    "h": 1300,
-    "y": 1.04
-   },
-   "_auto": true,
-   "bg": "/tmp/fin/bg/bank/coffee_pour.mp4",
-   "bg_start": 5.1,
-   "dim": 20
-  },
-  {
    "kind": "counter",
-   "line": 2,
-   "from": 0.5,
+   "line": 1,
+   "from": 0.65,
    "start": 58,
    "to": 15080,
-   "dur": 1.4,
-   "label": "ONE YEAR \u00b7 YEAR 1",
+   "dur": 1.0,
+   "label": "ONE YEAR",
    "size": 110,
    "buck": {
     "x": 0.82,
@@ -243,78 +206,29 @@
     "mood": "proud"
    },
    "bg": "/tmp/fin/bg/bank/cash_stacks.mp4",
-   "bg_start": 3.0
+   "bg_start": 7.0
+  },
+  {
+   "kind": "counter",
+   "line": 2,
+   "from": 0,
+   "start": 15080,
+   "to": 678600,
+   "dur": 1.6,
+   "label": "A WHOLE CAREER \u00b7 45 YEARS",
+   "size": 110,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "happy"
+   },
+   "bg": "/tmp/fin/bg/gta/city2.mp4",
+   "bg_start": 1.0
   },
   {
    "kind": "host",
    "line": 2,
-   "from": 0.725,
-   "buck": {
-    "mood": "happy",
-    "h": 1300,
-    "y": 1.04
-   },
-   "_auto": true,
-   "bg": "/tmp/fin/bg/bank/moon_big.mp4",
-   "bg_start": 2.3999999999999995,
-   "dim": 20
-  },
-  {
-   "kind": "counter",
-   "line": 3,
-   "from": 0,
-   "start": 15080,
-   "to": 678600,
-   "dur": 2.0,
-   "label": "A WHOLE CAREER \u00b7 YEAR 45",
-   "size": 110,
-   "buck": {
-    "x": 0.82,
-    "y": 0.99,
-    "h": 560,
-    "mood": "happy"
-   },
-   "bg": "/tmp/fin/bg/gta/city2.mp4",
-   "bg_start": 4.0
-  },
-  {
-   "kind": "host",
-   "line": 3,
-   "from": 0.193,
-   "buck": {
-    "mood": "happy",
-    "h": 1300,
-    "y": 1.04
-   },
-   "_auto": true,
-   "bg": "/tmp/fin/bg/bank/cabin_empty.mp4",
-   "bg_start": 4.699999999999999,
-   "dim": 20
-  },
-  {
-   "kind": "counter",
-   "line": 3,
-   "from": 0.357,
-   "start": 15080,
-   "to": 678600,
-   "dur": 2.0,
-   "label": "A WHOLE CAREER \u00b7 YEAR 45",
-   "size": 110,
-   "buck": {
-    "x": 0.82,
-    "y": 0.99,
-    "h": 560,
-    "mood": "happy"
-   },
-   "bg": "/tmp/fin/bg/gta/city2.mp4",
-   "bg_start": 4.0,
-   "cont": true,
-   "_auto": true,
-   "hook": null
-  },
-  {
-   "kind": "host",
-   "line": 3,
    "from": 0.55,
    "buck": {
     "mood": "proud",
@@ -327,34 +241,9 @@
    "prop": "45 YEARS"
   },
   {
-   "kind": "host",
-   "line": 3,
-   "from": 0.743,
-   "buck": {
-    "mood": "happy",
-    "h": 1100,
-    "y": 1.04,
-    "x": 0.35
-   },
-   "bg": "/tmp/fin/bg/bank/city_night.mp4",
-   "bg_start": 1.0,
-   "dim": 20,
-   "prop": "45 YEARS",
-   "set": "sky",
-   "_auto": true
-  },
-  {
    "kind": "kinetic",
-   "line": 4,
+   "line": 3,
    "from": 0,
-   "buck": {
-    "x": 0.82,
-    "y": 0.99,
-    "h": 560,
-    "mood": "confused"
-   },
-   "bg": "/tmp/fin/bg/bank/earth_night.mp4",
-   "bg_start": 3.0,
    "words": [
     {
      "t": "0.068%",
@@ -371,25 +260,13 @@
      "size": 96,
      "font": "Pixel"
     }
-   ]
+   ],
+   "bg": "/tmp/fin/bg/bank/wallet_empty.mp4",
+   "bg_start": 3.0
   },
   {
    "kind": "host",
-   "line": 4,
-   "from": 0.233,
-   "buck": {
-    "mood": "confused",
-    "h": 1300,
-    "y": 1.04
-   },
-   "_auto": true,
-   "bg": "/tmp/fin/bg/bank/coins_fall.mp4",
-   "bg_start": 4.299999999999999,
-   "dim": 20
-  },
-  {
-   "kind": "host",
-   "line": 4,
+   "line": 3,
    "from": 0.55,
    "buck": {
     "mood": "confused",
@@ -402,7 +279,7 @@
   },
   {
    "kind": "kinetic",
-   "line": 5,
+   "line": 4,
    "from": 0,
    "words": [
     {
@@ -417,7 +294,7 @@
     },
     {
      "t": "YEARS",
-     "size": 120,
+     "size": 110,
      "font": "Pixel"
     }
    ],
@@ -426,21 +303,7 @@
   },
   {
    "kind": "host",
-   "line": 5,
-   "from": 0.205,
-   "buck": {
-    "mood": "shocked",
-    "h": 1300,
-    "y": 1.04
-   },
-   "_auto": true,
-   "bg": "/tmp/fin/bg/bank/earth_night.mp4",
-   "bg_start": 1.5999999999999979,
-   "dim": 20
-  },
-  {
-   "kind": "host",
-   "line": 5,
+   "line": 4,
    "from": 0.5,
    "buck": {
     "mood": "shocked",
@@ -453,25 +316,8 @@
    "prop": "66,313 YRS"
   },
   {
-   "kind": "host",
-   "line": 5,
-   "from": 0.705,
-   "buck": {
-    "mood": "shocked",
-    "h": 1100,
-    "y": 1.04,
-    "x": 0.35
-   },
-   "bg": "/tmp/fin/bg/bank/moon_big.mp4",
-   "bg_start": 3.0,
-   "dim": 20,
-   "prop": "66,313 YRS",
-   "set": "yellow",
-   "_auto": true
-  },
-  {
    "kind": "bars",
-   "line": 6,
+   "line": 5,
    "from": 0,
    "title": "YEARS AGO",
    "items": [
@@ -504,85 +350,14 @@
     ]
    ],
    "new": 2,
-   "bg": "/tmp/fin/bg/gta/clock.mp4",
-   "bg_start": 3.0,
-   "fmt": "{:,.0f}",
-   "suffix": " YRS"
-  },
-  {
-   "kind": "host",
-   "line": 6,
-   "from": 0.181,
-   "buck": {
-    "mood": "sideeye",
-    "h": 1300,
-    "y": 1.04
-   },
-   "_auto": true,
-   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
-   "bg_start": 1.1999999999999993,
-   "dim": 20
-  },
-  {
-   "kind": "bars",
-   "line": 6,
-   "from": 0.335,
-   "title": "YEARS AGO",
-   "items": [
-    [
-     "STONEHENGE",
-     5000,
-     [
-      120,
-      120,
-      140
-     ]
-    ],
-    [
-     "FARMING",
-     12000,
-     [
-      80,
-      160,
-      90
-     ]
-    ],
-    [
-     "YOUR FIRST SHIFT",
-     66313,
-     [
-      235,
-      64,
-      52
-     ]
-    ]
-   ],
-   "new": 2,
-   "bg": "/tmp/fin/bg/gta/clock.mp4",
-   "bg_start": 3.0,
    "fmt": "{:,.0f}",
    "suffix": " YRS",
-   "cont": true,
-   "_auto": true,
-   "hook": null
+   "bg": "/tmp/fin/bg/gta/clock.mp4",
+   "bg_start": 3.0
   },
   {
    "kind": "host",
-   "line": 6,
-   "from": 0.467,
-   "buck": {
-    "mood": "sideeye",
-    "h": 1300,
-    "y": 1.04
-   },
-   "_auto": true,
-   "bg": "/tmp/fin/bg/bank/coffee_pour.mp4",
-   "bg_start": 3.5,
-   "dim": 20
-  },
-  {
-   "kind": "host",
-   "line": 6,
+   "line": 5,
    "from": 0.6,
    "buck": {
     "mood": "sideeye",
@@ -595,40 +370,25 @@
   },
   {
    "kind": "host",
-   "line": 7,
+   "line": 6,
    "from": 0,
    "buck": {
     "mood": "sly",
     "h": 1300,
     "y": 1.04
    },
-   "bg": "/tmp/fin/bg/bank/cash_stacks.mp4",
-   "bg_start": 7.0,
-   "dim": 20
-  },
-  {
-   "kind": "host",
-   "line": 7,
-   "from": 0.193,
-   "buck": {
-    "mood": "happy",
-    "h": 1100,
-    "y": 1.04,
-    "x": 0.35
-   },
-   "bg": "/tmp/fin/bg/bank/cash_stacks.mp4",
-   "bg_start": 7.0,
+   "bg": "/tmp/fin/bg/bank/earth_night.mp4",
+   "bg_start": 2.0,
    "dim": 20,
-   "set": "sky",
-   "_auto": true
+   "prop": "BRING A CAKE"
   },
   {
    "kind": "counter",
-   "line": 8,
+   "line": 7,
    "from": 0,
    "start": 1000000000.0,
    "to": 1000000000.0,
-   "dur": 1.2,
+   "dur": 1.0,
    "label": "EARN $1,000,000,000",
    "size": 110,
    "buck": {
@@ -638,77 +398,7 @@
     "mood": "happy"
    },
    "bg": "/tmp/fin/bg/gta/clock.mp4",
-   "bg_start": 5.0
-  },
-  {
-   "kind": "host",
-   "line": 8,
-   "from": 0.215,
-   "buck": {
-    "mood": "happy",
-    "h": 1300,
-    "y": 1.04
-   },
-   "_auto": true,
-   "bg": "/tmp/fin/bg/bank/cabin_empty.mp4",
-   "bg_start": 3.099999999999998,
-   "dim": 20
-  },
-  {
-   "kind": "counter",
-   "line": 8,
-   "from": 0.397,
-   "start": 1000000000.0,
-   "to": 1000000000.0,
-   "dur": 1.2,
-   "label": "EARN $1,000,000,000",
-   "size": 110,
-   "buck": {
-    "x": 0.82,
-    "y": 0.99,
-    "h": 560,
-    "mood": "happy"
-   },
-   "bg": "/tmp/fin/bg/gta/clock.mp4",
-   "bg_start": 5.0,
-   "cont": true,
-   "_auto": true,
-   "hook": null
-  },
-  {
-   "kind": "host",
-   "line": 8,
-   "from": 0.662,
-   "buck": {
-    "mood": "happy",
-    "h": 1300,
-    "y": 1.04
-   },
-   "_auto": true,
-   "bg": "/tmp/fin/bg/bank/earth_globe.mp4",
-   "bg_start": 5.399999999999999,
-   "dim": 20
-  },
-  {
-   "kind": "counter",
-   "line": 8,
-   "from": 0.844,
-   "start": 1000000000.0,
-   "to": 1000000000.0,
-   "dur": 1.2,
-   "label": "EARN $1,000,000,000",
-   "size": 110,
-   "buck": {
-    "x": 0.82,
-    "y": 0.99,
-    "h": 560,
-    "mood": "happy"
-   },
-   "bg": "/tmp/fin/bg/gta/clock.mp4",
-   "bg_start": 5.0,
-   "cont": true,
-   "_auto": true,
-   "hook": null
+   "bg_start": 1.0
   }
  ]
 }

@@ -1,4 +1,10 @@
 {
+ "topline": [
+  {
+   "t": "BLACK FRIDAY \u00b7 ONLINE \u00b7 USA",
+   "at": 0
+  }
+ ],
  "id": "BK-12",
  "title": "Black Friday Spends $149,306 Every Second",
  "brand": [
@@ -10,17 +16,17 @@
   ]
  ],
  "tail": 0.6,
- "speed": 1.06,
+ "speed": 1.12,
  "amb": "room",
  "grade": "warm",
  "lines": [
   [
    "B",
-   "[announcer] This Friday, America will spend one hundred forty-nine thousand dollars online. Every. Single. Second."
+   "[announcer] [fast] Black Friday: a hundred forty-nine thousand dollars. Every second."
   ],
   [
    "B",
-   "[fast] In the time it takes me to say this sentence... about a million dollars. Gone."
+   "[fast] In the time it takes me to say this sentence, about a million dollars. Gone."
   ],
   [
    "B",
@@ -40,11 +46,11 @@
   ],
   [
    "B",
-   "[confident] So that countdown timer on your screen? It's built for exactly this second."
+   "[deadpan] That's more every second than a typical full-time worker earns in two years."
   ],
   [
    "B",
-   "[whisper] Since this video started... about seven million dollars. Every. Single. Second."
+   "[whisper] Since this video started, about six million dollars. Every. Single. Second."
   ]
  ],
  "hot": [
@@ -81,13 +87,12 @@
   },
   {
    "line": 6,
-   "frac": 0.2,
-   "name": "tick",
-   "gain": 0.3,
-   "dur": 1.5
+   "frac": 0.3,
+   "name": "impact",
+   "gain": 0.3
   }
  ],
- "sources": "Adobe Digital Insights 2026 holiday forecast (Sept 28, 2026): Black Friday $12.9B, Cyber Monday $15.1B, Thanksgiving $6.9B; $12.9B/86,400 s = $149,306/s",
+ "sources": "Adobe Digital Insights 2026 holiday forecast (Sept 28, 2026): Black Friday $12.9B, Cyber Monday $15.1B, Thanksgiving $6.9B; $12.9B/86,400 s = $149,306/s; BLS Q3 2026 median usual weekly earnings, full-time: $1,232 (Oct 21, 2026) x 104 weeks = $128,128 < $149,306",
  "shots": [
   {
    "kind": "counter",
@@ -106,40 +111,7 @@
    },
    "bg": "/tmp/fin/bg/r/mall.mp4",
    "bg_start": 1.0,
-   "hook": "BLACK FRIDAY: $149,306 EVERY SECOND"
-  },
-  {
-   "kind": "host",
-   "set": "teal",
-   "line": 0,
-   "from": 0.149,
-   "buck": {
-    "mood": "proud",
-    "h": 1300,
-    "y": 1.04
-   },
-   "_auto": true
-  },
-  {
-   "kind": "counter",
-   "line": 0,
-   "from": 0.274,
-   "start": 0,
-   "to": 149306,
-   "dur": 1.6,
-   "label": "SPENT ONLINE \u00b7 EVERY SECOND",
-   "size": 120,
-   "buck": {
-    "x": 0.82,
-    "y": 0.99,
-    "h": 560,
-    "mood": "shocked"
-   },
-   "bg": "/tmp/fin/bg/r/mall.mp4",
-   "bg_start": 1.0,
-   "hook": null,
-   "cont": true,
-   "_auto": true
+   "hook": null
   },
   {
    "kind": "host",
@@ -173,18 +145,6 @@
    "bg_start": 1.0
   },
   {
-   "kind": "host",
-   "set": "pink",
-   "line": 0,
-   "from": 0.863,
-   "buck": {
-    "mood": "proud",
-    "h": 1300,
-    "y": 1.04
-   },
-   "_auto": true
-  },
-  {
    "kind": "counter",
    "line": 1,
    "from": 0,
@@ -202,18 +162,6 @@
    },
    "bg": "/tmp/fin/bg/r/online.mp4",
    "bg_start": 1.0
-  },
-  {
-   "kind": "host",
-   "set": "sky",
-   "line": 1,
-   "from": 0.248,
-   "buck": {
-    "mood": "happy",
-    "h": 1300,
-    "y": 1.04
-   },
-   "_auto": true
   },
   {
    "kind": "host",
@@ -279,18 +227,6 @@
   },
   {
    "kind": "host",
-   "set": "peach",
-   "line": 3,
-   "from": 0.248,
-   "buck": {
-    "mood": "shocked",
-    "h": 1300,
-    "y": 1.04
-   },
-   "_auto": true
-  },
-  {
-   "kind": "host",
    "line": 3,
    "from": 0.55,
    "buck": {
@@ -324,18 +260,6 @@
    ],
    "bg": "/tmp/fin/bg/bank/city_fireworks.mp4",
    "bg_start": 1.0
-  },
-  {
-   "kind": "host",
-   "set": "green",
-   "line": 4,
-   "from": 0.224,
-   "buck": {
-    "mood": "sideeye",
-    "h": 1300,
-    "y": 1.04
-   },
-   "_auto": true
   },
   {
    "kind": "host",
@@ -392,61 +316,6 @@
   },
   {
    "kind": "host",
-   "set": "yellow",
-   "line": 5,
-   "from": 0.239,
-   "buck": {
-    "mood": "happy",
-    "h": 1300,
-    "y": 1.04
-   },
-   "_auto": true
-  },
-  {
-   "kind": "bars",
-   "line": 5,
-   "from": 0.442,
-   "title": "ADOBE 2026 FORECAST",
-   "items": [
-    [
-     "THANKSGIVING",
-     6.9,
-     [
-      120,
-      120,
-      140
-     ]
-    ],
-    [
-     "BLACK FRIDAY",
-     12.9,
-     [
-      235,
-      64,
-      52
-     ]
-    ],
-    [
-     "CYBER MONDAY",
-     15.1,
-     [
-      80,
-      160,
-      240
-     ]
-    ]
-   ],
-   "new": 2,
-   "fmt": "${:,.1f}",
-   "suffix": "B",
-   "bg": "/tmp/fin/bg/rc/loadbar.mp4",
-   "bg_start": 1.0,
-   "cont": true,
-   "_auto": true,
-   "hook": null
-  },
-  {
-   "kind": "host",
    "line": 5,
    "from": 0.6,
    "buck": {
@@ -464,34 +333,21 @@
    "from": 0,
    "words": [
     {
-     "t": "00:59",
-     "size": 200,
+     "t": "$149,306",
+     "size": 150,
      "c": [
-      235,
-      64,
-      52
-     ],
-     "font": "Pixel"
+      255,
+      205,
+      60
+     ]
     },
     {
-     "t": "LIMITED TIME!",
+     "t": "> 2 YEARS OF PAY",
      "size": 100
     }
    ],
    "bg": "/tmp/fin/bg/rc2/scroll.mp4",
    "bg_start": 1.0
-  },
-  {
-   "kind": "host",
-   "set": "teal",
-   "line": 6,
-   "from": 0.225,
-   "buck": {
-    "mood": "happy",
-    "h": 1300,
-    "y": 1.04
-   },
-   "_auto": true
   },
   {
    "kind": "host",
@@ -511,7 +367,7 @@
    "line": 7,
    "from": 0,
    "start": 0,
-   "to": 7000000,
+   "to": 6000000,
    "dur": 2.0,
    "label": "SINCE THIS VIDEO STARTED",
    "size": 110,
@@ -523,51 +379,6 @@
    },
    "bg": "/tmp/fin/bg/rc/confetti.mp4",
    "bg_start": 0.5
-  },
-  {
-   "kind": "host",
-   "set": "pink",
-   "line": 7,
-   "from": 0.196,
-   "buck": {
-    "mood": "happy",
-    "h": 1300,
-    "y": 1.04
-   },
-   "_auto": true
-  },
-  {
-   "kind": "counter",
-   "line": 7,
-   "from": 0.361,
-   "start": 0,
-   "to": 7000000,
-   "dur": 2.0,
-   "label": "SINCE THIS VIDEO STARTED",
-   "size": 110,
-   "buck": {
-    "x": 0.82,
-    "y": 0.99,
-    "h": 560,
-    "mood": "sly"
-   },
-   "bg": "/tmp/fin/bg/rc/confetti.mp4",
-   "bg_start": 0.5,
-   "cont": true,
-   "_auto": true,
-   "hook": null
-  },
-  {
-   "kind": "host",
-   "set": "sky",
-   "line": 7,
-   "from": 0.506,
-   "buck": {
-    "mood": "happy",
-    "h": 1300,
-    "y": 1.04
-   },
-   "_auto": true
   },
   {
    "kind": "counter",
@@ -586,18 +397,6 @@
    },
    "bg": "/tmp/fin/bg/r/mall.mp4",
    "bg_start": 4.0
-  },
-  {
-   "kind": "host",
-   "set": "peach",
-   "line": 7,
-   "from": 0.846,
-   "buck": {
-    "mood": "happy",
-    "h": 1300,
-    "y": 1.04
-   },
-   "_auto": true
   }
  ]
 }
