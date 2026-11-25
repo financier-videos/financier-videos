@@ -23,10 +23,10 @@
 
 ## Community: javoblar (Shohjahon tasdiqladi 2026-11-25; YouTube izoh ruxsati MFA kutilmoqda — canReply=false; ruxsatdan keyin keyingi ishga tushishda joylanadi)
 - Financier · XbWyfVGCWM8 · @menphues (inflyatsiya haqida) · comment UgynfkUFk6pxCz-K6EF4AaABAg → "Great point! Adjusted for inflation, GTA 5's ~$800M day one is about $1.1B today, so GTA 6 still did roughly 3.4x more in real terms. Still wild 🪙" ✅ JOYLANDI 2026-11-25
-- Rocco · Iagm5fk5JoU · @olojedetolulope9205 (😂) · comment UgxmPluZek87XyVkIg54AaABAg → "Penny's not as dumb as she looks 😄 Part 2 drops this week!"
+- Rocco · Iagm5fk5JoU · @olojedetolulope9205 (😂) · comment UgxmPluZek87XyVkIg54AaABAg → "Penny's not as dumb as she looks 😄 Part 2 drops this week!" ✅ JOYLANDI 2026-11-25
 - Eslatma: qolgan izohlar o'z test akkauntlarimizdan (@RedFrocco, @FINANCIER4241, @Fjcjfnfn...) — javob shart emas.
 
 ## Nazoratchi jurnali
 | Sana | Ishga tushish | Slotlar | QC/bg | Publish | Tadqiqot | Izohlar | IG | Hisobot | Izoh |
 |---|---|---|---|---|---|---|---|---|---|
-| 2026-11-25 | (chat) | ✅ | ✅ | ✅ | ✅ | ½ (Financier ✅, Rocco MFA kutmoqda) | ❌ (keyingi B) | ✅ results_2026-11-25 | Studiya OS ishga tushirildi |
+| 2026-11-25 | (chat) | ✅ | ✅ | ✅ | ✅ | ✅ (ikkala kanal, izoh ruxsati berildi) | ❌ (keyingi B) | ✅ results_2026-11-25 | Studiya OS ishga tushirildi |
