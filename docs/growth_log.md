@@ -133,3 +133,8 @@ KECHA vs BUGUN: kecha eng yaxshi yangi video 7.5 soatda 160, bugun Financier eng
 O'RGANILDI: auto_shots bitta klipli sahnaga boshqa mavzudagi klip qo'shadi (kurka → Yer); tungi osmon / oq fon kliplari empty_panel ni buzadi (38% → 21% → PASS).
 O'ZGARTIRILDI: U-3 trend Short (AAA 81.5M) navbat boshiga; har sahnada ≤2 s oraliqli o'z kliplari bilan aniq "shots". Faktlar render oldidan qayta tekshirildi (AAA, 16-noy benzin).
 O'LCHOV: 26-noy C — U-3 24 soatlik ko'rish vs print_100/buck_1748 (trendsiz). Gipoteza: trend + katta raqam ≥3x.
+
+## 2026-11-25 10:15 Toshkent (vazifa, A)
+O'RGANILDI: vidIQ trending — 201 obunachili kanalning "Fake 50% Off Black Friday tag" mexanizm Shorti 2 kunda 1.05M (22.7K vph). Kichik kanal + mexanizm ("qanday yasaladi") + bayram = eng kuchli signal.
+O'ZGARTIRILDI: (1) U-5 [TREND] bankka (FTC 16 CFR 233.1, WalletHub 2025 36%/24%, Oxylabs 2024 75%) — 26-noy 07:00 ET 1-yuklash; (2) dvigatel v6.18 sahna "pool" + auto_pool "scene" (U-3 dagi begona klip xatosi).
+O'LCHOV: v6.18 — keyingi Short qc_gate 14_empty_panel PASS va kontakt-varaqda begona klip yo'qligi; U-5 — 24 soatlik ko'rish vs print_100/buck_1748.
