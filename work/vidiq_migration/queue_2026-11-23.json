@@ -74,6 +74,19 @@
   },
   {
    "slot_et": "2026-11-26T07:00-05:00",
+   "name": "u05_fake50",
+   "vidiq_uploadId": "efd530d2-b2a2-43b7-b7a1-3bdca810a2f9",
+   "yt_postId": "1a8e0b9a-b12f-4358-bca2-b4ff4d6bf87e",
+   "yt_publicationId": "3620973a-aad9-4e46-9ad6-a886dcae8332",
+   "yt_revision": "da8eb8f5",
+   "yt_status": "draft, publishAt 2026-11-26 07:00 ET; publish (upload) >=26-noy 01:30 UTC (A ishi), navbat 1-yuklashi",
+   "ig_caption": "This \"50% off\" tag was born three weeks ago. 🏷️\n\n$50 in October → $100 in early November → \"WAS $100, NOW $50!\" on Black Friday. Same fifty bucks, new costume. (Our illustration, not a real store.)\nFTC guide: the \"was\" price must be real, offered for a reasonably substantial period. Massachusetts: 28 of the last 90 days. WalletHub 2025: ~36% of 3,100 Black Friday items offered no savings.\n\nSources: FTC 16 CFR 233.1; MA 940 CMR 6.05; WalletHub (Nov 2025).\nFootage: Pixabay, Pexels. Not financial advice. Buck is our original character.\n\nSend this to the friend who already has 12 tabs of \"deals\" open.\n\n#blackfriday #moneyfacts #shopping #didyouknow #money",
+   "ig_status": "todo (YT chiqqandan keyin, videoUrl = YouTube havolasi, isAiGenerated true)",
+   "spec": "work/2026-11-25b/u05_fake50.json",
+   "file": "2026-11-26_u05_fake50.mp4"
+  },
+  {
+   "slot_et": "2026-11-26T07:00-05:00",
    "name": "cancel_sub",
    "vidiq_uploadId": "333ac73c-e590-43de-a526-3a5dbf2add35",
    "yt_postId": "1869da50-fb52-4b27-a1ae-cb5df2197fe8",
