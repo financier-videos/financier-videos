@@ -56,3 +56,23 @@ Shohjahon (2026-11-22): "Eng asosiysi har safar yangi va portlatadigan videolar 
 - **Rocco "Free gift at the door"** (uaV36whB6H8): "tekin sovg'a" kuryeri → QR/"kodni ayting" → balans 0 SMS. Mavzu: tekin sovg'a/sovg'a kartasi firibgarligi (Black Friday mavsumi).
 - **Financier "Why is Dracula rich?"** (8Sp2jBDdTDM; Drakula — jamoat mulki): 3 ustun, eng kuchli lahza "xarajat = $0" (qon tekin, xizmatkor maosh olmaydi) → saboq: daromad − xarajat. Buck hisob kartasi bilan.
 - **Financier "Money stats that sound fake"** (ftA18KGBrwM): 5–7 fakt kichikdan kattaga (millionda 11 kun vs milliardda 31.7 yil soniya; ...), har biri 4 s, sariq kartochka; "Part 2" bilan seriya.
+
+## 2026-11-25 skan (to'liq tahlil: docs/growth_research_2026-11-25.md)
+| Sana | Video ID | Kanal / natija | Kanalimiz | Format | Nega ishlaydi / olish kerak bo'lgan lahza |
+|---|---|---|---|---|---|
+| 2026-11-25 | `Ml36RBLHWZY` | MrWhy (178 obun.) — 22.4K, 6.5x, 1:04 | Buck | "1 cent every second" vaqt zinapoyasi | sek→daq→kun→yil→umr→Rim 753 BC; 0:04 teaser "3,000 years" 0:44 da to'lanadi; gapma-gap seamless loop (B1) |
+| 2026-11-25 | `kI-UC7vuMlc` | Old School Animate (32 obun.) — 20.5K, 15x, 0:49 | Buck | "Every word costs $1" qoida-sketch | boshi ustida balans yorlig'i, chek/muhr har sahnada, 16,000 so'z/kun fakti, beixtiyor "ouch" punchline (B2) |
+| 2026-11-25 | `I4TJOP7M04U` | Retroyap (76.5K) — 9.3M, 67x, 2:03 | Buck | "$X but catch" rejalar zinapoyasi | 3 reja tobora kattaroq, har birida raqam/vaqt, ekzistensial burilish; piksel shrift (B3) |
+| 2026-11-25 | `F01I1GMwFuM` | Quiet Panther (3.4K) — 132.9K, 42x, 1:45 | Buck | jazavali xaridor vs xotirjam mentor | qizil taymer hook, kontrar "no such thing as Black Friday", 3 sepia flashback, atama "artificial urgency" (B4) |
+| 2026-11-25 | `ikuRVdAAue8` | Income Infinity (394K) — 2.5M, 35x, 2:59 | Buck | x1000 katta sonlar zinapoyasi | real boylikdan boshlab har pog'ona x1000 + jismoniy anchor + sanash vaqti (B5) |
+| 2026-11-25 | `AWlZMV7M5Wk` | TD3 Studios (33.5K) — 623K 1 kunda, 2:07 | Buck | "Guess the Number: 8 Billion" | dramatik ironiya: tomoshabin raqamni ko'radi, o'yinchi yo'q; qizil X / yashil ✓; doimiy banner (B6) |
+| 2026-11-25 | `qO2i4AH_84s` | MrGee Math (202K) — 328K 1 kunda, 1:12 | Buck | "scam your friends" tanga tikishi (Penney's game) | "you go first" hook → 7/8 ehtimol → formula → yarim loop (B7, Buck=tanga) |
+| 2026-11-25 | `uQ0-eq5GpMk` | Zeyfra (2.1K) — 30.7K, 17x, 0:40 | Buck | "billionaires called X an idiot" 2D komiks | ziddiyatli hook + "yaxshi billioner" burilishi; real yuz — biz silueta bilan |
+| 2026-11-25 | `Air9U8z3D_A` | ChatigerWorld (2.7K) — 25.5K, 14x, 0:27 | Rocco | 2FA kod paranoyasi dialogi | 10 kadr shot-reverse-shot, aylana mantiq "That's what made it suspicious", deadpan yakun (RC-A) |
+| 2026-11-25 | `VSQm4NhTAyc` | Hannah Kim (405K) — 321K, 45x, 1:02 | Rocco | "POV: tried to scam … but good deed" | doimiy POV banner; tizim qoidasi (refund asl kartaga) firibgarni teskari uradi (RC-B) |
+| 2026-11-25 | `eyM-37VuERA` | All In Camera (41.1K) — 6.3M, 185x, 0:20 | Rocco | Marketplace bitta detal gag | 0 kesim, qizil banner, absurd model detali, gap o'rtasida kesish → qayta ko'rish (RC-C) |
+| 2026-11-25 | `JUAm6j5YBEE` | Sarthak Paraye (140 obun.) — 22K, 44x, 1:45 | Rocco | "sen mastermind" tarixiy firibgarlik (Salad Oil 1963) | arzon narsa → ulkan summa hook, STEP 1..5, 99% suv/1% moy oddiy fizika (RC-D) |
+| 2026-11-25 | `tEkYMu_8hi8` | HELLOG (59.6K) — 1.4M, 28x, 2:41 | Rocco | romance scam dramatik ironiya hikoyasi | 5-s da tomoshabin firibgarni biladi; "boss" qo'llanmasi; 2 tuzoq; burilish (RC-E, zo'ravonliksiz) |
+| 2026-11-25 | `zWcZP5YcO8s` | Yah Bak (37.2K) — 1.72M, 3:00 | Rocco | "$2M in 10 minutes?" stavka zinapoyasi | doimiy savol-banner; $1K→$100K; ataylab yutqazish; priming sir ochilishi (RC-F; film klipi — faqat struktura) |
+| 2026-11-25 | `u8woqMLoZ80` | Costello Cards (124K) — 565K, 20x, 1:07 | Rocco | sotuvchi POV "This clown is a scammer" | real vendor lavhasi — faqat mavzu signali (kolleksiya/soxta kartochka) |
+| 2026-11-25 | `vcPnUMJNdkw` | KarolkaShow (191K) — 6.06M (49K vph), 1:37 | Rocco | ataylab ahmoq bo'lish (qayta o'lchov) | 22-noydagi 2.1M → 6.06M: format hali o'sishda; Penny Plays Dumb (1,298) davom |

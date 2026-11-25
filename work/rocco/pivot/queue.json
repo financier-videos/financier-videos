@@ -72,6 +72,18 @@
     "publishAt": "2026-11-27T08:00:00Z",
     "status": "APPROVED 2026-11-25; publish via send_later (spaced uploads)"
    }
+  },
+  {
+   "name": "RC-23 penny_plays_dumb_2 (2D sequel)",
+   "file": "rocco_rc23_penny_plays_dumb_2.mp4",
+   "uploadId": "8309e0d2-c1d4-487f-ba2a-937bc6fdd27f",
+   "by": "session 01MWGZtb7",
+   "yt": {
+    "postId": "f02b2dfd-70b8-4dff-8af1-f3f91ccba4d2",
+    "revision": "cfbcde4f",
+    "publishAt": "2026-11-28T08:00:00Z",
+    "status": "draft (awaiting approval)"
+   }
   }
  ]
 }
