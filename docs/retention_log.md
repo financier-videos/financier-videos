@@ -27,3 +27,8 @@ audienceWatchRatio > 1.0 = qayta ko'rish (loop). Mo'ljal: 3 s dan keyin ≥0.80,
 
 ## QAROR (2026-11-25)
 - RC-23 (Penny Plays Dumb 2) va RC-24 (Refund Trick) — hali chiqmagan → kirish qisqartirildi (hazil ≤5 s), oxirgi Rocco dars qatori olib tashlandi, qayta render.
+
+## 2026-11-25 — begona videolar (docs/viral_beatmap_2026-11-25.md, 8 trend + 6 namuna) bilan tasdiq
+- Kesim tezligimiz (1.45–1.9 s) benchmarklardan TEZROQ (2.4–3.9 s) → muammo kesimda emas, SO'ZDA: birinchi qator uzun, temp sekin (bizda 1.8–2.35 so'z/s, ularda 2.8–3.6).
+- Yangi qoidalar: 1-qator ≤10 so'z, ≤3 s, nutq 0 ms dan; 3–6 s da 2-zarba, 5–9 s da hazil/raqam; ekranda doimiy banner/hisoblagich; har raqamga kundalik taqqoslash; dialog sketchda musiqa yo'q.
+- QAROR: RC-23, RC-24, BK-11, BK-12 shu qoidalar bilan qayta yozildi (Rocco "Psst" qatorlari olib tashlandi, doimiy topline banner, Buck speed 1.12–1.15, BK-11 "??,??? YEARS" teaser).

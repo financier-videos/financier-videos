@@ -1,0 +1,1 @@
+BK-11 v3 (beat-map 2026-11-25) written directly to bk11.json by session 01MWGZtb7; build.py is v2.

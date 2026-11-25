@@ -76,3 +76,21 @@ Shohjahon (2026-11-22): "Eng asosiysi har safar yangi va portlatadigan videolar 
 | 2026-11-25 | `zWcZP5YcO8s` | Yah Bak (37.2K) — 1.72M, 3:00 | Rocco | "$2M in 10 minutes?" stavka zinapoyasi | doimiy savol-banner; $1K→$100K; ataylab yutqazish; priming sir ochilishi (RC-F; film klipi — faqat struktura) |
 | 2026-11-25 | `u8woqMLoZ80` | Costello Cards (124K) — 565K, 20x, 1:07 | Rocco | sotuvchi POV "This clown is a scammer" | real vendor lavhasi — faqat mavzu signali (kolleksiya/soxta kartochka) |
 | 2026-11-25 | `vcPnUMJNdkw` | KarolkaShow (191K) — 6.06M (49K vph), 1:37 | Rocco | ataylab ahmoq bo'lish (qayta o'lchov) | 22-noydagi 2.1M → 6.06M: format hali o'sishda; Penny Plays Dumb (1,298) davom |
+
+## 2026-11-25 sekundma-sekund beat map (to'liq: docs/viral_beatmap_2026-11-25.md)
+| Sana | Video ID | Kanal / natija | Kanalimiz | Format | Olish kerak bo'lgan lahza (struktura/vaqt) |
+|---|---|---|---|---|---|
+| 2026-11-25 | `NeI6GU94Hc4` | Competent Cat (232) — 33.2K, 19x, 0:56 | Buck | "penny every time X" gipoteza, 2D mushuk | 1 tanga (3 s) → banka → shkaf → uy (5–9 s) → shahar (14 s) uzluksiz vizual eskalatsiya; "lekin muammo" 2-akt (37 s); fakt-punchline yakun; 3.6 so'z/s, kesim 2.6 s |
+| 2026-11-25 | `MI-qVW1IKdU` | GD University (3.3K) — 48K, 1.5K vph, 1:28 | Buck | "$1B + catch" vaqt-lapse | shart (SIGNED kontrakt) 5–6 s da to'liq; kun → oy → yil kalendar; 1-kadrga vizual qaytish |
+| 2026-11-25 | `PqYXJ2pUr3w` | Money Math Club (8.1K) — 410K, 140x, 1:01 (Hindi) | Buck | bir xil maosh, ikki odam: qizil/yashil split | doimiy split banner + har 5–7 s ikonka-juftlik (A qiladi → B javob); 0 kesim |
+| 2026-11-25 | `nF0HwqRtdXM` | Nigel Green (218K) — 26K, 14x, 0:26 | Buck | daromad qatori, ko'rinish vs raqam | yorliqlar $0K→$2M 0–6 s; eng katta raqam oddiy odamda (6 s) |
+| 2026-11-25 | `pnQ5QDxYng0` | TrayFromOhio (5.6K) — 16.4K, 6.1x, 0:44 | Rocco | soxta "mashhur boy" firibgar qo'ng'irog'i do'konda | talab 3 s da; har ~10 s talab ortadi (karta → katta karta → SSN); zum + bass har zarbada; guvoh tasdig'i yakun |
+| 2026-11-25 | `3LsXHwMM9bM` | Big Duke13 (373K) — 88.6K, 8.5x, 2:34 | Rocco | haqiqiy firibgarlik hikoyasi, gapiruvchi bosh | sarlavhada raqam ("8 marta") + mexanizm burilishi (qayta o'g'irlash) 27–51 s; moral oxiri — biz uchun emas |
+| 2026-11-25 | `u7q17wGWxvM` | Mr Giggles (10K) — 9.4K/1 kun, 13% eng., 2:15 | Rocco | firibgarga 14 xil absurd ovoz | premisa 4 s; har 5–15 s yangi "personaj javobi" katalogi; musiqasiz |
+| 2026-11-25 | `iJQLhLuWvlk` | Cyber Detectives (15.5K) — 10.7K, 4x, 0:56 (Hindi) | Rocco | telefon so'rash skiti + sozlama | firibgar o'z tuzog'iga tushib qochadi (38 s) — kech; moral+CTA = eng past breakout |
+| 2026-11-25 | `Ml36RBLHWZY` | qayta o'lchov (beat map) | Buck | vaqt zinapoyasi | teaser 3 s → raqam 6 s → konfet anchor 9 s; 2.8 so'z/s, kesim 3.9 s; loop |
+| 2026-11-25 | `kI-UC7vuMlc` | qayta o'lchov | Buck | qoida-sketch | balans yorlig'i 3–4 s; SKIPPED muhri ~6 s; har 4–6 s mikro-sahna + muhr |
+| 2026-11-25 | `Air9U8z3D_A` | qayta o'lchov | Rocco | absurd xavfsizlik dialogi | rad 3 s, kulgi 8 s; ≤6 so'z replika; 3.2 so'z/s; musiqasiz |
+| 2026-11-25 | `VSQm4NhTAyc` | qayta o'lchov — 335K, 45x | Rocco | POV, tizim qoidasi teskari uradi | doimiy banner NATIJANI aytadi (dramatik ironiya); to'lov 48 s; 0 kesim |
+| 2026-11-25 | `vcPnUMJNdkw` | qayta o'lchov — 6.1M, 48x, 70K vph | Rocco | ataylab ahmoq bo'lish | firibgar talabi+stavka 9 s gacha; firibgar o'zi absurd 3–5 s; doimiy banner; har 6–10 s zarba |
+| 2026-11-25 | `AWlZMV7M5Wk` | qayta o'lchov — 709K, 22K vph | Buck | guess the number | javob butun video ekranda; birinchi javob 3 s; qizil X / yashil 👍; 3–3.8 so'z/s |
