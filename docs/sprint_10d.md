@@ -1,4 +1,6 @@
 # 10 KUNLIK SPRINT — 2026-11-21 18:28 → 2026-12-01 18:28 (Toshkent)
+
+> **2026-11-25 YANGILANISH:** hajm qoidasi `docs/studio_os.md` §0 ga almashtirildi (Financier 3–4/kun, Rocco 2/kun, oraliq bilan) — 23-noy burst yuklash natijani o'ldirdi (docs/results_2026-11-25.md).
 Shohjahon (18:28): "10 kun ichida 15 million prosmotrga chiq; Instagram'da kamida 10 000 obunachi." Bu sprint producer_task'dagi odatdagi jadvaldan USTUN turadi (QAT'IY CHEGARALAR o'zgarmaydi).
 
 ## Boshlang'ich holat (2026-11-21 18:25, docs/results.md)
