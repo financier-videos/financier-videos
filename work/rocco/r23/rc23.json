@@ -12,23 +12,7 @@
  "lines": [
   [
    "S",
-   "[fast] [fake friendly] Hi! Delivery company! Your Black Friday package is STUCK!"
-  ],
-  [
-   "P",
-   "[gasps] Oh no! Which package?"
-  ],
-  [
-   "S",
-   "[pause] [nervous] ...The... box one!"
-  ],
-  [
-   "R",
-   "[whispering] Psst. Play dumb again."
-  ],
-  [
-   "S",
-   "[sly] Just pay a tiny fee. Read me the long number on your card."
+   "[fast] [fake friendly] Delivery company! Your Black Friday package is stuck. Read me the long number on your card!"
   ],
   [
    "P",
@@ -41,6 +25,10 @@
   [
    "P",
    "[excited] Ooh, I love pie! Is it pumpkin?"
+  ],
+  [
+   "R",
+   "[whispering] Psst. Keep playing dumb."
   ],
   [
    "S",
@@ -73,10 +61,6 @@
   [
    "S",
    "[pause] [defeated] ...Wait. What?"
-  ],
-  [
-   "R",
-   "[warmly] Real delivery companies don't call asking for your card. Didn't order it? Nothing to pay. Hang up."
   ]
  ],
  "sfx": [
@@ -89,56 +73,44 @@
   {
    "line": 2,
    "frac": 0.0,
-   "name": "crickets",
-   "gain": 0.25
-  },
-  {
-   "line": 6,
-   "frac": 0.0,
    "name": "scratch",
    "gain": 0.25
   },
   {
-   "line": 7,
+   "line": 3,
    "word": "pumpkin",
    "name": "boing",
    "gain": 0.3
   },
   {
-   "line": 9,
+   "line": 6,
    "word": "foxes",
    "name": "bonk",
    "gain": 0.35
   },
   {
-   "line": 11,
+   "line": 8,
    "word": "tail",
    "name": "boing",
    "gain": 0.3
   },
   {
-   "line": 13,
+   "line": 10,
    "word": "cancelled",
    "name": "buzzer",
    "gain": 0.2
   },
   {
-   "line": 15,
+   "line": 12,
    "frac": 0.0,
    "name": "crickets",
    "gain": 0.3
   },
   {
-   "line": 15,
+   "line": 12,
    "frac": 0.7,
    "name": "wahwah",
    "gain": 0.35
-  },
-  {
-   "line": 16,
-   "frac": 0.1,
-   "name": "ding",
-   "gain": 0.25
   }
  ],
  "sources": "FTC consumer advice on fake delivery texts and calls; never give card numbers to unsolicited callers",
@@ -187,6 +159,22 @@
    "msg_at": 0.1
   },
   {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 0,
+   "from": 0.78,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
    "line": 1,
    "from": 0,
    "kind": "cu_p",
@@ -205,13 +193,70 @@
     "push": 0.06
    },
    "line": 1,
-   "from": 0.5,
+   "from": 0.33,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 1,
+   "from": 0.67,
    "blur": 1,
    "amb": "room",
    "_auto": true
   },
   {
    "line": 2,
+   "from": 0,
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon2d/slick_van.jpg",
+   "bright": 1.35,
+   "r_peek": true,
+   "s": "angry",
+   "r": "smug"
+  },
+  {
+   "line": 3,
+   "from": 0,
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
+   "blur": 1,
+   "p": "happy",
+   "r": "sideeye"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 3,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "line": 4,
+   "from": 0,
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon2d/hallway_package.jpg",
+   "blur": 1,
+   "r": "sideeye"
+  },
+  {
+   "line": 5,
    "from": 0,
    "kind": "slick",
    "bg": "/home/user/financier-videos/assets/toon2d/slick_van.jpg",
@@ -230,96 +275,8 @@
     "push": 0.06,
     "fy": 0.42
    },
-   "line": 2,
+   "line": 5,
    "from": 0.5,
-   "blur": 1,
-   "amb": "room",
-   "_auto": true
-  },
-  {
-   "line": 3,
-   "from": 0,
-   "kind": "cu_r",
-   "bg": "/home/user/financier-videos/assets/toon2d/hallway_package.jpg",
-   "blur": 1,
-   "r": "sideeye"
-  },
-  {
-   "line": 4,
-   "from": 0,
-   "kind": "slick",
-   "bg": "/home/user/financier-videos/assets/toon2d/slick_van.jpg",
-   "bright": 1.35,
-   "r_peek": true,
-   "s": "panic",
-   "r": "smug"
-  },
-  {
-   "kind": "cu_p",
-   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
-   "p": "shock",
-   "r": "sideeye",
-   "cam": {
-    "z": 1.25,
-    "push": 0.06,
-    "fy": 0.42
-   },
-   "line": 4,
-   "from": 0.33,
-   "blur": 1,
-   "amb": "room",
-   "_auto": true
-  },
-  {
-   "kind": "cu_r",
-   "bg": "/home/user/financier-videos/assets/toon2d/hallway_package.jpg",
-   "r": "sideeye",
-   "cam": {
-    "z": 1.3,
-    "push": 0.1,
-    "fy": 0.47
-   },
-   "line": 4,
-   "from": 0.67,
-   "blur": 1,
-   "amb": "room",
-   "_auto": true
-  },
-  {
-   "line": 5,
-   "from": 0,
-   "kind": "cu_p",
-   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
-   "blur": 1,
-   "p": "happy",
-   "r": "sideeye"
-  },
-  {
-   "kind": "two",
-   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
-   "p": "happy",
-   "r": "sideeye",
-   "cam": {
-    "z": 1.0,
-    "push": 0.06
-   },
-   "line": 5,
-   "from": 0.33,
-   "blur": 1,
-   "amb": "room",
-   "_auto": true
-  },
-  {
-   "kind": "two",
-   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
-   "p": "happy",
-   "r": "sideeye",
-   "cam": {
-    "z": 1.0,
-    "push": 0.06
-   },
-   "line": 5,
-   "from": 0.67,
    "blur": 1,
    "amb": "room",
    "_auto": true
@@ -327,45 +284,50 @@
   {
    "line": 6,
    "from": 0,
-   "kind": "slick",
-   "bg": "/home/user/financier-videos/assets/toon2d/slick_van.jpg",
-   "bright": 1.35,
-   "r_peek": true,
-   "s": "sly",
-   "r": "smug"
-  },
-  {
-   "line": 7,
-   "from": 0,
    "kind": "cu_p",
    "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
    "blur": 1,
-   "p": "shock",
+   "p": "happy",
    "r": "sideeye"
   },
   {
    "kind": "two",
    "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
-   "p": "shock",
+   "p": "happy",
    "r": "sideeye",
    "cam": {
     "z": 1.0,
     "push": 0.06
    },
-   "line": 7,
-   "from": 0.5,
+   "line": 6,
+   "from": 0.33,
    "blur": 1,
    "amb": "room",
    "_auto": true
   },
   {
-   "line": 8,
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 6,
+   "from": 0.67,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "line": 7,
    "from": 0,
    "kind": "slick",
    "bg": "/home/user/financier-videos/assets/toon2d/slick_van.jpg",
    "bright": 1.35,
    "r_peek": true,
-   "s": "angry",
+   "s": "panic",
    "r": "smug"
   },
   {
@@ -378,14 +340,14 @@
     "push": 0.06,
     "fy": 0.42
    },
-   "line": 8,
+   "line": 7,
    "from": 0.5,
    "blur": 1,
    "amb": "room",
    "_auto": true
   },
   {
-   "line": 9,
+   "line": 8,
    "from": 0,
    "kind": "cu_p",
    "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
@@ -402,38 +364,31 @@
     "z": 1.0,
     "push": 0.06
    },
-   "line": 9,
-   "from": 0.25,
-   "blur": 1,
-   "amb": "room",
-   "_auto": true
-  },
-  {
-   "kind": "two",
-   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
-   "p": "happy",
-   "r": "sideeye",
-   "cam": {
-    "z": 1.0,
-    "push": 0.06
-   },
-   "line": 9,
+   "line": 8,
    "from": 0.5,
    "blur": 1,
    "amb": "room",
    "_auto": true
   },
   {
+   "line": 9,
+   "from": 0,
+   "kind": "cu_r",
+   "bg": "/home/user/financier-videos/assets/toon2d/hallway_package.jpg",
+   "blur": 1,
+   "r": "sideeye"
+  },
+  {
    "kind": "two",
-   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
+   "bg": "/home/user/financier-videos/assets/toon2d/hallway_package.jpg",
    "p": "happy",
    "r": "sideeye",
    "cam": {
-    "z": 1.0,
+    "z": 1.05,
     "push": 0.06
    },
    "line": 9,
-   "from": 0.75,
+   "from": 0.5,
    "blur": 1,
    "amb": "room",
    "_auto": true
@@ -491,139 +446,12 @@
   {
    "line": 12,
    "from": 0,
-   "kind": "cu_r",
-   "bg": "/home/user/financier-videos/assets/toon2d/hallway_package.jpg",
-   "blur": 1,
-   "r": "sideeye"
-  },
-  {
-   "kind": "two",
-   "bg": "/home/user/financier-videos/assets/toon2d/hallway_package.jpg",
-   "p": "happy",
-   "r": "sideeye",
-   "cam": {
-    "z": 1.05,
-    "push": 0.06
-   },
-   "line": 12,
-   "from": 0.5,
-   "blur": 1,
-   "amb": "room",
-   "_auto": true
-  },
-  {
-   "line": 13,
-   "from": 0,
-   "kind": "slick",
-   "bg": "/home/user/financier-videos/assets/toon2d/slick_van.jpg",
-   "bright": 1.35,
-   "r_peek": true,
-   "s": "panic",
-   "r": "smug"
-  },
-  {
-   "kind": "cu_p",
-   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
-   "p": "shock",
-   "r": "sideeye",
-   "cam": {
-    "z": 1.25,
-    "push": 0.06,
-    "fy": 0.42
-   },
-   "line": 13,
-   "from": 0.5,
-   "blur": 1,
-   "amb": "room",
-   "_auto": true
-  },
-  {
-   "line": 14,
-   "from": 0,
-   "kind": "cu_p",
-   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
-   "blur": 1,
-   "p": "happy",
-   "r": "sideeye"
-  },
-  {
-   "kind": "two",
-   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
-   "p": "happy",
-   "r": "sideeye",
-   "cam": {
-    "z": 1.0,
-    "push": 0.06
-   },
-   "line": 14,
-   "from": 0.5,
-   "blur": 1,
-   "amb": "room",
-   "_auto": true
-  },
-  {
-   "line": 15,
-   "from": 0,
    "kind": "slick",
    "bg": "/home/user/financier-videos/assets/toon2d/slick_van.jpg",
    "bright": 1.35,
    "r_peek": true,
    "s": "sly",
    "r": "smug"
-  },
-  {
-   "line": 16,
-   "from": 0,
-   "kind": "cu_r",
-   "bg": "/home/user/financier-videos/assets/toon2d/hallway_package.jpg",
-   "blur": 1,
-   "r": "sideeye"
-  },
-  {
-   "kind": "two",
-   "bg": "/home/user/financier-videos/assets/toon2d/hallway_package.jpg",
-   "p": "happy",
-   "r": "sideeye",
-   "cam": {
-    "z": 1.05,
-    "push": 0.06
-   },
-   "line": 16,
-   "from": 0.28,
-   "blur": 1,
-   "amb": "room",
-   "_auto": true
-  },
-  {
-   "kind": "cu_p",
-   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
-   "p": "shock",
-   "r": "sly",
-   "cam": {
-    "z": 1.2,
-    "push": 0.06,
-    "fy": 0.42
-   },
-   "line": 16,
-   "from": 0.55,
-   "blur": 1,
-   "amb": "room",
-   "_auto": true
-  },
-  {
-   "kind": "two",
-   "bg": "/home/user/financier-videos/assets/toon2d/hallway_package.jpg",
-   "p": "happy",
-   "r": "sideeye",
-   "cam": {
-    "z": 1.05,
-    "push": 0.06
-   },
-   "line": 16,
-   "from": 0.83,
-   "blur": 1,
-   "amb": "room",
-   "_auto": true
   }
  ]
 }
