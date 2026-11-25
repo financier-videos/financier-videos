@@ -24,9 +24,14 @@ Kanallar: Financier (UC3URYtuy-f6c1fTNhesFkGA, Buck) va Red Flag Rocco (UCUyPbjs
 - Yangiliklar: Black Friday/Cyber Monday/bayram, yangi FTC/BBB/FBI ogohlantirishlari, katta pul raqamlari — rasmiy manba bilan.
 - Natija: `docs/studio_board.md` "G'oyalar" ga har kanalga 3 ta g'oya (mavzu + format + manba + hook). `docs/growth_research_2026-11-25.md` shablonlaridan foydalan.
 - C da: 24/72 soatlik raqamlar (vidiq_user_videos + vidiq_channel_analytics) → `docs/results.md` + format ustuni.
+- RETENTION (Shohjahon 2026-11-25 "o'zing aytganingdek ishla"): har kuni C da, ≥48 soat oldin chiqqan har yangi video uchun
+  `vidiq_channel_analytics report=audience_retention filters=video==ID` → rows faylga → `python3 engine/retention_read.py ROWS.json RENDERED.json SPEC.json --video ID`
+  → natija + 1 qator QAROR `docs/retention_log.md` ga. Ssenarist keyingi ssenariyni shu QAROR va jurnaldagi "XULOSA → QOIDALAR" bo'yicha yozadi.
+  Ma'lumot bo'sh qaytsa (YouTube 1–2 kun kechikadi) — ertasiga qayta urin. Haftada 1 marta Shohjahondan Studio'dagi "Viewed vs swiped away" skrinshotini so'ra (1 qator).
 
 ## 3. SSENARIST
 - Har video: 3 hook varianti yoz, eng kuchlisini tanla (viral-hooks skill). Birinchi jumla — voqea o'rtasidan, raqam yoki g'alati harakat; salom/ism yo'q.
+- `docs/retention_log.md` QOIDALARI majburiy: 5–9 s da birinchi to'lov (hazil/raqam/burilish), asosiy hazil ≤5 s, oxirida dars qatori YO'Q (saboq tavsifda).
 - Tuzilma: hook (0–2 s) → 5–8 s da burilish → 2-burilish/payoff → loop (oxiri boshiga ulanadi). Dars/ogohlantirish ohangi yo'q — saboq hikoya ichida, oxirgi 1 jumla.
 - Uzunlik: Buck hypothetical 45–60 s; Rocco sketch 40–60 s; o'yin 40–45 s; mikro 15–20 s.
 - Savol ohangidagi qatorlar darak gap qilib yoziladi (prosody FLAT_Q xatosi). Qisqa so'zlar, og'zaki til.
