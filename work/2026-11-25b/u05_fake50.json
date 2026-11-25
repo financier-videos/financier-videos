@@ -18,9 +18,9 @@
   }
  },
  "benchmarks": [
-  "8Sp2jBDdTDM \u2014 paradoks hook 0\u20133 s (tag 'tug'ildi' \u2014 narx uch hafta oldin yasalgan), mexanizm 3 qadamda",
-  "ftA18KGBrwM \u2014 har qadamga o'z tasviri va raqami, oxirida izoh uyg'otadigan savol",
-  "YANGI: Hypothetically 'Fake 50% Off tag' trendi (201 obunachi \u2192 1.05M, daily_trends 25-noy) mexanikasi \u2014 Step one/two/three sanog'i + narxning 'kostyum' gag'i, oxirgi 5 videoda yo'q (matn/kadr ko'chirilmadi)"
+  "8Sp2jBDdTDM — paradoks hook 0–3 s (tag 'tug'ildi' — narx uch hafta oldin yasalgan), mexanizm 3 qadamda",
+  "ftA18KGBrwM — har qadamga o'z tasviri va raqami, oxirida izoh uyg'otadigan savol",
+  "YANGI: Hypothetically 'Fake 50% Off tag' trendi (201 obunachi → 1.05M, daily_trends 25-noy) mexanikasi — Step one/two/three sanog'i + narxning 'kostyum' gag'i, oxirgi 5 videoda yo'q (matn/kadr ko'chirilmadi)"
  ],
  "scenes": [
   {
@@ -112,19 +112,34 @@
   {
    "text": "Step three. Black Friday: 'Was $100. Now $50!'",
    "say": "Step three. Black Friday! Was a hundred... NOW fifty!",
-   "vs": {
-    "left": "$100",
-    "left_label": "WAS",
-    "left_sub": "for about 3 weeks",
-    "right": "$50",
-    "right_label": "NOW",
-    "right_sub": "Half off!",
-    "win": "right",
-    "at": [
-     0.6,
-     2.2
-    ]
-   }
+   "stat": "WAS $100 → $50",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/u5/mall_bf.mp4",
+     "at": 0.0,
+     "start": 2,
+     "kb": "in"
+    },
+    {
+     "broll": "/tmp/fin/bg/u5/escalator.mp4",
+     "at": 1.5,
+     "start": 5
+    },
+    {
+     "broll": "/tmp/fin/bg/u5/mall_bf.mp4",
+     "at": 3.0,
+     "start": 7
+    }
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "doubletake",
+    "act_at": 1.6
+   },
+   "sfx": [
+    "impact@1.6"
+   ]
   },
   {
    "text": "Same fifty bucks. Just wearing a costume.",
@@ -158,7 +173,8 @@
     "pos": "corner",
     "act": "deadpan",
     "act_at": 0.3
-   }
+   },
+   "bg": "/tmp/fin/bg/u5/mall_bf.mp4"
   },
   {
    "text": "Is that allowed? The FTC's pricing guide says the 'was' price must be real.",
@@ -221,20 +237,20 @@
    "show_source": "Massachusetts 940 CMR 6.05",
    "shots": [
     {
-     "broll": "/tmp/fin/bg/u5/cal.mp4",
-     "at": 0,
-     "start": 2,
+     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
+     "at": 0.0,
+     "start": 1,
      "kb": "in"
     },
     {
-     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
+     "broll": "/tmp/fin/bg/u5/magnify.mp4",
      "at": 1.5,
      "start": 2
     },
     {
-     "broll": "/tmp/fin/bg/u5/cal.mp4",
+     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
      "at": 3.0,
-     "start": 8
+     "start": 4.5
     }
    ],
    "sfx": [
@@ -275,7 +291,7 @@
    "say": "Thirty-six percent... weren't cheaper than in early November. Some cost MORE.",
    "beat": 0.3,
    "stat": "36%",
-   "show_source": "WalletHub Black Friday study, Nov 2025: 3,100 items vs Oct 27\u2013Nov 17 prices",
+   "show_source": "WalletHub Black Friday study, Nov 2025: 3,100 items vs Oct 27–Nov 17 prices",
    "shots": [
     {
      "broll": "/tmp/fin/bg/u5/iceberg2.mp4",

@@ -1,0 +1,67 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    82.5 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -13.9 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -13.8 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 12.4 Mbit/s, 56.0s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": " ],\n \"heard\": \"This 50% off tag was born three weeks ago. Step one, October. The price is 50 bucks. Step two, early November, the price hits the gym. $100. Step three, Black Friday was 100, now 50. Same 50 bucks just wearing a costume. Is that even allowed? The FTC's pricing guide says the WAS price has to be real. Offered openly. For a reasonably substantial period. Not one weekend. Massachusetts even counts the days. 28 out of the last 90. Last Black Friday, Wallachub tracked 3100 deals. 36% Weren't cheaper than in early November. Some cost more. So, ever checked the price a month before?\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "s that even allowed? The F.T.C.'s pricing guide says the 'w\n 7  30.18s range=15.1 st  gap=0.74  ok  | Offered openly... for a reasonably substantial period. Not o\n 8  36.10s range=11.5 st  gap=0.57  ok  | Massachusetts even counts the days. Twenty-eight out of the \n 9  41.15s range=13.2 st  gap=0.22  ok  | Last Black Friday, WalletHub tracked thirty-one hundred deal\n10  45.56s range=13.5 st  gap=0.48  ok  | Thirty-six percent... weren't cheaper than in early November\n11  52.11s range=10.8 st  gap=0.16  ok  | So... ever checked the price a month before?\n{\"median_f0\": 215.0, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 100"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/2026-11-25b/u05_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "SKIP",
+  "note": "no --prev videos given (pass the last 4 videos of this channel)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "40 hard cuts (ffmpeg scene>0.22) in 56.0 s = 1.4 s/cut (need >= 27); engine planned 37"
+ },
+ "12_script": {
+  "status": "PASS",
+  "note": "u05_fake50.json                    words 110 scenes 11 broll 10 look fullbleed line2 \"step\" end \"before\"\nu03_aaa.json                       words 116 scenes 10 broll 10 look fullbleed line2 \"that's\" end \"year\"\nv04_print.json                     words  33 scenes  4 broll 4 look fullbleed line2 \"curious\" end \"hundreds\"\nv01_buck.json                      words 126 scenes 12 broll 12 look fullbleed line2 \"storytelling\" end \"name\"\nr01_drawer.json                    words 110 scenes 11 broll 11 look fullbleed line2 \"curious\" end \"found\"\nSCRIPT_CHECK: PASS"
+ },
+ "14_empty_panel": {
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 20% of the frame (limit 20%)"
+ },
+ "15_competitors": {
+  "status": "PASS",
+  "note": "2 fresh benchmark(s) ['8Sp2jBDdTDM', 'ftA18KGBrwM'] (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: script_rules v2 (how_made), hookscore (50.6), title.py (100), footage_bank + pixabay_bg, competitor_watch benchmarks, comedy (gag 'kostyum', 'gym'), qc_gate/check.py/voice_check, looks fullbleed; ishlatilmadi: vidiq_find_broll (bank+Pixabay yetarli), uslubli insert (kunlik limit, vaqt), beats.py (script_check yetarli)"
+ },
+ "verdict": "PASS"
+}
