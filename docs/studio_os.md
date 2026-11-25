@@ -1,5 +1,7 @@
 # STUDIYA OS — 8 rol, ikkala kanal (Shohjahon 2026-11-25: "aytgan kasblaring kabi o'zing ishla, hammasini o'zing qil, hech biri qolib ketmasin, o'z vaqtida va a'lo darajada bo'lishini tekshirib tur")
 
+**DOIMIY RUXSAT (Shohjahon 2026-11-25 21:20: "bundan keyin mendan ruxsat kutma va o'zing ishla"):** video e'lon qilish (vidiq_social_post_publish), izohlarga javob, Instagram Reel, draft vaqtini o'zgartirish — Shohjahonning alohida "ha"sini KUTMASDAN bajariladi. Faqat YouTube/Google o'zi so'raydigan tasdiq (MFA havolasi) va pul to'lovi Shohjahonga qoladi: havolani 1 qator bilan yubor va qolgan ishni davom ettir. QAT'IY CHEGARALAR (fakt, mualliflik, real odam, sotib olingan ko'rish yo'q) o'zgarmaydi.
+
 Bu fayl `docs/producer_task.md` dan USTUN (QAT'IY CHEGARALAR o'zgarmaydi). Har ishga tushishda (A 09:17, B 15:17, C 23:17 Toshkent) shu tartibda 8 rolni bajar.
 Kanallar: Financier (UC3URYtuy-f6c1fTNhesFkGA, Buck) va Red Flag Rocco (UCUyPbjsSFdWKnC4nVRDhOiA). Post faqat vidIQ orqali.
 
@@ -52,7 +54,7 @@ Kanallar: Financier (UC3URYtuy-f6c1fTNhesFkGA, Buck) va Red Flag Rocco (UCUyPbjs
 - Fayl: repo ildizida `<kanal>_<id>_<slug>.mp4`, commit + push media.
 
 ## 8. COMMUNITY MENEJER (B va C da, 15 daqiqa)
-- vidiq_video_comments: oxirgi 48 soatdagi videolar izohlari. Har yangi izohga kanal ovozida qisqa javob (vidiq_reply_to_comment; ruxsat so'ralsa — Shohjahonga 1 qator). Trol bilan bahslashma.
+- vidiq_video_comments: oxirgi 48 soatdagi videolar izohlari. Har yangi izohga kanal ovozida qisqa javob (vidiq_reply_to_comment, tasdiq kutilmaydi; `verification_required` bo'lsa — havolani Shohjahonga 1 qator, keyin qayta urin). Trol bilan bahslashma.
 - Har yangi videoga pinned-comment matni: keyingi qism savoli yoki "comment your score".
 - Izohlardagi savollar → `docs/studio_board.md` "G'oyalar" (manba: izoh).
 - Instagram: har Short → @financier424 / @redfrocco Reel (vidiq_instagram_publish_reel, AI belgisi), YouTube'dan ≥2 soat keyin.
