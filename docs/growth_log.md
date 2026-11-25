@@ -128,3 +128,8 @@ O'RGANILDI: kunlik o'sish +465 (kecha +894). 23-noy burst videolari 24+ soatda: 
 O'ZGARTIRILDI: script_bank SHOSHILINCH U-3 (AAA 81.5M Thanksgiving, aviachipta $800) va U-4 (benzin rekordi — faqat tasdiqlansa); backlog — "kunda kamida 1 trend/katta raqam Short navbat boshida" bandi. IG Reel'ni YouTube havolasidan chiqarish (vidiq_video_upload'siz) ishladi.
 O'LCHOV: 25-noy C — print_100/buck_1748/cancel_sub (trendsiz) vs U-3 (trend) 24 soatlik ko'rish; Rocco "Hi Mom" 24 soatda ≥1,000 mi.
 KECHA vs BUGUN: kecha eng yaxshi yangi video 7.5 soatda 160, bugun Financier eng yaxshisi 3 soatda 88 (taxminan teng temp), Rocco 4 soatda 834 (kechagi 1–4 dan ~200x) — Rocco YAXSHILANDI, Financier o'zgarmadi. Sabab: Financier navbatida trend mavzu yo'q; tuzatish — U-3 navbat boshiga.
+
+## 2026-11-25 (A, erta 07:20–08:15 Toshkent)
+O'RGANILDI: auto_shots bitta klipli sahnaga boshqa mavzudagi klip qo'shadi (kurka → Yer); tungi osmon / oq fon kliplari empty_panel ni buzadi (38% → 21% → PASS).
+O'ZGARTIRILDI: U-3 trend Short (AAA 81.5M) navbat boshiga; har sahnada ≤2 s oraliqli o'z kliplari bilan aniq "shots". Faktlar render oldidan qayta tekshirildi (AAA, 16-noy benzin).
+O'LCHOV: 26-noy C — U-3 24 soatlik ko'rish vs print_100/buck_1748 (trendsiz). Gipoteza: trend + katta raqam ≥3x.
