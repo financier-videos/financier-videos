@@ -1,0 +1,344 @@
+{
+ "format": "short",
+ "sfx": true,
+ "look": "fullbleed",
+ "grade": "vivid",
+ "captions": "words",
+ "headline": "hook",
+ "auto_shots": 1.8,
+ "structure": "scale_ladder",
+ "topic": 11,
+ "source": "Source: AAA Thanksgiving travel forecast (Nov 24–30, 2026), published Nov 2026",
+ "buck_voice": {
+  "variant": "D",
+  "model": "eleven_v3",
+  "settings": {
+   "speed": 1.1
+  }
+ },
+ "benchmarks": [
+  "ftA18KGBrwM — kichik raqamdan kosmik miqyosga pog'ona (1 in 4 → Yer atrofida 3 marta), har pog'ona o'z tasviri",
+  "8Sp2jBDdTDM — paradoks burilish: 'rekordga o'xshaydi, aslida PASAYISH' (0–3 s hook + oxirida burilish)",
+  "DfC5DUuTroA — YANGI: tirik kurka lavhasi ustida quruq zarba ('the turkey should fly ME') — masshtab/rol kontrasti, oldingi 5 videoda yo'q"
+ ],
+ "scenes": [
+  {
+   "text": "81.5 million Americans are about to leave home. Same week.",
+   "say": "[excited] Eighty-one and a half million Americans are about to leave home. Same week.",
+   "head": "81.5 MILLION AMERICANS. ONE WEEK.",
+   "stat": "81.5M",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/u3/jam.mp4",
+     "at": 0.0,
+     "start": 0,
+     "kb": "in"
+    },
+    {
+     "broll": "/tmp/fin/bg/u3/hwy2.mp4",
+     "at": 1.37,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/u3/jam.mp4",
+     "at": 2.74,
+     "start": 6
+    },
+    {
+     "broll": "/tmp/fin/bg/u3/hwy2.mp4",
+     "at": 4.11,
+     "start": 4
+    }
+   ],
+   "sfx": [
+    "impact@0.0"
+   ]
+  },
+  {
+   "text": "That's roughly one in four people in the whole country.",
+   "say": "That's roughly one in four people in the whole country.",
+   "stat": "1 IN 4",
+   "show_source": "Our math: 81.5M ÷ ~340M U.S. residents ≈ 24%",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/airport_hall.mp4",
+     "at": 0.0,
+     "start": 0,
+     "kb": "in"
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/airport_walk.mp4",
+     "at": 1.25,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/airport_hall.mp4",
+     "at": 2.5,
+     "start": 4
+    }
+   ],
+   "mascot": {
+    "mood": "shocked",
+    "pos": "corner",
+    "act": "doubletake",
+    "act_at": 0.2
+   }
+  },
+  {
+   "text": "Line them up holding hands... they'd wrap around the Earth three times.",
+   "say": "Line them up holding hands... they'd wrap around the Earth three times.",
+   "stat": "3× EARTH",
+   "show_source": "Our math: 81.5M × ~1.5 m arm span ≈ 122,000 km; Earth ≈ 40,075 km around",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/earth_night.mp4",
+     "at": 0.0,
+     "start": 0,
+     "kb": "in"
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/earth_globe.mp4",
+     "at": 1.57,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/earth_night.mp4",
+     "at": 3.14,
+     "start": 3
+    }
+   ],
+   "sfx": [
+    "whoosh@0.1"
+   ]
+  },
+  {
+   "text": "72.9 million of them? Driving.",
+   "say": "Seventy-two point nine million of them? Driving.",
+   "stat": "72.9M",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/u3/drive.mp4",
+     "at": 0.0,
+     "start": 0,
+     "kb": "in"
+    },
+    {
+     "broll": "/tmp/fin/bg/u3/hwy2.mp4",
+     "at": 1.5,
+     "start": 2
+    },
+    {
+     "broll": "/tmp/fin/bg/u3/drive.mp4",
+     "at": 3.0,
+     "start": 2
+    }
+   ]
+  },
+  {
+   "text": "Into gas at $3.82 a gallon. Last year it was $3.08.",
+   "say": "Into gas at three eighty-two a gallon. Last year it was three oh eight.",
+   "chart": {
+    "labels": [
+     "2025",
+     "2026"
+    ],
+    "values": [
+     3.08,
+     3.82
+    ],
+    "texts": [
+     "$3.08",
+     "$3.82"
+    ],
+    "at": [
+     1.8,
+     0.6
+    ]
+   },
+   "show_source": "AAA national average, regular, Nov 16, 2025 vs Nov 16, 2026",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/u3/drive.mp4",
+     "at": 0.0,
+     "start": 3,
+     "kb": "in"
+    },
+    {
+     "broll": "/tmp/fin/bg/u3/hwy2.mp4",
+     "at": 1.28,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/u3/drive.mp4",
+     "at": 2.56,
+     "start": 5
+    },
+    {
+     "broll": "/tmp/fin/bg/u3/hwy2.mp4",
+     "at": 3.84,
+     "start": 4
+    }
+   ],
+   "mascot": {
+    "mood": "sad",
+    "pos": "corner",
+    "act": "sigh",
+    "act_at": 1.6
+   }
+  },
+  {
+   "text": "Flying? AAA's average round trip: $800. Up 17%.",
+   "say": "Flying? Triple A's average round trip: eight hundred dollars. Up seventeen percent.",
+   "stat": "$800",
+   "show_source": "AAA bookings, domestic round trip, Thanksgiving 2026 vs 2025",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/plane_wing.mp4",
+     "at": 0.0,
+     "start": 0,
+     "kb": "in"
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cabin_yellow.mp4",
+     "at": 1.67,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/airport_walk.mp4",
+     "at": 3.34,
+     "start": 4
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/plane_wing.mp4",
+     "at": 5.01,
+     "start": 5
+    }
+   ],
+   "sfx": [
+    "impact@0.3"
+   ]
+  },
+  {
+   "text": "For $800, the turkey should be flying ME.",
+   "say": "[deadpan] For eight hundred bucks, the turkey should be flying ME.",
+   "land": 0.4,
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/u3/turkey.mp4",
+     "at": 0.0,
+     "start": 0,
+     "kb": "in"
+    },
+    {
+     "broll": "/tmp/fin/bg/u3/turkey.mp4",
+     "at": 1.6,
+     "start": 2.5
+    },
+    {
+     "broll": "/tmp/fin/bg/u3/turkey.mp4",
+     "at": 3.2,
+     "start": 5
+    }
+   ],
+   "mascot": {
+    "mood": "sideeye",
+    "pos": "corner",
+    "act": "deadpan",
+    "act_at": 0.3
+   },
+   "sfx": [
+    "boing@1.6"
+   ]
+  },
+  {
+   "text": "And here's the twist. This is a DROP. The first in three years.",
+   "say": "And here's the twist... this is a DROP. The first in three years.",
+   "beat": 0.3,
+   "stat": "−0.1%",
+   "show_source": "AAA forecast: 81.5M vs ~81.6M in 2025; ends three straight record years",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
+     "at": 0.0,
+     "start": 0,
+     "kb": "in"
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 1.62,
+     "start": 0
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/calendar_flip.mp4",
+     "at": 3.24,
+     "start": 4
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/wallet_empty.mp4",
+     "at": 4.86,
+     "start": 4
+    }
+   ],
+   "mascot": {
+    "mood": "confused",
+    "pos": "corner",
+    "act": "doubletake",
+    "act_at": 0.5
+   }
+  },
+  {
+   "text": "About 121,000 people decided the trip just wasn't worth it.",
+   "say": "About a hundred twenty-one thousand people decided the trip just wasn't worth it.",
+   "stat": "121,000",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 0.0,
+     "start": 0,
+     "kb": "in"
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/airport_hall.mp4",
+     "at": 1.67,
+     "start": 2
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/cash_count.mp4",
+     "at": 3.33,
+     "start": 5
+    }
+   ]
+  },
+  {
+   "text": "So... are you driving, flying, or staying home this year?",
+   "say": "So... are you driving, flying, or staying home this year?",
+   "land": 0.3,
+   "show_source": "Forecast, not final numbers — AAA, Nov 2026",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/u3/jam.mp4",
+     "at": 0.0,
+     "start": 1,
+     "kb": "in"
+    },
+    {
+     "broll": "/tmp/fin/bg/bank/airport_walk.mp4",
+     "at": 1.33,
+     "start": 8
+    },
+    {
+     "broll": "/tmp/fin/bg/u3/hwy2.mp4",
+     "at": 2.67,
+     "start": 6
+    }
+   ],
+   "mascot": {
+    "mood": "point",
+    "pos": "corner"
+   },
+   "sfx": [
+    "ding@1.2"
+   ]
+  }
+ ]
+}

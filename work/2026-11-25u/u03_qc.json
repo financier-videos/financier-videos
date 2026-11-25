@@ -1,0 +1,67 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    74.4 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -14.2 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -1.5 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -14.1 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 12.4 Mbit/s, 50.5s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "\",\n  \"buzzer buzzes\"\n ],\n \"heard\": \"81 and a half million Americans are about to leave home. Same week. That's roughly one in four people in the whole country. Line them up, holding hands. They'd wrap around the earth three times. 72.9 million of them? Driving. Into gas at 382 a gallon. Last year, it was 308. Flying? AAA's average round trip. $800, up 17%. For $800, the turkey should be flying me. And here's the twist. This... is a drop the first in three years. About 121,000 people decided the trip just wasn't worth it. So are you driving, flying, or staying home this year? (buzzer buzzes)\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": "ree eighty-two a gallon. Last year it was thre\n 6  23.56s range=10.8 st  gap=0.47  ok  | Flying? Triple A's average round trip: eight hundred dollars\n 7  30.24s range=12.1 st  gap=0.22  ok  | [deadpan] For eight hundred bucks, the turkey should be flyi\n 8  35.03s range=13.6 st  gap=0.62  ok  | And here's the twist... this is a DROP. The first in three y\n 9  41.51s range=15.5 st  gap=0.14  ok  | About a hundred twenty-one thousand people decided the trip \n10  46.51s range=14.0 st  gap=0.43  ok  | So... are you driving, flying, or staying home this year?\n{\"median_f0\": 242.7, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 100"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/2026-11-25u/u03_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "WARN",
+  "note": "dark/dull frames - brighten bg or less b-roll dimming"
+ },
+ "10_look": {
+  "status": "WARN",
+  "note": "FAIL  0.83  (layout 0.94, palette 0.61, tone 0.96)  vs 2026-11-25_bank_c01.mp4\nFAIL  0.81  (layout 0.88, palette 0.64, tone 0.94)  vs 2026-11-25_print_v04.mp4\nFAIL  0.78  (layout 0.94, palette 0.52, tone 0.91)  vs 2026-11-25_cancel_c02.mp4\nFAIL  0.79  (layout 0.95, palette 0.55, tone 0.89)  vs 2026-11-25_drawer_r01.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "29 hard cuts (ffmpeg scene>0.22) in 50.5 s = 1.7 s/cut (need >= 25); engine planned 34"
+ },
+ "12_script": {
+  "status": "PASS",
+  "note": "u03_aaa.json                       words 116 scenes 10 broll 10 look fullbleed line2 \"that's\" end \"year\"\nc01_bank.json                      words 100 scenes 21 broll 21 look fullbleed line2 \"cheerful\" end \"now\"\nv04_print.json                     words  33 scenes  4 broll 4 look fullbleed line2 \"curious\" end \"hundreds\"\nc02_cancel.json                    words  88 scenes 15 broll 15 look fullbleed line2 \"firm\" end \"me\"\nr01_drawer.json                    words 110 scenes 11 broll 11 look fullbleed line2 \"curious\" end \"found\"\nSCRIPT_CHECK: PASS"
+ },
+ "14_empty_panel": {
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 14% of the frame (limit 20%)"
+ },
+ "15_competitors": {
+  "status": "PASS",
+  "note": "3 fresh benchmark(s) ['8Sp2jBDdTDM', 'DfC5DUuTroA', 'ftA18KGBrwM'] (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: trend_radar/backlog (U-3 trend), competitor_watch (ftA18KGBrwM, 8Sp2jBDdTDM, DfC5DUuTroA), footage_bank + pixabay_bg (kadrlar ko'rildi), hookscore (50.6), title.py (100), script_check PASS, eleven_v3, qc_gate; ishlatilmadi: vidiq_find_broll (bank+Pixabay yetarli), beats.py (scale_ladder 50 s, kesimlar shots bilan)"
+ },
+ "verdict": "PASS"
+}
