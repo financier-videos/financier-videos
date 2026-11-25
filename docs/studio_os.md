@@ -24,6 +24,11 @@ Kanallar: Financier (UC3URYtuy-f6c1fTNhesFkGA, Buck) va Red Flag Rocco (UCUyPbjs
 - Yangiliklar: Black Friday/Cyber Monday/bayram, yangi FTC/BBB/FBI ogohlantirishlari, katta pul raqamlari — rasmiy manba bilan.
 - Natija: `docs/studio_board.md` "G'oyalar" ga har kanalga 3 ta g'oya (mavzu + format + manba + hook). `docs/growth_research_2026-11-25.md` shablonlaridan foydalan.
 - C da: 24/72 soatlik raqamlar (vidiq_user_videos + vidiq_channel_analytics) → `docs/results.md` + format ustuni.
+- BEGONA VIDEOLAR TAHLILI (Shohjahon 2026-11-25: "faqat bizning videoni emas, portlayotgan va trend videolarni, ko'chirayotgan videolaringni ham tahlil qil"):
+  har kuni A da 2 ta yangi portlayotgan Short (har nishadan 1) + har haftada (dushanba) biz nusxa olayotgan namunalarning hammasi —
+  vidiq_watch_shortform_content bilan BEAT-MAP: 0–1, 1–3, 3–5, 5–9 s, har keyingi zarba, oxirgi 3 s; kesim oralig'i, ekran matni, rang, ovoz (birinchi tovush ms), so'z/soniya, birinchi kulgi/raqam soniyasi, yakun turi.
+  Har bir namuna bizning mos videomiz bilan SOLISHTIRILADI (bizda 0–9 s da nima yo'q, tempdagi farq, yakun farqi) → 3 ta qator darajasidagi tuzatish.
+  Natija `docs/viral_beatmap_<sana>.md` + competitor_watch.md; ssenarist keyingi ssenariyni shu tuzatishlar bilan yozadi.
 - RETENTION (Shohjahon 2026-11-25 "o'zing aytganingdek ishla"): har kuni C da, ≥48 soat oldin chiqqan har yangi video uchun
   `vidiq_channel_analytics report=audience_retention filters=video==ID` → rows faylga → `python3 engine/retention_read.py ROWS.json RENDERED.json SPEC.json --video ID`
   → natija + 1 qator QAROR `docs/retention_log.md` ga. Ssenarist keyingi ssenariyni shu QAROR va jurnaldagi "XULOSA → QOIDALAR" bo'yicha yozadi.
