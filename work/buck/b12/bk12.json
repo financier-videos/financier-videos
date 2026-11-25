@@ -1,0 +1,603 @@
+{
+ "id": "BK-12",
+ "title": "Black Friday Spends $149,306 Every Second",
+ "brand": [
+  "FINANCIER",
+  [
+   255,
+   205,
+   60
+  ]
+ ],
+ "tail": 0.6,
+ "speed": 1.06,
+ "amb": "room",
+ "grade": "warm",
+ "lines": [
+  [
+   "B",
+   "[announcer] This Friday, America will spend one hundred forty-nine thousand dollars online. Every. Single. Second."
+  ],
+  [
+   "B",
+   "[fast] In the time it takes me to say this sentence... about a million dollars. Gone."
+  ],
+  [
+   "B",
+   "[excited] One minute? Almost nine million."
+  ],
+  [
+   "B",
+   "[shocked] One hour? Five hundred and thirty-seven million dollars."
+  ],
+  [
+   "B",
+   "[deadpan] By midnight: twelve point nine billion. Online. In one day."
+  ],
+  [
+   "B",
+   "[sneaky] And that's not even the biggest day. Cyber Monday is expected to hit fifteen billion."
+  ],
+  [
+   "B",
+   "[confident] So that countdown timer on your screen? It's built for exactly this second."
+  ],
+  [
+   "B",
+   "[whisper] Since this video started... about seven million dollars. Every. Single. Second."
+  ]
+ ],
+ "hot": [
+  "SECOND",
+  "MILLION",
+  "BILLION",
+  "CYBER"
+ ],
+ "cap_y": 0.93,
+ "sfx": [
+  {
+   "line": 0,
+   "word": "second",
+   "name": "coin",
+   "gain": 0.3
+  },
+  {
+   "line": 1,
+   "word": "gone",
+   "name": "whip",
+   "gain": 0.3
+  },
+  {
+   "line": 3,
+   "frac": 0.0,
+   "name": "subboom",
+   "gain": 0.35
+  },
+  {
+   "line": 4,
+   "word": "billion",
+   "name": "impact",
+   "gain": 0.3
+  },
+  {
+   "line": 6,
+   "frac": 0.2,
+   "name": "tick",
+   "gain": 0.3,
+   "dur": 1.5
+  }
+ ],
+ "sources": "Adobe Digital Insights 2026 holiday forecast (Sept 28, 2026): Black Friday $12.9B, Cyber Monday $15.1B, Thanksgiving $6.9B; $12.9B/86,400 s = $149,306/s",
+ "shots": [
+  {
+   "kind": "counter",
+   "line": 0,
+   "from": 0,
+   "start": 0,
+   "to": 149306,
+   "dur": 1.6,
+   "label": "SPENT ONLINE \u00b7 EVERY SECOND",
+   "size": 120,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "shocked"
+   },
+   "bg": "/tmp/fin/bg/r/mall.mp4",
+   "bg_start": 1.0,
+   "hook": "BLACK FRIDAY: $149,306 EVERY SECOND"
+  },
+  {
+   "kind": "host",
+   "set": "teal",
+   "line": 0,
+   "from": 0.149,
+   "buck": {
+    "mood": "proud",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true
+  },
+  {
+   "kind": "counter",
+   "line": 0,
+   "from": 0.274,
+   "start": 0,
+   "to": 149306,
+   "dur": 1.6,
+   "label": "SPENT ONLINE \u00b7 EVERY SECOND",
+   "size": 120,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "shocked"
+   },
+   "bg": "/tmp/fin/bg/r/mall.mp4",
+   "bg_start": 1.0,
+   "hook": null,
+   "cont": true,
+   "_auto": true
+  },
+  {
+   "kind": "host",
+   "line": 0,
+   "from": 0.45,
+   "buck": {
+    "mood": "proud",
+    "h": 1300,
+    "y": 1.04
+   },
+   "bg": "/tmp/fin/bg/r/crowd.mp4",
+   "bg_start": 2.0,
+   "dim": 20
+  },
+  {
+   "kind": "counter",
+   "line": 0,
+   "from": 0.75,
+   "start": 0,
+   "to": 149306,
+   "dur": 0.8,
+   "label": "EVERY SECOND",
+   "size": 120,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "happy"
+   },
+   "bg": "/tmp/fin/bg/rc2/phonehand.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "set": "pink",
+   "line": 0,
+   "from": 0.863,
+   "buck": {
+    "mood": "proud",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true
+  },
+  {
+   "kind": "counter",
+   "line": 1,
+   "from": 0,
+   "start": 0,
+   "to": 1000000,
+   "dur": 3.0,
+   "label": "WHILE BUCK TALKS",
+   "ticker": "+$149,306",
+   "rate": 3,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "confused"
+   },
+   "bg": "/tmp/fin/bg/r/online.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "set": "sky",
+   "line": 1,
+   "from": 0.248,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true
+  },
+  {
+   "kind": "host",
+   "line": 1,
+   "from": 0.55,
+   "buck": {
+    "mood": "shocked",
+    "h": 1300,
+    "y": 1.04
+   },
+   "bg": "/tmp/fin/bg/r01/conveyor.mp4",
+   "bg_start": 1.0,
+   "dim": 20
+  },
+  {
+   "kind": "counter",
+   "line": 2,
+   "from": 0,
+   "start": 0,
+   "to": 8958000,
+   "dur": 1.4,
+   "label": "ONE MINUTE",
+   "size": 120,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "happy"
+   },
+   "bg": "/tmp/fin/bg/r/cart.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "line": 2,
+   "from": 0.6,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "bg": "/tmp/fin/bg/r01/boxline.mp4",
+   "bg_start": 2.0,
+   "dim": 20
+  },
+  {
+   "kind": "counter",
+   "line": 3,
+   "from": 0,
+   "start": 8958000,
+   "to": 537500000,
+   "dur": 1.6,
+   "label": "ONE HOUR",
+   "size": 110,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "shocked"
+   },
+   "bg": "/tmp/fin/bg/r01/courier.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "set": "peach",
+   "line": 3,
+   "from": 0.248,
+   "buck": {
+    "mood": "shocked",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true
+  },
+  {
+   "kind": "host",
+   "line": 3,
+   "from": 0.55,
+   "buck": {
+    "mood": "shocked",
+    "h": 1300,
+    "y": 1.04
+   },
+   "bg": "/tmp/fin/bg/t03/nightcity.mp4",
+   "bg_start": 2.0,
+   "dim": 20,
+   "prop": "$537,500,000"
+  },
+  {
+   "kind": "kinetic",
+   "line": 4,
+   "from": 0,
+   "words": [
+    {
+     "t": "$12.9",
+     "size": 180,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "BILLION",
+     "size": 120
+    }
+   ],
+   "bg": "/tmp/fin/bg/bank/city_fireworks.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "set": "green",
+   "line": 4,
+   "from": 0.224,
+   "buck": {
+    "mood": "sideeye",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true
+  },
+  {
+   "kind": "host",
+   "line": 4,
+   "from": 0.5,
+   "buck": {
+    "mood": "sideeye",
+    "h": 1300,
+    "y": 1.04
+   },
+   "bg": "/tmp/fin/bg/r01/openbox.mp4",
+   "bg_start": 1.0,
+   "dim": 20
+  },
+  {
+   "kind": "bars",
+   "line": 5,
+   "from": 0,
+   "title": "ADOBE 2026 FORECAST",
+   "items": [
+    [
+     "THANKSGIVING",
+     6.9,
+     [
+      120,
+      120,
+      140
+     ]
+    ],
+    [
+     "BLACK FRIDAY",
+     12.9,
+     [
+      235,
+      64,
+      52
+     ]
+    ],
+    [
+     "CYBER MONDAY",
+     15.1,
+     [
+      80,
+      160,
+      240
+     ]
+    ]
+   ],
+   "new": 2,
+   "fmt": "${:,.1f}",
+   "suffix": "B",
+   "bg": "/tmp/fin/bg/rc/loadbar.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "set": "yellow",
+   "line": 5,
+   "from": 0.239,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true
+  },
+  {
+   "kind": "bars",
+   "line": 5,
+   "from": 0.442,
+   "title": "ADOBE 2026 FORECAST",
+   "items": [
+    [
+     "THANKSGIVING",
+     6.9,
+     [
+      120,
+      120,
+      140
+     ]
+    ],
+    [
+     "BLACK FRIDAY",
+     12.9,
+     [
+      235,
+      64,
+      52
+     ]
+    ],
+    [
+     "CYBER MONDAY",
+     15.1,
+     [
+      80,
+      160,
+      240
+     ]
+    ]
+   ],
+   "new": 2,
+   "fmt": "${:,.1f}",
+   "suffix": "B",
+   "bg": "/tmp/fin/bg/rc/loadbar.mp4",
+   "bg_start": 1.0,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 5,
+   "from": 0.6,
+   "buck": {
+    "mood": "sly",
+    "h": 1300,
+    "y": 1.04
+   },
+   "bg": "/tmp/fin/bg/rc2/card.mp4",
+   "bg_start": 1.0,
+   "dim": 20
+  },
+  {
+   "kind": "kinetic",
+   "line": 6,
+   "from": 0,
+   "words": [
+    {
+     "t": "00:59",
+     "size": 200,
+     "c": [
+      235,
+      64,
+      52
+     ],
+     "font": "Pixel"
+    },
+    {
+     "t": "LIMITED TIME!",
+     "size": 100
+    }
+   ],
+   "bg": "/tmp/fin/bg/rc2/scroll.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "set": "teal",
+   "line": 6,
+   "from": 0.225,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true
+  },
+  {
+   "kind": "host",
+   "line": 6,
+   "from": 0.5,
+   "buck": {
+    "mood": "sideeye",
+    "h": 1300,
+    "y": 1.04
+   },
+   "bg": "/tmp/fin/bg/r/store.mp4",
+   "bg_start": 1.0,
+   "dim": 20
+  },
+  {
+   "kind": "counter",
+   "line": 7,
+   "from": 0,
+   "start": 0,
+   "to": 7000000,
+   "dur": 2.0,
+   "label": "SINCE THIS VIDEO STARTED",
+   "size": 110,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "sly"
+   },
+   "bg": "/tmp/fin/bg/rc/confetti.mp4",
+   "bg_start": 0.5
+  },
+  {
+   "kind": "host",
+   "set": "pink",
+   "line": 7,
+   "from": 0.196,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true
+  },
+  {
+   "kind": "counter",
+   "line": 7,
+   "from": 0.361,
+   "start": 0,
+   "to": 7000000,
+   "dur": 2.0,
+   "label": "SINCE THIS VIDEO STARTED",
+   "size": 110,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "sly"
+   },
+   "bg": "/tmp/fin/bg/rc/confetti.mp4",
+   "bg_start": 0.5,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "set": "sky",
+   "line": 7,
+   "from": 0.506,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true
+  },
+  {
+   "kind": "counter",
+   "line": 7,
+   "from": 0.65,
+   "start": 0,
+   "to": 149306,
+   "dur": 0.8,
+   "label": "EVERY SECOND",
+   "size": 120,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "happy"
+   },
+   "bg": "/tmp/fin/bg/r/mall.mp4",
+   "bg_start": 4.0
+  },
+  {
+   "kind": "host",
+   "set": "peach",
+   "line": 7,
+   "from": 0.846,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true
+  }
+ ]
+}

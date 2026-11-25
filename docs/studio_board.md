@@ -16,6 +16,8 @@
 | Rocco | D1 package-text confession | 27-noy 13:30 | 27-noy 19:00 | rejada |
 | Rocco | RC-23 Penny Plays Dumb 2 (yangi joylar) | 28-noy 01:00 | 28-noy 13:00 | rejada |
 | Rocco | RC-24 Refund Trick (yangi joylar) | 29-noy 01:00 | 29-noy 13:00 | rejada |
+| Financier | BK-12 Black Friday $149,306/sec | 26-noy 21:00 | 27-noy 18:00 | rejada |
+| Rocco | P1 Scam or Legit #4 Black Friday (o'z temasi) | 28-noy 13:00 | 28-noy 19:00 | rejada |
 
 ## G'oyalar (tadqiqotchi + izohlar) — docs/growth_research_2026-11-25.md dan
 - Buck: "1 cent per second until you match a $869B fortune" (Time Ladder); "Black Friday spends $149,306 every second" (Adobe $12.9B); "Let's bet on a coin — you go first" (Penney's game, Rigged Bet); "Guess the Number: $15.1B Cyber Monday".

@@ -1,0 +1,59 @@
+{
+ "title": "SCAM OR LEGIT?",
+ "sub": "Black Friday edition. Only 1 is real.",
+ "end_sub": "Comment 1, 2 or 3",
+ "brand": "RED FLAG ROCCO",
+ "theme": {
+  "top": [
+   60,
+   20,
+   90
+  ],
+  "bot": [
+   200,
+   40,
+   120
+  ],
+  "image": "/home/user/financier-videos/assets/toon2d/bf_street_night.jpg",
+  "ink": [
+   255,
+   214,
+   90
+  ],
+  "stroke": 8
+ },
+ "hook": "hook",
+ "end": "end",
+ "rounds": [
+  {
+   "q": "r1q",
+   "a": "r1a",
+   "sender": "+1 (305) 555-0191",
+   "verdict": "scam",
+   "tell": "tvdeals-outlet-sale.shop",
+   "msgs": [
+    "BLACK FRIDAY: 90% OFF all TVs - today only! Shop before it's gone: tvdeals-outlet-sale.shop"
+   ]
+  },
+  {
+   "q": "r2q",
+   "a": "r2a",
+   "sender": "Store Orders",
+   "verdict": "real",
+   "tell": "in the store's app",
+   "msgs": [
+    "Your order #4417 has shipped. Track it in the store's app or on our website. Thanks for shopping with us!"
+   ]
+  },
+  {
+   "q": "r3q",
+   "a": "r3a",
+   "sender": "+1 (602) 555-0128",
+   "verdict": "scam",
+   "tell": "redeliver-now-us.info",
+   "msgs": [
+    "Delivery attempt failed. Pay a $1.49 redelivery fee within 12 hours: redeliver-now-us.info"
+   ]
+  }
+ ]
+}

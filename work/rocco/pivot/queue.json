@@ -96,6 +96,18 @@
     "publishAt": "2026-11-29T08:00:00Z",
     "status": "standing approval; publish 28-noy 20:00Z (send_later)"
    }
+  },
+  {
+   "name": "P1 scam_or_legit_04 (Black Friday, own theme)",
+   "file": "rocco_p1_scam_or_legit_04.mp4",
+   "uploadId": "88c8d481-b472-41d5-b41c-c43b92f28c02",
+   "by": "session 01MWGZtb7",
+   "yt": {
+    "postId": "c7069bd5-6db7-41e9-a8eb-df396981eaa3",
+    "revision": "2c983808",
+    "publishAt": "2026-11-28T14:00:00Z",
+    "status": "standing permission; publish 28-noy 08:00Z (send_later)"
+   }
   }
  ]
 }

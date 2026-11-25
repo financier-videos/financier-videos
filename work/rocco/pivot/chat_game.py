@@ -181,14 +181,20 @@ def bg_frame(t):
 
 
 _BG = None
+THEME = {}  # spec["theme"]: {"top": rgb, "bot": rgb, "image": path} — each episode looks different
 
 
 def background(t):
     global _BG
     if _BG is None:
         a = np.linspace(0, 1, H)[:, None, None]
-        top = np.array([255, 221, 140], float)
-        bot = np.array([255, 138, 120], float)
+        top = np.array(THEME.get("top", [255, 221, 140]), float)
+        bot = np.array(THEME.get("bot", [255, 138, 120]), float)
+        if THEME.get("image"):  # per-episode painted background, blurred + tinted so the phone stays readable
+            im = Image.open(THEME["image"]).convert("RGB").resize((W, H)).filter(ImageFilter.GaussianBlur(14))
+            g = np.asarray(im, float) * 0.55 + (top * (1 - a) + bot * a) * 0.45
+            _BG = Image.fromarray(g.clip(0, 255).astype(np.uint8))
+            return _BG.copy()
         g = top * (1 - a) + bot * a
         g = np.repeat(g, W, axis=1)
         # soft diagonal stripes
@@ -294,6 +300,8 @@ def draw_caption(img, caps, t):
 
 
 def render(spec, vo, out):
+    global THEME
+    THEME = spec.get("theme", {})
     rounds, voice, caps, end_at, total = build(spec, vo)
     n = int(total * FPS)
     tmp = out + ".v.mp4"
@@ -315,10 +323,10 @@ def render(spec, vo, out):
             k = ease((t - 0.0) / 0.4) if t < rounds[0]["start"] else ease((t - end_at) / 0.4)
             tw = d.textlength(title, font=F_TITLE)
             y0 = 560 - 60 * (1 - k)
-            d.text(((W - tw) / 2, y0), title, font=F_TITLE, fill=INK)
+            d.text(((W - tw) / 2, y0), title, font=F_TITLE, fill=tuple(THEME.get("ink", INK)), stroke_width=THEME.get("stroke", 0), stroke_fill=INK)
             sub = spec.get("sub", "") if t < rounds[0]["start"] else spec.get("end_sub", "")
             sw = d.textlength(sub, font=F_SUB)
-            d.text(((W - sw) / 2, y0 + 220), sub, font=F_SUB, fill=INK)
+            d.text(((W - sw) / 2, y0 + 220), sub, font=F_SUB, fill=tuple(THEME.get("ink", INK)), stroke_width=THEME.get("stroke", 0) // 2, stroke_fill=INK)
             # three message icons
             for j in range(3):
                 cx = W / 2 + (j - 1) * 230
@@ -338,7 +346,7 @@ def render(spec, vo, out):
             # small title + score chips
             ft = font("BebasNeue-Regular.ttf", 120)
             tw = d.textlength(title, font=ft)
-            d.text(((W - tw) / 2, 70), title, font=ft, fill=INK)
+            d.text(((W - tw) / 2, 70), title, font=ft, fill=tuple(THEME.get("ink", INK)), stroke_width=THEME.get("stroke", 0), stroke_fill=INK)
             for j in range(3):
                 cx = W / 2 + (j - 1) * 110
                 R2 = rounds[j]

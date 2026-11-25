@@ -1,0 +1,10 @@
+[
+ ["hook","Black Friday texts. Only ONE is real. Which one would you tap?"],
+ ["r1q","Text number one."],
+ ["r1a","Scam! Ninety percent off every TV, today only, on a weird website? That's a fake store. It takes your card and ships nothing."],
+ ["r2q","Number two."],
+ ["r2a","Real. No link, no fee. It tells you to check the store's own app. That's the safe move."],
+ ["r3q","And number three. Just a buck forty-nine."],
+ ["r3a","Scam. Real carriers don't text you a link to pay a redelivery fee. That dollar fifty is bait for your card number."],
+ ["end","So which one almost got you? Comment one, two or three."]
+]
