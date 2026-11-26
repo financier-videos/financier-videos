@@ -105,3 +105,25 @@ Rocco YouTube: "Hi Mom" 1,210, Scam or Legit #1 345, Free GTA 6 1,315, Penny Pla
 Instagram financier424 (18–25-noy, 7 kun): 43 follower (+3), 2,771 views, reach 2,164. finansist424 — ulanmagan. IG U-3 Reel — shu ishda (YouTube havolasidan, AI belgisi).
 vidIQ balansi: 858 (808 renewable + 50), yangilanish 21-dek — 26 kunga kuniga ≤33 kredit (sprint byudjeti 60 dan past!).
 XULOSA: (1) U-3 TREND gipotezasi (trend + katta raqam ≥3x) hozircha YUTQAZDI: 6 soatda 5 ko'rish; print_100 — 0. Ikkalasi ham 12:00 UTC da 25 soniya farq bilan chiqdi (publishAt ikkalasida 07:00/10:00 ET bo'lishi kerak edi — print_100 publishedAt 12:00:29 UTC = 07:00 ET!). Ya'ni ikki video bir paytda ochildi → bir-birini bo'ldi (burst 2). (2) bank_fees 24 soatda 6 — "skit + kichik raqam" o'lik. (3) G'olib yana gipotetik katta raqam (BK-03 887, BK-02 453). (4) Ertaga: U-5 (fake 50% off, trend mexanizm) 07:00 ET, keyin ≥3 soat oraliq; publishAt'larni yuklashdan oldin tekshirish.
+
+## 2026-11-26 23:30 Toshkent (18:30 UTC) — C ishi, vidiq_user_videos (Financier 5 + Rocco 5 kredit)
+| chiqqan (UTC) | video | ko'rish 25-noy 18:20 | ko'rish 26-noy 18:25 | farq |
+|---|---|---|---|---|
+| 11-24 11:00 | Paying Off the US Debt at $1 Million a Day (BK-03) | 887 | **1,025** | +138 (72 soat: ≥1,000 → SERIYA qoidasi) |
+| 11-23 11:00 | I Tried to Spend Elon Musk's $869 Billion | 453 | 453 | +0 |
+| 11-22 15:06 | Airport Prices Have a Legal Limit | — | 386 | |
+| 11-23 17:00 | Who Makes the Most Money Per Second? | 188 | 191 | +3 |
+| 11-24 02:00 | 32.5 Million People Paid Before GTA 6 | 178 | 184 | +6 |
+| 11-24 15:00 | The $10 Bill Dies First | 128 | 130 | +2 |
+| 11-24 17:00 | The Last Penny Cost 3.69 Cents | 52 | 52 | 0 |
+| 11-24 12:00 | A Nickel Costs 13.78 Cents | 43 | 44 | +1 |
+| 11-25 12:00 | 81.5 Million Americans (U-3, trend) | 5 | **13** (30 soat) | o'lik |
+| 11-25 12:00 | It Costs 11.3 Cents to Print a $100 Bill | 0 | **7** | o'lik |
+| 11-25 18:00 | 1748: Why Dollar Is a Buck | — | **6** (24 soat) | o'lik |
+| 11-24 18:00 | The Bank Charged Me $4.86 | 6 | 7 (48 soat) | o'lik |
+| 11-26 12:00 | How a Fake '50% Off' Tag Is Made (U-5, trend 3.85M) | — | **2** (6.5 soat) | o'lik |
+Financier: 25–26-noy chiqqan 5 videoning HAMMASI ≤13 ko'rish. Trafik (23–26-noy, analytics kechikadi): SHORTS feed 753 / jami ~796 — feed hali asosiy manba, lekin yangi videolarga feed sinov ko'rishlari berilmayapti. Kunlik: 20-noy 1,513 → 21-noy 3,433 → 22-noy 1,839 → 23-noy 796 (24–26 ma'lumot hali yo'q). Obunachi 4.
+Rocco YouTube: A1 "He Touched Every Gift Card" **80** (4.5 soat, 8 layk), Scam or Legit #2 42 (10.5 soat), Scam or Legit #1 383, "Hi Mom" 1,212; "Her Crypto Boyfriend" (Buffer 3D) 2, "90% Off" 9.
+Instagram financier424 (19–26-noy): 42 follower (−1), views 2,927, reach 2,298. IG U-5 Reel — shu ishda.
+vidIQ balansi: 491 → C ishi ~25 kr.
+XULOSA: (1) Financier kanali 25-noydan "sovuq": trend mavzu (U-5, manba 3.85M) ham 2 ko'rish — demak muammo mavzuda emas, kanal/video darajasida (feed test berilmayapti). Ehtimoliy sabablar: 23-noy burst (17+ yuklash) dan keyin kanal ishonchi pasaygan; Mj7LU_swigY/Q1VHB9mul-c bir xil sarlavhali 2 yuklash (dublikat, biri private qolgan); "#shorts"siz sarlavhalar. Gipoteza — isbot emas. (2) Rocco tirik (A1 4.5 soatda 80). (3) BK-03 (gipotetik katta raqam) 1,025 — yagona g'olib format.
