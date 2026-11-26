@@ -34,6 +34,8 @@
 
 - 2026-11-26 A trend (vidIQ trending, 5 kr): Black Friday yolg'on chegirma hali №1 — 'Fake 50% Off' (201 obun.) 3.85M, 54.8K vph; 'The Real Black Friday Sale' sketch (330 obun.) 77K; 'Black Friday deals are ripping you off' (272K) 74K. G'oyalar: Buck 'Cyber Monday: guess the number' (Adobe rasmiy raqami bilan, 30-noy/1-dek), Buck 'price-match vs fake was-price' sketch (FTC 16 CFR 233), Rocco 'Black Friday ghost store' (FTC fake-website ogohlantirishi) — manbalar render oldidan tekshiriladi.
 
+- 2026-11-26 B yangilik: Adobe prognozi — Black Friday BNPL $807M bir kunda; Cyber Week $47.5B (5 kun). G'oya: Buck 'Black Friday: $807M on buy-now-pay-later in ONE day' (BNPL to'lov jadvali, Adobe manba) — 28/29-noy, BK-12/13 dan boshqa format (detektiv 'kim foyda ko'radi?'). Actual natijalar chiqqach (Adobe 28-noy) raqam yangilanadi.
+
 ## Community: javoblar (Shohjahon tasdiqladi 2026-11-25; YouTube izoh ruxsati MFA kutilmoqda — canReply=false; ruxsatdan keyin keyingi ishga tushishda joylanadi)
 - Financier · XbWyfVGCWM8 · @menphues (inflyatsiya haqida) · comment UgynfkUFk6pxCz-K6EF4AaABAg → "Great point! Adjusted for inflation, GTA 5's ~$800M day one is about $1.1B today, so GTA 6 still did roughly 3.4x more in real terms. Still wild 🪙" ✅ JOYLANDI 2026-11-25
 - Rocco · Iagm5fk5JoU · @olojedetolulope9205 (😂) · comment UgxmPluZek87XyVkIg54AaABAg → "Penny's not as dumb as she looks 😄 Part 2 drops this week!" ✅ JOYLANDI 2026-11-25
