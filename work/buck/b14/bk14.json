@@ -1,0 +1,559 @@
+{
+ "topline": [
+  {
+   "t": "THE RIGGED COIN BET",
+   "at": 0
+  }
+ ],
+ "id": "BK-14",
+ "title": "I Win 3 Out of 4 Coin Flips. Here's the Trick.",
+ "brand": [
+  "FINANCIER",
+  [
+   255,
+   205,
+   60
+  ]
+ ],
+ "tail": 1.6,
+ "speed": 1.12,
+ "amb": "room",
+ "grade": "teal",
+ "lines": [
+  [
+   "B",
+   "[sly] [fast] Ten bucks a bet. Coin flips. You pick first."
+  ],
+  [
+   "B",
+   "[fast] You pick heads, heads, tails. I pick tails, heads, heads."
+  ],
+  [
+   "B",
+   "[confident] First one to show up wins. And I win three games out of four."
+  ],
+  [
+   "B",
+   "[deadpan] Here's the trick. Your heads-heads only wins if it lands first."
+  ],
+  [
+   "B",
+   "[fast] Any later, a tails came right before it. That's my combo. I finish first."
+  ],
+  [
+   "B",
+   "[happy] A hundred games. You win twenty-five. I win seventy-five."
+  ],
+  [
+   "B",
+   "[smug] You're down five hundred dollars. On a perfectly fair coin."
+  ],
+  [
+   "B",
+   "[whisper] So... ten bucks a bet. You pick first."
+  ]
+ ],
+ "hot": [
+  "TAILS",
+  "HEADS",
+  "THREE",
+  "FOUR",
+  "SEVENTY-FIVE",
+  "TWENTY-FIVE",
+  "TRICK"
+ ],
+ "cap_y": 0.93,
+ "pool": [
+  "b14_coin",
+  "b14_carnival",
+  "b14_piggy",
+  "b14_dice_cube",
+  "b14_carousel"
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "coin",
+   "gain": 0.3
+  },
+  {
+   "line": 2,
+   "frac": 0.6,
+   "name": "subboom",
+   "gain": 0.3
+  },
+  {
+   "line": 5,
+   "frac": 0.5,
+   "name": "coin",
+   "gain": 0.3
+  },
+  {
+   "line": 6,
+   "frac": 0.0,
+   "name": "boing",
+   "gain": 0.3
+  }
+ ],
+ "sources": "Penney's game: W. Penney, Journal of Recreational Mathematics (1969); M. Gardner, Scientific American (Oct 1974). THH vs HHT: HHT wins only if flips 1-2 are HH (1/4); otherwise a T precedes the first HH, so THH completes first (3/4). 100 x $10: 25 wins (+$250) - 75 losses (-$750) = -$500 expected.",
+ "shots": [
+  {
+   "kind": "kinetic",
+   "line": 0,
+   "from": 0,
+   "words": [
+    {
+     "t": "$10",
+     "size": 170,
+     "c": [
+      80,
+      200,
+      120
+     ]
+    },
+    {
+     "t": "A FLIP",
+     "size": 110
+    }
+   ],
+   "bg": "/tmp/fin/bg/b14/coin.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "kinetic",
+   "line": 0,
+   "from": 0.55,
+   "words": [
+    {
+     "t": "YOU",
+     "size": 130,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "PICK FIRST",
+     "size": 100
+    }
+   ],
+   "bg": "/tmp/fin/bg/b14/dice_cube.mp4",
+   "bg_start": 0.5
+  },
+  {
+   "kind": "kinetic",
+   "line": 1,
+   "from": 0,
+   "words": [
+    {
+     "t": "YOU: H H T",
+     "size": 130,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    }
+   ],
+   "bg": "/tmp/fin/bg/b14/ludo.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "kinetic",
+   "line": 1,
+   "from": 0.5,
+   "words": [
+    {
+     "t": "ME: T H H",
+     "size": 130,
+     "c": [
+      80,
+      200,
+      220
+     ]
+    }
+   ],
+   "bg": "/tmp/fin/bg/b14/roulette.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "kinetic",
+   "line": 2,
+   "from": 0,
+   "words": [
+    {
+     "t": "FIRST TO SHOW",
+     "size": 110
+    },
+    {
+     "t": "WINS",
+     "size": 150,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    }
+   ],
+   "bg": "/tmp/fin/bg/b14/chess.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "line": 2,
+   "from": 0.202,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/b14_piggy.mp4",
+   "bg_start": 0.5,
+   "dim": 20
+  },
+  {
+   "kind": "host",
+   "line": 2,
+   "from": 0.45,
+   "buck": {
+    "mood": "sly",
+    "h": 1300,
+    "y": 1.04
+   },
+   "bg": "/tmp/fin/bg/b14/carnival.mp4",
+   "bg_start": 1.0,
+   "dim": 20,
+   "prop": "3 OUT OF 4"
+  },
+  {
+   "kind": "kinetic",
+   "line": 3,
+   "from": 0,
+   "words": [
+    {
+     "t": "H H",
+     "size": 160,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "ONLY ON FLIPS 1-2",
+     "size": 90
+    }
+   ],
+   "bg": "/tmp/fin/bg/b14/piggy.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "line": 3,
+   "from": 0.239,
+   "buck": {
+    "mood": "sideeye",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/b14_dice_cube.mp4",
+   "bg_start": 2.8,
+   "dim": 20
+  },
+  {
+   "kind": "kinetic",
+   "line": 3,
+   "from": 0.442,
+   "words": [
+    {
+     "t": "H H",
+     "size": 160,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "ONLY ON FLIPS 1-2",
+     "size": 90
+    }
+   ],
+   "bg": "/tmp/fin/bg/b14/piggy.mp4",
+   "bg_start": 1.0,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 3,
+   "from": 0.6,
+   "buck": {
+    "mood": "point",
+    "h": 1300,
+    "y": 1.04
+   },
+   "bg": "/tmp/fin/bg/b14/bench.mp4",
+   "bg_start": 1.0,
+   "dim": 20
+  },
+  {
+   "kind": "kinetic",
+   "line": 4,
+   "from": 0,
+   "words": [
+    {
+     "t": "T  H H",
+     "size": 160,
+     "c": [
+      80,
+      200,
+      220
+     ]
+    },
+    {
+     "t": "ALWAYS FIRST",
+     "size": 100
+    }
+   ],
+   "bg": "/tmp/fin/bg/b14/coin.mp4",
+   "bg_start": 5.0
+  },
+  {
+   "kind": "host",
+   "line": 4,
+   "from": 0.202,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/b14_carousel.mp4",
+   "bg_start": 5.1,
+   "dim": 20
+  },
+  {
+   "kind": "kinetic",
+   "line": 4,
+   "from": 0.373,
+   "words": [
+    {
+     "t": "T  H H",
+     "size": 160,
+     "c": [
+      80,
+      200,
+      220
+     ]
+    },
+    {
+     "t": "ALWAYS FIRST",
+     "size": 100
+    }
+   ],
+   "bg": "/tmp/fin/bg/b14/coin.mp4",
+   "bg_start": 5.0,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 4,
+   "from": 0.6,
+   "buck": {
+    "mood": "smug",
+    "h": 1300,
+    "y": 1.04
+   },
+   "bg": "/tmp/fin/bg/b14/roulette.mp4",
+   "bg_start": 4.0,
+   "dim": 20,
+   "prop": "T + HH"
+  },
+  {
+   "kind": "kinetic",
+   "line": 5,
+   "from": 0,
+   "words": [
+    {
+     "t": "100 GAMES",
+     "size": 110
+    }
+   ],
+   "bg": "/tmp/fin/bg/b14/carousel.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "kinetic",
+   "line": 5,
+   "from": 0.35,
+   "words": [
+    {
+     "t": "YOU 25",
+     "size": 140,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "ME 75",
+     "size": 140,
+     "c": [
+      80,
+      200,
+      220
+     ]
+    }
+   ],
+   "bg": "/tmp/fin/bg/b14/carousel.mp4",
+   "bg_start": 3.0
+  },
+  {
+   "kind": "host",
+   "line": 5,
+   "from": 0.65,
+   "buck": {
+    "mood": "laugh",
+    "h": 1300,
+    "y": 1.04
+   },
+   "bg": "/tmp/fin/bg/b14/dice_cube.mp4",
+   "bg_start": 3.0,
+   "dim": 20
+  },
+  {
+   "kind": "kinetic",
+   "line": 6,
+   "from": 0,
+   "words": [
+    {
+     "t": "YOUR WALLET",
+     "size": 100
+    },
+    {
+     "t": "-$500",
+     "size": 170,
+     "c": [
+      235,
+      64,
+      52
+     ]
+    }
+   ],
+   "bg": "/tmp/fin/bg/b14/wallet.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "line": 6,
+   "from": 0.256,
+   "buck": {
+    "mood": "smug",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/b14_coin.mp4",
+   "bg_start": 2.3999999999999995,
+   "dim": 20
+  },
+  {
+   "kind": "host",
+   "line": 6,
+   "from": 0.6,
+   "buck": {
+    "mood": "sideeye",
+    "h": 1300,
+    "y": 1.04
+   },
+   "bg": "/tmp/fin/bg/b14/carnival.mp4",
+   "bg_start": 6.0,
+   "dim": 20,
+   "prop": "FAIR COIN"
+  },
+  {
+   "kind": "kinetic",
+   "line": 7,
+   "from": 0,
+   "words": [
+    {
+     "t": "$10",
+     "size": 170,
+     "c": [
+      80,
+      200,
+      120
+     ]
+    },
+    {
+     "t": "YOU PICK FIRST",
+     "size": 100
+    }
+   ],
+   "bg": "/tmp/fin/bg/b14/coin.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "line": 7,
+   "from": 0.289,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/b14_carnival.mp4",
+   "bg_start": 4.699999999999999,
+   "dim": 20
+  },
+  {
+   "kind": "kinetic",
+   "line": 7,
+   "from": 0.533,
+   "words": [
+    {
+     "t": "$10",
+     "size": 170,
+     "c": [
+      80,
+      200,
+      120
+     ]
+    },
+    {
+     "t": "YOU PICK FIRST",
+     "size": 100
+    }
+   ],
+   "bg": "/tmp/fin/bg/b14/coin.mp4",
+   "bg_start": 1.0,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 7,
+   "from": 0.889,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/b14_piggy.mp4",
+   "bg_start": 2.0,
+   "dim": 20
+  }
+ ]
+}

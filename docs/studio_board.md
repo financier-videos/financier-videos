@@ -24,6 +24,7 @@
 
 | Rocco | RC-25 Penny Plays Dumb 3 (tech support, yangi joylar) | 29-noy 13:00 | 29-noy 19:00 | rejada |
 | Financier | BK-13 Cyber Monday $15.1B at $100/day | 29-noy 21:00 | 30-noy 18:00 | rejada |
+| Financier | BK-14 Rigged Coin Bet (Penney's game — YANGI format: matematik o'yin, teal grade, 100% yangi footage) | 1-dek 08:00 | 1-dek 18:00 | rejada (draft 017b2e5b, trig_01EiZkUJ…) |
 | Rocco | RC-01 Scammer Calls a Detective (2D, Buffer'dan ko'chirildi) | 1-dek 13:00 | 1-dek 19:00 | rejada (draft e1eca323, trig_01Jtb6QD…) |
 | Rocco | RC-02 $1,000 by Mistake (2D, Buffer'dan) | 2-dek 13:00 | 2-dek 19:00 | rejada (draft 7cbe2135, trig_01LGeJMK…) |
 | Rocco | RC-03 QR Code in a Box (2D, Buffer'dan) | 3-dek 13:00 | 3-dek 19:00 | rejada (draft 3c8ab42e, trig_011ZJGT4…) |
