@@ -1,0 +1,577 @@
+{
+ "topline": [
+  {
+   "t": "$15.1 BILLION \u00b7 $100 A DAY",
+   "at": 0
+  }
+ ],
+ "id": "BK-13",
+ "title": "Spend Cyber Monday's $15 Billion at $100 a Day",
+ "brand": [
+  "FINANCIER",
+  [
+   255,
+   205,
+   60
+  ]
+ ],
+ "tail": 1.6,
+ "speed": 1.15,
+ "amb": "room",
+ "grade": "gold",
+ "lines": [
+  [
+   "B",
+   "[announcer] [fast] Cyber Monday: fifteen billion dollars. Spend it at a hundred a day."
+  ],
+  [
+   "B",
+   "[fast] A hundred a day. One year? Thirty-six thousand five hundred."
+  ],
+  [
+   "B",
+   "[confident] A whole lifetime of shopping? About three million."
+  ],
+  [
+   "B",
+   "[nervous] That's... two hundredths of one percent of one Cyber Monday."
+  ],
+  [
+   "B",
+   "[shocked] You'd need four hundred thirteen thousand years."
+  ],
+  [
+   "B",
+   "[deadpan] Humans have only existed for about three hundred thousand. You'd start shopping before people were invented."
+  ],
+  [
+   "B",
+   "[deadpan] Online, America does it in one day. A hundred seventy-five thousand dollars a second."
+  ],
+  [
+   "B",
+   "[whisper] So... spend fifteen billion. At a hundred a day."
+  ]
+ ],
+ "hot": [
+  "BILLION",
+  "YEARS",
+  "HUMANS",
+  "SECOND"
+ ],
+ "cap_y": 0.93,
+ "pool": [
+  "earth_globe",
+  "earth_night",
+  "city_night",
+  "typing_keys",
+  "moon_big",
+  "coins_fall"
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "frac": 0.0,
+   "name": "coin",
+   "gain": 0.3
+  },
+  {
+   "line": 1,
+   "frac": 0.5,
+   "name": "coin",
+   "gain": 0.3
+  },
+  {
+   "line": 2,
+   "frac": 0.6,
+   "name": "coin",
+   "gain": 0.3
+  },
+  {
+   "line": 4,
+   "frac": 0.0,
+   "name": "subboom",
+   "gain": 0.35
+  },
+  {
+   "line": 5,
+   "word": "invented",
+   "name": "boing",
+   "gain": 0.3
+  }
+ ],
+ "sources": "Adobe Digital Insights 2026 holiday forecast (Sept 28, 2026): Cyber Monday $15.1B; $15.1B/$100 = 151M days = 413,415 years; Homo sapiens ~300,000 years (Smithsonian Human Origins); $15.1B/86,400 = $174,769/s",
+ "shots": [
+  {
+   "kind": "counter",
+   "line": 0,
+   "from": 0,
+   "start": 15100000000.0,
+   "to": 15100000000.0,
+   "dur": 0.8,
+   "label": "CYBER MONDAY 2026",
+   "size": 110,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "happy"
+   },
+   "bg": "/tmp/fin/bg/rc2/mobank.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "line": 0,
+   "from": 0.247,
+   "buck": {
+    "mood": "proud",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/city_night.mp4",
+   "bg_start": 0.5,
+   "dim": 20
+  },
+  {
+   "kind": "kinetic",
+   "line": 0,
+   "from": 0.55,
+   "words": [
+    {
+     "t": "$100",
+     "size": 160,
+     "c": [
+      80,
+      200,
+      120
+     ]
+    },
+    {
+     "t": "A DAY",
+     "size": 110
+    }
+   ],
+   "bg": "/tmp/fin/bg/t03/clouds.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "line": 0,
+   "from": 0.752,
+   "buck": {
+    "mood": "proud",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/typing_keys.mp4",
+   "bg_start": 2.8,
+   "dim": 20
+  },
+  {
+   "kind": "counter",
+   "line": 1,
+   "from": 0,
+   "start": 100,
+   "to": 36500,
+   "dur": 1.2,
+   "label": "ONE YEAR",
+   "size": 110,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "proud"
+   },
+   "bg": "/tmp/fin/bg/rc5/laptoptable.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "line": 1,
+   "from": 0.27,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/moon_big.mp4",
+   "bg_start": 5.1,
+   "dim": 20
+  },
+  {
+   "kind": "host",
+   "line": 1,
+   "from": 0.6,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "bg": "/tmp/fin/bg/rc/texting.mp4",
+   "bg_start": 1.0,
+   "dim": 20
+  },
+  {
+   "kind": "counter",
+   "line": 2,
+   "from": 0,
+   "start": 36500,
+   "to": 2920000,
+   "dur": 1.6,
+   "label": "80 YEARS OF SHOPPING",
+   "size": 110,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "happy"
+   },
+   "bg": "/tmp/fin/bg/rc5/workspace.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "line": 2,
+   "from": 0.55,
+   "buck": {
+    "mood": "proud",
+    "h": 1300,
+    "y": 1.04
+   },
+   "bg": "/tmp/fin/bg/t03/stadium.mp4",
+   "bg_start": 1.0,
+   "dim": 20,
+   "prop": "$2,920,000"
+  },
+  {
+   "kind": "kinetic",
+   "line": 3,
+   "from": 0,
+   "words": [
+    {
+     "t": "0.02%",
+     "size": 150,
+     "c": [
+      235,
+      64,
+      52
+     ]
+    },
+    {
+     "t": "OF ONE DAY",
+     "size": 100
+    }
+   ],
+   "bg": "/tmp/fin/bg/r2/river.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "line": 3,
+   "from": 0.248,
+   "buck": {
+    "mood": "confused",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/coins_fall.mp4",
+   "bg_start": 2.3999999999999995,
+   "dim": 20
+  },
+  {
+   "kind": "host",
+   "line": 3,
+   "from": 0.55,
+   "buck": {
+    "mood": "confused",
+    "h": 1300,
+    "y": 1.04
+   },
+   "bg": "/tmp/fin/bg/rc5/vintage.mp4",
+   "bg_start": 1.0,
+   "dim": 20
+  },
+  {
+   "kind": "kinetic",
+   "line": 4,
+   "from": 0,
+   "words": [
+    {
+     "t": "413,415",
+     "size": 140,
+     "c": [
+      255,
+      205,
+      60
+     ]
+    },
+    {
+     "t": "YEARS",
+     "size": 110
+    }
+   ],
+   "bg": "/tmp/fin/bg/gta/earth2.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "line": 4,
+   "from": 0.5,
+   "buck": {
+    "mood": "shocked",
+    "h": 1300,
+    "y": 1.04
+   },
+   "bg": "/tmp/fin/bg/bank/earth_moons.mp4",
+   "bg_start": 1.0,
+   "dim": 20,
+   "prop": "413,415 YRS"
+  },
+  {
+   "kind": "bars",
+   "line": 5,
+   "from": 0,
+   "title": "YEARS AGO",
+   "items": [
+    [
+     "HUMANS EXIST",
+     300000,
+     [
+      80,
+      160,
+      90
+     ]
+    ],
+    [
+     "YOUR SHOPPING STARTS",
+     413415,
+     [
+      235,
+      64,
+      52
+     ]
+    ]
+   ],
+   "new": 1,
+   "fmt": "{:,.0f}",
+   "suffix": " YRS",
+   "bg": "/tmp/fin/bg/v01/oldforest.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "line": 5,
+   "from": 0.176,
+   "buck": {
+    "mood": "sideeye",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/earth_globe.mp4",
+   "bg_start": 4.699999999999999,
+   "dim": 20
+  },
+  {
+   "kind": "bars",
+   "line": 5,
+   "from": 0.325,
+   "title": "YEARS AGO",
+   "items": [
+    [
+     "HUMANS EXIST",
+     300000,
+     [
+      80,
+      160,
+      90
+     ]
+    ],
+    [
+     "YOUR SHOPPING STARTS",
+     413415,
+     [
+      235,
+      64,
+      52
+     ]
+    ]
+   ],
+   "new": 1,
+   "fmt": "{:,.0f}",
+   "suffix": " YRS",
+   "bg": "/tmp/fin/bg/v01/oldforest.mp4",
+   "bg_start": 1.0,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 5,
+   "from": 0.463,
+   "buck": {
+    "mood": "sideeye",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/earth_night.mp4",
+   "bg_start": 2.0,
+   "dim": 20
+  },
+  {
+   "kind": "host",
+   "line": 5,
+   "from": 0.6,
+   "buck": {
+    "mood": "sideeye",
+    "h": 1300,
+    "y": 1.04
+   },
+   "bg": "/tmp/fin/bg/v01/deer.mp4",
+   "bg_start": 1.0,
+   "dim": 20
+  },
+  {
+   "kind": "counter",
+   "line": 6,
+   "from": 0,
+   "start": 0,
+   "to": 174769,
+   "dur": 1.4,
+   "label": "EVERY SECOND \u00b7 ONLINE",
+   "size": 110,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "shocked"
+   },
+   "bg": "/tmp/fin/bg/gta/moon.mp4",
+   "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "line": 6,
+   "from": 0.183,
+   "buck": {
+    "mood": "sideeye",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/city_night.mp4",
+   "bg_start": 4.299999999999999,
+   "dim": 20
+  },
+  {
+   "kind": "counter",
+   "line": 6,
+   "from": 0.339,
+   "start": 0,
+   "to": 174769,
+   "dur": 1.4,
+   "label": "EVERY SECOND \u00b7 ONLINE",
+   "size": 110,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "shocked"
+   },
+   "bg": "/tmp/fin/bg/gta/moon.mp4",
+   "bg_start": 1.0,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
+   "line": 6,
+   "from": 0.55,
+   "buck": {
+    "mood": "sly",
+    "h": 1300,
+    "y": 1.04
+   },
+   "bg": "/tmp/fin/bg/rc4/sunset.mp4",
+   "bg_start": 1.0,
+   "dim": 20
+  },
+  {
+   "kind": "host",
+   "line": 6,
+   "from": 0.733,
+   "buck": {
+    "mood": "sideeye",
+    "h": 1100,
+    "y": 1.04,
+    "x": 0.35
+   },
+   "bg": "/tmp/fin/bg/rc4/sunset.mp4",
+   "bg_start": 1.0,
+   "dim": 20,
+   "set": "green",
+   "_auto": true
+  },
+  {
+   "kind": "counter",
+   "line": 7,
+   "from": 0,
+   "start": 15100000000.0,
+   "to": 15100000000.0,
+   "dur": 0.8,
+   "label": "CYBER MONDAY 2026",
+   "size": 110,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "happy"
+   },
+   "bg": "/tmp/fin/bg/rc2/mobank.mp4",
+   "bg_start": 3.0
+  },
+  {
+   "kind": "host",
+   "line": 7,
+   "from": 0.333,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true,
+   "bg": "/tmp/fin/bg/bank/moon_big.mp4",
+   "bg_start": 3.8999999999999986,
+   "dim": 20
+  },
+  {
+   "kind": "counter",
+   "line": 7,
+   "from": 0.615,
+   "start": 15100000000.0,
+   "to": 15100000000.0,
+   "dur": 0.8,
+   "label": "CYBER MONDAY 2026",
+   "size": 110,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "happy"
+   },
+   "bg": "/tmp/fin/bg/rc2/mobank.mp4",
+   "bg_start": 3.0,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  }
+ ]
+}

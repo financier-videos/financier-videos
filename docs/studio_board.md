@@ -22,6 +22,9 @@
 | Financier | BK-12 Black Friday $149,306/sec | 26-noy 21:00 | 27-noy 18:00 | rejada |
 | Rocco | P1 Scam or Legit #4 Black Friday (o'z temasi) | 28-noy 13:00 | 28-noy 19:00 | rejada |
 
+| Rocco | RC-25 Penny Plays Dumb 3 (tech support, yangi joylar) | 29-noy 13:00 | 29-noy 19:00 | rejada |
+| Financier | BK-13 Cyber Monday $15.1B at $100/day | 29-noy 21:00 | 30-noy 18:00 | rejada |
+
 ## G'oyalar (tadqiqotchi + izohlar) — docs/growth_research_2026-11-25.md dan
 - Buck: "1 cent per second until you match a $869B fortune" (Time Ladder); "Black Friday spends $149,306 every second" (Adobe $12.9B); "Let's bet on a coin — you go first" (Penney's game, Rigged Bet); "Guess the Number: $15.1B Cyber Monday".
 - Rocco: "Read me the code" — "No." (absurd dialog, Penny Plays Dumb 3); "GTA 6 for PC" soxta installer (plan backfires); Black Friday "ghost store" (dramatic irony); Salad Oil scandal 1963 (You are the mastermind).

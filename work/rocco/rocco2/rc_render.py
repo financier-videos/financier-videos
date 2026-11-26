@@ -661,7 +661,9 @@ def main():
                 continue
             _vt.append((_shf(_cs[k]), _shf(_ce[k]), viseme(c), spk))
     voice_end = max(e for _, e in lt_.values()); total = voice_end + spec.get("tail", 3.0)
-    y = np.concatenate([y, np.zeros(int((total - len(y) / sr) * sr) + sr, np.float32)])
+    _pad = int((total - len(y) / sr) * sr) + sr
+    # 2026-11-26: TTS can return trailing silence longer than voice_end + tail (BK-13) -> trim instead of crashing
+    y = np.concatenate([y, np.zeros(_pad, np.float32)]) if _pad >= 0 else y[:int(total * sr) + sr]
     rng = np.random.default_rng(3); fx = np.zeros_like(y)
     def at_line(i, frac): a, b = lt_[i]; return a + (b - a) * frac
 

@@ -1,0 +1,375 @@
+{
+ "topline": [
+  {
+   "t": "PENNY PLAYS DUMB: PART 3",
+   "at": 0
+  }
+ ],
+ "speed": 1.05,
+ "id": "RC-25",
+ "title": "Penny Plays Dumb With a Tech Support Scammer",
+ "tail": 1.8,
+ "hot": [
+  "VIRUS",
+  "CALCULATOR",
+  "FLOPPY",
+  "PASSWORD"
+ ],
+ "lines": [
+  [
+   "S",
+   "[fast] [fake serious] Tech support! Your computer has a virus. Turn it on!"
+  ],
+  [
+   "P",
+   "[cheerful] Okay! ...It says two plus two is four."
+  ],
+  [
+   "S",
+   "[confused] That's a CALCULATOR!"
+  ],
+  [
+   "P",
+   "[proud] It's my computer! It's very fast at math."
+  ],
+  [
+   "S",
+   "[frustrated] The REAL computer! Download the app I'm sending you!"
+  ],
+  [
+   "P",
+   "[reading slowly] It says... 'Please insert floppy disk.'"
+  ],
+  [
+   "S",
+   "[panicked] What year is that computer?!"
+  ],
+  [
+   "P",
+   "[innocent] It's older than you, sweetie."
+  ],
+  [
+   "S",
+   "[furious] Forget it! Just tell me your bank password!"
+  ],
+  [
+   "P",
+   "[cheerful] Sure! It's... 'NiceTryFox.' All one word."
+  ],
+  [
+   "S",
+   "[defeated] ...That's actually a really good password."
+  ]
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "word": "virus",
+   "name": "impact",
+   "gain": 0.3
+  },
+  {
+   "line": 2,
+   "frac": 0.0,
+   "name": "scratch",
+   "gain": 0.25
+  },
+  {
+   "line": 5,
+   "word": "floppy",
+   "name": "boing",
+   "gain": 0.3
+  },
+  {
+   "line": 7,
+   "word": "sweetie",
+   "name": "bonk",
+   "gain": 0.35
+  },
+  {
+   "line": 10,
+   "frac": 0.6,
+   "name": "wahwah",
+   "gain": 0.35
+  }
+ ],
+ "sources": "FTC consumer advice on tech support scams: real tech companies don't call you about viruses or ask for remote access or passwords",
+ "shots": [
+  {
+   "line": 0,
+   "from": 0,
+   "kind": "call",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_attic.jpg",
+   "bright": 1.2,
+   "r_peek": true,
+   "s": "sly",
+   "r": "smug",
+   "bg2": "/home/user/financier-videos/assets/toon2d/slick_techdesk.jpg",
+   "bright2": 1.2,
+   "hook": null,
+   "caller": "CALLER: \"TECH SUPPORT\"",
+   "p": "happy"
+  },
+  {
+   "line": 0,
+   "from": 0.55,
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon2d/slick_techdesk.jpg",
+   "bright": 1.2,
+   "r_peek": true,
+   "s": "sly",
+   "r": "sideeye",
+   "msg": "\"VIRUS DETECTED!\"",
+   "msg_at": 0.1
+  },
+  {
+   "line": 1,
+   "from": 0,
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_attic.jpg",
+   "blur": 1,
+   "p": "shock",
+   "r": "sideeye"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_attic.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 1,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "line": 2,
+   "from": 0,
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon2d/slick_techdesk.jpg",
+   "bright": 1.2,
+   "r_peek": true,
+   "s": "angry",
+   "r": "smug"
+  },
+  {
+   "line": 3,
+   "from": 0,
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_attic.jpg",
+   "blur": 1,
+   "p": "happy",
+   "r": "sideeye"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_attic.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 3,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "line": 4,
+   "from": 0,
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon2d/slick_techdesk.jpg",
+   "bright": 1.2,
+   "r_peek": true,
+   "s": "panic",
+   "r": "smug"
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_attic.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 4,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "line": 5,
+   "from": 0,
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_attic.jpg",
+   "blur": 1,
+   "p": "happy",
+   "r": "sideeye"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_attic.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 5,
+   "from": 0.33,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_attic.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 5,
+   "from": 0.67,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "line": 6,
+   "from": 0,
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon2d/slick_techdesk.jpg",
+   "bright": 1.2,
+   "r_peek": true,
+   "s": "sly",
+   "r": "smug"
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_attic.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 6,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "line": 7,
+   "from": 0,
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_attic.jpg",
+   "blur": 1,
+   "p": "shock",
+   "r": "sideeye"
+  },
+  {
+   "line": 8,
+   "from": 0,
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon2d/slick_techdesk.jpg",
+   "bright": 1.2,
+   "r_peek": true,
+   "s": "angry",
+   "r": "smug"
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_attic.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 8,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "line": 9,
+   "from": 0,
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_attic.jpg",
+   "blur": 1,
+   "p": "happy",
+   "r": "sideeye"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_attic.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 9,
+   "from": 0.33,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_attic.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 9,
+   "from": 0.67,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
+   "line": 10,
+   "from": 0,
+   "kind": "slick",
+   "bg": "/home/user/financier-videos/assets/toon2d/slick_techdesk.jpg",
+   "bright": 1.2,
+   "r_peek": true,
+   "s": "panic",
+   "r": "smug"
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon2d/penny_attic.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 10,
+   "from": 0.56,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  }
+ ]
+}

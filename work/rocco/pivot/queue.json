@@ -108,6 +108,18 @@
     "publishAt": "2026-11-28T14:00:00Z",
     "status": "standing permission; publish 28-noy 08:00Z (send_later)"
    }
+  },
+  {
+   "name": "RC-25 penny_plays_dumb_3 (tech support, own sets, beat-map rules)",
+   "file": "rocco_rc25_penny_plays_dumb_3.mp4",
+   "uploadId": "b0276290-e98d-47cc-9ab0-49a86e790765",
+   "by": "session 01MWGZtb7",
+   "yt": {
+    "postId": "55473278-970b-41df-be2f-9f179e9aaf5c",
+    "revision": "93b2abc8",
+    "publishAt": "2026-11-29T14:00:00Z",
+    "status": "standing permission; publish 29-noy 08:00Z (send_later)"
+   }
   }
  ]
 }
