@@ -1,5 +1,11 @@
 # KUNLIK TOP TAHLIL (producer_task 1.9) — yangisi tepada, 7 kundan eskisi o'chiriladi
 
+## 2026-11-26 09:30 (A, Financier — vazifa sessiyasi)
+- vidIQ trending (short, en, ≤500K obun., 20-noy dan, recentVph; 5 kr): №1 hali 'How a Fake "50% Off" Black Friday Tag Is Built' (Hypothetically, 201 obun.) 1.05M → 3.85M, 54.8K vph; 'The Real Black Friday Sale | Fair Point' sketch (330 obun.) 77.5K; 'Black Friday deals are ripping you off' (Bradley on a Budget, 272K) 74K/1 kun; 'Threadripper Price Guess' (103 obun.) 63K — narx-taxmin o'yini.
+- Xulosa: Black Friday "yolg'on chegirma" mexanikasi hali o'sishda; bizning U-5 bugun 12:00Z ochiladi (o'z faktlarimiz: FTC 233.1, MA 940 CMR 6.05, WalletHub). DIQQAT: U-5 sarlavhasi trend sarlavhasiga juda yaqin — keyingi trend videolarda sarlavha formulasi O'ZIMIZNIKI (raqam bilan) bo'lsin (backlog).
+- Mavzular: Buck 'Cyber Monday — guess the number' (Adobe rasmiy natijasi chiqqach, 1-dek); Buck 'price guess: real vs "was" price' (o'yin formati, Threadripper signali); Rocco 'ghost store' (FTC).
+- Skillar: vidiq_trending_videos — QO'LLANDI; yt-viral swipe.py, competitor.md D — QO'LLANMADI (kredit ≤33/kun, bitta aniq breakout qayta o'lchandi).
+
 ## 2026-11-25 09:30 (A, Financier — vazifa sessiyasi)
 - vidIQ trending (short, en, ≤300K obunachi, 18-noy dan, recentVphEngaged; 5 kr): №1 "How a Fake '50% Off' Black Friday Tag Is Built" — Hypothetically, 201 obunachi → 1.05M ko'rish 2 kunda (22.7K vph, 56 s, mexanizm-tushuntirish). Qolganlar kuchsiz: "Black Friday used to be wild" (217K, 59K), "now vs back then" hazil (66K, 2.6K/7 soat), "5 things not to buy" (104K, 3.4K), Costco deals (13K, 28K).
 - Xulosa: KICHIK KANAL + KATTA KO'RISH = eng kuchli signal; mexanizm ("qanday yasaladi") + Black Friday. Nusxa emas — o'z faktimiz: FTC 16 CFR 233.1 (oldingi narx "reasonably substantial period" davomida haqiqatan taklif qilingan bo'lishi kerak); WalletHub 2025: Black Friday tovarlarining 36% i 27-okt–17-noy narxiga nisbatan tejamsiz, haqiqiy chegirma o'rtacha ~24%; Oxylabs (BF 2024, AQSh tech): 75% "oldingi narx" mezonga to'g'ri kelmagan.

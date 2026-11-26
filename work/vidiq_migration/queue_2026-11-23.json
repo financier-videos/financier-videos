@@ -78,36 +78,36 @@
    "vidiq_uploadId": "efd530d2-b2a2-43b7-b7a1-3bdca810a2f9",
    "yt_postId": "1a8e0b9a-b12f-4358-bca2-b4ff4d6bf87e",
    "yt_publicationId": "3620973a-aad9-4e46-9ad6-a886dcae8332",
-   "yt_revision": "da8eb8f5",
-   "yt_status": "draft, publishAt 2026-11-26 07:00 ET; publish (upload) >=26-noy 01:30 UTC (A ishi), navbat 1-yuklashi",
+   "yt_revision": "f8ae3049",
+   "yt_status": "SCHEDULED 2026-11-26 12:00 UTC (07:00 ET), uploaded 04:21 UTC 26-noy https://www.youtube.com/watch?v=O8oTJT2t1y0 (user_videos: private, scheduledPublishAt 12:00Z tasdiqlandi). Draft publishAt yo'q edi — yuklashdan oldin qo'yildi",
    "ig_caption": "This \"50% off\" tag was born three weeks ago. 🏷️\n\n$50 in October → $100 in early November → \"WAS $100, NOW $50!\" on Black Friday. Same fifty bucks, new costume. (Our illustration, not a real store.)\nFTC guide: the \"was\" price must be real, offered for a reasonably substantial period. Massachusetts: 28 of the last 90 days. WalletHub 2025: ~36% of 3,100 Black Friday items offered no savings.\n\nSources: FTC 16 CFR 233.1; MA 940 CMR 6.05; WalletHub (Nov 2025).\nFootage: Pixabay, Pexels. Not financial advice. Buck is our original character.\n\nSend this to the friend who already has 12 tabs of \"deals\" open.\n\n#blackfriday #moneyfacts #shopping #didyouknow #money",
-   "ig_status": "todo (YT chiqqandan keyin, videoUrl = YouTube havolasi, isAiGenerated true)",
+   "ig_status": "todo (B ishi, >=14:00 UTC 26-noy, YT ochilgandan >=2 soat keyin)",
    "spec": "work/2026-11-25b/u05_fake50.json",
    "file": "2026-11-26_u05_fake50.mp4"
   },
   {
-   "slot_et": "2026-11-26T10:00-05:00",
+   "slot_et": "2026-11-27T13:00-05:00",
    "name": "cancel_sub",
    "vidiq_uploadId": "333ac73c-e590-43de-a526-3a5dbf2add35",
    "yt_postId": "1869da50-fb52-4b27-a1ae-cb5df2197fe8",
    "yt_publicationId": "7d743d2a-8c46-4b7a-8291-68bfc2cda246",
-   "yt_status": "draft, publishAt set (24-noy 04:45 UTC); upload ≥2h apart, ≤3/day | 25-noy: 1 slot surildi (U-3 trend navbat boshida); publishAt yuklash paytida slot_et ga qo'yiladi | 25-noy B: 10:00 ET ga surildi (U-5 07:00 ET)",
+   "yt_status": "draft, publishAt 2026-11-27T18:00Z (26-noy A da qo'yildi); YUKLASH 27-noy A (~04:20Z), BK-12 yuklashidan >=3 soat keyin",
    "ig_caption": "\"Are you sure?\" \"Are you REALLY sure?\" 🙃\n\nThe app is made up. The number is real: about $21 a month goes to subscriptions people never use.\n\nSource: CNET subscription survey (July 2026).\nFootage: Pexels. Not financial advice. Buck is our original character.\n\nSend this to someone with 9 streaming apps.\n\n#subscriptions #moneyfacts #funny #money #comedy",
    "ig_status": "todo",
    "old_metricool_ig_id": 437506620,
-   "yt_revision": "284a7982"
+   "yt_revision": "3be5e2e2"
   },
   {
-   "slot_et": "2026-11-26T13:00-05:00",
+   "slot_et": "2026-11-28T14:00-05:00",
    "name": "junk_drawer",
    "vidiq_uploadId": "1fbe4483-3871-4b86-82aa-50f5f165ad2f",
    "yt_postId": "b32ab8ad-3c8c-4a16-8542-085e3b46e644",
    "yt_publicationId": "342a17a7-2e52-4944-bb9d-d19ddf2cff27",
-   "yt_status": "draft, publishAt set (24-noy 04:45 UTC); upload ≥2h apart, ≤3/day | 25-noy: 1 slot surildi (U-3 trend navbat boshida); publishAt yuklash paytida slot_et ga qo'yiladi | 25-noy B: 13:00 ET ga surildi",
+   "yt_status": "draft, publishAt 2026-11-28T19:00Z (26-noy A da qo'yildi); YUKLASH 27-noy B (~10:20Z)",
    "ig_caption": "Go check your junk drawer. 🎁\n\n43% of U.S. adults have an unused gift card or store credit — about $244 each, ~$27 billion in total.\n\nSource: Bankrate gift card survey (2024).\nFootage: Pexels, Pixabay. Not financial advice. Buck is our original character.\n\nTell me what you found 👇\n\n#giftcards #moneyfacts #holidays #money #didyouknow",
    "ig_status": "todo",
    "old_metricool_ig_id": 437506792,
-   "yt_revision": "8c5893f7"
+   "yt_revision": "a64aee20"
   }
  ]
 }
