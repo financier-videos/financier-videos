@@ -165,6 +165,18 @@
   },
   {
    "kind": "host",
+   "set": "teal",
+   "line": 1,
+   "from": 0.248,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true
+  },
+  {
+   "kind": "host",
    "line": 1,
    "from": 0.55,
    "buck": {
@@ -227,6 +239,18 @@
   },
   {
    "kind": "host",
+   "set": "pink",
+   "line": 3,
+   "from": 0.247,
+   "buck": {
+    "mood": "shocked",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true
+  },
+  {
+   "kind": "host",
    "line": 3,
    "from": 0.55,
    "buck": {
@@ -260,6 +284,18 @@
    ],
    "bg": "/tmp/fin/bg/bank/city_fireworks.mp4",
    "bg_start": 1.0
+  },
+  {
+   "kind": "host",
+   "set": "sky",
+   "line": 4,
+   "from": 0.225,
+   "buck": {
+    "mood": "sideeye",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true
   },
   {
    "kind": "host",
@@ -316,6 +352,61 @@
   },
   {
    "kind": "host",
+   "set": "peach",
+   "line": 5,
+   "from": 0.233,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true
+  },
+  {
+   "kind": "bars",
+   "line": 5,
+   "from": 0.431,
+   "title": "ADOBE 2026 FORECAST",
+   "items": [
+    [
+     "THANKSGIVING",
+     6.9,
+     [
+      120,
+      120,
+      140
+     ]
+    ],
+    [
+     "BLACK FRIDAY",
+     12.9,
+     [
+      235,
+      64,
+      52
+     ]
+    ],
+    [
+     "CYBER MONDAY",
+     15.1,
+     [
+      80,
+      160,
+      240
+     ]
+    ]
+   ],
+   "new": 2,
+   "fmt": "${:,.1f}",
+   "suffix": "B",
+   "bg": "/tmp/fin/bg/rc/loadbar.mp4",
+   "bg_start": 1.0,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
+   "kind": "host",
    "line": 5,
    "from": 0.6,
    "buck": {
@@ -351,6 +442,18 @@
   },
   {
    "kind": "host",
+   "set": "green",
+   "line": 6,
+   "from": 0.225,
+   "buck": {
+    "mood": "sideeye",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true
+  },
+  {
+   "kind": "host",
    "line": 6,
    "from": 0.5,
    "buck": {
@@ -381,6 +484,39 @@
    "bg_start": 0.5
   },
   {
+   "kind": "host",
+   "set": "yellow",
+   "line": 7,
+   "from": 0.212,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true
+  },
+  {
+   "kind": "counter",
+   "line": 7,
+   "from": 0.391,
+   "start": 0,
+   "to": 6000000,
+   "dur": 2.0,
+   "label": "SINCE THIS VIDEO STARTED",
+   "size": 110,
+   "buck": {
+    "x": 0.82,
+    "y": 0.99,
+    "h": 560,
+    "mood": "sly"
+   },
+   "bg": "/tmp/fin/bg/rc/confetti.mp4",
+   "bg_start": 0.5,
+   "cont": true,
+   "_auto": true,
+   "hook": null
+  },
+  {
    "kind": "counter",
    "line": 7,
    "from": 0.65,
@@ -397,6 +533,18 @@
    },
    "bg": "/tmp/fin/bg/r/mall.mp4",
    "bg_start": 4.0
+  },
+  {
+   "kind": "host",
+   "set": "teal",
+   "line": 7,
+   "from": 0.851,
+   "buck": {
+    "mood": "happy",
+    "h": 1300,
+    "y": 1.04
+   },
+   "_auto": true
   }
  ]
 }

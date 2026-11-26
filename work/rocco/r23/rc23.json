@@ -133,6 +133,21 @@
    "r": "sideeye"
   },
   {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 1,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
    "line": 2,
    "from": 0,
    "kind": "slick",
@@ -152,6 +167,21 @@
    "r": "sideeye"
   },
   {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 3,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
    "line": 4,
    "from": 0,
    "kind": "slick",
@@ -162,6 +192,22 @@
    "r": "smug"
   },
   {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 4,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
    "line": 5,
    "from": 0,
    "kind": "cu_p",
@@ -169,6 +215,21 @@
    "blur": 1,
    "p": "happy",
    "r": "sideeye"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 5,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
   },
   {
    "line": 6,
@@ -181,6 +242,22 @@
    "r": "smug"
   },
   {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 6,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
    "line": 7,
    "from": 0,
    "kind": "cu_p",
@@ -188,6 +265,21 @@
    "blur": 1,
    "p": "shock",
    "r": "sideeye"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 7,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
   },
   {
    "line": 8,
@@ -200,6 +292,22 @@
    "r": "smug"
   },
   {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 8,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
+  },
+  {
    "line": 9,
    "from": 0,
    "kind": "cu_p",
@@ -207,6 +315,21 @@
    "blur": 1,
    "p": "happy",
    "r": "sideeye"
+  },
+  {
+   "kind": "two",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
+   "p": "happy",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.0,
+    "push": 0.06
+   },
+   "line": 9,
+   "from": 0.5,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
   },
   {
    "line": 10,
@@ -217,6 +340,22 @@
    "r_peek": true,
    "s": "panic",
    "r": "smug"
+  },
+  {
+   "kind": "cu_p",
+   "bg": "/home/user/financier-videos/assets/toon2d/porch_boxes.jpg",
+   "p": "shock",
+   "r": "sideeye",
+   "cam": {
+    "z": 1.25,
+    "push": 0.06,
+    "fy": 0.42
+   },
+   "line": 10,
+   "from": 0.68,
+   "blur": 1,
+   "amb": "room",
+   "_auto": true
   }
  ]
 }
