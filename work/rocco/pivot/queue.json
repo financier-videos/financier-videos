@@ -121,5 +121,28 @@
     "status": "standing permission; publish 29-noy 08:00Z (send_later)"
    }
   }
+ ],
+ "moved_from_buffer": [
+  {
+   "id": "RC-01",
+   "file": "rocco_rc01_detective_call.mp4",
+   "postId": "e1eca323-a91a-4f96-9519-0c77a5724336",
+   "publishAt": "2026-12-01T14:00:00Z",
+   "publish_trigger": "trig_01Jtb6QDanDmWeFgCknRY87h"
+  },
+  {
+   "id": "RC-02",
+   "file": "rocco_rc02_wrong_person.mp4",
+   "postId": "7cbe2135-144f-4b69-9b75-9db80b4ab970",
+   "publishAt": "2026-12-02T14:00:00Z",
+   "publish_trigger": "trig_01LGeJMKpTosyuqK8rNW69gK"
+  },
+  {
+   "id": "RC-03",
+   "file": "rocco_rc03_qr_box.mp4",
+   "postId": "3c8ab42e-6355-4890-b36b-efa01f87d6ad",
+   "publishAt": "2026-12-03T14:00:00Z",
+   "publish_trigger": "trig_011ZJGT4tNaAaBDkBmryuRtD"
+  }
  ]
 }

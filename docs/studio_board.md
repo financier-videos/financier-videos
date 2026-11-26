@@ -24,6 +24,9 @@
 
 | Rocco | RC-25 Penny Plays Dumb 3 (tech support, yangi joylar) | 29-noy 13:00 | 29-noy 19:00 | rejada |
 | Financier | BK-13 Cyber Monday $15.1B at $100/day | 29-noy 21:00 | 30-noy 18:00 | rejada |
+| Rocco | RC-01 Scammer Calls a Detective (2D, Buffer'dan ko'chirildi) | 1-dek 13:00 | 1-dek 19:00 | rejada (draft e1eca323, trig_01Jtb6QD…) |
+| Rocco | RC-02 $1,000 by Mistake (2D, Buffer'dan) | 2-dek 13:00 | 2-dek 19:00 | rejada (draft 7cbe2135, trig_01LGeJMK…) |
+| Rocco | RC-03 QR Code in a Box (2D, Buffer'dan) | 3-dek 13:00 | 3-dek 19:00 | rejada (draft 3c8ab42e, trig_011ZJGT4…) |
 
 ## G'oyalar (tadqiqotchi + izohlar) — docs/growth_research_2026-11-25.md dan
 - Buck: "1 cent per second until you match a $869B fortune" (Time Ladder); "Black Friday spends $149,306 every second" (Adobe $12.9B); "Let's bet on a coin — you go first" (Penney's game, Rigged Bet); "Guess the Number: $15.1B Cyber Monday".
@@ -39,5 +42,6 @@
 ## Nazoratchi jurnali
 | Sana | Ishga tushish | Slotlar | QC/bg | Publish | Tadqiqot | Izohlar | IG | Hisobot | Izoh |
 |---|---|---|---|---|---|---|---|---|---|
+| 2026-11-26 | (chat 15:00) | ✅ Buffer eski navbati tozalandi (4 ta, zaxira work/rocco/deleted_posts) | — | ✅ RC-01/02/03 vidIQ draft + send_later | — | — | — | — | RC-09 3D tashlandi; 'Her Crypto Boyfriend' 3D 25-noy Buffer'dan chiqib ketgan (0 ko'rish) |
 | 2026-11-26 | A 09:19 (vazifa) | ✅ Financier 26-noy: U-5 (1 ta ochiladi; 27/28-noy har kuni 2 ta) | ✅ (U-5 qc PASS 25-noy) | ✅ U-5 completed (scheduled) | ✅ trend skan | — (B/C) | ❌ (B: U-5 Reel ≥14:00Z, Rocco m_AhaCKd97s Reel) | — (C) | U-5 draftida publishAt YO'Q edi — tuzatildi; BK-11 04:00Z send_later bajarilmagan → B |
 | 2026-11-25 | (chat) | ✅ | ✅ | ✅ | ✅ | ✅ (ikkala kanal, izoh ruxsati berildi) | ❌ (keyingi B) | ✅ results_2026-11-25 | Studiya OS ishga tushirildi |
