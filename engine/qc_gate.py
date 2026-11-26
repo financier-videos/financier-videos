@@ -14,6 +14,7 @@ Steps (skill -> check):
   5 engine/voice_check.py        ASR transcript vs spec (>= 0.86); prints "heard" - READ the numbers and the last sentence
   6 engine/prosody_check.py      MONOTONE / FLAT_Q / NO_LAND
   7 yt-package/title.py          title lint (>= 80, number in first 40 chars if the title has one)
+  7b title copy                  our title vs trend/benchmark titles (spec "source_titles"): content-word overlap >= 0.6 = FAIL
   10 engine/look_check.py      --prev <last 4 videos>: similarity >= 0.70 = FAIL (docs/looks.md)
   9 engine/color_check.py frames  CLIPPED = FAIL; CRUSHED/DULL = WARN (color skill)
   11 pacing                     ffmpeg scene>0.22 hard cuts >= duration/2 (a new picture every <= 2 s)
@@ -54,6 +55,20 @@ def setup():
         subprocess.run(c, shell=True, timeout=900)
 
 
+_TSTOP = {"the","a","an","of","for","to","in","on","and","or","is","are","with","your","you","my","i","this","that",
+          "it","how","what","why","its","it's","be","at","by","shorts","s"}
+def _tw(t): return {w for w in re.findall(r"[a-z0-9%$]+", t.lower().replace("'", "")) if w not in _TSTOP}
+def title_copy(title, sources):
+    """Return (status, note): FAIL when >= 60% of the smaller title's content words are shared."""
+    tw = _tw(title); worst, wsrc = 0.0, ""
+    for s in sources:
+        sw = _tw(s)
+        if not tw or not sw: continue
+        r = len(tw & sw) / min(len(tw), len(sw))
+        if r > worst: worst, wsrc = r, s
+    if not sources: return "SKIP", "no source titles (spec 'source_titles' / --source-titles)"
+    return ("FAIL" if worst >= 0.6 else "PASS"), f"max overlap {worst:.2f} vs '{wsrc[:80]}'"
+
 def main():
     setup()
     ap = argparse.ArgumentParser()
@@ -61,6 +76,7 @@ def main():
     ap.add_argument("--thumb"); ap.add_argument("--platform", default="shorts"); ap.add_argument("--out"); ap.add_argument("--prev", nargs="*", default=[])
     ap.add_argument("--prev-specs", nargs="*", default=[], dest="prev_specs")  # v6.14: last 4 specs of the channel -> script_check
     ap.add_argument("--benchmarks", nargs="*", default=None)  # 2026-11-22: competitor video IDs this video learned from (else spec "benchmarks")
+    ap.add_argument("--source-titles", nargs="*", default=None, dest="source_titles")  # 2026-11-26: trend/benchmark titles (else spec "source_titles" + quoted text in competitor_watch rows)
     ap.add_argument("--skills", default="")  # v6.14: the "Skillar: ...; ishlatilmadi: ..." line (docs/skills/INDEX.md rule 2)
     a = ap.parse_args()
     out = a.out or os.path.splitext(a.video)[0] + "_qc.json"
@@ -249,6 +265,13 @@ def main():
     hit = bm_ids & fresh
     put("15_competitors", "PASS" if len(hit) >= 2 else "FAIL",
         f"{len(hit)} fresh benchmark(s) {sorted(hit)} (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)")
+    # 7b title copy (2026-11-26, backlog; QAT'IY CHEGARA 1 "raqobatchi matnini ko'chirma"): our title vs trend/benchmark titles.
+    #    overlap coefficient of content words >= 0.6 -> FAIL (U-5 "How a Fake '50% Off' Tag Is Made" vs source = 0.80)
+    if a.title:
+        src = list(a.source_titles or [])
+        if a.source_titles is None and a.spec and os.path.exists(a.spec):
+            src += json.load(open(a.spec)).get("source_titles", [])
+        put("7b_title_copy", *title_copy(a.title, src))
     # 13 skills line (docs/skills/INDEX.md: missing = FAIL)
     put("13_skills_line", "PASS" if re.search(r"Skillar:.+;\s*ishlatilmadi:", a.skills) else "FAIL",
         a.skills or 'no --skills "Skillar: ...; ishlatilmadi: ... (sababi)"')

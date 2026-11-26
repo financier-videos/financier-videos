@@ -149,3 +149,9 @@ KECHA vs BUGUN: bugungi 2 Financier Short (U-3 trend 5 ko'rish, print_100 0 — 
 O'RGANILDI: BK-03 "Paying Off the US Debt at $1M a Day" 887 — gipotetik katta raqam 3-kun ham №1; bank_fees skit 24 soatda 6 → kichik raqamli skit TO'XTAT.
 O'ZGARTIRILDI: backlog tepasiga publishAt tekshiruvi (har YT yuklashdan oldin draft_update + keyin publishedAt tekshiruvi, ≥3 soat oraliq). script_bank SHOSHILINCH: ICSC $124B (kamaydi), Adobe BF $12.9B.
 O'LCHOV: 26-noy C — U-5 (yolg'iz, oraliqli) 24 soatlik ko'rish vs U-3/print_100; publishedAt slotga mosmi.
+
+## 2026-11-26 B (15:20 Toshkent)
+YANGILIKLAR (2 WebSearch): (1) YouTube Shorts — noyabr 2026 da RASMIY yangi algoritm xabari topilmadi; oktyabr 2026: Shorts tavsiyasi original kontentni afzal ko'radi, past-mehnatli qayta yuklash kamaytiriladi (androidauthority, "rasman tasdiqlanmagan" ikkinchi manba). Biz uchun: o'z footage + o'z ssenariy qoidasi to'g'ri. (2) Adobe prognozi (news.adobe.com 2026-09): Thanksgiving (BUGUN, 26-noy) $6.9B onlayn (+8.5%, 63% mobil), Black Friday $12.9B, Cyber Monday ~$15.1B, Cyber Week $47.5B, BF da BNPL $807M — PROGNOZ, haqiqiy natija 27–28-noy Adobe'dan.
+O'RGANILDI: BK-11 doskada "yuklanmagan" turgan, aslida 05:23Z yuklangan — doska bilan post_list har ishda solishtiriladi (shu ishda tuzatildi).
+O'ZGARTIRILDI: qc_gate 7b_title_copy (trend manbasi sarlavhasi bilan ≥0.6 ustma-ustlik = FAIL). IG Rocco caption: o'yin javobi caption'da ochilmaydi.
+O'LCHOV: keyingi trend Short spec'ida "source_titles" bor va 7b PASS; Rocco P1#2 Reel (DgM4Z0TN__9) 24 soatlik ko'rishi C ishida.
