@@ -13,7 +13,7 @@
 | Financier | BK-11 $1B at Minimum Wage (v2 footage) | 26-noy 15:20 (B ishi; 09:00 send_later ishlamadi, U-5 bilan oraliq ≥3 soat uchun surildi) | 28-noy 19:00 | rejada (draft pub 85bb5fab) |
 | Financier | cancel_sub | 27-noy 09:20 (A) | 27-noy 23:00 | draft, publishAt 27-noy 18:00Z qo'yildi |
 | Financier | junk_drawer | 27-noy 15:20 (B) | 29-noy 00:00 | draft, publishAt 28-noy 19:00Z qo'yildi |
-| Rocco | A1 gift card story | 26-noy 13:00 | 26-noy 19:00 | rejada |
+| Rocco | A1 gift card story | yuklandi 26-noy | 26-noy 19:00 | ✅ BtTBMplO69A |
 | Rocco | P1 Scam or Legit #2 | yuklandi | 26-noy 13:00 | ✅ m_AhaCKd97s |
 | Rocco | P1 Scam or Legit #3 | 27-noy 07:30 | 27-noy 13:00 | rejada |
 | Rocco | D1 package-text confession | 27-noy 13:30 | 27-noy 19:00 | rejada |
