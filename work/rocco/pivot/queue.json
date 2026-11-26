@@ -32,9 +32,10 @@
    "by": "session 01MWGZtb7",
    "yt": {
     "postId": "50a90e1a-cb74-4e2b-8e60-7811bf1f3870",
-    "revision": "8978039f",
+    "revision": "370a2e45",
     "publishAt": "2026-11-27T14:00:00Z",
-    "status": "APPROVED 2026-11-25; publish via send_later (spaced uploads)"
+    "status": "APPROVED 2026-11-25; publish via send_later (spaced uploads)",
+    "scheduledFor_set": "2026-11-26T18:40Z"
    }
   },
   {
@@ -75,10 +76,12 @@
    "by": "session 01MWGZtb7",
    "yt": {
     "postId": "0d1fce32-0d80-4f10-8939-e450d3bf53e0",
-    "revision": "b5f7c6c7",
+    "revision": "e35cd152",
     "publishAt": "2026-11-27T08:00:00Z",
-    "status": "APPROVED 2026-11-25; publish via send_later (spaced uploads)"
-   }
+    "status": "UPLOADED 2026-11-26 ~18:45Z (C ishi), publishAt 27-noy 08:00Z",
+    "scheduledFor_set": "2026-11-26T18:40Z"
+   },
+   "ig_caption": "Three texts. Only one is real. 📱\nWhich ones are scams? Comment your score (0–3) before you check the answer on YouTube.\n\nSources: FTC consumer alerts. Not legal or financial advice. Made with AI voices/images; Rocco & Penny are our original characters.\n\n#scamalert #textscam #scamorlegit #quiz #moneytips"
   },
   {
    "name": "RC-23 penny_plays_dumb_2 (2D sequel)",
@@ -87,9 +90,10 @@
    "by": "session 01MWGZtb7",
    "yt": {
     "postId": "f02b2dfd-70b8-4dff-8af1-f3f91ccba4d2",
-    "revision": "a6879062",
+    "revision": "c9f7e41d",
     "publishAt": "2026-11-28T08:00:00Z",
-    "status": "APPROVED; publish 27-noy 20:00Z (send_later)"
+    "status": "APPROVED; publish 27-noy 20:00Z (send_later)",
+    "scheduledFor_set": "2026-11-26T18:40Z"
    }
   },
   {
@@ -99,9 +103,10 @@
    "by": "session 01MWGZtb7",
    "yt": {
     "postId": "61962c4b-406c-4184-aefa-94248216e45d",
-    "revision": "d2a25039",
+    "revision": "81542df1",
     "publishAt": "2026-11-29T08:00:00Z",
-    "status": "standing approval; publish 28-noy 20:00Z (send_later)"
+    "status": "standing approval; publish 28-noy 20:00Z (send_later)",
+    "scheduledFor_set": "2026-11-26T18:40Z"
    }
   },
   {
@@ -111,10 +116,12 @@
    "by": "session 01MWGZtb7",
    "yt": {
     "postId": "c7069bd5-6db7-41e9-a8eb-df396981eaa3",
-    "revision": "2c983808",
+    "revision": "7538088c",
     "publishAt": "2026-11-28T14:00:00Z",
-    "status": "standing permission; publish 28-noy 08:00Z (send_later)"
-   }
+    "status": "standing permission; publish 28-noy 08:00Z (send_later)",
+    "scheduledFor_set": "2026-11-26T18:40Z"
+   },
+   "ig_caption": "Black Friday edition: three texts, only one is real. 🛍️\nWhich one almost got you? Comment 1, 2 or 3.\n\nSources: FTC, BBB holiday scam alerts. Not legal or financial advice. Made with AI voices/images; Rocco & Penny are our original characters.\n\n#scamalert #blackfriday #scamorlegit #quiz #moneytips"
   },
   {
    "name": "RC-25 penny_plays_dumb_3 (tech support, own sets, beat-map rules)",
@@ -123,9 +130,10 @@
    "by": "session 01MWGZtb7",
    "yt": {
     "postId": "55473278-970b-41df-be2f-9f179e9aaf5c",
-    "revision": "93b2abc8",
+    "revision": "727caef2",
     "publishAt": "2026-11-29T14:00:00Z",
-    "status": "standing permission; publish 29-noy 08:00Z (send_later)"
+    "status": "standing permission; publish 29-noy 08:00Z (send_later)",
+    "scheduledFor_set": "2026-11-26T18:40Z"
    }
   }
  ],
@@ -135,21 +143,27 @@
    "file": "rocco_rc01_detective_call.mp4",
    "postId": "e1eca323-a91a-4f96-9519-0c77a5724336",
    "publishAt": "2026-12-01T14:00:00Z",
-   "publish_trigger": "trig_01Jtb6QDanDmWeFgCknRY87h"
+   "publish_trigger": "trig_01Jtb6QDanDmWeFgCknRY87h",
+   "revision": "030ba788",
+   "scheduledFor_set": "2026-11-26T18:40Z"
   },
   {
    "id": "RC-02",
    "file": "rocco_rc02_wrong_person.mp4",
    "postId": "7cbe2135-144f-4b69-9b75-9db80b4ab970",
    "publishAt": "2026-12-02T14:00:00Z",
-   "publish_trigger": "trig_01LGeJMKpTosyuqK8rNW69gK"
+   "publish_trigger": "trig_01LGeJMKpTosyuqK8rNW69gK",
+   "revision": "bbf7c021",
+   "scheduledFor_set": "2026-11-26T18:40Z"
   },
   {
    "id": "RC-03",
    "file": "rocco_rc03_qr_box.mp4",
    "postId": "3c8ab42e-6355-4890-b36b-efa01f87d6ad",
    "publishAt": "2026-12-03T14:00:00Z",
-   "publish_trigger": "trig_011ZJGT4tNaAaBDkBmryuRtD"
+   "publish_trigger": "trig_011ZJGT4tNaAaBDkBmryuRtD",
+   "revision": "cb47e29f",
+   "scheduledFor_set": "2026-11-26T18:40Z"
   }
  ]
 }

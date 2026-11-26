@@ -11,15 +11,15 @@
 |---|---|---|---|---|
 | Financier | U-5 How a Fake '50% Off' Tag Is Made (trend) | ✅ 26-noy 09:21 | 26-noy 17:00 | ✅ O8oTJT2t1y0 (private, scheduledPublishAt 12:00Z tasdiqlandi) |
 | Financier | BK-11 $1B at Minimum Wage (v3) | ✅ 26-noy 10:23 (05:23Z) | 28-noy 19:00 | ✅ Q1VHB9mul-c (private, scheduledPublishAt 28-noy 14:00Z — B 10:30Z da tasdiqlandi) |
-| Financier | cancel_sub | 27-noy 09:20 (A) | 27-noy 23:00 | draft, publishAt 27-noy 18:00Z qo'yildi |
-| Financier | junk_drawer | 27-noy 15:20 (B) | 29-noy 00:00 | draft, publishAt 28-noy 19:00Z qo'yildi |
+| Financier | cancel_sub | 27-noy 09:20 (A) | 27-noy 23:00 | draft, publishAt 27-noy 18:00Z (26-noy C da HAQIQATAN qo'yildi, rev 0b63720f) |
+| Financier | junk_drawer | 27-noy 15:20 (B) | 29-noy 00:00 | draft, publishAt 28-noy 19:00Z (26-noy C, rev 5eebed7b) |
 | Rocco | A1 gift card story | yuklandi 26-noy | 26-noy 19:00 | ✅ BtTBMplO69A |
 | Rocco | P1 Scam or Legit #2 | yuklandi | 26-noy 13:00 | ✅ m_AhaCKd97s · IG ✅ DgM4Z0TN__9 (26-noy 15:35) |
-| Rocco | P1 Scam or Legit #3 | 27-noy 07:30 | 27-noy 13:00 | rejada |
+| Rocco | P1 Scam or Legit #3 | ✅ 26-noy 23:24 (C) | 27-noy 13:00 | ✅ GveF46eH-KM (private, scheduledPublishAt 27-noy 08:00Z tasdiqlandi) |
 | Rocco | D1 package-text confession | 27-noy 13:30 | 27-noy 19:00 | rejada |
 | Rocco | RC-23 Penny Plays Dumb 2 (yangi joylar) | 28-noy 01:00 | 28-noy 13:00 | rejada |
 | Rocco | RC-24 Refund Trick (yangi joylar) | 29-noy 01:00 | 29-noy 13:00 | rejada |
-| Financier | BK-12 Black Friday $149,306/sec | 26-noy 21:00 | 27-noy 18:00 | rejada |
+| Financier | BK-12 Black Friday $149,306/sec | ✅ 26-noy 23:21 (C; send_later ishlamadi) | 27-noy 18:00 | ✅ ZfyYGZH8B8o (private, scheduledPublishAt 27-noy 13:00Z tasdiqlandi) |
 | Rocco | P1 Scam or Legit #4 Black Friday (o'z temasi) | 28-noy 13:00 | 28-noy 19:00 | rejada |
 
 | Rocco | RC-25 Penny Plays Dumb 3 (tech support, yangi joylar) | 29-noy 13:00 | 29-noy 19:00 | rejada |
@@ -45,6 +45,7 @@
 ## Nazoratchi jurnali
 | Sana | Ishga tushish | Slotlar | QC/bg | Publish | Tadqiqot | Izohlar | IG | Hisobot | Izoh |
 |---|---|---|---|---|---|---|---|---|---|
+| 2026-11-26 | C 23:20 (vazifa) | ✅ 27-noy: Financier BK-12 13:00Z + cancel_sub 18:00Z; Rocco P1#3 08:00Z + D1 14:00Z | — (yangi render yo'q) | ✅ BK-12, P1#3 yuklandi va tasdiqlandi; ❌→✅ 13 draftda scheduledFor null edi — hammasiga publishAt qo'yildi | ✅ results.md 26-noy, trafik manbalari, yangilik (Adobe prognozi, haqiqiy raqam hali yo'q) | ✅ ikkala kanal: yangi tashqi izoh yo'q | ✅ U-5 Reel DgNvOphNJ_t | ✅ (push) | ❌ Financier yangi videolar ≤13 ko'rish (5 ta) — backlog ENG YUQORI; retention: analytics 23-noydan keyin bo'sh, 24-noy videolari uchun 27-noy C da |
 | 2026-11-26 | (chat 15:00) | ✅ Buffer eski navbati tozalandi (4 ta, zaxira work/rocco/deleted_posts) | — | ✅ RC-01/02/03 vidIQ draft + send_later | — | — | — | — | RC-09 3D tashlandi; 'Her Crypto Boyfriend' 3D 25-noy Buffer'dan chiqib ketgan (0 ko'rish) |
 | 2026-11-26 | B 15:20 (vazifa) | ✅ Financier 26-noy: U-5 ochiladi 17:00; BK-11 allaqachon yuklangan (doska eskirgan edi) — bugun Financier YT yuklash 2/3–4, yangi yuklash yo'q (BK-12 send_later 16:00Z) | — (yangi render yo'q) | ✅ post_list: 3 completed, failed 0 | ✅ yangiliklar (B) | ✅ ikkala kanal: yangi tashqi izoh yo'q | ✅ Rocco P1#2 Reel DgM4Z0TN__9; ❌ U-5 Reel ≥14:00Z (C ishi) | — (C) | qc_gate 7b_title_copy qo'shildi (backlog tepasi) |
 | 2026-11-26 | A 09:19 (vazifa) | ✅ Financier 26-noy: U-5 (1 ta ochiladi; 27/28-noy har kuni 2 ta) | ✅ (U-5 qc PASS 25-noy) | ✅ U-5 completed (scheduled) | ✅ trend skan | — (B/C) | ❌ (B: U-5 Reel ≥14:00Z, Rocco m_AhaCKd97s Reel) | — (C) | U-5 draftida publishAt YO'Q edi — tuzatildi; BK-11 04:00Z send_later bajarilmagan → B |

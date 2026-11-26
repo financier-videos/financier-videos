@@ -1,1 +1,10 @@
-{"BK-14":{"uploadId":"a4f2635d-89a4-42fc-802c-2d4b526a38c7","postId":"017b2e5b-48d4-45e7-8fe1-4501b49a0a5c","revision":"dda8e49c","publishAt":"2026-12-01T13:00:00Z","publish_trigger":"trig_01EiZkUJ4WSL3facGTyTtaCQ"}}
+{
+ "BK-14": {
+  "uploadId": "a4f2635d-89a4-42fc-802c-2d4b526a38c7",
+  "postId": "017b2e5b-48d4-45e7-8fe1-4501b49a0a5c",
+  "revision": "7cf8ebbe",
+  "publishAt": "2026-12-01T13:00:00Z",
+  "publish_trigger": "trig_01EiZkUJ4WSL3facGTyTtaCQ",
+  "scheduledFor_set": "2026-11-26T18:40Z"
+ }
+}
