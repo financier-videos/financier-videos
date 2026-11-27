@@ -32,10 +32,13 @@
    "by": "session 01MWGZtb7",
    "yt": {
     "postId": "50a90e1a-cb74-4e2b-8e60-7811bf1f3870",
-    "revision": "370a2e45",
+    "revision": "6a72df5e",
     "publishAt": "2026-11-27T14:00:00Z",
-    "status": "APPROVED 2026-11-25; publish via send_later (spaced uploads)",
-    "scheduledFor_set": "2026-11-26T18:40Z"
+    "status": "completed",
+    "scheduledFor_set": "2026-11-26T18:40Z",
+    "videoId": "CjshfeRye1Q",
+    "url": "https://www.youtube.com/watch?v=CjshfeRye1Q",
+    "scheduledPublishAt": "2026-11-27T14:00:00Z"
    }
   },
   {
