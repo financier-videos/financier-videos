@@ -1,17 +1,17 @@
-# Graph Report - financier-videos  (2026-11-25)
+# Graph Report - financier-videos  (2026-11-27)
 
 ## Corpus Check
-- 495 files · ~587,561 words
+- 503 files · ~608,139 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 42 file(s) not represented in the graph (top: (none) 24, .blender-skills 11, .vyral 6)
 
 ## Summary
-- 5594 nodes · 7903 edges · 449 communities (382 shown, 67 thin omitted)
+- 5704 nodes · 8020 edges · 456 communities (389 shown, 67 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 192 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `81ecbb01`
+- Built from commit: `5e201e31`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -316,9 +316,9 @@
 - F-curves, interpolation and the Graph Editor
 - timeline.py
 - retarget.py
-- .update
+- column
 - bpy animation API
-- grade.ts
+- O'SISH TADQIQOTI — Financier (Buck) va Red Flag Rocco, 2026-11-25
 - The 12 Principles in Classical Animation
 - Camera moves — full specification
 - get_scene
@@ -331,7 +331,7 @@
 - Viral Video Report Style
 - mascot3d_patch
 - Cinematography for product and hero animation
-- cardshade.ts
+- 1. (A) HOZIR TRENDDA — so'nggi 7 kun
 - bind_mesh.py
 - Workflow Recipes
 - vox
@@ -431,6 +431,13 @@
 - Shorts search and shelf
 - buck3d_ready
 - _env
+- STUDIYA OS — 8 rol, ikkala kanal (Shohjahon 2026-11-25: "aytgan kasblaring kabi o'zing ishla, hammasini o'zing qil, hech biri qolib ketmasin, o'z vaqtida va a'lo darajada bo'lishini tekshirib tur")
+- Стратегия: Financier + Red Flag Rocco (26.11.2026)
+- qc_gate.py
+- Cartoon 3D story short (three.js + Remotion)
+- RETENTION JURNALI (sekundma-sekund tomosha grafigi → ssenariy qarori)
+- script_check.py
+- STUDIYA DOSKASI (har ishga tushishda yangilanadi — docs/studio_os.md §9)
 
 ## God Nodes (most connected - your core abstractions)
 1. `ns()` - 64 edges
@@ -459,7 +466,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (449 total, 67 thin omitted)
+## Communities (456 total, 67 thin omitted)
 
 ### Community 0 - "ig-reel/hookscore.py"
 Cohesion: 0.22
@@ -522,8 +529,8 @@ Cohesion: 0.10
 Nodes (19): 0. Check the toolchain once per session, 10. Every correction is taste, 1. Prep and look, 2. Transcribe everything, 2b. Track the face, 2c. Noisy outdoor audio?, 3. Choose takes (`references/take-selection.md`), 3b. A single clean take? (+11 more)
 
 ### Community 15 - "compute_reframe.py"
-Cohesion: 0.10
-Nodes (16): find_blender(), main(), _ver(), _add_clip(), _frames(), _output(), run(), compute_crop_center() (+8 more)
+Cohesion: 0.16
+Nodes (9): compute_crop_center(), compute_crop_face_track(), compute_crop_screen_static(), compute_crop_screen_with_cursor(), compute_face_track(), detect_cursor_positions(), get_video_info(), main() (+1 more)
 
 ### Community 16 - "YouTube Shorts Playbook"
 Cohesion: 0.11
@@ -566,20 +573,20 @@ Cohesion: 0.12
 Nodes (16): Conflicts, Hard Rules, Invocation Variants, Learning Taste, Make it a check, Needs your answer, Phase 1: Collect corrections, Phase 2: Filter (+8 more)
 
 ### Community 26 - "re"
-Cohesion: 0.12
-Nodes (25): colour2(), cuts(), dur(), lufs(), main(), run(), silences(), speech_onset() (+17 more)
+Cohesion: 0.16
+Nodes (19): colour2(), cuts(), dur(), lufs(), main(), run(), silences(), speech_onset() (+11 more)
 
 ### Community 27 - "Claude YouTube — YouTube Creator Skill"
 Cohesion: 0.12
 Nodes (15): API Credit Awareness, Channel Type Detection, Claude YouTube — YouTube Creator Skill, Command Router, Context-Gathering Protocol, DataForSEO MCP Integration (Optional), Execution Scripts, Key YouTube DataForSEO Tools (+7 more)
 
 ### Community 28 - "YOUTUBE PLAYBOOK — FINANCIER (moliya, AQSh auditoriyasi)"
-Cohesion: 0.14
-Nodes (13): 0.5 TOP-10 VA CINEMA QUALITY STANDARTI, 0. MAQSAD VA VAKOLAT, 10. O'RGANILGANLAR JURNALI (14 kundan eskisi xulosaga), 1. KANAL, 2. QIZIL CHIZIQLAR, 3. ISHLAB CHIQARISH, HOSTING VA KREDIT, 4. REJISSOR QOIDALARI, HAZIL FORMULASI VA PRO MONTAJ (35 qatordan oshmasin), 5. RAQOBATCHILAR VA ETALONLAR (har biri 3–4 qator; ≤10) (+5 more)
+Cohesion: 0.13
+Nodes (14): 0.5 TOP-10 VA CINEMA QUALITY STANDARTI, 0. MAQSAD VA VAKOLAT, 10. O'RGANILGANLAR JURNALI (14 kundan eskisi xulosaga), 1. KANAL, 2. QIZIL CHIZIQLAR, 3. ISHLAB CHIQARISH, HOSTING VA KREDIT, 4. REJISSOR QOIDALARI, HAZIL FORMULASI VA PRO MONTAJ (35 qatordan oshmasin), 5. RAQOBATCHILAR VA ETALONLAR (har biri 3–4 qator; ≤10) (+6 more)
 
 ### Community 29 - "AVTONOM PRODYUSER — vazifa ko'rsatmasi (v3, 2026-11-20; Default muhit, ElevenLabs ochiq)"
 Cohesion: 0.07
-Nodes (28): 0) BOSHLASH, 1.5) KUNLIK O'SISH (Shohjahon 2026-11-20 07:07: "har kuni kechagidan yaxshiroq bo'l va yangiliklarni o'rganib yur") — MAJBURIY, 1.6) INSTAGRAM (Shohjahon 2026-11-20 19:42) — `docs/instagram.md` ni o'qi va aynan bajar, 1.7) UCH KANALNI O'ZING YURIT VA RIVOJLANTIR (Shohjahon 2026-11-20 20:23: "o'zing yurgiz va rivojlantir; senda YouTube kanal va 2 ta Instagram bor"), 1.8) RAQOBATCHI KUZATUVI VA KUNLIK RAQAMLI HISOBOT (Shohjahon 2026-11-21 18:23: "kanalni rivojlantirmayapsan, konkurentlarni kuzatmayapsan, o'zingni rivojlantirmayapsan") — MAJBURIY, HAR KUNI, 1.8) RED FLAG ROCCO (Shohjahon 2026-11-21 19:xx: "1 haftada 15 mln ko'rishga olib chiq") — `docs/rocco.md` ni o'qi va aynan bajar, 1.9) KUNLIK TOP TAHLIL (Shohjahon 2026-11-21: "har kuni ko'rishi uchib ketgan top kanal va videolarni ko'rib chiq, mavzu tuz, video yasa; eng topga chiqadigan kanal qil") — MAJBURIY, har kuni A (09:xx) BOSHIDA, ikkala kanal uchun, 1) SOATGA QARAB REJIM (jadvaldan tashqari soatda — eng yaqin bajarilmagan rejim; bugun bajarilgan bo'lsa takrorlama) (+20 more)
+Nodes (29): 0) BOSHLASH, >>>>>> 0-USTUVOR: STUDIYA OS (Shohjahon 2026-11-25: "aytgan 8 kasb kabi o'zing ishla, hech biri qolib ketmasin, o'z vaqtida va a'lo darajada") — `docs/studio_os.md` ni BIRINCHI o'qi va 8 rolni (strateg, tadqiqotchi, ssenarist, fakt tekshiruvchi, ovoz, animator/fon, montajchi, community) + NAZORATCHI ni har ishga tushishda bajar. Doska: `docs/studio_board.md`. Hajm: Financier 3–4/kun (≥3 soat oraliq), Rocco 2/kun (≥4 soat) — sprint'dagi "8/kun" bekor (burst dalili). Har videoda unikal fon (`engine/bg_reuse_check.py`). <<<<<<, 1.5) KUNLIK O'SISH (Shohjahon 2026-11-20 07:07: "har kuni kechagidan yaxshiroq bo'l va yangiliklarni o'rganib yur") — MAJBURIY, 1.6) INSTAGRAM (Shohjahon 2026-11-20 19:42) — `docs/instagram.md` ni o'qi va aynan bajar, 1.7) UCH KANALNI O'ZING YURIT VA RIVOJLANTIR (Shohjahon 2026-11-20 20:23: "o'zing yurgiz va rivojlantir; senda YouTube kanal va 2 ta Instagram bor"), 1.8) RAQOBATCHI KUZATUVI VA KUNLIK RAQAMLI HISOBOT (Shohjahon 2026-11-21 18:23: "kanalni rivojlantirmayapsan, konkurentlarni kuzatmayapsan, o'zingni rivojlantirmayapsan") — MAJBURIY, HAR KUNI, 1.8) RED FLAG ROCCO (Shohjahon 2026-11-21 19:xx: "1 haftada 15 mln ko'rishga olib chiq") — `docs/rocco.md` ni o'qi va aynan bajar, 1.9) KUNLIK TOP TAHLIL (Shohjahon 2026-11-21: "har kuni ko'rishi uchib ketgan top kanal va videolarni ko'rib chiq, mavzu tuz, video yasa; eng topga chiqadigan kanal qil") — MAJBURIY, har kuni A (09:xx) BOSHIDA, ikkala kanal uchun (+21 more)
 
 ### Community 30 - "SSENARIYLAR BANKI (Shohjahon yuborgan, Claude tekshirib moslagan)"
 Cohesion: 0.04
@@ -602,8 +609,8 @@ Cohesion: 0.15
 Nodes (12): 0. Hard rules (they override everything below), 1. Covers: keep the glances, 2. Budgets (talking-head styles; the QA fails past them), 3. Sourcing priority, 4. Grade conform (`scripts/insert_prep.py`), 5. Motion and type, 5b. One fixed house look per style, 6. Style prerequisites (say so, and propose another style) (+4 more)
 
 ### Community 35 - "os"
-Cohesion: 0.15
-Nodes (13): assemble(), git(), main(), pack_pose(), push(), sync(), pack(), run() (+5 more)
+Cohesion: 0.11
+Nodes (19): find_blender(), main(), _ver(), _add_clip(), _frames(), _output(), run(), assemble() (+11 more)
 
 ### Community 36 - "critique.md"
 Cohesion: 0.12
@@ -859,7 +866,7 @@ Nodes (6): Caption and overlay safety (all styles), Keeping every reel fresh (sa
 
 ### Community 99 - "cast.ts"
 Cohesion: 0.06
-Nodes (71): BARE, blank, blob(), BODY, CamInfo, CARD, CHEER, column() (+63 more)
+Nodes (64): BARE, blank, blob(), BODY, CamInfo, CARD, CHEER, CONTACT (+56 more)
 
 ### Community 100 - "layout.md"
 Cohesion: 0.29
@@ -899,7 +906,7 @@ Nodes (5): Choosing takes from a multi-take recording, Procedure, The raw cut, s
 
 ### Community 109 - "Bridge.tsx"
 Cohesion: 0.04
-Nodes (38): Cartoon 3D story short (three.js + Remotion), Final look values (bridge after 4 verifier rounds; all in `templates/bridge/`), Gotchas, Look-match loop (how the bridge look was reached; reuse for any "make it look like X" pass), Look targets (measured from the reference; see references/reports/), Pipeline, Readability traps the verifier caught (check every new prop/shot for these), BRIDGE_FRAMES (+30 more)
+Nodes (43): Pipeline, BRIDGE_FRAMES, BridgeShort(), dprOverride(), fpt, fwd, Inner(), makeBloom() (+35 more)
 
 ### Community 110 - "Visualize: Direction Comps & Asset Production"
 Cohesion: 0.33
@@ -926,8 +933,8 @@ Cohesion: 0.10
 Nodes (19): Alpha matte types explained, AME preset cautions, Bitrate cheat sheet (H.264 VBR 2-pass), Bitrate guidance (H.264 via AME), Codec & Export Matrix — Detailed Reference, Decision tree, Export Recipes — Codec, Container, Alpha, Bitrate, Full target → settings matrix (+11 more)
 
 ### Community 116 - "O'SISH JURNALI — "har kuni kechagidan yaxshiroq" (Shohjahon, 2026-11-20 07:07)"
-Cohesion: 0.11
-Nodes (18): 2026-11-20 (chat sessiyasi), 2026-11-20 (vazifa, A 09:19), 2026-11-20 (vazifa, B 15:19), 2026-11-20 (vazifa, BUYURTMA 3, 20:34), 2026-11-20 (vazifa, C 23:19), 2026-11-21 23:40 Toshkent — C ishi (vazifa sessiyasi), 2026-11-21 (chat, 00:10 — Shohjahon: "youtube-skill o'rnat, eng yaxshilarini"), 2026-11-21 (vazifa, A 01:46) (+10 more)
+Cohesion: 0.10
+Nodes (19): 2026-11-20 (chat sessiyasi), 2026-11-20 (vazifa, A 09:19), 2026-11-20 (vazifa, B 15:19), 2026-11-20 (vazifa, BUYURTMA 3, 20:34), 2026-11-20 (vazifa, C 23:19), 2026-11-21 23:40 Toshkent — C ishi (vazifa sessiyasi), 2026-11-21 (chat, 00:10 — Shohjahon: "youtube-skill o'rnat, eng yaxshilarini"), 2026-11-21 (vazifa, A 01:46) (+11 more)
 
 ### Community 118 - "Third-Party Notices"
 Cohesion: 0.40
@@ -1406,8 +1413,8 @@ Cohesion: 0.22
 Nodes (8): 0.5 ROCCO: eski uslub TO'XTATILDI — docs/rocco_style_v2.md (yorug' fon, Rocco + Penny suhbati, hazil, yangi ovoz tanlovi). Ovoz tanlanguncha yangi Rocco videosi chiqmaydi; birinchi ish — rocco_voice_test.mp4., 0. Har ishga tushishda, 1. NAVBAT (qat'iy shu tartibda), 2. HAR VIDEO UCHUN MAJBURIY (bittasi yo'q bo'lsa — chiqmaydi), 3. HISOBOT, 4. NIMA TAYYOR, NIMA YO'Q (2026-11-21 22:10), 5. YANGI (vazifa sessiyasi, 2026-11-22 01:00 Toshkent) — boshqa chatlar o'qisin, SHU YERDAN BOSHLA — kod chati / vazifa uchun yagona tartib (chat Trade, 2026-11-21 22:10 Toshkent)
 
 ### Community 275 - "build.ts"
-Cohesion: 0.08
-Nodes (52): addVeg(), BANNER_COL, bannerGeo(), bannerProp(), bannerTex(), barkMat(), Batch, boxes (+44 more)
+Cohesion: 0.07
+Nodes (57): addVeg(), BANNER_COL, bannerGeo(), bannerProp(), bannerTex(), barkMat(), Batch, boxes (+49 more)
 
 ### Community 276 - "TO'LIQ AUDIT — 2026-11-21 (Shohjahon 20:46: "hamma narsani qayta ko'rib chiq, trend videolardan o'rnak ol, o'zgartir va o'zing ishlat")"
 Cohesion: 0.33
@@ -1434,16 +1441,16 @@ Cohesion: 0.40
 Nodes (4): 2026-11-21 15:51 UTC — outlier tahlili №2 (to'liq: docs/audit_2026-11-21.md), 2026-11-21 — "portlagan" Shortlar tahlili (vidIQ outliers: "money facts", Shorts, shu oy, kanal ≤100K obunachi, ≥100K ko'rish; 5 kredit → qoldi 17), 2026-11-25 (B) — Hypothetically (201 obunachi): "How a Fake '50% Off' Black Friday Tag Is Built" — 1.05M / 2 kun, 22.7K vph, 56 s (manba: vidIQ trending, daily_trends 25-noy; video ID topilmadi — WebSearch indekslamagan), RAQOBATCHILAR — kunlik kuzatuv (producer_task 1.8)
 
 ### Community 282 - "KUNLIK TOP TAHLIL (producer_task 1.9) — yangisi tepada, 7 kundan eskisi o'chiriladi"
-Cohesion: 0.33
-Nodes (5): 2026-11-21 23:45 (C, Financier nishasi — birinchi), 2026-11-21 (birinchi; Rocco vidIQ, batafsil: docs/rocco_inspiration.md), 2026-11-22 09:30 (A, Financier — vazifa sessiyasi), 2026-11-25 09:30 (A, Financier — vazifa sessiyasi), KUNLIK TOP TAHLIL (producer_task 1.9) — yangisi tepada, 7 kundan eskisi o'chiriladi
+Cohesion: 0.25
+Nodes (7): 2026-11-21 23:45 (C, Financier nishasi — birinchi), 2026-11-21 (birinchi; Rocco vidIQ, batafsil: docs/rocco_inspiration.md), 2026-11-22 09:30 (A, Financier — vazifa sessiyasi), 2026-11-25 09:30 (A, Financier — vazifa sessiyasi), 2026-11-26 09:30 (A, Financier — vazifa sessiyasi), 2026-11-27 09:25 (A, ikkala kanal — vazifa sessiyasi), KUNLIK TOP TAHLIL (producer_task 1.9) — yangisi tepada, 7 kundan eskisi o'chiriladi
 
 ### Community 283 - "YAXSHILASH NAVBATI (producer_task "O'Z-O'ZIDAN RIVOJLANISH") — eng yuqori ta'sir tepada"
 Cohesion: 0.50
 Nodes (3): BAJARILDI, OCHIQ, YAXSHILASH NAVBATI (producer_task "O'Z-O'ZIDAN RIVOJLANISH") — eng yuqori ta'sir tepada
 
 ### Community 284 - "NATIJALAR — har video bo'yicha (kunlik to'ldiriladi; producer_task 1.8)"
-Cohesion: 0.29
-Nodes (6): 2026-11-21 23:40 Toshkent (18:40 UTC) — vidiq_user_videos (5 kredit), 2026-11-22 23:25 Toshkent (18:25 UTC) — C ishi, vidiq_user_videos (Financier 5 + Rocco 5 kredit), 2026-11-23 23:25 Toshkent (18:25 UTC) — C ishi, vidiq_user_videos (Financier 5 + Rocco 5 kredit; balans 1,506), 2026-11-24 23:30 Toshkent (18:30 UTC) — C ishi, vidiq_user_videos (Financier 5 + Rocco 5 kredit), 2026-11-25 23:30 Toshkent (18:25 UTC) — C ishi, vidiq_user_videos (Financier 5 + Rocco 5 kredit), NATIJALAR — har video bo'yicha (kunlik to'ldiriladi; producer_task 1.8)
+Cohesion: 0.25
+Nodes (7): 2026-11-21 23:40 Toshkent (18:40 UTC) — vidiq_user_videos (5 kredit), 2026-11-22 23:25 Toshkent (18:25 UTC) — C ishi, vidiq_user_videos (Financier 5 + Rocco 5 kredit), 2026-11-23 23:25 Toshkent (18:25 UTC) — C ishi, vidiq_user_videos (Financier 5 + Rocco 5 kredit; balans 1,506), 2026-11-24 23:30 Toshkent (18:30 UTC) — C ishi, vidiq_user_videos (Financier 5 + Rocco 5 kredit), 2026-11-25 23:30 Toshkent (18:25 UTC) — C ishi, vidiq_user_videos (Financier 5 + Rocco 5 kredit), 2026-11-26 23:30 Toshkent (18:30 UTC) — C ishi, vidiq_user_videos (Financier 5 + Rocco 5 kredit), NATIJALAR — har video bo'yicha (kunlik to'ldiriladi; producer_task 1.8)
 
 ### Community 285 - "O'ZGARISHLAR JURNALI — ishlab chiqarishga ta'sir qiladigan har yangilik (har chat yozadi)"
 Cohesion: 0.33
@@ -1458,8 +1465,8 @@ Cohesion: 0.29
 Nodes (6): Lavha tanlash qoidasi (har yangi video uchun majburiy), Lavhalar banki (footage bank) — 2026-11-22, Maket qoidasi — bo'sh panel TAQIQ, Rad etilganlar (ishlatilmaydi) va sababi, subs_r03 ("$111 a month") — sahna → lavha (qayta render), Tanlangan lavhalar (30 ta)
 
 ### Community 290 - "sys"
-Cohesion: 0.11
-Nodes (13): load_csv(), main(), classify(), main(), gql(), main(), main(), main() (+5 more)
+Cohesion: 0.10
+Nodes (13): load_csv(), main(), classify(), main(), bgs(), main(), gql(), main() (+5 more)
 
 ### Community 291 - "blender-stylized-npr/scripts/_bpyx.py"
 Cohesion: 0.06
@@ -1470,8 +1477,8 @@ Cohesion: 0.10
 Nodes (30): impulse_train(), modal(), ns(), phase(), resbank(), reson(), tt(), applause() (+22 more)
 
 ### Community 297 - "paint.ts"
-Cohesion: 0.11
-Nodes (46): chapelTex(), clockTex(), beamHD(), bed(), blotch(), brick(), brickCol(), cache (+38 more)
+Cohesion: 0.10
+Nodes (52): flagTex(), Kit, beam(), beamHD(), bed(), blotch(), brick(), brickCol() (+44 more)
 
 ### Community 298 - "FFmpeg Gotchas and Non-Obvious Commands"
 Cohesion: 0.05
@@ -1482,8 +1489,8 @@ Cohesion: 0.12
 Nodes (32): biquad(), colored(), lp(), make_ir(), pan(), peq(), place(), shelf() (+24 more)
 
 ### Community 300 - "world.ts"
-Cohesion: 0.06
-Nodes (38): flagTex(), Ray, SIGN_AT, Stage, SU_SWING, C3, LightPreset, LIGHTS (+30 more)
+Cohesion: 0.05
+Nodes (39): blobMaterial(), CARD_K, cardShade(), GRAD_K, GRAD_KB, TINT_K, Actor, Fx (+31 more)
 
 ### Community 301 - "blender-export-pipelines/scripts/_bpyx.py"
 Cohesion: 0.07
@@ -1523,7 +1530,7 @@ Nodes (16): add_common(), argv(), cli(), _default(), emit(), enum_ids(), mesh_tr
 
 ### Community 310 - "story.ts"
 Cohesion: 0.07
-Nodes (67): amp(), boots(), Cam, CAMS, COUNT, CRANE, Crowd, Dof (+59 more)
+Nodes (67): boots(), Cam, camAt(), CAMS, COUNT, CRANE, Crowd, Dof (+59 more)
 
 ### Community 311 - "math"
 Cohesion: 0.09
@@ -1585,17 +1592,17 @@ Nodes (13): amp(), column_distance(), dist_fx(), easeout(), footfalls(), hh(), _
 Cohesion: 0.16
 Nodes (11): _assign(), list_actions(), _mute(), _root_motion(), run(), object_mode(), auto_map(), _parts() (+3 more)
 
-### Community 326 - ".update"
-Cohesion: 0.09
-Nodes (21): blobMaterial(), cardShade(), Actor, Fx, hammerK(), makeEntry(), Pool, BridgeState (+13 more)
+### Community 326 - "column"
+Cohesion: 0.10
+Nodes (25): column(), exprMarch(), hexOf(), makeEntry(), Pool, toSrgb(), viewOf(), amp() (+17 more)
 
 ### Community 327 - "bpy animation API"
 Cohesion: 0.11
 Nodes (17): 10. Headless render, 1. Scene, frame range, fps, 2. Inserting keyframes — the simple path, 3. Direct F-curve creation — the controlled path, 4. Interpolation, easing and handle enums, 5. Camera setup, 6. Camera rig constraints, 7. Drivers (+9 more)
 
-### Community 328 - "grade.ts"
-Cohesion: 0.15
-Nodes (13): E_CB, E_CR, GRADE_DAY, GRADE_DAY2, GRADE_GOLDEN, GRADE_GOLDEN2, GRADE_STRENGTH, GradeEffect (+5 more)
+### Community 328 - "O'SISH TADQIQOTI — Financier (Buck) va Red Flag Rocco, 2026-11-25"
+Cohesion: 0.08
+Nodes (25): 0. QISQA XULOSA (TL;DR), 1. FINANCIER (pul faktlari / "what if") — eng yaxshi Shorts, so'nggi ~14 kun, 2. FINANCIER — 6 ta (+1) video kadrma-kadr va QAYTA ISHLATILADIGAN SHABLON, 3. RED FLAG ROCCO (firibgarlik / fraud / scam-baiting) — eng yaxshi Shorts, so'nggi ~14 kun, 4. ROCCO — 6 ta video kadrma-kadr va SHABLON, 5. SARLAVHA / THUMBNAIL / UZUNLIK PATTERNLARI (outlierlar bilan korrelyatsiya), 6. YANGILIKLAR / TRENDLAR (26-noy – 5-dek) — tasdiqlangan raqamlar, 7. 10 TA MAVZU — BUCK (kutilgan natija bo'yicha tartib) (+17 more)
 
 ### Community 329 - "The 12 Principles in Classical Animation"
 Cohesion: 0.12
@@ -1645,9 +1652,9 @@ Nodes (8): act_ok(), _alpha_scaled(), b3_feet(), buck3d_extent(), buck3d_frame()
 Cohesion: 0.17
 Nodes (11): 1. Design backward from the hero frame, 2. Focal length, 3. Aperture and depth of field, 4. Composition, 5. Keeping the product in frame, 6. Screen direction and continuity, 7. Beat structure, 8. The failure that looks like success (+3 more)
 
-### Community 341 - "cardshade.ts"
-Cohesion: 0.23
-Nodes (9): CARD_K, GRAD_K, GRAD_KB, TINT_K, CHAR, LFB, neutral(), TONE (+1 more)
+### Community 341 - "1. (A) HOZIR TRENDDA — so'nggi 7 kun"
+Cohesion: 0.08
+Nodes (25): 0. QISQA XULOSA — 10 ta umumiy qoida (qaysi videolar tasdiqlaydi), 1. (A) HOZIR TRENDDA — so'nggi 7 kun, 2. (B) BIZNING NUSXA MANBALARIMIZ, 3.1 RC-05 "Penny Plays Dumb With a Scammer" (1,298 ko'rish) ↔ `vcPnUMJNdkw` + `Air9U8z3D_A`, 3.2 RC-23 "Penny Plays Dumb: Part 2" ↔ `vcPnUMJNdkw` + `Air9U8z3D_A`, 3.3 RC-24 "The Scammer Tried the Refund Trick on Penny" ↔ `VSQm4NhTAyc`, 3.4 BK-11 "How Long to Earn $1 Billion at Minimum Wage?" ↔ `Ml36RBLHWZY` (+ `NeI6GU94Hc4`), 3.5 BK-12 "Black Friday Spends $149,306 Every Second" ↔ `Ml36RBLHWZY` + `NeI6GU94Hc4` (+17 more)
 
 ### Community 342 - "bind_mesh.py"
 Cohesion: 0.36
@@ -1766,8 +1773,8 @@ Cohesion: 0.33
 Nodes (5): AUDIT 2026-11-22 (kech) — hamma o'rganilgan narsa va natijalar (Shohjahon: "hammasini ko'rib chiq, 10 xil uslub, 2 kunda joyla"), Dvigatellar, Natijalar (YouTube, 2026-11-22), Skillar (37 ta), Takrorlanmasligi kerak bo'lgan xatolar
 
 ### Community 374 - "RAQOBATCHI KUZATUVI (competitor watch) — har yangi videodan OLDIN"
-Cohesion: 0.33
-Nodes (5): Jurnal, Keyingi video g'oyalari (yangi formatlar — hali ishlatilmagan), Qoida (qc_gate 15_competitors bilan majburiy), RAQOBATCHI KUZATUVI (competitor watch) — har yangi videodan OLDIN, Skan tartibi (har kuni avtomatik + video oldidan qo'lda)
+Cohesion: 0.25
+Nodes (7): 2026-11-25 sekundma-sekund beat map (to'liq: docs/viral_beatmap_2026-11-25.md), 2026-11-25 skan (to'liq tahlil: docs/growth_research_2026-11-25.md), Jurnal, Keyingi video g'oyalari (yangi formatlar — hali ishlatilmagan), Qoida (qc_gate 15_competitors bilan majburiy), RAQOBATCHI KUZATUVI (competitor watch) — har yangi videodan OLDIN, Skan tartibi (har kuni avtomatik + video oldidan qo'lda)
 
 ### Community 375 - "ROCCO — HAQIQIY MULTFILM YO'NALISHI (3D model tayyor bo'lganda)"
 Cohesion: 0.33
@@ -1989,6 +1996,34 @@ Nodes (3): buck3d_ready(), _fetch_tar(), _lib_complete()
 Cohesion: 0.50
 Nodes (3): _env(), sfx_buzzer(), sfx_wahwah()
 
+### Community 449 - "STUDIYA OS — 8 rol, ikkala kanal (Shohjahon 2026-11-25: "aytgan kasblaring kabi o'zing ishla, hammasini o'zing qil, hech biri qolib ketmasin, o'z vaqtida va a'lo darajada bo'lishini tekshirib tur")"
+Cohesion: 0.15
+Nodes (12): 0. HAJM VA ORALIQ (dalil: docs/results_2026-11-25.md — burst yuklash videolarni "o'ldirdi"), 1. STRATEG (har ishga tushishda, 5 daqiqa), 2. TADQIQOTCHI / ANALITIK (A da, 15 daqiqa; ~20–40 vidIQ kredit/kun), 3. SSENARIST, 4. FAKT TEKSHIRUVCHI (har ssenariy, render OLDIDAN), 5. OVOZ (ElevenLabs), 6. ANIMATOR / RASSOM (unikal ko'rinish — Shohjahon 2026-11-25: "nega hamma videoda bir xil fon?"), 7. MONTAJCHI (render + QC) (+4 more)
+
+### Community 450 - "Стратегия: Financier + Red Flag Rocco (26.11.2026)"
+Cohesion: 0.20
+Nodes (9): 1. Аналитика ниш, 2. Брендинг, 3. 30 тем (актуально сейчас: праздничный сезон США, Black Friday → Рождество, GTA 6), 4. Сценарий (длинное видео, ~5 мин, Financier), 5. CTR, 6. 30 дней (с 1 по 30 декабря 2026), Financier (аудитория: США, 18–34, интересуются деньгами, но не финансами), Red Flag Rocco (аудитория: США, 18–45, покупают онлайн, есть пожилые родители) (+1 more)
+
+### Community 451 - "qc_gate.py"
+Cohesion: 0.33
+Nodes (6): main(), probe(), run(), setup(), title_copy(), _tw()
+
+### Community 452 - "Cartoon 3D story short (three.js + Remotion)"
+Cohesion: 0.25
+Nodes (8): Cartoon 3D story short (three.js + Remotion), Final look values (bridge after 4 verifier rounds; all in `templates/bridge/`), Gotchas, Look-match loop (how the bridge look was reached; reuse for any "make it look like X" pass), Look targets (measured from the reference; see references/reports/), Readability traps the verifier caught (check every new prop/shot for these), dofAt(), focusAt()
+
+### Community 453 - "RETENTION JURNALI (sekundma-sekund tomosha grafigi → ssenariy qarori)"
+Cohesion: 0.22
+Nodes (8): 2026-11-25 — begona videolar (docs/viral_beatmap_2026-11-25.md, 8 trend + 6 namuna) bilan tasdiq, 2026-11-25 — birinchi 3 ta video, Iagm5fk5JoU — Penny Plays Dumb With a Scammer (Rocco, 53.3 s, 1,298 ko'rish), omDytQ_TRVI — Free GTA 6 for PC? Free Cheese. (Rocco, 48 s, 1,316 ko'rish), QAROR (2026-11-25), RETENTION JURNALI (sekundma-sekund tomosha grafigi → ssenariy qarori), XbWyfVGCWM8 — 13 Years Later, GTA Made 4.7x More (Financier, 27 s, 1,307 ko'rish), XULOSA → QOIDALAR (barcha yangi ssenariylarga, 2026-11-25 dan)
+
+### Community 454 - "script_check.py"
+Cohesion: 0.43
+Nodes (6): footage(), info(), kind(), lines(), main(), norm()
+
+### Community 455 - "STUDIYA DOSKASI (har ishga tushishda yangilanadi — docs/studio_os.md §9)"
+Cohesion: 0.29
+Nodes (6): Community: javoblar (Shohjahon tasdiqladi 2026-11-25; YouTube izoh ruxsati MFA kutilmoqda — canReply=false; ruxsatdan keyin keyingi ishga tushishda joylanadi), G'oyalar (tadqiqotchi + izohlar) — docs/growth_research_2026-11-25.md dan, Haftalik qaror (2026-11-25), Navbat (Toshkent vaqti; "yuklanadi" = YouTube'ga upload, "ochiladi" = public), Nazoratchi jurnali, STUDIYA DOSKASI (har ishga tushishda yangilanadi — docs/studio_os.md §9)
+
 ## Knowledge Gaps
 - **67 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -1996,16 +2031,16 @@ Nodes (3): _env(), sfx_buzzer(), sfx_wahwah()
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `scale()` connect `detect.py` to `Animation Standards Reference`, `Animation Performance`, `Animation Recipes`?**
-  _High betweenness centrality (0.009) - this node is a cross-community bridge._
+  _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **Should `buck3d.py` be split into smaller, more focused modules?**
   _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._
-- **Why does `Button press` connect `Animation Recipes` to `detect.py`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+- **Why does `render()` connect `render` to `caption_chunks_timed`, `el_speak`, `make_video.py`, `CineGrade`, `Rhubarb Lip Sync — ovozdan og'iz shakllari (viseme) vaqt jadvali`, `prep_vs`, `mascot3d_patch`, `mascot_patch`, `buck3d_ready`?**
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Should `Choreographing Motion` be split into smaller, more focused modules?**
   _Cohesion score 0.058823529411764705 - nodes in this community are weakly interconnected._
+- **Why does `CineGrade` connect `CineGrade` to `render`, `make_video.py`?**
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Should `Animation Recipes` be split into smaller, more focused modules?**
   _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._
 - **Should `render` be split into smaller, more focused modules?**
   _Cohesion score 0.05217391304347826 - nodes in this community are weakly interconnected._
-- **Should `YouTube Monetization Guide` be split into smaller, more focused modules?**
-  _Cohesion score 0.07142857142857142 - nodes in this community are weakly interconnected._
