@@ -296,3 +296,12 @@ Metricool'dagi eski 12 PENDING post o'chirilmadi (oy limiti tufayli baribir ERRO
 - 2026-11-23 ~09:55 Toshkent, Shohjahon: "Metricool'dagi hammasini vidIQ ga o'tkazib, vidIQ da ishla bundan keyin". 7 ta YT qoralamasi + 7 ta IG captioni (Metricool'dagi IG matnlari) `work/vidiq_migration/queue_2026-11-23.json` da — har ishga tushishda shu navbatni bajar va yt_status/ig_status ni yangilab push qil. producer_task, run_checklist, START_HERE, instagram.md ga "POST FAQAT vidIQ ORQALI" qo'shildi. Metricool'dagi eski PENDING postlar o'chirilmadi (oy limiti tufayli ERROR bo'ladi; Metricool MCP'da o'chirish vositasi yo'q).
 
 - 2026-11-23 10:20 UTC (vazifa): nickel YT 3-urinish yana uploadLimitExceeded. SABAB ANIQLANDI: vidiq_social_post_list — 23-noy 01:17–01:18 UTC da Financier kanaliga vidIQ orqali 10 ta video ketma-ket yuklangan (9 completed, 1 failed "final penny"); YouTube limiti shu yuklashlar bilan to'lgan va oyna 24 soatlik bo'lsa ~24-noy 01:20 UTC (06:20 Toshkent) da ochiladi. KEYINGI URINISH: ≥24-noy 01:30 UTC, avval nickel, keyin ten_bill; kuniga ko'pi bilan 3–4; bir vaqtda ketma-ket 10 ta YUKLAMA. IG nickel chiqdi: https://www.instagram.com/reel/DgFJuwHAOMh/
+
+
+## BUYURTMA 10 — VIZUAL HOOK (2026-11-27, chat → kod/vazifa sessiyalari; ustuvor)
+To'liq: `docs/visual_hook.md`. Qisqasi:
+1. Har yangi spec'da `visual_hook` maydoni (tur A–H, 1-kadr tasviri, voqea vaqti ≤1.0 s, tug'iladigan savol). Usiz render yo'q.
+2. Ochilish: 0.0 s dan harakat, yorug' 1-kadr, markazda bitta buyum; sarlavha yuqori uchdan birida, markazni yopadigan qora blok yo'q; Buck/Rocco ≤1.0 s da reaksiya bilan.
+3. qc_gate 16-qadam `16_visual_hook` qo'shildi (engine/hook_check.py). FAIL = chiqmaydi.
+4. Hali ochilmagan videolar: Rocco P1 #4 (FAIL), RC-25 (FAIL), RC-24, RC-23, RC-01, RC-02; Financier BK-13, BK-14, BK-15 — 7-jadvaldagi hook bilan ochilishi (birinchi 2 s) qayta kesilsin, hook_check PASS, 5 kadrlik varaq docs/looks_samples/ ga.
+5. Natija: har video uchun "Viewed vs Swiped Away" foizi docs/results ga; haftasiga 3 juftlik sinov.

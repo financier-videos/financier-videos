@@ -1,4 +1,5 @@
 # SHU YERDAN BOSHLA — kod chati / vazifa uchun yagona tartib (chat Trade, 2026-11-21 22:10 Toshkent)
+> **2026-11-27: VIZUAL HOOK** — har videoda `visual_hook` (docs/visual_hook.md): 0.0 s dan harakat, yorug' 1-kadr, markazda bitta buyum, yozuv tepada; qc_gate `16_visual_hook`. Buyurtma 10.
 > **2026-11-23: POST FAQAT vidIQ ORQALI** (Metricool to'xtatildi) — producer_task "POST FAQAT vidIQ ORQALI" va night_order BUYURTMA 10.
 > **2026-11-22: HAR VIDEO YANGI VA PORTLATADIGAN** — avval `docs/competitor_watch.md` (≤7 kunlik raqobatchi tahlili, spec "benchmarks" ≥2 ID + 1 YANGI usul; qc_gate 15_competitors). Har kuni avtomatik skan (rejalashtirilgan vazifa).
 > **2026-11-22: LAVHA + MAKET** — lavha faqat `docs/footage_bank.md` dan; bo'sh panel taqiq; Buck ≥ 1/4 kadr. Buyurtma 8 (`docs/night_order.md`).

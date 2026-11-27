@@ -249,6 +249,13 @@ def main():
         put("14_empty_panel", "SKIP" if (rc == 2 or "Traceback" in o) else ("PASS" if rc == 0 else "FAIL"), o.strip().splitlines()[-1] if o.strip() else o)
     else:
         put("14_empty_panel", "SKIP", "no duration")
+    # 16 visual hook (docs/visual_hook.md, Shohjahon 2026-11-27 "vizual hook"): bright first frame + something moving inside the first second
+    if dur > 0:
+        rc, o = run([sys.executable, "-I", os.path.join(ROOT, "engine", "hook_check.py"), a.video])
+        _l = o.strip().splitlines()[-1] if o.strip() else o
+        put("16_visual_hook", "SKIP" if (rc == 2 or "Traceback" in o) else ("FAIL" if rc == 1 else ("WARN" if _l.startswith("WARN") else "PASS")), o.strip().replace("\n", " | "))
+    else:
+        put("16_visual_hook", "SKIP", "no duration")
     # 15 competitor study (Shohjahon 2026-11-22: "har safar yangi va portlatadigan video; konkurentlarni o'rganib turish kerak"):
     #    >= 2 benchmark video IDs that were analysed in docs/competitor_watch.md within the last 7 days
     bm = a.benchmarks

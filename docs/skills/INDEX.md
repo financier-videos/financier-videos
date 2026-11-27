@@ -102,3 +102,4 @@ QOIDA (har chat, har vazifa sessiyasi, Financier ham, Rocco ham):
 | Rocco personajlari (surat/3D TZ) | `docs/rocco_characters_tz.md` | repo |
 | Rocco 3D personajlari (rig, shape key, kutubxona) | `docs/rocco_3d_cast.md`; modellar yopiq repoda `buck-private/rocco_cast_v1` | repo |
 | Shohjahon ideyalari (inbox) | `docs/idea_inbox.md` — faqat saqlash, so'raganda qaytarish | repo |
+| Vizual hook (1-kadr, birinchi 1 s) | `docs/visual_hook.md` + `engine/hook_check.py` (qc_gate 16) | HAR video: spec `visual_hook`, hook_check PASS |
