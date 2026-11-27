@@ -12,7 +12,7 @@
 | Financier | U-5 How a Fake '50% Off' Tag Is Made (trend) | ✅ 26-noy 09:21 | 26-noy 17:00 | ✅ O8oTJT2t1y0 (private, scheduledPublishAt 12:00Z tasdiqlandi) |
 | Financier | BK-11 $1B at Minimum Wage (v3) | ✅ 26-noy 10:23 (05:23Z) | 28-noy 19:00 | ✅ Q1VHB9mul-c (private, scheduledPublishAt 28-noy 14:00Z — B 10:30Z da tasdiqlandi) |
 | Financier | cancel_sub | ✅ 27-noy 09:21 (A) | 27-noy 23:00 | ✅ Ay5tJcVRfuo (private, scheduledPublishAt 18:00Z tasdiqlandi; teglar qo'shildi) |
-| Financier | junk_drawer | 27-noy 15:20 (B) | 29-noy 00:00 | draft, publishAt 28-noy 19:00Z (26-noy C, rev 5eebed7b) |
+| Financier | junk_drawer | ✅ 27-noy 15:21 (B) | 29-noy 00:00 | ✅ MdiVhPxkke0 (private, scheduledPublishAt 28-noy 19:00Z tasdiqlandi; 11 teg draftda qo'yildi) |
 | Rocco | A1 gift card story | yuklandi 26-noy | 26-noy 19:00 | ✅ BtTBMplO69A |
 | Rocco | P1 Scam or Legit #2 | yuklandi | 26-noy 13:00 | ✅ m_AhaCKd97s · IG ✅ DgM4Z0TN__9 (26-noy 15:35) |
 | Rocco | P1 Scam or Legit #3 | ✅ 26-noy 23:24 (C) | 27-noy 13:00 | ✅ GveF46eH-KM (private, scheduledPublishAt 27-noy 08:00Z tasdiqlandi) |
