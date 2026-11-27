@@ -1,5 +1,12 @@
 # KUNLIK TOP TAHLIL (producer_task 1.9) — yangisi tepada, 7 kundan eskisi o'chiriladi
 
+## 2026-11-27 09:25 (A, ikkala kanal — vazifa sessiyasi)
+- vidIQ trending (short, en, 22-noy dan, recentVph; 2×5 kr): Financier — "black friday money": tovar/deal reklamalari ustun (ma'lumot emas); foydali signal: 'How Does Black Friday Work?' (Montra Explains, 625 obun.) 68.6K, 'Black Friday Then Vs Now' sketch (259K, ER 20%), 'Grocery App Price Scam' 6 s skit (7.9K obun.) 163K.
+- Rocco — "scam": 'Scammers Took Her Money, So She Took The Bank's' (30K obun.) 173K/24 soat, 7.2K vph; 'Fake Rescuers' (23K) 71K; 'BLACK FRIDAY is a SCAM' (94K) 470K.
+- Xulosa: Black Friday kuni (bugun) — "qanday ishlaydi" mexanizmi va "then vs now" kuchli; 6 s mikro-skit kichik kanalda ham portlaydi.
+- Mavzular: Buck "Why it's called Black Friday" (afsona vs haqiqat: 1950–60-yillar Filadelfiya politsiyasi atamasi, "qizildan qoraga" — keyin to'qilgan; manba render oldidan tekshiriladi) · Buck "1985 Black Friday TV in today's dollars" (BLS CPI, then vs now, sepia) · Rocco 8–10 s mikro "app said $4.99, checkout said $11.86" (yashirin to'lov, FTC junk fees qoidasi 2025).
+- Skillar: vidiq_trending_videos — QO'LLANDI; yt-viral swipe.py, competitor.md D — QO'LLANMADI (kredit 416, kuniga ≤20 tejaldi; breakout'lar kanal hajmidan aniq ko'rinadi).
+
 ## 2026-11-26 09:30 (A, Financier — vazifa sessiyasi)
 - vidIQ trending (short, en, ≤500K obun., 20-noy dan, recentVph; 5 kr): №1 hali 'How a Fake "50% Off" Black Friday Tag Is Built' (Hypothetically, 201 obun.) 1.05M → 3.85M, 54.8K vph; 'The Real Black Friday Sale | Fair Point' sketch (330 obun.) 77.5K; 'Black Friday deals are ripping you off' (Bradley on a Budget, 272K) 74K/1 kun; 'Threadripper Price Guess' (103 obun.) 63K — narx-taxmin o'yini.
 - Xulosa: Black Friday "yolg'on chegirma" mexanikasi hali o'sishda; bizning U-5 bugun 12:00Z ochiladi (o'z faktlarimiz: FTC 233.1, MA 940 CMR 6.05, WalletHub). DIQQAT: U-5 sarlavhasi trend sarlavhasiga juda yaqin — keyingi trend videolarda sarlavha formulasi O'ZIMIZNIKI (raqam bilan) bo'lsin (backlog).

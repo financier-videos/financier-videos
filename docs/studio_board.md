@@ -38,6 +38,8 @@
 
 - 2026-11-26 B yangilik: Adobe prognozi — Black Friday BNPL $807M bir kunda; Cyber Week $47.5B (5 kun). G'oya: Buck 'Black Friday: $807M on buy-now-pay-later in ONE day' (BNPL to'lov jadvali, Adobe manba) — 28/29-noy, BK-12/13 dan boshqa format (detektiv 'kim foyda ko'radi?'). Actual natijalar chiqqach (Adobe 28-noy) raqam yangilanadi.
 
+- 2026-11-27 A trend (vidIQ 2×5 kr): 'How Does Black Friday Work?' (625 obun.) 68.6K; 'Black Friday Then Vs Now' sketch ER 20%; 'Grocery App Price Scam' 6 s (7.9K obun.) 163K; Rocco: 'Scammers Took Her Money, So She Took The Bank's' 173K. G'oyalar: Buck 'Why is it called Black Friday?' (afsona vs haqiqat), Buck '1985 Black Friday TV in today's dollars' (then vs now, BLS CPI), Rocco 8–10 s mikro 'app $4.99 → checkout $11.86' (FTC junk fees). Manbalar render oldidan tekshiriladi.
+
 ## Community: javoblar (Shohjahon tasdiqladi 2026-11-25; YouTube izoh ruxsati MFA kutilmoqda — canReply=false; ruxsatdan keyin keyingi ishga tushishda joylanadi)
 - Financier · XbWyfVGCWM8 · @menphues (inflyatsiya haqida) · comment UgynfkUFk6pxCz-K6EF4AaABAg → "Great point! Adjusted for inflation, GTA 5's ~$800M day one is about $1.1B today, so GTA 6 still did roughly 3.4x more in real terms. Still wild 🪙" ✅ JOYLANDI 2026-11-25
 - Rocco · Iagm5fk5JoU · @olojedetolulope9205 (😂) · comment UgxmPluZek87XyVkIg54AaABAg → "Penny's not as dumb as she looks 😄 Part 2 drops this week!" ✅ JOYLANDI 2026-11-25

@@ -18,6 +18,10 @@ Shohjahon (2026-11-22): "Eng asosiysi har safar yangi va portlatadigan videolar 
 ## Jurnal
 | Sana | Video ID | Kanal / natija | Kanalimiz | Format | Olish kerak bo'lgan lahza |
 |---|---|---|---|---|---|
+| 2026-11-27 | `bwwmalsQUZM` | Montra Explains — 625 obun. → 68.6K (51 s, 24-noy) | Financier | mexanizm-tushuntirish 'How does X work?' | savol-sarlavha + bitta oddiy mexanizm; KICHIK KANAL breakout (U-5 manbasi bilan bir oila) |
+| 2026-11-27 | `xpSVELloBYc` | lifemem — 7.9K obun. → 163K (6 s, 24-noy) | Rocco/Financier | mikro-skit 6 s: ilova narxi vs haqiqiy narx | bitta zarba, darhol loop; 'app price' mavzusi (dinamik narx) |
+| 2026-11-27 | `qh-n-KXM6XU` | Yonside — 259K → 5.3K/15 soat, ER 20% (68 s) | Financier | 'Black Friday then vs now' sketch | then/now ikki qism, ER juda yuqori — vaqt mashinasi formati (d) uchun dalil |
+| 2026-11-27 | `aFXIynmjweI` | FANG — 30K → 173K (63 s, 26-noy) | Rocco | firibgarlik hikoyasi + adolat burilishi | 'Scammers took her money, so she…' — status inversiyasi sarlavhada |
 | 2026-11-22 | `6agufKA2ZQY` | Noah Kettle Shorts — 2.2M, 303x | Rocco | mutaxassis to'xtatadi + bashorat | "Wait! Don't do anything" → bashorat → xabar aynan shu payt keladi; −$1,000 ikki karra zarar hisobi |
 | 2026-11-22 | `N09VNM2BOD8` | 4.9M, 21x | Rocco | firibgar bilan qo'ng'iroq skiti | absurd ism ochilishi + deadpan javob; firibgar tili qoqiladi; 2 zarbali yakun + trubka beep |
 | 2026-11-22 | `JMI-iIpHdt8` | Richard animations — 588K, 27x | Rocco | animatsion: firibgar noto'g'ri odamga qo'ng'iroq qiladi | ikki joy almashib; firibgar kulgi obyekti |
