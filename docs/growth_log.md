@@ -161,3 +161,9 @@ YANGILIKLAR (2 WebSearch): (1) Shorts — noyabr 2026 da rasmiy yangi algoritm x
 O'RGANILDI: Montra Explains (625 obun. → 74.3K) — 2-shaxs "If you… But… So…" zanjiri, har 3–5 s halqa, "Congratulations… But" loop. Teg muammosi: teglar draftda berilsa yuklangan videoda saqlanadi.
 O'ZGARTIRILDI: skill notes/2026-11-27_build_it_chain.md va _shorts_originality_oct2026.md; hyperframes o'chirildi (sinalmagan, hajm limiti); junk_drawer teglar bilan yuklandi.
 O'LCHOV: keyingi Financier Short BUT/SO zanjirida — 72 soatda U-5 (4 ko'rish/24 soat) bilan solishtirish; junk_drawer 24 soatlik ko'rishi 29-noy C da.
+
+## 2026-11-27 C (23:20 Toshkent)
+KECHA vs BUGUN: Financier — kecha 5 yangi video ≤13, bugun 7 yangi video ≤17 (BK-12 trend kunida 8/5.5 soat) → yomonlashuv davom; eski g'oliblar ham +0 (BK-03 1,025 → 1,025). Rocco — A1 80 → 138, kanal +243/kun. IG financier424 7 kunlik views 2,927 → 3,133.
+O'RGANILDI: channel_analytics (22–27-noy, video): 25-noydan keyingi videolar hali analytics'da yo'q (≥2 kun kechikish); retention eng yuqori — "13 Years Later, GTA Made 4.7x More" 77%, "$10 Bill Dies First" 75%, Thanksgiving 68%; eng past — bank_fees 25.5%, "1 of 3" tipidagi eski. Engaged/views nisbati g'oliblarda 0.23–0.38.
+O'ZGARTIRILDI: IG Reel'lar YouTube havolasidan (yuklash shart emas) — 2 ta, ~3 daqiqada; vidIQ krediti 311 — kunlik byudjet 13 kr (trend skan WebSearch'ga, user_videos faqat C da).
+O'LCHOV: 28-noy C — BK-11 va junk_drawer 6 soatlik ko'rishi; ≤20 bo'lsa kanal darajasidagi sabab (burst/dublikat) gipotezasi kuchayadi.

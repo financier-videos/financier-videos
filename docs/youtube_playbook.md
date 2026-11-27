@@ -1,5 +1,5 @@
 # YOUTUBE PLAYBOOK — FINANCIER (moliya, AQSh auditoriyasi)
-Yangilangan: 2026-11-27 15:35 Toshkent (B ishi, vazifa sessiyasi). Bu hujjatni har bir YouTube agent ishga tushganda o'qiydi va yangilaydi. 200 qatordan oshmasin. Personaj qoidalari: `docs/youtube_character_buck.md`. Vazifa ko'rsatmasi: `docs/producer_task.md`.
+Yangilangan: 2026-11-27 23:35 Toshkent (C ishi, vazifa sessiyasi). Bu hujjatni har bir YouTube agent ishga tushganda o'qiydi va yangilaydi. 200 qatordan oshmasin. Personaj qoidalari: `docs/youtube_character_buck.md`. Vazifa ko'rsatmasi: `docs/producer_task.md`.
 
 ## 0. MAQSAD VA VAKOLAT
 - SHOHJAHON KO'RSATMASI (2026-11-18): kontentni Claude o'zi reja qiladi va o'zi chiqaradi, "ha"sini kutmaydi. Kuniga 2 Shorts + har 3 kunda 1 uzun video. Raqobatchilarni o'rganib eng zo'r bo'lish. Tomoshabin fikrini o'zi yig'adi. PROFESSIONAL MONTAJCHI darajasi.
@@ -180,6 +180,7 @@ Yangilangan: 2026-11-27 15:35 Toshkent (B ishi, vazifa sessiyasi). Bu hujjatni h
 - 2026-11-26 17:00 Toshkent (07:00 ET, vidIQ draft 1a8e0b9a; yuklash ≥26-noy 01:30 UTC) — "How a Fake '50% Off' Tag Is Made" (U-5, TREND) — 56 s, 11 sahna, 37 kesim — how_made 'Step 1/2/3' / kulgi ('price hits the gym', 'wearing a costume') + adolatsizlik / fullbleed cool / ochilish 'tag was born' + 50% OFF. FTC 16 CFR 233.1, MA 940 CMR 6.05, WalletHub 2025 (36%). voice_check raqamlar mos. Skillar: script_rules, hookscore 50.6, title.py 100, footage_bank+pixabay, competitor_watch, comedy, qc_gate; ishlatilmadi: find_broll, insert, beats.py.
 
 ## 10. O'RGANILGANLAR JURNALI (14 kundan eskisi xulosaga)
+- 2026-11-27 C: Financier 7 yangi video ≤17 ko'rish (BK-12 8); Rocco A1 138. IG: BK-12 DgQUDnZRovN, cancel_sub DgQUESjTSof. vidIQ 311 kr.
 - 2026-11-27 B: junk_drawer yuklandi (MdiVhPxkke0, 28-noy 19:00Z; teglar draftda → saqlandi). Rocco P1#3 Reel DgPdHxfhDcV. Raqobatchi Montra Explains: BUT/SO "siz quryapsiz" zanjiri → keyingi Financier Short sinovi. Skillar +2, hyperframes o'chirildi.
 - 2026-11-27 A: cancel_sub yuklandi (Ay5tJcVRfuo, 18:00Z = 13:00 ET; BK-12 13:00Z dan 5 soat keyin). draft_get scheduledFor doim null — ishonchli tekshiruv faqat publish'dan keyingi user_videos scheduledPublishAt. Draftda teg yo'q edi → update_video. Trend: 'How does Black Friday work?' (625 obun. → 68.6K), then-vs-now sketch ER 20%.
 - 2026-11-26 A: U-5 draftida publishAt bo'sh edi → qo'yib yuklandi (O8oTJT2t1y0, 07:00 ET). Yuklash oldidan draft_get scheduledFor tekshiruvi — doimiy qoida. Financier 25-noy videolari 4–8 ko'rish (tahlil C da).

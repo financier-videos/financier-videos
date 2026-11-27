@@ -127,3 +127,26 @@ Rocco YouTube: A1 "He Touched Every Gift Card" **80** (4.5 soat, 8 layk), Scam o
 Instagram financier424 (19–26-noy): 42 follower (−1), views 2,927, reach 2,298. IG U-5 Reel — shu ishda.
 vidIQ balansi: 491 → C ishi ~25 kr.
 XULOSA: (1) Financier kanali 25-noydan "sovuq": trend mavzu (U-5, manba 3.85M) ham 2 ko'rish — demak muammo mavzuda emas, kanal/video darajasida (feed test berilmayapti). Ehtimoliy sabablar: 23-noy burst (17+ yuklash) dan keyin kanal ishonchi pasaygan; Mj7LU_swigY/Q1VHB9mul-c bir xil sarlavhali 2 yuklash (dublikat, biri private qolgan); "#shorts"siz sarlavhalar. Gipoteza — isbot emas. (2) Rocco tirik (A1 4.5 soatda 80). (3) BK-03 (gipotetik katta raqam) 1,025 — yagona g'olib format.
+
+## 2026-11-27 23:25 Toshkent (18:25 UTC) — C ishi, vidiq_user_videos (Financier 5 + Rocco 5 kredit)
+| chiqqan (UTC) | video | 26-noy 18:25 | 27-noy 18:25 | farq |
+|---|---|---|---|---|
+| 11-22 12:04 | 13 Years Later, GTA Made 4.7x More | — | 1,310 | |
+| 11-22 00:06 | How Big Is $3.79 Billion in ONE Day? | — | 1,127 | |
+| 11-24 11:00 | Paying Off the US Debt at $1 Million a Day (BK-03) | 1,025 | **1,025** | 0 (to'xtadi) |
+| 11-23 11:00 | I Tried to Spend Elon Musk's $869 Billion | 453 | 453 | 0 |
+| 11-22 15:06 | Airport Prices Have a Legal Limit | 386 | 386 | 0 |
+| 11-23 17:00 | Who Makes the Most Money Per Second? | 191 | 191 | 0 |
+| 11-24 02:00 | 32.5 Million People Paid Before GTA 6 | 184 | 184 | 0 |
+| 11-24 15:00 | The $10 Bill Dies First | 130 | 131 | +1 |
+| 11-25 12:00 | 81.5 Million Americans (U-3) | 13 | 17 | +4 |
+| 11-25 12:00 | It Costs 11.3 Cents to Print a $100 Bill | 7 | 7 | 0 |
+| 11-25 18:00 | 1748: Why Dollar Is a Buck | 6 | 7 | +1 |
+| 11-26 12:00 | How a Fake '50% Off' Tag Is Made (U-5) | 2 | **6** (30 soat) | o'lik |
+| 11-27 13:00 | Black Friday Spends $149,306 Every Second (BK-12) | — | **8** (5.5 soat) | o'lik |
+| 11-27 18:00 | I Tried to Cancel a $21 Subscription (cancel_sub) | — | 1 (25 daq) | yangi |
+Financier jami (vidiq_user_channels): 9,581 ko'rish (kecha 9,357 → +224, lekin videolar yig'indisida o'sish ~+20 — kechikish), obunachi 4 (0). Navbat: BK-11 28-noy 14:00Z, junk_drawer 28-noy 19:00Z (ikkalasi private-scheduled ✅). post_list 27–30-noy: 3 completed, failed 0, scheduled/draft 0 (keyingi yuklashlar trigger orqali).
+Rocco YouTube: A1 "Gift Card Rack" **138** (28 soat, 9 layk), "Scam or Legit? Only 1 of 3" 391, "Hi Mom" 1,213, P1#2 47, P1#3 20 (10 soat), D1 package confession 2 (4.5 soat). Jami 4,430 (+243), obunachi 14 (+1).
+Instagram financier424 (20–27-noy): 43 follower (+1), views 3,133, reach 2,457 (kecha 2,927 / 2,298). finansist424 — ulanmagan. Shu ishda IG: BK-12 va cancel_sub Reel'lari (YouTube havolasidan, AI belgisi).
+vidIQ balansi: 326 kr (276 + 50), yangilanish 21-dek — 24 kunga kuniga ≤13 kr.
+XULOSA: (1) Financier 25-noydan beri chiqgan 7 videoning hammasi ≤17 ko'rish — trend (U-5, BK-12 Black Friday kuni!) ham ishlamadi; muammo kanal darajasida (feed test berilmayapti). (2) Eski g'oliblar ham to'xtadi (BK-03 +0) — umumiy feed ko'rsatishi to'xtagan. (3) Rocco tirik: A1 138, kanal +243/kun. (4) vidIQ krediti tugayapti: kunlik byudjet 13 kr — trend skanni WebSearch'ga o'tkazish kerak.
