@@ -22,7 +22,7 @@
 | Rocco | P1 Scam or Legit #2 | yuklandi | 26-noy 13:00 | ✅ m_AhaCKd97s · IG ✅ DgM4Z0TN__9 (26-noy 15:35) |
 | Rocco | P1 Scam or Legit #3 | ✅ 26-noy 23:24 (C) | 27-noy 13:00 | ✅ GveF46eH-KM (private, scheduledPublishAt 27-noy 08:00Z tasdiqlandi) |
 | Rocco | D1 package-text confession | ✅ 27-noy 14:05 | 27-noy 19:00 | ✅ CjshfeRye1Q (private, scheduledPublishAt 14:00Z tasdiqlandi; draft publishAt yo'qolgan edi — qayta qo'yildi) |
-| Rocco | RC-23 Penny Plays Dumb 2 (yangi joylar) | 28-noy 01:00 | 28-noy 13:00 | rejada |
+| Rocco | RC-23 Penny Plays Dumb 2 (yangi joylar) | ✅ 28-noy 01:00 | 28-noy 13:00 | ✅ nNCPLdA_U5s (draft publishAt yana yo'qolgan edi — 08:00Z qayta qo'yildi) |
 | Rocco | RC-24 Refund Trick (yangi joylar) | 29-noy 01:00 | 29-noy 13:00 | rejada |
 | Financier | BK-12 Black Friday $149,306/sec | ✅ 26-noy 23:21 (C; send_later ishlamadi) | 27-noy 18:00 | ✅ ZfyYGZH8B8o (private, scheduledPublishAt 27-noy 13:00Z tasdiqlandi) |
 | Rocco | P1 Scam or Legit #4 Black Friday (o'z temasi) | 28-noy 13:00 | 28-noy 19:00 | rejada |
