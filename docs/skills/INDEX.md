@@ -40,7 +40,9 @@ QOIDA (har chat, har vazifa sessiyasi, Financier ham, Rocco ham):
 | Montaj saboqlari | ghost-editor, yt-edit + deadair.py | docs/skills/ghost-editor/, youtube-agent-skill/yt-edit/ |
 | Uzun videodan Short kesish | claude-shorts, yt-shorts | docs/skills/claude-shorts/, youtube-agent-skill/yt-shorts/ |
 | FFmpeg amallari | ffmpeg-skill (42 vosita) | docs/skills/ffmpeg-skill/ |
-| HTML→video (nomzod, sinalmagan) | HyperFrames | docs/skills/hyperframes/ |
+| Ssenariy mexanikasi 'siz quryapsiz' (BUT/SO zanjiri, how-it-works mavzular) | o'z tahlil 2026-11-27 | docs/skills/notes/2026-11-27_build_it_chain.md |
+| Post oldi originallik tekshiruvi (Shorts 2026-10 o'zgarishi) | ikkilamchi manbalar | docs/skills/notes/2026-11-27_shorts_originality_oct2026.md |
+| HTML→video | HyperFrames — O'CHIRILDI 2026-11-27 (7 kun sinalmadi; manba heygen-com/hyperframes) | — |
 | Buck modeli, rig, yangi kadr chizish | rig v1 (MAXFIY repo) | financier-videos/buck-private → rig_v1/ (skriptlar: lib.py, libpack.py) |
 
 ## C. SIFAT NAZORATI — HAR VIDEO, CHIQARISHDAN OLDIN

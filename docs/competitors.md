@@ -36,3 +36,9 @@ Saboq: bizning ikki mavzu (99 sent, trillion) ularda 1–2.6M — farq ijroda: b
 KUCHLI: sarlavha = "qanday yasaladi" + aniq raqam ("50% Off"); mexanizm bosqichma-bosqich (narx ko'tariladi → chegirma); mavzu bayram haftasiga aniq tushadi; mikro kanal + katta ko'rish = algoritm mavzuni o'zi tortgan.
 KUCHSIZ: manba yo'q (tavsifda rasmiy qoida/statistika ko'rinmaydi) — bizning ustunligimiz: FTC 16 CFR 233.1 + Massachusetts 28/90 + WalletHub 36%.
 ERTAGA SINAYMIZ: U-5 (work/2026-11-25b/u05_fake50.json, how_made, "Step one/two/three" + "narx sport zaliga boradi / kostyum" gag'i) — 26-noy 07:00 ET; 72 soatda U-3 (scale_ladder trend) bilan solishtirish.
+
+## 2026-11-27 (B) — Montra Explains (625 obun.): "How Does Black Friday Work?" bwwmalsQUZM — 74.3K / 3 kun, 1,259 vph, 51 s, ER 1.4% (vidIQ get_videos + transcript, 10 kr)
+KUCHLI: 0 s da salomsiz "If you sell TVs for less than you paid…" — tomoshabin 2-shaxsda quruvchi; har 3–5 s "But…/So…" sabab-oqibat halqasi (7 ta), ~3 so'z/s; yakun "Congratulations, you've built Black Friday. But" → 1-jumlaga loop; mavzu bayram kuniga tushgan.
+KUCHSIZ: manba yo'q (narxni oldindan ko'tarish da'vosi isbotsiz), fon musiqasi (Kevin MacLeod CC-BY) — biz musiqasiz; izoh 1 ta (savol yo'q).
+ERTAGA SINAYMIZ: Buck "you build it" zanjiri — 'How a gift card makes money' (breakage; CFPB/Bankrate manba), 5–7 halqa, oxiri "Congratulations… But" loop. Skill: docs/skills/notes/2026-11-27_build_it_chain.md.
+Qo'shimcha raqamlar (27-noy 10:30Z): Yonside 'Black Friday Then Vs Now' qh-n-KXM6XU 11.4K / 14 soat, ER 14.9%; lifemem 'Grocery App Price Scam' xpSVELloBYc 183.7K, 6 s, 74 izoh.

@@ -155,3 +155,9 @@ YANGILIKLAR (2 WebSearch): (1) YouTube Shorts — noyabr 2026 da RASMIY yangi al
 O'RGANILDI: BK-11 doskada "yuklanmagan" turgan, aslida 05:23Z yuklangan — doska bilan post_list har ishda solishtiriladi (shu ishda tuzatildi).
 O'ZGARTIRILDI: qc_gate 7b_title_copy (trend manbasi sarlavhasi bilan ≥0.6 ustma-ustlik = FAIL). IG Rocco caption: o'yin javobi caption'da ochilmaydi.
 O'LCHOV: keyingi trend Short spec'ida "source_titles" bor va 7b PASS; Rocco P1#2 Reel (DgM4Z0TN__9) 24 soatlik ko'rishi C ishida.
+
+## 2026-11-27 B (15:20 Toshkent)
+YANGILIKLAR (2 WebSearch): (1) Shorts — noyabr 2026 da rasmiy yangi algoritm xabari yo'q; 2026-10 originallik o'zgarishi (qayta yuklash reach kamaydi) hali eng so'nggi; "freshness" — YouTube tasdiqlamagan. (2) Adobe: Thanksgiving kuni prognoz $6.9B (+8.5%), 63% mobil; Cyber Week $47.5B; haqiqiy natija hali yo'q.
+O'RGANILDI: Montra Explains (625 obun. → 74.3K) — 2-shaxs "If you… But… So…" zanjiri, har 3–5 s halqa, "Congratulations… But" loop. Teg muammosi: teglar draftda berilsa yuklangan videoda saqlanadi.
+O'ZGARTIRILDI: skill notes/2026-11-27_build_it_chain.md va _shorts_originality_oct2026.md; hyperframes o'chirildi (sinalmagan, hajm limiti); junk_drawer teglar bilan yuklandi.
+O'LCHOV: keyingi Financier Short BUT/SO zanjirida — 72 soatda U-5 (4 ko'rish/24 soat) bilan solishtirish; junk_drawer 24 soatlik ko'rishi 29-noy C da.

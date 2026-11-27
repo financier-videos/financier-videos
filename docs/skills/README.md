@@ -38,7 +38,7 @@ Har yangi manba uchun tartib: (1) LICENSE o'qi — tijoratga ruxsat va ochiq rep
 | 2026-11-20 | ffmpeg-skill: platforma tekshiruvi va 42 FFmpeg vositasi | kajisho5/ffmpeg-skill, MIT | docs/skills/ffmpeg-skill/ | ISHLADI: check.py — 8 Short + uzun video o'tdi |
 | 2026-11-20 | claude-shorts: uzun videodan Short kliplar | AgriciDaniel/claude-shorts, MIT | docs/skills/claude-shorts/ | SINALMAGAN |
 | 2026-11-20 | ghost-editor: reel montaj saboqlari (faqat matn) | kurbaitaev/ghost-editor, MIT | docs/skills/ghost-editor/ | o'qish uchun |
-| 2026-11-20 | HyperFrames: HTML→video qo'llanmalari | heygen-com/hyperframes, Apache-2.0 | docs/skills/hyperframes/ | NOMZOD; telemetriya — o'chirilgan holda sinash |
+| 2026-11-20 | HyperFrames: HTML→video qo'llanmalari | heygen-com/hyperframes, Apache-2.0 | (o'chirildi) | O'CHIRILDI 2026-11-27: 7 kun sinalmadi, docs/skills 8.4 MB > 8 MB |
 | 2026-11-20 | OpenMontage: agentli video tizimi | calesthio/OpenMontage, AGPL-3.0 | faqat eslatma: docs/skills/notes/2026-11-20_video_tools_batch.md | ko'chirilmadi (AGPL) |
 | 2026-11-20 | Harakat va dizayn tamoyillari (animatsiya, tipografika, rang, tanqid) | emilkowalski/skills (MIT), pbakaus/impeccable (Apache-2.0); taste-skill — eslatma | docs/skills/emil-skills/, docs/skills/impeccable/, notes/2026-11-20_design_motion_skills.md | QO'LLANDI: manba qatori kattalashtirildi (dvigatel v6.4); animatsiya ko'rigi — keyingi B |
 | 2026-11-20 | ig-human (caption tozalash), ig-dm, ig-comment (faqat qoralama) | instagram-agent-skill, MIT | docs/skills/instagram-agent-skill/ | ig-human QO'LLANDI (7 Reel captioni); dm/comment — so'ralganda |
@@ -61,3 +61,6 @@ Har yangi manba uchun tartib: (1) LICENSE o'qi — tijoratga ruxsat va ochiq rep
 viral-hooks, viral-youtube-shorts, viral-short-form, viral-short-form-ideas, viral-captions-and-ctas, viral-instagram-reels
 (manba: github.com/vyralcontent/content-skills, faqat markdown; LICENSE.vyral har papkada). Asosiy qoidalar: VVSA (birinchi 3 s) ≥70%,
 5–8 s da burilish/stavka oshishi, payoff drop-off'dan oldin, oxiri boshiga loop; 30–45 s eng yaxshi; Engaged Views — haqiqiy ko'rsatkich.
+| 2026-11-27 | "Siz quryapsiz" BUT/SO sabab zanjiri (ssenariy mexanikasi) | o'z tahlilimiz (Montra Explains bwwmalsQUZM transkripti) | docs/skills/notes/2026-11-27_build_it_chain.md | SINALMAGAN (keyingi Financier Short) |
+| 2026-11-27 | Shorts originallik o'zgarishi 2026-10 — post oldi tekshiruvi | Android Headlines, MediaPost, ppc.land, SEJ (ikkilamchi) | docs/skills/notes/2026-11-27_shorts_originality_oct2026.md | SINALMAGAN (keyingi post) |
+| 2026-11-27 | Bugun 2 ta. Ko'rilgan va OLINMAGAN: kajisho5/ffmpeg-skill (bizda bor), agricidaniel/claude-shorts (bizda bor), bradautomates/claude-video watch (MIT, lekin yt-dlp bilan begona video yuklash + vidiq_watch bizda bor — takror), Agensi short-form-clipper (litsenziya/manba aniqlanmadi), claudskills short-form-video-production (litsenziya yo'q), ClawHub video (MIT-0, umumiy — takror) | — | — | — |
