@@ -1,4 +1,5 @@
 # SSENARIY QOIDALARI v2 (2026-11-21 audit; dalil: docs/audit_2026-11-21.md) — MAJBURIY, script_bank va producer_task dagi eski andozadan USTUN
+**!!! HAJM (Shohjahon 2026-11-27 tasdiqladi; docs/analysis_2026-11-27.md): Financier kuniga ≤2 Short, oraliq ≥5 soat, bir vaqtda ≤1 yuklash, bir xil sarlavha qayta yuklanmaydi. Yo'nalish — ULKAN RAQAM MASSHTABI (trend + $ mlrd/trln → sekundiga/kuniga/qancha vaqt). Skit, sent/tanga narxi, tarix, raqamsiz 'sir' sarlavha — TO'XTATILDI. Quyidagi 'kuniga 8' va '8 Short aralashma' bandlari BEKOR.**
 ## TAQIQ (skelet takrori)
 - 2-jumla "Wait...?" bilan boshlanishi: 5 videoda ko'pi bilan 1 marta. Yakun "..., because..." : 4 videoda ko'pi bilan 1 marta.
 - Ketma-ket ikki videoda bir xil TUZILMA yo'q; bir kunda kamida 4 xil tuzilma.

@@ -1,4 +1,5 @@
 # SHU YERDAN BOSHLA — kod chati / vazifa uchun yagona tartib (chat Trade, 2026-11-21 22:10 Toshkent)
+**!!! HAJM (Shohjahon 2026-11-27 tasdiqladi; docs/analysis_2026-11-27.md): Financier kuniga ≤2 Short, oraliq ≥5 soat, bir vaqtda ≤1 yuklash, bir xil sarlavha qayta yuklanmaydi. Yo'nalish — ULKAN RAQAM MASSHTABI (trend + $ mlrd/trln → sekundiga/kuniga/qancha vaqt). Skit, sent/tanga narxi, tarix, raqamsiz 'sir' sarlavha — TO'XTATILDI. Quyidagi 'kuniga 8' va '8 Short aralashma' bandlari BEKOR.**
 > **2026-11-27: VIZUAL HOOK** — har videoda `visual_hook` (docs/visual_hook.md): 0.0 s dan harakat, yorug' 1-kadr, markazda bitta buyum, yozuv tepada; qc_gate `16_visual_hook`. Buyurtma 10.
 > **2026-11-23: POST FAQAT vidIQ ORQALI** (Metricool to'xtatildi) — producer_task "POST FAQAT vidIQ ORQALI" va night_order BUYURTMA 10.
 > **2026-11-22: HAR VIDEO YANGI VA PORTLATADIGAN** — avval `docs/competitor_watch.md` (≤7 kunlik raqobatchi tahlili, spec "benchmarks" ≥2 ID + 1 YANGI usul; qc_gate 15_competitors). Har kuni avtomatik skan (rejalashtirilgan vazifa).
@@ -17,7 +18,7 @@ Shohjahon: "hammasi tayyor bo'lsa kodni ishga tushiraman". Bu fayl boshqa hamma 
 3. DVIGATEL minimal to'plami: (a) "shots" — har ≤2 s yangi tasvir; (b) 1–3 so'zli sinxron subtitr, doimiy sarlavhasiz rejim; (c) look "fullbleed"; (d) "paper", "split"; (e) ikkinchi ovoz ("voices"). Har biri tayyor bo'lganda ENGINE_VERSION + changes.md + push.
 4. YANGI FORMATLAR: V-01…V-05, C-01, C-02; sanaga bog'liq R-05 (Black Friday, 27-noyabrgacha).
 5. QAYTA YASASH: R-01…R-08 (Metricool id lari night_order BUYURTMA 7 da). Eski shablondagi post slotiga yangi versiya ulgurmasa — post suriladi, o'chirilmaydi.
-Hajm: kuniga 8 Short (Financier) + Rocco kuniga 1–2; aralashma script_rules v2.2.
+Hajm: kuniga ≤2 Short (Financier; 2026-11-27 dan, eski 8 bekor) + Rocco kuniga 1–2; aralashma script_rules v2.2.
 
 ## 2. HAR VIDEO UCHUN MAJBURIY (bittasi yo'q bo'lsa — chiqmaydi)
 | Nima | Qayerda | Tekshiruv |
