@@ -1,5 +1,10 @@
 # STUDIYA DOSKASI (har ishga tushishda yangilanadi — docs/studio_os.md §9)
 
+## QAROR 2026-11-27 C (docs/analysis_2026-11-27.md)
+- Financier yo'nalishi: ULKAN RAQAM MASSHTABI (trend + $ mlrd/trln → sekundiga/kuniga/qancha vaqt). G'oliblar 773–1,310; skit/sent/tarix/mystery ≤35 — TO'XTATILDI.
+- Hajm: Financier ≤2 chiqish/kun, oraliq ≥5 soat, bir vaqtda ≤1 yuklash (23–24-noy burst kanalni sovutdi). Sprint 'kuniga 8' — Shohjahon tasdig'iga.
+- BK-14 (Rigged Coin Bet) BK-15 dan keyinga; tiklanish o'lchovi: BK-11/BK-13/BK-15 24 soatda ≥100.
+
 ## Haftalik qaror (2026-11-25)
 - TO'XTATILDI: Rocco 3D GPU epizodlar; Buck chalk/receipt/stamp/versus (trendsiz); burst yuklash.
 - KUCHAYTIRILDI: Buck Time Ladder / hypothetical (BK-03 887, BK-11 sinovda); Rocco Penny Plays Dumb seriyasi (RC-05 1,298 → RC-23), Scam or Legit (#1 345 → #2, #3).
