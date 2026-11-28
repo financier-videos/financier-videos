@@ -131,10 +131,12 @@
    "by": "session 01MWGZtb7",
    "yt": {
     "postId": "c7069bd5-6db7-41e9-a8eb-df396981eaa3",
-    "revision": "7538088c",
+    "revision": "6504872f",
     "publishAt": "2026-11-28T14:00:00Z",
-    "status": "standing permission; publish 28-noy 08:00Z (send_later)",
-    "scheduledFor_set": "2026-11-26T18:40Z"
+    "status": "completed (scheduledPublishAt to verify)",
+    "scheduledFor_set": "2026-11-26T18:40Z",
+    "videoId": "-JiaS3fDaOc",
+    "url": "https://www.youtube.com/watch?v=-JiaS3fDaOc"
    },
    "ig_caption": "Black Friday edition: three texts, only one is real. \ud83d\udecd\ufe0f\nWhich one almost got you? Comment 1, 2 or 3.\n\nSources: FTC, BBB holiday scam alerts. Not legal or financial advice. Made with AI voices/images; Rocco & Penny are our original characters.\n\n#scamalert #blackfriday #scamorlegit #quiz #moneytips"
   },

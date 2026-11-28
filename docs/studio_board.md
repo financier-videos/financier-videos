@@ -25,7 +25,7 @@
 | Rocco | RC-23 Penny Plays Dumb 2 (yangi joylar) | ✅ 28-noy 01:00 | 28-noy 13:00 | ✅ nNCPLdA_U5s (draft publishAt yana yo'qolgan edi — 08:00Z qayta qo'yildi) |
 | Rocco | RC-24 Refund Trick (yangi joylar) | 29-noy 01:00 | 29-noy 13:00 | rejada |
 | Financier | BK-12 Black Friday $149,306/sec | ✅ 26-noy 23:21 (C; send_later ishlamadi) | 27-noy 18:00 | ✅ ZfyYGZH8B8o (private, scheduledPublishAt 27-noy 13:00Z tasdiqlandi) |
-| Rocco | P1 Scam or Legit #4 Black Friday (o'z temasi) | 28-noy 13:00 | 28-noy 19:00 | rejada |
+| Rocco | P1 Scam or Legit #4 Black Friday (o'z temasi) | ✅ 28-noy 13:00 | 28-noy 19:00 | ✅ -JiaS3fDaOc (draft publishAt yo'qolgan edi — 14:00Z qayta qo'yildi) |
 
 | Rocco | RC-25 Penny Plays Dumb 3 (tech support, yangi joylar) | 29-noy 13:00 | 29-noy 19:00 | rejada |
 | Financier | BK-16 $275B in $100 Bills Reaches Space (Adobe prognozi, masshtab) | ✅ 28-noy 09:59 (04:59Z, A) | 29-noy 19:00 | ✅ EOHrJ-0o4Ic (private, scheduledPublishAt 29-noy 14:00Z + 11 teg tasdiqlandi) |
