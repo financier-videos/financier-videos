@@ -28,6 +28,7 @@
 | Rocco | P1 Scam or Legit #4 Black Friday (o'z temasi) | 28-noy 13:00 | 28-noy 19:00 | rejada |
 
 | Rocco | RC-25 Penny Plays Dumb 3 (tech support, yangi joylar) | 29-noy 13:00 | 29-noy 19:00 | rejada |
+| Financier | BK-16 $275B in $100 Bills Reaches Space (Adobe prognozi, masshtab) | ✅ 28-noy 09:59 (04:59Z, A) | 29-noy 19:00 | ✅ EOHrJ-0o4Ic (private, scheduledPublishAt 29-noy 14:00Z + 11 teg tasdiqlandi) |
 | Financier | BK-13 Cyber Monday $15.1B at $100/day | 29-noy 21:00 | 30-noy 18:00 | rejada |
 | Financier | BK-14 Rigged Coin Bet (Penney's game — YANGI format: matematik o'yin, teal grade, 100% yangi footage) | 1-dek 08:00 | 1-dek 18:00 | rejada (draft 017b2e5b, trig_01EiZkUJ…) |
 | Financier | BK-15 Spend $100K a Day, Never Run Out (strategiya №1, cool grade, yangi footage) | 1-dek 12:00 | 1-dek 22:00 | rejada (draft 4176b9e3, trig_01WDDaTA…) |
@@ -55,6 +56,7 @@
 ## Nazoratchi jurnali
 | Sana | Ishga tushish | Slotlar | QC/bg | Publish | Tadqiqot | Izohlar | IG | Hisobot | Izoh |
 |---|---|---|---|---|---|---|---|---|---|
+| 2026-11-28 | A 09:20 (vazifa) | ✅ 28-noy: BK-11 14:00Z + junk_drawer 19:00Z (2/2); 29-noy bo'sh edi → BK-16 yasaldi, 14:00Z | ✅ BK-16 qc PASS, bg_reuse 23% PASS | ✅ BK-16 completed, scheduledPublishAt tasdiqlandi; post_list failed 0 | ✅ yangilik: Adobe BF/Thanksgiving haqiqiy raqami hali yo'q (2 WebSearch) | — (B/C) | ❌ (BK-11 Reel ≥16:00Z — B/C) | — (C) | vidIQ 256 → 251 kr (boshqa sessiya ~55 sarflagan); 29-noy 2-slot (≥19:00Z) hali bo'sh |
 | 2026-11-27 | C 23:20 (vazifa) | ✅ 28-noy: BK-11 14:00Z + junk_drawer 19:00Z private-scheduled; post_list failed 0 | — (yangi render yo'q) | ✅ BK-12 13:00Z va cancel_sub 18:00Z public bo'ldi | ✅ results.md 27-noy, channel_analytics (video), yangilik: Adobe Thanksgiving haqiqiy raqami hali yo'q | — (kredit tejaldi; user_videos'da Financier yangi izoh 0) | ✅ BK-12 Reel DgQUDnZRovN, cancel_sub Reel DgQUESjTSof | ✅ push + xabar | ❌ Financier 7 video ≤17 ko'rish — backlog ENG YUQORI davom; vidIQ 311 kr |
 | 2026-11-27 | B 15:20 (vazifa) | ✅ Financier: junk_drawer yuklandi (bugun 2/3–4 yuklash, oraliq 6 soat) | — (yangi render yo'q; junk_drawer QC avval PASS) | ✅ junk_drawer completed, scheduledPublishAt 28-noy 19:00Z + 11 teg tasdiqlandi; BK-12 13:00Z va cancel_sub 18:00Z private-scheduled ✅ | ✅ yangiliklar 2 WebSearch, raqobatchi Montra Explains | ✅ ikkala kanal: yangi tashqi izoh yo'q | ✅ Rocco P1#3 Reel DgPdHxfhDcV; ❌ BK-12 Reel ≥15:00Z (C ishi) | — (C) | skillar +2 (hyperframes o'chirildi, 7.9 MB); Financier eski videolar hali 4–7 ko'rish (U-5 4) — backlog ENG YUQORI, C da tahlil |
 | 2026-11-27 | A 09:20 (vazifa) | ✅ 27-noy: Financier BK-12 13:00Z + cancel_sub 18:00Z (yuklandi); Rocco P1#3 08:00Z, D1 14:00Z (send_later 08:30Z — B tekshiradi) | — (yangi render yo'q; cancel_sub QC avval PASS) | ✅ cancel_sub completed, scheduledPublishAt 18:00Z tasdiqlandi; teglar qo'shildi | ✅ trend skan 2 nisha (10 kr), competitor_watch +4, 3 g'oya | — (B/C) | ❌ (B: BK-12 Reel ≥15:00Z, P1#3 Reel ≥10:00Z) | — (C) | vidIQ 416 → 401 kr; backlog: draft_get null topilmasi, teg qoidasi |
