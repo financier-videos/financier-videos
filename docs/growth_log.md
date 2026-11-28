@@ -173,3 +173,7 @@ O'RGANILDI: (1) add_cutaways spec "pool"siz flat rangli kartochka qo'yadi → em
 O'ZGARTIRILDI: BK-16 (masshtab: $275.1B prognoz → 186.7 mil) yangi footage bilan (100% yangi Pixabay), k_scale o'lchagich birligi spec'dan (mil), add_cutaways ogohlantirishi.
 O'LCHOV: 30-noy C — BK-16 24 soatlik ko'rishi vs BK-11/junk_drawer (28-noy); ≥100 bo'lsa masshtab yo'nalishi davom, <20 bo'lsa kanal darajasidagi sabab gipotezasi.
 
+## 2026-11-28 B (15:20 Toshkent)
+O'RGANILDI: (1) iart-ai short-form-video (MIT): kadr-loop — oxirgi kadr 1-kadrga kompozitsiya/rang bo'yicha mos bo'lsa loop sezilmaydi; 9:16 xavfsiz zona (markaz 900x1400, past 320 px, o'ng 120 px). (2) YouTube Shorts: 2026-10 originallik yangilanishi (qayta yuklash reach'i kesiladi), 2026-07 inauthentic content — 'AI persona sensitive subjects (finance)' toifasi; noyabr uchun rasmiy yangi o'zgarish topilmadi. (3) Adobe BF 2026 haqiqiy raqami hali yo'q (prognoz $12.9B).
+O'ZGARTIRILDI: engine/loop_seam_check.py + qc_gate 17_loop_seam (WARN). 10 video o'lchandi: g'oliblar trillion61 0.07 / gift card 0.04 SMOOTH; BK-14 0.35 va BK-16 JUMP.
+O'LCHOV: 1-dek C — BK-13 (SMOOTH) vs BK-16 (JUMP) avg view %; farq ≥10 p.p. bo'lsa 17-qadam FAIL'ga ko'tariladi, bo'lmasa WARN qoladi.

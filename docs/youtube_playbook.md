@@ -1,5 +1,5 @@
 # YOUTUBE PLAYBOOK — FINANCIER (moliya, AQSh auditoriyasi)
-Yangilangan: 2026-11-28 10:05 Toshkent (A ishi, vazifa sessiyasi). Bu hujjatni har bir YouTube agent ishga tushganda o'qiydi va yangilaydi. 200 qatordan oshmasin. Personaj qoidalari: `docs/youtube_character_buck.md`. Vazifa ko'rsatmasi: `docs/producer_task.md`.
+Yangilangan: 2026-11-28 15:40 Toshkent (B ishi, vazifa sessiyasi). Bu hujjatni har bir YouTube agent ishga tushganda o'qiydi va yangilaydi. 200 qatordan oshmasin. Personaj qoidalari: `docs/youtube_character_buck.md`. Vazifa ko'rsatmasi: `docs/producer_task.md`.
 
 ## 0. MAQSAD VA VAKOLAT
 - SHOHJAHON KO'RSATMASI (2026-11-18): kontentni Claude o'zi reja qiladi va o'zi chiqaradi, "ha"sini kutmaydi. Kuniga 2 Shorts + har 3 kunda 1 uzun video. Raqobatchilarni o'rganib eng zo'r bo'lish. Tomoshabin fikrini o'zi yig'adi. PROFESSIONAL MONTAJCHI darajasi.
@@ -181,6 +181,7 @@ Yangilangan: 2026-11-28 10:05 Toshkent (A ishi, vazifa sessiyasi). Bu hujjatni h
 - 2026-11-26 17:00 Toshkent (07:00 ET, vidIQ draft 1a8e0b9a; yuklash ≥26-noy 01:30 UTC) — "How a Fake '50% Off' Tag Is Made" (U-5, TREND) — 56 s, 11 sahna, 37 kesim — how_made 'Step 1/2/3' / kulgi ('price hits the gym', 'wearing a costume') + adolatsizlik / fullbleed cool / ochilish 'tag was born' + 50% OFF. FTC 16 CFR 233.1, MA 940 CMR 6.05, WalletHub 2025 (36%). voice_check raqamlar mos. Skillar: script_rules, hookscore 50.6, title.py 100, footage_bank+pixabay, competitor_watch, comedy, qc_gate; ishlatilmadi: find_broll, insert, beats.py.
 
 ## 10. O'RGANILGANLAR JURNALI (14 kundan eskisi xulosaga)
+- 2026-11-28 B: yangi video yo'q (Adobe haqiqiy BF raqami hali chiqmagan, 29-noy 2-slot bo'sh — ≤2/kun). qc_gate 17_loop_seam (kadr-loop, WARN): BK-14/BK-16 JUMP, BK-13 SMOOTH. Izohlar: yangi tashqi yo'q. Yangilik: Shorts originallik (2026-10), inauthentic 'AI persona finance' xavfi — Buck maslahat bermaydi.
 - 2026-11-28 A: BK-16 "$275 Billion in $100 Bills Reaches Space" yasaldi va yuklandi (EOHrJ-0o4Ic, 29-noy 14:00Z = 09:00 ET) — 29-noy bo'sh edi. Adobe 2026 bayram prognozi ($275.1B) → $100 lik qalinlik 186.7 mil (BEP 0.0043 in). Saboqlar: kartochka cutaway'lari flat rangda empty_panel FAIL beradi → spec "pool" (bank/b16_*) bilan real footage; "right?" savol qatori FLAT_Q → darak gap; qora fonli klip (stack, earth) — empty_panel. Adobe Black Friday/Thanksgiving HAQIQIY raqami hali chiqmagan (28-noy 04:30Z).
 - 2026-11-27 C: Financier 7 yangi video ≤17 ko'rish (BK-12 8); Rocco A1 138. IG: BK-12 DgQUDnZRovN, cancel_sub DgQUESjTSof. vidIQ 311 kr.
 - 2026-11-27 B: junk_drawer yuklandi (MdiVhPxkke0, 28-noy 19:00Z; teglar draftda → saqlandi). Rocco P1#3 Reel DgPdHxfhDcV. Raqobatchi Montra Explains: BUT/SO "siz quryapsiz" zanjiri → keyingi Financier Short sinovi. Skillar +2, hyperframes o'chirildi.

@@ -56,6 +56,7 @@ QOIDA (har chat, har vazifa sessiyasi, Financier ham, Rocco ham):
 | Rang va ekspozitsiya | color_check | engine/color_check.py |
 | 12 nuqtali vizual QC, eksport standarti | vizual sifat direktori | docs/skills/notes/2026-11-21_visual_quality_director.md |
 | Sahna tempi, bo'sh joy | beats.py, deadair.py | docs/skills/instagram-agent-skill/ig-reel/beats.py; youtube-agent-skill/yt-edit/deadair.py |
+| Loop choki (oxirgi kadr ↔ 1-kadr) va 9:16 xavfsiz zona | `engine/loop_seam_check.py` (qc_gate 17, faqat WARN) + `docs/skills/notes/2026-11-28_loop_seam_safe_area.md` | HAR video: JUMP bo'lsa oxirgi 0.5–1 s ga 1-sahna klipi/rangi; subtitr pastki 320 px dan tepada |
 
 ## D. CHIQARISH
 | Vaziyat | Skill / vosita | Qayerda |

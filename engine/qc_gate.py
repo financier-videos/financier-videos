@@ -256,6 +256,13 @@ def main():
         put("16_visual_hook", "SKIP" if (rc == 2 or "Traceback" in o) else ("FAIL" if rc == 1 else ("WARN" if _l.startswith("WARN") else "PASS")), o.strip().replace("\n", " | "))
     else:
         put("16_visual_hook", "SKIP", "no duration")
+    # 17 loop seam (2026-11-28 B, skill iart-ai short-form-video): last frame vs first frame. ADVICE only: JUMP = WARN, never FAIL
+    if dur > 0:
+        rc, o = run([sys.executable, "-I", os.path.join(ROOT, "engine", "loop_seam_check.py"), a.video])
+        _l = o.strip().splitlines()[-1] if o.strip() else o
+        put("17_loop_seam", "SKIP" if (rc == 2 or "Traceback" in o) else ("WARN" if _l.startswith("JUMP") else "PASS"), _l)
+    else:
+        put("17_loop_seam", "SKIP", "no duration")
     # 15 competitor study (Shohjahon 2026-11-22: "har safar yangi va portlatadigan video; konkurentlarni o'rganib turish kerak"):
     #    >= 2 benchmark video IDs that were analysed in docs/competitor_watch.md within the last 7 days
     bm = a.benchmarks

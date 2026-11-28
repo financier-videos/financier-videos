@@ -42,3 +42,5 @@ KUCHLI: 0 s da salomsiz "If you sell TVs for less than you paid…" — tomoshab
 KUCHSIZ: manba yo'q (narxni oldindan ko'tarish da'vosi isbotsiz), fon musiqasi (Kevin MacLeod CC-BY) — biz musiqasiz; izoh 1 ta (savol yo'q).
 ERTAGA SINAYMIZ: Buck "you build it" zanjiri — 'How a gift card makes money' (breakage; CFPB/Bankrate manba), 5–7 halqa, oxiri "Congratulations… But" loop. Skill: docs/skills/notes/2026-11-27_build_it_chain.md.
 Qo'shimcha raqamlar (27-noy 10:30Z): Yonside 'Black Friday Then Vs Now' qh-n-KXM6XU 11.4K / 14 soat, ER 14.9%; lifemem 'Grocery App Price Scam' xpSVELloBYc 183.7K, 6 s, 74 izoh.
+
+## 2026-11-28 (B) — QILINMADI: Begofox (navbatdagi masshtab kanali) — youtube.com va skills.sh bu sessiya tarmog'ida yopiq, WebSearch kanalni topmadi; vidIQ kunlik byudjeti (≤13 kr) izohlarga sarflandi (10 kr). 29-noy B da vidIQ get_videos (5 kr) bilan.
