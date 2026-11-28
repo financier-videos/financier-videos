@@ -1,0 +1,75 @@
+{
+ "0_freshness": {
+  "status": "PASS",
+  "note": "up to date"
+ },
+ "1_platform_check": {
+  "status": "PASS",
+  "note": "evc)\n  PASS colour       bt709/bt709  (expected bt709/bt709 tagged (or HDR))\n  PASS file size    67.1 MB  (expected <= 262144 MB)\n  PASS audio        aac 2ch 48000Hz  (expected present)\n  WARN subtitles    none  (expected >= 1 language-tagged subtitle track)  (subtitles are optional, but they are the cheapest accessibility win a delivery has)  -> caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)\n  PASS loudness     -15.7 LUFS  (expected -14 \u00b1 2 LUFS)\n  PASS true peak    -4.0 dBTP  (expected <= -1 dBTP (+0.1 dB tolerance))\n  12 checks, 0 failed, 1 warnings"
+ },
+ "2_loudness": {
+  "status": "PASS",
+  "note": "I = -15.6 LUFS (target -14)"
+ },
+ "3_blackdetect": {
+  "status": "PASS",
+  "note": "0 black segments"
+ },
+ "4_export": {
+  "status": "PASS",
+  "note": "h264 High, 12.7 Mbit/s, 44.5s, stereo"
+ },
+ "5_voice_check": {
+  "status": "PASS",
+  "note": "956,\n \"rechecked_ok\": [],\n \"missing\": [\n  \"year's\",\n  \"everests\",\n  \"to cart\"\n ],\n \"extra\": [\n  \"years\",\n  \"everest's\"\n ],\n \"heard\": \"$275 billion in hundred dollar bills. That's what Americans are expected to spend online by New Years. One bill is four thousandths of an inch thick. Basically nothing. Now stack 2.75 billion of them. Past the clouds. Past Mount Everest. almost 34 Everest's tall. At 62 miles it hits the edge of space and it keeps going. It finally stops at about 187 miles. It weighs around 3,000 tons. Free shipping, obviously. And all of it starts with one tiny button. Add...\"\n}"
+ },
+ "6_prosody": {
+  "status": "PASS",
+  "note": " of them. Past the clo\n 5  18.49s range=16.7 st  gap=0.7  ok  | Past Mount Everest. Almost thirty-four Everests tall!\n 6  23.28s range=16.3 st  gap=0.7  ok  | At sixty-two miles it hits the edge of space. And it keeps g\n 7  28.92s range=15.9 st  gap=0.47  ok  | It finally stops at about a hundred eighty-seven miles.\n 8  33.25s range=19.9 st  gap=0.71  ok  | It weighs around three thousand tons. Free shipping, obvious\n 9  38.82s range=21.6 st  gap=1.07  ok  | And all of it starts with one tiny button. Add to cart.\n10  43.87s range=   - st  gap=-  ok  | \n{\"median_f0\": 175.6, \"flagged_scenes\": 0}"
+ },
+ "7_title": {
+  "status": "PASS",
+  "note": "score 100"
+ },
+ "8_contact_sheet": {
+  "status": "LOOK",
+  "note": "work/buck/b16/bk16_qc_sheet.png - Read it before posting"
+ },
+ "9_color": {
+  "status": "PASS",
+  "note": "exposure and colour OK"
+ },
+ "10_look": {
+  "status": "WARN",
+  "note": "FAIL  0.78  (layout 0.96, palette 0.47, tone 0.90)  vs buck_bk12_black_friday_per_second.mp4\nok  0.50  (layout 0.46, palette 0.41, tone 0.73)  vs 2026-11-25_cancel_c02.mp4\nok  0.70  (layout 0.91, palette 0.42, tone 0.72)  vs buck_bk11_billion_min_wage.mp4\nok  0.46  (layout 0.38, palette 0.37, tone 0.78)  vs 2026-11-25_drawer_r01.mp4\nLOOK_CHECK: FAIL - too similar; change the look (docs/looks.md)\n\nWARN: fullbleed layout shared by design (Buyurtma 8); palette differs (< 0.92)"
+ },
+ "11_pacing": {
+  "status": "PASS",
+  "note": "32 hard cuts (ffmpeg scene>0.22) in 44.5 s = 1.4 s/cut (need >= 22); engine planned 31"
+ },
+ "12_script": {
+  "status": "PASS",
+  "note": "bk16_qcspec.json                   words  92 scenes 10 broll 7 look fx        line2 \"that's\" end \"\"\nbk12.json                          words   0 scenes  0 broll 0 look -         line2 \"\" end \"\"\nbk11.json                          words   0 scenes  0 broll 0 look -         line2 \"\" end \"\"\nSCRIPT_CHECK: PASS"
+ },
+ "14_empty_panel": {
+  "status": "PASS",
+  "note": "PASS: largest one-colour flat area 15% of the frame (limit 20%)"
+ },
+ "16_visual_hook": {
+  "status": "PASS",
+  "note": "{\"luma0\": 0.59, \"motion1\": 0.175, \"title_block\": 0.45} | PASS: bright first frame with motion inside the first second"
+ },
+ "15_competitors": {
+  "status": "PASS",
+  "note": "2 fresh benchmark(s) ['EpTFo_wkNwA', 'siIMLJRNM0c'] (need >= 2 analysed in docs/competitor_watch.md in the last 7 days; spec 'benchmarks' or --benchmarks)"
+ },
+ "7b_title_copy": {
+  "status": "SKIP",
+  "note": "no source titles (spec 'source_titles' / --source-titles)"
+ },
+ "13_skills_line": {
+  "status": "PASS",
+  "note": "Skillar: viral-hooks (3 hook varianti), viral-youtube-shorts, viral-captions-and-ctas, dataviz (scale o'lchagich), animation-direction (cutaway tempi), viral-video-decomposer (BK-01/EpTFo benchmark); ishlatilmadi: blender-* (Buck kutubxonasi tayyor), cartoon-3d-short (Buck formati boshqa)"
+ },
+ "verdict": "PASS"
+}

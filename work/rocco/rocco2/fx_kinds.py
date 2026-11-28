@@ -143,7 +143,7 @@ def k_scale(im, sh, lt, t, talk, R):
         y = Y(dec)
         if yt <= y <= yb:
             for xx in range(30, W - 30, 36): dl.line([(xx, y), (xx + 20, y)], fill=(255, 255, 255, 70), width=3)
-            text(lay, (40, y - 22), f"{dec:,.0f} KM" if dec >= 1 else f"{dec} KM", "Bebas", 34, (255, 255, 255, 150), sw=0, anchor="lm")
+            _u = sh.get("unit", "km").upper(); text(lay, (40, y - 22), f"{dec:,.0f} {_u}" if dec >= 1 else f"{dec} {_u}", "Bebas", 34, (255, 255, 255, 150), sw=0, anchor="lm")
         dec *= 10
     im.alpha_composite(lay)
     for v, lab in marks:

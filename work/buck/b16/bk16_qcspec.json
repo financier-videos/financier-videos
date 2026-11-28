@@ -1,0 +1,86 @@
+{
+ "format": "short",
+ "look": "fx",
+ "scenes": [
+  {
+   "text": "Two hundred seventy-five billion dollars in hundred-dollar bills!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/b16/bills.mp4"
+    }
+   ]
+  },
+  {
+   "text": "That's what Americans are expected to spend online by New Year's.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/b16/phone.mp4"
+    }
+   ]
+  },
+  {
+   "text": "One bill is four thousandths of an inch thick. Basically nothing.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/b16/bills.mp4"
+    }
+   ]
+  },
+  {
+   "text": "Now stack two point seven five billion of them. Past the clouds.",
+   "chart": "bk16-3"
+  },
+  {
+   "text": "Past Mount Everest. Almost thirty-four Everests tall!",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/b16/peaks.mp4"
+    }
+   ]
+  },
+  {
+   "text": "At sixty-two miles it hits the edge of space. And it keeps going.",
+   "chart": "bk16-5"
+  },
+  {
+   "text": "It finally stops at about a hundred eighty-seven miles.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/b16/clouds.mp4"
+    }
+   ]
+  },
+  {
+   "text": "It weighs around three thousand tons. Free shipping, obviously.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/b16/trucks.mp4"
+    }
+   ]
+  },
+  {
+   "text": "And all of it starts with one tiny button. Add to cart.",
+   "shots": [
+    {
+     "broll": "/tmp/fin/bg/b16/phone.mp4"
+    }
+   ]
+  },
+  {
+   "text": ""
+  }
+ ],
+ "benchmarks": [
+  "EpTFo_wkNwA physical scale 3.3M",
+  "siIMLJRNM0c how long until broke 3.7M",
+  "BK-01 own $40T stack (scale format, 128 in burst)"
+ ],
+ "title": "$275 Billion in $100 Bills Reaches Space",
+ "visual_hook": {
+  "type": "B",
+  "frame1": "bright pile of real $100 bills, the full number $275,100,000,000 already slamming in at the top third",
+  "event_at": 0.9,
+  "question": "how big is $275 billion?"
+ },
+ "source_titles": []
+}
