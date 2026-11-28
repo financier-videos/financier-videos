@@ -150,3 +150,22 @@ Rocco YouTube: A1 "Gift Card Rack" **138** (28 soat, 9 layk), "Scam or Legit? On
 Instagram financier424 (20–27-noy): 43 follower (+1), views 3,133, reach 2,457 (kecha 2,927 / 2,298). finansist424 — ulanmagan. Shu ishda IG: BK-12 va cancel_sub Reel'lari (YouTube havolasidan, AI belgisi).
 vidIQ balansi: 326 kr (276 + 50), yangilanish 21-dek — 24 kunga kuniga ≤13 kr.
 XULOSA: (1) Financier 25-noydan beri chiqgan 7 videoning hammasi ≤17 ko'rish — trend (U-5, BK-12 Black Friday kuni!) ham ishlamadi; muammo kanal darajasida (feed test berilmayapti). (2) Eski g'oliblar ham to'xtadi (BK-03 +0) — umumiy feed ko'rsatishi to'xtagan. (3) Rocco tirik: A1 138, kanal +243/kun. (4) vidIQ krediti tugayapti: kunlik byudjet 13 kr — trend skanni WebSearch'ga o'tkazish kerak.
+
+## 2026-11-28 23:25 Toshkent (18:25 UTC) — C ishi, vidiq_user_videos (Financier 5 + Rocco 5 kredit)
+| chiqqan (UTC) | video | 27-noy 18:25 | 28-noy 18:25 | farq |
+|---|---|---|---|---|
+| 11-27 18:00 | I Tried to Cancel a $21 Subscription. It Begged. (cancel_sub, skit) | 1 | **414** (24 soat) | +413 — 25-noydan beri birinchi "tirik" video |
+| 11-27 13:00 | Black Friday Spends $149,306 Every Second (BK-12) | 8 | 23 (29 soat) | +15 |
+| 11-28 14:00 | How Long to Earn $1 Billion at Minimum Wage? (BK-11) | — | **1** (4.4 soat) | o'lik start — dublikat sarlavha (Mj7LU_swigY private) gipotezasi |
+| 11-26 12:00 | How a Fake '50% Off' Tag Is Made (U-5) | 6 | 10 | +4 |
+| 11-25 12:00 | 81.5 Million Americans (U-3) | 17 | 18 | +1 |
+| 11-25 18:00 | 1748: Why Dollar Is a Buck | 7 | 8 | +1 |
+| 11-25 12:00 | It Costs 11.3 Cents to Print a $100 Bill | 7 | 7 | 0 |
+| 11-24 11:00 | Paying Off the US Debt at $1 Million a Day (BK-03) | 1,025 | 1,024 | 0 |
+| 11-24 15:00 | The $10 Bill Dies First | 131 | 131 | 0 |
+Financier jami (user_channels): 10,030 (kecha 9,581 → +449; cancel_sub ~+413), obunachi 4 (0). Navbat: junk_drawer 28-noy 19:00Z, BK-16 29-noy 14:00Z (private-scheduled ✅). post_list 27-noy–4-dek: 6 completed, failed 0.
+Rocco YouTube: A1 Gift Card Rack 162 (+24), P1#3 42 (+22), RC-23 Penny Plays Dumb 2 14 (10.4 soat), SoL#4 BF 4 (4.4 soat), D1 4 (28 soat), "Hi Mom" 1,213, SoL#1 394. Jami 4,482 (+52), obunachi 15 (+1).
+Adobe Black Friday 2026 HAQIQIY raqami 18:20Z da hali indekslanmagan (WebSearch) — faqat prognoz $12.9B.
+vidIQ: 236 → 226 kr (renewable 21-dek).
+Instagram financier424 (21–28-noy): 42 follower (−1), views 2,868, reach 2,240 (kecha 3,133 / 2,457). IG Reel: BK-11 DgS4vwhhwAX (financier424), SoL#4 DgS4zxIzy7J (redfrocco).
+XULOSA: (1) Financier "sovuq"dan birinchi chiqish — cancel_sub (skit + aniq $21 raqami, sarlavhada "It Begged" hazili) 24 soatda 414. Bu "skit TO'XTATILDI" qaroriga zid dalil: sabab format emas, "sarlavhada raqam + hissiyotli burilish" bo'lishi mumkin — 1 ta nuqta, isbot emas. (2) BK-11 4.4 soatda 1 — eski Mj7LU_swigY bilan BIR XIL sarlavha; YouTube dublikat deb bostirayotgan bo'lishi ehtimoli. 29-noy C da 24 soatlik raqam bilan tasdiqlash. (3) Rocco sekin, lekin barqaror o'sish.
