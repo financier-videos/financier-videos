@@ -5,6 +5,8 @@ main [0..a] -> Buck cutaway (~1.1 s, other colour, mood from the line's tag, opt
 import json, re, sys
 sp_p, rj_p = sys.argv[1], sys.argv[2]; MAX = float(sys.argv[sys.argv.index("--max") + 1]) if "--max" in sys.argv else 2.1
 sp = json.load(open(sp_p)); rj = json.load(open(rj_p))
+if not sp.get("pool"): print("WARNING: spec has no \"pool\" - cutaways fall back to flat colour cards, qc 14_empty_panel will likely FAIL "
+                             "(add \"pool\": [names of /tmp/fin/bg/bank/<name>.mp4 footage], 2026-11-28 BK-16)", file=sys.stderr)
 sp["shots"] = [s for s in sp["shots"] if not s.get("_auto")]
 lt = [(a, b) for _, _, a, b in rj["lines"]]; end = rj["seconds"]
 MOOD = [("shock", "shocked"), ("amaz", "shocked"), ("laugh", "laugh"), ("grin", "laugh"), ("play", "laugh"), ("tease", "smug"), ("sly", "smug"),

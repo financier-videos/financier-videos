@@ -167,3 +167,9 @@ KECHA vs BUGUN: Financier — kecha 5 yangi video ≤13, bugun 7 yangi video ≤
 O'RGANILDI: channel_analytics (22–27-noy, video): 25-noydan keyingi videolar hali analytics'da yo'q (≥2 kun kechikish); retention eng yuqori — "13 Years Later, GTA Made 4.7x More" 77%, "$10 Bill Dies First" 75%, Thanksgiving 68%; eng past — bank_fees 25.5%, "1 of 3" tipidagi eski. Engaged/views nisbati g'oliblarda 0.23–0.38.
 O'ZGARTIRILDI: IG Reel'lar YouTube havolasidan (yuklash shart emas) — 2 ta, ~3 daqiqada; vidIQ krediti 311 — kunlik byudjet 13 kr (trend skan WebSearch'ga, user_videos faqat C da).
 O'LCHOV: 28-noy C — BK-11 va junk_drawer 6 soatlik ko'rishi; ≤20 bo'lsa kanal darajasidagi sabab (burst/dublikat) gipotezasi kuchayadi.
+
+## 2026-11-28 A (09:20 Toshkent)
+O'RGANILDI: (1) add_cutaways spec "pool"siz flat rangli kartochka qo'yadi → empty_panel FAIL (30–43%); qora fonli kliplar (3D pul stack, kosmos) ham. (2) "…, right?" qatori prosody FLAT_Q → "obviously." bilan PASS. (3) Hook qatoridagi katta son TTS'da sekin (8 so'z 4.8 s) — speed 1.12→1.22 bilan 3.7 s. (4) Adobe BF/Thanksgiving 2026 haqiqiy raqami 28-noy 04:30Z da hali indekslanmagan.
+O'ZGARTIRILDI: BK-16 (masshtab: $275.1B prognoz → 186.7 mil) yangi footage bilan (100% yangi Pixabay), k_scale o'lchagich birligi spec'dan (mil), add_cutaways ogohlantirishi.
+O'LCHOV: 30-noy C — BK-16 24 soatlik ko'rishi vs BK-11/junk_drawer (28-noy); ≥100 bo'lsa masshtab yo'nalishi davom, <20 bo'lsa kanal darajasidagi sabab gipotezasi.
+

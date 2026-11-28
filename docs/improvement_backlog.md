@@ -2,6 +2,9 @@
 Har ishga tushishda: tepadagi OCHIQ bandni ol → bajar → sina → natija bilan "BAJARILDI <sana>: ..." yoki "QAYTARILDI: sabab". Yangi muammo topilsa (qc_gate WARN/FAIL, past ko'rsatkich, skill sinalmagan, Shohjahon shikoyati) — shu yerga qo'sh. Kamida 5 ta OCHIQ band doim bo'lsin.
 
 ## OCHIQ
+- (2026-11-28 A, yangi) 29-NOY 2-SLOT BO'SH: Financier 29-noy faqat BK-16 (14:00Z). Ikkinchi slot (≥19:00Z, oraliq ≥5 soat) — B ishida Adobe HAQIQIY Black Friday/Thanksgiving raqami chiqqan bo'lsa ulkan-raqam Short (BK-12 'per second' skeletidan boshqa tuzilma), aks holda bo'sh qoladi (≤2/kun — majburiy emas).
+- (2026-11-28 A, yangi) LIME GRADE oq/och fonli kliplarni (phone, conveyor) yashilga bo'yaydi — BK-16 da qabul qilindi; keyingi videoda och klip bo'lsa grade 'warm'/'gold' yoki dvigatelda grade kuchini 0.5 ga tushirish (spec 'grade_mix') sinovi.
+- BAJARILDI 2026-11-28 A: add_cutaways.py spec "pool" yo'q bo'lsa ogohlantiradi (flat kartochka cutaway → 14_empty_panel FAIL; BK-16 1-render 3 kadr 30–43%). pool bilan qayta render → PASS 15%.
 - (2026-11-27 C, yangi) vidIQ KREDIT: 311 kr, yangilanish 21-dek (24 kun → ≤13 kr/kun). Trend skan va raqobatchi faqat WebSearch; user_videos kuniga 1 marta (C); channel_analytics haftada 1. Kredit sarflovchi har yangi rejaga shu cheklov yozilsin.
 - (2026-11-27 C) FINANCIER SOVUQ davomi: channel_analytics video (22–27-noy) — 25-noydan keyingi videolar hali yo'q; 29-noy C da qayta (traffic_sources + video), Shorts feed ulushi va avg% ni 24-noy videolari bilan solishtir.
 - (2026-11-27 B, yangi) BUT/SO ZANJIR SINOVI: Montra Explains (625 obun. → 74.3K) 'If you… But… So… Congratulations, you've built X. But' tuzilmasi — keyingi Financier Short (masalan 'How a gift card makes money', manba: CFPB/Bankrate) shu mexanikada; 72 soatda U-5 bilan solishtirish (skill notes/2026-11-27_build_it_chain.md).
